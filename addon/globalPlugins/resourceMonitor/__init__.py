@@ -92,7 +92,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
  script_announceResourceSummary.__doc__=_("Speaks used ram, average processor load, and battery info (if this computer has a battery).")
 
  __gestures={
-  "KB:NVDA+shift+r":"announceResourceSummary",
+  "KB:NVDA+shift+e":"announceResourceSummary",
   "KB:NVDA+shift+1":"announceProcessorInfo",
   "KB:NVDA+shift+2":"announceRamInfo",
   "KB:NVDA+shift+3":"announceDriveInfo",
