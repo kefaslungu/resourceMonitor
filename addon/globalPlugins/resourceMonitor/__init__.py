@@ -1,6 +1,6 @@
 #Resource Monitor for NvDA
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
-#Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization).
+#Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run).
 
 import globalPluginHandler, ui
 import psutil, battery
@@ -47,9 +47,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
   #goes through all registered drives and gives info on each one
   info=""
   for drive in psutil.disk_partitions(): #get all registered drives
-   driveInfo=psutil.disk_usage(drive[0]) #get info on each one
-   #Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C, fixed drive; 40 GB of 100 GB used (40%). Note that %s cannot be changed.
-   info+=_("%s (%s drive): %s of %s used (%s%%). ") %(drive[0], drive[2], toBiggestBytes(tryTrunk(driveInfo[1])), toBiggestBytes(tryTrunk(driveInfo[0])), tryTrunk(driveInfo[3]))
+   try:
+    driveInfo=psutil.disk_usage(drive[0]) #get info on each one
+    #Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C, fixed drive; 40 GB of 100 GB used (40%). Note that %s cannot be changed.
+    info+=_("%s (%s drive): %s of %s used (%s%%). ") %(drive[0], drive[2], toBiggestBytes(tryTrunk(driveInfo[1])), toBiggestBytes(tryTrunk(driveInfo[0])), tryTrunk(driveInfo[3]))
+   except: pass
   ui.message(info)
  script_announceDriveInfo.__doc__=_("Speaks the used and total space of every drive registered on this computer, along with each drive's type (fixed, removeable, or CDROM).")
 

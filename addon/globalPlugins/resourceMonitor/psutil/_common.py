@@ -15,7 +15,7 @@ import stat
 import errno
 import warnings
 
-from psutil._compat import namedtuple, long, wraps
+from _compat import namedtuple, long, wraps
 
 # --- functions
 

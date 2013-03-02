@@ -15,9 +15,9 @@ import platform
 
 import _psutil_mswindows
 from _psutil_mswindows import ERROR_ACCESS_DENIED
-from psutil.error import AccessDenied, NoSuchProcess, TimeoutExpired
-from psutil._common import *
-from psutil._compat import PY3, xrange, long
+from error import AccessDenied, NoSuchProcess, TimeoutExpired
+from _common import *
+from _compat import PY3, xrange, long
 
 # Windows specific extended namespace
 __extra__all__ = ["ABOVE_NORMAL_PRIORITY_CLASS", "BELOW_NORMAL_PRIORITY_CLASS",

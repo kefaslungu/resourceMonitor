@@ -17,7 +17,7 @@ addon_info = {
 	# version
 	"addon-version" : "2.0",
 	# Author(s)
-	"addon-author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com> and other NVDA contributors",
+	"addon-author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors",
 # URL for the add-on documentation support
 "addon-url" : None
 }

@@ -47,15 +47,15 @@ try:
 except ImportError:
     pwd = None
 
-from psutil.error import Error, NoSuchProcess, AccessDenied, TimeoutExpired
-from psutil._compat import property, callable, defaultdict
-from psutil._common import cached_property
-from psutil._common import (deprecated as _deprecated,
+from error import Error, NoSuchProcess, AccessDenied, TimeoutExpired
+from _compat import property, callable, defaultdict
+from _common import cached_property
+from _common import (deprecated as _deprecated,
                             nt_disk_iostat as _nt_disk_iostat,
                             nt_net_iostat as _nt_net_iostat,
                             nt_sysmeminfo as _nt_sysmeminfo,
                             isfile_strict as _isfile_strict)
-from psutil._common import (STATUS_RUNNING, STATUS_IDLE, STATUS_SLEEPING,
+from _common import (STATUS_RUNNING, STATUS_IDLE, STATUS_SLEEPING,
                             STATUS_DISK_SLEEP, STATUS_STOPPED,
                             STATUS_TRACING_STOP, STATUS_ZOMBIE, STATUS_DEAD,
                             STATUS_WAKING, STATUS_LOCKED)
@@ -73,8 +73,8 @@ if sys.platform.startswith("linux"):
     cached_phymem = _psplatform.cached_phymem
 
 elif sys.platform.startswith("win32"):
-    import psutil._psmswindows as _psplatform
-    from psutil._psmswindows import (ABOVE_NORMAL_PRIORITY_CLASS,
+    import _psmswindows as _psplatform
+    from _psmswindows import (ABOVE_NORMAL_PRIORITY_CLASS,
                                      BELOW_NORMAL_PRIORITY_CLASS,
                                      HIGH_PRIORITY_CLASS,
                                      IDLE_PRIORITY_CLASS,
