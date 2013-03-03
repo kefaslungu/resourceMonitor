@@ -15,11 +15,11 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on installation and add-on information
 	"addon-description" : _("Allows you to monitor system information easily, refer to the readme in the addon's folder for details."),
 	# version
-	"addon-version" : "2.0",
+	"addon-version" : "2.1",
 	# Author(s)
 	"addon-author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors",
 # URL for the add-on documentation support
-"addon-url" : None
+"addon-url" : "http://addons.nvda-project.org/"
 }
 
 import os.path

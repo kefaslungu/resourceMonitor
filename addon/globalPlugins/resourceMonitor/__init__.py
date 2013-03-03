@@ -73,17 +73,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
   for i in range(len(perCpuLoad)):
    coreLoad+="Core %s: %s%%. " %(str(i+1), tryTrunk(perCpuLoad[i]))
   # Translators: Shows average load of the processor and the load for each core.
-  info=_("Average CPU load {avgLoad}%%, {cores}.").format(cpuLoad=tryTrunk(averageLoad), cores=coreLoad)
+  info=_("Average CPU load {avgLoad}%%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=coreLoad)
   ui.message(info)
  script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
  def script_announceRamInfo(self, gesture):
   ram=psutil.phymem_usage()
   # Translators: Shows RAM (physical memory) usage.
-  info=_("Physical: %s of %s used (%s%%).") %(toBiggestBytes(tryTrunk(ram[1])), toBiggestBytes(tryTrunk(ram[0])), tryTrunk(ram[3]))
+  info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%%).").format(physicalUsed=toBiggestBytes(tryTrunk(ram[1])), physicalTotal=toBiggestBytes(tryTrunk(ram[0])), physicalPercent=tryTrunk(ram[3]))
   virtualRam=psutil.virtmem_usage()
-  # Translators: Shows virtual memory usage (first %s is used space, second %s is total capacity, third %s is usage in percentage).
-  info+=_("Virtual: %s of %s used (%s%%).") %(toBiggestBytes(tryTrunk(virtualRam[1])), toBiggestBytes(tryTrunk(virtualRam[0])), tryTrunk(virtualRam[3]))
+  # Translators: Shows virtual memory usage.
+  info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%%).").format(virtualUsed=toBiggestBytes(tryTrunk(virtualRam[1])), virtualTotal=toBiggestBytes(tryTrunk(virtualRam[0])), virtualPercent=tryTrunk(virtualRam[3]))
   ui.message(info)
  script_announceRamInfo.__doc__=_("Presents the used and total space for both physical and virtual ram.")
 
@@ -92,13 +92,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
   ram=psutil.phymem_usage()
   freeRam=ram[3]
   # Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-  info=(_("%s%% ram used, CPU at %s%%.") %(tryTrunk(freeRam), tryTrunk(cpuLoad)))
+  info=(_("{ramPercent}%% ram used, CPU at {cpuPercent}%%.").format(ramPercent=tryTrunk(freeRam), cpuPercent=tryTrunk(cpuLoad)))
   battery.getInfo()
   if not battery.noBattery and not battery.batteryStatusUnknown and not battery.onBatteryUnknown:
-   if not battery.onBattery: info+=_("Battery %s%%, charging.") %(tryTrunk(battery.percentage))
+   if not battery.onBattery: info+=_("Battery {batteryPercentage}%%, charging.").format(batteryPercentage=tryTrunk(battery.percentage))
    elif battery.onBattery:
     #discharging battery, so provide info on it
-    info+=_("%s%% battery remaining, about %s.") %(tryTrunk(battery.percentage), battery.timeLeft)
+    info+=_("{batteryPercentage}%% battery remaining, about {batteryTime}.").format(batteryPercentage=tryTrunk(battery.percentage), batterytime=battery.timeLeft)
     if battery.low: info+=_(" Warning: low battery.")
     elif battery.critical: info+=_(" Warning: critically low battery.")
   ui.message(info)
