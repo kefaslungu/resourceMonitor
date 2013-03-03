@@ -72,11 +72,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
   # Translators: Shows average load of CPU cores (example: core 1, 50%).
   for i in range(len(perCpuLoad)):
    coreLoad+="Core %s: %s%%. " %(str(i+1), tryTrunk(perCpuLoad[i]))
-  # Translators: Shows average load of the processor (example: 15% average load). The second %s 
-denotes core number.
-  info=_("%s%% average CPU load. %s") %(tryTrunk(averageLoad), coreLoad)
+  # Translators: Shows average load of the processor and the load for each core.
+  info=_("Average CPU load {avgLoad}%%, {cores}.").format(cpuLoad=tryTrunk(averageLoad), cores=coreLoad)
   ui.message(info)
- script_announceProcessorInfo.__doc__=_("presents the average processor load, then the load of each core.")
+ script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
  def script_announceRamInfo(self, gesture):
   ram=psutil.phymem_usage()
