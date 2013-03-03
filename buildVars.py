@@ -13,7 +13,7 @@ addon_info = {
 	"addon-summary" : _("A handy resource monitor to report CPU load, memory usage, battery and disk usage status."),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on installation and add-on information
-	"addon-description" : _("Allows you to monitor system information easily, refer to the readme in the addon's folder for details."),
+	"addon-description" : _("Allows you to monitor system information easily."),
 	# version
 	"addon-version" : "2.1",
 	# Author(s)
