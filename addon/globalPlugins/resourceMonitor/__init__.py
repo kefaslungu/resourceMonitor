@@ -37,14 +37,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
    info=_("This computer does not have a battery connected.")
   elif not battery.onBattery: 
    # Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-   info=_("{percent}%%, charging battery.").format(percent=tryTrunk(battery.percentage))
+   info=_("{percent}%%, battery charging.").format(percent=tryTrunk(battery.percentage))
   elif battery.onBattery: 
    # Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
    info=_("{percent}%% battery remaining, about {time}.").format(percent=tryTrunk(battery.percentage), time=battery.timeLeft)
    if battery.low:
-    info+=_("Warning: low battery.")
+    info+=_(" Warning: low battery.")
    elif battery.critical:
-    info+=_("Warning: battery is critically low.")
+    info+=_(" Warning: battery is critically low.")
   ui.message(info)
  script_announceBatteryInfo.__doc__=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.")
 
@@ -92,15 +92,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
   ram=psutil.phymem_usage()
   freeRam=ram[3]
   # Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-  info=(_("{ramPercent}%% ram used, CPU at {cpuPercent}%%.").format(ramPercent=tryTrunk(freeRam), cpuPercent=tryTrunk(cpuLoad)))
+  info=(_("{ramPercent}%% RAM used, CPU at {cpuPercent}%%. ").format(ramPercent=tryTrunk(freeRam), cpuPercent=tryTrunk(cpuLoad)))
   battery.getInfo()
   if not battery.noBattery and not battery.batteryStatusUnknown and not battery.onBatteryUnknown:
-   if not battery.onBattery: info+=_("Battery {batteryPercentage}%%, charging.").format(batteryPercentage=tryTrunk(battery.percentage))
+   if not battery.onBattery: info+=_("{percent}%%, battery charging.").format(percent=tryTrunk(battery.percentage))
    elif battery.onBattery:
     #discharging battery, so provide info on it
-    info+=_("{batteryPercentage}%% battery remaining, about {batteryTime}.").format(batteryPercentage=tryTrunk(battery.percentage), batterytime=battery.timeLeft)
-    if battery.low: info+=_(" Warning: low battery.")
-    elif battery.critical: info+=_(" Warning: critically low battery.")
+    info+=_("{percent}%% battery remaining, about {time}.").format(percent=tryTrunk(battery.percentage), time=battery.timeLeft)
+    if battery.low:
+     info+=_(" Warning: low battery.")
+    elif battery.critical:
+     info+=_(" Warning: critically low battery.")
   ui.message(info)
  script_announceResourceSummary.__doc__=_("Presents used ram, average processor load, and battery info if available.")
 
