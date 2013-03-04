@@ -18,8 +18,8 @@ addon_info = {
 	"addon-version" : "2.1",
 	# Author(s)
 	"addon-author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors",
-# URL for the add-on documentation support
-"addon-url" : "http://addons.nvda-project.org/"
+	# URL for the add-on documentation support
+	"addon-url" : "http://addons.nvda-project.org/"
 }
 
 import os.path
