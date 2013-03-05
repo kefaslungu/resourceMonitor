@@ -73,7 +73,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
   for i in range(len(perCpuLoad)):
    coreLoad+=_("Core {coreNumber}: {corePercent}%. ").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i]))
   # Translators: Shows average load of the processor and the load for each core.
-  info=_("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=coreLoad)
+  info=_("Average CPU load {avgLoad}%, {cores}").format(avgLoad=tryTrunk(averageLoad), cores=coreLoad)
   ui.message(info)
  script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
