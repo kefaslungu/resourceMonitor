@@ -13,10 +13,6 @@ This plugin gives us information about CPU load, memory usage, battery and disk 
 * NVDA+Shift+3 Presents the used and total space of the static and removable drives on this computer,
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
 
-## Changes for 2.11 ##
-
-* Fixed an issue where percent symbol was spoken twice.
-* Fixed an issue where dot was heard while CPU core load was spoken.
 
 ## Changes for 2.1 ##
 
