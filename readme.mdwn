@@ -16,6 +16,7 @@ This plugin gives us information about CPU load, memory usage, battery and disk 
 ## Changes for 2.11 ##
 
 * Fixed an issue where percent symbol was spoken twice.
+* Fixed an issue where dot was heard while CPU core load was spoken.
 
 ## Changes for 2.1 ##
 
