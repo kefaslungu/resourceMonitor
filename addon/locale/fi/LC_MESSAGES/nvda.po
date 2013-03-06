@@ -7,11 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-03-04 18:03+0000\n"
-"PO-Revision-Date: 2013-03-04 11:58+0200\n"
+"POT-Creation-Date: 2013-03-05 06:00-0800\n"
+"PO-Revision-Date: 2013-03-06 07:45+0200\n"
 "Last-Translator: Jani Kinnunen\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -71,11 +70,11 @@ msgstr ""
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:74
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr ""
+msgstr "Ydin {coreNumber}: {corePercent} prosenttia. "
 
 #. Translators: Shows average load of the processor and the load for each core.
 #: addon\globalPlugins\resourceMonitor\__init__.py:76
-msgid "Average CPU load {avgLoad}%, {cores}."
+msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Prosessorin keskimääräinen kuormitus {avgLoad} prosenttia, {cores}"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:78
@@ -120,7 +119,7 @@ msgstr ""
 "ja akun tiedot, mikäli saatavilla."
 
 #. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 #: buildVars.py:13
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery and disk "
