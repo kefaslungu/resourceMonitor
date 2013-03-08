@@ -7,11 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-03-04 18:03+0000\n"
-"PO-Revision-Date: 2013-03-04 21:36+0400\n"
+"POT-Creation-Date: 2013-03-05 06:00-0800\n"
+"PO-Revision-Date: 2013-03-08 12:31+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,7 +54,7 @@ msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
 msgstr ""
-"{driveName} ({driveType} drive): {usedSpace} из {totalSpace} использовано "
+"Диск {driveName} ({driveType}): {usedSpace} из {totalSpace} использовано "
 "{percent}%. "
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:64
@@ -66,12 +65,12 @@ msgstr ""
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:74
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr ""
+msgstr "Ядро {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
 #: addon\globalPlugins\resourceMonitor\__init__.py:76
-msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr ""
+msgid "Average CPU load {avgLoad}%, {cores}"
+msgstr "Средняя загрузка процессора {avgLoad}%, {cores}"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:78
 msgid "Presents the average processor load and the load of each core."
@@ -81,12 +80,15 @@ msgstr ""
 #: addon\globalPlugins\resourceMonitor\__init__.py:83
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+"Физическая память: {physicalUsed} из {physicalTotal} использовано "
+"({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 #: addon\globalPlugins\resourceMonitor\__init__.py:86
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
+"Виртуальная память: {virtualUsed} из {virtualTotal} использовано "
+"({virtualPercent}%)."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:88
 msgid "Presents the used and total space for both physical and virtual ram."
@@ -96,6 +98,8 @@ msgstr ""
 #: addon\globalPlugins\resourceMonitor\__init__.py:95
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr ""
+"{ramPercent}% оперативной памяти использовано, загрузка процессора "
+"{cpuPercent}%. "
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:105
 msgid " Warning: critically low battery."
@@ -107,7 +111,7 @@ msgid ""
 msgstr ""
 
 #. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on informaiton.
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 #: buildVars.py:13
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery and disk "
