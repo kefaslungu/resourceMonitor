@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-07 09:55-0800\n"
+"PO-Revision-Date: 2013-03-08 21:30+0545\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr "कोर {coreNumber}: {corePercent}% "
 #. Translators: Shows average load of the processor and the load for each core.
 #: addon\globalPlugins\resourceMonitor\__init__.py:76
 msgid "Average CPU load {avgLoad}%, {cores}"
-msgstr "औसत CPU भार {avgLoad}%%, {cores} ।"
+msgstr "औसत CPU भार {avgLoad}%, {cores} ।"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:78
 msgid "Presents the average processor load and the load of each core."
