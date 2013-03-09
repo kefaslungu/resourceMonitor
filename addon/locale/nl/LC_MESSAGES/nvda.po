@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: resourceMonitor 2.1\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2013-03-05 06:00-0800\n"
+"PO-Revision-Date: 2013-03-09 12:51+0100\n"
+"Last-Translator: Bart Simons <bart@bartsimons.be>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "This computer does not have a battery connected."
+msgstr "Er is geen batterij in deze computer."
+
+#. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+msgid "{percent}%, battery charging."
+msgstr "{percent}%, bezig met opladen van batterij."
+
+#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. discharging battery, so provide info on it
+msgid "{percent}% battery remaining, about {time}."
+msgstr "{percent}% batterij resterend, ongeveer {time}."
+
+msgid " Warning: low battery."
+msgstr " Waarschuwing: batterij bijna leeg."
+
+msgid " Warning: battery is critically low."
+msgstr " Waarschuwing: batterij is zo goed als leeg."
+
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "Toont batterijpercentage, oplaadstatus, resterende tijd (als er niet wordt opgeladen), en een waarschuwing als de batterij bijna leeg of zo goed als leeg is."
+
+#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
+msgstr "{driveName} ({driveType} schijf): {usedSpace} van {totalSpace} gebruikt {percent}%. "
+
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr ""
+
+msgid "Core {coreNumber}: {corePercent}%. "
+msgstr "Core {coreNumber}: {corePercent}%. "
+
+#. Translators: Shows average load of the processor and the load for each core.
+msgid "Average CPU load {avgLoad}%, {cores}"
+msgstr ""
+
+msgid "Presents the average processor load and the load of each core."
+msgstr ""
+
+#. Translators: Shows RAM (physical memory) usage.
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr ""
+
+#. Translators: Shows virtual memory usage.
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr ""
+
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr ""
+
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
+msgstr ""
+
+msgid " Warning: critically low battery."
+msgstr " Waarschuwing: batterij is zo goed als leeg."
+
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr ""
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor - allows easy access to system information."
+msgstr ""
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+msgid "A handy resource monitor to report CPU load, memory usage, battery and disk usage status."
+msgstr ""
+
