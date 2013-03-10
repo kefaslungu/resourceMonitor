@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-05 17:08+0200\n"
+"PO-Revision-Date: 2013-03-09 15:21+0200\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,33 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:37
 msgid "This computer does not have a battery connected."
 msgstr "Bu bilgisayara pil takılı değil."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:40
-#: addon\globalPlugins\resourceMonitor\__init__.py:98
 msgid "{percent}%, battery charging."
 msgstr "%{percent}, pil şarj oluyor."
 
 #. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#: addon\globalPlugins\resourceMonitor\__init__.py:43
-#: addon\globalPlugins\resourceMonitor\__init__.py:101
 msgid "{percent}% battery remaining, about {time}."
 msgstr "%{percent} kalan pil, yaklaşık {time}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:45
-#: addon\globalPlugins\resourceMonitor\__init__.py:103
 msgid " Warning: low battery."
 msgstr " Uyarı: düşük pil."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:47
 msgid " Warning: battery is critically low."
 msgstr " Uyarı: pil kritik seviyede."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:49
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -51,7 +42,6 @@ msgstr ""
 "düşük ya da kritik pil seviyesini söyler."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:60
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -59,7 +49,6 @@ msgstr ""
 "{driveName} ({driveType} sürücü): {usedSpace} bölü {totalSpace} kullanılıyor "
 "%{percent}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:64
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -67,53 +56,48 @@ msgstr ""
 "Bilgisayara takılı sabit ve çıkarılabilir disklerle ilgili kullanım "
 "bilgisini verir."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:74
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "çekirdek {coreNumber}: %{corePercent}. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#: addon\globalPlugins\resourceMonitor\__init__.py:76
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Ortalama işlemci yükü  %{avgLoad}, {cores}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:78
 msgid "Presents the average processor load and the load of each core."
 msgstr "Ortalama işlemci yükü ve çekirdek kullanımı bilgisini verir."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:83
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Fiziksel: {physicalUsed} bölü {physicalTotal} kullanılıyor "
 "(%{physicalPercent})."
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:86
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Sanal: {virtualUsed} bölü {virtualTotal} kullanılıyor (%{virtualPercent})."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:88
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Kullanılan fiziksel ve sanal ram bilgisini verir."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:95
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM kullanılıyor, CPU  {cpuPercent}%. "
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:105
 msgid " Warning: critically low battery."
 msgstr " Uyarı: pil kritik seviyede."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:107
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "Kullanılan ram, CPU yükü, ve mevcutsa pil bilgisini verir ."
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:13
+msgid "Resource Monitor - allows easy access to system information."
+msgstr "Resource Monitor - sistem bilgisine kolay yoldan erişilmesini sağlar."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery and disk "
 "usage status."
@@ -121,8 +105,5 @@ msgstr ""
 "CPU yükü, hafıza kullanımı, pil ve disk kullanım durumunu takip için pratik "
 "bir araç."
 
-#. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
-#: buildVars.py:16
-msgid "Allows you to monitor system information easily."
-msgstr "Sistem bilgisini almanıza yarayan pratik bir araç."
+#~ msgid "Allows you to monitor system information easily."
+#~ msgstr "Sistem bilgisini almanıza yarayan pratik bir araç."

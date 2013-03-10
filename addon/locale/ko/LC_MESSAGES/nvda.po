@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-05 07:04-0800\n"
+"PO-Revision-Date: 2013-03-10 15:59-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,33 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:37
 msgid "This computer does not have a battery connected."
 msgstr "사용자 컴퓨터에 베터리가 없습니다."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:40
-#: addon\globalPlugins\resourceMonitor\__init__.py:98
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, 베터리 중전중."
 
 #. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#: addon\globalPlugins\resourceMonitor\__init__.py:43
-#: addon\globalPlugins\resourceMonitor\__init__.py:101
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% 베터리 남음, {time} 사용 가능."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:45
-#: addon\globalPlugins\resourceMonitor\__init__.py:103
 msgid " Warning: low battery."
 msgstr "주의: 베터리 충전률 저조함."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:47
 msgid " Warning: battery is critically low."
 msgstr "주의: 베터리 방전 조심."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:49
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -51,7 +42,6 @@ msgstr ""
 "다."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:60
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -59,65 +49,56 @@ msgstr ""
 "{driveName} ({driveType} 드라이브): 총 {totalSpace} 중 {usedSpace} 사용중 "
 "{percent}%. "
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:64
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr "내장 및 확장 드라이브의 사용 공간 및 전체 공간을 알려줍니다."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:74
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Core {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#: addon\globalPlugins\resourceMonitor\__init__.py:76
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "평균 프로세서 사용 {avgLoad}%, {cores}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:78
 msgid "Presents the average processor load and the load of each core."
 msgstr "프로세서와 각 프로세서 코어의 사용률을 알려줍니다."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:83
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "RAM: 총 {physicalTotal} 중 {physicalUsed} 사용중 ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:86
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용중 ({virtualPercent}%)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:88
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "물리 (RAM) 및 가상 메로리의 사용 공간 및 총 메모리를 알려줍니다."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:95
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:105
 msgid " Warning: critically low battery."
 msgstr "주의: 베토리 방전 조심 바람.Warning: critically low battery."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:107
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "메모리, 프로세서 사용률 및 메터리 사용에 관한 정보를 제공합니다."
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:13
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
-msgstr ""
+msgid "Resource Monitor - allows easy access to system information."
+msgstr "리소스 모니터 - 시스템 정보 알림 도구"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-#: buildVars.py:16
-msgid "Allows you to monitor system information easily."
-msgstr "쉽게 시스템 정보를 확인할 수 있습니다."
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery and disk "
+"usage status."
+msgstr "프로세서, 디스크, 메모리 사용률 및 베터리 상태를 알려줍니다."
+
+#~ msgid "Allows you to monitor system information easily."
+#~ msgstr "쉽게 시스템 정보를 확인할 수 있습니다."
