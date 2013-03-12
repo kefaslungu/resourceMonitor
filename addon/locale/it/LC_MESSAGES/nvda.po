@@ -11,39 +11,30 @@ msgstr ""
 "PO-Revision-Date: 2013-03-07 10:00+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
-"Language: it\n"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:37
 msgid "This computer does not have a battery connected."
 msgstr "Questo computer non dispone di una batteria collegata."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#: addon/globalPlugins/resourceMonitor/__init__.py:40
-#: addon/globalPlugins/resourceMonitor/__init__.py:98
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, batteria in carica."
 
 #. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#: addon/globalPlugins/resourceMonitor/__init__.py:43
-#: addon/globalPlugins/resourceMonitor/__init__.py:101
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% carica batteria rimanente, circa {time}."
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:45
-#: addon/globalPlugins/resourceMonitor/__init__.py:103
 msgid " Warning: low battery."
 msgstr "Attenzione: batteria scarica."
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:47
 msgid " Warning: battery is critically low."
 msgstr "Attenzione: la batteria è quasi scarica."
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:49
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -52,7 +43,6 @@ msgstr ""
 "non in carica), e un avviso se la batteria è scarica"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon/globalPlugins/resourceMonitor/__init__.py:60
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -60,7 +50,6 @@ msgstr ""
 "{driveName} ({driveType} drive): {usedSpace} di {totalSpace} usato "
 "{percent}%. "
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:64
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -68,44 +57,35 @@ msgstr ""
 "Annuncia lo spazio utilizzato e totale delle unità statiche e rimovibili su "
 "questo computer."
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:74
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Core {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#: addon/globalPlugins/resourceMonitor/__init__.py:76
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Media carico CPU  {avgLoad}%, {cores}"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:78
 msgid "Presents the average processor load and the load of each core."
 msgstr "Annuncia il carico medio del processore e il carico di ciascun core."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon/globalPlugins/resourceMonitor/__init__.py:83
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "Fisica: {physicalUsed} di {physicalTotal} usata ({physicalPercent}%)."
 
 #. Translators: Shows virtual memory usage.
-#: addon/globalPlugins/resourceMonitor/__init__.py:86
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtuale: {virtualUsed} di {virtualTotal} usata ({virtualPercent}%)."
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:88
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
 "Annuncia lo spazio utilizzato e totale per la ram sia fisica che virtuale."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#: addon/globalPlugins/resourceMonitor/__init__.py:95
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM usata, CPU al {cpuPercent}%. "
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:105
 msgid " Warning: critically low battery."
 msgstr "Attenzione: batteria quasi scarica"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:107
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
@@ -114,7 +94,11 @@ msgstr ""
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:13
+msgid "Resource Monitor - allows easy access to system information."
+msgstr ""
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery and disk "
 "usage status."
@@ -123,8 +107,5 @@ msgstr ""
 "CPU, l'utilizzo della memoria, lo stato della batteria e la quantità di "
 "spazio utilizzato sul disco."
 
-#. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
-#: buildVars.py:16
-msgid "Allows you to monitor system information easily."
-msgstr "Consente di controllare le informazioni di sistema facilmente."
+#~ msgid "Allows you to monitor system information easily."
+#~ msgstr "Consente di controllare le informazioni di sistema facilmente."

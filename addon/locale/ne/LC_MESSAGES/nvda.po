@@ -11,38 +11,30 @@ msgstr ""
 "PO-Revision-Date: 2013-03-08 21:30+0545\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:37
 msgid "This computer does not have a battery connected."
 msgstr "यो कल्पयन्त्रमा ब्याट्री राखिएको पाइएन ।"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:40
-#: addon\globalPlugins\resourceMonitor\__init__.py:98
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, ब्याट्री चार्ज हुदैछ ।"
 
 #. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#: addon\globalPlugins\resourceMonitor\__init__.py:43
-#: addon\globalPlugins\resourceMonitor\__init__.py:101
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% ब्याट्रीले झण्डै {time} काम गर्ला ।"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:45
-#: addon\globalPlugins\resourceMonitor\__init__.py:103
 msgid " Warning: low battery."
 msgstr "चेतावनी: ब्याट्री कम छ ।"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:47
 msgid " Warning: battery is critically low."
 msgstr "चेतावनी: ब्याट्रीको अवस्था नाजुक छ ।"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:49
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -51,7 +43,6 @@ msgstr ""
 "कम वा नाजुक छ भने चेतावनी समेत  प्रस्तुत गर्छ ।"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:60
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -59,7 +50,6 @@ msgstr ""
 "{driveName} ({driveType} भकारी): {totalSpace} मध्ये {usedSpace} प्रयोग भएको "
 "{percent}% । "
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:64
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -67,45 +57,36 @@ msgstr ""
 "यो कल्पयन्त्रमा रहेका स्थिर र चलायमान भकारीहरूमा प्रयोग भएको तथा कूल क्षमता प्रस्तुत "
 "गर्दछ ।"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:74
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "कोर {coreNumber}: {corePercent}% "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#: addon\globalPlugins\resourceMonitor\__init__.py:76
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "औसत CPU भार {avgLoad}%, {cores} ।"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:78
 msgid "Presents the average processor load and the load of each core."
 msgstr "प्रोसेसरको औसत भार र हरेक कोरको भार प्रस्तुत गर्छ ।."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:83
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "भौतिक: {physicalTotal} मद्धे {physicalUsed} प्रयोग ({physicalPercent}%%) ।"
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:86
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "अवास्तविक: {virtualTotal} मध्ये {virtualUsed} प्रयोग भएको ({virtualPercent}%) "
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:88
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "भौतिक तथा  अवास्तविक र्‍यामको प्रयोगमा आएको र कूल क्षमता देखाउ छ ।"
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:95
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM र CPU {cpuPercent}% पर्योग भएको"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:105
 msgid " Warning: critically low battery."
 msgstr "चेतावनी: नाजुक ब्याट्री अवस्था ।"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:107
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
@@ -113,15 +94,16 @@ msgstr ""
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:13
+msgid "Resource Monitor - allows easy access to system information."
+msgstr ""
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery and disk "
 "usage status."
 msgstr ""
 "CPU भार, भण्डारको प्रयोग, ब्याट्री र ढुकुटीको अवस्था बताउने छरितो श्रोत अनुगमन कर्ता ।"
 
-#. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
-#: buildVars.py:16
-msgid "Allows you to monitor system information easily."
-msgstr "तपाइलाई प्रणाली सम्बन्धी जानकारी सजिलै बताउने छ ।"
+#~ msgid "Allows you to monitor system information easily."
+#~ msgstr "तपाइलाई प्रणाली सम्बन्धी जानकारी सजिलै बताउने छ ।"
