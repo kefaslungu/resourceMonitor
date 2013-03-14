@@ -16,7 +16,7 @@ This plugin gives us information about CPU load, memory usage, battery and disk 
 
 ## Changes for 2.2 dev (still in development) ##
 
-* Added following translations: Aragonese, Dutch, Finnish, French, Galatian, German, Hungarian, Italian, Korean, Nepali, Portuguese (Brazil), Russian, Slovenian, Spanish, Tamil and Turkish.
+* Added following translations: Aragonese, Croatian, Dutch, Finnish, French, Galatian, German, Hungarian, Italian, Korean, Nepali, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil and Turkish.
 
 ## Changes for 2.1 ##
 
