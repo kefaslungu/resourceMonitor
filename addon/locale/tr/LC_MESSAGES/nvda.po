@@ -11,6 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2013-03-09 15:21+0200\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,14 +24,16 @@ msgstr "Bu bilgisayara pil takılı değil."
 msgid "{percent}%, battery charging."
 msgstr "%{percent}, pil şarj oluyor."
 
-#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
 msgstr "%{percent} kalan pil, yaklaşık {time}."
 
+#. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
 msgstr " Uyarı: düşük pil."
 
+#. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
 msgstr " Uyarı: pil kritik seviyede."
 
@@ -90,6 +93,22 @@ msgstr " Uyarı: pil kritik seviyede."
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "Kullanılan ram, CPU yükü, ve mevcutsa pil bilgisini verir ."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr ""
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr ""
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr ""
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr ""
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.

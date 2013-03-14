@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-12 11:35+0100\n"
+"PO-Revision-Date: 2013-03-14 08:47+0100\n"
 "Last-Translator: David Parduhn <xkill85@gmx.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,14 +23,16 @@ msgstr "An diesen Computer ist kein Akku angeschlossen"
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, Akku wird geladen."
 
-#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Akkubetrieb, {percent}% verbleiben, noch {time}."
 
+#. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
 msgstr "Warnung: Akkustand niedrig."
 
+#. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
 msgstr "Warnung: Akkustand kritisch."
 
@@ -57,7 +59,7 @@ msgstr ""
 "Zeigt den verwendeten und den gesamten Speicherplatz aller laufwerke an."
 
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr "Prozessor {coreNumber}: {corePercent}%. "
+msgstr "Kern {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
 msgid "Average CPU load {avgLoad}%, {cores}"
@@ -94,6 +96,22 @@ msgid ""
 msgstr ""
 "Zeigt die Menge des verwendeten Arbeitsspeichers, die cPU-auslastung sowie "
 "Akku-Informationen an (falls ein Akku angeschlossen ist)."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " Stunde, "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " Stunden, "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " Minute"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " Minuten"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.

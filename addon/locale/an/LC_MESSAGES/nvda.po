@@ -24,14 +24,16 @@ msgstr "Iste ordinador no tien una batería conectada."
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, a batería se ye cargando."
 
-#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
 msgstr "En queda {percent}% de batería, arredol de {time}."
 
+#. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
 msgstr "Para cuenta: Bbatería baixa."
 
+#. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
 msgstr "Para cuenta: A batería ye muit baixa."
 
@@ -91,6 +93,22 @@ msgid ""
 msgstr ""
 "Presienta a RAM usada, a carga meya d'o procesador y información d'a batería "
 "si ye disponible."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr ""
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr ""
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr ""
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr ""
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.

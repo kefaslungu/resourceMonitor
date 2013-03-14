@@ -10,7 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
 "PO-Revision-Date: 2013-03-10 18:40-0300\n"
 "Last-Translator: Cleverson Casarin Uliana <clever92000@yahoo.com.br>\n"
-"Language-Team: Equipe de tradução do NVDA para Português do Brasil <clever92000@yahoo.com.br>\n"
+"Language-Team: Equipe de tradução do NVDA para Português do Brasil "
+"<clever92000@yahoo.com.br>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,26 +27,40 @@ msgstr "Este computador não possui bateria acoplada."
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, carregando bateria."
 
-#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Restam {percent}% da bateria, cerca de {time}."
 
+#. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
 msgstr " Alerta: bateria baixa."
 
+#. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
 msgstr " Alerta: bateria criticamente baixa."
 
-msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
-msgstr "Mostra porcentagem de bateria, status da carga, tempo restante (se não estiver carregando) e alerta caso a bateria esteja baixa ou crítica."
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Mostra porcentagem de bateria, status da carga, tempo restante (se não "
+"estiver carregando) e alerta caso a bateria esteja baixa ou crítica."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
-msgstr "{driveName} (unidade {driveType}): em uso {usedSpace} de {totalSpace}, {percent}%. "
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
+"{percent}%. "
+msgstr ""
+"{driveName} (unidade {driveType}): em uso {usedSpace} de {totalSpace}, "
+"{percent}%. "
 
-msgid "Presents the used and total space of the static and removable drives on this computer."
-msgstr "Mostra o espaço em uso e o total das unidades fixas e removíveis do computador."
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Mostra o espaço em uso e o total das unidades fixas e removíveis do "
+"computador."
 
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Núcleo {coreNumber}: {corePercent}%. "
@@ -59,7 +74,8 @@ msgstr "Mostra a carga média do processador e a carga de cada núcleo."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr "Físico: em uso {physicalUsed} de {physicalTotal} ({physicalPercent}%). "
+msgstr ""
+"Físico: em uso {physicalUsed} de {physicalTotal} ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
@@ -75,8 +91,27 @@ msgstr "{ramPercent}% de RAM em uso, CPU a {cpuPercent}%. "
 msgid " Warning: critically low battery."
 msgstr " Alerta: bateria criticamente baixa."
 
-msgid "Presents used ram, average processor load, and battery info if available."
-msgstr "Mostra ram em uso, carga média do processador e informações de bateria se disponíveis."
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Mostra ram em uso, carga média do processador e informações de bateria se "
+"disponíveis."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr ""
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr ""
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr ""
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr ""
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
@@ -85,8 +120,12 @@ msgstr "Monitor de recursos - fornece acesso fácil a informações de sistema."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid "A handy resource monitor to report CPU load, memory usage, battery and disk usage status."
-msgstr "Um monitor prático de recursos que anuncia carga da CPU, uso de memória, status de bateria e uso de disco."
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery and disk "
+"usage status."
+msgstr ""
+"Um monitor prático de recursos que anuncia carga da CPU, uso de memória, "
+"status de bateria e uso de disco."
 
 #~ msgid "Allows you to monitor system information easily."
 #~ msgstr "Permite monitorar informações do sistema de maneira fácil."

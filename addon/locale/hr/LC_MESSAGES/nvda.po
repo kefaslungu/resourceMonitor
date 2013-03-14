@@ -5,121 +5,122 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 2.1\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-14 08:43+0200\n"
-"Last-Translator: Jani Kinnunen\n"
+"Project-Id-Version: resourceMonitor 2.2-dev\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-03-13 10:32+0100\n"
+"PO-Revision-Date: 2013-03-14 07:57+0100\n"
+"Last-Translator: Hrvoje Katić <hrvojekatic@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 
 msgid "This computer does not have a battery connected."
-msgstr "Tässä tietokoneessa ei ole akkua."
+msgstr "Ovo računalo nema spojenu bateriju."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 msgid "{percent}%, battery charging."
-msgstr "{percent} prosenttia, akkua ladataan."
+msgstr "{percent}%, baterija se puni."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent} prosenttia, akun käyttöaikaa jäljellä noin {time}."
+msgstr "{percent}% preostalo baterije, od prilike {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr " Varoitus: akun varaus alhainen."
+msgstr " Pažnja: baterija je slaba."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
-msgstr " Varoitus: akun varaus kriittisen alhainen."
+msgstr " Pažnja: baterija će se uskoro isprazniti."
 
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"Lukee akun varauksen prosentteina, latauksen tilan, jäljellä olevan ajan "
-"(jos ei latauksessa) sekä varoituksen, mikäli varaus on alhainen tai "
-"kriittinen."
+"Izjavljuje postotak baterije, stanje punjenja, preostalo vrijeme (ako se ne "
+"puni) te upozorenje ukoliko je baterija slaba ili skoro prazna."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
 msgstr ""
-"{driveName} ({driveType}-asema): {usedSpace} käytetty kokonaistilasta "
-"{totalSpace}, {percent} prosenttia. "
+"{driveName} ({driveType} pogon): korišteno {usedSpace} od {totalSpace} "
+"{percent}%. "
 
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"Lukee kiintolevyjen ja siirrettävien asemien käytetyn ja kokonaistilan "
-"määrän."
+"Izjavljuje korišten i sveukupni prostor na statičkim i uklonjivim pogonima "
+"na ovom računalu."
 
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr "Ydin {coreNumber}: {corePercent} prosenttia. "
+msgstr "Jezgra {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
 msgid "Average CPU load {avgLoad}%, {cores}"
-msgstr "Prosessorin keskimääräinen kuormitus {avgLoad} prosenttia, {cores}"
+msgstr "Prosječno CPU opterećenje je {avgLoad}%, {cores}"
 
 msgid "Presents the average processor load and the load of each core."
-msgstr "Lukee prosessorin ja joka ytimen keskimääräisen kuormituksen."
+msgstr ""
+"Izjavljuje prosječno opterećenje procesora te opterećenje svake jezgre."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"Fyysinen: {physicalUsed} käytetty kokonaismäärästä {physicalTotal}, "
-"{physicalPercent} prosenttia. "
+"Fizička memorija: u uporabi je {physicalUsed} od {physicalTotal} "
+"({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
-"Näennäinen: {virtualUsed} käytetty kokonaismäärästä {virtualTotal}, "
-"{virtualPercent} prosenttia."
+"Virtualna memorija: u uporabi je {virtualUsed} od {virtualTotal} "
+"({virtualPercent}%)."
 
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Lukee sekä fyysisen että näennäisen RAM-muistin käytetyn ja kokonaismäärän."
+"Izjavljuje iskorišten i sveukupni prostor u fizičkoj i virtualnoj ram "
+"memoriji."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
-msgstr ""
-"RAM-muistia käytetty {ramPercent}, prosessorin kuormitus {cpuPercent} "
-"prosenttia. "
+msgstr "{ramPercent}% korišteno RAM memorije, CPU je na {cpuPercent}%. "
 
 msgid " Warning: critically low battery."
-msgstr " Varoitus: akun varaus kriittisen alhainen."
+msgstr " Pažnja: Baterija će se uskoro potrošiti."
 
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"Lukee käytetyn RAM-muistin määrän, prosessorin keskimääräisen kuormituksen "
-"ja akun tiedot, mikäli saatavilla."
+"Izjavljuje iskorištenu ram memoriju, prosječno opterećenje procesora te "
+"informaciju o bateriji ako je ima."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr " tunti, "
+msgstr " sat, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr " tuntia, "
+msgstr " sati, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr " minuutti"
+msgstr " minuta"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr " minuuttia"
+msgstr " minuta"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor - allows easy access to system information."
-msgstr "Resource Monitor - mahdollistaa järjestelmätietojen helpon lukemisen."
+msgstr ""
+"Resource Monitor - omogućuje jednostavan pristup informacijama o sustavu."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
@@ -127,8 +128,5 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery and disk "
 "usage status."
 msgstr ""
-"Hyödyllinen resurssientarkkailija prosessorin kuormituksen, muistin käytön "
-"sekä akun ja levyn käytön tilan lukemiseen."
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr "Mahdollistaa järjestelmätietojen helpon lukemisen."
+"Zgodan monitor resursa koji daje izvještaj o opterećenju procesora, "
+"iskorištenosti memorije te stanju iskorištenosti baterije i diskova."

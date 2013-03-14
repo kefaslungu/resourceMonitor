@@ -24,14 +24,16 @@ msgstr "यो कल्पयन्त्रमा ब्याट्री र
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, ब्याट्री चार्ज हुदैछ ।"
 
-#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% ब्याट्रीले झण्डै {time} काम गर्ला ।"
 
+#. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
 msgstr "चेतावनी: ब्याट्री कम छ ।"
 
+#. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
 msgstr "चेतावनी: ब्याट्रीको अवस्था नाजुक छ ।"
 
@@ -91,6 +93,22 @@ msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
 "प्रयोग भएको ram, औसत प्रोसेसर भार तथा उपलब्ध छ भने ब्याट्री सम्बन्धी जानकारी दिने छ ।"
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr ""
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr ""
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr ""
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr ""
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.

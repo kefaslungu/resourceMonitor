@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-09 12:27+0100\n"
+"PO-Revision-Date: 2013-03-14 09:52+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,16 +22,18 @@ msgstr "Ta računalnik nima priključenega akumulatorja."
 # po testu revizija
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 msgid "{percent}%, battery charging."
-msgstr "Akumulator je napoljen do {percent}%%."
+msgstr "Akumulator je napoljen do {percent}%."
 
-#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
-msgstr "Preostane še {percent}%% za približno  {time}."
+msgstr "Preostane še {percent}% za približno  {time}."
 
+#. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
 msgstr " Opozorilo: nizko stanje akumulatorja"
 
+#. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
 msgstr " Opozorilo: Stanje akumulatorja je kritično nizko."
 
@@ -49,7 +51,7 @@ msgid ""
 "{percent}%. "
 msgstr ""
 "{driveName} ({driveType} pogon): v uporabi {usedSpace} od skupaj "
-"{totalSpace} {percent}%%."
+"{totalSpace} {percent}%."
 
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
@@ -72,12 +74,12 @@ msgstr ""
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"Fizični: {physicalUsed} od {physicalTotal} v uporabi  ({physicalPercent}%%)."
+"Fizični: {physicalUsed} od {physicalTotal} v uporabi  ({physicalPercent}%)."
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
-"Navidezni: {virtualUsed} od {virtualTotal} v uporabi ({virtualPercent}%%)."
+"Navidezni: {virtualUsed} od {virtualTotal} v uporabi ({virtualPercent}%)."
 
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
@@ -86,7 +88,7 @@ msgstr ""
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
-msgstr "{ramPercent}%% pomnilnika v uporabi, CPE na {cpuPercent}%%. "
+msgstr "{ramPercent}% pomnilnika v uporabi, CPE na {cpuPercent}%. "
 
 msgid " Warning: critically low battery."
 msgstr " Opozorilo: kritično nizko stanje akumulatorja"
@@ -96,6 +98,22 @@ msgid ""
 msgstr ""
 "Predstavi pomnilnik v rabi, povprečno obremenitev procesorja in informacije "
 "o akumulatorju, če so na voljo."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " ura,"
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " ur,"
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " minuta"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " minut"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.

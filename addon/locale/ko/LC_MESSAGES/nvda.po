@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-10 15:59-0800\n"
+"PO-Revision-Date: 2013-03-14 00:20-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,14 +23,16 @@ msgstr "사용자 컴퓨터에 베터리가 없습니다."
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, 베터리 중전중."
 
-#. Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% 베터리 남음, {time} 사용 가능."
 
+#. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
 msgstr "주의: 베터리 충전률 저조함."
 
+#. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
 msgstr "주의: 베터리 방전 조심."
 
@@ -87,6 +89,22 @@ msgstr "주의: 베토리 방전 조심 바람.Warning: critically low battery."
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "메모리, 프로세서 사용률 및 메터리 사용에 관한 정보를 제공합니다."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr "시간 "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr "시간 "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr "분"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr "분"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
