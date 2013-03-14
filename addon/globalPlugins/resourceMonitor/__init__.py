@@ -39,11 +39,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 			info=_("{percent}%, battery charging.").format(percent=tryTrunk(battery.percentage))
 		elif battery.onBattery: 
-			# Translators: message presented when computer running on battery power, showing percentage remaining and estimated remaining time.
+			# Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 			info=_("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(battery.percentage), time=battery.timeLeft)
 			if battery.low:
+				# Translators: Message reported when battery level is low.
 				info+=_(" Warning: low battery.")
 			elif battery.critical:
+				# Translators: Message reported when battery level is critical.
 				info+=_(" Warning: battery is critically low.")
 		ui.message(info)
 	script_announceBatteryInfo.__doc__=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.")

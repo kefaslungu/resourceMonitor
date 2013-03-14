@@ -44,11 +44,15 @@ def getInfo():
 	else:
 		if hours>0:
 			timeLeft+=str(hours)
-			if hours==1: timeLeft+=" hour, "
-			else: timeLeft+=" hours, "
+			# Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+			if hours==1: timeLeft+=_(" hour, ")
+			# Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+			else: timeLeft+=_(" hours, ")
 		timeLeft+=str(minutes)
-		if minutes==1: timeLeft+=" minute"
-		else: timeLeft+=" minutes"
+		# Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+		if minutes==1: timeLeft+=_(" minute")
+		# Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+		else: timeLeft+=_(" minutes")
 	percentage=sps.BatteryLifePercent
 	ACLineStatus=sps.ACLineStatus%256
 	BatteryFlag=sps.BatteryFlag%256
