@@ -34,6 +34,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		#returns nothing, but sets vars we can now inspect
 		battery.getInfo()
 		if battery.noBattery:
+			# Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 			info=_("This computer does not have a battery connected.")
 		elif not battery.onBattery: 
 			# Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
@@ -71,8 +72,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		#lists load for each core
 		perCpuLoad=psutil.cpu_percent(percpu=True)
 		coreLoad=""
-		# Translators: Shows average load of CPU cores (example: core 1, 50%).
 		for i in range(len(perCpuLoad)):
+			# Translators: Shows average load of CPU cores (example: core 1, 50%).
 			coreLoad+=_("Core {coreNumber}: {corePercent}%. ").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i]))
 		# Translators: Shows average load of the processor and the load for each core.
 		info=_("Average CPU load {avgLoad}%, {cores}").format(avgLoad=tryTrunk(averageLoad), cores=coreLoad)
@@ -104,6 +105,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if battery.low:
 					info+=_(" Warning: low battery.")
 				elif battery.critical:
+					# Translators: In addition to processor and memory usage, presented when battery is low.
 					info+=_(" Warning: critically low battery.")
 		ui.message(info)
 	script_announceResourceSummary.__doc__=_("Presents used ram, average processor load, and battery info if available.")
