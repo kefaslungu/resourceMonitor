@@ -49,6 +49,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# Translators: Message reported when battery level is critical.
 				info+=_(" Warning: battery is critically low.")
 		ui.message(info)
+	# Translators: Input help message about battery info command in Resource Monitor.
 	script_announceBatteryInfo.__doc__=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.")
 
 	def script_announceDriveInfo(self, gesture):
@@ -64,6 +65,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except:
 				pass
 		ui.message(info)
+	# Translators: Input help message about drive info command in Resource Monitor.
 	script_announceDriveInfo.__doc__=_("Presents the used and total space of the static and removable drives on this computer.")
 
 	def script_announceProcessorInfo(self, gesture):
@@ -78,6 +80,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Shows average load of the processor and the load for each core.
 		info=_("Average CPU load {avgLoad}%, {cores}").format(avgLoad=tryTrunk(averageLoad), cores=coreLoad)
 		ui.message(info)
+	# Translators: Input help mode message about processor info command in Resource Monitor.
 	script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
 	def script_announceRamInfo(self, gesture):
@@ -88,6 +91,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Shows virtual memory usage.
 		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=toBiggestBytes(tryTrunk(virtualRam[1])), virtualTotal=toBiggestBytes(tryTrunk(virtualRam[0])), virtualPercent=tryTrunk(virtualRam[3]))
 		ui.message(info)
+	# Translators: Input help mode message about memory info command in Resource Monitor.
 	script_announceRamInfo.__doc__=_("Presents the used and total space for both physical and virtual ram.")
 
 	def script_announceResourceSummary(self, gesture):
@@ -108,6 +112,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					# Translators: In addition to processor and memory usage, presented when battery is low.
 					info+=_(" Warning: critically low battery.")
 		ui.message(info)
+	# Translators: Input help mode message about overall system resource info command in Resource Monitor
 	script_announceResourceSummary.__doc__=_("Presents used ram, average processor load, and battery info if available.")
 
 	__gestures={
