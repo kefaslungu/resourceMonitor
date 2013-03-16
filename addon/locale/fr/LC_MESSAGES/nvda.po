@@ -8,10 +8,9 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-05 18:47+0100\n"
+"PO-Revision-Date: 2013-03-14 21:10+0100\n"
 "Last-Translator: patrick ZAJDA <patrick@zajda.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,24 +96,24 @@ msgstr ""
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr ""
+msgstr " heure, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr ""
+msgstr " heures, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr ""
+msgstr " minute"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr ""
+msgstr " minutes"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor - allows easy access to system information."
-msgstr ""
+msgstr "Resource Monitor - permet un accès facile aux informations du système"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information

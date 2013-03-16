@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-04 18:03+0000\n"
-"PO-Revision-Date: 2013-03-13 21:38+0530\n"
+"PO-Revision-Date: 2013-03-14 19:39+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language: \n"
@@ -38,28 +38,15 @@ msgstr "எச்சரிக்கை: மின்கலத்தில் ம
 msgid " Warning: battery is critically low."
 msgstr "எச்சரிக்கை: மின்கலத்தில் மின்சாரம் மிகவும் குறைவாக உள்ளது"
 
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"மின்கலத்தின் மின்னளவு, மின்சாரம் ஏற்றப்படும் நிலை, மின்சாரம் ஏற்றப்படாத நிலையில் எஞ்சியுள்ள "
-"நேரம், மின்கலத்தில் மின்சாரம் குறைவாக, அல்லது மிகவும் குறைவாக இருக்கும் நிலையில் "
-"எச்சரித்தல் ஆகிய பணிகளை செய்கிறது "
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "மின்கலத்தின் மின்னளவு, மின்சாரம் ஏற்றப்படும் நிலை, மின்சாரம் ஏற்றப்படாத நிலையில் எஞ்சியுள்ள நேரம், மின்கலத்தில் மின்சாரம் குறைவாக, அல்லது மிகவும் குறைவாக இருக்கும் நிலையில் எச்சரித்தல் ஆகிய பணிகளை செய்கிறது "
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
-"{percent}%. "
-msgstr ""
-"{driveName} ({driveType} இயக்ககம்): {usedSpace}, மொத்தம் {totalSpace} {percent}% "
-"பயன்படுத்தப்பட்டுள்ளது. "
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
+msgstr "{driveName} ({driveType} இயக்ககம்): {usedSpace}, மொத்தம் {totalSpace} {percent}% பயன்படுத்தப்பட்டுள்ளது. "
 
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"இக்கணினியில் இருக்கும் நிலையான, பெயர்த்தகு இயக்ககங்களின் மொத்த இடம், பயன்பாட்டிலிருக்கும் "
-"இடம் ஆகியவைகளை அறிவிக்கும்"
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr "இக்கணினியில் இருக்கும் நிலையான, பெயர்த்தகு இயக்ககங்களின் மொத்த இடம், பயன்பாட்டிலிருக்கும் இடம் ஆகியவைகளை அறிவிக்கும்"
 
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "கூறு {coreNumber}: {corePercent}%. "
@@ -73,20 +60,14 @@ msgstr "செயலியின் சராசரி சுமையையு�
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
-"({physicalPercent}%). "
+msgstr "மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
-"({virtualPercent}%)."
+msgstr "மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} ({virtualPercent}%)."
 
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"மெய் மற்றும் மெய்நிகர் இடை நினைவகத்தின் மொத்த மற்றும் பயன்பாட்டிலிருக்கும் இட அளவை "
-"அறிவிக்கும். "
+msgstr "மெய் மற்றும் மெய்நிகர் இடை நினைவகத்தின் மொத்த மற்றும் பயன்பாட்டிலிருக்கும் இட அளவை அறிவிக்கும். "
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
@@ -95,27 +76,24 @@ msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட�
 msgid " Warning: critically low battery."
 msgstr "எச்சரிக்கை: மின்கலத்தில் மின்னளவு மிகவும் குறைந்துள்ளது."
 
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை "
-"அறிவிக்கிறது."
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை அறிவிக்கிறது."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr ""
+msgstr "மணி நேரம்,"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr ""
+msgstr "மணி நேரங்கள்,"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr ""
+msgstr "நிமிடம்"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr ""
+msgstr "நிமிடங்கள்"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
@@ -124,12 +102,8 @@ msgstr "வள கவனிப்பு (Resource Monitor) - கணினித�
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
-msgstr ""
-"மையச் செயலக சுமை, நினைவக, மின்கல மற்றும் வட்டின் பயன்பாடு ஆகியவைகளை அறிவிக்கும் "
-"கையடக்க வள கவனிப்புக் கூட்டுறுப்பு."
+msgid "A handy resource monitor to report CPU load, memory usage, battery and disk usage status."
+msgstr "மையச் செயலக சுமை, நினைவக, மின்கல மற்றும் வட்டின் பயன்பாடு ஆகியவைகளை அறிவிக்கும் கையடக்க வள கவனிப்புக் கூட்டுறுப்பு."
 
 #~ msgid "Allows you to monitor system information easily."
 #~ msgstr "கணினித் தகவல்களை எளிதில் கவனிக்க அனுமதிக்கிறது."
