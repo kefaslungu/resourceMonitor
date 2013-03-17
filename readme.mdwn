@@ -14,7 +14,7 @@ This plugin gives us information about CPU load, memory usage, battery and disk 
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
 
 
-## Changes for 2.2 dev (still in development) ##
+## Changes for 2.2 Beta ##
 
 * Added following translations: Aragonese, Croatian, Dutch, Finnish, French, Galatian, German, Hungarian, Italian, Korean, Nepali, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil and Turkish.
 
