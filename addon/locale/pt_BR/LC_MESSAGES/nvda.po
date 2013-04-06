@@ -10,7 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
 "PO-Revision-Date: 2013-03-16 13:34-0300\n"
 "Last-Translator: Cleverson Casarin Uliana <clever92000@yahoo.com.br>\n"
-"Language-Team: Equipe de tradução do NVDA para Português do Brasil <clever92000@yahoo.com.br>\n"
+"Language-Team: Equipe de tradução do NVDA para Português do Brasil "
+"<clever92000@yahoo.com.br>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,6 +20,7 @@ msgstr ""
 "X-Poedit-Country: BRAZIL\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Este computador não possui bateria acoplada."
 
@@ -39,16 +41,31 @@ msgstr " Alerta: bateria baixa."
 msgid " Warning: battery is critically low."
 msgstr " Alerta: bateria criticamente baixa."
 
-msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
-msgstr "Mostra porcentagem de bateria, status da carga, tempo restante (se não estiver carregando) e alerta caso a bateria esteja baixa ou crítica."
+#. Translators: Input help message about battery info command in Resource Monitor.
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Mostra porcentagem de bateria, status da carga, tempo restante (se não "
+"estiver carregando) e alerta caso a bateria esteja baixa ou crítica."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
-msgstr "{driveName} (unidade {driveType}): em uso {usedSpace} de {totalSpace}, {percent}%. "
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
+"{percent}%. "
+msgstr ""
+"{driveName} (unidade {driveType}): em uso {usedSpace} de {totalSpace}, "
+"{percent}%. "
 
-msgid "Presents the used and total space of the static and removable drives on this computer."
-msgstr "Mostra o espaço em uso e o total das unidades fixas e removíveis do computador."
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Mostra o espaço em uso e o total das unidades fixas e removíveis do "
+"computador."
 
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Núcleo {coreNumber}: {corePercent}%. "
 
@@ -56,17 +73,20 @@ msgstr "Núcleo {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Carga média da CPU {avgLoad}%, {cores}"
 
+#. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr "Mostra a carga média do processador e a carga de cada núcleo."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr "Físico: em uso {physicalUsed} de {physicalTotal} ({physicalPercent}%). "
+msgstr ""
+"Físico: em uso {physicalUsed} de {physicalTotal} ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: em uso {virtualUsed} de {virtualTotal} ({virtualPercent}%)."
 
+#. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Mostra espaço em uso e total da memória física e da virtual."
 
@@ -74,11 +94,16 @@ msgstr "Mostra espaço em uso e total da memória física e da virtual."
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% de RAM em uso, CPU a {cpuPercent}%. "
 
+#. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
 msgstr " Alerta: bateria criticamente baixa."
 
-msgid "Presents used ram, average processor load, and battery info if available."
-msgstr "Mostra ram em uso, carga média do processador e informações de bateria se disponíveis."
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Mostra ram em uso, carga média do processador e informações de bateria se "
+"disponíveis."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -103,8 +128,12 @@ msgstr "Monitor de recursos - fornece acesso fácil a informações de sistema."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid "A handy resource monitor to report CPU load, memory usage, battery and disk usage status."
-msgstr "Um monitor prático de recursos que anuncia carga da CPU, uso de memória, status de bateria e uso de disco."
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery and disk "
+"usage status."
+msgstr ""
+"Um monitor prático de recursos que anuncia carga da CPU, uso de memória, "
+"status de bateria e uso de disco."
 
 #~ msgid "Allows you to monitor system information easily."
 #~ msgstr "Permite monitorar informações do sistema de maneira fácil."

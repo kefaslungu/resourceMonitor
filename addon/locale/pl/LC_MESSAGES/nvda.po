@@ -5,133 +5,111 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 2.1\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-11 14:39+0100\n"
-"Last-Translator: Bram Duvigneau <bram@bramd.nl>\n"
-"Language-Team: NL <nvda-nl@googlegroups.com>\n"
-"Language: nl_NL\n"
+"Project-Id-Version: resourceMonitor 2.2-dev\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-03-15 20:56-0700\n"
+"PO-Revision-Date: 2013-04-05 12:34+0100\n"
+"Last-Translator: Hubert Meyer <killer@tyflonet.com>\n"
+"Language-Team: killer-of-god <killer@tyflonet.com>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "Er is geen batterij in deze computer."
+msgstr "brak baterji"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 msgid "{percent}%, battery charging."
-msgstr "{percent}%, bezig met opladen van batterij."
+msgstr "{percent}%, ładowanie"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent}% batterij resterend, ongeveer {time}."
+msgstr "{percent}% pozostało {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr " Waarschuwing: batterij bijna leeg."
+msgstr "ostrzeżenie. Niski poziom baterji"
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
-msgstr " Waarschuwing: batterij is zo goed als leeg."
+msgstr "ostrzeżenie. Poziom baterji jest krytycznie niski"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"Toont batterijpercentage, oplaadstatus, resterende tijd (als er niet wordt "
-"opgeladen), en een waarschuwing als de batterij bijna leeg of zo goed als "
-"leeg is."
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "odczytuje poziom naładowania baterji w procentach oraz ostrzeżenia w przypadku krytycznie niskiego poziomu ich naładowania"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
-"{percent}%. "
-msgstr ""
-"{driveName} ({driveType} schijf): {usedSpace} van {totalSpace} gebruikt "
-"{percent}%. "
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
+msgstr "{driveName} ({driveType} drive): {usedSpace} z {totalSpace} w użyciu {percent}%. "
 
 #. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Toont de gebruikte en beschikbare ruimte van alle vaste en verwisselbare "
-"schijven van deze computer."
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr "odczytuje używaną, oraz całkowitą przestrzeń na dyskach komputera"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr "Core {coreNumber}: {corePercent}%. "
+msgstr "Rdzeń {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
 msgid "Average CPU load {avgLoad}%, {cores}"
-msgstr "Gemiddelde CPU belasting {avgLoad}%, {cores}"
+msgstr "w szczycie {avgLoad}%, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr ""
-"Toont de gemiddelde CPU belasting en de gemiddelde belasting van elke CPU "
-"core."
+msgstr "odczytuje szczytowe użycie procesora i obciąrzenie każdego z rdzeni"
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Fysiek: {physicalUsed} van {physicalTotal} gebruikt ({physicalPercent}%). "
+msgstr "fizyczne: {physicalUsed} z {physicalTotal} w użyciu ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"Virtueel: {virtualUsed} van {virtualTotal} gebruikt ({virtualPercent}%)."
+msgstr "Wirtualna: {virtualUsed} z {virtualTotal} w użyciu ({virtualPercent}%)."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Toont het gebruikte en totaal beschikbare fysieke en virtuele RAM."
+msgstr "odczytuje użytą obecnie i dostępną przestrzeń w pamięci ram. Fizycznej i wirtualnej."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
-msgstr "{ramPercent}% RAM gebruikt, CPU op {cpuPercent}%. "
+msgstr "{ramPercent}% ramu, Obciąrzenie {cpuPercent}%. "
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
-msgstr " Waarschuwing: batterij is zo goed als leeg."
+msgstr "ostrzeżenie. Krytycznie niski poziom baterji."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"Toont gebruikt RAM, gemiddelde CPU belasting en baterij-informatie indien "
-"beschikbaar."
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "odczytuje obciąrzenie procesora, ramu, i status baterji jeśli dostępny"
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr ""
+msgstr "godzina"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr ""
+msgstr "godzin"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr ""
+msgstr "minuta"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr ""
+msgstr "minuty"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor - allows easy access to system information."
-msgstr "Resource Monitor - Geeft gemakkelijk toegang tot systeeminformatie."
+msgstr "resource monitor pozwala na łatwy dostęp do informacji systemowych"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
-msgstr ""
-"Een handige bronmonitor die CPU belasting, geheugengebruik, batterij en "
-"schijfruimte rapporteert."
+msgid "A handy resource monitor to report CPU load, memory usage, battery and disk usage status."
+msgstr "podręczny monitor zasobów pamięci ram i obciąrzenia cpu"
+

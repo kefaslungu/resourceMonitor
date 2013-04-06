@@ -11,11 +11,12 @@ msgstr ""
 "PO-Revision-Date: 2013-03-14 08:00+0100\n"
 "Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Systém nie je napájaný z batérie."
 
@@ -36,16 +37,30 @@ msgstr "Pozor: batéria vybytá"
 msgid " Warning: battery is critically low."
 msgstr "Pozor: kritický stav batérie"
 
-msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
-msgstr "Oznamuje stav, zostávajúci čas používania pri napájaní z batérie, informáciu o použitom zdroji napájania a prípadne informáciu o vybytí alebo kritickom stave batérie."
+#. Translators: Input help message about battery info command in Resource Monitor.
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Oznamuje stav, zostávajúci čas používania pri napájaní z batérie, informáciu "
+"o použitom zdroji napájania a prípadne informáciu o vybytí alebo kritickom "
+"stave batérie."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
-msgstr "disk {driveName} ({driveType}): využité: {usedSpace} z {totalSpace}, {percent}%. "
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
+"{percent}%. "
+msgstr ""
+"disk {driveName} ({driveType}): využité: {usedSpace} z {totalSpace}, "
+"{percent}%. "
 
-msgid "Presents the used and total space of the static and removable drives on this computer."
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
 msgstr "Oznámi voľné a využité miesto na všetkých pripojených jednotkách."
 
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "jadro {coreNumber}: {corePercent}%. "
 
@@ -53,29 +68,40 @@ msgstr "jadro {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Priemerné vyťaženie CPU {avgLoad}%, {cores}"
 
+#. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr "Oznámi priemerné vyťaženie procesora a vyťaženie jednotlivých jadier."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr "fyzická pamäť: využité {physicalUsed} z {physicalTotal} ({physicalPercent}%). "
+msgstr ""
+"fyzická pamäť: využité {physicalUsed} z {physicalTotal} "
+"({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr "Virtuálna pamäť: využité {virtualUsed} z {virtualTotal} ({virtualPercent}%)."
+msgstr ""
+"Virtuálna pamäť: využité {virtualUsed} z {virtualTotal} ({virtualPercent}%)."
 
+#. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Oznámi využité a voľné miesto pre fyzickú a virtuálnu pamäť."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
-msgstr "{ramPercent}% využitej pamäte ram, zaťaženie procesora na {cpuPercent}%. "
+msgstr ""
+"{ramPercent}% využitej pamäte ram, zaťaženie procesora na {cpuPercent}%. "
 
+#. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
 msgstr "Pozor: Kritický stav batérie."
 
-msgid "Presents used ram, average processor load, and battery info if available."
-msgstr "Oznámi využitie ram pamäte, priemerné vyťaženie procesora a prípadný kritický stav batérie."
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Oznámi využitie ram pamäte, priemerné vyťaženie procesora a prípadný "
+"kritický stav batérie."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -100,6 +126,9 @@ msgstr "Resource Monitor - rýchli prístup k systémovým informáciám."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid "A handy resource monitor to report CPU load, memory usage, battery and disk usage status."
-msgstr "Jednoduchý doplnok na zistenie vyťaženia procesora, využitej ram pamäte, stavu napájania a miesta na pripojených diskoch."
-
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery and disk "
+"usage status."
+msgstr ""
+"Jednoduchý doplnok na zistenie vyťaženia procesora, využitej ram pamäte, "
+"stavu napájania a miesta na pripojených diskoch."

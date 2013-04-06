@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-14 09:52+0100\n"
+"PO-Revision-Date: 2013-03-14 10:12+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language:sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Ta računalnik nima priključenega akumulatorja."
 
@@ -37,6 +39,7 @@ msgstr " Opozorilo: nizko stanje akumulatorja"
 msgid " Warning: battery is critically low."
 msgstr " Opozorilo: Stanje akumulatorja je kritično nizko."
 
+#. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -53,6 +56,7 @@ msgstr ""
 "{driveName} ({driveType} pogon): v uporabi {usedSpace} od skupaj "
 "{totalSpace} {percent}%."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -60,6 +64,7 @@ msgstr ""
 "Predstavi prostor v uporabi in ves prostor, ki je na voljo na statičnih "
 "pogonih in pogonih za izmenjavo."
 
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Jedro {coreNumber}: {corePercent}%. "
 
@@ -67,6 +72,7 @@ msgstr "Jedro {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Povprečna obremenitev  CPE {avgLoad}%, {cores}"
 
+#. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr ""
 "Predstavi povprečno obremenitev procesorja in obremenitev vsakega jedra."
@@ -81,6 +87,7 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Navidezni: {virtualUsed} od {virtualTotal} v uporabi ({virtualPercent}%)."
 
+#. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
 "Predstavi količino pomnilnika v uporabi in vso količino na voljo. Velja tako "
@@ -90,9 +97,11 @@ msgstr ""
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% pomnilnika v uporabi, CPE na {cpuPercent}%. "
 
+#. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
 msgstr " Opozorilo: kritično nizko stanje akumulatorja"
 
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""

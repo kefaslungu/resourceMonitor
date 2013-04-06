@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-05 16:13+0100\n"
-"PO-Revision-Date: 2013-03-07 10:00+0100\n"
+"PO-Revision-Date: 2013-03-17 11:30+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.3\n"
 
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Questo computer non dispone di una batteria collegata."
 
@@ -37,6 +38,7 @@ msgstr "Attenzione: batteria scarica."
 msgid " Warning: battery is critically low."
 msgstr "Attenzione: la batteria è quasi scarica."
 
+#. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -52,6 +54,7 @@ msgstr ""
 "{driveName} ({driveType} drive): {usedSpace} di {totalSpace} usato "
 "{percent}%. "
 
+#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -59,6 +62,7 @@ msgstr ""
 "Annuncia lo spazio utilizzato e totale delle unità statiche e rimovibili su "
 "questo computer."
 
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Core {coreNumber}: {corePercent}%. "
 
@@ -66,6 +70,7 @@ msgstr "Core {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Media carico CPU  {avgLoad}%, {cores}"
 
+#. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr "Annuncia il carico medio del processore e il carico di ciascun core."
 
@@ -77,6 +82,7 @@ msgstr "Fisica: {physicalUsed} di {physicalTotal} usata ({physicalPercent}%)."
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtuale: {virtualUsed} di {virtualTotal} usata ({virtualPercent}%)."
 
+#. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
 "Annuncia lo spazio utilizzato e totale per la ram sia fisica che virtuale."
@@ -85,9 +91,11 @@ msgstr ""
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM usata, CPU al {cpuPercent}%. "
 
+#. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
 msgstr "Attenzione: batteria quasi scarica"
 
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
@@ -96,24 +104,26 @@ msgstr ""
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr ""
+msgstr " ora, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr ""
+msgstr "ore, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr ""
+msgstr " minuto"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr ""
+msgstr " minuti"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor - allows easy access to system information."
 msgstr ""
+"Resource monitor permette di accedere rapidamente alle informazioni di "
+"sistema."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information

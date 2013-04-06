@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-16 16:52-0800\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-03-30 14:49-0800\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "사용자 컴퓨터에 베터리가 없습니다."
 
@@ -37,6 +38,7 @@ msgstr "주의: 베터리 충전률 저조함."
 msgid " Warning: battery is critically low."
 msgstr "주의: 베터리 방전 조심."
 
+#. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -52,11 +54,13 @@ msgstr ""
 "{driveName} ({driveType} 드라이브): 총 {totalSpace} 중 {usedSpace} 사용중 "
 "{percent}%. "
 
+#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr "내장 및 확장 드라이브의 사용 공간 및 전체 공간을 알려줍니다."
 
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Core {coreNumber}: {corePercent}%. "
 
@@ -64,6 +68,7 @@ msgstr "Core {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "평균 프로세서 사용률 {avgLoad}%, {cores}"
 
+#. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr "프로세서와 각 프로세서 코어의 사용률을 알려줍니다."
 
@@ -77,6 +82,7 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용중 ({virtualPercent}%)."
 
+#. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "물리 (RAM) 및 가상 메로리의 사용 공간 및 총 메모리를 알려줍니다."
 
@@ -84,9 +90,11 @@ msgstr "물리 (RAM) 및 가상 메로리의 사용 공간 및 총 메모리를 
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
 
+#. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
 msgstr "주의: 베토리 방전 조심 바람.Warning: critically low battery."
 
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "메모리, 프로세서 사용률 및 메터리 사용에 관한 정보를 제공합니다."
@@ -118,6 +126,3 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery and disk "
 "usage status."
 msgstr "프로세서, 디스크, 메모리 사용률 및 베터리 상태를 알려줍니다."
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr "쉽게 시스템 정보를 확인할 수 있습니다."

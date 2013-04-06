@@ -14,16 +14,16 @@ This plugin gives us information about CPU load, memory usage, battery and disk 
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
 
 
-## Changes for 2.2 Beta ##
+## Changes for 2.2-dev ##
 
-* Added following translations: Aragonese, Croatian, Dutch, Finnish, French, Galatian, German, Hungarian, Italian, Korean, Nepali, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil and Turkish.
+* Added following translations: Aragonese, Arabic, Croatian, Dutch, Finnish, French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali, Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil and Turkish.
 
 ## Changes for 2.1 ##
 
 * Updated psutil dependency to version 0.6.1.
 * Fixed long delay when getting information of drives.
 * Replaced %s-es into {friendlyVariableNames}.
-* a bit code cleanup
+* Code cleanup.
 
 ## Changes for 2.0 ##
 

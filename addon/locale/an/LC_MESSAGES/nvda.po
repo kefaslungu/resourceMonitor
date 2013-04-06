@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-09 13:18+0100\n"
+"PO-Revision-Date: 2013-03-14 13:40+0100\n"
 "Last-Translator: Jorge Pérez Pérez <jorgtum@gmail.com>\n"
 "Language-Team: SoftAragonés <softaragones@googlegroups.com>\n"
-"Language: an\n"
+"Language:an\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Iste ordinador no tien una batería conectada."
 
@@ -37,6 +38,7 @@ msgstr "Para cuenta: Bbatería baixa."
 msgid " Warning: battery is critically low."
 msgstr "Para cuenta: A batería ye muit baixa."
 
+#. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -53,6 +55,7 @@ msgstr ""
 "{driveName} (dispositivo {driveType}): {usedSpace} de {totalSpace} usau "
 "{percent}%. "
 
+#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -60,6 +63,7 @@ msgstr ""
 "Presienta l'espacio usau y l'espacio total d'os discos duros y extraíbles "
 "d'iste ordinador."
 
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Nuclio {coreNumber}: {corePercent}%. "
 
@@ -67,6 +71,7 @@ msgstr "Nuclio {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Carga meya de CPU {avgLoad}%, {cores}"
 
+#. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr "Presienta a carga meya d'o procesador y a carga de cada nuclio."
 
@@ -78,6 +83,7 @@ msgstr "Fisico: {physicalUsed} de {physicalTotal} usau ({physicalPercent}%). "
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: {virtualUsed} de {virtualTotal} usau ({virtualPercent}%)."
 
+#. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Presienta lo espacio usau y lo total de memoria RAM fisica y virtual."
 
@@ -85,9 +91,11 @@ msgstr "Presienta lo espacio usau y lo total de memoria RAM fisica y virtual."
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM usada, CPU en {cpuPercent}%. "
 
+#. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
 msgstr "Para cuenta: A batería ye muit baixa."
 
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
@@ -96,19 +104,19 @@ msgstr ""
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr ""
+msgstr " hora, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr ""
+msgstr " horas, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr ""
+msgstr " minuto"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr ""
+msgstr " minutos"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
