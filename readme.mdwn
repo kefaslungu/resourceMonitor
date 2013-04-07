@@ -1,11 +1,11 @@
 [[!meta title="resourceMonitor"]]
 
 * Authors: Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors
-* Download: [version 2.1][1]
+* Download: [version 2.2][1]
 
-This plugin gives us information about CPU load, memory usage, battery and disk usage status.
+This plugin gives information about CPU load, memory usage, battery and disk usage status.
 
-# Short cuts #
+# Shortcuts #
 
 * NVDA+Shift+E Presents used ram, average processor load, and battery info if available,
 * NVDA+Shift+1 Presents the average processor load and the load of each core,
@@ -14,7 +14,7 @@ This plugin gives us information about CPU load, memory usage, battery and disk 
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
 
 
-## Changes for 2.2-dev ##
+## Changes for 2.2 ##
 
 * Added following translations: Aragonese, Arabic, Croatian, Dutch, Finnish, French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali, Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil and Turkish.
 
