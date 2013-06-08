@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: resourceMonitor 2.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-04-11 05:45+0100\n"
+"PO-Revision-Date: 2013-05-28 13:22+0200\n"
+"Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+msgid "This computer does not have a battery connected."
+msgstr "Към този компютър няма свързана батерия."
+
+#. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+msgid "{percent}%, battery charging."
+msgstr "{percent} процента, батерията се зарежда."
+
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+#. discharging battery, so provide info on it
+msgid "{percent}% battery remaining, about {time}."
+msgstr "Батерията е заредена на {percent} процента, около {time}."
+
+#. Translators: Message reported when battery level is low.
+msgid " Warning: low battery."
+msgstr " Предупреждение: нисък заряд на батерията."
+
+#. Translators: Message reported when battery level is critical.
+msgid " Warning: battery is critically low."
+msgstr " Предупреждение: зарядът на батерията е критично нисък."
+
+#. Translators: Input help message about battery info command in Resource Monitor.
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Предоставя информация за зареденост на батерията, дали тя се зарежда, "
+"оставащо време на автономна работа (ако не се зарежда), и предупреждава при "
+"ниско или критично ниво на заряда."
+
+#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
+"{percent}%. "
+msgstr ""
+"{driveName} ({driveType} диск): заети {usedSpace} от {totalSpace} {percent} "
+"процента. "
+
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Предоставя информация относно заетото и общото дисково пространство за "
+"статичните дискове и за тези със сменяем носител на компютъра."
+
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+msgid "Core {coreNumber}: {corePercent}%. "
+msgstr "Ядро {coreNumber}: {corePercent} процента. "
+
+#. Translators: Shows average load of the processor and the load for each core.
+msgid "Average CPU load {avgLoad}%, {cores}"
+msgstr "Средно натоварване на централния процесор {avgLoad} процента, {cores}"
+
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr ""
+"Предоставя информация относно средното натоварване на процесора и "
+"натоварването на всяко ядро."
+
+#. Translators: Shows RAM (physical memory) usage.
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr ""
+"Физическа: използвани {physicalUsed} от {physicalTotal} ({physicalPercent} "
+"процента). "
+
+#. Translators: Shows virtual memory usage.
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr ""
+"Виртуална: използвани {virtualUsed} от {virtualTotal} ({virtualPercent} "
+"процента)."
+
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr ""
+"Предоставя информация относно количеството използвана и общо налична "
+"физическа и виртуална оперативна памет."
+
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
+msgstr ""
+"Използвана RAM памет {ramPercent} процента, Процесор на {cpuPercent} "
+"процента. "
+
+#. Translators: In addition to processor and memory usage, presented when battery is low.
+msgid " Warning: critically low battery."
+msgstr " Предупреждение: критично ниско ниво на батерията."
+
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Предоставя информация относно използваната RAM памет, средното натоварване "
+"на процесора, и информация за батерията, ако е налична."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " час, "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " часа, "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " минута"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " минути"
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor - allows easy access to system information."
+msgstr "Resource Monitor - предоставя лесен достъп до системна информация."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery and disk "
+"usage status."
+msgstr ""
+"Удобно средство за наблюдение на системните ресурси, за докладване на "
+"натоварването на централния процесор, използваната памет, състоянието на "
+"батерията и използването на диска."
