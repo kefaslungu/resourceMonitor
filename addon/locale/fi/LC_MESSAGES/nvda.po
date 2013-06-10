@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-14 08:43+0200\n"
+"PO-Revision-Date: 2013-06-10 15:28+0200\n"
 "Last-Translator: Jani Kinnunen\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language:fi\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -73,7 +73,7 @@ msgstr "Prosessorin keskimääräinen kuormitus {avgLoad} prosenttia, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "Lukee prosessorin ja joka ytimen keskimääräisen kuormituksen."
+msgstr "Lukee prosessorin ja ydinten keskimääräisen kuormituksen."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
@@ -128,7 +128,8 @@ msgstr " minuuttia"
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor - allows easy access to system information."
-msgstr "Resource Monitor - mahdollistaa järjestelmätietojen helpon lukemisen."
+msgstr ""
+"Resurssienvalvonta - mahdollistaa järjestelmätietojen helpon lukemisen."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
