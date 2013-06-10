@@ -15,7 +15,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on installation and add-on information
 	"addon-description" : _("A handy resource monitor to report CPU load, memory usage, battery and disk usage status."),
 	# version
-	"addon-version" : "2.3dev",
+	"addon-version" : "2.3",
 	# Author(s)
 	"addon-author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
