@@ -3,7 +3,13 @@
 #Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run).
 
 import globalPluginHandler, ui
-import psutil, battery
+import sys
+import os
+impPath = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(impPath)
+import psutil
+del sys.path[-1]
+import battery
 import addonHandler
 addonHandler.initTranslation()
 

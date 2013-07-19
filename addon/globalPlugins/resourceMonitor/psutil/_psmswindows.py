@@ -9,7 +9,7 @@
 import errno
 import os
 import sys
-import platform
+#import platform
 import warnings
 
 import _psutil_mswindows
