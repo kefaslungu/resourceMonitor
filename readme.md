@@ -16,7 +16,7 @@ This plugin gives information about CPU load, memory usage, battery and disk usa
 
 ## Changes for 2.3 ##
 
-* New languages: Bulgarian, Ukrainian.
+* New languages: Bulgarian, Chinese (simplified), Ukrainian.
 
 ## Changes for 2.2 ##
 
