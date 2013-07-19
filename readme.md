@@ -1,7 +1,7 @@
 [[!meta title="resourceMonitor"]]
 
 * Authors: Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors
-* Download: [version 2.2][1]
+* Download: [version 2.4][1]
 
 This plugin gives information about CPU load, memory usage, battery and disk usage status.
 
