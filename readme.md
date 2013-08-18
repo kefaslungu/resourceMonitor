@@ -12,11 +12,12 @@ This plugin gives information about CPU load, memory usage, battery and disk usa
 * NVDA+Shift+2/5 Presents the used and total space for both physical and virtual ram,
 * NVDA+Shift+3 Presents the used and total space of the static and removable drives on this computer,
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
+* NVDA+Shift+6 Presents currently installed Windows version.
 
 ## Changes for 3.0 ##
 
 * Updated psutil dependency to 1.0.1.
-
+* Announcement of current Windows version (NVDA+Shift+6).
 
 ## Changes for 2.4 ##
 

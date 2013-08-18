@@ -100,6 +100,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Input help mode message about memory info command in Resource Monitor.
 	script_announceRamInfo.__doc__=_("Presents the used and total space for both physical and virtual ram.")
 
+	def script_announceWinVer(self, gesture):
+		# Obtain winversion.
+		winMajor, winMinor, sp, server = sys.getwindowsversion().major, sys.getwindowsversion().minor, sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
+		info = "Windows version: "
+		if winMajor == 5: # XP (5.1) or Server 2003 (5.2).
+			if winMinor == 1: info+= "Windows XP" # Since most XP systems use 32-bit editions.
+			elif winMinor == 2: info+= "Windows Server 2003"
+		elif winMajor == 6: # Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+			if winMinor == 0: info+= "Windows Vista" if server == 1 else "Windows Server 2008" # Vista.
+			elif winMinor == 1: info+= "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
+			elif winMinor == 2: info+= "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
+		ui.message(info)
+	script_announceWinVer.__doc__="Announces the version of Windows you are using."
+
 	def script_announceResourceSummary(self, gesture):
 		cpuLoad=psutil.cpu_percent()
 		ram=psutil.phymem_usage()
@@ -128,4 +142,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"KB:NVDA+shift+3":"announceDriveInfo",
 		"KB:NVDA+shift+4":"announceBatteryInfo",
 		"KB:NVDA+shift+5":"announceRamInfo",
+		"KB:NVDA+shift+6":"announceWinVer",
 	}
