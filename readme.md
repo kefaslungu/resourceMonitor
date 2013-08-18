@@ -13,6 +13,11 @@ This plugin gives information about CPU load, memory usage, battery and disk usa
 * NVDA+Shift+3 Presents the used and total space of the static and removable drives on this computer,
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
 
+## Changes for 3.0 ##
+
+* Updated psutil dependency to 1.0.1.
+
+
 ## Changes for 2.4 ##
 
 * New languages: Chinese (simplified), Ukrainian.
