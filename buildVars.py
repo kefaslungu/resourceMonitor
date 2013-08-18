@@ -10,12 +10,12 @@ addon_info = {
 	"addon-name" : "resourceMonitor",
 	# Add-on description
 	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-	"addon-summary" : _("Resource Monitor - allows easy access to system information."),
+	"addon-summary" : _("Resource Monitor - allows easy access to system information"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on installation and add-on information
-	"addon-description" : _("A handy resource monitor to report CPU load, memory usage, battery and disk usage status."),
+	"addon-description" : _("A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."),
 	# version
-	"addon-version" : "2.5-dev",
+	"addon-version" : "3.0-dev",
 	# Author(s)
 	"addon-author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
