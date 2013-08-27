@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: resourceMonitor 2.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-07-14 19:25+0200\n"
+"PO-Revision-Date: 2013-08-24 09:53+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+#: addon/globalPlugins/resourceMonitor/__init__.py:38
+msgid "This computer does not have a battery connected."
+msgstr "هیچ باتری‌ای به رایانه بسته نیست"
+
+#. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:41
+#: addon/globalPlugins/resourceMonitor/__init__.py:105
+msgid "{percent}%, battery charging."
+msgstr "{percent}%, باتری دارد توان می‌گیرد"
+
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+#. discharging battery, so provide info on it
+#: addon/globalPlugins/resourceMonitor/__init__.py:44
+#: addon/globalPlugins/resourceMonitor/__init__.py:108
+msgid "{percent}% battery remaining, about {time}."
+msgstr ""
+
+#. Translators: Message reported when battery level is low.
+#: addon/globalPlugins/resourceMonitor/__init__.py:47
+#: addon/globalPlugins/resourceMonitor/__init__.py:110
+msgid " Warning: low battery."
+msgstr "هشدار: توان باتری کم است."
+
+#. Translators: Message reported when battery level is critical.
+#: addon/globalPlugins/resourceMonitor/__init__.py:50
+msgid " Warning: battery is critically low."
+msgstr "هشدار: توان باتری دیگر خیلی پایین است."
+
+#. Translators: Input help message about battery info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:53
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+
+#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:64
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
+"{percent}%. "
+msgstr ""
+"{driveName} (سپاره‌ران {driveType}): {usedSpace} از {totalSpace} پر شده "
+"{percent}%. "
+
+#. Translators: Input help message about drive info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:69
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:79
+msgid "Core {coreNumber}: {corePercent}%. "
+msgstr ""
+
+#. Translators: Shows average load of the processor and the load for each core.
+#: addon/globalPlugins/resourceMonitor/__init__.py:81
+msgid "Average CPU load {avgLoad}%, {cores}"
+msgstr ""
+
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:84
+msgid "Presents the average processor load and the load of each core."
+msgstr ""
+
+#. Translators: Shows RAM (physical memory) usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:89
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr ""
+
+#. Translators: Shows virtual memory usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:92
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr ""
+
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:95
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr ""
+
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:102
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
+msgstr ""
+
+#. Translators: In addition to processor and memory usage, presented when battery is low.
+#: addon/globalPlugins/resourceMonitor/__init__.py:113
+msgid " Warning: critically low battery."
+msgstr "هشدار: توان باتری دیگر خیلی پایین است."
+
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+#: addon/globalPlugins/resourceMonitor/__init__.py:116
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+#: addon/globalPlugins/resourceMonitor/battery.py:48
+msgid " hour, "
+msgstr " ساعت٬ "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+#: addon/globalPlugins/resourceMonitor/battery.py:50
+msgid " hours, "
+msgstr " ساعت٬ "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+#: addon/globalPlugins/resourceMonitor/battery.py:53
+msgid " minute"
+msgstr " دقیقه"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+#: addon/globalPlugins/resourceMonitor/battery.py:55
+msgid " minutes"
+msgstr " دقیقه"
+
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:13
+msgid "Resource Monitor - allows easy access to system information."
+msgstr ""
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+#: buildVars.py:16
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery and disk "
+"usage status."
+msgstr ""
