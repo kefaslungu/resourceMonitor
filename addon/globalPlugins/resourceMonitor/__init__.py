@@ -103,6 +103,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceWinVer(self, gesture):
 		# Obtain winversion. The versions themselves doesn't need to be translated.
 		winMajor, winMinor, sp, server = sys.getwindowsversion().major, sys.getwindowsversion().minor, sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
+		# Translators: Message to announce Windows versions (example output: Windows version: Windows 7; for now, the actual version message should be left as English).
 		info = _("Windows version: ")
 		if winMajor == 5: # XP (5.1) or Server 2003 (5.2).
 			if winMinor == 1: info+= "Windows XP" # Since most XP systems use 32-bit editions.
