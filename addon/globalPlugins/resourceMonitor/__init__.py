@@ -101,9 +101,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_announceRamInfo.__doc__=_("Presents the used and total space for both physical and virtual ram.")
 
 	def script_announceWinVer(self, gesture):
-		# Obtain winversion.
+		# Obtain winversion. The versions themselves doesn't need to be translated.
 		winMajor, winMinor, sp, server = sys.getwindowsversion().major, sys.getwindowsversion().minor, sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
-		info = "Windows version: "
+		info = _("Windows version: ")
 		if winMajor == 5: # XP (5.1) or Server 2003 (5.2).
 			if winMinor == 1: info+= "Windows XP" # Since most XP systems use 32-bit editions.
 			elif winMinor == 2: info+= "Windows Server 2003"
@@ -112,6 +112,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif winMinor == 1: info+= "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
 			elif winMinor == 2: info+= "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3: info+= "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
+		if sp != "": info = " " + sp # Give service pack level.
 		ui.message(info)
 	script_announceWinVer.__doc__="Announces the version of Windows you are using."
 
