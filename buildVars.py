@@ -10,7 +10,7 @@ addon_info = {
 	"addon-name" : "resourceMonitor",
 	# Add-on description
 	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-	"addon-summary" : _("Resource Monitor - allows easy access to system information"),
+	"addon-summary" : _("Resource Monitor"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on installation and add-on information
 	"addon-description" : _("A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."),
