@@ -94,6 +94,9 @@ msgstr ""
 "மெய் மற்றும் மெய்நிகர் இடை நினைவகத்தின் மொத்த மற்றும் பயன்பாட்டிலிருக்கும் இட அளவை "
 "அறிவிக்கும். "
 
+msgid "Windows version: "
+msgstr ""
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
@@ -127,17 +130,22 @@ msgstr "நிமிடங்கள்"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
-msgstr "வள கவனிப்பு (Resource Monitor) - கணினித் தகவல்களை எளிதில் அணுக உதவுகிறது"
+msgid "Resource Monitor"
+msgstr ""
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
+#, fuzzy
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
 "மையச் செயலக சுமை, நினைவக, மின்கல மற்றும் வட்டின் பயன்பாடு ஆகியவைகளை அறிவிக்கும் "
 "கையடக்க வள கவனிப்புக் கூட்டுறுப்பு."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr ""
+#~ "வள கவனிப்பு (Resource Monitor) - கணினித் தகவல்களை எளிதில் அணுக உதவுகிறது"
 
 #~ msgid "Allows you to monitor system information easily."
 #~ msgstr "கணினித் தகவல்களை எளிதில் கவனிக்க அனுமதிக்கிறது."

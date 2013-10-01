@@ -87,6 +87,9 @@ msgstr "Virtual: {virtualUsed} de {virtualTotal} usau ({virtualPercent}%)."
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Presienta lo espacio usau y lo total de memoria RAM fisica y virtual."
 
+msgid "Windows version: "
+msgstr ""
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM usada, CPU en {cpuPercent}%. "
@@ -120,19 +123,23 @@ msgstr " minutos"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
+msgid "Resource Monitor"
 msgstr ""
-"Monitor de recursos - Permite accedir de traza simpla t'a información d'o "
-"sistema."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
+#, fuzzy
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
 "Un monitor de recursos a man ta informar d'a carga d'a CPU, de l'uso de "
 "memoria, d'a batería y l'estau d'uso de disco."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr ""
+#~ "Monitor de recursos - Permite accedir de traza simpla t'a información d'o "
+#~ "sistema."
 
 #~ msgid "Allows you to monitor system information easily."
 #~ msgstr "Te permite monitorizar información d'o sistema facilment."

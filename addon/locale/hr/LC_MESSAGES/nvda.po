@@ -93,6 +93,9 @@ msgstr ""
 "Izjavljuje iskorišten i sveukupni prostor u fizičkoj i virtualnoj ram "
 "memoriji."
 
+msgid "Windows version: "
+msgstr ""
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% korišteno RAM memorije, CPU je na {cpuPercent}%. "
@@ -126,15 +129,19 @@ msgstr " minuta"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
+msgid "Resource Monitor"
 msgstr ""
-"Resource Monitor - omogućuje jednostavan pristup informacijama o sustavu."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
+#, fuzzy
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
 "Zgodan monitor resursa koji daje izvještaj o opterećenju procesora, "
 "iskorištenosti memorije te stanju iskorištenosti baterije i diskova."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr ""
+#~ "Resource Monitor - omogućuje jednostavan pristup informacijama o sustavu."

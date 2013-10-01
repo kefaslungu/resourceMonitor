@@ -93,6 +93,9 @@ msgstr ""
 "Zeigt den gesamten Speicherverbrauch für den physischen und virtuellen "
 "Arbeitsspeicher an."
 
+msgid "Windows version: "
+msgstr ""
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent} % Speicher verwendet, CPU-Auslastung bei {cpuPercent} %."
@@ -126,16 +129,20 @@ msgstr " Minuten"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
+msgid "Resource Monitor"
 msgstr ""
-"Ressourcenmonitor - Erlaubt den einfachen Zugang zu verschiedenen "
-"Systeminformationen."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
+#, fuzzy
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
 "Ein praktischer Ressourcenmonitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus und Speicherplatz auf Laufwerken."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr ""
+#~ "Ressourcenmonitor - Erlaubt den einfachen Zugang zu verschiedenen "
+#~ "Systeminformationen."

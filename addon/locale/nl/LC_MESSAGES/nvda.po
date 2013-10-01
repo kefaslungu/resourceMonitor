@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-06-25 21:08+0100\n"
+"PO-Revision-Date: 2013-09-15 11:25+0100\n"
 "Last-Translator: Bart Simons <bart@bartsimons.be>\n"
 "Language-Team: NL <nvda-nl@googlegroups.com>\n"
 "Language: nl_NL\n"
@@ -74,6 +74,9 @@ msgstr "Virtueel: {virtualUsed} van {virtualTotal} gebruikt ({virtualPercent}%).
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Toont het gebruikte en totaal beschikbare fysieke en virtuele RAM."
 
+msgid "Windows version: "
+msgstr "Windowsversie: "
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM gebruikt, CPU op {cpuPercent}%. "
@@ -84,7 +87,7 @@ msgstr " Waarschuwing: batterij is zo goed als leeg."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid "Presents used ram, average processor load, and battery info if available."
-msgstr "Toont gebruikt RAM, gemiddelde CPU belasting en baterij-informatie indien beschikbaar."
+msgstr "Toont gebruikt RAM, gemiddelde CPU belasting en batterij-informatie indien beschikbaar."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -104,11 +107,13 @@ msgstr " minuten"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
-msgstr "Resource Monitor - Geeft gemakkelijk toegang tot systeeminformatie."
+msgid "Resource Monitor"
+msgstr "Resource Monitor"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid "A handy resource monitor to report CPU load, memory usage, battery and disk usage status."
-msgstr "Een handige bronmonitor die CPU belasting, geheugengebruik, batterij en schijfruimte rapporteert."
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "Een handig overzicht van CPU load, geheugengebruik, status van de batterij, schijfgebruik en meer."
 
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr "Resource Monitor - Geeft gemakkelijk toegang tot systeeminformatie."

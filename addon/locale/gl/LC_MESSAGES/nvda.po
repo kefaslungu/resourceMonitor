@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-14 15:41+0100\n"
+"PO-Revision-Date: 2013-09-15 22:59+0100\n"
 "Last-Translator: Juan C. Buño <quetzatl@eresmas.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language:gl\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -88,6 +88,9 @@ msgstr ""
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Presenta o espazo utilizado e total para a ram física e virtual."
 
+msgid "Windows version: "
+msgstr "Versión do Windows: "
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM utilizada, CPU a {cpuPercent}%. "
@@ -121,17 +124,20 @@ msgstr " minutos"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
-msgstr "Resource Monitor - permite o aceso doado á información do sistema."
+msgid "Resource Monitor"
+msgstr "Resource Monitor"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
 "Un monitor de recursos á man para informar da carga da CPU, utilización da "
 "memoria, do estado da batería e da utilización do disco."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr "Resource Monitor - permite o aceso doado á información do sistema."
 
 #~ msgid "Allows you to monitor system information easily."
 #~ msgstr "Permíteche monitorizar información do sistema doadamente."

@@ -93,6 +93,9 @@ msgstr ""
 "Predstavi količino pomnilnika v uporabi in vso količino na voljo. Velja tako "
 "za fizični kot virtualni pomnilnik."
 
+msgid "Windows version: "
+msgstr ""
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% pomnilnika v uporabi, CPE na {cpuPercent}%. "
@@ -126,17 +129,21 @@ msgstr " minut"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
-msgstr "Nadzor Virov - omogoča lahek dostop do sistemskih informacij"
+msgid "Resource Monitor"
+msgstr ""
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
+#, fuzzy
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
 "Priročni nadzornik virov. Poroča o obremenitvi CPE, uporabi pomnilnika in o "
 "statusu uporabe akumulatorja in diska."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr "Nadzor Virov - omogoča lahek dostop do sistemskih informacij"
 
 #~ msgid "Allows you to monitor system information easily."
 #~ msgstr ""

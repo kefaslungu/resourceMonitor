@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: 'resourceMonitor' '2.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-20 00:21+0200\n"
-"Last-Translator: fatma\n"
+"PO-Revision-Date: 2013-09-27 05:48+0200\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -91,6 +92,9 @@ msgstr ""
 "الإعلان عن المساحة الكلية والمساحة المستخدمة لكل من الذاكرة الفعلية والذاكرة "
 "الوهمية للحاسوب"
 
+msgid "Windows version: "
+msgstr "إصدار الويندوز:"
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr ""
@@ -125,14 +129,18 @@ msgstr "دقائق"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
-msgstr "Resource Monitor - تتيح للمستخدم الوصول السهل والسريع لمعلومات النظام"
+msgid "Resource Monitor"
+msgstr "وصف لمكونات الجهاز المادية ونظام التشغيل"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
 "تعمل هذه الإضافة على الإعلان عن متوسط تحميل المعالج, والذاكرة المستخدمة, كما "
-"تعلن عن حالة البطارية ومساحة الأقراص الصلبة والمتحركة."
+"تعلن عن حالة البطارية ومساحة الأقراص الصلبة والمتحركة والمزيد."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr ""
+#~ "Resource Monitor - تتيح للمستخدم الوصول السهل والسريع لمعلومات النظام"

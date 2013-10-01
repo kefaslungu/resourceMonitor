@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-30 14:49-0800\n"
+"PO-Revision-Date: 2013-09-14 14:33-0800\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -86,6 +86,9 @@ msgstr ""
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "물리 (RAM) 및 가상 메로리의 사용 공간 및 총 메모리를 알려줍니다."
 
+msgid "Windows version: "
+msgstr "윈도우 버전: "
+
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
@@ -117,12 +120,15 @@ msgstr "분"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor - allows easy access to system information."
-msgstr "리소스 모니터 - 시스템 정보 알림 도구"
+msgid "Resource Monitor"
+msgstr "리소스 모니터"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery and disk "
-"usage status."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr "프로세서, 디스크, 메모리 사용률 및 베터리 상태를 알려줍니다."
+
+#~ msgid "Resource Monitor - allows easy access to system information."
+#~ msgstr "리소스 모니터 - 시스템 정보 알림 도구"
