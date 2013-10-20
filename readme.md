@@ -1,7 +1,8 @@
 [[!meta title="resourceMonitor"]]
 
 * Authors: Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors
-* Download: [version 3.0-dev][1]
+* Stable version: [version 2.4][1]
+* Development version: [version 3.0-dev][2]
 
 This plugin gives information about CPU load, memory usage, battery and disk usage status.
 
@@ -13,6 +14,12 @@ This plugin gives information about CPU load, memory usage, battery and disk usa
 * NVDA+Shift+3 Presents the used and total space of the static and removable drives on this computer,
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
 * NVDA+Shift+6 Presents currently installed Windows version and service pack if any.
+
+# Usage notes #
+
+This add-on does not replace task manager and other system information programs for Windows. Also note the following:
+* CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper Threading where number of CPU's is twice the number of CPU cores.
+* When you press NVDA+Shift+6 to obtain Windows versions, Windows 8.1 will report itself as Windows 8. To find out whether you are using Windows 8.1, press Windows key+Pause to open System properties and look under Windows edition.
 
 ## Changes for 3.0 ##
 
@@ -47,4 +54,8 @@ This plugin gives information about CPU load, memory usage, battery and disk usa
 
 * Initial Release
 
+[[!tag dev stable]]
+
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
