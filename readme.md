@@ -25,6 +25,7 @@ This add-on does not replace task manager and other system information programs 
 
 * Updated psutil dependency to 1.0.1.
 * Announcement of current Windows version and service pack if any (NVDA+Shift+6).
+* You can now view the resource usage summary in a read-only text window when NVDA+Shift+E is pressed twice quickly (requires message code refactor).
 
 ## Changes for 2.4 ##
 
