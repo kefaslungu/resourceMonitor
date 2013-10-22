@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-10 14:20+0400\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-10-21 13:42+0400\n"
+"Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -43,6 +43,8 @@ msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
+"Предоставляет состояние заряда батареи в процентах, , оставшееся время (если "
+"не заряжается) и предупреждение о низком и критическом заряде."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 msgid ""
@@ -57,6 +59,8 @@ msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
+"Предоставляет информацию об использованном и общем объёме несъёмных и "
+"съёмных дисков этого компьютера."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
@@ -68,7 +72,7 @@ msgstr "Средняя загрузка процессора {avgLoad}%, {cores}
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr ""
+msgstr "Предоставляет среднюю загрузку процессора и загрузку каждого ядра."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
@@ -85,9 +89,11 @@ msgstr ""
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
+"Предоставляет информацию об общем объёме и использованном объёме физической "
+"и виртуальной памяти."
 
 msgid "Windows version: "
-msgstr ""
+msgstr "Версия Windows: "
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
@@ -103,27 +109,29 @@ msgstr "Внимание: критически низкий заряд бата�
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
+"Предоставляет информацию об использовании оперативной памяти, среднюю "
+"загрузку процессора и информацию о состоянии батареи, если возможно."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr ""
+msgstr " час, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr ""
+msgstr " часов, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr ""
+msgstr " минута"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr ""
+msgstr " минут"
 
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr ""
+msgstr "Resource Monitor"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
@@ -131,6 +139,8 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
+"Удобный монитор ресурсов сообщает о загрузке процессора, использовании "
+"памяти, состоянии заряда батареи,использовании диска и многое другое."
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr "Resource Monitor - обеспечивает легкий доступ к информации системы."
