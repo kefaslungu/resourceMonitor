@@ -15,6 +15,8 @@ This plugin gives information about CPU load, memory usage, battery and disk usa
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
 * NVDA+Shift+6 Presents currently installed Windows version and service pack if any.
 
+If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
+
 ## Usage notes ##
 
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
@@ -25,6 +27,7 @@ This add-on does not replace task manager and other system information programs 
 
 * Updated psutil dependency to 1.0.1.
 * Announcement of current Windows version and service pack if any (NVDA+Shift+6).
+* Ability to change add-on shortcut keys (NVDA 2013.3 or later).
 * You can now view the resource usage summary in a read-only text window when NVDA+Shift+E is pressed twice quickly (requires message code refactor).
 
 ## Changes for 2.4 ##

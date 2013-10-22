@@ -13,6 +13,10 @@ import battery
 import addonHandler
 addonHandler.initTranslation()
 
+# 2013.3 or later: is gesture reassignment possible?
+try:
+	from baseObject import ScriptableObject # 2013.3 or later.
+except: notImplementedError # 2013.2 or earlier.
 
 def toBiggestBytes(n, x=2, useLongNames=False):
 	#returns a string where n, rounded to x, is in the largest logical measure possible
@@ -34,6 +38,9 @@ def tryTrunk(n):
 	return n
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+
+	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+	scriptCategory = _("Resource Monitor")
 
 	def script_announceBatteryInfo(self, gesture):
 		info=""
