@@ -147,7 +147,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		info = self.getWinVer()
 		ui.message(info)
 	# Translators: Input help mode message about Windows version command in Resource Monitor.
-	script_announceWinVer.__doc__="Announces the version of Windows you are using."
+	script_announceWinVer.__doc__=_("Announces the version of Windows you are using.")
 
 	def script_announceResourceSummary(self, gesture):
 		cpuLoad=psutil.cpu_percent()
