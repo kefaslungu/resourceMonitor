@@ -13,6 +13,10 @@ import battery
 import addonHandler
 addonHandler.initTranslation()
 
+# 2013.3 or later: is gesture reassignment possible?
+try:
+	from baseObject import ScriptableObject # 2013.3 or later.
+except: notImplementedError # 2013.2 or earlier.
 
 def toBiggestBytes(n, x=2, useLongNames=False):
 	#returns a string where n, rounded to x, is in the largest logical measure possible
@@ -35,7 +39,14 @@ def tryTrunk(n):
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	def script_announceBatteryInfo(self, gesture):
+	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+	scriptCategory = _("Resource Monitor")
+
+	# Two functions will be used for each summary info: the script driver and the message getter as shown below.
+
+
+
+	def getBatteryInfo(self):
 		info=""
 		#returns nothing, but sets vars we can now inspect
 		battery.getInfo()
@@ -54,11 +65,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif battery.critical:
 				# Translators: Message reported when battery level is critical.
 				info+=_(" Warning: battery is critically low.")
+		return info
+
+	def script_announceBatteryInfo(self, gesture):
+		info=self.getBatteryInfo()
 		ui.message(info)
 	# Translators: Input help message about battery info command in Resource Monitor.
 	script_announceBatteryInfo.__doc__=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.")
 
-	def script_announceDriveInfo(self, gesture):
+	def getDriveInfo(self):
 		#goes through all registered drives and gives info on each one
 		info=""
 		#get all registered drives
@@ -70,11 +85,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info+=_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. ").format(driveName=drive[0], driveType=drive[2], usedSpace=toBiggestBytes(tryTrunk(driveInfo[1])), totalSpace=toBiggestBytes(tryTrunk(driveInfo[0])), percent=tryTrunk(driveInfo[3]))
 			except:
 				pass
+		return info
+
+	def script_announceDriveInfo(self, gesture):
+		#goes through all registered drives and gives info on each one
+		info= self.getDriveInfo()
 		ui.message(info)
 	# Translators: Input help message about drive info command in Resource Monitor.
 	script_announceDriveInfo.__doc__=_("Presents the used and total space of the static and removable drives on this computer.")
 
-	def script_announceProcessorInfo(self, gesture):
+	def getProcessorInfo(self):
 		cores=psutil.NUM_CPUS #number of cores
 		averageLoad=psutil.cpu_percent()
 		#lists load for each core
@@ -85,22 +105,30 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			coreLoad+=_("Core {coreNumber}: {corePercent}%. ").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i]))
 		# Translators: Shows average load of the processor and the load for each core.
 		info=_("Average CPU load {avgLoad}%, {cores}").format(avgLoad=tryTrunk(averageLoad), cores=coreLoad)
+		return info
+
+	def script_announceProcessorInfo(self, gesture):
+		info= self.getProcessorInfo()
 		ui.message(info)
 	# Translators: Input help mode message about processor info command in Resource Monitor.
 	script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
-	def script_announceRamInfo(self, gesture):
+	def getRamInfo(self):
 		ram=psutil.phymem_usage()
 		# Translators: Shows RAM (physical memory) usage.
 		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=toBiggestBytes(tryTrunk(ram[1])), physicalTotal=toBiggestBytes(tryTrunk(ram[0])), physicalPercent=tryTrunk(ram[3]))
 		virtualRam=psutil.virtmem_usage()
 		# Translators: Shows virtual memory usage.
 		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=toBiggestBytes(tryTrunk(virtualRam[1])), virtualTotal=toBiggestBytes(tryTrunk(virtualRam[0])), virtualPercent=tryTrunk(virtualRam[3]))
+		return info
+
+	def script_announceRamInfo(self, gesture):
+		info=self.getRamInfo()
 		ui.message(info)
 	# Translators: Input help mode message about memory info command in Resource Monitor.
 	script_announceRamInfo.__doc__=_("Presents the used and total space for both physical and virtual ram.")
 
-	def script_announceWinVer(self, gesture):
+	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
 		winMajor, winMinor, sp, server = sys.getwindowsversion().major, sys.getwindowsversion().minor, sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
 		info = "Windows version: "
@@ -113,8 +141,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif winMinor == 2: info+= "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3: info+= "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
 		if sp is not '': info += " " + sp # If we are using service packs (if any).
+		return info
+
+	def script_announceWinVer(self, gesture):
+		info = self.getWinVer()
 		ui.message(info)
-	script_announceWinVer.__doc__="Announces the version of Windows you are using."
+	# Translators: Input help mode message about Windows version command in Resource Monitor.
+	script_announceWinVer.__doc__=_("Announces the version of Windows you are using.")
 
 	def script_announceResourceSummary(self, gesture):
 		cpuLoad=psutil.cpu_percent()
