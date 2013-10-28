@@ -4,7 +4,7 @@
 * Stable version: [version 2.4][1]
 * Development version: [version 3.0-dev][2]
 
-This plugin gives information about CPU load, memory usage, battery and disk usage status.
+This plugin gives information about CPU load, memory usage and other resource usage information.
 
 # Shortcuts #
 
@@ -20,15 +20,15 @@ If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
 ## Usage notes ##
 
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
+
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper Threading where number of CPU's is twice the number of CPU cores.
 * When you press NVDA+Shift+6 to obtain Windows versions, Windows 8.1 will report itself as Windows 8. To find out whether you are using Windows 8.1, press Windows key+Pause to open System properties and look under Windows edition.
 
-## Changes for 3.0 ##
+## Changes for 3.0-dev ##
 
 * Updated psutil dependency to 1.0.1.
 * Announcement of current Windows version and service pack if any (NVDA+Shift+6).
 * Ability to change add-on shortcut keys (NVDA 2013.3 or later).
-* You can now view the resource usage summary in a read-only text window when NVDA+Shift+E is pressed twice quickly (requires message code refactor).
 
 ## Changes for 2.4 ##
 
