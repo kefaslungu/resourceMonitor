@@ -8,18 +8,24 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-22 09:17+0100\n"
-"Last-Translator: David Parduhn <xkill85@gmx.net>\n"
+"PO-Revision-Date: 2013-10-31 03:32+0100\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Ressourcen-Monitor"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "Dieser Computer besitzt kein angeschlossenen Akku."
+msgstr "Dieser Computer besitzt kein angeschlossenen Akkumulator."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 msgid "{percent}%, battery charging."
@@ -32,20 +38,20 @@ msgstr "Akkubetrieb, {percent} % verbleiben, noch {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "Warnung: Akkustand niedrig."
+msgstr "Warnung: Akkustand niedrig!"
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
-msgstr "Warnung: Akkustand kritisch."
+msgstr "Warnung: Kritischer Akkustand!"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"Zeigt die verbleibende Akkukapazität, den ladestatus, die verbleibende "
-"Betriebszeit (falls der Akku nicht geladen wird) sowie eine Warnung an, "
-"falls die Spannung niedrig oder kritisch ist."
+"Zeigt die verbleibende Akku-Kapazität, den Ladestatus, die verbleibende "
+"Betriebszeit (falls der Akku nicht geladen wird) sowie eine Warnung an, wenn "
+"die Spannung niedrig oder kritisch ist."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 msgid ""
@@ -64,11 +70,11 @@ msgstr ""
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr "Kern {coreNumber}: {corePercent} %."
+msgstr "{coreNumber}-Kern: {corePercent} %."
 
 #. Translators: Shows average load of the processor and the load for each core.
 msgid "Average CPU load {avgLoad}%, {cores}"
-msgstr "Ungefähre CPU-Auslastung: {avgLoad} %, {cores}"
+msgstr "CPU-Auslastung: ~ {avgLoad} %, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -94,7 +100,11 @@ msgstr ""
 "Arbeitsspeicher an."
 
 msgid "Windows version: "
-msgstr ""
+msgstr "windows-Version:"
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
+msgstr "Zeigt die aktuell verwendete Windows-Version an."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
@@ -128,19 +138,13 @@ msgid " minutes"
 msgstr " Minuten"
 
 #. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr ""
-
-#. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-#, fuzzy
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"Ein praktischer Ressourcenmonitor zur Anzeige von CPU-Auslastung, "
-"Arbeitsspeicher, Akkustatus und Speicherplatz auf Laufwerken."
+"Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
+"Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr ""

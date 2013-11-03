@@ -8,14 +8,20 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-03-19 10:51+0545\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2013-11-03 12:55+0545\n"
+"Last-Translator: Him Prasad Gautam <drishtibachak@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "श्रोत अनुगामी"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -89,7 +95,11 @@ msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "भौतिक तथा  अवास्तविक र्‍यामको प्रयोगमा आएको र कूल क्षमता देखाउ छ ।"
 
 msgid "Windows version: "
-msgstr ""
+msgstr "सञ्झ्याल संस्करण"
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
+msgstr "तपाइले चलाएको सञ्झ्यालको संस्करण बताउने छ ।"
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
@@ -122,13 +132,7 @@ msgid " minutes"
 msgstr "मिनेटहरू"
 
 #. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr ""
-
-#. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-#, fuzzy
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
