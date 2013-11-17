@@ -95,7 +95,7 @@ msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Oznámi využité a voľné miesto pre fyzickú a virtuálnu pamäť."
 
 msgid "Windows version: "
-msgstr "VErzia windows:"
+msgstr "Verzia windows:"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
