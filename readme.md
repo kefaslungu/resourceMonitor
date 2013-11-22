@@ -22,7 +22,6 @@ If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper Threading where number of CPU's is twice the number of CPU cores.
-* When you press NVDA+Shift+6 to obtain Windows versions, Windows 8.1 will report itself as Windows 8. To find out whether you are using Windows 8.1, press Windows key+Pause to open System properties and look under Windows edition.
 
 ## Changes for 3.0-dev ##
 
