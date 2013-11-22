@@ -130,17 +130,25 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
-		winMajor, winMinor, sp, server = sys.getwindowsversion().major, sys.getwindowsversion().minor, sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
-		info = _("Windows version: ")
+		import os # Just for this method, used to get bit information.
+		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") == "AMD64", ""
+		# Determine Windows version.
 		if winMajor == 5: # XP (5.1) or Server 2003 (5.2).
-			if winMinor == 1: info+= "Windows XP" # Since most XP systems use 32-bit editions.
-			elif winMinor == 2: info+= "Windows Server 2003"
+			if winMinor == 1: winverName = "Windows XP" # Since most XP systems use 32-bit editions.
+			elif winMinor == 2: winverName = "Windows Server 2003"
 		elif winMajor == 6: # Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-			if winMinor == 0: info+= "Windows Vista" if server == 1 else "Windows Server 2008" # Vista.
-			elif winMinor == 1: info+= "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
-			elif winMinor == 2: info+= "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
-			elif winMinor == 3: info+= "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
-		if sp is not '': info += " " + sp # If we are using service packs (if any).
+			if winMinor == 0: winverName = "Windows Vista" if server == 1 else "Windows Server 2008" # Vista.
+			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
+			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
+			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
+		# Translators: Presented under 64-bit Windows.
+		if is64Bit: x64 = _("64-bit")
+		# Translators: Presented under 32-bit Windows.
+		else: x64 = _("32-bit")
+		# Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+		if not sp: info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion = winverName, cpuBit = x64)
+		# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+		else: info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion = winverName, servicePackLevel = sp, cpuBit = x64)
 		return info
 
 	def script_announceWinVer(self, gesture):
