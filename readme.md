@@ -13,7 +13,7 @@ This plugin gives information about CPU load, memory usage and other resource us
 * NVDA+Shift+2/5 Presents the used and total space for both physical and virtual ram,
 * NVDA+Shift+3 Presents the used and total space of the static and removable drives on this computer,
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical,
-* NVDA+Shift+6 Presents currently installed Windows version and service pack if any.
+* NVDA+Shift+6 Presents currently installed Windows version, CPU bit of Windows (32 or 64-bit) and service pack if any.
 
 If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
 
@@ -27,7 +27,7 @@ This add-on does not replace task manager and other system information programs 
 ## Changes for 3.0-dev ##
 
 * Updated psutil dependency to 1.0.1.
-* Announcement of current Windows version and service pack if any (NVDA+Shift+6).
+* Announcement of current Windows version, CPU bit and service pack if any (NVDA+Shift+6).
 * Ability to change add-on shortcut keys (NVDA 2013.3 or later).
 
 ## Changes for 2.4 ##
