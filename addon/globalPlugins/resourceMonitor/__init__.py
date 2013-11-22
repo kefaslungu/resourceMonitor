@@ -130,7 +130,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
-		import os # Just for this method, used to get bit information.
+		import os, _winreg # Just for this method, used to get bit information and to deal with Win8.x.
+		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") == "AMD64", ""
 		# Determine Windows version.
 		if winMajor == 5: # XP (5.1) or Server 2003 (5.2).
@@ -139,8 +140,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif winMajor == 6: # Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 			if winMinor == 0: winverName = "Windows Vista" if server == 1 else "Windows Server 2008" # Vista.
 			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
-			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
-			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
+			elif winMinor == 2:
+				# Python issue 19143: in Windows 8.1, sys module reports NT 6.2 when in fact the version is 6.3.
+				# A suggestion posted there (quoting a Stack Overflow post) is to ask the registry to find out the real version value.
+				win81testKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\Microsoft\Windows NT\CurrentVersion")
+				winValue, type = _winreg.QueryValueEx(win81testKey, "CurrentVersion")
+				_winreg.CloseKey(win81testKey)
+				if winValue == "6.3": winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
+				else: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
 		# Translators: Presented under 32-bit Windows.
