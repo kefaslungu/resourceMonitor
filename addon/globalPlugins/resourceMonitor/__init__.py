@@ -2,7 +2,7 @@
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
 #Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run).
 
-import globalPluginHandler, ui
+import globalPluginHandler, ui, api, scriptHandler
 import sys
 import os
 impPath = os.path.abspath(os.path.dirname(__file__))
@@ -42,9 +42,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 	scriptCategory = _("Resource Monitor")
 
+	# Translators: Presented when a resource summary is copied to clipboard.
+	RMCopyMessage = _("Resource summary copied to clipboard")
+
 	# Two functions will be used for each summary info: the script driver and the message getter as shown below.
-
-
 
 	def getBatteryInfo(self):
 		info=""
@@ -69,7 +70,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_announceBatteryInfo(self, gesture):
 		info=self.getBatteryInfo()
-		ui.message(info)
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			if api.copyToClip(info): ui.message(self.RMCopyMessage)
 	# Translators: Input help message about battery info command in Resource Monitor.
 	script_announceBatteryInfo.__doc__=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.")
 
@@ -90,7 +94,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceDriveInfo(self, gesture):
 		#goes through all registered drives and gives info on each one
 		info= self.getDriveInfo()
-		ui.message(info)
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			if api.copyToClip(info): ui.message(self.RMCopyMessage)
 	# Translators: Input help message about drive info command in Resource Monitor.
 	script_announceDriveInfo.__doc__=_("Presents the used and total space of the static and removable drives on this computer.")
 
@@ -109,7 +116,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_announceProcessorInfo(self, gesture):
 		info= self.getProcessorInfo()
-		ui.message(info)
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			if api.copyToClip(info): ui.message(self.RMCopyMessage)
 	# Translators: Input help mode message about processor info command in Resource Monitor.
 	script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
@@ -124,13 +134,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_announceRamInfo(self, gesture):
 		info=self.getRamInfo()
-		ui.message(info)
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			if api.copyToClip(info): ui.message(self.RMCopyMessage)
 	# Translators: Input help mode message about memory info command in Resource Monitor.
 	script_announceRamInfo.__doc__=_("Presents the used and total space for both physical and virtual ram.")
 
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
-		import os, _winreg # Just for this method, used to get bit information and to deal with Win8.x.
+		import _winreg # Just for this method, used to get bit information and to deal with Win8.x.
 		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") == "AMD64", ""
 		# Determine Windows version.
@@ -160,7 +173,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_announceWinVer(self, gesture):
 		info = self.getWinVer()
-		ui.message(info)
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			if api.copyToClip(info): ui.message(self.RMCopyMessage)
 	# Translators: Input help mode message about Windows version command in Resource Monitor.
 	script_announceWinVer.__doc__=_("Announces the version of Windows you are using.")
 
