@@ -8,21 +8,24 @@
 
 from __future__ import division
 
-import os
+import base64
 import errno
+import os
+import re
 import socket
 import struct
 import sys
-import base64
-import re
 import warnings
 
-import _psutil_posix
 import _psutil_linux
+import _psutil_posix
+
+from _psutil_linux import *  # needed for RLIMIT_* constants
 from psutil import _psposix
-from psutil._error import AccessDenied, NoSuchProcess, TimeoutExpired
 from psutil._common import *
 from psutil._compat import PY3, xrange, long, namedtuple, wraps
+from psutil._error import AccessDenied, NoSuchProcess, TimeoutExpired
+
 
 __extra__all__ = [
     # io prio constants
@@ -34,6 +37,53 @@ __extra__all__ = [
     "CONN_LAST_ACK", "CONN_LISTEN", "CONN_CLOSING",
     # other
     "phymem_buffers", "cached_phymem"]
+
+HAS_PRLIMIT = hasattr(_psutil_linux, "prlimit")
+
+# RLIMIT_* constants, not guaranteed to be present on all kernels
+if HAS_PRLIMIT:
+    for name in dir(_psutil_linux):
+        if name.startswith('RLIM'):
+            __extra__all__.append(name)
+
+# Number of clock ticks per second
+CLOCK_TICKS = os.sysconf("SC_CLK_TCK")
+PAGESIZE = os.sysconf("SC_PAGE_SIZE")
+
+# ioprio_* constants http://linux.die.net/man/2/ioprio_get
+IOPRIO_CLASS_NONE = 0
+IOPRIO_CLASS_RT = 1
+IOPRIO_CLASS_BE = 2
+IOPRIO_CLASS_IDLE = 3
+
+# taken from /fs/proc/array.c
+PROC_STATUSES = {
+    "R": STATUS_RUNNING,
+    "S": STATUS_SLEEPING,
+    "D": STATUS_DISK_SLEEP,
+    "T": STATUS_STOPPED,
+    "t": STATUS_TRACING_STOP,
+    "Z": STATUS_ZOMBIE,
+    "X": STATUS_DEAD,
+    "x": STATUS_DEAD,
+    "K": STATUS_WAKE_KILL,
+    "W": STATUS_WAKING
+}
+
+# http://students.mimuw.edu.pl/lxr/source/include/net/tcp_states.h
+TCP_STATUSES = {
+    "01": CONN_ESTABLISHED,
+    "02": CONN_SYN_SENT,
+    "03": CONN_SYN_RECV,
+    "04": CONN_FIN_WAIT1,
+    "05": CONN_FIN_WAIT2,
+    "06": CONN_TIME_WAIT,
+    "07": CONN_CLOSE,
+    "08": CONN_CLOSE_WAIT,
+    "09": CONN_LAST_ACK,
+    "0A": CONN_LISTEN,
+    "0B": CONN_CLOSING
+}
 
 
 def get_system_boot_time():
@@ -47,7 +97,8 @@ def get_system_boot_time():
     finally:
         f.close()
 
-def _get_num_cpus():
+
+def get_num_cpus():
     """Return the number of CPUs on the system"""
     try:
         return os.sysconf("SC_NPROCESSORS_ONLN")
@@ -83,10 +134,6 @@ def _get_num_cpus():
     return num
 
 
-# Number of clock ticks per second
-_CLOCK_TICKS = os.sysconf("SC_CLK_TCK")
-_PAGESIZE = os.sysconf("SC_PAGE_SIZE")
-
 # Since these constants get determined at import time we do not want to
 # crash immediately; instead we'll set them to None and most likely
 # we'll crash later as they're used for determining process CPU stats
@@ -97,7 +144,7 @@ except Exception:
     BOOT_TIME = None
     warnings.warn("couldn't determine platform's BOOT_TIME", RuntimeWarning)
 try:
-    NUM_CPUS = _get_num_cpus()
+    NUM_CPUS = get_num_cpus()
 except Exception:
     NUM_CPUS = None
     warnings.warn("couldn't determine platform's NUM_CPUS", RuntimeWarning)
@@ -108,27 +155,7 @@ except Exception:
     warnings.warn("couldn't determine platform's TOTAL_PHYMEM", RuntimeWarning)
 
 
-# ioprio_* constants http://linux.die.net/man/2/ioprio_get
-IOPRIO_CLASS_NONE = 0
-IOPRIO_CLASS_RT = 1
-IOPRIO_CLASS_BE = 2
-IOPRIO_CLASS_IDLE = 3
-
-# http://students.mimuw.edu.pl/lxr/source/include/net/tcp_states.h
-_TCP_STATES_TABLE = {"01" : CONN_ESTABLISHED,
-                     "02" : CONN_SYN_SENT,
-                     "03" : CONN_SYN_RECV,
-                     "04" : CONN_FIN_WAIT1,
-                     "05" : CONN_FIN_WAIT2,
-                     "06" : CONN_TIME_WAIT,
-                     "07" : CONN_CLOSE,
-                     "08" : CONN_CLOSE_WAIT,
-                     "09" : CONN_LAST_ACK,
-                     "0A" : CONN_LISTEN,
-                     "0B" : CONN_CLOSING
-                     }
-
-# --- system memory functions
+# --- system memory
 
 nt_virtmem_info = namedtuple('vmem', ' '.join([
     # all platforms
@@ -170,6 +197,7 @@ def virtual_memory():
     return nt_virtmem_info(total, avail, percent, used, free,
                            active, inactive, buffers, cached)
 
+
 def swap_memory():
     _, _, _, _, total, free = _psutil_linux.get_sysinfo()
     used = total - free
@@ -183,7 +211,7 @@ def swap_memory():
             if line.startswith('pswpin'):
                 sin = int(line.split(' ')[1]) * 4 * 1024
             elif line.startswith('pswpout'):
-                sout = int(line.split(' ')[1])  * 4 * 1024
+                sout = int(line.split(' ')[1]) * 4 * 1024
             if sin is not None and sout is not None:
                 break
         else:
@@ -197,18 +225,18 @@ def swap_memory():
         f.close()
     return nt_swapmeminfo(total, used, free, percent, sin, sout)
 
-# --- XXX deprecated memory functions
 
 @deprecated('psutil.virtual_memory().cached')
 def cached_phymem():
     return virtual_memory().cached
+
 
 @deprecated('psutil.virtual_memory().buffers')
 def phymem_buffers():
     return virtual_memory().buffers
 
 
-# --- system CPU functions
+# --- CPU
 
 @memoize
 def _get_cputimes_ntuple():
@@ -238,6 +266,7 @@ def _get_cputimes_ntuple():
         rindex += 1
     return (namedtuple('cputimes', ' '.join(fields)), rindex)
 
+
 def get_system_cpu_times():
     """Return a named tuple representing the following system-wide
     CPU times:
@@ -251,8 +280,9 @@ def get_system_cpu_times():
         f.close()
     nt, rindex = _get_cputimes_ntuple()
     fields = values[1:rindex]
-    fields = [float(x) / _CLOCK_TICKS for x in fields]
+    fields = [float(x) / CLOCK_TICKS for x in fields]
     return nt(*fields)
+
 
 def get_system_per_cpu_times():
     """Return a list of namedtuple representing the CPU times
@@ -267,7 +297,7 @@ def get_system_per_cpu_times():
         for line in f:
             if line.startswith('cpu'):
                 fields = line.split()[1:rindex]
-                fields = [float(x) / _CLOCK_TICKS for x in fields]
+                fields = [float(x) / CLOCK_TICKS for x in fields]
                 entry = nt(*fields)
                 cpus.append(entry)
         return cpus
@@ -275,7 +305,7 @@ def get_system_per_cpu_times():
         f.close()
 
 
-# --- system disk functions
+# --- disks
 
 def disk_partitions(all=False):
     """Return mounted disk partitions as a list of nameduples"""
@@ -304,7 +334,7 @@ def disk_partitions(all=False):
 get_disk_usage = _psposix.get_disk_usage
 
 
-# --- other sysetm functions
+# --- other system functions
 
 def get_system_users():
     """Return currently connected users as a list of namedtuples."""
@@ -323,16 +353,21 @@ def get_system_users():
         retlist.append(nt)
     return retlist
 
-# --- process functions
+
+# --- processes
 
 def get_pid_list():
     """Returns a list of PIDs currently running on the system."""
     pids = [int(x) for x in os.listdir('/proc') if x.isdigit()]
     return pids
 
+
 def pid_exists(pid):
     """Check For the existence of a unix pid."""
     return _psposix.pid_exists(pid)
+
+
+# --- network
 
 def net_io_counters():
     """Return network I/O statistics for every network interface
@@ -346,14 +381,14 @@ def net_io_counters():
 
     retdict = {}
     for line in lines[2:]:
-        colon = line.find(':')
-        assert colon > 0, line
+        colon = line.rfind(':')
+        assert colon > 0, repr(line)
         name = line[:colon].strip()
-        fields = line[colon+1:].strip().split()
+        fields = line[colon + 1:].strip().split()
         bytes_recv = int(fields[0])
         packets_recv = int(fields[1])
         errin = int(fields[2])
-        dropin = int(fields[2])
+        dropin = int(fields[3])
         bytes_sent = int(fields[8])
         packets_sent = int(fields[9])
         errout = int(fields[10])
@@ -361,6 +396,9 @@ def net_io_counters():
         retdict[name] = (bytes_sent, bytes_recv, packets_sent, packets_recv,
                          errin, errout, dropin, dropout)
     return retdict
+
+
+# --- disks
 
 def disk_io_counters():
     """Return disk I/O statistics for every disk installed on the
@@ -412,18 +450,6 @@ def disk_io_counters():
             retdict[name] = (reads, writes, rbytes, wbytes, rtime, wtime)
     return retdict
 
-
-# taken from /fs/proc/array.c
-_status_map = {"R" : STATUS_RUNNING,
-               "S" : STATUS_SLEEPING,
-               "D" : STATUS_DISK_SLEEP,
-               "T" : STATUS_STOPPED,
-               "t" : STATUS_TRACING_STOP,
-               "Z" : STATUS_ZOMBIE,
-               "X" : STATUS_DEAD,
-               "x" : STATUS_DEAD,
-               "K" : STATUS_WAKE_KILL,
-               "W" : STATUS_WAKING}
 
 # --- decorators
 
@@ -519,26 +545,32 @@ class Process(object):
         except KeyError:
             return None
 
-    @wrap_exceptions
-    def get_process_io_counters(self):
-        f = open("/proc/%s/io" % self.pid)
-        try:
-            for line in f:
-                if line.startswith("rchar"):
-                    read_count = int(line.split()[1])
-                elif line.startswith("wchar"):
-                    write_count = int(line.split()[1])
-                elif line.startswith("read_bytes"):
-                    read_bytes = int(line.split()[1])
-                elif line.startswith("write_bytes"):
-                    write_bytes = int(line.split()[1])
-            return nt_io(read_count, write_count, read_bytes, write_bytes)
-        finally:
-            f.close()
-
-    if not os.path.exists('/proc/%s/io' % os.getpid()):
+    if os.path.exists('/proc/%s/io' % os.getpid()):
+        @wrap_exceptions
         def get_process_io_counters(self):
-            raise NotImplementedError("couldn't find /proc/%s/io (kernel " \
+            fname = "/proc/%s/io" % self.pid
+            f = open(fname)
+            try:
+                rcount = wcount = rbytes = wbytes = None
+                for line in f:
+                    if rcount is None and line.startswith("syscr"):
+                        rcount = int(line.split()[1])
+                    elif wcount is None and line.startswith("syscw"):
+                        wcount = int(line.split()[1])
+                    elif rbytes is None and line.startswith("read_bytes"):
+                        rbytes = int(line.split()[1])
+                    elif wbytes is None and line.startswith("write_bytes"):
+                        wbytes = int(line.split()[1])
+                for x in (rcount, wcount, rbytes, wbytes):
+                    if x is None:
+                        raise NotImplementedError(
+                            "couldn't read all necessary info from %r" % fname)
+                return nt_io(rcount, wcount, rbytes, wbytes)
+            finally:
+                f.close()
+    else:
+        def get_process_io_counters(self):
+            raise NotImplementedError("couldn't find /proc/%s/io (kernel "
                                       "too old?)" % self.pid)
 
     @wrap_exceptions
@@ -551,8 +583,8 @@ class Process(object):
         # ignore the first two values ("pid (exe)")
         st = st[st.find(')') + 2:]
         values = st.split(' ')
-        utime = float(values[11]) / _CLOCK_TICKS
-        stime = float(values[12]) / _CLOCK_TICKS
+        utime = float(values[11]) / CLOCK_TICKS
+        stime = float(values[12]) / CLOCK_TICKS
         return nt_cputimes(utime, stime)
 
     @wrap_exceptions
@@ -576,7 +608,7 @@ class Process(object):
         # unit is jiffies (clock ticks).
         # We first divide it for clock ticks and then add uptime returning
         # seconds since the epoch, in UTC.
-        starttime = (float(values[19]) / _CLOCK_TICKS) + BOOT_TIME
+        starttime = (float(values[19]) / CLOCK_TICKS) + BOOT_TIME
         return starttime
 
     @wrap_exceptions
@@ -584,8 +616,8 @@ class Process(object):
         f = open("/proc/%s/statm" % self.pid)
         try:
             vms, rss = f.readline().split()[:2]
-            return nt_meminfo(int(rss) * _PAGESIZE,
-                              int(vms) * _PAGESIZE)
+            return nt_meminfo(int(rss) * PAGESIZE,
+                              int(vms) * PAGESIZE)
         finally:
             f.close()
 
@@ -607,14 +639,14 @@ class Process(object):
         f = open("/proc/%s/statm" % self.pid)
         try:
             vms, rss, shared, text, lib, data, dirty = \
-              [int(x) * _PAGESIZE for x in f.readline().split()[:7]]
+                [int(x) * PAGESIZE for x in f.readline().split()[:7]]
         finally:
             f.close()
         return self._nt_ext_mem(rss, vms, shared, text, lib, data, dirty)
 
     _mmap_base_fields = ['path', 'rss', 'size', 'pss', 'shared_clean',
                          'shared_dirty', 'private_clean', 'private_dirty',
-                         'referenced', 'anonymous', 'swap',]
+                         'referenced', 'anonymous', 'swap', ]
     nt_mmap_grouped = namedtuple('mmap', ' '.join(_mmap_base_fields))
     nt_mmap_ext = namedtuple('mmap', 'addr perms ' + ' '.join(_mmap_base_fields))
 
@@ -645,7 +677,7 @@ class Process(object):
                                 # see issue #369
                                 continue
                             else:
-                                raise ValueError("don't know how to interpret" \
+                                raise ValueError("don't know how to interpret"
                                                  " line %r" % line)
                 yield (current_block.pop(), data)
 
@@ -716,10 +748,10 @@ class Process(object):
                     unvol = int(line.split()[1])
                 if vol is not None and unvol is not None:
                     return nt_ctxsw(vol, unvol)
-            raise NotImplementedError("the 'voluntary_ctxt_switches' and " \
-                "'nonvoluntary_ctxt_switches' fields were not found in " \
-                "/proc/%s/status; the kernel is probably older than 2.6.23" \
-                % self.pid)
+            raise NotImplementedError(
+                "'voluntary_ctxt_switches' and 'nonvoluntary_ctxt_switches'"
+                "fields were not found in /proc/%s/status; the kernel is "
+                "probably older than 2.6.23" % self.pid)
         finally:
             f.close()
 
@@ -758,8 +790,8 @@ class Process(object):
             # ignore the first two values ("pid (exe)")
             st = st[st.find(')') + 2:]
             values = st.split(' ')
-            utime = float(values[11]) / _CLOCK_TICKS
-            stime = float(values[12]) / _CLOCK_TICKS
+            utime = float(values[11]) / CLOCK_TICKS
+            stime = float(values[12]) / CLOCK_TICKS
             ntuple = nt_thread(int(thread_id), utime, stime)
             retlist.append(ntuple)
         if hit_enoent:
@@ -770,10 +802,10 @@ class Process(object):
     @wrap_exceptions
     def get_process_nice(self):
         #f = open('/proc/%s/stat' % self.pid, 'r')
-        #try:
+        # try:
         #   data = f.read()
         #   return int(data.split()[18])
-        #finally:
+        # finally:
         #   f.close()
 
         # Use C implementation
@@ -798,7 +830,7 @@ class Process(object):
             for b in l:
                 if not isinstance(b, (int, long)) or b < 0:
                     raise ValueError("invalid argument %r" % b)
-                out |= 2**b
+                out |= 2 ** b
             return out
 
         bitmask = to_bitmask(value)
@@ -807,10 +839,11 @@ class Process(object):
         except OSError:
             err = sys.exc_info()[1]
             if err.errno == errno.EINVAL:
-                allcpus = list(range(len(get_system_per_cpu_times())))
+                allcpus = tuple(range(len(get_system_per_cpu_times())))
                 for cpu in value:
                     if cpu not in allcpus:
-                        raise ValueError("invalid CPU %i" % cpu)
+                        raise ValueError("invalid CPU #%i (choose between %s)"
+                                         % (cpu, allcpus))
             raise
 
     # only starting from kernel 2.6.13
@@ -838,8 +871,23 @@ class Process(object):
             else:
                 value = 0
             if not 0 <= value <= 8:
-                raise ValueError("value argument range expected is between 0 and 8")
+                raise ValueError(
+                    "value argument range expected is between 0 and 8")
             return _psutil_linux.ioprio_set(self.pid, ioclass, value)
+
+    if HAS_PRLIMIT:
+        @wrap_exceptions
+        def process_rlimit(self, resource, limits=None):
+            if limits is None:
+                # get
+                return _psutil_linux.prlimit(self.pid, resource)
+            else:
+                # set
+                if len(limits) != 2:
+                    raise ValueError(
+                        "second argument must be a (soft, hard) tuple")
+                soft, hard = limits
+                _psutil_linux.prlimit(self.pid, resource, soft, hard)
 
     @wrap_exceptions
     def get_process_status(self):
@@ -848,9 +896,9 @@ class Process(object):
             for line in f:
                 if line.startswith("State:"):
                     letter = line.split()[1]
-                    if letter in _status_map:
-                        return _status_map[letter]
-                    return constant(-1, '?')
+                    # XXX is '?' legit? (we're not supposed to return
+                    # it anyway)
+                    return PROC_STATUSES.get(letter, '?')
         finally:
             f.close()
 
@@ -940,12 +988,12 @@ class Process(object):
                     # IPv4 / IPv6
                     if family in (socket.AF_INET, socket.AF_INET6):
                         _, laddr, raddr, status, _, _, _, _, _, inode = \
-                                                                line.split()[:10]
+                            line.split()[:10]
                         if inode in inodes:
                             laddr = self._decode_address(laddr, family)
                             raddr = self._decode_address(raddr, family)
                             if type_ == socket.SOCK_STREAM:
-                                status = _TCP_STATES_TABLE[status]
+                                status = TCP_STATUSES[status]
                             else:
                                 status = CONN_NONE
                             fd = int(inodes[inode])
@@ -972,22 +1020,22 @@ class Process(object):
             finally:
                 f.close()
 
-        tcp4 = ("tcp" , socket.AF_INET , socket.SOCK_STREAM)
+        tcp4 = ("tcp", socket.AF_INET, socket.SOCK_STREAM)
         tcp6 = ("tcp6", socket.AF_INET6, socket.SOCK_STREAM)
-        udp4 = ("udp" , socket.AF_INET , socket.SOCK_DGRAM)
+        udp4 = ("udp", socket.AF_INET, socket.SOCK_DGRAM)
         udp6 = ("udp6", socket.AF_INET6, socket.SOCK_DGRAM)
         unix = ("unix", socket.AF_UNIX, None)
 
         tmap = {
-            "all"  : (tcp4, tcp6, udp4, udp6, unix),
-            "tcp"  : (tcp4, tcp6),
-            "tcp4" : (tcp4,),
-            "tcp6" : (tcp6,),
-            "udp"  : (udp4, udp6),
-            "udp4" : (udp4,),
-            "udp6" : (udp6,),
-            "unix" : (unix,),
-            "inet" : (tcp4, tcp6, udp4, udp6),
+            "all": (tcp4, tcp6, udp4, udp6, unix),
+            "tcp": (tcp4, tcp6),
+            "tcp4": (tcp4,),
+            "tcp6": (tcp6,),
+            "udp": (udp4, udp6),
+            "udp4": (udp4,),
+            "udp6": (udp6,),
+            "unix": (unix,),
+            "inet": (tcp4, tcp6, udp4, udp6),
             "inet4": (tcp4, udp4),
             "inet6": (tcp6, udp6),
         }
@@ -1003,7 +1051,7 @@ class Process(object):
 
     @wrap_exceptions
     def get_num_fds(self):
-       return len(os.listdir("/proc/%s/fd" % self.pid))
+        return len(os.listdir("/proc/%s/fd" % self.pid))
 
     @wrap_exceptions
     def get_process_ppid(self):
@@ -1074,15 +1122,17 @@ class Process(object):
                 ip = socket.inet_ntop(family, base64.b16decode(ip))
         else:  # IPv6
             # old version - let's keep it, just in case...
-            #ip = ip.decode('hex')
-            #return socket.inet_ntop(socket.AF_INET6,
+            # ip = ip.decode('hex')
+            # return socket.inet_ntop(socket.AF_INET6,
             #          ''.join(ip[i:i+4][::-1] for i in xrange(0, 16, 4)))
             ip = base64.b16decode(ip)
             # see: http://code.google.com/p/psutil/issues/detail?id=201
             if sys.byteorder == 'little':
-                ip = socket.inet_ntop(socket.AF_INET6,
-                                struct.pack('>4I', *struct.unpack('<4I', ip)))
+                ip = socket.inet_ntop(
+                    socket.AF_INET6,
+                    struct.pack('>4I', *struct.unpack('<4I', ip)))
             else:
-                ip = socket.inet_ntop(socket.AF_INET6,
-                                struct.pack('<4I', *struct.unpack('<4I', ip)))
+                ip = socket.inet_ntop(
+                    socket.AF_INET6,
+                    struct.pack('<4I', *struct.unpack('<4I', ip)))
         return (ip, port)
