@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-29 18:25+0100\n"
+"PO-Revision-Date: 2013-11-26 15:41+0100\n"
 "Last-Translator: Juan C. Buño <quetzatl@eresmas.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: gl\n"
@@ -22,6 +22,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Resource Monitor"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Resumo de Recursos copiado ó portapapeis"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -94,8 +98,23 @@ msgstr ""
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Presenta o espazo utilizado e total para a ram física e virtual."
 
-msgid "Windows version: "
-msgstr "Versión do Windows: "
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-bit"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-bit"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Versión do Windows: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Versión do Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -140,6 +159,9 @@ msgid ""
 msgstr ""
 "Un monitor de recursos á man para informar da carga da CPU, utilización da "
 "memoria, do estado da batería e da utilización do disco."
+
+#~ msgid "Windows version: "
+#~ msgstr "Versión do Windows: "
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr "Resource Monitor - permite o aceso doado á información do sistema."

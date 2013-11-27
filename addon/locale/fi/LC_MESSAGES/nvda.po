@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-28 07:02+0200\n"
+"PO-Revision-Date: 2013-11-26 20:46+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fi\n"
@@ -23,18 +23,22 @@ msgstr ""
 msgid "Resource Monitor"
 msgstr "Resurssienvalvonta"
 
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Resurssien yhteenveto kopioitu leikepöydälle"
+
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Tässä tietokoneessa ei ole akkua."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 msgid "{percent}%, battery charging."
-msgstr "{percent} prosenttia, akkua ladataan."
+msgstr "{percent}%, akkua ladataan."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent} prosenttia, akun käyttöaikaa jäljellä noin {time}."
+msgstr "{percent}%, akun käyttöaikaa jäljellä noin {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
@@ -49,8 +53,8 @@ msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"Lukee akun varauksen prosentteina, latauksen tilan, jäljellä olevan ajan "
-"(jos ei latauksessa) sekä varoituksen, mikäli varaus on alhainen tai "
+"Ilmoittaa akun varauksen prosentteina, latauksen tilan, jäljellä olevan ajan "
+"(jos ei latauksessa) sekä antaa varoituksen, mikäli varaus on alhainen tai "
 "kriittinen."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
@@ -59,57 +63,72 @@ msgid ""
 "{percent}%. "
 msgstr ""
 "{driveName} ({driveType}-asema): {usedSpace} käytetty kokonaistilasta "
-"{totalSpace}, {percent} prosenttia. "
+"{totalSpace}, {percent}%. "
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"Lukee kiintolevyjen ja siirrettävien asemien käytetyn ja kokonaistilan "
+"Ilmoittaa kiintolevyjen ja siirrettävien asemien käytetyn ja kokonaistilan "
 "määrän."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr "Ydin {coreNumber}: {corePercent} prosenttia. "
+msgstr "Ydin {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
 msgid "Average CPU load {avgLoad}%, {cores}"
-msgstr "Prosessorin keskimääräinen kuormitus {avgLoad} prosenttia, {cores}"
+msgstr "Suorittimen keskimääräinen kuormitus {avgLoad}%, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "Lukee prosessorin ja ydinten keskimääräisen kuormituksen."
+msgstr "Ilmoittaa suorittimen ja ydinten keskimääräisen kuormituksen."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Fyysinen: {physicalUsed} käytetty kokonaismäärästä {physicalTotal}, "
-"{physicalPercent} prosenttia. "
+"{physicalPercent}%. "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Näennäinen: {virtualUsed} käytetty kokonaismäärästä {virtualTotal}, "
-"{virtualPercent} prosenttia."
+"{virtualPercent}%."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Lukee sekä fyysisen että näennäisen RAM-muistin käytetyn ja kokonaismäärän."
+"Ilmoittaa sekä fyysisen että näennäisen RAM-muistin käytetyn ja "
+"kokonaismäärän."
 
-msgid "Windows version: "
-msgstr "Windows-versio: "
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-bittinen"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-bittinen"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Windows-versio: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Windows-versio: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
-msgstr "Kertoo käyttämäsi Windowsin version."
+msgstr "Ilmoittaa käyttämäsi Windowsin version."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr ""
-"RAM-muistia käytetty {ramPercent}, prosessorin kuormitus {cpuPercent} "
-"prosenttia. "
+"RAM-muistia käytetty {ramPercent}%, suorittimen kuormitus {cpuPercent}%. "
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
@@ -119,8 +138,8 @@ msgstr " Varoitus: akun varaus kriittisen alhainen."
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"Lukee käytetyn RAM-muistin määrän, prosessorin keskimääräisen kuormituksen "
-"ja akun tiedot, mikäli saatavilla."
+"Ilmoittaa käytetyn RAM-muistin määrän, prosessorin keskimääräisen "
+"kuormituksen ja akun tiedot, mikäli saatavilla."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -144,8 +163,11 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"Monipuolinen resurssienvalvontalisäosa prosessorin kuormituksen, muistin-, "
+"Monipuolinen resurssienvalvontalisäosa suorittimen kuormituksen, muistin-, "
 "akun- ja levynkäytön tilan sekä monien muiden tietojen lukemiseen."
+
+#~ msgid "Windows version: "
+#~ msgstr "Windows-versio: "
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr ""

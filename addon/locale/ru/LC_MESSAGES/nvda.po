@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-28 13:20+0400\n"
+"PO-Revision-Date: 2013-11-27 09:33+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ru\n"
+"Language-Team: nvda-russian-community <LL@li.org>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,6 +22,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Resource Monitor"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Сводка о  ресурсах скопирована в буфер обмена"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -98,8 +102,23 @@ msgstr ""
 "Предоставляет информацию об общем объёме и использованном объёме физической "
 "и виртуальной памяти."
 
-msgid "Windows version: "
-msgstr "Версия Windows: "
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-бит"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-бит"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Версия Windows: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Версия Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -146,6 +165,9 @@ msgid ""
 msgstr ""
 "Удобный монитор ресурсов сообщает о загрузке процессора, использовании "
 "памяти, состоянии заряда батареи,использовании диска и многое другое."
+
+#~ msgid "Windows version: "
+#~ msgstr "Версия Windows: "
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr "Resource Monitor - обеспечивает легкий доступ к информации системы."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-04 18:03+0000\n"
-"PO-Revision-Date: 2013-10-29 20:25+0530\n"
+"PO-Revision-Date: 2013-11-26 21:39+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
@@ -22,6 +22,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "வள கவனிப்பு"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "வளத்தின் சுருக்கம் பிடிப்புப் பலகைக்கு படியெடுக்கப்பட்டது"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -99,8 +103,23 @@ msgstr ""
 "மெய் மற்றும் மெய்நிகர் இடை நினைவகத்தின் மொத்த மற்றும் பயன்பாட்டிலிருக்கும் இட அளவை "
 "அறிவிக்கும். "
 
-msgid "Windows version: "
-msgstr "சாளரத்தின் பதிப்பு"
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-நுண்மி"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-நுண்மி"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "விண்டோஸ் பதிப்பு: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "விண்டோஸ் பதிப்பு: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -145,6 +164,9 @@ msgid ""
 msgstr ""
 "மையச் செயலக சுமை, நினைவக, மின்கல மற்றும் வட்டின் பயன்பாடு ஆகியவைகளை அறிவிக்கும் "
 "கையடக்க வள கவனிப்பு."
+
+#~ msgid "Windows version: "
+#~ msgstr "சாளரத்தின் பதிப்பு"
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr ""
