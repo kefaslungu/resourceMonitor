@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-28 21:34-0800\n"
+"PO-Revision-Date: 2013-11-27 22:42-0800\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
@@ -22,6 +22,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "리소스 모니터"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "리소스 정보 클립보드에 복사됨"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -92,8 +96,23 @@ msgstr ""
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "물리 (RAM) 및 가상 메모리의 사용 공간 및 총 메모리를 알려줍니다."
 
-msgid "Windows version: "
-msgstr "윈도우 버전: "
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64비트"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32비트"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "윈도우 버전: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "윈도우 버전: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -134,6 +153,9 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr "프로세서, 디스크, 메모리 사용률 및 베터리 상태를 알려줍니다."
+
+#~ msgid "Windows version: "
+#~ msgstr "윈도우 버전: "
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr "리소스 모니터 - 시스템 정보 알림 도구"

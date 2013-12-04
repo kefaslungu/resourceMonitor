@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 'resourceMonitor' '2.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-28 15:08+0200\n"
+"PO-Revision-Date: 2013-11-28 02:02-0200\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ar\n"
@@ -22,6 +22,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "وصف لمكونات الجهاز المادية ونظام التشغيل"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "تم النسخ إلى الحافظة"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -98,8 +102,23 @@ msgstr ""
 "الإعلان عن المساحة الكلية والمساحة المستخدمة لكل من الذاكرة الفعلية والذاكرة "
 "الوهمية للحاسوب"
 
-msgid "Windows version: "
-msgstr "إصدار الويندوز:"
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-بيت"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-بيت"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "إصدار الويندوز: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "إصدار الويندوز: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -145,6 +164,9 @@ msgid ""
 msgstr ""
 "تعمل هذه الإضافة على الإعلان عن متوسط تحميل المعالج, والذاكرة المستخدمة, كما "
 "تعلن عن حالة البطارية ومساحة الأقراص الصلبة والمتحركة والمزيد."
+
+#~ msgid "Windows version: "
+#~ msgstr "إصدار الويندوز:"
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr ""

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-31 03:32+0100\n"
+"PO-Revision-Date: 2013-12-01 06:08+0100\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -22,6 +22,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Ressourcen-Monitor"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Zusammenfassung aller Ressourcen in die Zwischenablage kopiert"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -99,8 +103,23 @@ msgstr ""
 "Zeigt den gesamten Speicherverbrauch für den physischen und virtuellen "
 "Arbeitsspeicher an."
 
-msgid "Windows version: "
-msgstr "windows-Version:"
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-Bit"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-Bit"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Windows-Version: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Windows-Version: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -145,6 +164,9 @@ msgid ""
 msgstr ""
 "Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
+
+#~ msgid "Windows version: "
+#~ msgstr "windows-Version:"
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr ""
