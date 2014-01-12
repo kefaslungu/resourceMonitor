@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-04-11 05:45+0100\n"
-"PO-Revision-Date: 2013-11-16 11:08+0200\n"
+"PO-Revision-Date: 2013-12-29 04:36+0200\n"
 "Last-Translator: Zahari Yurukov <zahari.yurukov@gmail.com>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -24,6 +24,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Наблюдение на ресурсите"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Обобщената информация за ресурсите е копирана в клипборда."
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -103,8 +107,23 @@ msgstr ""
 "Предоставя информация относно количеството използвана и общо налична "
 "физическа и виртуална оперативна памет."
 
-msgid "Windows version: "
-msgstr "Версия на Windows: "
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-битова"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-битова"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Версия на Windows: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Версия на Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -152,6 +171,9 @@ msgstr ""
 "Удобно средство за наблюдение на системните ресурси, за докладване на "
 "натоварването на централния процесор, използваната памет, състоянието на "
 "батерията, използването на диска и други."
+
+#~ msgid "Windows version: "
+#~ msgstr "Версия на Windows: "
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr "Resource Monitor - предоставя лесен достъп до системна информация."

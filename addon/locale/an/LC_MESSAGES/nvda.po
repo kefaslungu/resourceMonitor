@@ -23,6 +23,10 @@ msgstr ""
 msgid "Resource Monitor"
 msgstr "Monitor de recursos"
 
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr ""
+
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Iste ordinador no tien una batería conectada."
@@ -93,8 +97,23 @@ msgstr "Virtual: {virtualUsed} de {virtualTotal} usau ({virtualPercent}%)."
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Presienta lo espacio usau y lo total de memoria RAM fisica y virtual."
 
-msgid "Windows version: "
-msgstr "Versión ta Windows"
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr ""
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr ""
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr ""
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr ""
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -139,6 +158,9 @@ msgid ""
 msgstr ""
 "Un monitor de recursos a man ta informar d'a carga d'a CPU, de l'uso de "
 "memoria, d'a batería, d'o estau d'uso d'o disco y de muito mas."
+
+#~ msgid "Windows version: "
+#~ msgstr "Versión ta Windows"
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr ""
