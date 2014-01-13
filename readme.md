@@ -32,7 +32,7 @@ This add-on does not replace task manager and other system information programs 
 ## Changes for 3.0 ##
 
 * Updated psutil dependency to 1.2.1.
-* Announcement of current Windows version, CPU bit and service pack if any (NVDA+Shift+6).
+* Announcement of current Windows version, CPU architecture and service pack if any (NVDA+Shift+6).
 * Ability to change add-on shortcut keys (NVDA 2013.3 or later).
 * Ability to copy individual resource information to clipboard by pressing resource commands two times.
 
