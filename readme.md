@@ -1,4 +1,4 @@
-[[!meta title="resourceMonitor"]]
+[[!meta title="Resource Monitor"]]
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA contributors
 * Version: [3.0][1]
