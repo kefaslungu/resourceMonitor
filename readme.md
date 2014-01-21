@@ -1,9 +1,11 @@
 [[!meta title="Resource Monitor"]]
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA contributors
-* Version: [3.0][1]
+* Versions: [3.1][1], [3.5][2] (NVDA 2014.1 or later)
 
 This plugin gives information about CPU load, memory usage and other resource usage information.
+
+Important: Resource Monitor 3.1 is not compatible with NvDA 2014.1 or later. If you use NVDA 2014.1 or later, use Resource Monitor 3.5 or later.
 
 # Shortcuts #
 
@@ -13,8 +15,6 @@ This plugin gives information about CPU load, memory usage and other resource us
 * NVDA+Shift+3 Presents the used and total space of the static and removable drives.
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.
 * NVDA+Shift+6 Presents  CPU Architecture 32/64-bit and Windows version and service pack numbers.
-
-
 
 If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
 
@@ -65,4 +65,4 @@ This add-on does not replace task manager and other system information programs 
 * Initial Release
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-next
