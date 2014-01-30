@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-28 08:20+0100\n"
-"Last-Translator: Leonard de Ruijter <mail@leonardderuijter.nl>\n"
+"PO-Revision-Date: 2014-01-25 16:46+0100\n"
+"Last-Translator: Bart Simons <bart@bartsimons.be>\n"
 "Language-Team: NL <nvda-nl@googlegroups.com>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,10 @@ msgstr ""
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Resource Monitor"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Samenvatting naar klembord gekopieerd"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -45,29 +49,16 @@ msgid " Warning: battery is critically low."
 msgstr " Waarschuwing: batterij is zo goed als leeg."
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"Toont batterijpercentage, oplaadstatus, resterende tijd (als er niet wordt "
-"opgeladen), en een waarschuwing als de batterij bijna leeg of zo goed als "
-"leeg is."
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "Toont batterijpercentage, oplaadstatus, resterende tijd (als er niet wordt opgeladen), en een waarschuwing als de batterij bijna leeg of zo goed als leeg is."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
-"{percent}%. "
-msgstr ""
-"{driveName} ({driveType} schijf): {usedSpace} van {totalSpace} gebruikt "
-"{percent}%. "
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
+msgstr "{driveName} ({driveType} schijf): {usedSpace} van {totalSpace} gebruikt {percent}%. "
 
 #. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Toont de gebruikte en beschikbare ruimte van alle vaste en verwisselbare "
-"schijven van deze computer."
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr "Toont de gebruikte en beschikbare ruimte van alle vaste en verwisselbare schijven van deze computer."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
@@ -79,26 +70,37 @@ msgstr "Gemiddelde CPU belasting {avgLoad}%, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr ""
-"Toont de gemiddelde processorbelasting en de gemiddelde belasting van elke "
-"kern."
+msgstr "Toont de gemiddelde processorbelasting en de gemiddelde belasting van elke kern."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Fysiek: {physicalUsed} van {physicalTotal} gebruikt ({physicalPercent}%). "
+msgstr "Fysiek: {physicalUsed} van {physicalTotal} gebruikt ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"Virtueel: {virtualUsed} van {virtualTotal} gebruikt ({virtualPercent}%)."
+msgstr "Virtueel: {virtualUsed} van {virtualTotal} gebruikt ({virtualPercent}%)."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Toont het gebruikte en totaal beschikbare fysieke en virtuele RAM."
 
-msgid "Windows version: "
-msgstr "Windowsversie: "
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-bit"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-bit"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Windowsversie: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Windowsversie: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -113,11 +115,8 @@ msgid " Warning: critically low battery."
 msgstr " Waarschuwing: batterij is zo goed als leeg."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"Toont gebruikt RAM, gemiddelde CPU belasting en batterij-informatie indien "
-"beschikbaar."
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "Toont gebruikt RAM, gemiddelde CPU belasting en batterij-informatie indien beschikbaar."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -137,12 +136,11 @@ msgstr " minuten"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
-msgstr ""
-"Een handig overzicht van CPU load, geheugengebruik, status van de batterij, "
-"schijfgebruik en meer."
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "Een handig overzicht van CPU load, geheugengebruik, status van de batterij, schijfgebruik en meer."
+
+#~ msgid "Windows version: "
+#~ msgstr "Windowsversie: "
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr "Resource Monitor - Geeft gemakkelijk toegang tot systeeminformatie."

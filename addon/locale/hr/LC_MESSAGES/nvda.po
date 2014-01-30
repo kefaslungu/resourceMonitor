@@ -8,14 +8,24 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-13 10:32+0100\n"
-"PO-Revision-Date: 2013-03-14 07:57+0100\n"
+"PO-Revision-Date: 2014-01-29 13:57+0100\n"
 "Last-Translator: Hrvoje Katić <hrvojekatic@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Monitor resursa"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Rezime resursa kopirano u međuspremnik"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -93,8 +103,27 @@ msgstr ""
 "Izjavljuje iskorišten i sveukupni prostor u fizičkoj i virtualnoj ram "
 "memoriji."
 
-msgid "Windows version: "
-msgstr ""
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-bitni"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-bitni"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Inačica Windows sustava: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Inačica Windows sustava: {winVersion} {servicePackLevel} ({cpuBit})"
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
+msgstr "Najavljuje inačicu Windows sustava koju koristite."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
@@ -128,19 +157,13 @@ msgid " minutes"
 msgstr " minuta"
 
 #. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr ""
-
-#. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-#, fuzzy
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"Zgodan monitor resursa koji daje izvještaj o opterećenju procesora, "
-"iskorištenosti memorije te stanju iskorištenosti baterije i diskova."
+"Praktični monitor resursa za izvještaj o opterećenju procesora, uporabu "
+"memorije, bateriji, stanju uporabe diska i više."
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr ""
