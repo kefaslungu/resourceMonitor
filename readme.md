@@ -1,11 +1,11 @@
 [[!meta title="Resource Monitor"]]
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA contributors
-* Versions: [3.1][1], [3.5][2] (NVDA 2014.1 or later)
+* Version: [3.1][1]
 
 This plugin gives information about CPU load, memory usage and other resource usage information.
 
-Important: Resource Monitor 3.1 is not compatible with NvDA 2014.1 or later. If you use NVDA 2014.1 or later, use Resource Monitor 3.5 or later.
+Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
 
 # Shortcuts #
 
@@ -27,6 +27,7 @@ This add-on does not replace task manager and other system information programs 
 
 ## Changes for 3.1 ##
 
+* Resource Monitor officially supports Windows 8.1.
 * Updated translations.
 
 ## Changes for 3.0 ##
