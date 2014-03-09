@@ -40,7 +40,7 @@ msgstr "{percent} процента, батерията се зарежда."
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 msgid "{percent}% battery remaining, about {time}."
-msgstr "Батерията е заредена на {percent} процента, около {time}."
+msgstr "Батерията е заредена {percent} процента, около {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
@@ -72,8 +72,8 @@ msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"Предоставя информация относно заетото и общото дисково пространство за "
-"статичните дискове и за тези със сменяем носител на компютъра."
+"Предоставя информация за заетото и общото дисково пространство на "
+"статичните дискове и на тези със сменяем носител на компютъра."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
@@ -86,7 +86,7 @@ msgstr "Средно натоварване на централния проце
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr ""
-"Предоставя информация относно средното натоварване на процесора и "
+"Предоставя информация за средното натоварване на процесора и "
 "натоварването на всяко ядро."
 
 #. Translators: Shows RAM (physical memory) usage.
@@ -104,7 +104,7 @@ msgstr ""
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Предоставя информация относно количеството използвана и общо налична "
+"Предоставя информация за количеството използвана и общо наличната "
 "физическа и виртуална оперативна памет."
 
 #. Windows 8.1.
@@ -143,7 +143,7 @@ msgstr " Предупреждение: критично ниско ниво на
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"Предоставя информация относно използваната RAM памет, средното натоварване "
+"Предоставя информация за използваната RAM памет, средното натоварване "
 "на процесора, и информация за батерията, ако е налична."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).

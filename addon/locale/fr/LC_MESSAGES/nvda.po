@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-29 15:12+0100\n"
-"Last-Translator: patrick ZAJDA <patrick@zajda.fr>\n"
+"PO-Revision-Date: 2014-03-09 15:52+0100\n"
+"Last-Translator: Bachir Benanou <ben_bach@yahoo.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -25,11 +25,11 @@ msgstr "Resource Monitor"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"
-msgstr "Résumé des ressources copié dans le presse papiers"
+msgstr "Résumé des ressources copié dans le presse-papiers"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "Pas de batterie sur cette machine."
+msgstr "Cet ordinateur ne dispose pas d'une battrie."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 msgid "{percent}%, battery charging."
@@ -69,7 +69,9 @@ msgstr ""
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
-msgstr "Présente l'espace total et utilisé des disques de cet ordinateur."
+msgstr ""
+"Présente l'espace total et l'espace utilisé des disques locaux et amovibles "
+"de cet ordinateur."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "

@@ -16,6 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on description
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr ""
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr ""
+
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Цей комп'ютер не має підключеної батареї."
@@ -94,7 +104,26 @@ msgstr ""
 "Надає інформацію про зайнятий та повний об'єм як фізичної, так і віртуальної "
 "пам'яті."
 
-msgid "Windows version: "
+#. Windows 8.1.
+#. Windows 8.
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr ""
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr ""
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr ""
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr ""
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
 msgstr ""
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
@@ -129,11 +158,6 @@ msgstr " хвилина"
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
 msgstr " хвилин"
-
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr ""
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
