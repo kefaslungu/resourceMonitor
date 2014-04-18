@@ -97,8 +97,11 @@ msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
 "Annuncia lo spazio utilizzato e totale per la ram sia fisica che virtuale."
 
-#. Windows 8.1.
+#. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+#. Vista.
+#. Windows 7
 #. Windows 8.
+#. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
 msgstr "64-bit"

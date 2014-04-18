@@ -8,21 +8,23 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-12-20 22:02+0800\n"
+"PO-Revision-Date: 2014-03-17 18:15+0800\n"
 "Last-Translator: 雪岭冰龙 <vgjh2005@gmail.com>\n"
 "Language-Team: Simplified Chinese <vgjh2005@gmail.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "资源监控器"
+msgstr ""
+"Resource Monitor\n"
+"翻译者：雪岭冰龙"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"
@@ -34,7 +36,7 @@ msgstr "此计算机中并未连接任何电池。"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 msgid "{percent}%, battery charging."
-msgstr "正在充电， {percent}%。"
+msgstr "{percent}%，正在充电。"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
@@ -69,7 +71,7 @@ msgstr ""
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
-msgstr "显示此计算机上本地和可移动驱动器的空间使用情况。"
+msgstr "显示此计算机上的本地驱动器和可移动驱动器的空间使用情况。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
@@ -99,8 +101,11 @@ msgstr ""
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "显示虚拟内存和物理内存的容量和使用情况。"
 
-#. Windows 8.1.
+#. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+#. Vista.
+#. Windows 7
 #. Windows 8.
+#. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
 msgstr "64位"
@@ -132,7 +137,7 @@ msgstr "警告，电池严重不足。"
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
-msgstr "显示内存使用、进城平均负载和电池信息（如果可用）。"
+msgstr "显示内存的使用、进城平均负载和电池信息（如果可用）。"
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -152,12 +157,11 @@ msgstr "分钟"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-#, fuzzy
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"一个方便的资源监控器，可以报告 CPU 负载、内存使用、电池和磁盘使用情况。"
+"一个方便的资源监控器，可以报告 CPU 负载、内存使用、电池和磁盘使用情况等等。"
 
 #~ msgid "Resource Monitor - allows easy access to system information."
 #~ msgstr "资源监控允许您轻松的访问系统信息。"

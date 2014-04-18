@@ -72,8 +72,8 @@ msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"Предоставя информация за заетото и общото дисково пространство на "
-"статичните дискове и на тези със сменяем носител на компютъра."
+"Предоставя информация за заетото и общото дисково пространство на статичните "
+"дискове и на тези със сменяем носител на компютъра."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 msgid "Core {coreNumber}: {corePercent}%. "
@@ -86,8 +86,8 @@ msgstr "Средно натоварване на централния проце
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr ""
-"Предоставя информация за средното натоварване на процесора и "
-"натоварването на всяко ядро."
+"Предоставя информация за средното натоварване на процесора и натоварването "
+"на всяко ядро."
 
 #. Translators: Shows RAM (physical memory) usage.
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
@@ -104,11 +104,14 @@ msgstr ""
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Предоставя информация за количеството използвана и общо наличната "
-"физическа и виртуална оперативна памет."
+"Предоставя информация за количеството използвана и общо наличната физическа "
+"и виртуална оперативна памет."
 
-#. Windows 8.1.
+#. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+#. Vista.
+#. Windows 7
 #. Windows 8.
+#. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
 msgstr "64-битова"
@@ -143,8 +146,8 @@ msgstr " Предупреждение: критично ниско ниво на
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"Предоставя информация за използваната RAM памет, средното натоварване "
-"на процесора, и информация за батерията, ако е налична."
+"Предоставя информация за използваната RAM памет, средното натоварване на "
+"процесора, и информация за батерията, ако е налична."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "

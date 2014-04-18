@@ -1,20 +1,31 @@
-# 리소스 모니터 #
+# Resource Monitor #
 
 * 저자: Alex Hall, Joseph Lee (이성원), beqa gozalishvili 외 공헌자들.
-* Stable version: [version 2.4][1]
-* Development version: [version 3.0-dev][2]
+* Version: [3.1][1]
 
-사용자 컴퓨터의 프로세서, 메모리, 디스크 및 베터리 사용에 관한 정보를 알려주는 기능입니다.
+This plugin gives information about CPU load, memory usage and other
+resource usage information.
+
+Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
+earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
 
 # 단추키 #
 
-* NVDA+Shift+E 프로세서, 메모리 및 베터리 사용 정보를 알려줍니다.
-* NVDA+Shift+1 프로세서 사용 정보를 알려줍니다.
-* NVDA+Shift+2/5 메로리 (렘 및 가상 메모리) 사용 정보를 알려줍니다.
-* NVDA+Shift+3 디스크 사용 정보를 알려줍니다.
-* NVDA+Shift+4 베터리 정보를 알려줍니다.
-* NVDA+Shift+6 Presents currently installed Windows version, CPU bit (32 or
-  64-bit) and service pack if any (version 3.0-dev).
+* NVDA+Shift+E Presents used ram, average processor load, and battery info
+  if available.
+* NVDA+Shift+1 Presents the average processor load and if multicore CPU's
+  are present the load of each core.
+* NVDA+Shift+2/5 Presents the used and total space for both physical and
+  virtual ram.
+* NVDA+Shift+3 Presents the used and total space of the static and removable
+  drives.
+* NVDA+Shift+4 Presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.
+* NVDA+Shift+6 Presents CPU Architecture 32/64-bit and Windows version and
+  service pack numbers.
+
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys.
 
 ## Usage notes ##
 
@@ -26,11 +37,16 @@ programs for Windows. Also note the following:
   is twice the number of CPU cores.
 * There might be a short delay when getting processor usage information.
 
-## Changes for 3.0-dev ##
+## Changes for 3.1 ##
+
+* Resource Monitor officially supports Windows 8.1.
+* 여러 언어 번역 수정.
+
+## Changes for 3.0 ##
 
 * Updated psutil dependency to 1.2.1.
-* Added a command (NVDA+Shift+6) to report the version of Windows you are
-  using, CPU bit and service packs if any.
+* Announcement of current Windows version, CPU architecture and service pack
+  if any (NVDA+Shift+6).
 * Ability to change add-on shortcut keys (NVDA 2013.3 or later).
 * Ability to copy individual resource information to clipboard by pressing
   resource commands two times.
@@ -46,15 +62,17 @@ programs for Windows. Also note the following:
 
 ## 버전 2.2 ##
 
-* 다음 언어 추가: 갈라티아어, 네덜란드어, 네팔어, 독일어, 러시아어, 스페인어, 슬로바키아어, 슬로베니아어, 아라곤어,
-  크로아티아어, 포루투갈어 (브라질), 프랑스어, 핀란드어, 타밀어, 터키어, 한국어, 헝가리어.
+* Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
+  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
+  Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
+  and Turkish.
 
 ## 버전 2.1 ##
 
 * psutil 0.6.1로 업데이트함.
 * 드라이브 정보 확인 속도 향상.
 * 데이타 이름 정리.
-* `코드 정리.
+* Code cleanup.
 
 ## 버전 2.0 ##
 
@@ -64,8 +82,6 @@ programs for Windows. Also note the following:
 
 * 첫 출시 버전.
 
-[[!tag stable dev]]
+[[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

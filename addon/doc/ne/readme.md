@@ -2,44 +2,56 @@
 
 * लेखकहरु: अलेक्स हल, जोसेफ लि, बिका गोजालिस्भीलि र अन्य नेत्रवाणी योगदान
   कर्ताहरू ।
-* स्थिर संस्करण: [version 2.4][1]
-* Development version: [version 3.0-dev][2]
+* Version: [3.1][1]
 
-यो चुकुलले हामीलाई CPU को भारको बारेमा, प्रयोगमा आएको भण्डार, ब्याट्री तथा
-भकारिको प्रयोग भएको अवस्था बताउने छ ।
+This plugin gives information about CPU load, memory usage and other
+resource usage information.
+
+Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
+earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
 
 # द्रुतमार्ग #
 
-* नेत्रवाणी+Shift+E ले प्रयोग भएको र्‍याम, औसत प्रोसेसर भार, र ब्याट्री
-  सम्बन्धि जानकारी बताउनेछ ।
-* नेत्रवाणी+Shift+1 ले औसत प्रोसेसरको भार र हरेक कोरको भार बताउने छ ।
-* नेत्रवाणी+Shift+2/५ ले भोतिक र अवास्तविक र्‍यामको प्रयोग भएको र जम्मा
-  क्षमता बताउने छ ।
-* नेत्रवाणी+Shift+3 ले यो कल्पयन्त्र्मा भएका स्थिर र हटाउन मिल्ने भकारीहरूको
-  प्रयोग भएको र जम्मा क्षमता बताउने छ । 
-* नेत्रवाणी +Shift+4 ले ब्याट्री प्रतिशत, चार्जको अवस्था, बाकि समय (चार्ज भई
-  रहेको छैन भने) र ब्रयाट्री कम वा नाजुक छ भने सो को चेतावणी समेत बताउने छ ।
-* NVDA+Shift+6 Presents currently installed Windows version, CPU bit (32 or
-  64-bit) and service pack if any (version 3.0-dev).
+* NVDA+Shift+E Presents used ram, average processor load, and battery info
+  if available.
+* नेत्रवानी +Shift+१ ले प्रोसेसरको औसत भार र यदी बहुकोर CPU's भएमा यि
+  कोरहरुको भार समेत प्रस्तुत गर्ने छ ।
+* NVDA+Shift+2/5 Presents the used and total space for both physical and
+  virtual ram.
+* NVDA+Shift+3 Presents the used and total space of the static and removable
+  drives.
+* NVDA+Shift+4 Presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.
+* नेत्रवाणी+Shift+6 चालु विन्डोजको संस्करण, CPU बीट (३२ वा ६४-विट) र सर्भिस
+  प्याक  सङ्ख्या बताउने छ ।
 
-## Usage notes ##
+यदि चालू नेत्रवाणी २०१३.३ अथवा यस पछीको संस्करण छ भने तपाइले यी द्रुतमार्ग
+कुञ्जी बदल्न सक्नु हुन्छ ।
 
-This add-on does not replace task manager and other system information
-programs for Windows. Also note the following:
+## टिप्पणिको प्रयोग ##
 
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper Threading where number of CPU's
-  is twice the number of CPU cores.
-* There might be a short delay when getting processor usage information.
+यो थप-साधनले कार्य व्यबस्थापक र अरू विन्डोज सम्बन्धी सूचना कार्यक्रम
+प्रणालीलाई   विस्थापन गर्दैन । यो पनि ध्यान दिनु होला:
 
-## विकास-३.० मा गरिएका परिवर्तनहरु ##
+* CPU को प्रयोग तार्किक प्रोसेसरलाई दिइएको छ, भौतिक कोरलाई होइन । यो बहु
+  मार्ग जहाँ CPU को सङ्ख्या  भन्दा CPU कोरको सङ्ख्या दोब्बर हुन्छ मा मननीय छ
+  ।.
+* प्रोसेसरको प्रयोग सम्बन्धी जानकारी दिदा केही ढिलो हुन सक्छ ।
 
-* Updated psutil dependency to 1.2.1.
-* Added a command (NVDA+Shift+6) to report the version of Windows you are
-  using, CPU bit and service packs if any.
-* Ability to change add-on shortcut keys (NVDA 2013.3 or later).
-* Ability to copy individual resource information to clipboard by pressing
-  resource commands two times.
+## ३.1 संस्करणमा गरिएका परिवर्तनहरू । ##
+
+* Resource Monitor officially supports Windows 8.1.
+* अनुवादलाई अद्यावधिक गरियो 
+
+## ३.० संस्करणमा गरिएका परिवर्तनहरू । ##
+
+* psutil आधारितलाई १.२.१ मा अद्यावधिक गरियो ।.
+* नेत्रवाणी+Shift+6 चालु विन्डोजको संस्करण, CPU बीट (३२ वा ६४-विट) र सर्भिस
+  प्याक सङ्ख्या बताउने छ ।
+* २०१३.३ वा यस पछिका नेत्रवाणीमा लागु हुने गरी थप-साधनको द्रुतमार्ग बदल्ने
+  क्षमता थप गरियो ।
+* स्रोत आदेसहरूलाई दुई पटक दबाएर क्लिपपाटीमा स्रोतहरू सम्बन्धी वैयक्तिक
+  सुचनालाई सञ्चय गर्ने सुविदा थप गरियो ।
 
 ## २.४ मा गरिएका परिवर्तनहरू ##
 
@@ -52,16 +64,17 @@ programs for Windows. Also note the following:
 
 ## २.१ संस्करणमा गरिएका परिवर्तनहरू । ##
 
-* निम्न भाषाहरूमा अनुवाद गरियो: अरबी, अर्गानिज, क्रोएसीयाली, डच, फिनिस,
-  फ्रान्सेली, ग्यालेसियन, जर्मनी, हङ्गेरियाली, इटालियन, कोरियाली, नेपाली,
-  पुर्तगाली(ब्राजिल), रुसी, स्लोभाक, स्लोभिनियन, स्पेनी, तामिल र तुर्कि ।
+* Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
+  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
+  Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
+  and Turkish.
 
 ## २.१ संस्करणमा गरिएका परिवर्तनहरू । ##
 
 * psutil आधारितलाई ०.६.१ मा अद्यावधिक गरियो ।.
 * भकारि सम्बन्धी जानकारी लिदा लामो समय लाग्ने समस्या हल गरियो ।
 * %s लाई {friendlyVariableNames} मा प्रतिस्थापन गर ।
-* एउटा संहिता साफ करता
+* Code cleanup.
 
 ## २.० संस्करणमा गरिएका परिवर्तनहरू । ##
 
@@ -71,8 +84,6 @@ programs for Windows. Also note the following:
 
 * पहिलो सार्वजनिकीकरण
 
-[[!tag stable dev]]
+[[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

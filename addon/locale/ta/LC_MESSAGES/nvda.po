@@ -103,8 +103,11 @@ msgstr ""
 "மெய் மற்றும் மெய்நிகர் இடை நினைவகத்தின் மொத்த மற்றும் பயன்பாட்டிலிருக்கும் இட அளவை "
 "அறிவிக்கும். "
 
-#. Windows 8.1.
+#. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+#. Vista.
+#. Windows 7
 #. Windows 8.
+#. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
 msgstr "64-நுண்மி"

@@ -104,8 +104,11 @@ msgstr ""
 "Надає інформацію про зайнятий та повний об'єм як фізичної, так і віртуальної "
 "пам'яті."
 
-#. Windows 8.1.
+#. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+#. Vista.
+#. Windows 7
 #. Windows 8.
+#. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
 msgstr ""

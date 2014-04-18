@@ -1,28 +1,34 @@
-# resource Monitor #
+# Resource Monitor #
 
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili e outros colaboradores
   do NVDA
-* Stable version: [versión 2.4][1]
-* Versión de desenrolo: [versión 3.0-dev] [2]
+* Versión: [3.1][1]
 
-Este plugin danos información acerca da carga da CPU, do uso da memoria, da
-batería e do estado de uso do disco.
+Este plugin danos información acerca da carga da CPU, do uso da memoria e
+outras informacións de uso dos recursos.
+
+Importante: Resource Monitor 3.1 non é compatible co NVDA 2013.3 ou
+anterior. Se utilizas 2013.3 ou anterior, porfavor utiliza Resource Monitor
+3.0.
 
 # Atallos de teclado #
 
 * NVDA+Shift+E Presenta a ram utilizada, a carga media do procesador, e
   información da batería se está dispoñible,
-* NVDA+Shift+1 Presenta a carga media do procesador e a carga de cada un dos
-  núcleos,
+* NVDA+Shift+1 Presenta a carga media do procesador e CPU multicor se están
+  presentes a carga de cada núcleo.
 * NVDA+Shift+2/5 Presenta o espazo utilizado e total da ram tanto física
   coma virtual,
 * NVDA+Shift+3 Presenta o espazo usado e total das unidades estáticas e
-  extraíbles  neste computador,
+  extraíbles .
 * NVDA+Shift+4 Presenta a porcentaxe da batería, o estado da carga, o tempo
-  restante (se non se está cargando), e unha advertencia se a batería está
-  baixa ou crítica,
-* NVDA+Shift+6 Presenta a versión do Windows actualmente instalado, os bits
-  da CPU (32 ou 64 bits) e service pack se o hai (versión 3.0-dev).
+  restante (se non se está a cargar), e un aviso se a batería está débil ou
+  crítica.
+* NVDA+Shift+6 Presenta a arquitectura da CPU 32/64-bit e a versión de
+  Windows e as cifras do service pack.
+
+Se tes NVDA 2013.3 ou posterior instalado, podes cambiar estas teclas de
+acceso.
 
 ## Notas de uso ##
 
@@ -35,11 +41,16 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 * Podería haber un pequeno retraso ó obter información sobre o uso do
   procesador.
 
-## Cambios para 3.0-dev ##
+## Cambios para 3.1 ##
+
+* Resource Monitor soporta oficialmente Windows 8.1.
+* Actualízanse as traduccións.
+
+## Cambios para 3.0 ##
 
 * Actualizada dependencia psutil para 1.2.1.
-* Engadidda unha orde (NVDA+Shift+6) para informar da versión do Windows que
-  estás a usar, bits da CPU e service packs se os hai.
+* Anuncio da versión actual de Windows, arquitectura da CPU e do service
+  pack se o hai(NVDA+Shift+6).
 * Capacidade de cambiar os atallos de teclado do complemento (NVDA 2.013,3
   ou posterior).
 * Habilidade para copiar información dun recurso individual ó portapapeis
@@ -56,16 +67,17 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 
 ## Cambios para 2.2 ##
 
-* Engadidas as seguintes traduccións: Alemán, Aragonés, Coreán, Croata,
-  Eslovaco, Esloveno, Español, Finés, Francés, Galego, Holandés, Húngaro,
-  Italiano, Nepalí, Portugués (Brasil), Ruso, Tamil e Turco.
+* Seguintes traducións Engadidas: Árabe, aragonés, croata, holandés,
+  finlandés, francés, galego, alemán, húngaro, italiano, xaponés, coreano,
+  nepalés, polaco, portugués (Brasil), ruso, eslovaco, esloveno, español,
+  Tamil e turco.
 
 ## Cambios para 2.1 ##
 
 * Actualizada dependencia sutil á versión 0.6.1.
 * Correxido retraso grande ó opter información das unidades.
 * Sustituido %s-es en {friendlyVariableNames}.
-* Unha pequena limpeza do código
+* Limpeza do Código.
 
 ## Cambios para 2.0 ##
 
@@ -75,8 +87,6 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 
 * Versión inicial
 
-[[!tag stable dev]]
+[[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

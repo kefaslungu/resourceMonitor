@@ -2,45 +2,59 @@
 
 * Fejlesztők: Alex Hall , Joseph Lee, beqa gozalishvili és további NVDA
   közreműködők
-* Stabil verzió: [2.4][1]
-* Fejlesztői verzió: [3.0-dev][2]
+* Verzió: [3.1][1]
 
 A kiegészítő hasznos információkat ad a memória, processzor, háttértár, és
 az akkumulátor aktuális állapotáról.
 
+Fontos: Az erőforrás-kilistázó legfrissebb verziója nem használható az NVDA
+2013.3 vagy annál régebbi NVDA verziókkal. Ezekhez a kiegészítő 3.0-s
+változatát ajánljuk.
+
 # Billentyűparancsok #
 
 * NVDA+shift+e Bemondja a memória és az átlagos processzor használatot, és a
-  telep töltöttségi szintjét (ha elérhető),
-* NVDA+shift+1 Bemondja az átlagos processzor terheltségét, majd ezt magokra
-  lebontva is,
-* NVDA+shift+2/5 Bemondja a teljes és foglalt fizikai és virtuális memória
-  méretét,
+  telep töltöttségi szintjét, ha elérhető.
+* NVDA+shift+1 Bemondja az átlagos processzor terheltségét együttesen, és
+  magokra lebontva egyaránt.
+* NVDA+shift+2/NVDA+shift+5 Bemondja a teljes és foglalt fizikai és
+  virtuális memória méretét.
 * NVDA+shift+3 Bemondja a beépített és hordozható meghajtók teljes és
-  lefoglalt méretét,
-* NVDA+shift+4 Információkat ad a telep töltöttségéről, figyelmeztet ha az
-  akkumulátor töltöttsége kritikusan alacsony,
-* NVDA+Shift+6 Presents currently installed Windows version, CPU bit (32 or
-  64-bit) and service pack if any (version 3.0-dev).
+  lefoglalt méretét.
+* NVDA+shift+4 Információkat ad a telep töltöttségéről, a hátralévő időről
+  (ha nnincs hálózatra csatlakoztatva), figyelmeztet ha az akkumulátor
+  töltöttsége kritikusan alacsony.
+* NVDA+Shift+6 Megjeleníti a feltelepített Windows verzióját és szerviz
+  csomagját, ha elérhető.
+
+Ha az NVDA 2013.3-as vagy újabb verzióját használja, lehetősége van a
+billentyűparancsok megváltoztatására.
 
 ## Használati megjegyzések ##
 
-This add-on does not replace task manager and other system information
-programs for Windows. Also note the following:
+Ez a kiegészítő nem helyettesíti a feladatkezelőt és a többi rendszerfigyelő
+Windows-os programot. Fontos megjegyezni a következőket:
 
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper Threading where number of CPU's
-  is twice the number of CPU cores.
-* There might be a short delay when getting processor usage information.
+* A processzor használata logikai processorok alapján történik, nem a
+  fizikai magok szerint. Ez azoknál a processzoroknál észrevehető, amik a
+  Hyper Threading technológiát használják, ahol a processzorok száma
+  kétszerese a magszámnak.
+* Egy kis időbe tellhet a processzor terheltségének lekkérése.
 
-## Changes for 3.0-dev ##
+## A 3.1 verzió változásai ##
 
-* Updated psutil dependency to 1.2.1.
-* Added a command (NVDA+Shift+6) to report the version of Windows you are
-  using, CPU bit and service packs if any.
-* Ability to change add-on shortcut keys (NVDA 2013.3 or later).
-* Ability to copy individual resource information to clipboard by pressing
-  resource commands two times.
+* Az Erőforrás-kilistázómár támogatja a Windows 8 operációs rendszert.
+* Fordítások frissítése
+
+## A 3.0 verzió változásai ##
+
+* A psutil függőség frissítése az 1.2.1. verzióra.
+* Bemondja a feltelepített Windows verzióját és szerviz csomagját, ha
+  elérhető. (NVDA+Shift+6)
+* Lehetőség van a kiegészítő billentyűparancsainak megváltoztatására (NVDA
+  2013.3-tól)
+* Lehetőség van az egyéni erőforrás információkat a vágólapra másolni egy
+  kiválasztott erőforrás billentyűparancsának kétszeri lenyomásával.
 
 ## A 2.4. verzió változásai ##
 
@@ -54,7 +68,7 @@ programs for Windows. Also note the following:
 ## A 2.2. verzió változásai ##
 
 * Új fordítások: Arab, Aragóniai, Horvát, Holland, Finn, Francia, Galíciai,
-  Német, Magyar, Olasz, Japán, Kóreai, Nepáli, Lengyel, Portugál
+  Német, Magyar, Olasz, Japán, Koreai, Nepáli, Lengyel, Portugál
   (Brazíliai), Orosz, Szlovák, Szlovén, Spanyol, Tamil és Török.
 
 ## A 2.1. verzió változásai ##
@@ -63,7 +77,7 @@ programs for Windows. Also note the following:
 * A hosszú várakozás kiküszöbölése a meghajtókról való információk
   beszerzése közben.
 * A %s kicserélése {barátságosváltozónevekre}
-* Kis kódtisztítás
+* Kódtisztítás.
 
 ## A 2.0 verzió változásai ##
 
@@ -73,8 +87,6 @@ programs for Windows. Also note the following:
 
 * Első kiadás
 
-[[!tag stable dev]]
+[[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

@@ -1,27 +1,32 @@
-# resource Monitor #
+# Kaynak izleme #
 
 * Geliştiriciler: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA
   contributors
-* Kararlı sürüm: [version 2.4][1]
-* Geliştirme sürümü: [version 3.0-dev][2]
+* Version: [3.1][1]
 
-Bu eklenti, işlemci yükü, kullanılan ram, harddiskte kullanılan alanı ve pil
-bilgisini verir.
+This plugin gives information about CPU load, memory usage and other
+resource usage information.
+
+Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
+earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
 
 # Kısayollar #
 
-* NVDA+Shift+E kullanılan ram, ortalama işlemci yükü, ve mevcutsa batarya
-  bilgisini  seslendirir.
-* NVDA+Shift+1 ortalama işlemci yükünü söyler ve bu bilgiyi her bir çekirdek
-  için sunar
-* NVDA+Shift+2/5 Fiziksel ve sanal ram için toplam ram ve kullanılan ram
-  miktarını söyler,
-* NVDA+Shift+3 bilgisayara bağlı sabit ve çıkarılabilir diskler için toplam
-  alan ve kullanılan alan bilgisini seslendirir
-* NVDA+Shift+4 batarya yüzdesini, şarj durumunu, kalan zamanı  (eğer şarj
-  edilmiyorsa), batarya düşük ya da kritik seviyede uyarısını seslendirir,
-* NVDA+Shift+6 mevcut windows sürümünü, varsa service pack versiyonunu ve 32
-  ya da 64 bit olup olmadığını söyler (version 3.0-dev).
+* NVDA+Shift+E Presents used ram, average processor load, and battery info
+  if available.
+* NVDA+Shift+1 Presents the average processor load and if multicore CPU's
+  are present the load of each core.
+* NVDA+Shift+2/5 Presents the used and total space for both physical and
+  virtual ram.
+* NVDA+Shift+3 Presents the used and total space of the static and removable
+  drives.
+* NVDA+Shift+4 Presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.
+* NVDA+Shift+6 Presents CPU Architecture 32/64-bit and Windows version and
+  service pack numbers.
+
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys.
 
 ## Kullanım notları ##
 
@@ -31,16 +36,21 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 * CPU kullanımı fiziksel çekirdekler için değil mantıksal (logical)
   işlemciler için verilir. Bu CPU sayısı CPU çekirdeklerinin iki katı olan
   Hyper Threading kullanan işlemciler için belirgindir.
-* There might be a short delay when getting processor usage information.
+* Işlemci kullanım bilgilerini alırken kısa bir gecikme olabilir.
 
-## 3.0-dev için değişiklikler ##
+## Changes for 3.1 ##
 
-* Updated psutil dependency to 1.2.1.
-* Windows sürümünü ve hizmet paketleri varsa, bildirim için bir komut (NVDA
-  + Shift +6) eklendi.
+* Resource Monitor officially supports Windows 8.1.
+* Çeviriler güncellendi.
+
+## 3.0 için değişiklikler ##
+
+* 1.2.1 için psutil bağımlılık güncellendi.
+* Announcement of current Windows version, CPU architecture and service pack
+  if any (NVDA+Shift+6).
 * Kısayol tuşları, NVDA 2013.3 sürümüyle birlikte değiştirilebilir.
-* Ability to copy individual resource information to clipboard by pressing
-  resource commands two times.
+* Kaynak bilgisi öğrenme komutlarına iki kez basıldığında bilgi panoya
+  kopyalanıyor
 
 ## 2.4 için değişiklikler ##
 
@@ -53,8 +63,8 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 ## 2.2 için değişiklikler ##
 
-* Aşağıdaki çeviriler eklendi: Arabic, Aragonese, Croatian, Dutch, Finnish,
-  French, Galatian, German, Hungarian, Italian, Japanese, Korean, Nepali,
+* Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
+  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
   Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
   and Turkish.
 
@@ -63,7 +73,7 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 * Updated psutil dependency to version 0.6.1.
 * Fixed long delay when getting information of drives.
 * Replaced %s-es into {friendlyVariableNames}.
-* kod temizliği
+* Code cleanup.
 
 ## 2.0 için değişiklikler ##
 
@@ -73,8 +83,6 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 * ilk sürüm
 
-[[!tag stable dev]]
+[[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
