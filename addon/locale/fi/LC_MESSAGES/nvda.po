@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-28 09:09+0200\n"
+"PO-Revision-Date: 2014-04-19 07:19+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -54,7 +54,7 @@ msgid ""
 "charging), and a warning if the battery is low or critical."
 msgstr ""
 "Ilmoittaa akun varauksen prosentteina, latauksen tilan, jäljellä olevan ajan "
-"(jos ei latauksessa) sekä antaa varoituksen, mikäli varaus on alhainen tai "
+"(jos ei latauksessa) sekä antaa varoituksen, jos varaus on alhainen tai "
 "kriittinen."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).

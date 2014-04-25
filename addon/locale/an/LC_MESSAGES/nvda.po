@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-10-28 10:05+0100\n"
+"PO-Revision-Date: 2014-04-20 13:00+0100\n"
 "Last-Translator: Jorge Pérez Pérez <jorgtum@gmail.com>\n"
 "Language-Team: SoftAragonés <softaragones@googlegroups.com>\n"
 "Language: an\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -25,7 +25,7 @@ msgstr "Monitor de recursos"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"
-msgstr ""
+msgstr "Resumen de Recursos copiau en o portafuellas"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -104,19 +104,19 @@ msgstr "Presienta lo espacio usau y lo total de memoria RAM fisica y virtual."
 #. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
-msgstr ""
+msgstr "64 bits"
 
 #. Translators: Presented under 32-bit Windows.
 msgid "32-bit"
-msgstr ""
+msgstr "32 bits"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
 msgid "Windows version: {winVersion} ({cpuBit})"
-msgstr ""
+msgstr "Versión ta Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
-msgstr ""
+msgstr "Versión ta Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
