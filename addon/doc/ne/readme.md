@@ -2,13 +2,13 @@
 
 * लेखकहरु: अलेक्स हल, जोसेफ लि, बिका गोजालिस्भीलि र अन्य नेत्रवाणी योगदान
   कर्ताहरू ।
-* Version: [3.1][1]
+* संस्करण: [३.१][1]
 
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
 
-Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
-earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
+महत्त्वपूर्ण: श्रोत अनुगामी ३.१ नेत्रवाणी २०१३.३ अघिका संस्करणमा चल्दैन ।
+यदी तपाइ यस्ता संस्करण चलाउनु हुन्छ भने श्रोत अनुगामी ३.० चलाउनु होला ।
 
 # द्रुतमार्ग #
 
@@ -40,7 +40,7 @@ earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
 
 ## ३.1 संस्करणमा गरिएका परिवर्तनहरू । ##
 
-* Resource Monitor officially supports Windows 8.1.
+* श्रोत अनुगामीले आधिकारीक रुपमा नै विन्डोज ८.१ लाइ समर्थन गर्छ ।
 * अनुवादलाई अद्यावधिक गरियो 
 
 ## ३.० संस्करणमा गरिएका परिवर्तनहरू । ##
