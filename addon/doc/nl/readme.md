@@ -1,13 +1,13 @@
 # Resource Monitor #
 
 * Auteurs: Alex Hall, Joseph Lee, beqa gozalishvili en anderen
-* Version: [3.1][1]
+* Versie: [3.1][1]
 
 Deze add-on geeft informatie over CPU- en geheugengebruik en andere
 statusinformatie.
 
-Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
-earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
+Belangrijk: Resource Monitor 3.1 is niet compatibel met NVDA 2013.3 of
+ouder. Als u 2013.3 of ouder gebruikt, gebruik dan aub Resource Monitor 3.0.
 
 # Sneltoetsen #
 
@@ -40,7 +40,7 @@ die systeem informatie geven. Let ook op het volgende:
 
 ## Veranderingen voor 3.1 ##
 
-* Resource Monitor officially supports Windows 8.1.
+* Resource Monitor ondersteunt officieel Windows 8.1.
 * Vertalingen bijgewerkt.
 
 ## Veranderingen voor 3.0 ##
