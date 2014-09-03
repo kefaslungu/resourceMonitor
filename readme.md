@@ -22,8 +22,13 @@ If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
 
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
-* CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper Threading where number of CPU's is twice the number of CPU cores.
+* CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * There might be a short delay when getting processor usage information.
+
+## Changes for 3.2-dev ##
+
+* Added support for Windows Threshhold.
+* Updated translations.
 
 ## Changes for 3.1 ##
 
