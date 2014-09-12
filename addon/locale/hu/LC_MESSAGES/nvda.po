@@ -32,11 +32,13 @@ msgid "This computer does not have a battery connected."
 msgstr "Ehhez a számítógéphez jelenleg nincsen akkumulátor csatlakoztatva."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, a telep töltése folyamatban van."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% van hátra ({time})."
 
@@ -57,6 +59,7 @@ msgstr ""
 "(ha nem tölt), és figyelmeztet ha alacsony az akkumulátor töltöttsége."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -71,10 +74,12 @@ msgid ""
 msgstr "Bemondja minden meghajtó foglalt és teljes méretét, típusát."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "{coreNumber}. mag: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Átlagos processzor használat {avgLoad}%, {cores}."
 
@@ -84,11 +89,13 @@ msgstr ""
 "Bemondja a processzor átlagos terheltségét, majd külön az egyes magokét."
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Fizikai: {physicalUsed} / {physicalTotal} ({physicalPercent}% foglalt). "
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtuális: {virtualUsed} / {virtualTotal} ({virtualPercent}% foglalt)."
 
@@ -110,10 +117,12 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Windows verzió: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Windows verzió: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -122,6 +131,7 @@ msgid "Announces the version of Windows you are using."
 msgstr "Bemondja a használatban lévő Windows verzióját"
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr ""
 "{ramPercent}% memória foglalt, {cpuPercent}% processzor van használatban. "
