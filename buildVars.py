@@ -1,26 +1,33 @@
+# -*- coding: UTF-8 -*-
+
 # Build customizations
-# Change this file instead of sconstruct, whenever possible.
+# Change this file instead of sconstruct or manifest files, whenever possible.
 
 # Full getext (please don't change)
 _ = lambda x : x
 
 # Add-on information variables
 addon_info = {
-# add-on Name
-	"addon-name" : "resourceMonitor",
+	# for previously unpublished addons, please follow the community guidelines at:
+	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
+	# add-on Name, internal for nvda
+	"addon_name" : "resourceMonitor",
+	# Add-on summary, usually the user visible name of the addon.
+	# Translators: Summary for this add-on to be shown on installation and add-on information.
+	"addon_summary" : _("Resource Monitor"),
 	# Add-on description
-	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
-	"addon-summary" : _("Resource Monitor"),
-	# Add-on description
-	# Translators: Long description to be shown for this add-on on installation and add-on information
-	"addon-description" : _("A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."),
+	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+	"addon_description" : _("A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."),
 	# version
-	"addon-version" : "3.2-dev",
+	"addon_version" : "3.2-dev",
 	# Author(s)
-	"addon-author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors",
+	"addon_author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
-	"addon-url" : "http://addons.nvda-project.org/"
+	"addon_url" : "http://addons.nvda-project.org/",
+	# Documentation file name
+	"addon_docFileName" : "readme.html",
 }
+
 
 import os.path
 
