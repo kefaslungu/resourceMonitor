@@ -155,7 +155,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
 			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
-			elif winMinor == 4: winverName = "Windows Threshhold" if server == 1 else "Windows Server Threshhold" # Windows Threshhold.
+			elif winMinor == 4: winverName = "Windows 10" if server == 1 else "Windows Server 10" # Windows Threshold.
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
 		# Translators: Presented under 32-bit Windows.

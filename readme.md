@@ -1,7 +1,7 @@
 [[!meta title="Resource Monitor"]]
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA contributors
-* Version: [3.1][1]
+* Download [stable version][1]
 
 This plugin gives information about CPU load, memory usage and other resource usage information.
 
@@ -27,7 +27,8 @@ This add-on does not replace task manager and other system information programs 
 
 ## Changes for 3.2-dev ##
 
-* Added support for Windows Threshhold.
+* Added support for Windows Threshhold (known as Windows 10).
+* You can use Add-ons Manager to access add-on help.
 * Updated translations.
 
 ## Changes for 3.1 ##
