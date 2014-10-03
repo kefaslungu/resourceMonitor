@@ -2,6 +2,7 @@
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
 #Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run).
 
+import _winreg
 import globalPluginHandler, ui, api, scriptHandler
 import sys
 import os
@@ -155,12 +156,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
 			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3:
-				import _winreg
 				# Python issue 19143: in Windows 8.1, sys module reports NT 6.2 when in fact the version is 6.3.
 				# A suggestion posted there (quoting a Stack Overflow post) is to ask the registry to find out the real version value.
 				win10testKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\Microsoft\Windows NT\CurrentVersion")
 				winValue, type = _winreg.QueryValueEx(win10testKey, "CurrentVersion")
-				buildNum, type2 = _winreg.QueryValueEx(win10testKey, "BuildNumber")
+				buildNum, type2 = _winreg.QueryValueEx(win10testKey, "CurrentBuildNumber")
 				_winreg.CloseKey(win10testKey)
 				if winValue == "6.4": winverName = "Windows 10 Tech Preview" if server == 1 else "Windows Server 10" # Windows Threshold.
 				else:  winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
