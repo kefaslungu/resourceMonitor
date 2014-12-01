@@ -164,6 +164,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				_winreg.CloseKey(win10testKey)
 				if winValue == "6.4": winverName = "Windows 10 Tech Preview" if server == 1 else "Windows Server 10" # Windows Threshold.
 				else:  winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
+		elif winMajor == 10: # Windows 10/Server 2015 (10.0).
+			if winMinor == 0: winverName = "Windows 10 Consumer Preview" if server == 1 else "Windows Server 10 Preview"
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
 		# Translators: Presented under 32-bit Windows.
