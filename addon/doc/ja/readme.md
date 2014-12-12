@@ -1,7 +1,8 @@
 # Resource Monitor #
 
 * 作者: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA contributors
-* Version: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 このアドオンはCPU負荷、メモリ使用量などリソースの使用状態を通知します。
 
@@ -72,3 +73,5 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

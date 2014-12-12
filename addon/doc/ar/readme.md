@@ -1,7 +1,8 @@
 # Resource Monitor #
 
 * مطورو الإضافة: Alex Hall, Joseph Lee, beqa gozalishvili وآخرون
-* الإصدار: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 تعطي هذه الإضافة البرمجية معلومات للمستخدم عنحمولة وحدة المعالجة المركزية,
 استخدام الذاكرة, والمزيد من المعلومات الأخرى حول خصائص النظام.
@@ -87,3 +88,5 @@ Monitor 3.0.
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

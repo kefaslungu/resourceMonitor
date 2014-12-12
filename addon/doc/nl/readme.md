@@ -1,7 +1,8 @@
 # Resource Monitor #
 
 * Auteurs: Alex Hall, Joseph Lee, beqa gozalishvili en anderen
-* Versie: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 Deze add-on geeft informatie over CPU- en geheugengebruik en andere
 statusinformatie.
@@ -87,3 +88,5 @@ die systeem informatie geven. Let ook op het volgende:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

@@ -2,7 +2,8 @@
 
 * लेखकहरु: अलेक्स हल, जोसेफ लि, बिका गोजालिस्भीलि र अन्य नेत्रवाणी योगदान
   कर्ताहरू ।
-* संस्करण: [३.१][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
@@ -87,3 +88,5 @@ resource usage information.
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

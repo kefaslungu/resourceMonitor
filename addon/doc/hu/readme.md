@@ -2,7 +2,8 @@
 
 * Fejlesztők: Alex Hall , Joseph Lee, beqa gozalishvili és további NVDA
   közreműködők
-* Verzió: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 A kiegészítő hasznos információkat ad a memória, processzor, háttértár, és
 az akkumulátor aktuális állapotáról.
@@ -90,3 +91,5 @@ Windows-os programot. Fontos megjegyezni a következőket:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

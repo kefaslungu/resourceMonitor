@@ -2,7 +2,8 @@
 
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili e outros colaboradores
   do NVDA
-* Versão: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 Este plug-in fornece informações acerca de carga da CPU, uso de memória e
 outras informações sobre uso de recursos.
@@ -90,3 +91,5 @@ de informações de sistema para Windows. Note também o seguinte:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
