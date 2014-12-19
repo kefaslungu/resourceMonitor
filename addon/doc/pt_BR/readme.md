@@ -2,8 +2,8 @@
 
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili e outros colaboradores
   do NVDA
-* Download [stable version][1]
-* Download [development version][2]
+* Baixe a [versão estável][1]
+* Baixe a [versão em desenvolvimento][2]
 
 Este plug-in fornece informações acerca de carga da CPU, uso de memória e
 outras informações sobre uso de recursos.
