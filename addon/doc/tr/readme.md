@@ -2,7 +2,8 @@
 
 * Geliştiriciler: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA
   contributors
-* Version: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
@@ -86,3 +87,5 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

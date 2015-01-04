@@ -1,7 +1,8 @@
 # Resource Monitor #
 
 * Авторы: Alex Hall, Joseph Lee, beqa gozalishvili и другие участники NVDA
-* Версия: [3.1][1]
+* Загрузить [стабильную версию][1]
+* Загрузить [разрабатываемую версию][2]
 
 Этот плагин предоставляет информацию о загрузке процессора, используемой
 памяти и  других используемых ресурсах.
@@ -90,3 +91,5 @@
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

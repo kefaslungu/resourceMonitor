@@ -2,7 +2,8 @@
 
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili et d'autres
   contributeurs de NVDA
-* Version : [3.1][1]
+* Télécharger [version stable][1]
+* Télécharger [version de développement][2]
 
 Ce module complémentaire donne la charge du CPU, l'utilisation de la mémoire
 et autres informations d'utilisation de ressource.
@@ -92,3 +93,5 @@ suit :
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

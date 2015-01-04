@@ -1,7 +1,8 @@
 # Resource Monitor #
 
 * 저자: Alex Hall, Joseph Lee (이성원), beqa gozalishvili 외 공헌자들.
-* Version: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
@@ -85,3 +86,5 @@ programs for Windows. Also note the following:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

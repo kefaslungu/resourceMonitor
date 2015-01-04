@@ -1,7 +1,8 @@
 # Resurssienvalvonta #
 
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili sekä muut NVDA:n tekijät
-* Versio: [3.1][1]
+* Lataa [vakaa versio][1]
+* Lataa [kehitysversio][2]
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta, muistin käytöstä sekä
 muista resursseista.
@@ -41,7 +42,7 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 
 ## Muutokset versiossa 3.1 ##
 
-* Resurssienvalvonta tukee virallisesti Windows 8.1:stä.
+* Resurssienvalvonta tukee virallisesti Windows 8.1:tä.
 * Käännöksiä päivitetty.
 
 ## Muutokset versiossa 3.0 ##
@@ -88,3 +89,5 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

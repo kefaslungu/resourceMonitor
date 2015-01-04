@@ -1,7 +1,8 @@
 # Monitor zasobów / Resource Monitor #
 
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili i inni
-* Wersja: [3.1][1]
+* Download [stable version][1]
+* Download [development version][2]
 
 wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM,
 wykorzystaniu innych zasobów.
@@ -89,3 +90,5 @@ następujące kwestie:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

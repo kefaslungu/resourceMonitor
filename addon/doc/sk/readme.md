@@ -1,7 +1,8 @@
 # Resource Monitor #
 
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili a ďalší
-* Verzia: [3.1][1]Version: [3.1][1]
+* Stiahnuť [stabilnú verziu][1]
+* Stiahnuť [vývojovú verziu][2]
 
 Tento doplnok poskytuje informácie o zaťažení procesora, stave pamäte a o
 iných zdrojoch.
@@ -84,3 +85,5 @@ informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 [[!tag stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev

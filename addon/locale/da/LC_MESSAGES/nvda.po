@@ -5,58 +5,59 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 2.1\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-26 20:06+0200\n"
-"Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: tr\n"
+"Project-Id-Version: resourceMonitor 2.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-07-07 08:56+0200\n"
+"PO-Revision-Date: 2014-12-20 15:33+0100\n"
+"Last-Translator: Bue Vester-Andersen <bue@vester-andersen.dk>\n"
+"Language-Team: Danish <LL@li.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
 #. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Kaynak İzleme"
+msgstr "Resource Monitor"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"
-msgstr "Kaynak bilgisi panoya kopyalandı"
+msgstr "Ressourceoversigt kopieret til udklipsholder"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "Bu bilgisayara pil takılı değil."
+msgstr "Intet batteri sluttet til denne computer."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "%{percent}, pil şarj oluyor."
+msgstr "{percent}%, batteri oplader."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "%{percent} kalan pil, yaklaşık {time}."
+msgstr "{percent}% resterende batteri, omkring {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr " Uyarı: düşük pil."
+msgstr "Advarsel: Batteriniveau lavt."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
-msgstr " Uyarı: pil kritik seviyede."
+msgstr "Advarsen: Batteriniveau meget lavt."
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"pil yüzdesini, şarj durumunu, kalan zamanı  (şarja takılı değilse ), ve "
-"düşük ya da kritik pil seviyesini söyler."
+"Fortæller batteriets opladestatus i procent, om batteriet oplader, "
+"resterende tid (hvis batteriet ikke oplader,samt giver en advarsel, hvis "
+"batteriniveauet er lavt eller meget lavt."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
@@ -64,47 +65,45 @@ msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
 msgstr ""
-"{driveName} ({driveType} sürücü): {usedSpace} bölü {totalSpace} kullanılıyor "
-"%{percent}."
+"{driveName} ({driveType}-drev): {usedSpace} af {totalSpace} brugt "
+"{percent}%. "
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"Bilgisayara takılı sabit ve çıkarılabilir disklerle ilgili kullanım "
-"bilgisini verir."
+"Fortæller om brugt og samlet plads på faste og flytbare drev på denne "
+"computer."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
-msgstr "çekirdek {coreNumber}: %{corePercent}. "
+msgstr "Kerne {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
-msgstr "Ortalama işlemci yükü  %{avgLoad}, {cores}"
+msgstr "Gennemsnitlig CPU-belastning {avgLoad}%, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "Ortalama işlemci yükü ve çekirdek kullanımı bilgisini verir."
+msgstr ""
+"Fortæller den gennemsnitlige processorbelastning og belastning af hver kerne."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Fiziksel: {physicalUsed} bölü {physicalTotal} kullanılıyor "
-"(%{physicalPercent})."
+msgstr "Fysisk: {physicalUsed} af {physicalTotal} brugt ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"Sanal: {virtualUsed} bölü {virtualTotal} kullanılıyor (%{virtualPercent})."
+msgstr "Virtuel: {virtualUsed} af {virtualTotal} brugt ({virtualPercent}%)."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Kullanılan fiziksel ve sanal ram bilgisini verir."
+msgstr "Giver brugt og samlet plads i både fysisk og virtuel hukommelse."
 
 #. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 #. Vista.
@@ -122,46 +121,48 @@ msgstr "32-bit"
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
-msgstr "Windows versiyonu: {winVersion} ({cpuBit})"
+msgstr "Windows version: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "Windows versiyonu: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
-msgstr "Kullandığınız Windows sürümünü söyler."
+msgstr "Fortæller, hvilken version af Windows du bruger."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
-msgstr "{ramPercent}% RAM kullanılıyor, CPU  {cpuPercent}%. "
+msgstr "{ramPercent}% hukommelse brugt, CPU {cpuPercent}%. "
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
-msgstr " Uyarı: pil kritik seviyede."
+msgstr "Advarsel: Batteriniveau meget lavt."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
-msgstr "Kullanılan ram, CPU yükü, ve mevcutsa pil bilgisini verir ."
+msgstr ""
+"Fortæller om hukommelse i brug, processorbelastning og batteriinformation "
+"(hvis den er tilgængelig)."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr "saat"
+msgstr " time, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr "saat"
+msgstr " timer, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr "dakika"
+msgstr " minut"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr "dakika"
+msgstr " minutter"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
@@ -169,15 +170,5 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"CPU yükü, hafıza kullanımı, pil ve disk kullanım durumunu takip etmek ve "
-"daha fazlası için pratik bir araç."
-
-#~ msgid "Windows version: "
-#~ msgstr "Windows versiyonu: "
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr ""
-#~ "Resource Monitor - sistem bilgisine kolay yoldan erişilmesini sağlar."
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr "Sistem bilgisini almanıza yarayan pratik bir araç."
+"En smart lille ressource-monitor, som fortææler status for "
+"processorbelastning, hukommelsesforbrug, batteri, diskforbrug m.m."
