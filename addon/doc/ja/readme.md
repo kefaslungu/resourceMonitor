@@ -59,7 +59,6 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 
 * Updated psutil dependency to version 0.6.1.
 * Fixed long delay when getting information of drives.
-* Replaced %s-es into {friendlyVariableNames}.
 * Code cleanup.
 
 ## Changes for 2.0 ##

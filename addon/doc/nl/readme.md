@@ -74,7 +74,6 @@ die systeem informatie geven. Let ook op het volgende:
 
 * Psutil afhankelijkheid bijgewerkt naar versie 0.6.1
 * Vertraging bij het opvragen van schijf-informatie opgelost
-* %s vervangen door variabele namen
 * Code opgeruimd.
 
 ## Veranderingen voor 2.0 ##

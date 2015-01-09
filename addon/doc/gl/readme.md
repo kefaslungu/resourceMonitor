@@ -77,7 +77,6 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 
 * Actualizada dependencia sutil á versión 0.6.1.
 * Correxido retraso grande ó opter información das unidades.
-* Sustituido %s-es en {friendlyVariableNames}.
 * Limpeza do Código.
 
 ## Cambios para 2.0 ##

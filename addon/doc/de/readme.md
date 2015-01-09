@@ -76,7 +76,6 @@ Systeminformationsprogramme nicht. Bitte beachten Sie folgendes:
 * psutil auf Version 0.6.1 aktualisiert.
 * Größere Zeitverzögerung beim Erhalt von Informationen von Datenträgern
   beseitigt.
-* %s in {freundlicheVariableNamen} übersetzt.
 * Der Quellcode wurde bereinigt.
 
 ## Änderungen bis 2.0 ##

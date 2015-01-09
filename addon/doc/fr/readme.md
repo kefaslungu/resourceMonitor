@@ -79,7 +79,6 @@ suit :
 
 * Mise à jour de la dépendance psutil  vers la version 0.6.1.
 * Correction du long délai lors de l'optention des informations des disques
-* Les %s ont été remplacés par des noms plus claires.
 * Nettoyage du code.
 
 ## Changements pour la version 2.0 ##
