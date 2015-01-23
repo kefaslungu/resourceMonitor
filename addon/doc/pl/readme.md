@@ -1,8 +1,8 @@
 # Monitor zasobów / Resource Monitor #
 
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili i inni
-* Download [stable version][1]
-* Download [development version][2]
+* Pobierz [wersja stabilna][1]
+* Pobierz [wersja rozwojowa][2]
 
 wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM,
 wykorzystaniu innych zasobów.
