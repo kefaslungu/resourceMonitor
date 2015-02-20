@@ -2,8 +2,8 @@
 
 * Autoren: Alex Hall, Joseph Lee, beqa gozalishvili und andere
   NVDA-Entwickler
-* Download [stable version][1]
-* Download [development version][2]
+* [stabile version][1] herunterladen
+* [Testversion][2] herunterladen
 
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
@@ -22,8 +22,9 @@ bitte  Resourcenmonitor 3.0.
   virtuellen und physikalischen Arbeitsspeichers aus.
 * NVDA+Umschalt+3 gibt den verwendeten und verfügbaren Speicherplatz aller
   angeschlossenen Datenträger am Computer aus.
-* NVDA+Shift+4 Presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
+* NVDA+Umschalt+4 gibt den Ladezustand des Akkus und die verbleibende Zeit
+  (sofern das Netzteil nicht angeschlossen ist), und eine Warnung bei
+  geringem oder kritischem Ladezustand aus.
 * NVDA+Shift+6 Gibt die Windows-Version, die verwendete
   Prozessor-Architektur  sowie verwendete Service Packs aus
 
