@@ -144,7 +144,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
-		import _winreg # Just for this method, used to get bit information and to deal with Win8.x.
 		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") == "AMD64", ""
 		# Determine Windows version.
@@ -155,26 +154,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if winMinor == 0: winverName = "Windows Vista" if server == 1 else "Windows Server 2008" # Vista.
 			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
 			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
-			elif winMinor == 3:
-				# Python issue 19143: in Windows 8.1, sys module reports NT 6.2 when in fact the version is 6.3.
-				# A suggestion posted there (quoting a Stack Overflow post) is to ask the registry to find out the real version value.
-				win10testKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, "SOFTWARE\Microsoft\Windows NT\CurrentVersion")
-				winValue, type = _winreg.QueryValueEx(win10testKey, "CurrentVersion")
-				buildNum, type2 = _winreg.QueryValueEx(win10testKey, "CurrentBuildNumber")
-				_winreg.CloseKey(win10testKey)
-				if winValue == "6.4": winverName = "Windows 10 Tech Preview" if server == 1 else "Windows Server 10" # Windows Threshold.
-				else:  winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
+			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
 		elif winMajor == 10: # Windows 10/Server 2015 (10.0).
-			if winMinor == 0: winverName = "Windows 10 Consumer Preview" if server == 1 else "Windows Server 10 Preview"
+			if winMinor == 0:
+				# Remove this once WinTen is officially released unless MS decides to update build numbers during automatic updates.
+				winverName = "Windows 10 Technical Preview" if server == 1 else "Windows Server 10 Preview"
+				buildNum = sys.getwindowsversion().build
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
 		# Translators: Presented under 32-bit Windows.
 		else: x64 = _("32-bit")
 		# Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
 		if not sp: info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion = winverName, cpuBit = x64)
-		if winValue == "6.4": info = info + " build {build}".format(build = buildNum)
 		# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 		else: info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion = winverName, servicePackLevel = sp, cpuBit = x64)
+		if winMajor, winMinor == 10, 0: info = info + " build {build}".format(build = buildNum)
 		return info
 
 	def script_announceWinVer(self, gesture):
