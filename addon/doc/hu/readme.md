@@ -77,7 +77,6 @@ Windows-os programot. Fontos megjegyezni a következőket:
 * A psutil függőség frissítése a 0.6.1 verzióra.
 * A hosszú várakozás kiküszöbölése a meghajtókról való információk
   beszerzése közben.
-* A %s kicserélése {barátságosváltozónevekre}
 * Kódtisztítás.
 
 ## A 2.0 verzió változásai ##

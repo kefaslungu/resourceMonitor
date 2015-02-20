@@ -73,7 +73,6 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 * Updated psutil dependency to version 0.6.1.
 * Fixed long delay when getting information of drives.
-* Replaced %s-es into {friendlyVariableNames}.
 * Code cleanup.
 
 ## 2.0 için değişiklikler ##

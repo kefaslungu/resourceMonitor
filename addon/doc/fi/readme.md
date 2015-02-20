@@ -75,7 +75,6 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 
 * Päivitetty psutil-riippuvuus versioksi 0.6.1.
 * Korjattu pitkä viive asemien tietoja haettaessa.
-* Korvattu %s:t {helpoillaMuuttujaNimillä}.
 * Koodia siivottu.
 
 ## Muutokset versiossa 2.0 ##

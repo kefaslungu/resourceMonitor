@@ -78,7 +78,6 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 
 * Actualizada dependencia sutíl a la versión 0.6.1.
 * Corregidos los grandes retrasos al optenerse información de unidades.
-* Substituido %s-es en {friendlyVariableNames}.
 * Limpieza de código.
 
 ## Cambios para 2.0 ##

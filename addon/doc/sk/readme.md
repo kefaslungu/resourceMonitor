@@ -71,7 +71,6 @@ informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 
 * Aktualizovaná knižnica psutil na verziu 0.6.1.
 * Skrátený čas na zistenie kapacity a miesta na diskoch.
-* Zmenená premenná %s na premenné so zmysluplnými názvami.
 * drobné úpravy v kóde.
 
 ## Zmeny vo verzii 2.0 ##

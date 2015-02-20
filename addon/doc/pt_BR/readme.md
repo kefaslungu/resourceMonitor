@@ -77,7 +77,6 @@ de informações de sistema para Windows. Note também o seguinte:
 
 * Atualizada dependência psutil para versão 0.6.1.
 * Corrigida lentidão ao obter informações sobre unidades de disco.
-* Substituídos %ss por {nomesAmigáveisDeVariáveis}.
 * Enxugamento de código.
 
 ## Mudanças na 2.0 ##

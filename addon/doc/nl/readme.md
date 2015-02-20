@@ -1,8 +1,8 @@
 # Resource Monitor #
 
 * Auteurs: Alex Hall, Joseph Lee, beqa gozalishvili en anderen
-* Download [stable version][1]
-* Download [development version][2]
+* Download [stabiele versie][1]
+* Download [ontwikkelversie][2]
 
 Deze add-on geeft informatie over CPU- en geheugengebruik en andere
 statusinformatie.
@@ -39,12 +39,12 @@ die systeem informatie geven. Let ook op het volgende:
 * Er kan een korte vertraging zijn bij het verkrijgen van informatie over
   het processor-gebruik.
 
-## Veranderingen voor 3.1 ##
+## Veranderingen in 3.1 ##
 
 * Resource Monitor ondersteunt officieel Windows 8.1.
 * Vertalingen bijgewerkt.
 
-## Veranderingen voor 3.0 ##
+## Veranderingen in 3.0 ##
 
 * Psutil afhankelijkheid bijgewerkt naar versie 1.2.1
 * NVDA+Shift+6 kondigt de huidige Windows-versie, CPU-architectuur en
@@ -54,34 +54,33 @@ die systeem informatie geven. Let ook op het volgende:
 * Mogelijkheid om individuele informatie naar het klembord te kopiëren door
   commando's tweemaal in te drukken.
 
-## Veranderingen voor 2.4 ##
+## Veranderingen in 2.4 ##
 
 * Nieuwe vertalingen: Chinees (vereenvoudigd), Oekraïens.
 * Vertalingen bijgewerkt.
 
-## Veranderingen voor 2.3 ##
+## Veranderingen in 2.3 ##
 
 * Bulgaarse vertaling toegevoegd.
 
-## Veranderingen voor 2.2 ##
+## Veranderingen in 2.2 ##
 
 * De volgende vertalingen toegevoegd: Arabisch, Aragonees, Croatisch,
   Nederlands, Fins, Frans, Galacisch, Duits, Hongaars, Italiaans, Japans,
   Koreaans, Nepali, Pools, Portugees (Brazilië), Russisch, Slowaaks,
   Sloveens, Spaans, Tamil en Turks
 
-## Veranderingen voor 2.1 ##
+## Veranderingen in 2.1 ##
 
 * Psutil afhankelijkheid bijgewerkt naar versie 0.6.1
 * Vertraging bij het opvragen van schijf-informatie opgelost
-* %s vervangen door variabele namen
 * Code opgeruimd.
 
-## Veranderingen voor 2.0 ##
+## Veranderingen in 2.0 ##
 
 * Ondersteuning voor vertalingen en commentaar voor vertalers toegevoegd
 
-## Veranderingen voor 1.0 ##
+## Veranderingen in 1.0 ##
 
 * Eerste versie
 

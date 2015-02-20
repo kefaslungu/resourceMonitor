@@ -1,8 +1,8 @@
 # Monitor zasobów / Resource Monitor #
 
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili i inni
-* Download [stable version][1]
-* Download [development version][2]
+* Pobierz [wersja stabilna][1]
+* Pobierz [wersja rozwojowa][2]
 
 wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM,
 wykorzystaniu innych zasobów.
@@ -76,7 +76,6 @@ następujące kwestie:
 
 * zaktualizowano psutil do wersji 0.6.1.
 * poprawiono opóźnienie przy uzyskiwaniu informacji o dyskach
-* bardziej zrozumiałe nazwy zmiennych
 * porządki w kodzie.
 
 ## zmiany dla wersji 2.0 ##
