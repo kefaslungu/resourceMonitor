@@ -5,8 +5,8 @@
 * [stabile version][1] herunterladen
 * [Testversion][2] herunterladen
 
-This plugin gives information about CPU load, memory usage and other
-resource usage information.
+Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
+Arbeitsspeicher sowie andere nützliche Resourcen.
 
 Wichtig: Resourcenmonitor 3.1 ist nicht zu NVDA 2013.3 und älter
 kompatibel. Fals Sie die Version 2013.3 oder älter verwenden, verwenden Sie
