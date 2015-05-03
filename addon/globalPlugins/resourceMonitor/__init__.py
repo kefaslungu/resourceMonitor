@@ -127,7 +127,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def getRamInfo(self):
 		ram=psutil.phymem_usage()
 		# Translators: Shows RAM (physical memory) usage.
-		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=toBiggestBytes(tryTrunk(ram[1])), physicalTotal=toBiggestBytes(tryTrunk(ram[0])), physicalPercent=tryTrunk(ram[3]))
+		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=toBiggestBytes(tryTrunk(ram[3])), physicalTotal=toBiggestBytes(tryTrunk(ram[0])), physicalPercent=tryTrunk(ram[2]))
 		virtualRam=psutil.virtmem_usage()
 		# Translators: Shows virtual memory usage.
 		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=toBiggestBytes(tryTrunk(virtualRam[1])), virtualTotal=toBiggestBytes(tryTrunk(virtualRam[0])), virtualPercent=tryTrunk(virtualRam[3]))
@@ -158,7 +158,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif winMajor == 10: # Windows 10/Server 2015 (10.0).
 			if winMinor == 0:
 				# Remove this once WinTen is officially released unless MS decides to update build numbers during automatic updates.
-				winverName = "Windows 10 Technical Preview" if server == 1 else "Windows Server 10 Preview"
+				winverName = "Windows 10 Preview" if server == 1 else "Windows Server 10 Preview"
 				buildNum = sys.getwindowsversion().build
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
@@ -183,7 +183,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceResourceSummary(self, gesture):
 		cpuLoad=psutil.cpu_percent()
 		ram=psutil.phymem_usage()
-		freeRam=ram[3]
+		freeRam=ram[2]
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 		info=(_("{ramPercent}% RAM used, CPU at {cpuPercent}%. ").format(ramPercent=tryTrunk(freeRam), cpuPercent=tryTrunk(cpuLoad)))
 		battery.getInfo()

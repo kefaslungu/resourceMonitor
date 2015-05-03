@@ -27,6 +27,8 @@ This add-on does not replace task manager and other system information programs 
 
 ## Changes for 4.0 ##
 
+* Updated psutil dependency to 2.2.1.
+* Vastly improved performance when obtaining information on CPU load.
 * Added support for recognition of Windows 10.
 * In Windows 10, the build number of Windows will also be announced.
 * You can use Add-ons Manager to access add-on help.
