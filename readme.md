@@ -25,11 +25,11 @@ This add-on does not replace task manager and other system information programs 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * There might be a short delay when getting processor usage information.
 
-## Changes for 3.2-dev ##
+## Changes for 4.0 ##
 
-* Added support for Windows Threshhold (known as Windows 10).
+* Added support for recognition of Windows 10.
+* In Windows 10, the build number of Windows will also be announced.
 * You can use Add-ons Manager to access add-on help.
-* Updated translations.
 
 ## Changes for 3.1 ##
 
