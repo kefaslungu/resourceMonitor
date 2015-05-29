@@ -2,8 +2,8 @@
 
 * Fejlesztők: Alex Hall , Joseph Lee, beqa gozalishvili és további NVDA
   közreműködők
-* Download [stable version][1]
-* Download [development version][2]
+* Letöltés [Stabil verzió][1]
+* Letöltés [Fejlesztői verzió] [2]
 
 A kiegészítő hasznos információkat ad a memória, processzor, háttértár, és
 az akkumulátor aktuális állapotáról.
