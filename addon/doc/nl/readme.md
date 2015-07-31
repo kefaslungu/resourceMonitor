@@ -2,7 +2,6 @@
 
 * Auteurs: Alex Hall, Joseph Lee, beqa gozalishvili en anderen
 * Download [stabiele versie][1]
-* Download [ontwikkelversie][2]
 
 Deze add-on geeft informatie over CPU- en geheugengebruik en andere
 statusinformatie.
@@ -33,11 +32,19 @@ wijzigen.
 Deze add-on is geen vervanger van taakbeheer of andere Windows-programma's
 die systeem informatie geven. Let ook op het volgende:
 
-* CPU-gebruik wordt gegeven voor logische processoren, niet voor fysieke
-  kernen. Dit merkt u bij processors die Hyper Threading gebruiken waarbij
-  het aantal CPU's het dubbele is het aantal CPU-kernen.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.
 * Er kan een korte vertraging zijn bij het verkrijgen van informatie over
   het processor-gebruik.
+
+## Changes for 4.0 ##
+
+* Updated psutil dependency to 2.2.1.
+* Vastly improved performance when obtaining information on CPU load.
+* Added support for recognition of Windows 10.
+* In Windows 10, the build number of Windows will also be announced.
+* You can use Add-ons Manager to access add-on help.
 
 ## Veranderingen in 3.1 ##
 
@@ -84,8 +91,5 @@ die systeem informatie geven. Let ook op het volgende:
 
 * Eerste versie
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

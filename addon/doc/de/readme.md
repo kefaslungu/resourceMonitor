@@ -3,7 +3,6 @@
 * Autoren: Alex Hall, Joseph Lee, beqa gozalishvili und andere
   NVDA-Entwickler
 * [stabile version][1] herunterladen
-* [Testversion][2] herunterladen
 
 Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
 Arbeitsspeicher sowie andere nützliche Resourcen.
@@ -36,10 +35,22 @@ Tastenkürzel ändern.
 Diese Erweiterung ersetzt den Task-Manager von Windows sowie andere
 Systeminformationsprogramme nicht. Bitte beachten Sie folgendes:
 
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper Threading where number of CPU's
-  is twice the number of CPU cores.
-* There might be a short delay when getting processor usage information.
+* Die Prozessor-Auslastung wird für logische Prozessoren, jedoch nicht für
+  physische Kerne ausgegeben. Dies ist bei Prozessoren bemerkbar, welche
+  Hyper Threading verwenden. Bei diesen Prozessoren ist die Anzahl der
+  Prozessoren das doppelte der Prozessorkerne.
+* Möglicherweise gibt es eine kurze Verzögerung, während die
+  Prozessor-Auslastung ermittelt wird.
+
+## Änderungen bis 4.0 ##
+
+* psutil-Abhängigkeit auf 2.2.1 aktualisiert.
+* Erheblich verbesserte Leistung beim Abrufen von Informationen über die
+  CPU-Auslastung.
+* Unterstützung für die Erkennung von Windows 10 hinzugefügt.
+* In Windows 10 wird auch die Build-Nummer von Windows angesagt.
+* Sie können den Add-ons-Manager verwenden, um auf die Hilfe zur Erweiterung
+  zuzugreifen.
 
 ## Änderungen bis 3.1 ##
 
@@ -52,8 +63,9 @@ Systeminformationsprogramme nicht. Bitte beachten Sie folgendes:
 * NVDA+Shift+6 Gibt die Windows-Version, die verwendete
   Prozessor-Architektur sowie verwendete Service Packs aus
 * Tastenkürzel der Erweiterung sind ab NVDA 2013.3 änderbar.
-* Ability to copy individual resource information to clipboard by pressing
-  resource commands two times.
+* Nun besteht die Möglichkeit, einzelne Ressourceninformationen durch
+  zweimaliges Drücken der Tastenkombination in die Zwischenablage zu
+  kopieren.
 
 ## Änderungen bis 2.4 ##
 
@@ -87,8 +99,5 @@ Systeminformationsprogramme nicht. Bitte beachten Sie folgendes:
 
 * Ehrstveröffentlichung
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

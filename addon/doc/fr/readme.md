@@ -3,7 +3,6 @@
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili et d'autres
   contributeurs de NVDA
 * Télécharger [version stable][1]
-* Télécharger [version de développement][2]
 
 Ce module complémentaire donne la charge du CPU, l'utilisation de la mémoire
 et autres informations d'utilisation de ressource.
@@ -43,6 +42,16 @@ suit :
   coeurs du processeur.
 * Il pourrait y avoir un léger retard lors de l'obtention des informations
   d'utilisation du processeur.
+
+## Changements pour la version 4.0 ##
+
+* Mise à jour de la dépendance psutil  vers la version 2.2.1.
+* Nettement améliorée les performances lors de l'obtention d'informations
+  sur la charge du CPU.
+* Ajout du support pour la reconnaissance de Windows 10.
+* Dans Windows 10, le numéro de build de Windows est également annoncé.
+* Vous pouvez utiliser le Gestionnaire de modules complémentaires pour
+  accéder à l'aide du module complémentaire.
 
 ## Changements pour la version 3.1 ##
 
@@ -89,8 +98,5 @@ suit :
 
 * Première version.
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

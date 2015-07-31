@@ -2,7 +2,6 @@
 
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* Lataa [kehitysversio][2]
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta, muistin käytöstä sekä
 muista resursseista.
@@ -39,6 +38,15 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   ytimille. Tällä on merkitystä Hyper Threading -teknologiaa käyttävissä
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Suoritinkäytön tietoja haettaessa saattaa olla pieni viive.
+
+## Muutokset versiossa 4.0 ##
+
+* Päivitetty psutil-riippuvuus versioksi 2.2.1.
+* Suorituskykyä paranneltu huomattavasti suorittimen kuormituksen tietoja
+  haettaessa.
+* Lisätty tuki Windows 10:n tunnistamiselle.
+* Windows 10:n versiota ilmoitettaessa kerrotaan myös koontiversio.
+* Ohje on käytettävissä Lisäosien hallinnasta.
 
 ## Muutokset versiossa 3.1 ##
 
@@ -85,8 +93,5 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 
 * Ensimmäinen versio
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

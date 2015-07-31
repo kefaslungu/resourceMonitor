@@ -3,7 +3,6 @@
 * लेखकहरु: अलेक्स हल, जोसेफ लि, बिका गोजालिस्भीलि र अन्य नेत्रवाणी योगदान
   कर्ताहरू ।
 * Download [stable version][1]
-* Download [development version][2]
 
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
@@ -34,10 +33,18 @@ resource usage information.
 यो उप-कर्मीले कार्य व्यबस्थापक र अरू विन्डोज सम्बन्धी सूचना कार्यक्रम
 प्रणालीलाई   विस्थापन गर्दैन । यो पनि ध्यान दिनु होला:
 
-* CPU को प्रयोग तार्किक प्रोसेसरलाई दिइएको छ, भौतिक कोरलाई होइन । यो बहु
-  मार्ग जहाँ CPU को सङ्ख्या  भन्दा CPU कोरको सङ्ख्या दोब्बर हुन्छ मा मननीय छ
-  ।.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.
 * प्रोसेसरको प्रयोग सम्बन्धी जानकारी दिदा केही ढिलो हुन सक्छ ।
+
+## Changes for 4.0 ##
+
+* Updated psutil dependency to 2.2.1.
+* Vastly improved performance when obtaining information on CPU load.
+* Added support for recognition of Windows 10.
+* In Windows 10, the build number of Windows will also be announced.
+* You can use Add-ons Manager to access add-on help.
 
 ## ३.1 संस्करणमा गरिएका परिवर्तनहरू । ##
 
@@ -84,8 +91,5 @@ resource usage information.
 
 * पहिलो सार्वजनिकीकरण
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

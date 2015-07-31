@@ -2,7 +2,6 @@
 
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili i inni
 * Pobierz [wersja stabilna][1]
-* Pobierz [wersja rozwojowa][2]
 
 wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM,
 wykorzystaniu innych zasobów.
@@ -36,11 +35,19 @@ Ten dodatek nie zastępuje Menedżera zadań i innych programów dla Windows,
 dostarczających informacji o systemie. Proszę również zwrócić uwagę na
 następujące kwestie:
 
-* Użycie CPU jest podawane dla procesorów logicznych, nie fizycznych
-  rdzeni. Jest to zauważalne dla procesorów, które używają technologii Hyper
-  Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.
 * Może pojawiać się krótkie opóźnienie przy pobieraniu informacji o użyciu
   procesora.
+
+## Changes for 4.0 ##
+
+* Updated psutil dependency to 2.2.1.
+* Vastly improved performance when obtaining information on CPU load.
+* Added support for recognition of Windows 10.
+* In Windows 10, the build number of Windows will also be announced.
+* You can use Add-ons Manager to access add-on help.
 
 ## zmiany dla wersji 3.1 ##
 
@@ -86,8 +93,5 @@ następujące kwestie:
 
 * wydanie wstępne
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

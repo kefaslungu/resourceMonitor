@@ -2,7 +2,6 @@
 
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili a ďalší
 * Stiahnuť [stabilnú verziu][1]
-* Stiahnuť [vývojovú verziu][2]
 
 Tento doplnok poskytuje informácie o zaťažení procesora, stave pamäte a o
 iných zdrojoch.
@@ -33,10 +32,18 @@ Ak používate verziu NVDA 2013.3 alebo novšiu, môžete si skratky upraviť.
 Tento doplnok nie je náhradou za správcu úloh a iné programy na zisťovanie
 informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 
-* Využitie procesora je vypočítané pre logické procesory, nie pre fyzické
-  jadrá. Toto je dôležité pri procesoroch, ktoré používajú viacero vláken,
-  kde počet procesorov je dvojnásobný, ako počet jadier.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.
 * Získanie informácie o stave procesora môže chvíľu trvať.
+
+## Changes for 4.0 ##
+
+* Updated psutil dependency to 2.2.1.
+* Vastly improved performance when obtaining information on CPU load.
+* Added support for recognition of Windows 10.
+* In Windows 10, the build number of Windows will also be announced.
+* You can use Add-ons Manager to access add-on help.
 
 ## Zmeny vo verzii 3.1 ##
 
@@ -81,8 +88,5 @@ informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 
 * prvé vydanie
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

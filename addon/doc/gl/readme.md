@@ -3,7 +3,6 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili e outros colaboradores
   do NVDA
 * Descargar [versión estable][1]
-* Descargar [versión de desenvolvemento][2]
 
 Este plugin danos información acerca da carga da CPU, do uso da memoria e
 outras informacións de uso dos recursos.
@@ -41,6 +40,15 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   onde o número de CPUs é o dobre do número de núcleos de CPU.
 * Podería haber un pequeno retraso ó obter información sobre o uso do
   procesador.
+
+## Cambios para 4.0 ##
+
+* Actualizado psutil dependency a 2.2.1.
+* Mellorado enormemente o rendemento ó obter información na carga da CPU.
+* Engadido soporte para o recoñecemento do Windows 10.
+* En Windows 10, tamén se anunciará o número de compilación do Windows.
+* Podes ir o Administrador de Complementos para acceder á axuda do
+  complemento.
 
 ## Cambios para 3.1 ##
 
@@ -87,8 +95,5 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 
 * Versión inicial
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

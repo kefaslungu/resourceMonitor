@@ -2,7 +2,6 @@
 
 * مطورو الإضافة: Alex Hall, Joseph Lee, beqa gozalishvili وآخرون
 * تحميل [الإصدار النهائي][1]
-* تحميل [الإصدار التجريبي][2]
 
 تعطي هذه الإضافة البرمجية معلومات للمستخدم عنحمولة وحدة المعالجة المركزية,
 استخدام الذاكرة, والمزيد من المعلومات الأخرى حول خصائص النظام.
@@ -34,11 +33,18 @@ Monitor 3.0.
 لا تحل هذه الإضافة محل خدمة مدير المهام بويندوز أو أية برامج أخرى تخبر
 المستخدم بمعلومات النظام. كما ينبغي عليك ملاحظة الآتي:
 
-* يتم الإعلان عن معدل الاستخدام لوحدات المعالجة المركزية للمعالجات المنطقية
-  وليست للنوى المادية. ويلاحظ هذا بشكل واضح للمعالجات التي تستخدم الخيط
-  التشاعبي (Hyper Threading) والتي فيها يكون رقم وحدة المعالجة المركزية هو
-  ضعف رقم نوى وحدة المعالجة المركزية. 
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.
 * ربما تلاحظ التأخر بعض الوقت عند الحصول على معلومات استخدام المعالج.
+
+## Changes for 4.0 ##
+
+* Updated psutil dependency to 2.2.1.
+* Vastly improved performance when obtaining information on CPU load.
+* Added support for recognition of Windows 10.
+* In Windows 10, the build number of Windows will also be announced.
+* You can use Add-ons Manager to access add-on help.
 
 ## مستجدات الإصدار 3.1 ##
 
@@ -84,8 +90,5 @@ Monitor 3.0.
 
 * إصدار أولي
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

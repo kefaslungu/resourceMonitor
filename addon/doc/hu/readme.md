@@ -3,7 +3,6 @@
 * Fejlesztők: Alex Hall , Joseph Lee, beqa gozalishvili és további NVDA
   közreműködők
 * Letöltés [Stabil verzió][1]
-* Letöltés [Fejlesztői verzió] [2]
 
 A kiegészítő hasznos információkat ad a memória, processzor, háttértár, és
 az akkumulátor aktuális állapotáról.
@@ -41,6 +40,15 @@ Windows-os programot. Fontos megjegyezni a következőket:
   Hyper Threading technológiát használják, ahol a processzorok száma
   kétszerese a magszámnak.
 * Egy kis időbe tellhet a processzor terheltségének lekkérése.
+
+## A 4.0 verzió változásai ##
+
+* A psutil függőség frissítése az 2.2.1. verzióra.
+* Jelentősen javult a teljesítmény a processzor terhelésének lekérésekor.
+* Hozzáadásra került a Windows 10 támogatása.
+* Windows 10 esetén már elhangzik a build szám.
+* A kiegészítő súgójának eléréséhez használja a Bővítmények kezelése
+  menüpontot.
 
 ## A 3.1 verzió változásai ##
 
@@ -87,8 +95,5 @@ Windows-os programot. Fontos megjegyezni a következőket:
 
 * Első kiadás
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next

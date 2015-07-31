@@ -3,7 +3,6 @@
 * Geliştiriciler: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA
   contributors
 * Download [stable version][1]
-* Download [development version][2]
 
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
@@ -34,10 +33,18 @@ keys.
 Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka
 uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
-* CPU kullanımı fiziksel çekirdekler için değil mantıksal (logical)
-  işlemciler için verilir. Bu CPU sayısı CPU çekirdeklerinin iki katı olan
-  Hyper Threading kullanan işlemciler için belirgindir.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.
 * Işlemci kullanım bilgilerini alırken kısa bir gecikme olabilir.
+
+## Changes for 4.0 ##
+
+* Updated psutil dependency to 2.2.1.
+* Vastly improved performance when obtaining information on CPU load.
+* Added support for recognition of Windows 10.
+* In Windows 10, the build number of Windows will also be announced.
+* You can use Add-ons Manager to access add-on help.
 
 ## Changes for 3.1 ##
 
@@ -83,8 +90,5 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 * ilk sürüm
 
-[[!tag stable]]
-
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next
