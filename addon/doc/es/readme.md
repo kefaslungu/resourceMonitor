@@ -98,5 +98,7 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 
 * Versión inicial
 
+[[!tag dev stable]]
+
 [1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
 http://addons.nvda-project.org/files/get.php?file=rm-next

@@ -96,5 +96,7 @@
 
 * Первый публичный релиз
 
+[[!tag dev stable]]
+
 [1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
 http://addons.nvda-project.org/files/get.php?file=rm-next
