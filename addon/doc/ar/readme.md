@@ -33,18 +33,19 @@ Monitor 3.0.
 لا تحل هذه الإضافة محل خدمة مدير المهام بويندوز أو أية برامج أخرى تخبر
 المستخدم بمعلومات النظام. كما ينبغي عليك ملاحظة الآتي:
 
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper-Threading where number of CPU's
-  is twice the number of CPU cores.
+* يتم الإعلان عن معدل الاستخدام لوحدات المعالجة المركزية للمعالجات المنطقية
+  وليست للنوى المادية. ويلاحظ هذا بشكل واضح للمعالجات التي تستخدم الخيط
+  التشاعبي (Hyper Threading) والتي فيها يكون رقم وحدة المعالجة المركزية هو
+  ضعف رقم نوى وحدة المعالجة المركزية. 
 * ربما تلاحظ التأخر بعض الوقت عند الحصول على معلومات استخدام المعالج.
 
-## Changes for 4.0 ##
+## مستجدات الإصدار 4.0 ##
 
-* Updated psutil dependency to 2.2.1.
-* Vastly improved performance when obtaining information on CPU load.
-* Added support for recognition of Windows 10.
-* In Windows 10, the build number of Windows will also be announced.
-* You can use Add-ons Manager to access add-on help.
+* تحديث توابع psutil حتى الإصدار 2.2.1.
+* تحسين الأداء بشكل كبير عند الحصول على معلومات عن تحميل المعالج.
+* إضافة دعم للتعرف على ويندوز 10
+* سيتم الإعلان عن رقم بناء الويندوز أيضا في ويندوز 10
+* يمكنك استخدام مدير الإضافات البرمجية للوصول لملف المساعدة.
 
 ## مستجدات الإصدار 3.1 ##
 
