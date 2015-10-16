@@ -1,13 +1,13 @@
 # Resource Monitor #
 
-* 作者: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA contributors
-* Download [stable version][1]
-* Download [development version][2]
+* 作者: Alex Hall, Joseph Lee, beqa gozalishvili,その他のNVDAへの貢献者
+* ダウンロード [安定版][1]
 
 このアドオンはCPU負荷、メモリ使用量などリソースの使用状態を通知します。
 
-Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
-earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
+重要: Resource Monitor
+3.1はNVDA2013.3以前ではご利用出来ません。2013.3以前のバージョンをお使いの場合は、Resource Monitor
+3.0をお使い下さい。
 
 # キー操作 #
 
@@ -24,53 +24,59 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 
 このアドオンはタスクマネージャーやWindowsのシステム情報プログラムの代替ではありません。以下をお読みください：
 
-* CPU負荷は物理コアではなく論理プロセッサーについて示します。ハイパースレッディング対応のCPUでは論理プロセッサー数は物理コアの数の2倍になります。
+* CPU負荷は物理コアではなく論理プロセッサーについて示します。これは、CPUの数がCPUコアの数の2倍になるハイパースレッディング対応のCPUで顕著に表れます。
 * CPU負荷情報の取得には時間がかかる場合があります。
 
-## Changes for 3.1 ##
+## 4.0の変更点 ##
 
-* Resource Monitor officially supports Windows 8.1.
-* Updated translations.
+* psutil を 2.2.1 に更新。
+* CPU負荷の情報を得た時の性能が大きく向上しました。
+* Windows 10の認識へのサポートを追加しました。
+* Windows 10では、Windowsのビルド数も通知されるようになりました。
+* アドオンマネジャーを利用してアドオンヘルプをご覧いただけます。
 
-## Changes for 3.0 ##
+## 3.1の変更点 ##
+
+* Resource MonitorはWindows 8.1を公式にサポートしました。
+* 翻訳を更新しました。
+
+## 3.0の変更点 ##
 
 * psutil を 1.2.1 に更新。
 * 現在のWindowsのバージョンやCPUアーキテクチャー、サービスパックの通知（NVDA+Shift+6）
 * ショートカットキーの入力ジェスチャー変更に対応(NVDA 2013.3以降).
 * コマンドを2回続けて押すとそれぞれのリソース情報をコピーする機能を追加。
 
-## Changes for 2.4 ##
+## 2.4の変更点 ##
 
-* New languages: Chinese (simplified), Ukrainian.
-* Updated translations.
+* 新しい言語: 中国語 (簡体字)、ウクライナ語。
+* 翻訳を更新しました。
 
-## Changes for 2.3 ##
+## 2.3の変更点 ##
 
-* Added Bulgarian translation.
+* ブルガリア語の翻訳を追加しました。
 
-## Changes for 2.2 ##
+## 2.2の変更点 ##
 
-* Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
-  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
-  Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
-  and Turkish.
+* 以下の言語の翻訳を追加しました:
+  アラビア語、Aragonese、クロアチア語、オランダ語、フィンランド語、フランス語、Galician、ハンガリー語、イタリア語、日本語、韓国語、ネパール語、Polish、ポルトガル語
+  (ブラジル)、ロシア語、スロヴァキア語、スロベニア語、スペイン語、タミル語、トルコ語。
 
-## Changes for 2.1 ##
+## 2.1の変更点 ##
 
-* Updated psutil dependency to version 0.6.1.
-* Fixed long delay when getting information of drives.
-* Code cleanup.
+* psutil を 0.6.1 に更新。
+* ドライバの情報を取得する時の大幅な遅延を修正しました。
+* コードを整理しました。
 
-## Changes for 2.0 ##
+## 2.0の変更点 ##
 
-* added translation support and translation comments.
+* 翻訳のサポートと翻訳のコメントを追加しました。
 
-## Changes for 1.0 ##
+## バージョン1.0 ##
 
-* Initial Release
+* 最初のバージョン
 
-[[!tag stable]]
+[[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next
