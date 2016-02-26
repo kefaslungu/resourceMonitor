@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-04-11 05:45+0100\n"
-"PO-Revision-Date: 2013-12-29 04:36+0200\n"
+"PO-Revision-Date: 2016-02-25 23:13-0800\n"
 "Last-Translator: Zahari Yurukov <zahari.yurukov@gmail.com>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -34,13 +34,11 @@ msgid "This computer does not have a battery connected."
 msgstr "Към този компютър няма свързана батерия."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent} процента, батерията се зарежда."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Батерията е заредена {percent} процента, около {time}."
 
@@ -62,7 +60,6 @@ msgstr ""
 "ниско или критично ниво на заряда."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -79,12 +76,10 @@ msgstr ""
 "дискове и на тези със сменяем носител на компютъра."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Ядро {coreNumber}: {corePercent} процента. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Средно натоварване на централния процесор {avgLoad} процента, {cores}"
 
@@ -95,14 +90,12 @@ msgstr ""
 "на всяко ядро."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Физическа: използвани {physicalUsed} от {physicalTotal} ({physicalPercent} "
 "процента). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Виртуална: използвани {virtualUsed} от {virtualTotal} ({virtualPercent} "
@@ -128,12 +121,10 @@ msgid "32-bit"
 msgstr "32-битова"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Версия на Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Версия на Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -142,7 +133,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "Съобщава текущо използваната версия на Windows."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr ""
 "Използвана RAM памет {ramPercent} процента, Процесор на {cpuPercent} "
@@ -184,9 +174,3 @@ msgstr ""
 "Удобно средство за наблюдение на системните ресурси, за докладване на "
 "натоварването на централния процесор, използваната памет, състоянието на "
 "батерията, използването на диска и други."
-
-#~ msgid "Windows version: "
-#~ msgstr "Версия на Windows: "
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr "Resource Monitor - предоставя лесен достъп до системна информация."

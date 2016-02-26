@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: 'resourceMonitor' '2.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-28 02:02-0200\n"
+"PO-Revision-Date: 2016-02-25 23:03-0800\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "لا توجد بطارية متصلة بالحاسوب"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "تم شحن البطارية بنسبة {percent}%, "
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "باقي {percent}%, حوالي {time}."
 
@@ -60,7 +58,6 @@ msgstr ""
 "على النفاذ."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -77,12 +74,10 @@ msgstr ""
 "الحاسوب."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Core {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "متوسط حمل المعالج {avgLoad}%, {cores}"
 
@@ -91,14 +86,12 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "الإعلان عن متوسط حمل المعالج ونسبة تحميل كل نواة."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "الذاكرة الفعلية: {physicalUsed} من {physicalTotal} مستخدمة "
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "الذاكرة الوهمية: {virtualUsed} من {virtualTotal} مستخدمة ({virtualPercent}%)."
@@ -123,12 +116,10 @@ msgid "32-bit"
 msgstr "32-بيت"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "إصدار الويندوز: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "إصدار الويندوز: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -137,7 +128,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "يعلن عن إصدار الويندوز الذي تستخدمه"
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr ""
 "{ramPercent}% الذاكرة العشوائية المستخدمة, نسبة تحميل المعالج {cpuPercent}%. "
@@ -177,10 +167,3 @@ msgid ""
 msgstr ""
 "تعمل هذه الإضافة على الإعلان عن متوسط تحميل المعالج, والذاكرة المستخدمة, كما "
 "تعلن عن حالة البطارية ومساحة الأقراص الصلبة والمتحركة والمزيد."
-
-#~ msgid "Windows version: "
-#~ msgstr "إصدار الويندوز:"
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr ""
-#~ "Resource Monitor - تتيح للمستخدم الوصول السهل والسريع لمعلومات النظام"

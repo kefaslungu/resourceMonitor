@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-12-01 06:08+0100\n"
+"PO-Revision-Date: 2016-02-25 23:32-0800\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "Dieser Computer besitzt kein angeschlossenen Akkumulator."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent} %, Akku wird aufgeladen."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Akkubetrieb, {percent} % verbleiben, noch {time}."
 
@@ -60,7 +58,6 @@ msgstr ""
 "die Spannung niedrig oder kritisch ist."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -76,12 +73,10 @@ msgstr ""
 "Zeigt den verwendeten und den gesamten Speicherplatz aller Laufwerke an."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "{coreNumber}-Kern: {corePercent} %."
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "CPU-Auslastung: ~ {avgLoad} %, {cores}"
 
@@ -92,14 +87,12 @@ msgstr ""
 "Prozessorkern an."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Physisch: {physicalUsed} von {physicalTotal} verwendet ({physicalPercent} "
 "%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuell: {virtualUsed} von {virtualTotal} verwendet ({virtualPercent} %)."
@@ -124,12 +117,10 @@ msgid "32-bit"
 msgstr "32-Bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Windows-Version: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Windows-Version: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -138,7 +129,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "Zeigt die aktuell verwendete Windows-Version an."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent} % Speicher verwendet, CPU-Auslastung bei {cpuPercent} %."
 
@@ -177,11 +167,3 @@ msgid ""
 msgstr ""
 "Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
-
-#~ msgid "Windows version: "
-#~ msgstr "windows-Version:"
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr ""
-#~ "Ressourcenmonitor - Erlaubt den einfachen Zugang zu verschiedenen "
-#~ "Systeminformationen."
