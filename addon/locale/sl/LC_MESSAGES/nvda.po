@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-26 17:19+0100\n"
-"Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
+"PO-Revision-Date: 2016-02-26 02:52-0800\n"
+"Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -33,13 +33,11 @@ msgstr "Ta računalnik nima priključenega akumulatorja."
 
 # po testu revizija
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "Akumulator je napoljen do {percent}%."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Preostane še {percent}% za približno  {time}."
 
@@ -61,7 +59,6 @@ msgstr ""
 "stanju akumulatorja."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -78,12 +75,10 @@ msgstr ""
 "pogonih in pogonih za izmenjavo."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Jedro {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Povprečna obremenitev  CPE {avgLoad}%, {cores}"
 
@@ -93,13 +88,11 @@ msgstr ""
 "Predstavi povprečno obremenitev procesorja in obremenitev vsakega jedra."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Fizični: {physicalUsed} od {physicalTotal} v uporabi  ({physicalPercent}%)."
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Navidezni: {virtualUsed} od {virtualTotal} v uporabi ({virtualPercent}%)."
@@ -124,12 +117,10 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "različica Oken: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "različica Oken: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -138,7 +129,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "Naznanja različico Oken, ki jih uporabljate."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% pomnilnika v uporabi, CPE na {cpuPercent}%. "
 
@@ -177,14 +167,3 @@ msgid ""
 msgstr ""
 "Priročni nadzornik virov. Poroča o obremenitvi CPE, izrabi pomnilnika, "
 "diska, o statusu uporabe akumulatorja in več.."
-
-#~ msgid "Windows version: "
-#~ msgstr "različica Oken:"
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr "Nadzor Virov - omogoča lahek dostop do sistemskih informacij"
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr ""
-#~ "Omogoča vam enostavno spremljanje sistemskih informacij. Za podrobnosti "
-#~ "glej readme v mapi tega dodatka."

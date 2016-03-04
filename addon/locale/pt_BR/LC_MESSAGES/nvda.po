@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-30 11:42-0300\n"
+"PO-Revision-Date: 2016-02-26 02:30-0800\n"
 "Last-Translator: Cleverson Casarin Uliana <clever92000@yahoo.com.br>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clever92000@yahoo.com.br>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -34,13 +34,11 @@ msgid "This computer does not have a battery connected."
 msgstr "Este computador não possui bateria acoplada."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, carregando bateria."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Restam {percent}% da bateria, cerca de {time}."
 
@@ -61,7 +59,6 @@ msgstr ""
 "estiver carregando) e alerta caso a bateria esteja baixa ou crítica."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -78,12 +75,10 @@ msgstr ""
 "computador."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Núcleo {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Carga média da CPU {avgLoad}%, {cores}"
 
@@ -92,13 +87,11 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "Mostra a carga média do processador e a carga de cada núcleo."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Físico: em uso {physicalUsed} de {physicalTotal} ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: em uso {virtualUsed} de {virtualTotal} ({virtualPercent}%)."
 
@@ -120,12 +113,10 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Versão de Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Versão de Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -134,7 +125,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "Anuncia a versão de Windows que você usa."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% de RAM em uso, CPU a {cpuPercent}%. "
 
@@ -173,13 +163,3 @@ msgid ""
 msgstr ""
 "Um monitor prático de recursos que anuncia carga da CPU, uso de memória, "
 "status de bateria, uso de disco e outros."
-
-#~ msgid "Windows version: "
-#~ msgstr "Versão do Windows: "
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr ""
-#~ "Monitor de recursos - fornece acesso fácil a informações de sistema."
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr "Permite monitorar informações do sistema de maneira fácil."

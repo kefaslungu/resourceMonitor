@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-05 16:13+0100\n"
-"PO-Revision-Date: 2014-01-07 12:59+0100\n"
+"PO-Revision-Date: 2016-02-26 02:11-0800\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language: it\n"
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "Questo computer non dispone di una batteria collegata."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, batteria in carica."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% carica batteria rimanente, circa {time}."
 
@@ -59,7 +57,6 @@ msgstr ""
 "non in carica), e un avviso se la batteria è scarica"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -76,12 +73,10 @@ msgstr ""
 "questo computer."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Core {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Media carico CPU  {avgLoad}%, {cores}"
 
@@ -90,12 +85,10 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "Annuncia il carico medio del processore e il carico di ciascun core."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "Fisica: {physicalUsed} di {physicalTotal} usata ({physicalPercent}%)."
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtuale: {virtualUsed} di {virtualTotal} usata ({virtualPercent}%)."
 
@@ -118,12 +111,10 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Versione Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Versione Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -132,7 +123,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "Annuncia la versione di Windows in uso."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM usata, CPU al {cpuPercent}%. "
 
@@ -172,14 +162,3 @@ msgstr ""
 "Un'utile risorsa per monitorare e segnalare in tempo reale il carico della "
 "CPU, l'utilizzo della memoria, lo stato della batteria,  la quantità di "
 "spazio utilizzato sul disco ed altro."
-
-#~ msgid "Windows version: "
-#~ msgstr "Versione di Windows"
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr ""
-#~ "Resource monitor permette di accedere rapidamente alle informazioni di "
-#~ "sistema."
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr "Consente di controllare le informazioni di sistema facilmente."

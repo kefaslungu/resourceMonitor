@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-26 20:06+0200\n"
+"PO-Revision-Date: 2016-02-26 02:45-0800\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "Bu bilgisayara pil takılı değil."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "%{percent}, pil şarj oluyor."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "%{percent} kalan pil, yaklaşık {time}."
 
@@ -59,7 +57,6 @@ msgstr ""
 "düşük ya da kritik pil seviyesini söyler."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -76,12 +73,10 @@ msgstr ""
 "bilgisini verir."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "çekirdek {coreNumber}: %{corePercent}. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Ortalama işlemci yükü  %{avgLoad}, {cores}"
 
@@ -90,14 +85,12 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "Ortalama işlemci yükü ve çekirdek kullanımı bilgisini verir."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Fiziksel: {physicalUsed} bölü {physicalTotal} kullanılıyor "
 "(%{physicalPercent})."
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Sanal: {virtualUsed} bölü {virtualTotal} kullanılıyor (%{virtualPercent})."
@@ -120,12 +113,10 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Windows versiyonu: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Windows versiyonu: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -134,7 +125,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "Kullandığınız Windows sürümünü söyler."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM kullanılıyor, CPU  {cpuPercent}%. "
 
@@ -171,13 +161,3 @@ msgid ""
 msgstr ""
 "CPU yükü, hafıza kullanımı, pil ve disk kullanım durumunu takip etmek ve "
 "daha fazlası için pratik bir araç."
-
-#~ msgid "Windows version: "
-#~ msgstr "Windows versiyonu: "
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr ""
-#~ "Resource Monitor - sistem bilgisine kolay yoldan erişilmesini sağlar."
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr "Sistem bilgisini almanıza yarayan pratik bir araç."

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2014-03-17 18:15+0800\n"
+"PO-Revision-Date: 2016-02-26 02:40-0800\n"
 "Last-Translator: 雪岭冰龙 <vgjh2005@gmail.com>\n"
 "Language-Team: Simplified Chinese <vgjh2005@gmail.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -35,13 +35,11 @@ msgid "This computer does not have a battery connected."
 msgstr "此计算机中并未连接任何电池。"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%，正在充电。"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "剩余电量{percent}%， 剩余运行时间 {time}"
 
@@ -62,7 +60,6 @@ msgstr ""
 "告。"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -77,12 +74,10 @@ msgid ""
 msgstr "显示此计算机上的本地驱动器和可移动驱动器的空间使用情况。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "核心{coreNumber}: {corePercent}%。"
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "平均 CPU 负载： {avgLoad}%, {cores}"
 
@@ -91,14 +86,12 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "显示每个 CPU 核心的负载和平均负载。"
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "物理内存： 已使用 {physicalUsed}， 总共 {physicalTotal}， 已使用的百分比"
 "({physicalPercent}%)。"
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "虚拟内存：已使用 {virtualUsed}， 总共 {virtualTotal}， 使用的百分比 "
@@ -122,12 +115,10 @@ msgid "32-bit"
 msgstr "32位"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Windows 版本：{winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Windows版本： {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -136,7 +127,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "朗读您正在使用的 windows 的版本"
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "内存使用{ramPercent}%，CPU 使用{cpuPercent}%。"
 
@@ -172,6 +162,3 @@ msgid ""
 "usage status and more."
 msgstr ""
 "一个方便的资源监控器，可以报告 CPU 负载、内存使用、电池和磁盘使用情况等等。"
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr "资源监控允许您轻松的访问系统信息。"

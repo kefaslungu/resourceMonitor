@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-07-14 19:25+0200\n"
-"PO-Revision-Date: 2014-10-30 14:20+0200\n"
+"PO-Revision-Date: 2016-02-26 00:10-0800\n"
 "Last-Translator: Volodymyr <vlodko@torba.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Ukrainian\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "Цей комп'ютер не має підключеної батареї."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, батарея заряджається."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Залишилося {percent}% батареї, приблизно {time}."
 
@@ -51,45 +49,61 @@ msgid " Warning: battery is critically low."
 msgstr " Попередження: критично низький заряд батареї."
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
-msgstr "Повідомляє про відсоток батареї, статус заряджання, час, що залишився (якщо батарея не заряджається) і попередження про низький та критично низький заряд батареї."
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Повідомляє про відсоток батареї, статус заряджання, час, що залишився (якщо "
+"батарея не заряджається) і попередження про низький та критично низький "
+"заряд батареї."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
-msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. "
-msgstr "Диск {driveName} ({driveType}): {usedSpace} із {totalSpace} використовується {percent}%. "
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
+"{percent}%. "
+msgstr ""
+"Диск {driveName} ({driveType}): {usedSpace} із {totalSpace} використовується "
+"{percent}%. "
 
 #. Translators: Input help message about drive info command in Resource Monitor.
-msgid "Presents the used and total space of the static and removable drives on this computer."
-msgstr "надає інформацію про зайнятий та повний об'єм статичних та переносних дисків, підключених до комп'ютера."
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"надає інформацію про зайнятий та повний об'єм статичних та переносних "
+"дисків, підключених до комп'ютера."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "Ядро {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "Середня завантаженість процесора {avgLoad}%, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "Надає інформацію про середню завантаженість процесора і про завантаженість кожного ядра."
+msgstr ""
+"Надає інформацію про середню завантаженість процесора і про завантаженість "
+"кожного ядра."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr "Фізична пам'ять: {physicalUsed} із {physicalTotal} використовується ({physicalPercent}%). "
+msgstr ""
+"Фізична пам'ять: {physicalUsed} із {physicalTotal} використовується "
+"({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr "Віртуальна пам'ять: {virtualUsed} із {virtualTotal} використовується ({virtualPercent}%)."
+msgstr ""
+"Віртуальна пам'ять: {virtualUsed} із {virtualTotal} використовується "
+"({virtualPercent}%)."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Надає інформацію про зайнятий та повний об'єм як фізичної, так і віртуальної пам'яті."
+msgstr ""
+"Надає інформацію про зайнятий та повний об'єм як фізичної, так і віртуальної "
+"пам'яті."
 
 #. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 #. Vista.
@@ -105,12 +119,10 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Версія Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Версія Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -119,17 +131,21 @@ msgid "Announces the version of Windows you are using."
 msgstr "Повідомляє про версію Windows, яку ви використовуєте."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
-msgstr "використовується {ramPercent}% оперативної пам'яті, завантаженість процесора {cpuPercent}%. "
+msgstr ""
+"використовується {ramPercent}% оперативної пам'яті, завантаженість процесора "
+"{cpuPercent}%. "
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
 msgstr " Попередження: заряд батареї критично низький."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid "Presents used ram, average processor load, and battery info if available."
-msgstr "Надає інформацію про використання оперативної пам'яті, середню завантаженість процесора та батарею, якщо така є."
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Надає інформацію про використання оперативної пам'яті, середню "
+"завантаженість процесора та батарею, якщо така є."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -149,9 +165,10 @@ msgstr " хвилин"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on installation and add-on information
-msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
-msgstr "Зручний монітор ресурсів повідомляє про завантаженість процесора, використання оперативної пам'яті, статус батареї і дисковий простір та іншу інформацію."
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr "Resource Monitor - легке отримання доступу до системної інформації."
-
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
+msgstr ""
+"Зручний монітор ресурсів повідомляє про завантаженість процесора, "
+"використання оперативної пам'яті, статус батареї і дисковий простір та іншу "
+"інформацію."

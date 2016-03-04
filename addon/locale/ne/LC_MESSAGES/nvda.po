@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2013-11-27 17:54+0545\n"
+"PO-Revision-Date: 2016-02-26 02:18-0800\n"
 "Last-Translator: Him Prasad Gautam <drishtibachak@gmail.com>\n"
 "Language-Team: Nepali <drishtibachak@gmail.com>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on description
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "यो कल्पयन्त्रमा ब्याट्री राखिएको पाइएन ।"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, ब्याट्री चार्ज हुदैछ ।"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% ब्याट्रीले झण्डै {time} काम गर्ला ।"
 
@@ -59,7 +57,6 @@ msgstr ""
 "कम वा नाजुक छ भने चेतावनी समेत  प्रस्तुत गर्छ ।"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
 "{percent}%. "
@@ -76,12 +73,10 @@ msgstr ""
 "गर्दछ ।"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%. "
 msgstr "कोर {coreNumber}: {corePercent}% "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}"
 msgstr "औसत CPU भार {avgLoad}%, {cores} ।"
 
@@ -90,13 +85,11 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "प्रोसेसरको औसत भार र हरेक कोरको भार प्रस्तुत गर्छ ।."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "भौतिक: {physicalTotal} मद्धे {physicalUsed} प्रयोग ({physicalPercent}%%) ।"
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "अवास्तविक: {virtualTotal} मध्ये {virtualUsed} प्रयोग भएको ({virtualPercent}%) "
@@ -119,12 +112,10 @@ msgid "32-bit"
 msgstr "३२ विट"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "सञ्झ्याल संस्करण: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "सञ्झ्याल संस्करण: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -133,7 +124,6 @@ msgid "Announces the version of Windows you are using."
 msgstr "तपाइले चलाएको सञ्झ्यालको संस्करण बताउने छ ।"
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
 msgstr "{ramPercent}% RAM र CPU {cpuPercent}% पर्योग भएको"
 
@@ -170,12 +160,3 @@ msgid ""
 "usage status and more."
 msgstr ""
 "CPU भार, भण्डारको प्रयोग, ब्याट्री र ढुकुटीको अवस्था बताउने छरितो श्रोत अनुगामी ।"
-
-#~ msgid "Windows version: "
-#~ msgstr "सञ्झ्याल संस्करण"
-
-#~ msgid "Resource Monitor - allows easy access to system information."
-#~ msgstr "श्रोत अनुगामीले- प्रणाली सुचना पहुँचको अनुमति प्रदान गर्द छ ।"
-
-#~ msgid "Allows you to monitor system information easily."
-#~ msgstr "तपाइलाई प्रणाली सम्बन्धी जानकारी सजिलै बताउने छ ।"
