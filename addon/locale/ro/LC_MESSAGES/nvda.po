@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: resourceMonitor 4.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2016-02-12 18:05+1000\n"
+"PO-Revision-Date: 2016-03-17 00:26+0200\n"
+"Last-Translator: DanP <dan.punga@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Monitor Resurse"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Sumarul resurselor copiat în planșetă"
+
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+msgid "This computer does not have a battery connected."
+msgstr "Acest calculator nu are conectată o baterie."
+
+#. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#, python-brace-format
+msgid "{percent}%, battery charging."
+msgstr "{percent}%, încarcare baterie."
+
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+#. discharging battery, so provide info on it
+#, python-brace-format
+msgid "{percent}% battery remaining, about {time}."
+msgstr "{percent}% din baterie rămasă, aproximativ {time}."
+
+#. Translators: Message reported when battery level is low.
+msgid " Warning: low battery."
+msgstr " Alertă: nivel baterie scăzut"
+
+#. Translators: Message reported when battery level is critical.
+msgid " Warning: battery is critically low."
+msgstr " Alertă: nivel baterie extrem de scăzut"
+
+#. Translators: Input help message about battery info command in Resource Monitor.
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Prezintă procentul încărcării bateriei, starea de încărcare, timp rămas "
+"(dacă nu se încarcă), și alerte dacă bateria este descărcată sau la nivel "
+"extrem de scăzut."
+
+#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
+"{percent}%. "
+msgstr ""
+"{driveName} (unitate {driveType}): {usedSpace} din {totalSpace} folosit "
+"{percent}%. "
+
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Prezintă spațiile folosit și total ale unităților statice și detașabile de "
+"pe acest calculator."
+
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%. "
+msgstr "Nucleu {coreNumber}: {corePercent}%. "
+
+#. Translators: Shows average load of the processor and the load for each core.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}"
+msgstr "Nivel mediu de încărcare CPU {avgLoad}%, {cores}"
+
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr ""
+"Prezintă nivelul de încărcare mediu al procesorului și încărcarea pentru "
+"fiecare nucleu."
+
+#. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr ""
+"Fizică: {physicalUsed} din {physicalTotal} folosită ({physicalPercent}%). "
+
+#. Translators: Shows virtual memory usage.
+#, python-brace-format
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr ""
+"Virtuală: {virtualUsed} din {virtualTotal} folosită ({virtualPercent}%)."
+
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr ""
+"Prezintă nivelurile de încăracre folosit și total atât pentru memoria RAM "
+"fizică cât și pentru cea virtuală."
+
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-bit"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-bit"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+#, python-brace-format
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Versiune Windows: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Versiune Windows: {winVersion} {servicePackLevel} ({cpuBit})"
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
+msgstr "Anunță versiunea de Windows pe care o folosiți."
+
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
+msgstr "{ramPercent}% RAM folosit, CPU la {cpuPercent}%. "
+
+#. Translators: In addition to processor and memory usage, presented when battery is low.
+msgid " Warning: critically low battery."
+msgstr " Alertă: nivel baterie extrem de scăzut"
+
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Prezintă RAM folosit, nivel mediu de încărcare al procesorului și informație "
+"baterie, dacă este disponibilă."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " oră,"
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " ore,"
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " minut"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " minute"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
+msgstr ""
+"Un monitor de resurse folositor pentru raportarea încărcării CPU, ratei de "
+"folosire a memoriei, baterie, stare folosire disk și altele."
