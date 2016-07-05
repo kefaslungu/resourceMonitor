@@ -158,7 +158,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif winMajor == 10: # Windows 10/Server 2016 (10.0).
 			if winMinor == 0:
 				# Remove this once WinTen is officially released unless MS decides to update build numbers during automatic updates.
-				winverName = "Windows 10" if server == 1 else "Windows Server 10"
+				winverName = "Windows 10" if server == 1 else "Windows Server 2016"
 				buildNum = sys.getwindowsversion().build
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
