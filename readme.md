@@ -27,6 +27,11 @@ This add-on does not replace task manager and other system information programs 
 
 ## Changes for 4.0 ##
 
+* Add-on repository has moved to GitHub (can be found at https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
+## Changes for 4.0 ##
+
 * Updated psutil dependency to 2.2.1.
 * Vastly improved performance when obtaining information on CPU load.
 * Added support for recognition of Windows 10.
@@ -73,4 +78,3 @@ This add-on does not replace task manager and other system information programs 
 * Initial Release
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-next

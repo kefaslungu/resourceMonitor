@@ -1,6 +1,7 @@
 #Resource Monitor for NvDA
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
 #Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run).
+# Copyright 2013-2016, released under GPL.
 
 import _winreg
 import globalPluginHandler, ui, api, scriptHandler
