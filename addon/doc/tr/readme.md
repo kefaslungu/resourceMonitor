@@ -38,6 +38,12 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
   is twice the number of CPU cores.
 * Işlemci kullanım bilgilerini alırken kısa bir gecikme olabilir.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Changes for 4.0 ##
 
 * Updated psutil dependency to 2.2.1.

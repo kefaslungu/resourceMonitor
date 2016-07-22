@@ -39,6 +39,12 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Suoritinkäytön tietoja haettaessa saattaa olla pieni viive.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Muutokset versiossa 4.0 ##
 
 * Päivitetty psutil-riippuvuus versioksi 2.2.1.

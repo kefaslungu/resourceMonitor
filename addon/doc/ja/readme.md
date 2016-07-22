@@ -27,6 +27,12 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 * CPU負荷は物理コアではなく論理プロセッサーについて示します。これは、CPUの数がCPUコアの数の2倍になるハイパースレッディング対応のCPUで顕著に表れます。
 * CPU負荷情報の取得には時間がかかる場合があります。
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## 4.0の変更点 ##
 
 * psutil を 2.2.1 に更新。

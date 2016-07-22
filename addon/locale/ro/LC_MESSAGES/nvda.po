@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2016-03-17 00:26+0200\n"
-"Last-Translator: DanP <dan.punga@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-07-20 23:26+0300\n"
+"Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.8\n"
+"Language-Team: \n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -34,7 +34,7 @@ msgstr "Acest calculator nu are conectată o baterie."
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent}%, încarcare baterie."
+msgstr "{percent}%, încărcare baterie."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it

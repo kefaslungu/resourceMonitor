@@ -41,6 +41,12 @@ Windows-os programot. Fontos megjegyezni a következőket:
   kétszerese a magszámnak.
 * Egy kis időbe tellhet a processzor terheltségének lekkérése.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## A 4.0 verzió változásai ##
 
 * A psutil függőség frissítése az 2.2.1. verzióra.

@@ -42,6 +42,12 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 * Podría haber un pequeño retraso al obtener información de uso del
   procesador.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Cambios para 4.0 ##
 
 * Actualizado psutil dependency a 2.2.1.

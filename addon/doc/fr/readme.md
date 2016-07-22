@@ -43,6 +43,12 @@ suit :
 * Il pourrait y avoir un léger retard lors de l'obtention des informations
   d'utilisation du processeur.
 
+## Changements pour la version 4.5 ##
+
+* Le référentiel du module complémentaire a été déplacé à GitHub (peut être
+  trouvé à https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 est correctement reconnu.
+
 ## Changements pour la version 4.0 ##
 
 * Mise à jour de la dépendance psutil  vers la version 2.2.1.

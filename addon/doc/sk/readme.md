@@ -37,6 +37,12 @@ informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
   is twice the number of CPU cores.
 * Získanie informácie o stave procesora môže chvíľu trvať.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Changes for 4.0 ##
 
 * Updated psutil dependency to 2.2.1.

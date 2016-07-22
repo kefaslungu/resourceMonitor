@@ -39,6 +39,12 @@ Monitor 3.0.
   ضعف رقم نوى وحدة المعالجة المركزية. 
 * ربما تلاحظ التأخر بعض الوقت عند الحصول على معلومات استخدام المعالج.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## مستجدات الإصدار 4.0 ##
 
 * تحديث توابع psutil حتى الإصدار 2.2.1.

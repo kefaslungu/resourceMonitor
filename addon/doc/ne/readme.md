@@ -38,6 +38,12 @@ resource usage information.
   is twice the number of CPU cores.
 * प्रोसेसरको प्रयोग सम्बन्धी जानकारी दिदा केही ढिलो हुन सक्छ ।
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Changes for 4.0 ##
 
 * Updated psutil dependency to 2.2.1.

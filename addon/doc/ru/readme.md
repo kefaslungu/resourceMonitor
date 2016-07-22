@@ -41,6 +41,12 @@
 * Там может быть небольшая задержка при получении информации об
   использовании процессора.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Изменения в версии 4.0 ##
 
 * Обновлён пакет psutil до версии 2.2.1.

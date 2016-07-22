@@ -43,6 +43,12 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Möglicherweise gibt es eine kurze Verzögerung, während die
   Prozessor-Auslastung ermittelt wird.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Änderungen bis 4.0 ##
 
 * psutil-Abhängigkeit auf 2.2.1 aktualisiert.
