@@ -39,11 +39,11 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Suoritinkäytön tietoja haettaessa saattaa olla pieni viive.
 
-## Changes for 4.5 ##
+## Muutokset versiossa 4.5 ##
 
-* Add-on repository has moved to GitHub (can be found at
+* Lisäosan koodivarasto on muuttanut GitHubiin (löytyy osoitteesta
   https://github.com/josephsl/resourcemonitor).
-* Windows Server 2016 is properly recognized.
+* Windows Server 2016 tunnistetaan asianmukaisesti.
 
 ## Muutokset versiossa 4.0 ##
 
