@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Resource Monitor 4.4</title>
+</head>
+<body>
+<h1>Ressourcen-Monitor</h1>
+<ul>
+<li>Autoren: Alex Hall, Joseph Lee, beqa gozalishvili und andere
+  NVDA-Entwickler</li>
+<li>[stabile version][1] herunterladen</li>
+</ul>
+<p>Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
+Arbeitsspeicher sowie andere nützliche Ressourcen.</p>
+<p>Wichtig: Ressourcen-Monitor 3.1 ist nicht zu NVDA 2013.3 und älter
+kompatibel. Falls Sie die Version 2013.3 oder älter verwenden, nehmen Sie
+bitte die Version 3.0.</p>
+<h1>Tastenkürzel</h1>
+<ul>
+<li>NVDA+Umschalt+E gibt den verwendeten Arbeitsspeicher, die ungefähre
+  Prozessor-Auslastung und sofern vorhanden Informationen über den Akkustand
+  aus.</li>
+<li>NVDA+Umschalt+1 gibt den  ungefähre Prozessor-Auslastung und die
+  Auslastung für jeden Kern aus.</li>
+<li>NVDA+Umschalt+2/5 gibt den verwendeten und verfügbaren Speicherplatz des
+  virtuellen und physikalischen Arbeitsspeichers aus.</li>
+<li>NVDA+Umschalt+3 gibt den verwendeten und verfügbaren Speicherplatz aller
+  angeschlossenen Datenträger am Computer aus.</li>
+<li>NVDA+Umschalt+4 gibt den Ladezustand des Akkus und die verbleibende Zeit
+  (sofern das Netzteil nicht angeschlossen ist), und eine Warnung bei
+  geringem oder kritischem Ladezustand aus.</li>
+<li>NVDA+Umschalt+6 gibt die Windows-Version, die verwendete
+  Prozessor-Architektur sowie eventuell installierte Service Packs aus.</li>
+</ul>
+<p>Wenn Sie NVDA 2013.3 oder neuer installiert haben, können Sie die
+Tastenkürzel ändern.</p>
+<h2>Nutzungshinweise</h2>
+<p>Diese Erweiterung ersetzt nicht den Task-Manager von Windows sowie andere
+Systeminformationsprogramme. Bitte beachten Sie Folgendes:</p>
+<ul>
+<li>Die Prozessor-Auslastung wird für logische Prozessoren, jedoch nicht für
+  physische Kerne ausgegeben. Dies ist bei Prozessoren bemerkbar, welche
+  Hyper Threading verwenden. Bei diesen Prozessoren ist die Anzahl der
+  Prozessoren das doppelte der Prozessorkerne.</li>
+<li>Möglicherweise gibt es eine kurze Verzögerung, während die
+  Prozessor-Auslastung ermittelt wird.</li>
+</ul>
+<h2>Änderungen bis 4.0</h2>
+<ul>
+<li>psutil-Abhängigkeit auf 2.2.1 aktualisiert.</li>
+<li>Erheblich verbesserte Leistung beim Abrufen von Informationen über die
+  CPU-Auslastung.</li>
+<li>Unterstützung für die Erkennung von Windows 10 hinzugefügt.</li>
+<li>In Windows 10 wird auch die Build-Nummer von Windows angesagt.</li>
+<li>Sie können den Add-ons-Manager verwenden, um auf die Hilfe zur Erweiterung
+  zuzugreifen.</li>
+</ul>
+<h2>Änderungen bis 3.1</h2>
+<ul>
+<li>Der Ressourcen-Monitor unterstützt offiziell Windows 8.1</li>
+<li>Übersetzungen aktualisiert.</li>
+</ul>
+<h2>Änderungen bis 3.0</h2>
+<ul>
+<li>psutil-Abhängigkeit auf 1.2.1 aktualisiert.</li>
+<li>NVDA+Umschalt+6 gibt die Windows-Version, die verwendete
+  Prozessor-Architektur sowie verwendete Service Packs aus.</li>
+<li>Tastenkürzel der Erweiterung sind ab NVDA 2013.3 änderbar.</li>
+<li>Nun besteht die Möglichkeit, einzelne Ressourceninformationen durch
+  zweimaliges Drücken der Tastenkombination in die Zwischenablage zu
+  kopieren.</li>
+</ul>
+<h2>Änderungen bis 2.4</h2>
+<ul>
+<li>Neue Sprachen: Chinesisch (vereinfacht), Ukrainisch.</li>
+<li>Übersetzungen aktualisiert.</li>
+</ul>
+<h2>Änderungen bis 2.3</h2>
+<ul>
+<li>Übersetzung für Bulgarisch hinzugefügt.</li>
+</ul>
+<h2>Änderungen bis 2.2</h2>
+<ul>
+<li>Folgende Übersetzungen hinzugefügt: Arabisch, Aragonesisch, Kroatisch,
+  Niederländisch, Finnisch, Französisch, Galiesisch, Deutsch, Ungarisch,
+  Italienisch, Japanisch, Koreanisch, Nepalesisch, Polnisch, Portugiesisch
+  (Brasilien), Russisch, Slovakisch, Slovenisch, Spanisch, Tamil und
+  Türkisch.</li>
+</ul>
+<h2>Änderungen bis 2.1</h2>
+<ul>
+<li>psutil auf Version 0.6.1 aktualisiert.</li>
+<li>Größere Zeitverzögerung beim Erhalt von Informationen von Datenträgern
+  beseitigt.</li>
+<li>Der Quellcode wurde bereinigt.</li>
+</ul>
+<h2>Änderungen bis 2.0</h2>
+<ul>
+<li>Möglichkeit zur Übersetzung sowie Übersetzungskommentare hinzugefügt.</li>
+</ul>
+<h2>Änderungen bis 1.0</h2>
+<ul>
+<li>Ehrstveröffentlichung</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+<p>[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next</p>
+</body>
+</html>
