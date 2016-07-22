@@ -25,6 +25,11 @@ This add-on does not replace task manager and other system information programs 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * There might be a short delay when getting processor usage information.
 
+## Changes for 4.5 ##
+
+* Add-on repository has moved to GitHub (can be found at https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 is properly recognized.
+
 ## Changes for 4.0 ##
 
 * Updated psutil dependency to 2.2.1.
@@ -73,4 +78,3 @@ This add-on does not replace task manager and other system information programs 
 * Initial Release
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rm
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-next
