@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ne" lang="ne">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Resource Monitor 4.4</title>
+</head>
+<body>
+<h1>श्रोत अनुगामी (resourceMonitor)</h1>
+<ul>
+<li>लेखकहरु: अलेक्स हल, जोसेफ लि, बिका गोजालिस्भीलि र अन्य नेत्रवाणी योगदान
+  कर्ताहरू ।</li>
+<li>Download [stable version][1]</li>
+</ul>
+<p>This plugin gives information about CPU load, memory usage and other
+resource usage information.</p>
+<p>महत्त्वपूर्ण: श्रोत अनुगामी ३.१ नेत्रवाणी २०१३.३ अघिका संस्करणमा चल्दैन ।
+यदी तपाइ यस्ता संस्करण चलाउनु हुन्छ भने श्रोत अनुगामी ३.० चलाउनु होला ।</p>
+<h1>द्रुतमार्ग</h1>
+<ul>
+<li>NVDA+Shift+E Presents used ram, average processor load, and battery info
+  if available.</li>
+<li>नेत्रवानी +Shift+१ ले प्रोसेसरको औसत भार र यदी बहुकोर CPU's भएमा यि
+  कोरहरुको भार समेत प्रस्तुत गर्ने छ ।</li>
+<li>NVDA+Shift+2/5 Presents the used and total space for both physical and
+  virtual ram.</li>
+<li>NVDA+Shift+3 Presents the used and total space of the static and removable
+  drives.</li>
+<li>NVDA+Shift+4 Presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.</li>
+<li>नेत्रवाणी+Shift+6 चालु विन्डोजको संस्करण, CPU बीट (३२ वा ६४-विट) र सर्भिस
+  प्याक  सङ्ख्या बताउने छ ।</li>
+</ul>
+<p>यदि चालू नेत्रवाणी २०१३.३ अथवा यस पछीको संस्करण छ भने तपाइले यी द्रुतमार्ग
+कुञ्जी बदल्न सक्नु हुन्छ ।</p>
+<h2>टिप्पणिको प्रयोग</h2>
+<p>यो उप-कर्मीले कार्य व्यबस्थापक र अरू विन्डोज सम्बन्धी सूचना कार्यक्रम
+प्रणालीलाई   विस्थापन गर्दैन । यो पनि ध्यान दिनु होला:</p>
+<ul>
+<li>CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.</li>
+<li>प्रोसेसरको प्रयोग सम्बन्धी जानकारी दिदा केही ढिलो हुन सक्छ ।</li>
+</ul>
+<h2>Changes for 4.0</h2>
+<ul>
+<li>Updated psutil dependency to 2.2.1.</li>
+<li>Vastly improved performance when obtaining information on CPU load.</li>
+<li>Added support for recognition of Windows 10.</li>
+<li>In Windows 10, the build number of Windows will also be announced.</li>
+<li>You can use Add-ons Manager to access add-on help.</li>
+</ul>
+<h2>३.1 संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>श्रोत अनुगामीले आधिकारीक रुपमा नै विन्डोज ८.१ लाइ समर्थन गर्छ ।</li>
+<li>अनुवादलाई अद्यावधिक गरियो </li>
+</ul>
+<h2>३.० संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>psutil आधारितलाई १.२.१ मा अद्यावधिक गरियो ।.</li>
+<li>नेत्रवाणी+Shift+6 चालु विन्डोजको संस्करण, CPU बीट (३२ वा ६४-विट) र सर्भिस
+  प्याक सङ्ख्या बताउने छ ।</li>
+<li>२०१३.३ वा यस पछिका नेत्रवाणीमा लागु हुने गरी उप-कर्मीको द्रुतमार्ग बदल्ने
+  क्षमता थप गरियो ।</li>
+<li>स्रोत आदेसहरूलाई दुई पटक दबाएर क्लिपपाटीमा स्रोतहरू सम्बन्धी वैयक्तिक
+  सुचनालाई सञ्चय गर्ने सुविदा थप गरियो ।</li>
+</ul>
+<h2>२.४ मा गरिएका परिवर्तनहरू</h2>
+<ul>
+<li>नयाँ भाषाहरू: सरलीकृत चिनिया, युक्रेनी</li>
+<li>अनुवादलाई अद्यावधिक गरियो </li>
+</ul>
+<h2>२.३ मा गरिएका परिवर्तनहरू</h2>
+<ul>
+<li>बुल्गेरियाली अनुवाद थपियो ।</li>
+</ul>
+<h2>२.१ संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
+  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
+  Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
+  and Turkish.</li>
+</ul>
+<h2>२.१ संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>psutil आधारितलाई ०.६.१ मा अद्यावधिक गरियो ।.</li>
+<li>भकारि सम्बन्धी जानकारी लिदा लामो समय लाग्ने समस्या हल गरियो ।</li>
+<li>Code cleanup.</li>
+</ul>
+<h2>२.० संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>अनुवाद टिप्पणी र अनुवाद सहयोग थप गरियो ।.</li>
+</ul>
+<h2>१.० संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>पहिलो सार्वजनिकीकरण</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+<p>[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next</p>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Resource Monitor 4.4</title>
+</head>
+<body>
+<h1>Erőforrás-kilistázó</h1>
+<ul>
+<li>Fejlesztők: Alex Hall , Joseph Lee, beqa gozalishvili és további NVDA
+  közreműködők</li>
+<li>Letöltés [Stabil verzió][1]</li>
+</ul>
+<p>A kiegészítő hasznos információkat ad a memória, processzor, háttértár, és
+az akkumulátor aktuális állapotáról.</p>
+<p>Fontos: Az erőforrás-kilistázó legfrissebb verziója nem használható az NVDA
+2013.3 vagy annál régebbi NVDA verziókkal. Ezekhez a kiegészítő 3.0-s
+változatát ajánljuk.</p>
+<h1>Billentyűparancsok</h1>
+<ul>
+<li>NVDA+shift+e Bemondja a memória és az átlagos processzor használatot, és a
+  telep töltöttségi szintjét, ha elérhető.</li>
+<li>NVDA+shift+1 Bemondja az átlagos processzor terheltségét együttesen, és
+  magokra lebontva egyaránt.</li>
+<li>NVDA+shift+2/NVDA+shift+5 Bemondja a teljes és foglalt fizikai és
+  virtuális memória méretét.</li>
+<li>NVDA+shift+3 Bemondja a beépített és hordozható meghajtók teljes és
+  lefoglalt méretét.</li>
+<li>NVDA+shift+4 Információkat ad a telep töltöttségéről, a hátralévő időről
+  (ha nnincs hálózatra csatlakoztatva), figyelmeztet ha az akkumulátor
+  töltöttsége kritikusan alacsony.</li>
+<li>NVDA+Shift+6 Megjeleníti a feltelepített Windows verzióját és szerviz
+  csomagját, ha elérhető.</li>
+</ul>
+<p>Ha az NVDA 2013.3-as vagy újabb verzióját használja, lehetősége van a
+billentyűparancsok megváltoztatására.</p>
+<h2>Használati megjegyzések</h2>
+<p>Ez a kiegészítő nem helyettesíti a feladatkezelőt és a többi rendszerfigyelő
+Windows-os programot. Fontos megjegyezni a következőket:</p>
+<ul>
+<li>A processzor használata logikai processorok alapján történik, nem a
+  fizikai magok szerint. Ez azoknál a processzoroknál észrevehető, amik a
+  Hyper Threading technológiát használják, ahol a processzorok száma
+  kétszerese a magszámnak.</li>
+<li>Egy kis időbe tellhet a processzor terheltségének lekkérése.</li>
+</ul>
+<h2>A 4.0 verzió változásai</h2>
+<ul>
+<li>A psutil függőség frissítése az 2.2.1. verzióra.</li>
+<li>Jelentősen javult a teljesítmény a processzor terhelésének lekérésekor.</li>
+<li>Hozzáadásra került a Windows 10 támogatása.</li>
+<li>Windows 10 esetén már elhangzik a build szám.</li>
+<li>A kiegészítő súgójának eléréséhez használja a Bővítmények kezelése
+  menüpontot.</li>
+</ul>
+<h2>A 3.1 verzió változásai</h2>
+<ul>
+<li>Az Erőforrás-kilistázómár támogatja a Windows 8 operációs rendszert.</li>
+<li>Fordítások frissítése</li>
+</ul>
+<h2>A 3.0 verzió változásai</h2>
+<ul>
+<li>A psutil függőség frissítése az 1.2.1. verzióra.</li>
+<li>Bemondja a feltelepített Windows verzióját és szerviz csomagját, ha
+  elérhető. (NVDA+Shift+6)</li>
+<li>Lehetőség van a kiegészítő billentyűparancsainak megváltoztatására (NVDA
+  2013.3-tól)</li>
+<li>Lehetőség van az egyéni erőforrás információkat a vágólapra másolni egy
+  kiválasztott erőforrás billentyűparancsának kétszeri lenyomásával.</li>
+</ul>
+<h2>A 2.4. verzió változásai</h2>
+<ul>
+<li>Új nyelvek: egyszerűsített kínai, ukrán.</li>
+<li>Fordítások frissítése</li>
+</ul>
+<h2>A 2.3. verzió változásai</h2>
+<ul>
+<li>Bolgár fordítás hozzáadása.</li>
+</ul>
+<h2>A 2.2. verzió változásai</h2>
+<ul>
+<li>Új fordítások: Arab, Aragóniai, Horvát, Holland, Finn, Francia, Galíciai,
+  Német, Magyar, Olasz, Japán, Koreai, Nepáli, Lengyel, Portugál
+  (Brazíliai), Orosz, Szlovák, Szlovén, Spanyol, Tamil és Török.</li>
+</ul>
+<h2>A 2.1. verzió változásai</h2>
+<ul>
+<li>A psutil függőség frissítése a 0.6.1 verzióra.</li>
+<li>A hosszú várakozás kiküszöbölése a meghajtókról való információk
+  beszerzése közben.</li>
+<li>Kódtisztítás.</li>
+</ul>
+<h2>A 2.0 verzió változásai</h2>
+<ul>
+<li>Fordítások támogatása, és fordítási megjegyzések hozzáadása.</li>
+</ul>
+<h2>Az 1.0 változásai</h2>
+<ul>
+<li>Első kiadás</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+<p>[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next</p>
+</body>
+</html>

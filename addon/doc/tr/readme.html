@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Resource Monitor 4.4</title>
+</head>
+<body>
+<h1>Kaynak izleme</h1>
+<ul>
+<li>Geliştiriciler: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA
+  contributors</li>
+<li>Download [stable version][1]</li>
+</ul>
+<p>This plugin gives information about CPU load, memory usage and other
+resource usage information.</p>
+<p>Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
+earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.</p>
+<h1>Kısayollar</h1>
+<ul>
+<li>NVDA+Shift+E Presents used ram, average processor load, and battery info
+  if available.</li>
+<li>NVDA+Shift+1 Presents the average processor load and if multicore CPU's
+  are present the load of each core.</li>
+<li>NVDA+Shift+2/5 Presents the used and total space for both physical and
+  virtual ram.</li>
+<li>NVDA+Shift+3 Presents the used and total space of the static and removable
+  drives.</li>
+<li>NVDA+Shift+4 Presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.</li>
+<li>NVDA+Shift+6 Presents CPU Architecture 32/64-bit and Windows version and
+  service pack numbers.</li>
+</ul>
+<p>If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys.</p>
+<h2>Kullanım notları</h2>
+<p>Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka
+uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:</p>
+<ul>
+<li>CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.</li>
+<li>Işlemci kullanım bilgilerini alırken kısa bir gecikme olabilir.</li>
+</ul>
+<h2>Changes for 4.0</h2>
+<ul>
+<li>Updated psutil dependency to 2.2.1.</li>
+<li>Vastly improved performance when obtaining information on CPU load.</li>
+<li>Added support for recognition of Windows 10.</li>
+<li>In Windows 10, the build number of Windows will also be announced.</li>
+<li>You can use Add-ons Manager to access add-on help.</li>
+</ul>
+<h2>Changes for 3.1</h2>
+<ul>
+<li>Resource Monitor officially supports Windows 8.1.</li>
+<li>Çeviriler güncellendi.</li>
+</ul>
+<h2>3.0 için değişiklikler</h2>
+<ul>
+<li>1.2.1 için psutil bağımlılık güncellendi.</li>
+<li>Announcement of current Windows version, CPU architecture and service pack
+  if any (NVDA+Shift+6).</li>
+<li>Kısayol tuşları, NVDA 2013.3 sürümüyle birlikte değiştirilebilir.</li>
+<li>Kaynak bilgisi öğrenme komutlarına iki kez basıldığında bilgi panoya
+  kopyalanıyor</li>
+</ul>
+<h2>2.4 için değişiklikler</h2>
+<ul>
+<li>Yeni diller: Çince (basitleştirilmiş), Ukrayna.</li>
+<li>Çeviriler güncellendi.</li>
+</ul>
+<h2>2.3 için değişiklikler</h2>
+<ul>
+<li>Bulgarca çeviri eklendi.</li>
+</ul>
+<h2>2.2 için değişiklikler</h2>
+<ul>
+<li>Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
+  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
+  Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
+  and Turkish.</li>
+</ul>
+<h2>2.1 için değişiklikler</h2>
+<ul>
+<li>Updated psutil dependency to version 0.6.1.</li>
+<li>Fixed long delay when getting information of drives.</li>
+<li>Code cleanup.</li>
+</ul>
+<h2>2.0 için değişiklikler</h2>
+<ul>
+<li>çeviri desteği ve açıklamalar eklendi</li>
+</ul>
+<h2>1.0 için değişiklikler</h2>
+<ul>
+<li>ilk sürüm</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+<p>[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next</p>
+</body>
+</html>

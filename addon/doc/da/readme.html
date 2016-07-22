@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="da">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Resource Monitor 4.4</title>
+</head>
+<body>
+<h1>Resource Monitor (ressourceovervågning)</h1>
+<ul>
+<li>Forfattere: Alex Hall, Joseph Lee, beqa gozalishvili og andre bidragydere
+  til NVDA.</li>
+<li>Download [stabil version][1]</li>
+</ul>
+<p>Dette tilføjelsesprogram giver information om CPU-belastning, brug af
+hukommelse og andre oplysninger om forbrug af ressourcer.</p>
+<p>Vigtigt: Resource Monitor 3.1 er ikke kompatibel med NVDA 2013.3 eller
+tidligere. Hvis du bruger NVDA 2013.3 eller tidligere, så brug venligst
+Resource Monitor 3.0.</p>
+<h1>Genvejstaster</h1>
+<ul>
+<li>NVDA+Shiftj+e viser brugt RAM, gennemsnitlig processorbelastning og
+  batterioplysninger, hvis de er til rådighed.</li>
+<li>NVDA+Shift+1 viser gennemsnitlig processorbelastning, og hvis der er flere
+  kerner tilstede, belastningen for hver kerne.</li>
+<li>NVDA+Shift+2/5 giver brugt og total plads i fysisk og virtuel hukommelse.</li>
+<li>NVDA+Shift+3 giver brugt og samlet plads på faste og flytbare drev.</li>
+<li>NVDA+Shift+4 giver batteristatus i procent, opladestatus, resterende
+  batteritid (hvis det ikke er ved at blive opladet) og endelig en advarsel,
+  hvis batteriniveauet er lavt eller kritisk.</li>
+<li>NVDA+Shift+6 giver CPU-arkitektur, 32/64 bit, Windows-version og numre på
+  service packs.</li>
+</ul>
+<p>Hvis du har installeret NVDA 2013.3 eller senere, kan du ændre disse
+genvejstaster.</p>
+<h2>Bemærkninger om brug</h2>
+<p>Dette tilføjelsesprogram erstatter ikke joblisten eller andre
+systemoplysninger.</p>
+<ul>
+<li>CPU-brug bliver angivet for logiske processorer, ikke fysiske
+  kerner. Dette har betydning for processorer, som bruger
+  hyper-threading. Her er antallet af processorer det dobbelte af antallet
+  af processoerkerner.</li>
+<li>Der kan være en kort forsinkelse, når man beder om oplysninger om brug af
+  processor.</li>
+</ul>
+<h2>Ændringer i4.0</h2>
+<ul>
+<li>Opdateret psutil dependency til 2.2.1.</li>
+<li>Stor forbedring af performance, under opsamlingen af oplysninger om
+  CPU-belastning.</li>
+<li>Tilføjet understøttelse af genkendelse af Windows 10.</li>
+<li>I Windows 10 vil build-nummeret også blive annonceret.</li>
+<li>Du kan bruge Styring af tilføjelsesprogrammer til at få hjælp til
+  tilføjelsesprogrammet.</li>
+</ul>
+<h2>Ændringer i 3.1</h2>
+<ul>
+<li>Resource Monitor understøtter officielt Windows 8.1.</li>
+<li>Opdaterede oversættelser.</li>
+</ul>
+<h2>Ændringer i 3.0</h2>
+<ul>
+<li>Opdateret psutil dependency til 1.2.1.</li>
+<li>Annoncering af Windows-version, CPU-arkitektur og service pack hvis nogen
+  (NVDA+Shift+6).</li>
+<li>Mulighed for at ændre genvejstaster (NVDA 2013.3 eller senere).</li>
+<li>Muligt at kopiere individuelle ressourceoplysninger til udklipsholderen
+  ved at ved at trykke på genvejstasten to gange.</li>
+</ul>
+<h2>Ændringer i 2.4</h2>
+<ul>
+<li>Nye sprog: Kinesisk (simplificeret), ukrainsk.</li>
+<li>Opdaterede oversættelser.</li>
+</ul>
+<h2>Ændringer i 2.3</h2>
+<ul>
+<li>Tilføjet bulgarsk oversættelse.</li>
+</ul>
+<h2>Ændringer i 2.2</h2>
+<ul>
+<li>Tilføjet følgende oversættelser: Arabisk, aragonesisk, croatisk,
+  hollandsk, finsk, fransk, galicisk, tysk, ungarsk, italiensk, japansk,
+  koreansk, nepalesisk, polsk, portugisisk (Brasilien), russisk, slovakisk,
+  slovensk, spansk, tamilsk og tyrkisk.</li>
+</ul>
+<h2>Ændringer i 2.1</h2>
+<ul>
+<li>opdated psutil dependency til version 0.6.1.</li>
+<li>Rettet lang forsinkelse, når man bad om informationer om drev.</li>
+<li>Oprydning i koden.</li>
+</ul>
+<h2>Ændringer i 2.0</h2>
+<ul>
+<li>Tilføjet understøttelse af oversættelse og oversættelseskommentarer.</li>
+</ul>
+<h2>Ændringer i 1.0</h2>
+<ul>
+<li>Første udgivelse</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+<p>[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
+http://addons.nvda-project.org/files/get.php?file=rm-next</p>
+</body>
+</html>
