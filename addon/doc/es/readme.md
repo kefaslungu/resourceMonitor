@@ -42,11 +42,11 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 * Podría haber un pequeño retraso al obtener información de uso del
   procesador.
 
-## Changes for 4.5 ##
+## Cambios para 4.5 ##
 
-* Add-on repository has moved to GitHub (can be found at
+* El repositorio del complemento se ha movido a GitHub (puede encontrarse en
   https://github.com/josephsl/resourcemonitor).
-* Windows Server 2016 is properly recognized.
+* Se reconoce apropiadamente Windows Server 2016.
 
 ## Cambios para 4.0 ##
 
