@@ -39,6 +39,19 @@ def tryTrunk(n):
 	if n==int(n): return int(n)
 	return n
 
+# Record builds to release ID's.
+releaseIDs={
+	10240:("Windows 10Ver1507","Windows Server Tech Preview"),
+	10586:("Windows 10Ver1511","Windows Server Tech Preview"),
+	14393:("Windows 10Ver1607","Windows Server 2016"),
+}
+
+def _win10RID(build, isClient):
+	if build not in releaseIDs:
+		return "Windows 10 Insider" if isClient else "Windows Server Insider"
+	installType = 0 if isClient else 1
+	return releaseIDs[build][installType]
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -157,10 +170,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
 		elif winMajor == 10: # Windows 10/Server 2016 (10.0).
-			if winMinor == 0:
-				# Remove this once WinTen is officially released unless MS decides to update build numbers during automatic updates.
-				winverName = "Windows 10" if server == 1 else "Windows Server 2016"
+				# Also take care of release ID, introduced in Version 1511.
 				buildNum = sys.getwindowsversion().build
+				currentVersion = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
+				ubr = _winreg.QueryValueEx(currentVersion, "UBR")[0] #UBR = Update Build Revision
+				_winreg.CloseKey(currentVersion)
+				winverName = _win10RID(buildNum, server == 1)
+				buildRevision = ".".join([str(buildNum), str(ubr)])
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
 		# Translators: Presented under 32-bit Windows.
@@ -169,7 +185,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not sp: info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion = winverName, cpuBit = x64)
 		# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 		else: info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion = winverName, servicePackLevel = sp, cpuBit = x64)
-		if (winMajor, winMinor) == (10, 0): info = info + " build {build}".format(build = buildNum)
+		if (winMajor, winMinor) == (10, 0): info = info + " build {build}".format(build = buildRevision)
 		return info
 
 	def script_announceWinVer(self, gesture):
