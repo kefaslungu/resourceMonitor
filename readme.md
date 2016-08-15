@@ -5,8 +5,6 @@
 
 This plugin gives information about CPU load, memory usage and other resource usage information.
 
-Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
-
 # Shortcuts #
 
 * NVDA+Shift+E Presents used ram, average processor load, and battery info if available.
@@ -24,6 +22,14 @@ This add-on does not replace task manager and other system information programs 
 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * There might be a short delay when getting processor usage information.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607 for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
