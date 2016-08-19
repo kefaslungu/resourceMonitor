@@ -7,10 +7,6 @@
 Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
 Arbeitsspeicher sowie andere nützliche Ressourcen.
 
-Wichtig: Ressourcen-Monitor 3.1 ist nicht zu NVDA 2013.3 und älter
-kompatibel. Falls Sie die Version 2013.3 oder älter verwenden, nehmen Sie
-bitte die Version 3.0.
-
 # Tastenkürzel #
 
 * NVDA+Umschalt+E gibt den verwendeten Arbeitsspeicher, die ungefähre
@@ -42,6 +38,17 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
   Prozessoren das doppelte der Prozessorkerne.
 * Möglicherweise gibt es eine kurze Verzögerung, während die
   Prozessor-Auslastung ermittelt wird.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -108,5 +115,4 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

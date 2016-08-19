@@ -6,10 +6,6 @@
 Tento doplnok poskytuje informácie o zaťažení procesora, stave pamäte a o
 iných zdrojoch.
 
-Dôležité: Resource Monitor 3.1 nie je kompatibilný s verziou NVDA 2013.3 a
-staršími. Ak používate NVDA 2013.3, alebo niektorú zo starších verzii,
-nainštalujte si Resource monitor 3.0.
-
 # Klávesové skratky #
 
 * NVDA+Shift+E oznámy využitie pamäte ram, priemerné zaťaženie procesora a
@@ -36,6 +32,17 @@ informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
   noticeable for processors which uses Hyper-Threading where number of CPU's
   is twice the number of CPU cores.
 * Získanie informácie o stave procesora môže chvíľu trvať.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -96,5 +103,4 @@ informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

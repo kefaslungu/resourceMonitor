@@ -7,9 +7,6 @@
 This plugin gives information about CPU load, memory usage and other
 resource usage information.
 
-महत्त्वपूर्ण: श्रोत अनुगामी ३.१ नेत्रवाणी २०१३.३ अघिका संस्करणमा चल्दैन ।
-यदी तपाइ यस्ता संस्करण चलाउनु हुन्छ भने श्रोत अनुगामी ३.० चलाउनु होला ।
-
 # द्रुतमार्ग #
 
 * NVDA+Shift+E Presents used ram, average processor load, and battery info
@@ -37,6 +34,17 @@ resource usage information.
   noticeable for processors which uses Hyper-Threading where number of CPU's
   is twice the number of CPU cores.
 * प्रोसेसरको प्रयोग सम्बन्धी जानकारी दिदा केही ढिलो हुन सक्छ ।
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -99,5 +107,4 @@ resource usage information.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

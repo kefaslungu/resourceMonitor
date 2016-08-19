@@ -6,9 +6,6 @@
 Deze add-on geeft informatie over CPU- en geheugengebruik en andere
 statusinformatie.
 
-Belangrijk: Resource Monitor 3.1 is niet compatibel met NVDA 2013.3 of
-ouder. Als u 2013.3 of ouder gebruikt, gebruik dan aub Resource Monitor 3.0.
-
 # Sneltoetsen #
 
 * NVDA+Shift+E geeft gebruikt RAM-geheugen, gemiddeld processorgebruik en
@@ -37,6 +34,17 @@ die systeem informatie geven. Let ook op het volgende:
   is twice the number of CPU cores.
 * Er kan een korte vertraging zijn bij het verkrijgen van informatie over
   het processor-gebruik.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -99,5 +107,4 @@ die systeem informatie geven. Let ook op het volgende:
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

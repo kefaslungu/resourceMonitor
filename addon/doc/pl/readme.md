@@ -6,10 +6,6 @@
 wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM,
 wykorzystaniu innych zasobów.
 
-Ważne: Monitor zasobów 3.1 nie jest kompatybilny z NVDA 2013.3 i
-starszymi. Jeśli używasz 2013.3 lub starszej wersji, używaj Monitora Zasobów
-3.0.
-
 # skróty #
 
 * NVDA+Shift+E raportuje używaną pamięć, średnie obciążenie procesora,
@@ -40,6 +36,17 @@ następujące kwestie:
   is twice the number of CPU cores.
 * Może pojawiać się krótkie opóźnienie przy pobieraniu informacji o użyciu
   procesora.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -101,5 +108,4 @@ następujące kwestie:
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

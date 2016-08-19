@@ -5,10 +5,6 @@
 
 このアドオンはCPU負荷、メモリ使用量などリソースの使用状態を通知します。
 
-重要: Resource Monitor
-3.1はNVDA2013.3以前ではご利用出来ません。2013.3以前のバージョンをお使いの場合は、Resource Monitor
-3.0をお使い下さい。
-
 # キー操作 #
 
 * NVDA+Shift+E メモリ使用量、平均プロセッサー負荷、バッテリーがある場合はその情報も通知します。
@@ -26,6 +22,17 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 
 * CPU負荷は物理コアではなく論理プロセッサーについて示します。これは、CPUの数がCPUコアの数の2倍になるハイパースレッディング対応のCPUで顕著に表れます。
 * CPU負荷情報の取得には時間がかかる場合があります。
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -84,5 +91,4 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

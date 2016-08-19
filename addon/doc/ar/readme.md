@@ -6,10 +6,6 @@
 تعطي هذه الإضافة البرمجية معلومات للمستخدم عنحمولة وحدة المعالجة المركزية,
 استخدام الذاكرة, والمزيد من المعلومات الأخرى حول خصائص النظام.
 
-ملحوظة هامة: الإصدار 3.1 من الإضافة غير متوافق مع الإصدار 2013.3 من NvDA وما
-قبله. إذا كنت تستخدم الإصدار 2013.3 أو ما قبله, يرجى استخدام Resource
-Monitor 3.0.
-
 # مفاتيح الاختصار #
 
 * NVDA+Shift+E يعطي معلومات عن الذاكرة العشوائية المستخدمة, متوسط حمولة
@@ -38,6 +34,17 @@ Monitor 3.0.
   التشاعبي (Hyper Threading) والتي فيها يكون رقم وحدة المعالجة المركزية هو
   ضعف رقم نوى وحدة المعالجة المركزية. 
 * ربما تلاحظ التأخر بعض الوقت عند الحصول على معلومات استخدام المعالج.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -99,5 +106,4 @@ Monitor 3.0.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

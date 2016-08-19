@@ -7,10 +7,6 @@
 Este plugin danos información acerca da carga da CPU, do uso da memoria e
 outras informacións de uso dos recursos.
 
-Importante: Resource Monitor 3.1 non é compatible co NVDA 2013.3 ou
-anterior. Se utilizas 2013.3 ou anterior, porfavor utiliza Resource Monitor
-3.0.
-
 # Atallos de teclado #
 
 * NVDA+Shift+E Presenta a ram utilizada, a carga media do procesador, e
@@ -40,6 +36,17 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   onde o número de CPUs é o dobre do número de núcleos de CPU.
 * Podería haber un pequeno retraso ó obter información sobre o uso do
   procesador.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Cambios para 4.5 ##
 
@@ -103,5 +110,4 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

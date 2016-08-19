@@ -7,10 +7,6 @@
 Ce module complémentaire donne la charge du CPU, l'utilisation de la mémoire
 et autres informations d'utilisation de ressource.
 
-Important : Resource Monitor 3.1 n'est pas compatible avec NVDA 2013.3 ou
-une version antérieure. Si vous utilisez une version 2013.3 ou une version
-antérieure s'il vous plaît utiliser Resource Monitor 3.0.
-
 # Raccourcis #
 
 * NVDA+Maj+E Présente l'espace de mémoire utilisée, la charge moyenne du
@@ -42,6 +38,18 @@ suit :
   coeurs du processeur.
 * Il pourrait y avoir un léger retard lors de l'obtention des informations
   d'utilisation du processeur.
+
+## Version 16.08
+
+À partir de la version 16.08, les publications pour le module complémentaire
+sera affiché comme year.month.revision.
+
+* Diverses révisions de Windows 10 sont maintenant correctement reconnues
+  (tels que la 1607 pour la build 14393).
+* Windows 10 build revisions (après l'installation des mises à jour
+  cumulatives) sont correctement reconnues (tels que la 14393.51).
+* Si en utilisant la build Insider Preview, ceci est sûr qui va être
+  reconnu.
 
 ## Changements pour la version 4.5 ##
 
@@ -106,5 +114,4 @@ suit :
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

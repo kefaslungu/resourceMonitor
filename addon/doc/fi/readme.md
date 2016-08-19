@@ -6,10 +6,6 @@
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta, muistin käytöstä sekä
 muista resursseista.
 
-Tärkeää: Resurssienvalvonta 3.1 ei ole yhteensopiva NVDA 2013.3:n tai sitä
-vanhempien versioiden kanssa. Jos käytät versiota 2013.3 tai sitä vanhempaa,
-sinun on käytettävä Resurssienvalvonnan 3.0-versiota.
-
 # Pikanäppäimet #
 
 * NVDA+Shift+E: Lukee käytetyn RAM-muistin määrän, suorittimen
@@ -38,6 +34,17 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   ytimille. Tällä on merkitystä Hyper Threading -teknologiaa käyttävissä
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Suoritinkäytön tietoja haettaessa saattaa olla pieni viive.
+
+## Versio 16.08
+
+Lisäosan versionumerot ovat Versiosta 16.08 alkaen muotoa
+vuosi.kuukausi.tarkistusversio.
+
+* Windows 10:n eri versiot tunnistetaan nyt oikein (kuten 1607
+  koontiversiossa 14393).
+* Windows 10:n koontiversiot tunnistetaan oikein kumulatiivisten päivitysten
+  asentamisen jälkeen (kuten 14393.51).
+* Insider-esiversiot tunnistetaan oikein.
 
 ## Muutokset versiossa 4.5 ##
 
@@ -101,5 +108,4 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm

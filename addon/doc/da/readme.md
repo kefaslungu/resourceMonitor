@@ -7,10 +7,6 @@
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
 
-Vigtigt: Resource Monitor 3.1 er ikke kompatibel med NVDA 2013.3 eller
-tidligere. Hvis du bruger NVDA 2013.3 eller tidligere, så brug venligst
-Resource Monitor 3.0.
-
 # Genvejstaster  #
 
 * NVDA+Shiftj+e viser brugt RAM, gennemsnitlig processorbelastning og
@@ -39,6 +35,17 @@ systemoplysninger.
   af processoerkerner.
 * Der kan være en kort forsinkelse, når man beder om oplysninger om brug af
   processor.
+
+## Version 16.08
+
+Starting with version 16.08, add-on releases will be shown as
+year.month.revision.
+
+* Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).
+* Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).
+* If using Insider Preview builds, this fact is recognized.
 
 ## Changes for 4.5 ##
 
@@ -102,5 +109,4 @@ systemoplysninger.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm [2]:
-http://addons.nvda-project.org/files/get.php?file=rm-next
+[1]: http://addons.nvda-project.org/files/get.php?file=rm
