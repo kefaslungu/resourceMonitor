@@ -37,16 +37,16 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 * Podería haber un pequeno retraso ó obter información sobre o uso do
   procesador.
 
-## Version 16.08
+## Versión 16.08
 
-Starting with version 16.08, add-on releases will be shown as
-year.month.revision.
+Comezando ca versión 16.08, as versións do complemento amosaranse como
+ano.mes.revisión.
 
-* Various revisions of Windows 10 are now properly recognized (such as 1607
-  for build 14393).
-* Windows 10 build revisions (after installing cumulative updates) are
-  properly recognized (such as 14393.51).
-* If using Insider Preview builds, this fact is recognized.
+* Agora recoñécense apropriadamente varias revisións do Windows 10 (como
+  1607 para a compilación 14393).
+* As compilacións de revisións do Windows 10 (despois de instalar
+  actualizacións acumulativass) recoñécense apropriadamente (como 14393.51).
+* Se usas compilacións Insider Preview, este feito recoñécese.
 
 ## Cambios para 4.5 ##
 
