@@ -1,12 +1,15 @@
 #Resource Monitor for NvDA
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
 #Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run).
-# Copyright 2013-2016, released under GPL.
+# Copyright 2013-2017, released under GPL.
 
 import _winreg
-import globalPluginHandler, ui, api, scriptHandler
 import sys
 import os
+import globalPluginHandler
+import ui
+import api
+import scriptHandler
 impPath = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(impPath)
 import psutil
@@ -14,11 +17,6 @@ del sys.path[-1]
 import battery
 import addonHandler
 addonHandler.initTranslation()
-
-# 2013.3 or later: is gesture reassignment possible?
-try:
-	from baseObject import ScriptableObject # 2013.3 or later.
-except: notImplementedError # 2013.2 or earlier.
 
 def toBiggestBytes(n, x=2, useLongNames=False):
 	#returns a string where n, rounded to x, is in the largest logical measure possible
@@ -39,7 +37,7 @@ def tryTrunk(n):
 	if n==int(n): return int(n)
 	return n
 
-# Record builds to release ID's.
+# Record Windows 10 builds to release ID's.
 releaseIDs={
 	10240:("Windows 10Ver1507","Windows Server Tech Preview"),
 	10586:("Windows 10Ver1511","Windows Server Tech Preview"),
