@@ -58,11 +58,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented when a resource summary is copied to clipboard.
 	RMCopyMessage = _("Resource summary copied to clipboard")
 
-	# Two functions will be used for each summary info: the script driver and the message getter as shown below.
-
-	def getBatteryInfo(self):
-		info=""
-		#returns nothing, but sets vars we can now inspect
+	def script_announceBatteryInfo(self, gesture):
 		battery.getInfo()
 		if battery.noBattery:
 			# Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
@@ -79,10 +75,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif battery.critical:
 				# Translators: Message reported when battery level is critical.
 				info+=_(" Warning: battery is critically low.")
-		return info
-
-	def script_announceBatteryInfo(self, gesture):
-		info=self.getBatteryInfo()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -90,45 +82,35 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Input help message about battery info command in Resource Monitor.
 	script_announceBatteryInfo.__doc__=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.")
 
-	def getDriveInfo(self):
+	def script_announceDriveInfo(self, gesture):
 		#goes through all registered drives and gives info on each one
-		info=""
-		#get all registered drives
+		info = []
 		for drive in psutil.disk_partitions():
 			try:
 				#get info on each one
 				driveInfo=psutil.disk_usage(drive[0])
 				# Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-				info+=_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%. ").format(driveName=drive[0], driveType=drive[2], usedSpace=toBiggestBytes(tryTrunk(driveInfo[1])), totalSpace=toBiggestBytes(tryTrunk(driveInfo[0])), percent=tryTrunk(driveInfo[3]))
+				info.append(_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(driveName=drive[0], driveType=drive[2], usedSpace=toBiggestBytes(tryTrunk(driveInfo[1])), totalSpace=toBiggestBytes(tryTrunk(driveInfo[0])), percent=tryTrunk(driveInfo[3])))
 			except:
 				pass
-		return info
-
-	def script_announceDriveInfo(self, gesture):
-		#goes through all registered drives and gives info on each one
-		info= self.getDriveInfo()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(info)
+			ui.message(" ".join(info))
 		else:
-			if api.copyToClip(info): ui.message(self.RMCopyMessage)
+			if api.copyToClip(" ".join(info)): ui.message(self.RMCopyMessage)
 	# Translators: Input help message about drive info command in Resource Monitor.
 	script_announceDriveInfo.__doc__=_("Presents the used and total space of the static and removable drives on this computer.")
 
-	def getProcessorInfo(self):
+	def script_announceProcessorInfo(self, gesture):
 		cores=psutil.NUM_CPUS #number of cores
 		averageLoad=psutil.cpu_percent()
 		#lists load for each core
 		perCpuLoad=psutil.cpu_percent(percpu=True)
-		coreLoad=""
+		coreLoad = []
 		for i in range(len(perCpuLoad)):
 			# Translators: Shows average load of CPU cores (example: core 1, 50%).
-			coreLoad+=_("Core {coreNumber}: {corePercent}%. ").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i]))
+			coreLoad.append(_("Core {coreNumber}: {corePercent}%").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i])))
 		# Translators: Shows average load of the processor and the load for each core.
-		info=_("Average CPU load {avgLoad}%, {cores}").format(avgLoad=tryTrunk(averageLoad), cores=coreLoad)
-		return info
-
-	def script_announceProcessorInfo(self, gesture):
-		info= self.getProcessorInfo()
+		info=_("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -136,17 +118,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Input help mode message about processor info command in Resource Monitor.
 	script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
-	def getRamInfo(self):
+	def script_announceRamInfo(self, gesture):
 		ram=psutil.phymem_usage()
 		# Translators: Shows RAM (physical memory) usage.
 		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=toBiggestBytes(tryTrunk(ram[3])), physicalTotal=toBiggestBytes(tryTrunk(ram[0])), physicalPercent=tryTrunk(ram[2]))
 		virtualRam=psutil.virtmem_usage()
 		# Translators: Shows virtual memory usage.
 		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=toBiggestBytes(tryTrunk(virtualRam[1])), virtualTotal=toBiggestBytes(tryTrunk(virtualRam[0])), virtualPercent=tryTrunk(virtualRam[3]))
-		return info
-
-	def script_announceRamInfo(self, gesture):
-		info=self.getRamInfo()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -196,23 +174,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_announceWinVer.__doc__=_("Announces the version of Windows you are using.")
 
 	def script_announceResourceSummary(self, gesture):
-		cpuLoad=psutil.cpu_percent()
-		ram=psutil.phymem_usage()
-		freeRam=ram[2]
+		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-		info=(_("{ramPercent}% RAM used, CPU at {cpuPercent}%. ").format(ramPercent=tryTrunk(freeRam), cpuPercent=tryTrunk(cpuLoad)))
+		info = [(_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(ramPercent=tryTrunk(psutil.phymem_usage()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())))]
 		battery.getInfo()
 		if not battery.noBattery and not battery.batteryStatusUnknown and not battery.onBatteryUnknown:
-			if not battery.onBattery: info+=_("{percent}%, battery charging.").format(percent=tryTrunk(battery.percentage))
+			if not battery.onBattery: info.append(_("{percent}%, battery charging.").format(percent=tryTrunk(battery.percentage)))
 			elif battery.onBattery:
 				#discharging battery, so provide info on it
-				info+=_("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(battery.percentage), time=battery.timeLeft)
+				info.append(_("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(battery.percentage), time=battery.timeLeft))
 				if battery.low:
-					info+=_(" Warning: low battery.")
+					info.append(_(" Warning: low battery."))
 				elif battery.critical:
 					# Translators: In addition to processor and memory usage, presented when battery is low.
-					info+=_(" Warning: critically low battery.")
-		ui.message(info)
+					info.append(_(" Warning: critically low battery."))
+		ui.message(" ".join(info))
 	# Translators: Input help mode message about overall system resource info command in Resource Monitor
 	script_announceResourceSummary.__doc__=_("Presents used ram, average processor load, and battery info if available.")
 
