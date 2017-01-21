@@ -86,13 +86,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		#goes through all registered drives and gives info on each one
 		info = []
 		for drive in psutil.disk_partitions():
-			try:
-				#get info on each one
+			#get info on each one
+			# If and only if the Windows says disk is ready in order to avoid a core stack freeze when no disk is inserted into a slot.
+			# This can be checked by looking for a file system.
+			if drive.fstype:
 				driveInfo=psutil.disk_usage(drive[0])
 				# Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 				info.append(_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(driveName=drive[0], driveType=drive[2], usedSpace=toBiggestBytes(tryTrunk(driveInfo[1])), totalSpace=toBiggestBytes(tryTrunk(driveInfo[0])), percent=tryTrunk(driveInfo[3])))
-			except:
-				pass
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
 		else:
