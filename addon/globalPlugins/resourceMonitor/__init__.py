@@ -101,7 +101,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_announceDriveInfo.__doc__=_("Presents the used and total space of the static and removable drives on this computer.")
 
 	def script_announceProcessorInfo(self, gesture):
-		cores=psutil.NUM_CPUS #number of cores
+		cores=psutil.cpu_count() #number of cores
 		averageLoad=psutil.cpu_percent()
 		#lists load for each core
 		perCpuLoad=psutil.cpu_percent(percpu=True)
@@ -119,10 +119,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
 	def script_announceRamInfo(self, gesture):
-		ram=psutil.phymem_usage()
+		ram=psutil.virtual_memory()
 		# Translators: Shows RAM (physical memory) usage.
 		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=toBiggestBytes(tryTrunk(ram[3])), physicalTotal=toBiggestBytes(tryTrunk(ram[0])), physicalPercent=tryTrunk(ram[2]))
-		virtualRam=psutil.virtmem_usage()
+		virtualRam=psutil.swap_memory()
 		# Translators: Shows virtual memory usage.
 		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=toBiggestBytes(tryTrunk(virtualRam[1])), virtualTotal=toBiggestBytes(tryTrunk(virtualRam[0])), virtualPercent=tryTrunk(virtualRam[3]))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
