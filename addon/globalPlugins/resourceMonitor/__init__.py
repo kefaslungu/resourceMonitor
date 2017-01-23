@@ -176,7 +176,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceResourceSummary(self, gesture):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-		info = [(_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(ramPercent=tryTrunk(psutil.phymem_usage()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())))]
+		info = [(_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())))]
 		battery.getInfo()
 		if not battery.noBattery and not battery.batteryStatusUnknown and not battery.onBatteryUnknown:
 			if not battery.onBattery: info.append(_("{percent}%, battery charging.").format(percent=tryTrunk(battery.percentage)))
