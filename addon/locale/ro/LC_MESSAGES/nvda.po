@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2016-07-20 23:26+0300\n"
+"PO-Revision-Date: 2017-01-16 21:41+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.8.9\n"
 "Language-Team: \n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -107,7 +107,7 @@ msgstr ""
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Prezintă nivelurile de încăracre folosit și total atât pentru memoria RAM "
+"Prezintă nivelurile de încărcare folosit și total atât pentru memoria RAM "
 "fizică cât și pentru cea virtuală."
 
 #. Translators: Presented under 64-bit Windows.
