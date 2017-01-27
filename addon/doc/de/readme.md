@@ -36,8 +36,15 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
   physische Kerne ausgegeben. Dies ist bei Prozessoren bemerkbar, welche
   Hyper Threading verwenden. Bei diesen Prozessoren ist die Anzahl der
   Prozessoren das doppelte der Prozessorkerne.
-* Möglicherweise gibt es eine kurze Verzögerung, während die
-  Prozessor-Auslastung ermittelt wird.
+* If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.
+
+## Version 17.02
+
+* Updated psutil dependency to 5.0.1.
+* When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)
 
 ## Version 16.08
 

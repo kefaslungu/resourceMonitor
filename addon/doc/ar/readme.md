@@ -33,7 +33,15 @@
   وليست للنوى المادية. ويلاحظ هذا بشكل واضح للمعالجات التي تستخدم الخيط
   التشاعبي (Hyper Threading) والتي فيها يكون رقم وحدة المعالجة المركزية هو
   ضعف رقم نوى وحدة المعالجة المركزية. 
-* ربما تلاحظ التأخر بعض الوقت عند الحصول على معلومات استخدام المعالج.
+* If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.
+
+## Version 17.02
+
+* Updated psutil dependency to 5.0.1.
+* When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)
 
 ## Version 16.08
 

@@ -21,7 +21,15 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 このアドオンはタスクマネージャーやWindowsのシステム情報プログラムの代替ではありません。以下をお読みください：
 
 * CPU負荷は物理コアではなく論理プロセッサーについて示します。これは、CPUの数がCPUコアの数の2倍になるハイパースレッディング対応のCPUで顕著に表れます。
-* CPU負荷情報の取得には時間がかかる場合があります。
+* If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.
+
+## Version 17.02
+
+* Updated psutil dependency to 5.0.1.
+* When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)
 
 ## Version 16.08
 

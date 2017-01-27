@@ -35,8 +35,15 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   físicos. Esto es perceptible para los procesadores que utilizan Hyper
   Threading donde el número de CPUs es el doble del número de núcleos de
   CPU.
-* Podría haber un pequeño retraso al obtener información de uso del
-  procesador.
+* If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.
+
+## Version 17.02
+
+* Updated psutil dependency to 5.0.1.
+* When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)
 
 ## Versión 16.08
 

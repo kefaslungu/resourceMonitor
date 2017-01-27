@@ -35,7 +35,15 @@ Windows-os programot. Fontos megjegyezni a következőket:
   fizikai magok szerint. Ez azoknál a processzoroknál észrevehető, amelyek a
   Hyper Threading technológiát használják, ahol a processzorok száma
   kétszerese a magszámnak.
-* Egy kis időbe tellhet a processzor terheltségének lekérése.
+* If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.
+
+## Version 17.02
+
+* Updated psutil dependency to 5.0.1.
+* When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)
 
 ## Version 16.08
 

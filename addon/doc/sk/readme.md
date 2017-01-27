@@ -31,7 +31,15 @@ informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 * CPU usage is given for logical processors, not physical cores. This is
   noticeable for processors which uses Hyper-Threading where number of CPU's
   is twice the number of CPU cores.
-* Získanie informácie o stave procesora môže chvíľu trvať.
+* If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.
+
+## Version 17.02
+
+* Updated psutil dependency to 5.0.1.
+* When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)
 
 ## Version 16.08
 

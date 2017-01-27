@@ -33,7 +33,15 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 * Suorittimen käyttö ilmoitetaan loogisille suorittimille, ei fyysisille
   ytimille. Tällä on merkitystä Hyper Threading -teknologiaa käyttävissä
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
-* Suoritinkäytön tietoja haettaessa saattaa olla pieni viive.
+* Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
+  kuten suurten tiedostojen kopiointia, on runsaasti.
+
+## Versio 17.02
+
+* Päivitetty psutil-riippuvuus versioksi 5.0.1.
+* NVDA ei enää näytä levynkäyttötietoja tarkistettaessa virheilmoitusta
+  järjestelmissä, joissa siirrettävää tietovälinettä ei tunnistettu oikein
+  (esim. kun muistikorttia ei ole asetettu kortinlukijaan).
 
 ## Versio 16.08
 

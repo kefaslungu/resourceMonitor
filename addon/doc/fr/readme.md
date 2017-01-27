@@ -36,8 +36,17 @@ suit :
   physiques. Cela est perceptible pour les processeurs qui utilise la
   technologie Hyper Threading où le nombre de CPU est deux fois le nombre de
   coeurs du processeur.
-* Il pourrait y avoir un léger retard lors de l'obtention des informations
-  d'utilisation du processeur.
+* Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
+  il peut y avoir des retards lors de l'obtention d'informations sur
+  l'utilisation du disque.
+
+## Version 17.02
+
+* Mise à jour de la dépendance psutil vers la version 5.0.1.
+* Lors de la vérification de l'utilisation du disque, NVDA ne présentera
+  plus de boîte de dialogue d'erreur sur certains systèmes où un support
+  amovible n'est pas correctement reconnu (par exemple lorsqu'une carte
+  n'est pas insérée dans un lecteur de carte).)
 
 ## Version 16.08
 
