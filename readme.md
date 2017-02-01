@@ -21,7 +21,12 @@ If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
-* There might be a short delay when getting processor usage information.
+* If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
+
+## Version 17.02
+
+* Updated psutil dependency to 5.0.1.
+* When checking disk usage, NVDA will no longer present an error dialog on some systems where a removable media is not properly recognized (such as when a card isn't inserted into a card reader).)
 
 ## Version 16.08
 
