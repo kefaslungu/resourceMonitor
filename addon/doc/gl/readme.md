@@ -34,15 +34,15 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 * O Uso da CPU dase para os procesadores lóxicos, non para os núcleos
   físicos. Isto é perceptible para os procesadores que usan Hyper Threading
   onde o número de CPUs é o dobre do número de núcleos de CPU.
-* If there is heavy disk activity such as copying large files, there might
-  be delays when obtaining disk usage information.
+* Se hai unha actividade pesada de disco coma o copiado de ficheiros longos,
+  podería haber retrasos ao obter información de uso do disco.
 
-## Version 17.02
+## Versión 17.02
 
-* Updated psutil dependency to 5.0.1.
-* When checking disk usage, NVDA will no longer present an error dialog on
-  some systems where a removable media is not properly recognized (such as
-  when a card isn't inserted into a card reader).)
+* Actualizado psutil dependency a 5.0.1.
+* Cando se verifica o uso de disco, NVDA xa non presenta un diálogo de erro
+  nalgúns sistemas onde non se recoñece apropriadamente un medio extraíble
+  (como cando unha tarxeta non se inserta nun lector de tarxetas).)
 
 ## Versión 16.08
 

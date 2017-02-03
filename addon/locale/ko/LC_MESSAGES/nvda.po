@@ -18,8 +18,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "리소스 모니터"
 
@@ -32,11 +32,13 @@ msgid "This computer does not have a battery connected."
 msgstr "사용자 컴퓨터에 베터리가 없습니다."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, 베터리 중전중."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% 베터리 남음, {time} 사용 가능."
 
@@ -57,9 +59,9 @@ msgstr ""
 "다."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, fuzzy, python-brace-format
 msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
-"{percent}%. "
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
 "{driveName} ({driveType} 드라이브): 총 {totalSpace} 중 {usedSpace} 사용중 "
 "{percent}%. "
@@ -71,11 +73,13 @@ msgid ""
 msgstr "내장 및 확장 드라이브의 사용 공간 및 전체 공간을 알려줍니다."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-msgid "Core {coreNumber}: {corePercent}%. "
+#, fuzzy, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Core {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-msgid "Average CPU load {avgLoad}%, {cores}"
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "평균 프로세서 사용률 {avgLoad}%, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
@@ -83,11 +87,13 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "프로세서와 각 프로세서 코어의 사용률을 알려줍니다."
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "RAM: 총 {physicalTotal} 중 {physicalUsed} 사용중 ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용중 ({virtualPercent}%)."
@@ -96,11 +102,6 @@ msgstr ""
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "물리 (RAM) 및 가상 메모리의 사용 공간 및 총 메모리를 알려줍니다."
 
-#. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-#. Vista.
-#. Windows 7
-#. Windows 8.
-#. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
 msgstr "64비트"
@@ -110,10 +111,12 @@ msgid "32-bit"
 msgstr "32비트"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "윈도우 버전: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "윈도우 버전: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -121,8 +124,10 @@ msgstr "윈도우 버전: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "사용중인 윈도우 버전을 알려줍니다."
 
+#. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
+#, fuzzy, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
@@ -151,7 +156,7 @@ msgid " minutes"
 msgstr "분"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."

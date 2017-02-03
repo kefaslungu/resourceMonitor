@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on description
-#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Monitor de recursos"
 
@@ -34,11 +34,13 @@ msgid "This computer does not have a battery connected."
 msgstr "Este computador não possui bateria acoplada."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, carregando bateria."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Restam {percent}% da bateria, cerca de {time}."
 
@@ -59,9 +61,9 @@ msgstr ""
 "estiver carregando) e alerta caso a bateria esteja baixa ou crítica."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, fuzzy, python-brace-format
 msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used "
-"{percent}%. "
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
 "{driveName} (unidade {driveType}): em uso {usedSpace} de {totalSpace}, "
 "{percent}%. "
@@ -75,11 +77,13 @@ msgstr ""
 "computador."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-msgid "Core {coreNumber}: {corePercent}%. "
+#, fuzzy, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Núcleo {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-msgid "Average CPU load {avgLoad}%, {cores}"
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Carga média da CPU {avgLoad}%, {cores}"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
@@ -87,11 +91,13 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "Mostra a carga média do processador e a carga de cada núcleo."
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Físico: em uso {physicalUsed} de {physicalTotal} ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: em uso {virtualUsed} de {virtualTotal} ({virtualPercent}%)."
 
@@ -99,11 +105,6 @@ msgstr "Virtual: em uso {virtualUsed} de {virtualTotal} ({virtualPercent}%)."
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Mostra espaço em uso e total da memória física e da virtual."
 
-#. Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-#. Vista.
-#. Windows 7
-#. Windows 8.
-#. Windows 8.1.
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
 msgstr "64-bit"
@@ -113,10 +114,12 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "Versão de Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Versão de Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -124,8 +127,10 @@ msgstr "Versão de Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Anuncia a versão de Windows que você usa."
 
+#. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%. "
+#, fuzzy, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% de RAM em uso, CPU a {cpuPercent}%. "
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
@@ -156,7 +161,7 @@ msgid " minutes"
 msgstr " minutos"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
