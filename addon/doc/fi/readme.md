@@ -39,7 +39,7 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 ## Versio 17.02
 
 * Päivitetty psutil-riippuvuus versioksi 5.0.1.
-* NVDA ei enää näytä levynkäyttötietoja tarkistettaessa virheilmoitusta
+* NVDA ei näytä enää virheilmoitusta levynkäyttötietoja tarkistettaessa
   järjestelmissä, joissa siirrettävää tietovälinettä ei tunnistettu oikein
   (esim. kun muistikorttia ei ole asetettu kortinlukijaan).
 

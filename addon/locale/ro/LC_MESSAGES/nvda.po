@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2017-01-16 21:41+0200\n"
+"PO-Revision-Date: 2017-02-03 12:19+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
@@ -60,12 +60,12 @@ msgstr ""
 "extrem de scăzut."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} (unitate {driveType}): {usedSpace} din {totalSpace} folosit "
-"{percent}%. "
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} utilizat "
+"{percent}%."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
@@ -76,14 +76,14 @@ msgstr ""
 "pe acest calculator."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "Nucleu {coreNumber}: {corePercent}%. "
+msgstr "Nucleu {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Nivel mediu de încărcare CPU {avgLoad}%, {cores}"
+msgstr "Încărcarea medie Unității centrale de prelucrare {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -133,9 +133,9 @@ msgstr "Anunță versiunea de Windows pe care o folosiți."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% RAM folosit, CPU la {cpuPercent}%. "
+msgstr "{ramPercent}% RAM folosit, procesor la {cpuPercent}%."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
