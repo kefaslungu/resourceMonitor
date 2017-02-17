@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-04 18:03+0000\n"
-"PO-Revision-Date: 2016-02-26 02:47-0800\n"
+"PO-Revision-Date: 2017-02-11 11:40+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "இந்தக் கணினியில் மின்கலம் இணைக்கப்படவில்லை"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, மின்கலத்தில் மின்சாரம் ஏற்றப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "மின்கலத்தில் {percent}% மின்சாரம் ஏற்றப்பட வேண்டியுள்ளது, சுமார் {time}."
 
@@ -60,11 +58,10 @@ msgstr ""
 "எச்சரித்தல் ஆகிய பணிகளை செய்கிறது "
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} இயக்ககம்): {usedSpace}, மொத்தம் {totalSpace} {percent}% "
+"{driveName} ({driveType} இயக்ககம்): {usedSpace}, {totalSpace}ல் {percent}% "
 "பயன்படுத்தப்பட்டுள்ளது. "
 
 #. Translators: Input help message about drive info command in Resource Monitor.
@@ -76,12 +73,10 @@ msgstr ""
 "இடம் ஆகியவைகளை அறிவிக்கும்"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "கூறு {coreNumber}: {corePercent}%. "
+msgstr "கூறு {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%, {cores}."
 
@@ -90,14 +85,12 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "செயலியின் சராசரி சுமையையும், ஒவ்வொரு கூறின் சுமையையும் அறிவிக்கிறது."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
@@ -118,12 +111,10 @@ msgid "32-bit"
 msgstr "32-நுண்மி"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "விண்டோஸ் பதிப்பு: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "விண்டோஸ் பதிப்பு: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -133,7 +124,6 @@ msgstr "தாங்கள் பயன்படுத்தும் சாள�
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
 
