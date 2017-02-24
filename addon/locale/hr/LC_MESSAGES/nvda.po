@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-13 10:32+0100\n"
-"PO-Revision-Date: 2016-02-26 01:53-0800\n"
-"Last-Translator: Hrvoje Katić <hrvojekatic@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-02-21 20:08+0100\n"
+"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"Language-Team: hr <LL@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -59,12 +59,12 @@ msgstr ""
 "puni) te upozorenje ukoliko je baterija slaba ili skoro prazna."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} pogon): korišteno {usedSpace} od {totalSpace} "
-"{percent}%. "
+"{driveName} ({driveType} drive): {usedSpace} od {totalSpace} iskorišteno "
+"{percent}%."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
@@ -75,14 +75,14 @@ msgstr ""
 "na ovom računalu."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "Jezgra {coreNumber}: {corePercent}%. "
+msgstr "jezgra {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Prosječno CPU opterećenje je {avgLoad}%, {cores}"
+msgstr "prosjek pokretanja cpu {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -133,9 +133,9 @@ msgstr "Najavljuje inačicu Windows sustava koju koristite."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% korišteno RAM memorije, CPU je na {cpuPercent}%. "
+msgstr "{ramPercent}% iskorišteno ram-a, CPU na {cpuPercent}%."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
