@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2016-08-01 23:02-0800\n"
+"PO-Revision-Date: 2017-02-25 17:17-0800\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -32,13 +32,11 @@ msgid "This computer does not have a battery connected."
 msgstr "사용자 컴퓨터에 베터리가 없습니다."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, 베터리 중전중."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% 베터리 남음, {time} 사용 가능."
 
@@ -59,7 +57,6 @@ msgstr ""
 "다."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -73,12 +70,10 @@ msgid ""
 msgstr "내장 및 확장 드라이브의 사용 공간 및 전체 공간을 알려줍니다."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Core {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "평균 프로세서 사용률 {avgLoad}%, {cores}"
 
@@ -87,13 +82,11 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "프로세서와 각 프로세서 코어의 사용률을 알려줍니다."
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "RAM: 총 {physicalTotal} 중 {physicalUsed} 사용중 ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용중 ({virtualPercent}%)."
@@ -111,12 +104,10 @@ msgid "32-bit"
 msgstr "32비트"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "윈도우 버전: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "윈도우 버전: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -126,7 +117,6 @@ msgstr "사용중인 윈도우 버전을 알려줍니다."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
 
