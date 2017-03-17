@@ -35,15 +35,17 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
   fizice. Acest lucru este vizibil pentru procesoare care utilizează
   Hyper-Threading în cazul în care numărul de procesoare este de două ori
   mai mare decât numărul de nuclee CPU.
-* If there is heavy disk activity such as copying large files, there might
-  be delays when obtaining disk usage information.
+* În cazul în care există o activitate grea pe disc, cum ar fi copierea
+  fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
+  informațiilor de utilizare a discului.
 
-## Version 17.02
+## Versiunea 17.02
 
-* Updated psutil dependency to 5.0.1.
-* When checking disk usage, NVDA will no longer present an error dialog on
-  some systems where a removable media is not properly recognized (such as
-  when a card isn't inserted into a card reader).)
+* Actualizat la dependența psutil 5.0.1.
+* La verificarea utilizării discului, NVDA nu va mai prezenta un dialog de
+  eroare pe unele sisteme unde un media eliminabil nu este recunoscut
+  corespunzător (cum ar fi atunci când un card nu este inserat într-un
+  cititor de card).)
 
 ## Versiunea 16.08
 
