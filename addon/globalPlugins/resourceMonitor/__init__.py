@@ -42,6 +42,7 @@ releaseIDs={
 	10240:("Windows 10Ver1507","Windows Server Tech Preview"),
 	10586:("Windows 10Ver1511","Windows Server Tech Preview"),
 	14393:("Windows 10Ver1607","Windows Server 2016"),
+	15063:("Windows 10Ver1703","Windows Server 1703"),
 }
 
 def _win10RID(build, isClient):
