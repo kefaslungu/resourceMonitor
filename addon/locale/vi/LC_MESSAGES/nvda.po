@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the resourceMonitor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: resourceMonitor 17.02\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2017-02-03 18:05+1000\n"
+"PO-Revision-Date: 2017-03-25 19:28+0700\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Dang Hoai Phuc <danghoaiphuc@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.12\n"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Theo Dõi Tài Nguyên"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Đã chép thông tin tóm tắt của tài liệu lên bộ nhớ tạm"
+
+#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+msgid "This computer does not have a battery connected."
+msgstr "Máy tính bạn không có sử dụng pin"
+
+#. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#, python-brace-format
+msgid "{percent}%, battery charging."
+msgstr "Đang sạc pin, {percent}%. "
+
+#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+#. discharging battery, so provide info on it
+#, python-brace-format
+msgid "{percent}% battery remaining, about {time}."
+msgstr "Pin còn {percent}%, khoảng {time}."
+
+#. Translators: Message reported when battery level is low.
+msgid " Warning: low battery."
+msgstr " Cảnh báo: pin yếu."
+
+#. Translators: Message reported when battery level is critical.
+msgid " Warning: battery is critically low."
+msgstr " Cảnh báo: gần hết pin."
+
+#. Translators: Input help message about battery info command in Resource Monitor.
+msgid ""
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
+msgstr ""
+"Thông báo tình trạng pin, ví dụ như đang sạc, thời gian còn lại, tình trạng "
+"pin yếu hoặc khi gần hết pin."
+
+#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr ""
+"{driveName} (ổ đĩa {driveType}): {usedSpace} của {totalSpace} được sử dụng "
+"{percent}%."
+
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Thông báo không gian lưu trữ tổng và không gian đã sử dụng của ổ đĩa được "
+"kết nối với máy."
+
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%"
+msgstr "Nhân {coreNumber}: {corePercent}%"
+
+#. Translators: Shows average load of the processor and the load for each core.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}."
+msgstr "Tải trung bình của CPU {avgLoad}%, {cores}."
+
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "Thông báo tình trạng tải trung bình của bộ xử lý và của mỗi nhân."
+
+#. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr ""
+"Vật lý: {physicalUsed} của {physicalTotal} được sử dụng "
+"({physicalPercent}%). "
+
+#. Translators: Shows virtual memory usage.
+#, python-brace-format
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr "Ảo: {virtualUsed} của {virtualTotal} được sử dụng ({virtualPercent}%)."
+
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "Thông báo tình trạng bộ nhớ RAM vật lý và ảo."
+
+#. Translators: Presented under 64-bit Windows.
+msgid "64-bit"
+msgstr "64-bit"
+
+#. Translators: Presented under 32-bit Windows.
+msgid "32-bit"
+msgstr "32-bit"
+
+#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+#, python-brace-format
+msgid "Windows version: {winVersion} ({cpuBit})"
+msgstr "Phiên bản Windows: {winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
+msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Phiên bản Windows: {winVersion} {servicePackLevel} ({cpuBit})"
+
+#. Translators: Input help mode message about Windows version command in Resource Monitor.
+msgid "Announces the version of Windows you are using."
+msgstr "Thông báo phiên bản Windows bạn đang sử dụng."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% RAM được sử dụng, {cpuPercent}% CPU được tải."
+
+#. Translators: In addition to processor and memory usage, presented when battery is low.
+msgid " Warning: critically low battery."
+msgstr " Cảnh báo: gần sắp hết pin."
+
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr "Thông báo tình trạng pin, bộ nhớ RAM và tốc độ tải trung bình của CPU"
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " giờ, "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " giờ, "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " phút"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " phút"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
+msgstr ""
+"Add-on này dùng để thông báo tình trạng sử dụng các thiết bị của máy, bao "
+"gồm: CPU, RAM, ổ đĩa và pin."
