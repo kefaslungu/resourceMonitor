@@ -1,6 +1,6 @@
 [[!meta title="Resource Monitor"]]
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili and other NVDA contributors
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other NVDA contributors
 * Download [stable version][1]
 
 This plugin gives information about CPU load, memory usage and other resource usage information.
@@ -13,6 +13,7 @@ This plugin gives information about CPU load, memory usage and other resource us
 * NVDA+Shift+3 Presents the used and total space of the static and removable drives.
 * NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.
 * NVDA+Shift+6 Presents  CPU Architecture 32/64-bit and Windows version and service pack numbers.
+* NVDA+Shift+7 presents the system's uptime.
 
 If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
 

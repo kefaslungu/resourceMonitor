@@ -1,9 +1,10 @@
 #Resource Monitor for NvDA
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
-#Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run).
+#Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run), Tuukka Ojala (uptime).
 # Copyright 2013-2017, released under GPL.
 
 import _winreg
+from datetime import datetime
 import sys
 import os
 import globalPluginHandler
@@ -174,6 +175,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Input help mode message about Windows version command in Resource Monitor.
 	script_announceWinVer.__doc__=_("Announces the version of Windows you are using.")
 
+	def getUptime(self):
+		bootTimestamp = psutil.boot_time()
+		if bootTimestamp == 0.0:
+			raise TypeError
+		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
+		hours, remainingMinutes = divmod(uptime.seconds, 3600)
+		minutes, seconds = divmod(remainingMinutes, 60)
+		hoursMinutesSeconds = "{hours:02}:{minutes:02}:{seconds:02}".format(hours=hours, minutes=minutes, seconds=seconds)
+		# Translators: The system's uptime
+		return _("{days} days, {hoursMinutesSeconds}").format(days=uptime.days, hoursMinutesSeconds=hoursMinutesSeconds)
+
+	def script_announceUptime(self, gesture):
+		try:
+			uptime = self.getUptime()
+			if scriptHandler.getLastScriptRepeatCount() == 0:
+				ui.message(uptime)
+			else:
+				if api.copyToClip(uptime):
+					ui.message(self.RMCopyMessage)
+		except:
+			# Translators: Obtaining uptime failed
+			ui.message(_("Failed to get the system's uptime."))
+	# Translators: Input help mode message about obtaining the system's uptime
+	script_announceUptime.__doc__=_("Announces the system's uptime.")
+
 	def script_announceResourceSummary(self, gesture):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
@@ -201,4 +227,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"KB:NVDA+shift+4":"announceBatteryInfo",
 		"KB:NVDA+shift+5":"announceRamInfo",
 		"KB:NVDA+shift+6":"announceWinVer",
+		"kb:nvda+shift+7": "announceUptime",
 	}
