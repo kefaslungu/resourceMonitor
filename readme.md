@@ -24,6 +24,10 @@ This add-on does not replace task manager and other system information programs 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 
+## Version 17.05
+
+* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
+
 ## Version 17.02
 
 * Updated psutil dependency to 5.0.1.

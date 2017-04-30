@@ -33,7 +33,7 @@ def toBiggestBytes(n, x=2, useLongNames=False):
 	else: return res+units[i]
 
 def tryTrunk(n):
-	#this method basically removes decimal zeros, so 5/0 will just be 5.
+	#this method basically removes decimal zeros, so 5.0 will just be 5.
 	#If the number ends in anything other than a 0, nothing happens (if the trunkated number is not equal to the decimal).
 	if n==int(n): return int(n)
 	return n
