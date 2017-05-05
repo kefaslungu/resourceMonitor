@@ -135,6 +135,19 @@ msgstr "Версия на Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Съобщава текущо използваната версия на Windows."
 
+#. Translators: The system's uptime
+#, python-brace-format
+msgid "{days} days, {hoursMinutesSeconds}"
+msgstr ""
+
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr ""
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr ""
+
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, fuzzy, python-brace-format
