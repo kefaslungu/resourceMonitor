@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2017-02-05 13:15+0100\n"
+"PO-Revision-Date: 2017-05-05 16:34+0100\n"
 "Last-Translator: Juan C. Buño <quetzatl@eresmas.net>\n"
 "Language-Team: Galician NVDA add-ons translation tema <oprisniki@gmail.com>\n"
 "Language: gl\n"
@@ -129,15 +129,15 @@ msgstr "Anuncia a versión do Windows que esteas a utilizar."
 #. Translators: The system's uptime
 #, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
-msgstr ""
+msgstr "{days} días, {hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr ""
+msgstr "Fallou ao obter o tempo de actividade do sistema."
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr ""
+msgstr "Anuncia o tempo de actividade do sistema."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
