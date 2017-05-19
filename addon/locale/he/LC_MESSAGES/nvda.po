@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-23 18:05+1000\n"
-"PO-Revision-Date: 2017-02-05 01:26+0200\n"
-"Last-Translator:  <shmuel_naaman@yahoo.com>\n"
+"PO-Revision-Date: 2017-05-16 13:44+0300\n"
+"Last-Translator: shmuel_naaman@yahoo.com\n"
 "Language-Team: \n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 2.0.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -30,26 +30,26 @@ msgstr "סיכום המשאבים הועתק לזכרון הזמני"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "אין סוללה המזינה מחשב זה"
+msgstr "אין סוללה המזינה מחשב זה."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "רמת הטעינה {percent}% - הסוללה בטעינה"
+msgstr "רמת הטעינה {percent}% - הסוללה בטעינה."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent} אחוזי סוללה נותרו . זמן שימוש משואר :{time} "
+msgstr "{percent} אחוזי סוללה נותרו . זמן שימוש משואר :{time} ."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "אזהרה:  טעינה נמוכה של הסוללה"
+msgstr "אזהרה:  טעינה נמוכה של הסוללה."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
-msgstr "אזהרה: רמת הטעינה בסוללה נמוכה באופן קיצוני"
+msgstr "אזהרה: רמת הטעינה בסוללה נמוכה באופן קיצוני."
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -57,7 +57,7 @@ msgid ""
 "charging), and a warning if the battery is low or critical."
 msgstr ""
 "מציג את רמת הטעינה של הסוללה,  מצב הטעינה,  הזמן הנותר לשימוש, ומזהיר במקרה "
-"של טעינה מנוכה באופן סביר או קיצוני"
+"של טעינה מנוכה באופן סביר או קיצוני."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
@@ -65,13 +65,13 @@ msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
 "{driveName}  (כונן  {driveType} ( שטח בשימוש   {usedSpace}מתוך  "
-"{totalSpace}  {percent}%. "
+"{totalSpace}  {percent}%."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
-msgstr "מציג את השטח בשימוש של הכוננים הקשיחים והנתיקים במחשב זה"
+msgstr "מציג את השטח בשימוש של הכוננים הקשיחים והנתיקים במחשב זה."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -81,11 +81,11 @@ msgstr "Core {coreNumber}: {corePercent}%. "
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "שימוש ממוצע במעבד:  {avgLoad}%, {cores}"
+msgstr "שימוש ממוצע במעבד:  {avgLoad}%, {cores}. "
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "מציג את השימוש הממוצע במעבד ובכל אחת מהליבות"
+msgstr "מציג את השימוש הממוצע במעבד ובכל אחת מהליבות."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -101,7 +101,7 @@ msgstr ""
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "מציג את השימוש בזכרון הפיזי והווירטואלי"
+msgstr "מציג את השימוש בזכרון הפיזי והווירטואלי."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -123,35 +123,35 @@ msgstr "גרסת מערכת הפעלה {winVersion} {servicePackLevel} ({cpuBit}
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
-msgstr "מקריא את גרסת מערכת ההפעלה "
+msgstr "מקריא את גרסת מערכת ההפעלה ."
 
 #. Translators: The system's uptime
 #, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
-msgstr ""
+msgstr "{days} ימים, {hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr ""
+msgstr "נכשל הניסיון לקבל את זמן הפעילות של המערכת."
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr ""
+msgstr "מכריז על זמן הפעילות של המערכת."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "שימוש בזכרון: {ramPercent}%  שמוש במעבד: {cpuPercent}%. "
+msgstr "שימוש בזכרון: {ramPercent}%  שמוש במעבד: {cpuPercent}%."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
-msgstr "אזהרה: רמת הטעינה בסוללה נמוכה באופן קיצוני"
+msgstr "אזהרה: רמת הטעינה בסוללה נמוכה באופן קיצוני."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
-msgstr "מציג את רמת השימוש בזכרון, במעבד ובסוללה, אם יש כזאת"
+msgstr "מציג את רמת השימוש בזכרון, במעבד ובסוללה, אם יש כזאת."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
