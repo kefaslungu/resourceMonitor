@@ -118,4 +118,4 @@ rok.miesiąc.rewizja.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
+[1]: https://addons.nvda-project.org/files/get.php?file=rm
