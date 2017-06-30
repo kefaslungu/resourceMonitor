@@ -1,9 +1,9 @@
 #Resource Monitor for NvDA
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
-#Authors: Alex Hall (core mechanics and messages), Joseph Lee (internationalization), Beqa Gozalishvili (updated psutil to 0.6.1, and made needed changes to make code run), Tuukka Ojala (uptime).
+#Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
 # Copyright 2013-2017, released under GPL.
 
-import _winreg
+import _winreg as winreg # Python 3 compatibility.
 from datetime import datetime
 import sys
 import os
@@ -150,9 +150,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif winMajor == 10: # Windows 10/Server 2016 (10.0).
 			# Also take care of release ID, introduced in Version 1511.
 			buildNum = sys.getwindowsversion().build
-			currentVersion = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
-			ubr = _winreg.QueryValueEx(currentVersion, "UBR")[0] #UBR = Update Build Revision
-			_winreg.CloseKey(currentVersion)
+			currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
+			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0] #UBR = Update Build Revision
+			winreg.CloseKey(currentVersion)
 			winverName = _win10RID(buildNum, server == 1)
 			buildRevision = ".".join([str(buildNum), str(ubr)])
 		# Translators: Presented under 64-bit Windows.
