@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2017-02-03 14:04+0200\n"
+"PO-Revision-Date: 2017-05-05 15:46+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -35,7 +35,7 @@ msgstr "Tässä tietokoneessa ei ole akkua."
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent} %, akkua ladataan."
+msgstr "{percent} %, akku latautuu."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
@@ -121,16 +121,29 @@ msgstr "32-bittinen"
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
-msgstr "Windows-versio: {winVersion} ({cpuBit})"
+msgstr "Windowsin versio: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "Windows-versio: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Windowsin versio: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Ilmoittaa käyttämäsi Windowsin version."
+
+#. Translators: The system's uptime
+#, python-brace-format
+msgid "{days} days, {hoursMinutesSeconds}"
+msgstr "{days} päivää, {hoursMinutesSeconds}"
+
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Järjestelmän käynnissäoloajan hakeminen ei onnistu."
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "Ilmoittaa järjestelmän käynnissäoloajan."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.

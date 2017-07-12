@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-09-12 23:09+1000\n"
-"PO-Revision-Date: 2016-03-18 14:15+0100\n"
-"Last-Translator: nikola jovic <wwenikola123@gmail.com>\n"
+"PO-Revision-Date: 2017-05-05 23:18+0100\n"
+"Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -59,12 +59,12 @@ msgstr ""
 "prijavljuje status baterije i preostalo vreme (ako punjač nije uključen )"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} disk ): {usedSpace} od {totalSpace} koristi "
-"se{percent}%. "
+"{driveName} ({driveType} disk): {usedSpace} od{totalSpace} "
+"iskorišćeno{percent}%."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
@@ -75,14 +75,14 @@ msgstr ""
 "diskova na računaru "
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "jezgro {coreNumber}: {corePercent}%. "
+msgstr "Jezgro{coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "prosečno cpu zauzeto {avgLoad}%, {cores}"
+msgstr "Prosečna iskorišćenost procesora{avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -126,11 +126,24 @@ msgstr "windows verzija : {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "izgovara windows verziju koju koristite "
 
+#. Translators: The system's uptime
+#, python-brace-format
+msgid "{days} days, {hoursMinutesSeconds}"
+msgstr "{days} dana, {hoursMinutesSeconds}"
+
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Nije moguće pronaći vreme rada sistema"
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "Izgovara vreme rada sistema"
+
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% ram memorije iskorišćeno , cpu {cpuPercent}%. "
+msgstr "{ramPercent}% RAM memorije iskorišćeno, CPU na{cpuPercent}%."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."

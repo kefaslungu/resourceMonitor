@@ -41,7 +41,7 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
 ## Version 17.02
 
-* Updated psutil dependency to 5.0.1.
+* psutil-Abhängigkeit auf 5.0.1 aktualisiert.
 * When checking disk usage, NVDA will no longer present an error dialog on
   some systems where a removable media is not properly recognized (such as
   when a card isn't inserted into a card reader).)
@@ -57,7 +57,7 @@ year.month.revision.
   properly recognized (such as 14393.51).
 * If using Insider Preview builds, this fact is recognized.
 
-## Changes for 4.5 ##
+## Änderungen bis 4.5 ##
 
 * Add-on repository has moved to GitHub (can be found at
   https://github.com/josephsl/resourcemonitor).
@@ -122,4 +122,4 @@ year.month.revision.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
+[1]: https://addons.nvda-project.org/files/get.php?file=rm

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2017-04-15 13:16+0400\n"
+"PO-Revision-Date: 2017-05-14 18:54+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: nvda-russian-community <LL@li.org>\n"
 "Language: ru_RU\n"
@@ -129,6 +129,19 @@ msgstr "Версия Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Объявляет используемую версию Windows."
+
+#. Translators: The system's uptime
+#, python-brace-format
+msgid "{days} days, {hoursMinutesSeconds}"
+msgstr "{days} дней, {hoursMinutesSeconds}"
+
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Не удалось получить время работы системы."
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "Объявляет время работы системы."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.

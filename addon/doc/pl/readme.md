@@ -31,43 +31,46 @@ Ten dodatek nie zastępuje Menedżera zadań i innych programów dla Windows,
 dostarczających informacji o systemie. Proszę również zwrócić uwagę na
 następujące kwestie:
 
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper-Threading where number of CPU's
-  is twice the number of CPU cores.
-* If there is heavy disk activity such as copying large files, there might
-  be delays when obtaining disk usage information.
+* Użycie CPU jest podawane dla procesorów logicznych, nie fizycznych
+  rdzeni. Jest to zauważalne dla procesorów używających technologii Hyper
+  Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
+* Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
+  wielkich plików, możliwe są opóźnienia przy pobieraniu informacji.
 
-## Version 17.02
+## Wersja 17.02
 
-* Updated psutil dependency to 5.0.1.
-* When checking disk usage, NVDA will no longer present an error dialog on
-  some systems where a removable media is not properly recognized (such as
-  when a card isn't inserted into a card reader).)
+* zaktualizowano bibliotekę psutil do wersji 5.0.1.
+* przy sprawdzaniu użycia dysku, NVDA nigdy więcej nie będzie pokazywał
+  dialog o błędzie na niektórymi systemami na którymi dyski wymienne nie są
+  rospoznane prawidłowo (Tak jak naprzykład, kiedy karta SD nie jest włożona
+  do karty pamięci).)
 
-## Version 16.08
+## Wersja 16.08
 
-Starting with version 16.08, add-on releases will be shown as
-year.month.revision.
+Zaczynając od wersji 16.08, wersje dodatku będą wyświetlane jako
+rok.miesiąc.rewizja.
 
-* Various revisions of Windows 10 are now properly recognized (such as 1607
-  for build 14393).
-* Windows 10 build revisions (after installing cumulative updates) are
-  properly recognized (such as 14393.51).
-* If using Insider Preview builds, this fact is recognized.
+* Różne wydania Windowsa 10 teraz są rozpoznawane, (tak jak 1607, dla
+  kompilacji 14393). 
+* Wydania kompilacji windowsa 10 (po instalacji aktualizacji zbiorczych) są
+  rozpoznawane poprawnie (tak jak 14393.51).
+* Jeżeli są używane kompilacje Insider Preview, ten stan jest rospoznany.
 
-## Changes for 4.5 ##
+## zmiany dla wersji 4.5 ##
 
-* Add-on repository has moved to GitHub (can be found at
-  https://github.com/josephsl/resourcemonitor).
-* Windows Server 2016 is properly recognized.
+* Repozytorium tego dodatku został przeniesiony do GitHuba (można go znaleźć
+  pod adresem https://github.com/josephsl/resourcemonitor).
+* Windows Server 2016 jest rozpoznawany poprawnie.
 
-## Changes for 4.0 ##
+## zmiany dla wersji 4.0 ##
 
-* Updated psutil dependency to 2.2.1.
-* Vastly improved performance when obtaining information on CPU load.
-* Added support for recognition of Windows 10.
-* In Windows 10, the build number of Windows will also be announced.
-* You can use Add-ons Manager to access add-on help.
+* zaktualizowano bibliotekę psutil do wersji 2.2.1.
+* Znacznie ulepszona zawodność przy pobieraniu informacji o użyciu
+  procesora.
+* Dodano wsparcie dla rospoznawania Windows 10.
+* W Windowsie 10, numer kompilacji także będzie oznajmiany. 
+* Teraz państwo może użyć menedżera dodatków, aby dostać się do pomocy
+  dodatku.
 
 ## zmiany dla wersji 3.1 ##
 
@@ -115,4 +118,4 @@ year.month.revision.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
+[1]: https://addons.nvda-project.org/files/get.php?file=rm
