@@ -16,7 +16,12 @@ import api
 import scriptHandler
 impPath = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(impPath)
-import psutil
+# XP support requires psutil 3.4.2 and earlier, to be removed in version 18.03.
+# Source code users: psutil3 is psutil 3.4.2, not included in SCM.
+if sys.getwindowsversion().major < 6:
+	import psutil3 as psutil
+else:
+	import psutil
 del sys.path[-1]
 import battery
 import addonHandler
