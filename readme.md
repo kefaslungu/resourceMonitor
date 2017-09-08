@@ -25,6 +25,13 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * Support for Windows XP from this add-on will end on December 31, 2017. Support for Windows Server 2003 and Windows Vista will end on June 30, 2018.
 
+## Version 17.09
+
+Important: Version 17.09.x is the last version to support Windows XP.
+
+* Last version to run on Windows XP.
+* Windows 10 build 16278 and later is recognized as Version 1709. A minor revision for this add-on will be released once Version 1709 stable build is released.
+
 ## Version 17.07.1
 
 * Reintroduce support for Windows XP (broken since version 17.02).
