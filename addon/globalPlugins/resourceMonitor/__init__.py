@@ -56,7 +56,12 @@ releaseIDs={
 
 def _win10RID(build, isClient):
 	if build not in releaseIDs:
-		return "Windows 10 Insider" if isClient else "Windows Server Insider"
+		# But catch build ranges for upcoming releases, and add it to the dictionary above once stable build ships.
+		# The minimum is a slow ring build that was compiled in the eventual stable branch (rs3_release build 16278 as of September 2017).
+		if 16278 <= build <= 16350:
+			return "Windows 10Ver1709" if isClient else "Windows Server 1709"
+		else:
+			return "Windows 10 Insider" if isClient else "Windows Server Insider"
 	installType = 0 if isClient else 1
 	return releaseIDs[build][installType]
 
