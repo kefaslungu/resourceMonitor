@@ -1,6 +1,7 @@
 # Resource Monitor #
 
-* Авторы: Alex Hall, Joseph Lee, beqa gozalishvili и другие участники NVDA
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
+  NVDA contributors
 * Загрузить [стабильную версию][1]
 
 Этот плагин предоставляет информацию о загрузке процессора, используемой
@@ -21,6 +22,7 @@
   критическом заряде.
 * NVDA+Shift+6 предоставляет установленную версию Windows, разрядность
   процессора (32 или 64-разрядный) и пакет обновления, если есть.
+* NVDA+Shift+7 presents the system's uptime.
 
 Если у вас NVDA 2013,3 или более поздней версии, вы можете изменить эти
 сочетания клавиш.
@@ -36,6 +38,26 @@
   процессорных ядер.
 * Если есть тяжелые дисковые операции, такие как копирование больших файлов,
   возникают задержки при получении информации об использовании диска.
+* Support for Windows XP from this add-on will end on December 31,
+  2017. Support for Windows Server 2003 and Windows Vista will end on June
+  30, 2018.
+
+## Version 17.09
+
+Important: Version 17.09.x is the last version to support Windows XP.
+
+* Last version to run on Windows XP.
+* Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.
+
+## Version 17.07.1
+
+* Reintroduce support for Windows XP (broken since version 17.02).
+
+## Version 17.05
+
+* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
 
 ## Версия 17.02
 

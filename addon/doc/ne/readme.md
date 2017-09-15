@@ -1,7 +1,7 @@
 # श्रोत अनुगामी (resourceMonitor) #
 
-* लेखकहरु: अलेक्स हल, जोसेफ लि, बिका गोजालिस्भीलि र अन्य नेत्रवाणी योगदान
-  कर्ताहरू ।
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
+  NVDA contributors
 * Download [stable version][1]
 
 This plugin gives information about CPU load, memory usage and other
@@ -21,6 +21,7 @@ resource usage information.
   (if not charging), and a warning if the battery is low or critical.
 * नेत्रवाणी+Shift+6 चालु विन्डोजको संस्करण, CPU बीट (३२ वा ६४-विट) र सर्भिस
   प्याक  सङ्ख्या बताउने छ ।
+* NVDA+Shift+7 presents the system's uptime.
 
 यदि चालू नेत्रवाणी २०१३.३ अथवा यस पछीको संस्करण छ भने तपाइले यी द्रुतमार्ग
 कुञ्जी बदल्न सक्नु हुन्छ ।
@@ -35,6 +36,26 @@ resource usage information.
   is twice the number of CPU cores.
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
+* Support for Windows XP from this add-on will end on December 31,
+  2017. Support for Windows Server 2003 and Windows Vista will end on June
+  30, 2018.
+
+## Version 17.09
+
+Important: Version 17.09.x is the last version to support Windows XP.
+
+* Last version to run on Windows XP.
+* Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.
+
+## Version 17.07.1
+
+* Reintroduce support for Windows XP (broken since version 17.02).
+
+## Version 17.05
+
+* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
 
 ## Version 17.02
 

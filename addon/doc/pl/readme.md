@@ -1,16 +1,17 @@
 # Monitor zasobów / Resource Monitor #
 
-* Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili i inni
+* Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala i inni
+  współtwórcy NVDA
 * Pobierz [wersja stabilna][1]
 
-wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM,
-wykorzystaniu innych zasobów.
+Ta wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM, a
+także wykorzystaniu innych zasobów.
 
-# skróty #
+# Skróty #
 
 * NVDA+Shift+E raportuje używaną pamięć, średnie obciążenie procesora,
   informacje o baterii jeśli dostępna.
-* nvda+shift+1 podaje średnie obciążenie procesora i obciąrzenie każdego z
+* nvda+szift+1 podaje średnie obciążenie procesora i obciąrzenie każdego z
   rdzeni, jeśli używany jest procesor wielordzeniowy.
 * NVDA+Shift+2/5 podaje informacje o użyciu fizycznej i wirtualnej pamięci
   RAM.
@@ -21,6 +22,7 @@ wykorzystaniu innych zasobów.
   baterii.
 * NVDA+Shift+6 odczytuje wersję i servicepack systemu Windows, oraz bity
   procesora (32 lub 64 bity).
+* NVDA+Shift+7 Pokazuje czas pracy systemu.
 
 Jeśli masz zainstalowane NVDA 2013.3 lub nowsze, możesz zmienić te skróty
 klawiszowe.
@@ -36,6 +38,27 @@ następujące kwestie:
   Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia przy pobieraniu informacji.
+* Wsparcie dla Windows XP do tego dodatku skończy się 31 grudnia,
+  2017. Wsparcie dla Windows Server 2003 i Windows Vista skończy się
+  30. czerwca, 2018.
+
+## Wersja 17.09
+
+Ważne: Wersja 17.09.x jest ostatnią wersją wspierającą Windows XP.
+
+* Ostatnia wersja, którą będzie można uruchomić na Windowsie XP.
+* Windows 10 kompilacja 16278 i nowsze są rozpoznawane jako 1709. Pomniejsza
+  aktualizacja tego dodatku będzie wydana po wydaniu wersji 1709 stabilnej
+  kompilacji.
+
+## Wersja 17.07.1
+
+* Ponowne wsparcie Windowsa XP (uszkodzone od wersji 17.02).
+
+## Wersja 17.05
+
+* Wymawianie czasu pracy systemu (czas od ostatniego rozruchu;
+  NVDA+Shift+7).
 
 ## Wersja 17.02
 

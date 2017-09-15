@@ -1,7 +1,7 @@
 # Ressourcen-Monitor #
 
-* Autoren: Alex Hall, Joseph Lee, beqa gozalishvili und andere
-  NVDA-Entwickler
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
+  NVDA contributors
 * [stabile version][1] herunterladen
 
 Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
@@ -23,6 +23,7 @@ Arbeitsspeicher sowie andere nützliche Ressourcen.
   geringem oder kritischem Ladezustand aus.
 * NVDA+Umschalt+6 gibt die Windows-Version, die verwendete
   Prozessor-Architektur sowie eventuell installierte Service Packs aus.
+* NVDA+Shift+7 presents the system's uptime.
 
 Wenn Sie NVDA 2013.3 oder neuer installiert haben, können Sie die
 Tastenkürzel ändern.
@@ -38,6 +39,26 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
   Prozessoren das doppelte der Prozessorkerne.
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
+* Support for Windows XP from this add-on will end on December 31,
+  2017. Support for Windows Server 2003 and Windows Vista will end on June
+  30, 2018.
+
+## Version 17.09
+
+Important: Version 17.09.x is the last version to support Windows XP.
+
+* Last version to run on Windows XP.
+* Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.
+
+## Version 17.07.1
+
+* Reintroduce support for Windows XP (broken since version 17.02).
+
+## Version 17.05
+
+* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
 
 ## Version 17.02
 

@@ -1,6 +1,7 @@
 # Resource Monitor #
 
-* مطورو الإضافة: Alex Hall, Joseph Lee, beqa gozalishvili وآخرون
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
+  NVDA contributors
 * تحميل [الإصدار النهائي][1]
 
 تعطي هذه الإضافة البرمجية معلومات للمستخدم عنحمولة وحدة المعالجة المركزية,
@@ -20,6 +21,7 @@
   الشحن على النفاذ.
 * NVDA+Shift+6 يعلمك بإصدار الويندوز المستخدم حاليا وهندسة وحدة المعالجة
   المركزية 32 أو 64-bit  ورقم الحزمة.
+* NVDA+Shift+7 presents the system's uptime.
 
 إذا كان مثبت على حاسوبك الإصدار 2013.3 أو ما بعده, يمكنك تغيير الاختصارات
 الخاصة بالإضافة.
@@ -35,6 +37,26 @@
   ضعف رقم نوى وحدة المعالجة المركزية. 
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
+* Support for Windows XP from this add-on will end on December 31,
+  2017. Support for Windows Server 2003 and Windows Vista will end on June
+  30, 2018.
+
+## Version 17.09
+
+Important: Version 17.09.x is the last version to support Windows XP.
+
+* Last version to run on Windows XP.
+* Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.
+
+## Version 17.07.1
+
+* Reintroduce support for Windows XP (broken since version 17.02).
+
+## Version 17.05
+
+* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
 
 ## Version 17.02
 

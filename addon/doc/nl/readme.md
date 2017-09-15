@@ -1,6 +1,7 @@
 # Resource Monitor #
 
-* Auteurs: Alex Hall, Joseph Lee, beqa gozalishvili en anderen
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
+  NVDA contributors
 * Download [stabiele versie][1]
 
 Deze add-on geeft informatie over CPU- en geheugengebruik en andere
@@ -20,6 +21,7 @@ statusinformatie.
   er niet wordt opgeladen) en een waarschuwing als de batterij bijna leeg is
 * NVDA+Shift+6 Geeft CPU-Architectuur 32/64-bit, de huidige Windows-versie
   en eventuele service packs.
+* NVDA+Shift+7 presents the system's uptime.
 
 Als u NvDA 2013.3 of later heeft geïnstalleerd, kunt u deze sneltoetsen
 wijzigen.
@@ -34,6 +36,26 @@ die systeem informatie geven. Let ook op het volgende:
   is twice the number of CPU cores.
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
+* Support for Windows XP from this add-on will end on December 31,
+  2017. Support for Windows Server 2003 and Windows Vista will end on June
+  30, 2018.
+
+## Version 17.09
+
+Important: Version 17.09.x is the last version to support Windows XP.
+
+* Last version to run on Windows XP.
+* Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.
+
+## Version 17.07.1
+
+* Reintroduce support for Windows XP (broken since version 17.02).
+
+## Version 17.05
+
+* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
 
 ## Version 17.02
 

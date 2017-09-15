@@ -1,6 +1,7 @@
 # Resource Monitor #
 
-* 作者: Alex Hall, Joseph Lee, beqa gozalishvili,その他のNVDAへの貢献者
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
+  NVDA contributors
 * ダウンロード [安定版][1]
 
 このアドオンはCPU負荷、メモリ使用量などリソースの使用状態を通知します。
@@ -13,6 +14,7 @@
 * NVDA+Shift+3 コンピューターの内蔵および外付けディスクの使用量と合計量を通知します。
 * NVDA+Shift+4 バッテリー残量のパーセント値、充電状態、残り時間(放電中のとき)、バッテリーの低下やバッテリー切れの警告を通知します。
 * NVDA+Shift+6 CPUアーキテクチャーの32/64ビット、Windowsのバージョンやサービスパックの情報を通知します。
+* NVDA+Shift+7 presents the system's uptime.
 
 NVDA 2013.3 以降の場合はこれらのショートカットキーは変更できます。
 
@@ -23,6 +25,26 @@ NVDA 2013.3 以降の場合はこれらのショートカットキーは変更�
 * CPU負荷は物理コアではなく論理プロセッサーについて示します。これは、CPUの数がCPUコアの数の2倍になるハイパースレッディング対応のCPUで顕著に表れます。
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
+* Support for Windows XP from this add-on will end on December 31,
+  2017. Support for Windows Server 2003 and Windows Vista will end on June
+  30, 2018.
+
+## Version 17.09
+
+Important: Version 17.09.x is the last version to support Windows XP.
+
+* Last version to run on Windows XP.
+* Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.
+
+## Version 17.07.1
+
+* Reintroduce support for Windows XP (broken since version 17.02).
+
+## Version 17.05
+
+* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
 
 ## Version 17.02
 

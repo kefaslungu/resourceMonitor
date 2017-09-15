@@ -1,7 +1,7 @@
 # Resource Monitor #
 
-* Autores: Alex Hall, Joseph Lee, beqa gozalishvili e outros colaboradores
-  do NVDA
+* Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e outros
+  colaboradores do NVDA
 * Descargar [versión estable][1]
 
 Este plugin danos información acerca da carga da CPU, do uso da memoria e
@@ -22,6 +22,7 @@ outras informacións de uso dos recursos.
   crítica.
 * NVDA+Shift+6 Presenta a arquitectura da CPU 32/64-bit e a versión de
   Windows e as cifras do service pack.
+* NVDA+Shift+7 presenta o tempo de actividade do sistema.
 
 Se tes NVDA 2013.3 ou posterior instalado, podes cambiar estas teclas de
 acceso.
@@ -36,6 +37,27 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   onde o número de CPUs é o dobre do número de núcleos de CPU.
 * Se hai unha actividade pesada de disco coma o copiado de ficheiros longos,
   podería haber retrasos ao obter información de uso do disco.
+* O soporte para o Windows XP deste complemento rematará o 31 de decembro do
+  2017. O soporte para o Windows Server 2003 e o Windows Vista rematará o 30
+  de xunio do 2018.
+
+## Versión 17.09
+
+Importante: a versión 17.09.x é a derradeira que soporta o Windows XP.
+
+* Derradeira versión que se executa no Windows XP.
+* O Windows 10 compilación 16278 e posterior recoñécese coma Versión
+  1709. lanzarase unha revisión menor deste complemento unha vez a versión
+  1709 stable build se libere.
+
+## Versión 17.07.1
+
+* Reintrodúcese o soporte para o Windows XP (rompido dende a versión 17.02).
+
+## Versión 17.05
+
+* Anunciado do tempo de funcionamiento do sistema (tempo transcorrido dende
+  o último arranque; NVDA+Shift+7).
 
 ## Versión 17.02
 

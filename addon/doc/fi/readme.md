@@ -1,6 +1,7 @@
 # Resurssienvalvonta #
 
-* Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili sekä muut NVDA:n tekijät
+* Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala sekä muut
+  NVDA:n tekijät
 * Lataa [vakaa versio][1]
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta, muistin käytöstä sekä
@@ -21,6 +22,7 @@ muista resursseista.
   on alhainen tai kriittinen.
 * NVDA+Shift+6: Ilmoittaa suorittimen arkkitehtuurin (32- tai 64-bittinen)
   sekä Windowsin ja Service Packin version.
+* NVDA+Shift+7 ilmoittaa järjestelmän käynnissäoloajan.
 
 Voit muuttaa näitä pikanäppäimiä, mikäli käytössäsi on NVDA:n versio 2013.3
 TAI uudempi.
@@ -35,6 +37,26 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
+* Tämän lisäosan Windows XP -tuki päättyy 31. joulukuuta 2017. Windows
+  Server 2003:n ja Windows Vistan tuki päättyy 30. kesäkuuta 2018.
+
+## Versio 17.09
+
+Tärkeää: 17.09.x on viimeinen Windows XP:tä tukeva versio.
+
+* Viimeinen Windows XP:ssä ajettava versio.
+* Windows 10:n koontiversio 16278 ja uudemmat tunnistetaan versioksi
+  1709. Tästä lisäosasta julkaistaan pieni päivitys, kun version 1709 vakaa
+  koontiversio on julkistettu.
+
+## Versio 17.07.1
+
+* Palautettu Windows XP:n tuki (ollut rikki versiosta 17.02 lähtien).
+
+## Versio 17.05
+
+* Järjestelmän käynnissäoloajan ilmoittaminen (edellisestä käynnistyksestä
+  kulunut aika; NVDA+Shift+7).
 
 ## Versio 17.02
 

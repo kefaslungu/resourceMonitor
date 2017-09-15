@@ -1,7 +1,7 @@
 # Resursele Monitorului #
 
-* Autori: Alex Hall, Joseph Lee, beqa gozalishvili și alți contribuitori
-  NVDA
+* Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala și alți
+  contribuitori NVDA
 * Descărcați [versiunea stabilă][1]
 
 Acest supliment oferă informații despre media procesorului, utilizarea
@@ -22,6 +22,7 @@ memoriei și alte resurse de utilizare a informației.
   critică.
 * NVDA+Shift+6 Spune arhitectura procesorului, 32/64-biți, versiunea de
   Windows și numerele pachetelor de servicii.
+* NVDA+Shift+7 prezintă rularea sistemului.
 
 Dacă aveți NvDA 2013.3 sau mai nou instalat, Puteți modifica aceste comenzi
 rapide.
@@ -38,6 +39,28 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 * În cazul în care există o activitate grea pe disc, cum ar fi copierea
   fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
   informațiilor de utilizare a discului.
+* Suportul pentru Windows XP de la acest supliment va înceta pe 31 decembrie
+  2017. Suporturile pentru Windows Server 2003 și pentru Windows Vista vor
+  înceta pe 30 iunie 2018.
+
+## Versiunea 17.09
+
+Important: Versiunea 17.09.x este ultima care suportă Windows XP.
+
+* Ultima versiune care rulează pe Windows XP.
+* Windows 10 build 16278 și mai nou este recunoscut ca versiunea 1709. O
+  revizie minoră pentru acest supliment va fi lansată odată ce versiunea
+  1709 Stable Build va fi lansată.
+
+## Versiunea 17.07.1
+
+* A fost reintrodus suportul pentru Windows XP (eliminat din versiunea
+  17.02).
+
+## Versiunea 17.05
+
+* Anunțarea rulării sistemului (timp trecut de la ultima încărcare;
+  NVDA+Shift+7).
 
 ## Versiunea 17.02
 
