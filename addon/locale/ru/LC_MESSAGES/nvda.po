@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2017-05-14 18:54+0400\n"
+"PO-Revision-Date: 2017-09-15 15:34+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: nvda-russian-community <LL@li.org>\n"
 "Language: ru_RU\n"
@@ -24,10 +24,14 @@ msgid ""
 "2017. Future add-on releases will require {minSupportedVersion} or later. "
 "Are you sure you wish to install this add-on anyway?"
 msgstr ""
+"Поддержка Windows XP дополнением Resource Monitor  заканчивается в декабре "
+"2017 года. Последующие выпуски дополнения будут требовать "
+"{minSupportedVersion} или позже. Вы всё-равно хотите установить это "
+"дополнение?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr ""
+msgstr "Устаревшая версия Windows"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.

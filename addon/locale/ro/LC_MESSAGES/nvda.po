@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2017-05-05 18:35+0300\n"
+"PO-Revision-Date: 2017-09-15 13:05+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -24,10 +24,14 @@ msgid ""
 "2017. Future add-on releases will require {minSupportedVersion} or later. "
 "Are you sure you wish to install this add-on anyway?"
 msgstr ""
+"Suportul pentru Windows XP de la suplimentul Monitor Resurse ia sfârșit pe "
+"data de 31 decembrie 2017. Versiunile viitoare ale acestui supliment vor "
+"necesita {minSupportedVersion} sau mai nou. Sunteți sigur că doriți să "
+"instalați acest supliment oricum?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr ""
+msgstr "Versiune veche de Windows"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
