@@ -75,11 +75,7 @@ msgstr ""
 "بر ضعیف یا خیلی ضعیف بودن باتری را ارائه میدهد."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-<<<<<<< Updated upstream
 #, python-brace-format
-=======
-#, fuzzy, python-brace-format
->>>>>>> Stashed changes
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -94,7 +90,6 @@ msgstr ""
 "فضای استفاده شده و کلِّ فضای درایو‌های ثابت و متحرکِ این رایانه را بیان میکند."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-<<<<<<< Updated upstream
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "هسته‌ی {coreNumber}: {corePercent}%"
@@ -103,16 +98,6 @@ msgstr "هسته‌ی {coreNumber}: {corePercent}%"
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "میانگینِ بارِ سیپی‌یو {avgLoad}%, {cores} است."
-=======
-#, fuzzy, python-brace-format
-msgid "Core {coreNumber}: {corePercent}%"
-msgstr "هسته‌ی {coreNumber}: {corePercent}%. "
-
-#. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
-msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "میانگین بار بر دوش سی‌پی‌یو {avgLoad}%٬ {cores}"
->>>>>>> Stashed changes
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -172,15 +157,9 @@ msgstr "زمانِ بالا بودنِ سیستم را اعلام میکند."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-<<<<<<< Updated upstream
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% از رم استفاده شده، سیپی‌یو {cpuPercent}% است."
-=======
-#, fuzzy, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% از سپاره‌ی رم بهره‌گیری شده٬ سی‌پی‌یو {cpuPercent}%. "
->>>>>>> Stashed changes
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."

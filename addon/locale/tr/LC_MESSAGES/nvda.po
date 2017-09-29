@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2016-02-26 02:45-0800\n"
+"PO-Revision-Date: 2017-09-27 15:13+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 2.0.4\n"
+"Language-Team: \n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -24,10 +24,13 @@ msgid ""
 "2017. Future add-on releases will require {minSupportedVersion} or later. "
 "Are you sure you wish to install this add-on anyway?"
 msgstr ""
+"Kaynak izleme eklentisinin Windows XP desteği 2017 Aralık'ta sona erecek. "
+"Sonraki sürümler {minSupportedVersion} ya da üstünü gerektirecek. Yine de bu "
+"eklentiyi yüklemek istediğinizden emin misiniz?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr ""
+msgstr "Eski Windows sürümü "
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -71,12 +74,12 @@ msgstr ""
 "düşük ya da kritik pil seviyesini söyler."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} sürücü): {usedSpace} bölü {totalSpace} kullanılıyor "
-"%{percent}."
+"{driveName} ({driveType} sürücü): Kullanılan, {usedSpace}, Toplam, "
+"{totalSpace}, %{percent}."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
@@ -87,14 +90,14 @@ msgstr ""
 "bilgisini verir."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "çekirdek {coreNumber}: %{corePercent}. "
+msgstr "Çekirdek {coreNumber}: yüzde {corePercent}"
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Ortalama işlemci yükü  %{avgLoad}, {cores}"
+msgstr "Ortalama CPU yükü %{avgLoad}, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -142,21 +145,21 @@ msgstr "Kullandığınız Windows sürümünü söyler."
 #. Translators: The system's uptime
 #, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
-msgstr ""
+msgstr "{days} gün, {hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr ""
+msgstr "Sistemin açık olduğu zaman bilgisi alınamadı."
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr ""
+msgstr "Sistemin çalışma süresini seslendirir."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% RAM kullanılıyor, CPU  {cpuPercent}%. "
+msgstr "yüzde {ramPercent} RAM kullanılan, CPU:  %{cpuPercent}."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."

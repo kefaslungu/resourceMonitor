@@ -35,50 +35,52 @@ de informações de sistema para Windows. Note também o seguinte:
 * O uso de CPU é fornecido em processadores lógicos e não em núcleos
   físicos. Nota-se isso em processadores que usam Hyper-Threading, em que o
   número de CPUs é o dobro do número de núcleos de CPU.
-* If there is heavy disk activity such as copying large files, there might
-  be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on will end on December 31,
-  2017. Support for Windows Server 2003 and Windows Vista will end on June
-  30, 2018.
+* Se houver atividade intença de disco, como ao copiar arquivos grandes,
+  pode haver lentidão ao obter informações de uso do disco.
+* O suporte a Windows XP por parte deste complemento será encerrado em 31 de
+  dezembro de 2017. Suporte ao Windows Server 2003 e Windows Vista se
+  encerrará em 30 de junho de 2018.
 
 ## Versão 17.09
 
 Importante: A versão 17.09.x é a última versão que suporta o Windows XP.
 
 * Última versão a rodar em Windows XP.
-* Windows 10 build 16278 and later is recognized as Version 1709. A minor
-  revision for this add-on will be released once Version 1709 stable build
-  is released.
+* Windows 10 compilação 16278 e posteriores são reconhecidos como versão
+  1709. Uma versão menor deste complemento será lançada assim que a
+  compilação estável da versão 1709 foi lançada.
 
 ## Versão 17.07.1
 
-* Reintroduce support for Windows XP (broken since version 17.02).
+* Reintroduzido suporte a Windows XP (quebrado desde a versão 17.02).
 
 ## Versão 17.05
 
-* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
+* Anúncio do tempo desde o início do sistema (o tempo passado desde a última
+  inicialização; NVDA+Shift+7).
 
 ## Versão 17.02
 
 * Atualizada dependência psutil para 5.0.1.
-* When checking disk usage, NVDA will no longer present an error dialog on
-  some systems where a removable media is not properly recognized (such as
-  when a card isn't inserted into a card reader).)
+* Ao verificar o uso de discos, o NVDA não vai mais apresentar uma mensagem
+  de erro em alguns sistemas onde uma mídia removível não é reconhecida
+  apropriadamente (por exemplo quando um cartão não está inserido num leitor
+  de cartões).
 
 ## Versão 16.08
 
-Starting with version 16.08, add-on releases will be shown as
-year.month.revision.
+Começando na versão 16.08, os lançamentos do complemento serão mostrados
+como ano.mês.revisão.
 
-* Various revisions of Windows 10 are now properly recognized (such as 1607
-  for build 14393).
-* Windows 10 build revisions (after installing cumulative updates) are
-  properly recognized (such as 14393.51).
-* If using Insider Preview builds, this fact is recognized.
+* Agora são reconhecidas apropriadamente várias revisões do Windows 10 (ex.:
+  1607 para a compilação 14393).
+* Compilações revisadas do Windows 10 (após instalar atualizações
+  cumulativas) são reconhecidas apropriadamente (ex. 14393.51).
+* Se usando compilações Insider Preview, tal fato é reconhecido.
 
 ## Mudanças na 4.5 ##
 
-* Add-on repository has moved to GitHub (can be found at
+* Repositório do complemento movido para o GitHub (pode ser encontrado em
   https://github.com/josephsl/resourcemonitor).
 * O Windows Server 2016 é reconhecido adequadamente.
 
