@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2017-09-15 13:05+0200\n"
+"PO-Revision-Date: 2017-10-20 09:35+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
@@ -37,7 +37,7 @@ msgstr "Versiune veche de Windows"
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Monitor Resurse"
+msgstr "Resource Monitor"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"

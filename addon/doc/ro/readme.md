@@ -1,4 +1,4 @@
-# Resursele Monitorului #
+# Resource Monitor #
 
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala și alți
   contribuitori NVDA
