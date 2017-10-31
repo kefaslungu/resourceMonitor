@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other NVDA contributors
 * Download [stable version][1]
 
-This plugin gives information about CPU load, memory usage and other resource usage information.
+This add-on gives information about CPU load, memory usage and other resource usage information.
 
 # Shortcuts #
 
