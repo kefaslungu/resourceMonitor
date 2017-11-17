@@ -5,87 +5,75 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 4.2\n"
+"Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2015-10-23 18:05+1000\n"
-"PO-Revision-Date: 2017-11-15 13:17+0200\n"
-"Last-Translator: shmuel_naaman@yahoo.com\n"
-"Language-Team: \n"
-"Language: he\n"
+"POT-Creation-Date: 2014-09-12 23:09+1000\n"
+"PO-Revision-Date: 2017-11-15 16:51-0000\n"
+"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
+"Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; rui.fontes@tiflotecnia.com>\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: PORTUGAL\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
-msgid ""
-"Support for Windows XP from Resource Monitor add-on is ending on December "
-"2017. Future add-on releases will require {minSupportedVersion} or later. "
-"Are you sure you wish to install this add-on anyway?"
-msgstr ""
-"תמיכה בווינדוס XP תסתיים בדצמבר 2017. תוספים בעתיד ידרשו גרסה "
-"{minSupportedVersion} לפחות. האם תרצה להתקין תוסף זה?"
+msgid "Support for Windows XP from Resource Monitor add-on is ending on December 2017. Future add-on releases will require {minSupportedVersion} or later. Are you sure you wish to install this add-on anyway?"
+msgstr "O suporte deste extra para o Windows XP terminará a partir de dezembro de 2017. Futuras versões adicionais exigirão {minSupportedVersion} ou posterior. Tem acerteza que, mesmo assim,  deseja instalar este extra?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr "גרסת ווינדוס ישנה"
+msgstr "Versão antiga do windows"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Resource Monitor"
+msgstr "Monitor de recursos"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"
-msgstr "סיכום המשאבים הועתק לזכרון הזמני"
+msgstr "Sumário de recursos copiado para a área de transferência;"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "אין סוללה המזינה מחשב זה."
+msgstr "Este computador não tem uma bateria ligada."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "רמת הטעינה {percent}% - הסוללה בטעינה."
+msgstr "{percent}%, carga da bateria."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent} אחוזי סוללה נותרו . זמן שימוש משואר :{time} ."
+msgstr "{percent}% bateria restante, cerca de {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "אזהרה:  טעינה נמוכה של הסוללה."
+msgstr " Aviso: bateria fraca."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
-msgstr "אזהרה: רמת הטעינה בסוללה נמוכה באופן קיצוני."
+msgstr "Aviso: A bateria está criticamente baixa!"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"מציג את רמת הטעינה של הסוללה,  מצב הטעינה,  הזמן הנותר לשימוש, ומזהיר במקרה "
-"של טעינה מנוכה באופן סביר או קיצוני."
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "Este extra Apresenta a percentagem da bateria, o estado de carga, o tempo restante (se não estiver a carregar) e um aviso, se a bateria estiver fraca ou criticamente baixa."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"{driveName}  (כונן  {driveType} ( שטח בשימוש   {usedSpace}מתוך  "
-"{totalSpace}  {percent}%."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr "מציג את השטח בשימוש של הכוננים הקשיחים והנתיקים במחשב זה."
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr "Apresenta o espaço usado e o total em cada uma das unidades estáticas e removíveis deste computador."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -95,99 +83,93 @@ msgstr "Core {coreNumber}: {corePercent}%"
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "שימוש ממוצע במעבד:  {avgLoad}%, {cores}."
+msgstr "Média da carga da CPU {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "מציג את השימוש הממוצע במעבד ובכל אחת מהליבות."
+msgstr "Apresenta a carga média do processador e a carga de cada núcleo."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"זכרון פיזי: {physicalUsed} מתוך {physicalTotal} בשימוש ({physicalPercent}%). "
+msgstr "Físico: {physicalUsed} de {physicalTotal} usado ({physicalPercent}%)."
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"זכרון וירטואלי: {virtualUsed} מתוך {virtualTotal} בשימוש ({virtualPercent}%)."
+msgstr "Virtual: {virtualUsed} de {virtualTotal} usado ({virtualPercent}%)."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "מציג את השימוש בזכרון הפיזי והווירטואלי."
+msgstr "Apresenta o espaço usado e total para memória ram física e virtual."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
-msgstr "64 ביט"
+msgstr "64-bit"
 
 #. Translators: Presented under 32-bit Windows.
 msgid "32-bit"
-msgstr "32 ביט"
+msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
-msgstr "גרסת מערכת הפעלה : {winVersion} ({cpuBit})"
+msgstr "Versão do Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "גרסת מערכת הפעלה {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Versão do Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
-msgstr "מקריא את גרסת מערכת ההפעלה ."
+msgstr "Indica a versão do Windows que está a usar;"
 
 #. Translators: The system's uptime
 #, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} ימים, {hoursMinutesSeconds}"
+msgstr "{days} days, {hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr "נכשל הניסיון לקבל את זמן הפעילות של המערכת."
+msgstr "Falha ao obter o tempo de actividade do sistema."
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr "מכריז על זמן הפעילות של המערכת."
+msgstr "Anuncia o tempo de atividade do sistema."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "שימוש בזכרון: {ramPercent}%  שמוש במעבד: {cpuPercent}%."
+msgstr "{ramPercent}% RAM usada, CPU at {cpuPercent}%."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
-msgstr "אזהרה: רמת הטעינה בסוללה נמוכה באופן קיצוני."
+msgstr "Alerta: bateria criticamente baixa!"
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr "מציג את רמת השימוש בזכרון, במעבד ובסוללה, אם יש כזאת."
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "Apresenta a memória ram utilizada, a carga média do processador e informações sobre a bateria, se disponíveis."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
-msgstr " שעה, "
+msgstr "Hora,"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr " שעות, "
+msgstr "Horas,"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
-msgstr " דקה"
+msgstr "Minuto;"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr " דקות"
+msgstr "Minutos"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
-msgstr ""
-"מציג דוח משאבים נגיש המפרט את רמת השימוש בזכרון, במעבד ובסוללה וכן מידע "
-"אודות שטח האיחסון בכונני הדיסקים."
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "Um monitor de recursos acessível para indicar a carga do CPU, o uso de memória, a bateria, o estado de uso do disco e muito mais."
+
