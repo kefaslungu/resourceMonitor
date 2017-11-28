@@ -151,7 +151,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
 		# Prepare to receive various components for Windows info output.
-		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") == "AMD64", ""
+		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64","ARM64"), ""
 		# Determine Windows version.
 		if winMajor == 5: # XP (5.1) or Server 2003 (5.2).
 			if winMinor == 1: winverName = "Windows XP" # Since most XP systems use 32-bit editions.
