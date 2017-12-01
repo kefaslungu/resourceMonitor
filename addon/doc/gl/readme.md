@@ -41,6 +41,10 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   2017. O soporte para o Windows Server 2003 e o Windows Vista rematará o 30
   de xunio do 2018.
 
+## Versión 17.12
+
+* Engadido o soporte para procesadores ARM de 64 bits en Windows 10.
+
 ## Versión 17.09
 
 Importante: a versión 17.09.x é a derradeira que soporta o Windows XP.

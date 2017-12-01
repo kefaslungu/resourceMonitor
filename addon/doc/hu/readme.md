@@ -4,8 +4,8 @@
   NVDA contributors
 * Letöltés [Stabil verzió][1]
 
-A kiegészítő hasznos információkat ad a memória, processzor, háttértár és az
-akkumulátor aktuális állapotáról.
+This add-on gives information about CPU load, memory usage and other
+resource usage information.
 
 # Billentyűparancsok #
 
@@ -41,6 +41,10 @@ Windows-os programot. Fontos megjegyezni a következőket:
 * Support for Windows XP from this add-on will end on December 31,
   2017. Support for Windows Server 2003 and Windows Vista will end on June
   30, 2018.
+
+## Version 17.12
+
+* Added support for 64-bit ARM processors on Windows 10.
 
 ## Version 17.09
 

@@ -4,8 +4,8 @@
   colaboradores de NVDA
 * Descargar [versión estable][1]
 
-Este plugin nos da información acerca de la carga de la CPU, del uso de la
-memoria y de otra información de uso de recursos.
+Este plugin nos da información acerca de la carga de la CPU, de la
+utilización de la memoria y de otra información de uso de recursos.
 
 # Atajos de teclado #
 
@@ -41,6 +41,10 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 * El soporte para Windows XP de este complemento finalizará el 31 de
   diciembre de 2017. El soporte para Windows Server 2003 y Windows Vista
   finalizará el 30 de junio de 2018.
+
+## Versión 17.12
+
+* Añadido el soporte para procesadores ARM de 64 bits en Windows 10.
 
 ## Versión 17.09
 

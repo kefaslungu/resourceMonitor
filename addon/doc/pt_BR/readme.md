@@ -4,8 +4,8 @@
   colaboradores do NVDA
 * Baixe a [versão estável][1]
 
-Este plug-in fornece informações acerca de carga da CPU, uso de memória e
-outras informações sobre uso de recursos.
+This add-on gives information about CPU load, memory usage and other
+resource usage information.
 
 # Atalhos #
 
@@ -40,6 +40,10 @@ de informações de sistema para Windows. Note também o seguinte:
 * O suporte a Windows XP por parte deste complemento será encerrado em 31 de
   dezembro de 2017. Suporte ao Windows Server 2003 e Windows Vista se
   encerrará em 30 de junho de 2018.
+
+## Version 17.12
+
+* Added support for 64-bit ARM processors on Windows 10.
 
 ## Versão 17.09
 

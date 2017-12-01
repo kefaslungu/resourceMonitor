@@ -4,8 +4,9 @@
   d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
 
-Ce module complémentaire donne la charge du CPU, l'utilisation de la mémoire
-et autres informations d'utilisation de ressource.
+Ce module complémentaire fournit des informations sur la charge du CPU,
+l'utilisation de la mémoire et d'autres informations sur l'utilisation des
+ressources.
 
 # Raccourcis #
 
@@ -43,6 +44,10 @@ suit :
 * Le support pour Windows XP à partir de ce module complémentaire se
   terminera le 31 Décembre 2017. Le support pour Windows Server 2003 et
   Windows Vista se terminera le 30 Juin 2018.
+
+## Version 17.12
+
+* Ajout du support pour les processeurs ARM 64 bits sur Windows 10.
 
 ## Version 17.09
 

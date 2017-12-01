@@ -4,7 +4,7 @@
   współtwórcy NVDA
 * Pobierz [wersja stabilna][1]
 
-Ta wtyczka podaje informacje o obciąrzeniu procesora, użyciu pamięci RAM, a
+Ta wtyczka podaje informacje o obciązeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
 
 # Skróty #
@@ -41,6 +41,10 @@ następujące kwestie:
 * Wsparcie dla Windows XP do tego dodatku skończy się 31 grudnia,
   2017. Wsparcie dla Windows Server 2003 i Windows Vista skończy się
   30. czerwca, 2018.
+
+## Wersja 17.12
+
+* Dodano wsparcie dla 64-bitowych ARM procesorów w Windowsie 10.
 
 ## Wersja 17.09
 

@@ -4,7 +4,7 @@
   NVDA contributors
 * Download [stable version][1]
 
-This plugin gives information about CPU load, memory usage and other
+This add-on gives information about CPU load, memory usage and other
 resource usage information.
 
 # द्रुतमार्ग #
@@ -39,6 +39,10 @@ resource usage information.
 * Support for Windows XP from this add-on will end on December 31,
   2017. Support for Windows Server 2003 and Windows Vista will end on June
   30, 2018.
+
+## Version 17.12
+
+* Added support for 64-bit ARM processors on Windows 10.
 
 ## Version 17.09
 

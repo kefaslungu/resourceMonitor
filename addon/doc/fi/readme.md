@@ -4,8 +4,8 @@
   NVDA:n tekijät
 * Lataa [vakaa versio][1]
 
-Tämä lisäosa antaa tietoja suorittimen kuormituksesta, muistin käytöstä sekä
-muista resursseista.
+Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
+resurssien käytöstä.
 
 # Pikanäppäimet #
 
@@ -39,6 +39,10 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämän lisäosan Windows XP -tuki päättyy 31. joulukuuta 2017. Windows
   Server 2003:n ja Windows Vistan tuki päättyy 30. kesäkuuta 2018.
+
+## Versio 17.12
+
+* Lisätty tuki 64-bittisille ARM-suorittimille Windows 10:ssä.
 
 ## Versio 17.09
 

@@ -43,6 +43,10 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
   2017. Suporturile pentru Windows Server 2003 și pentru Windows Vista vor
   înceta pe 30 iunie 2018.
 
+## Versiunea 17.12
+
+* Suport adăugat pentru procesoarele ARM pe 64 de biți din Windows 10.
+
 ## Versiunea 17.09
 
 Important: Versiunea 17.09.x este ultima care suportă Windows XP.
@@ -54,7 +58,7 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 
 ## Versiunea 17.07.1
 
-* A fost reintrodus suportul pentru Windows XP (eliminat din versiunea
+* Reintroducerea suportului pentru Windows XP (eliminat din versiunea
   17.02).
 
 ## Versiunea 17.05
@@ -64,7 +68,7 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 
 ## Versiunea 17.02
 
-* Actualizat la dependența psutil 5.0.1.
+* S-a actualizat la dependența psutil 5.0.1.
 * La verificarea utilizării discului, NVDA nu va mai prezenta un dialog de
   eroare pe unele sisteme unde un media eliminabil nu este recunoscut
   corespunzător (cum ar fi atunci când un card nu este inserat într-un
@@ -89,10 +93,10 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 
 ## Modificări aduse în versiunea 4.0 ##
 
-* Actualizat la dependența psutil 2.2.1.
-* A fost îmbunătățită considerabil performanța la obținerea informațiilor cu
+* S-a actualizat la dependența psutil 2.2.1.
+* S-a îmbunătățit considerabil performanța la obținerea informațiilor cu
   privire la activitatea medie a procesorului.
-* A fost îmbunătățit suportul pentru recunoașterea lui Windows 10.
+* Suport adăugat pentru recunoașterea lui Windows 10.
 * În Windows 10, numărul build-ului  Windows-ului va fi, de asemenea,
   anunțat.
 * Puteți folosi managerul de add-on-uri pentru a accesa ghidul add-on-ului.
@@ -100,11 +104,11 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 ## Modificări aduse în versiunea 3.1 ##
 
 * Resource Monitor suportă oficialWindows 8.1.
-* Au fost actualizate traducerile.
+* S-au actualizat traducerile.
 
 ## Modificări aduse în versiunea 3.0 ##
 
-* Actualizat la dependența psutil to 1.2.1.
+* S-a actualizat la dependența psutil to 1.2.1.
 * Anunțarea versiunii curente a Windows-ului, arhitectura procesorului și
   pachetul de servicii dacă există (NVDA+Shift+6).
 * Abilitatea de a modifica combinațiile de taste ale add-on-ului(NVDA 2013.3
@@ -115,29 +119,29 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 ## Modificări aduse în versiunea 2.4 ##
 
 * Limbi noi: Chineză (simplificată), Ucraineană,.
-* Au fost actualizate traducerile.
+* S-au actualizat traducerile.
 
 ## Modificări aduse în versiunea 2.3 ##
 
-* A fost adăugată traducerea în limba Bulgară.
+* S-a adăugat traducerea bulgărească.
 
 ## Modificări aduse în versiunea 2.2 ##
 
-* Au fost adăugate următoarele traduceri: Arabă, Aragoneză, Croată,
-  Olandeză, Finlandeză, Franceză, Galiciană, Germană, Maghiară, Italiană,
-  Japoneză, Coreeană, Nepaleză, Poloneză, Portugheză (Brazilia), Rusă,
-  Slovacă, Slovenă, Spaniolă, Tamilă și Turcă.
+* S-au adăugat următoarele traduceri: Arabă, Aragoneză, Croată, Olandeză,
+  Finlandeză, Franceză, Galiciană, Germană, Maghiară, Italiană, Japoneză,
+  Coreeană, Nepaleză, Poloneză, Portugheză (Brazilia), Rusă, Slovacă,
+  Slovenă, Spaniolă, Tamilă și Turcă.
 
 ## Modificări aduse în versiunea 2.1 ##
 
-* A fost actualizată dependența psutil la versiunea 0.6.1.
-* A fost reparată întârzierea lungă atunci când se obțin informațiile
+* S-a actualizată dependența psutil la versiunea 0.6.1.
+* S-a reparat întârzierea lungă atunci când se obțin informațiile
   driverelor.
 * Curățarea codului.
 
 ## Modificări aduse în versiunea 2.0 ##
 
-* A fost adăugat suportul pentru traduceri și comentariile pentru acestea.
+* S-a adăugat suportul pentru traduceri și comentariile pentru acestea.
 
 ## Modificări aduse în versiunea 1.0 ##
 

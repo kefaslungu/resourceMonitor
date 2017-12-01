@@ -4,8 +4,8 @@
   NVDA contributors
 * تحميل [الإصدار النهائي][1]
 
-تعطي هذه الإضافة البرمجية معلومات للمستخدم عنحمولة وحدة المعالجة المركزية,
-استخدام الذاكرة, والمزيد من المعلومات الأخرى حول خصائص النظام.
+This add-on gives information about CPU load, memory usage and other
+resource usage information.
 
 # مفاتيح الاختصار #
 
@@ -40,6 +40,10 @@
 * Support for Windows XP from this add-on will end on December 31,
   2017. Support for Windows Server 2003 and Windows Vista will end on June
   30, 2018.
+
+## Version 17.12
+
+* Added support for 64-bit ARM processors on Windows 10.
 
 ## Version 17.09
 
