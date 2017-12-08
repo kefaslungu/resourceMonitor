@@ -8,16 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-09-12 23:09+1000\n"
-"PO-Revision-Date: 2017-11-15 16:51-0000\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
+"PO-Revision-Date: 2017-12-05 21:57+0000\n"
+"Last-Translator: Ângelo Miguel Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; rui.fontes@tiflotecnia.com>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: PORTUGAL\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
@@ -69,7 +67,7 @@ msgstr "Este extra Apresenta a percentagem da bateria, o estado de carga, o temp
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr "{driveName} ({driveType} drive): {usedSpace} de {totalSpace} usado {percent}%."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid "Presents the used and total space of the static and removable drives on this computer."
@@ -78,7 +76,7 @@ msgstr "Apresenta o espaço usado e o total em cada uma das unidades estáticas 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "Core {coreNumber}: {corePercent}%"
+msgstr "Núcleo {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
@@ -172,4 +170,3 @@ msgstr "Minutos"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
 msgstr "Um monitor de recursos acessível para indicar a carga do CPU, o uso de memória, a bateria, o estado de uso do disco e muito mais."
-
