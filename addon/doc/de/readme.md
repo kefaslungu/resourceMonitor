@@ -1,32 +1,31 @@
 # Ressourcen-Monitor #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
-  NVDA contributors
+* Autoren: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala und andere
+  NVDA-Entwickler
 * [stabile version][1] herunterladen
 
-This add-on gives information about CPU load, memory usage and other
-resource usage information.
+Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
+Arbeitsspeicher sowie andere nützliche Ressourcen.
 
 # Tastenkürzel #
 
 * NVDA+Umschalt+E gibt den verwendeten Arbeitsspeicher, die ungefähre
-  Prozessor-Auslastung und sofern vorhanden Informationen über den Akkustand
-  aus.
+  Prozessor-Auslastung und - sofern vorhanden - Informationen über den
+  Akkustand aus.
 * NVDA+Umschalt+1 gibt den  ungefähre Prozessor-Auslastung und die
   Auslastung für jeden Kern aus.
 * NVDA+Umschalt+2/5 gibt den verwendeten und verfügbaren Speicherplatz des
   virtuellen und physikalischen Arbeitsspeichers aus.
 * NVDA+Umschalt+3 gibt den verwendeten und verfügbaren Speicherplatz aller
-  angeschlossenen Datenträger am Computer aus.
+  integrierten Festplatten und angeschlossenen Datenträger aus.
 * NVDA+Umschalt+4 gibt den Ladezustand des Akkus und die verbleibende Zeit
   (sofern das Netzteil nicht angeschlossen ist), und eine Warnung bei
   geringem oder kritischem Ladezustand aus.
 * NVDA+Umschalt+6 gibt die Windows-Version, die verwendete
   Prozessor-Architektur sowie eventuell installierte Service Packs aus.
-* NVDA+Shift+7 presents the system's uptime.
+* NVDA+Umschalt+7 gibt die Betriebszeit des Systems aus.
 
-Wenn Sie NVDA 2013.3 oder neuer installiert haben, können Sie die
-Tastenkürzel ändern.
+Ab NVDA 2013.3 können Sie die Tastenkürzel ändern.
 
 ## Nutzungshinweise ##
 
@@ -37,58 +36,64 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
   physische Kerne ausgegeben. Dies ist bei Prozessoren bemerkbar, welche
   Hyper Threading verwenden. Bei diesen Prozessoren ist die Anzahl der
   Prozessoren das doppelte der Prozessorkerne.
-* If there is heavy disk activity such as copying large files, there might
-  be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on will end on December 31,
-  2017. Support for Windows Server 2003 and Windows Vista will end on June
-  30, 2018.
+* Es kann zu Verzögerungen beim Abrufen von Informationen über die
+  Festplattennutzung kommen, wenn starke Festplattenaktivitäten wie z.B. das
+  Kopieren großer Dateien stattfinden.
+* Die Unterstützung für Windows XP endet am 31. Dezember 2017. Die
+  Unterstützung für Windows Server 2003 und Windows Vista endet am 30. Juni
+  2018.
 
 ## Version 17.12
 
-* Added support for 64-bit ARM processors on Windows 10.
+* Unterstützung für 64-Bit-Arm-Prozessoren auf Windows 10 hinzugefügt.
 
 ## Version 17.09
 
-Important: Version 17.09.x is the last version to support Windows XP.
+Wichtig: Version 17.09.x ist die letzte Version, die auf Windows XP
+ausgeführt werden kann.
 
-* Last version to run on Windows XP.
-* Windows 10 build 16278 and later is recognized as Version 1709. A minor
-  revision for this add-on will be released once Version 1709 stable build
-  is released.
+* Dies ist die letzte Version, welche Windows XP unterstützt.
+* Windows 10 Build 16278 und höher wird als Version 1709 erkannt. Eine
+  kleinere Revision für diese Erweiterung wird veröffentlicht, sobald
+  Version 1709 stable build veröffentlicht wird.
 
 ## Version 17.07.1
 
-* Reintroduce support for Windows XP (broken since version 17.02).
+* Unterstützung für Windows XP wurde wieder eingeführt.
 
 ## Version 17.05
 
-* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
+* Ansage der Betriebszeit des Systems (vergangene Zeit seit dem letzten
+  Booten; NVDA+Umschalt+7).
 
 ## Version 17.02
 
 * psutil-Abhängigkeit auf 5.0.1 aktualisiert.
-* When checking disk usage, NVDA will no longer present an error dialog on
-  some systems where a removable media is not properly recognized (such as
-  when a card isn't inserted into a card reader).)
+* Bei der Überprüfung der Festplattennutzung zeigt NVDA keinen Fehlerdialog
+  mehr auf einigen Systemen an. Dies gilt nur auf Systemen, auf denen ein
+  Wechselmedium nicht richtig erkannt wird (z.B. wenn eine Karte nicht in
+  einen Kartenleser eingelegt ist).
 
 ## Version 16.08
 
-Starting with version 16.08, add-on releases will be shown as
-year.month.revision.
+Ab version 16.08 werden neue Versionen dieser Erweiterung mit Jahr.Monat
+angezeigt.
 
-* Various revisions of Windows 10 are now properly recognized (such as 1607
-  for build 14393).
-* Windows 10 build revisions (after installing cumulative updates) are
-  properly recognized (such as 14393.51).
-* If using Insider Preview builds, this fact is recognized.
+* Verschiedene Korrekturen für Windows10-Versionen werden richtig erkannt
+  (z.B. 1607 für build 14393).
+* Korrekturen der Buildnummer (z.B. 14393.51) wird jetzt auch nach
+  kummulativen Aktualisierungen erkannt.
+* Es wird nun auch erkannt, ob die aktive Windowsversion ein Build des
+  Insiderprogramms ist.
 
-## Änderungen bis 4.5 ##
+## Änderungen in 4.5 ##
 
-* Add-on repository has moved to GitHub (can be found at
-  https://github.com/josephsl/resourcemonitor).
-* Windows Server 2016 is properly recognized.
+* Der Quellordner der Erweiterung (Repository) wurde nach GitHub
+  verschoben. Das Verzeichnis kann hier gefunden werden
+  [https://github.com/josephsl/resourcemonitor](https://github.com/josephsl/resourcemonitor).
+* Windows-Server 2016 wird nun korrekt erkannt.
 
-## Änderungen bis 4.0 ##
+## Änderungen in 4.0 ##
 
 * psutil-Abhängigkeit auf 2.2.1 aktualisiert.
 * Erheblich verbesserte Leistung beim Abrufen von Informationen über die
@@ -98,31 +103,31 @@ year.month.revision.
 * Sie können den Add-ons-Manager verwenden, um auf die Hilfe zur Erweiterung
   zuzugreifen.
 
-## Änderungen bis 3.1 ##
+## Änderungen in 3.1 ##
 
 * Der Ressourcen-Monitor unterstützt offiziell Windows 8.1
 * Übersetzungen aktualisiert.
 
-## Änderungen bis 3.0 ##
+## Änderungen in 3.0 ##
 
 * psutil-Abhängigkeit auf 1.2.1 aktualisiert.
 * NVDA+Umschalt+6 gibt die Windows-Version, die verwendete
   Prozessor-Architektur sowie verwendete Service Packs aus.
 * Tastenkürzel der Erweiterung sind ab NVDA 2013.3 änderbar.
-* Nun besteht die Möglichkeit, einzelne Ressourceninformationen durch
+* Es besteht die Möglichkeit, einzelne Ressourceninformationen durch
   zweimaliges Drücken der Tastenkombination in die Zwischenablage zu
   kopieren.
 
-## Änderungen bis 2.4 ##
+## Änderungen in 2.4 ##
 
 * Neue Sprachen: Chinesisch (vereinfacht), Ukrainisch.
 * Übersetzungen aktualisiert.
 
-## Änderungen bis 2.3 ##
+## Änderungen in 2.3 ##
 
 * Übersetzung für Bulgarisch hinzugefügt.
 
-## Änderungen bis 2.2 ##
+## Änderungen in 2.2 ##
 
 * Folgende Übersetzungen hinzugefügt: Arabisch, Aragonesisch, Kroatisch,
   Niederländisch, Finnisch, Französisch, Galiesisch, Deutsch, Ungarisch,
@@ -130,18 +135,18 @@ year.month.revision.
   (Brasilien), Russisch, Slovakisch, Slovenisch, Spanisch, Tamil und
   Türkisch.
 
-## Änderungen bis 2.1 ##
+## Änderungen in 2.1 ##
 
 * psutil auf Version 0.6.1 aktualisiert.
-* Größere Zeitverzögerung beim Erhalt von Informationen von Datenträgern
+* Größere Zeitverzögerung beim Erhalten von Informationen von Datenträgern
   beseitigt.
 * Der Quellcode wurde bereinigt.
 
-## Änderungen bis 2.0 ##
+## Änderungen in 2.0 ##
 
 * Möglichkeit zur Übersetzung sowie Übersetzungskommentare hinzugefügt.
 
-## Änderungen bis 1.0 ##
+## Änderungen in 1.0 ##
 
 * Ehrstveröffentlichung
 
