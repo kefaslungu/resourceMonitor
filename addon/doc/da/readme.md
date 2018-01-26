@@ -1,89 +1,93 @@
-# Resource Monitor (ressourceovervågning) #
+# Resource Monitor #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
-  NVDA contributors
-* Download [stabil version][1]
+* Forfattere: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala og
+  andre NVDA-bidragydere
+* Download [stable version][1]
 
-This add-on gives information about CPU load, memory usage and other
-resource usage information.
+Dette tilføjelsesprogram giver information om CPU-belastning, brug af
+hukommelse og andre oplysninger om forbrug af ressourcer.
 
-# Genvejstaster  #
+# Genveje #
 
-* NVDA+Shiftj+e viser brugt RAM, gennemsnitlig processorbelastning og
-  batterioplysninger, hvis de er til rådighed.
-* NVDA+Shift+1 viser gennemsnitlig processorbelastning, og hvis der er flere
-  kerner tilstede, belastningen for hver kerne.
-* NVDA+Shift+2/5 giver brugt og total plads i fysisk og virtuel hukommelse.
-* NVDA+Shift+3 giver brugt og samlet plads på faste og flytbare drev.
-* NVDA+Shift+4 giver batteristatus i procent, opladestatus, resterende
+* NVDA+Skift+E: Oplyser hukommelse i brug, processorbelastning og
+  batteriinformation (hvis denne er tilgængelig).
+* NVDA+Skift+1: Oplyser den gennemsnitlige processorbelastning, og hvis
+  multicore-CPU'er er til stede, belastes hver kerne.
+* NVDA+Skift+2/5: Oplyser brugt og total plads i fysisk og virtuel
+  hukommelse.
+* NVDA+Skift+3: Oplyser brugt og samlet plads på de statiske og flytbare
+  drev.
+* NVDA+Skift+4: Oplyser batteristatus i procent, opladestatus, resterende
   batteritid (hvis det ikke er ved at blive opladet) og endelig en advarsel,
   hvis batteriniveauet er lavt eller kritisk.
-* NVDA+Shift+6 giver CPU-arkitektur, 32/64 bit, Windows-version og numre på
-  service packs.
-* NVDA+Shift+7 presents the system's uptime.
+* NVDA+Skift+6: Oplyser CPU-arkitektur (32/64-bit) og Windows-version samt
+  service pack numre.
+* NVDA+Skift+7: Oplyser systemets oppetid.
 
-Hvis du har installeret NVDA 2013.3 eller senere, kan du ændre disse
+Hvis du har NvDA 2013.3 eller nyere installeret, kan du ændre disse
 genvejstaster.
 
-## Bemærkninger om brug ##
+## Brugsanvisninger ##
 
-Dette tilføjelsesprogram erstatter ikke joblisten eller andre
-systemoplysninger.
+Denne tilføjelse erstatter ikke Jobliste og andre
+systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 * CPU-brug bliver angivet for logiske processorer, ikke fysiske
   kerner. Dette har betydning for processorer, som bruger
-  hyper-threading. Her er antallet af processorer det dobbelte af antallet
-  af processoerkerner.
-* If there is heavy disk activity such as copying large files, there might
-  be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on will end on December 31,
-  2017. Support for Windows Server 2003 and Windows Vista will end on June
-  30, 2018.
+  hypertrådningsteknologi. Her er antallet af CPU'er er det dobbelte af
+  CPU-kernerne.
+* Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
+  filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
+* Understøttelse af Windows XP af denne tilføjelsespakke ophører den 31
+  december 2017. Understøttelse af Windows Server 2003 og Windows Vista vil
+  ophøre den 30 juni 2018.
 
 ## Version 17.12
 
-* Added support for 64-bit ARM processors on Windows 10.
+* Tilføjet support til 64-bit ARM-processorer på Windows 10.
 
 ## Version 17.09
 
-Important: Version 17.09.x is the last version to support Windows XP.
+Vigtigt: Version 17.09.x er den sidste version, der understøtter Windows XP.
 
-* Last version to run on Windows XP.
-* Windows 10 build 16278 and later is recognized as Version 1709. A minor
-  revision for this add-on will be released once Version 1709 stable build
-  is released.
+* Sidste version til at køre på Windows XP.
+* Windows 10 build 16278 og senere er anerkendt som Version 1709. En mindre
+  revision for denne tilføjelse frigives, når version 1709 stabil build er
+  udgivet.
 
 ## Version 17.07.1
 
-* Reintroduce support for Windows XP (broken since version 17.02).
+* Genindførte understøttelse for Windows XP (understøttelse har ikke virket
+  siden version 17.02).
 
 ## Version 17.05
 
-* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
+* Annoncering af systemopetid (tid gået siden sidste opstart, NVDA + Shift
+  +7).
 
 ## Version 17.02
 
-* Updated psutil dependency to 5.0.1.
-* When checking disk usage, NVDA will no longer present an error dialog on
-  some systems where a removable media is not properly recognized (such as
-  when a card isn't inserted into a card reader).)
+* Opdateret psutil afhængighed til 5.0.1.
+* Når du kontrollerer diskbrug, vil NVDA ikke længere præsentere en
+  fejldialog på nogle systemer, hvor et flytbart medie ikke er korrekt
+  genkendt (f.eks. Når et kort ikke er indsat i en kortlæser).
 
 ## Version 16.08
 
-Starting with version 16.08, add-on releases will be shown as
-year.month.revision.
+Begyndende med version 16.08 vises tilføjelsespakkens fremtidige udgivelser
+som år.måned.revision.
 
-* Various revisions of Windows 10 are now properly recognized (such as 1607
-  for build 14393).
-* Windows 10 build revisions (after installing cumulative updates) are
-  properly recognized (such as 14393.51).
-* If using Insider Preview builds, this fact is recognized.
+* Forskellige revisioner af Windows 10 er nu korrekt genkendt (f.eks. 1607
+  til build 14393).
+* Windows 10 build revisions (efter installation af kumulative opdateringer)
+  er korrekt genkendt (såsom 14393.51).
+* Hvis du bruger Insider-preview-builds, genkendes dette.
 
-## Changes for 4.5 ##
+## Ændringer i 4.5 ##
 
-* Add-on repository has moved to GitHub (can be found at
+* Tilføjelsespakkens udviklingssted er flyttet til GitHub (kan findes på
   https://github.com/josephsl/resourcemonitor).
-* Windows Server 2016 is properly recognized.
+* Windows Server 2016 er korrekt genkendt.
 
 ## Ændringer i4.0  ##
 
