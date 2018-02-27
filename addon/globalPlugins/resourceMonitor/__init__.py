@@ -46,26 +46,31 @@ def tryTrunk(n):
 	if n==int(n): return int(n)
 	return n
 
-# Record Windows 10 builds to release ID's.
-releaseIDs={
-	10240:("Windows 10Ver1507","Windows Server Tech Preview"),
-	10586:("Windows 10Ver1511","Windows Server Tech Preview"),
-	14393:("Windows 10Ver1607","Windows Server 2016"),
-	15063:("Windows 10Ver1703","Windows Server 1703"),
-	16299:("Windows 10Ver1709","Windows Server 1709"),
-	17199:("Windows 10Ver1803","Windows Server 1803"),
+# Record Windows Server 10 builds to release ID's.
+# Client versions will be checked via Registry.
+server10LTSBuilds={
+	14393:"Windows Server 2016",
 }
 
-def _win10RID(build, isClient):
-	if build not in releaseIDs:
-		# But catch build ranges for upcoming releases, and add it to the dictionary above once stable build ships.
-		# The minimum is a slow ring build that was compiled in the eventual stable branch (rs4_release build 17120 as of February 2018).
-		if 17120 <= build <= 17400:
-			return "Windows 10Ver1803" if isClient else "Windows Server 1803"
-		else:
-			return "Windows 10 Insider" if isClient else "Windows Server Insider"
-	installType = 0 if isClient else 1
-	return releaseIDs[build][installType]
+def _win10RID(buildNum, isClient):
+	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
+	productName = winreg.QueryValueEx(currentVersion, "ProductName")[0]
+	# Version 1511 and later.
+	try:
+		releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
+	except:
+		releaseID = "Unknown"
+	winreg.CloseKey(currentVersion)
+	# Insider Preview builds.
+	if "Preview" in productName:
+		return "Windows 10 Insider" if isClient else "Windows Server Insider"
+	if isClient:
+		if buildNum == 10240: return "Windows 10Ver1507"
+		else: return "Windows 10Ver{0}".format(releaseID)
+	else:
+		if buildNum in server10LTSBuilds:
+			return server10LTSBuilds[buildNum]
+		else: return "Windows Server {0}".format(releaseID)
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -162,7 +167,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
 			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
-		elif winMajor == 10: # Windows 10/Server 2016 (10.0).
+		elif winMajor == 10: # Windows 10/Server 2016 (10.0) and beyond.
 			# Also take care of release ID, introduced in Version 1511.
 			buildNum = sys.getwindowsversion().build
 			currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
