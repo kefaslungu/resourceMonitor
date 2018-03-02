@@ -19,11 +19,12 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid ""
-"Support for Windows XP from Resource Monitor add-on is ending on December "
-"2017. Future add-on releases will require {minSupportedVersion} or later. "
-"Are you sure you wish to install this add-on anyway?"
+"Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
+"is ending on June 2018. Future add-on releases will require "
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
 msgstr ""
 "پشتیبانیِ افزونه‌ی دیده‌بانِ منابع از ویندوز XP در دسامبر ۲۰۱۷ به پایان میرسد. "
 "انتشارهای آینده‌ی این افزونه، دستِ کم به {minSupportedVersion} یا بالاتر نیاز "

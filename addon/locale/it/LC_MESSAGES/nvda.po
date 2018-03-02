@@ -18,11 +18,12 @@ msgstr ""
 "X-Generator: Poedit 1.8.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid ""
-"Support for Windows XP from Resource Monitor add-on is ending on December "
-"2017. Future add-on releases will require {minSupportedVersion} or later. "
-"Are you sure you wish to install this add-on anyway?"
+"Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
+"is ending on June 2018. Future add-on releases will require "
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
 msgstr ""
 "Il supporto a Windows Xp da parte di questo componente aggiuntivo terminerà "
 "nel dicembre 2017. Le versioni future dell'addon richiederanno "
