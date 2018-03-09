@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-04-11 05:45+0100\n"
-"PO-Revision-Date: 2017-09-15 12:02+0200\n"
+"PO-Revision-Date: 2018-03-02 11:23+0200\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
 "is ending on June 2018. Future add-on releases will require "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Поддръжката за Windows XP от добавката „Наблюдение на ресурсите“ завършва на "
-"декември 2017 г. Бъдещите версии на добавката ще изискват "
-"{minSupportedVersion} или по-нова. Наистина ли желаете да инсталирате тази "
-"добавка въпреки това?"
+"Поддръжката за Windows Vista, Server 2003 и 2008 от добавката „Наблюдение на "
+"ресурсите“ завършва през месец юни 2018 г. Бъдещите версии на добавката ще "
+"изискват {minSupportedVersion} или по-нова. Наистина ли желаете да "
+"инсталирате тази добавка въпреки това?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
