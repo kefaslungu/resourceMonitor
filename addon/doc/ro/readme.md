@@ -39,9 +39,18 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 * În cazul în care există o activitate grea pe disc, cum ar fi copierea
   fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
   informațiilor de utilizare a discului.
-* Suportul pentru Windows XP de la acest supliment va înceta pe 31 decembrie
-  2017. Suporturile pentru Windows Server 2003 și pentru Windows Vista vor
-  înceta pe 30 iunie 2018.
+* Support for Windows XP from this add-on ended on December 31,
+  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
+  June 30, 2018.
+
+## Version 18.04
+
+Version 18.04.x is the last release to support Windows releases earlier than
+7 SP1.
+
+* Last release to support Windows Server 2003, Vista and Server 2008.
+* Better detection of Windows 10 releases and distinguishing between public
+  and Insider Preview builds.
 
 ## Versiunea 17.12
 

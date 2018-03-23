@@ -37,9 +37,18 @@ resource usage information.
   ضعف رقم نوى وحدة المعالجة المركزية. 
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on will end on December 31,
-  2017. Support for Windows Server 2003 and Windows Vista will end on June
-  30, 2018.
+* Support for Windows XP from this add-on ended on December 31,
+  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
+  June 30, 2018.
+
+## Version 18.04
+
+Version 18.04.x is the last release to support Windows releases earlier than
+7 SP1.
+
+* Last release to support Windows Server 2003, Vista and Server 2008.
+* Better detection of Windows 10 releases and distinguishing between public
+  and Insider Preview builds.
 
 ## Version 17.12
 

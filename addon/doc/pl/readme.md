@@ -38,9 +38,18 @@ następujące kwestie:
   Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia przy pobieraniu informacji.
-* Wsparcie dla Windows XP do tego dodatku skończy się 31 grudnia,
-  2017. Wsparcie dla Windows Server 2003 i Windows Vista skończy się
-  30. czerwca, 2018.
+* Support for Windows XP from this add-on ended on December 31,
+  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
+  June 30, 2018.
+
+## Version 18.04
+
+Version 18.04.x is the last release to support Windows releases earlier than
+7 SP1.
+
+* Last release to support Windows Server 2003, Vista and Server 2008.
+* Better detection of Windows 10 releases and distinguishing between public
+  and Insider Preview builds.
 
 ## Wersja 17.12
 
