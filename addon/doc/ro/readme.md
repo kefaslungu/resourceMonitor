@@ -39,18 +39,17 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 * În cazul în care există o activitate grea pe disc, cum ar fi copierea
   fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
   informațiilor de utilizare a discului.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+* Suportul pentru Windows XP de la acest supliment a luat sfârșit pe 31
+  decembrie 2017. Suportul pentru Windows Server 2003 și pentru Windows
+  Vista va lua sfârșit pe 30 iunie 2018.
 
-## Version 18.04
+## Versiunea 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+Versiunea 17.09.x este ultima care suportă Windows XP.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Ultima versiune care suportă Windows Server 2003, Vista și Server 2008.
+* O detectare mai bună a versiunilor de Windows 10 și diferențierea dintre
+  compilările publice și cele Insider Preview.
 
 ## Versiunea 17.12
 
@@ -88,7 +87,7 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 Începând cu versiunea 16.08, lansările add-on-ului vor fi anuale.
 
 * Diferite versiuni ale Windows 10 sunt acum recunoscute în mod
-  corespunzător (cum ar fi 1607 pentru build 14393). 
+  corespunzător (cum ar fi 1607 pentru build 14393).
 * Versiunile Windows 10 build (după instalarea actualizărilor cumulative)
   sunt acum recunoscute în mod corespunzător (cum ar fi 14393.51).
 * Dacă folosiți versiunile builds pentru Insideri, acest fapt este
@@ -150,7 +149,7 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 
 ## Modificări aduse în versiunea 2.0 ##
 
-* S-a adăugat suportul pentru traduceri și comentariile pentru acestea.
+* s-a adăugat suportul pentru traduceri și comentariile pentru acestea.
 
 ## Modificări aduse în versiunea 1.0 ##
 

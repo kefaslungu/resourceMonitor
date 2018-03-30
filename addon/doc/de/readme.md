@@ -39,18 +39,20 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Es kann zu Verzögerungen beim Abrufen von Informationen über die
   Festplattennutzung kommen, wenn starke Festplattenaktivitäten wie z.B. das
   Kopieren großer Dateien stattfinden.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+* Die Unterstützung für Windows XP ist seit 31. Dezember 2017 beendet. Die
+  Unterstützung für Windows Server 2003 und Windows Vista endet am 30. Juni
+  2018.
 
 ## Version 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+Wichtig: Version 18.04.x ist die letzte Version, die auf Windows-Versionen
+vor Windows 7 Service-pack 1 ausgeführt werden kann.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Dies ist die letzte Version der Erweiterung, die Windows Server 2003,
+  Vista und Server 2008 unterstützt.
+* Die Identifikation der Windows-10-Version funktioniert
+  zuverlässiger. Außerdem wird nun zwischen Windows-Insider-Versionen und
+  veröffentlichten Windows-Versionen unterschieden.
 
 ## Version 17.12
 

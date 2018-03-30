@@ -37,18 +37,17 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+* Tämän lisäosan Windows XP -tuki päättyi 31. joulukuuta 2017. Windows
+  Server 2003:n, Vistan ja Server 2008:n tuki päättyy 30. kesäkuuta 2018.
 
-## Version 18.04
+## Versio 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+Versio 18.04.x on viimeinen julkaisu, joka tukee 7 SP1:tä vanhempia
+Windows-versioita.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Viimeinen Windows Server 2003:a, Vistaa ja Server 2008:aa tukeva versio.
+* Parempi Windows 10 -versioiden tunnistaminen sekä julkisten ja
+  Insider-esiversioiden erottaminen toisistaan.
 
 ## Versio 17.12
 

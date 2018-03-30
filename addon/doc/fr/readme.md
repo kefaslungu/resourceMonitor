@@ -41,18 +41,19 @@ suit :
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+* La prise en charge de Windows XP à partir de ce module complémentaire a
+  pris fin le 31 décembre 2017. La prise en charge de Windows Server 2003,
+  Vista et Server 2008 prendra fin le 30 juin 2018.
 
 ## Version 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+La version 18.04.x est la dernière version à prendre en charge les versions
+de Windows antérieures à 7 SP1.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* La dernière version à prendre en charge Windows Server 2003, Vista et
+  Server 2008.
+* Meilleure détection des versions de Windows 10 et distinction entre les
+  versions publiques et les versions d'Insider Preview.
 
 ## Version 17.12
 
