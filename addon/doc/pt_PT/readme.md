@@ -37,18 +37,18 @@ informações do sistema para o Windows. Observe também o seguinte:
   onde o número de CPU é o dobro do número de núcleos da CPU.
 * Se houver uma grande actividade do disco, como copiar ficheiros grandes,
   pode haver atrasos ao obter informações de uso do disco.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+* O suporte deste extra para o Windows XP terminará em 31 de dezembro de
+  2017. O suporte para Windows Server 2003 e Windows Vista terminará em 30
+  de junho de 2018.
 
-## Version 18.04
+## Versão 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
+A versão 18.04.x é a última versão a suportar versões anteriores ao Windows
 7 SP1.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Última versão para suporte ao Windows Server 2003, Vista e Server 2008.
+* Melhor detecção de versões do Windows 10 e distinção entre versões
+  públicas e beta privadas.
 
 ## Versão 17.12
 
