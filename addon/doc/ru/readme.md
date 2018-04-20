@@ -1,11 +1,11 @@
 # Resource Monitor #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
-  NVDA contributors
+* Авторы: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala и другие
+  участники сообщества NVDA
 * Загрузить [стабильную версию][1]
 
-This add-on gives information about CPU load, memory usage and other
-resource usage information.
+Этот плагин предоставляет информацию о загрузке процессора, используемой
+памяти и  других используемых ресурсах.
 
 # Горячие клавиши #
 
@@ -38,11 +38,11 @@ resource usage information.
   процессорных ядер.
 * Если есть тяжелые дисковые операции, такие как копирование больших файлов,
   возникают задержки при получении информации об использовании диска.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+* Поддержка этим дополнением Windows XP заканчивается 31 декабря 2017
+  года. Поддержка Windows Server 2003, Vista и Server 2008 будет прекращена
+  30 июня 2018 года.
 
-## Version 18.04
+## Версия 18.04
 
 Version 18.04.x is the last release to support Windows releases earlier than
 7 SP1.
@@ -51,11 +51,11 @@ Version 18.04.x is the last release to support Windows releases earlier than
 * Better detection of Windows 10 releases and distinguishing between public
   and Insider Preview builds.
 
-## Version 17.12
+## Версия 17.12
 
 * Added support for 64-bit ARM processors on Windows 10.
 
-## Version 17.09
+## Версия 17.09
 
 Important: Version 17.09.x is the last version to support Windows XP.
 
@@ -64,11 +64,11 @@ Important: Version 17.09.x is the last version to support Windows XP.
   revision for this add-on will be released once Version 1709 stable build
   is released.
 
-## Version 17.07.1
+## Версия 17.07.1
 
 * Reintroduce support for Windows XP (broken since version 17.02).
 
-## Version 17.05
+## Версия 17.05
 
 * Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
 
