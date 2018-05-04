@@ -9,20 +9,20 @@ resurssien käytöstä.
 
 # Pikanäppäimet #
 
-* NVDA+Shift+E: Lukee käytetyn RAM-muistin määrän, suorittimen
+* NVDA+Vaihto+E: Lukee käytetyn RAM-muistin määrän, suorittimen
   keskimääräisen kuormituksen ja akun tiedot, mikäli sellainen on käytössä.
-* NVDA+Shift+1: Lukee suorittimen ja ydinten keskimääräisen kuormituksen,
+* NVDA+Vaihto+1: Lukee suorittimen ja ydinten keskimääräisen kuormituksen,
   mikäli käytössä on moniydinsuoritin.
-* NVDA+Shift+2/5: Lukee sekä fyysisen että näennäisen RAM-muistin käytetyn
+* NVDA+Vaihto+2/5: Lukee sekä fyysisen että näennäisen RAM-muistin käytetyn
   ja kokonaismäärän.
-* NVDA+Shift+3: Lukee kiintolevyjen ja siirrettävien asemien käytetyn ja
+* NVDA+Vaihto+3: Lukee kiintolevyjen ja siirrettävien asemien käytetyn ja
   kokonaistilan.
-* NVDA+Shift+4: Lukee akun varauksen prosentteina, latauksen tilan, jäljellä
-  olevan ajan (jos ei latauksessa) sekä varoituksen, mikäli varauksen taso
-  on alhainen tai kriittinen.
-* NVDA+Shift+6: Ilmoittaa suorittimen arkkitehtuurin (32- tai 64-bittinen)
+* NVDA+Vaihto+4: Lukee akun varauksen prosentteina, latauksen tilan,
+  jäljellä olevan ajan (jos ei latauksessa) sekä varoituksen, mikäli
+  varauksen taso on alhainen tai kriittinen.
+* NVDA+Vaihto+6: Ilmoittaa suorittimen arkkitehtuurin (32- tai 64-bittinen)
   sekä Windowsin ja Service Packin version.
-* NVDA+Shift+7 ilmoittaa järjestelmän käynnissäoloajan.
+* NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
 
 Voit muuttaa näitä pikanäppäimiä, mikäli käytössäsi on NVDA:n versio 2013.3
 TAI uudempi.

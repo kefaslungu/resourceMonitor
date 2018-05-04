@@ -1,40 +1,41 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 2.1\n"
+"Project-Id-Version: resourceMonitor 18.04\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2016-03-27 22:26+0800\n"
-"Last-Translator: 雪岭冰龙 <vgjh2005@gmail.com>\n"
-"Language-Team: Simplified Chinese <vgjh2005@gmail.com>\n"
+"PO-Revision-Date: 2018-04-28 19:15+0800\n"
+"Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
+"Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid ""
-"Support for Windows XP from Resource Monitor add-on is ending on December "
-"2017. Future add-on releases will require {minSupportedVersion} or later. "
-"Are you sure you wish to install this add-on anyway?"
+"Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
+"is ending on June 2018. Future add-on releases will require "
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
 msgstr ""
+"资源监控器插件对Windows XP的支持将于2017年12月结束。未来的插件版本将需要"
+"{minSupportedVersion}或更高版本。 你确定要安装这个插件吗？"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr ""
+msgstr "旧版Windows"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Resource Monitor"
+msgstr "资源监控器"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"
@@ -72,7 +73,7 @@ msgstr ""
 "告。"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -86,12 +87,12 @@ msgid ""
 msgstr "显示此计算机上的本地驱动器和可移动驱动器的空间使用情况。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心{coreNumber}: {corePercent}%。"
 
 #. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "平均 CPU 负载： {avgLoad}%, {cores}"
 
@@ -142,19 +143,19 @@ msgstr "朗读您正在使用的 windows 的版本"
 #. Translators: The system's uptime
 #, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
-msgstr ""
+msgstr "{days} 天,{hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr ""
+msgstr "无法获取系统的运行时间。"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr ""
+msgstr "显示系统的运行时间。"
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "内存使用{ramPercent}%，CPU 使用{cpuPercent}%。"
 
