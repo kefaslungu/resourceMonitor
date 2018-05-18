@@ -8,27 +8,27 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-07-07 08:56+0200\n"
-"PO-Revision-Date: 2018-01-21 10:17+0100\n"
+"PO-Revision-Date: 2018-05-14 11:13+0200\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: Danish <LL@li.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
 "is ending on June 2018. Future add-on releases will require "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Understøttelse af Windows XP i tilføjelsesprogrammet Ressourcemonitor "
-"slutter december 2017. Fremtidige udgaver af tilføjelsesprogrammet kræver "
-"{minSupportedVersion} eller senere. Er du sikker på, at du vil installere "
-"dette tilføjelsesprogram alligevel?"
+"Understøttelse af Windows Vista, Server 2003 og 2008  i "
+"tilføjelsesprogrammet Ressourcemonitor slutter juni 2018. Fremtidige udgaver "
+"af tilføjelsesprogrammet kræver {minSupportedVersion} eller senere. Er du "
+"sikker på, at du vil installere dette tilføjelsesprogram alligevel?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -38,7 +38,7 @@ msgstr "Gammel version af Windows"
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Resource Monitor"
+msgstr "Ressourcemonitor"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"

@@ -1,4 +1,4 @@
-# Resource Monitor #
+# Ressourcemonitor #
 
 * Forfattere: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala og
   andre NVDA-bidragydere
@@ -44,12 +44,12 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 ## Version 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+Version 18.04.x er den sidste version, der understøtter udgaver af Windows
+ældre end 7 SP1.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Sidste version der understøtter Windows Server 2003, Vista og Server 2008.
+* Forbedret detektion af udgaver af Windows 10 og bedre til at skelne mellem
+  offentlige builds af Windows og Insider Preview.
 
 ## Version 17.12
 
