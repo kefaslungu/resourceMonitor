@@ -23,7 +23,7 @@ This add-on does not replace task manager and other system information programs 
 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on ended on December 31, 2017. Support for Windows Server 2003, Vista and Server 2008 will end on June 30, 2018.
+* Support for Windows XP from this add-on ended on December 31, 2017. Support for Windows Server 2003, Vista and Server 2008 ended on June 30, 2018.
 
 ## Version 18.04
 
