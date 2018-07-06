@@ -39,9 +39,9 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 * În cazul în care există o activitate grea pe disc, cum ar fi copierea
   fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
   informațiilor de utilizare a discului.
-* Suportul pentru Windows XP de la acest supliment a luat sfârșit pe 31
-  decembrie 2017. Suportul pentru Windows Server 2003 și pentru Windows
-  Vista va lua sfârșit pe 30 iunie 2018.
+* Support for Windows XP from this add-on ended on December 31,
+  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.
 
 ## Versiunea 18.04
 

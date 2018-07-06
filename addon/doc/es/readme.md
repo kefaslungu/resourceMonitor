@@ -38,9 +38,9 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   CPU.
 * Si hay una actividad pesada de disco tal como el copiado de ficheros
   grandes, podría haber retrasos al obtener información de uso de disco.
-* El soporte para Windows XP de este complemento finalizará el 31 de
-  diciembre de 2017. El soporte para Windows Server 2003, Windows Vista y
-  Windows Server 2008 finalizará el 30 de junio de 2018.
+* Support for Windows XP from this add-on ended on December 31,
+  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.
 
 ## Versión 18.04
 

@@ -43,7 +43,7 @@ suit :
   l'utilisation du disque.
 * La prise en charge de Windows XP à partir de ce module complémentaire a
   pris fin le 31 décembre 2017. La prise en charge de Windows Server 2003,
-  Vista et Server 2008 prendra fin le 30 juin 2018.
+  Vista et Server 2008 a pris fin le 30 juin 2018.
 
 ## Version 18.04
 

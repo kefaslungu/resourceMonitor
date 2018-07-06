@@ -39,9 +39,10 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Es kann zu Verzögerungen beim Abrufen von Informationen über die
   Festplattennutzung kommen, wenn starke Festplattenaktivitäten wie z.B. das
   Kopieren großer Dateien stattfinden.
-* Die Unterstützung für Windows XP ist seit 31. Dezember 2017 beendet. Die
-  Unterstützung für Windows Server 2003 und Windows Vista endet am 30. Juni
-  2018.
+* Die Unterstützung für Windows XP aus diese Erweiterung endete am
+  31. Dezember 2017.
+  Die Unterstützung für Windows Vista, Windows Server 2003 und Windows
+  Server 2008 endete am 30. Juni 2018.
 
 ## Version 18.04
 
