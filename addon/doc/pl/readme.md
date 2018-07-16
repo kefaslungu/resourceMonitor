@@ -39,8 +39,8 @@ następujące kwestie:
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia przy pobieraniu informacji.
 * Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.
 
 ## Version 18.04
 

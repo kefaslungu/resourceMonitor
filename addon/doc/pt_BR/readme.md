@@ -38,8 +38,8 @@ de informações de sistema para Windows. Note também o seguinte:
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
 * Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.
 
 ## Version 18.04
 

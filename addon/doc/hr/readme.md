@@ -38,8 +38,9 @@ informacije o sustavu Windows. Također upamtite sljedeće:
 * Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
-* Podrška ovog dodatka za Windows XP završila je 31. prosinca 2017. Podrška
-  za Windows Server 2003, Vistu i 2008. završit će 30. lipnja 2018.
+* Support for Windows XP from this add-on ended on December 31,
+  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.
 
 ## Inačica 18.04
 

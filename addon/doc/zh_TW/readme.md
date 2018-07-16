@@ -24,8 +24,8 @@
 * CPU 使用率是針對邏輯處理器而非實體核心。對於使用超執行緒的處理器來說，這是顯而易見的，其中 CPU 的數量是 CPU 核心數量的兩倍。
 * 如果正在進行繁忙的磁碟活動（例如復制大型檔案），則獲取磁碟使用訊息時可能出現延遲。
 * Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 will end on
-  June 30, 2018.
+  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.
 
 ## Version 18.04
 

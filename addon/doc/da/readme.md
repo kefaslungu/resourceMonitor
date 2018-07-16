@@ -38,9 +38,9 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
   CPU-kernerne.
 * Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
-* Understøttelse af Windows XP fra denne tilføjelse endte d. 31 December
-  2017. Understøttelse af Windows Server 2003, Vista og Server 2008 vil ende
-  på 30 juni 2018.
+* Support for Windows XP from this add-on ended on December 31,
+  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.
 
 ## Version 18.04
 

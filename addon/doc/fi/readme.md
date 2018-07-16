@@ -38,7 +38,7 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämän lisäosan Windows XP -tuki päättyi 31. joulukuuta 2017. Windows
-  Server 2003:n, Vistan ja Server 2008:n tuki päättyy 30. kesäkuuta 2018.
+  Server 2003:n, Vistan ja Server 2008:n tuki päättyi 30. kesäkuuta 2018.
 
 ## Versio 18.04
 

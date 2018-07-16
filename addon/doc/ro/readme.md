@@ -41,7 +41,7 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
   informațiilor de utilizare a discului.
 * Suportul pentru Windows XP de la acest supliment a luat sfârșit pe 31
   decembrie 2017. Suportul pentru Windows Server 2003 și pentru Windows
-  Vista va lua sfârșit pe 30 iunie 2018.
+  Vista a luat sfârșit pe 30 iunie 2018.
 
 ## Versiunea 18.04
 
