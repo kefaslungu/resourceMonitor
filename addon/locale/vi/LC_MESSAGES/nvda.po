@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 17.02\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 18:05+1000\n"
-"PO-Revision-Date: 2018-07-30 10:39+0700\n"
+"PO-Revision-Date: 2018-08-03 15:30+0700\n"
 "Last-Translator: Cuong Dang Manh <dangmanhcuong@gmail.com>\n"
 "Language-Team: \n"
 "Language: vi\n"
@@ -18,16 +18,17 @@ msgstr ""
 "X-Generator: Poedit 2.1.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
 "is ending on June 2018. Future add-on releases will require "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Add-on Resource Monitor đã ngưng hỗ trợ Windows XP từ tháng 12/2017. Các bản "
-"phát hành sắp tới của add-on sẽ yêu cầu {minSupportedVersion} trở lên. Bạn "
-"có chắc chắn muốn cài đặt add-on này không?"
+"Add-on Resource Monitor đã ngưng hỗ trợ Windows Vista, Server 2003 and 2008 "
+"từ tháng 06/2018. Các bản phát hành sắp tới của add-on sẽ yêu cầu "
+"{minSupportedVersion} trở lên. Bạn có chắc chắn muốn cài đặt add-on này "
+"không?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
