@@ -27,18 +27,84 @@ import battery
 import addonHandler
 addonHandler.initTranslation()
 
-def toBiggestBytes(n, x=2, useLongNames=False):
-	#returns a string where n, rounded to x, is in the largest logical measure possible
-	i=0 #counter
-	units=[" bytes","kb","mb","gb","tb"]
-	longUnits=[" bytes","kilobytes","megabytes","gigabytes","terrabytes"]
-	n=float(n)
-	while(n>=1024):
-		n=n/1024.0
-		i=i+1
-	res=(str(round(n, x)))
-	if useLongNames: return res+" "+longUnits[i]
-	else: return res+units[i]
+# Styles of size calculation/string composition, do not change!
+# Treditional style, Y, K, M, G, B, ...
+traditional = [
+	(1024.0**8.0, 'Y'),
+	(1024.0**7.0, 'Z'),
+	(1024.0**6.0, 'E'),
+	(1024.0**5.0, 'P'),
+	(1024.0**4.0, 'T'), 
+	(1024.0**3.0, 'G'), 
+	(1024.0**2.0, 'M'), 
+	(1024.0**1.0, 'K'),
+	(1024.0**0.0, 'B'),
+	]
+
+# Alternative style (displayed with most PCs): MB, KB, GB, YB, ZB, ...
+alternative = [
+	(1024.0**8.0, ' YB'),
+	(1024.0**7.0, ' ZB'),
+	(1024.0**6.0, ' EB'),
+	(1024.0**5.0, ' PB'),
+	(1024.0**4.0, ' TB'), 
+	(1024.0**3.0, ' GB'), 
+	(1024.0**2.0, ' MB'), 
+	(1024.0**1.0, ' KB'),
+	(1024.0**0.0, (' byte', ' bytes')),
+	]
+
+# Verbose style: Kilobytes, Megabytes, Gigabytes, ...
+verbose = [
+	(1024.0**8.0, ' yottabytes'),
+	(1024.0**7.0, ' zettabytes'),
+	(1024.0**6.0, ' exabytes'),
+	(1024.0**5.0, (' petabyte', ' petabytes')),
+	(1024.0**4.0, (' terabyte', ' terabytes')), 
+	(1024.0**3.0, (' gigabyte', ' gigabytes')), 
+	(1024.0**2.0, (' megabyte', ' megabytes')), 
+	(1024.0**1.0, (' kilobyte', ' kilobytes')),
+	(1024.0**0.0, (' byte', ' bytes')),
+	]
+
+# International Electrotechnical Commission (IEC) style: Ki, Mi, Gi, Ti, ...
+iec = [
+	(1024.0**8.0, 'Yi'),
+	(1024.0**7.0, 'Zi'),
+	(1024.0**6.0, 'Ei'),
+	(1024.0**5.0, 'Pi'),
+	(1024.0**4.0, 'Ti'),
+	(1024.0**3.0, 'Gi'), 
+	(1024.0**2, 'Mi'), 
+	(1024.0**1.0, 'Ki'),
+	(1024.0**0.0, ''),
+	]
+
+# International System of Units (Si) style: each unit is 1000 of another (i.e. 1000 KB is 1 MB)
+si = [
+	(1000.0**8.0, 'Y'),
+	(1000.0**7.0, 'Z'),
+	(1000.0**6.0, 'E'),
+	(1000.0**5.0, 'P'),
+	(1000.0**4.0, 'T'), 
+	(1000.0**3.0, 'G'), 
+	(1000.0**2.0, 'M'), 
+	(1000.0**1.0, 'K'),
+	(1000.0**0.0, 'B'),
+	]
+
+def size(bytes, system=traditional):
+	for factor, suffix in system:
+		if float(bytes) >= float(factor):
+			break
+	amount = float(bytes/factor)
+	if isinstance(suffix, tuple):
+		singular, multiple = suffix
+		if float(amount) == 1.0:
+			suffix = singular
+		else:
+			suffix = multiple
+	return "{:.2F}{}".format(float(amount), suffix)
 
 def tryTrunk(n):
 	#this method basically removes decimal zeros, so 5.0 will just be 5.
@@ -114,7 +180,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if drive.fstype:
 				driveInfo=psutil.disk_usage(drive[0])
 				# Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-				info.append(_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(driveName=drive[0], driveType=drive[2], usedSpace=toBiggestBytes(tryTrunk(driveInfo[1])), totalSpace=toBiggestBytes(tryTrunk(driveInfo[0])), percent=tryTrunk(driveInfo[3])))
+				info.append(_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(driveName=drive[0], driveType=drive[2], usedSpace=size(driveInfo[1], alternative), totalSpace=size(driveInfo[0], alternative), percent=tryTrunk(driveInfo[3])))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
 		else:
@@ -143,10 +209,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceRamInfo(self, gesture):
 		ram=psutil.virtual_memory()
 		# Translators: Shows RAM (physical memory) usage.
-		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=toBiggestBytes(tryTrunk(ram[3])), physicalTotal=toBiggestBytes(tryTrunk(ram[0])), physicalPercent=tryTrunk(ram[2]))
+		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=size(ram[3], alternative), physicalTotal=size(ram[0], alternative), physicalPercent=tryTrunk(ram[2]))
 		virtualRam=psutil.swap_memory()
 		# Translators: Shows virtual memory usage.
-		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=toBiggestBytes(tryTrunk(virtualRam[1])), virtualTotal=toBiggestBytes(tryTrunk(virtualRam[0])), virtualPercent=tryTrunk(virtualRam[3]))
+		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=size(virtualRam[1], alternative), virtualTotal=size(virtualRam[0], alternative), virtualPercent=tryTrunk(virtualRam[3]))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -159,8 +225,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64","ARM64"), ""
 		# Determine Windows version.
-		if winMajor == 6: # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-			if winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
+		if winMajor == 5: # XP (5.1) or Server 2003 (5.2).
+			if winMinor == 1: winverName = "Windows XP" # Since most XP systems use 32-bit editions.
+			elif winMinor == 2: winverName = "Windows Server 2003"
+		elif winMajor == 6: # Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+			if winMinor == 0: winverName = "Windows Vista" if server == 1 else "Windows Server 2008" # Vista.
+			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
 			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
 		elif winMajor == 10: # Windows 10/Server 2016 (10.0) and beyond.
