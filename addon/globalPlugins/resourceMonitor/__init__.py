@@ -121,6 +121,7 @@ server10LTSBuilds={
 def _win10RID(buildNum, isClient):
 	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
 	productName = winreg.QueryValueEx(currentVersion, "ProductName")[0]
+	buildBranch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
 	# Version 1511 and later.
 	try:
 		releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
@@ -128,7 +129,7 @@ def _win10RID(buildNum, isClient):
 		releaseID = "Unknown"
 	winreg.CloseKey(currentVersion)
 	# Insider Preview builds.
-	if "Preview" in productName:
+	if "Preview" in productName or "_prerelease" in buildBranch:
 		return "Windows 10 Insider" if isClient else "Windows Server Insider"
 	if isClient:
 		if buildNum == 10240: return "Windows 10Ver1507"
