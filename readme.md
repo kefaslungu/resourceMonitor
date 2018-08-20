@@ -25,6 +25,11 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * Support for Windows XP from this add-on ended on December 31, 2017. Support for Windows Server 2003, Vista and Server 2008 ended on June 30, 2018.
 
+## Version 18.10
+
+* When obtaining disk capacity and memory usage, NVDA will no longer give errors if using a computer or a service with more than a petabyte of RAM or disk size.
+* Improved detection of Windows Insider Preview builds.
+
 ## Version 18.04
 
 Version 18.04.x is the last release to support Windows releases earlier than 7 SP1.
