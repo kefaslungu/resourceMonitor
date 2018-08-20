@@ -21,7 +21,7 @@ addon_info = {
 	# version
 	"addon_version" : "18.07",
 	# Author(s)
-	"addon_author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com> and other NVDA contributors",
+	"addon_author" : "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
 	"addon_url" : "https://addons.nvda-project.org/",
 	# Documentation file name
