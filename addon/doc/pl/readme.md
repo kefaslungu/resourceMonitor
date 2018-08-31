@@ -1,4 +1,4 @@
-# Monitor zasobów / Resource Monitor #
+# Resource Monitor #
 
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala i inni
   współtwórcy NVDA
