@@ -37,9 +37,9 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   onde o número de CPUs é o dobre do número de núcleos de CPU.
 * Se hai unha actividade pesada de disco coma o copiado de ficheiros longos,
   podería haber retrasos ao obter información de uso do disco.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* O soporte para o Windows XP deste complemento rematou o 31 de decembro do
+  2017. O soporte para o Windows Server 2003, o Windows Vista e o Windows
+  Server 2008 rematou o 30 de xunio do 2018.
 
 ## Versión 18.04
 
