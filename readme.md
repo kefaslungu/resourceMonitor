@@ -15,7 +15,7 @@ This add-on gives information about CPU load, memory usage and other resource us
 * NVDA+Shift+6 Presents  CPU Architecture 32/64-bit and Windows version and service pack numbers.
 * NVDA+Shift+7 presents the system's uptime.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut keys.
+If you have NvDA 2013.3 or later installed, you can change these shortcut keys via input gestures dialog.
 
 ## Usage notes ##
 
@@ -23,11 +23,12 @@ This add-on does not replace task manager and other system information programs 
 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on ended on December 31, 2017. Support for Windows Server 2003, Vista and Server 2008 ended on June 30, 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
 
 ## Version 18.10
 
 * When obtaining disk capacity and memory usage, NVDA will no longer give errors if using a computer or a service with more than a petabyte of RAM or disk size.
+* Values for memory and disk usage are shown with up to two decimal places (e.g. 4.00 GB instead of 4.0 GB).
 * Improved detection of Windows Insider Preview builds.
 
 ## Version 18.04
