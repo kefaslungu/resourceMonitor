@@ -4,14 +4,14 @@
   współtwórcy NVDA
 * Pobierz [wersja stabilna][1]
 
-Ta wtyczka podaje informacje o obciązeniu procesora, użyciu pamięci RAM, a
+Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
 
 # Skróty #
 
-* NVDA+Shift+E raportuje używaną pamięć, średnie obciążenie procesora,
-  informacje o baterii jeśli dostępna.
-* nvda+szift+1 podaje średnie obciążenie procesora i obciąrzenie każdego z
+* NVDA+Shift+E podaje używaną pamięć, średnie obciążenie procesora,
+  informacje o baterii jeśli jest dostępna.
+* nvda+shift+1 podaje średnie obciążenie procesora i obciążenie każdego z
   rdzeni, jeśli używany jest procesor wielordzeniowy.
 * NVDA+Shift+2/5 podaje informacje o użyciu fizycznej i wirtualnej pamięci
   RAM.
@@ -20,8 +20,8 @@ także wykorzystaniu innych zasobów.
 * NVDA+Shift+4 raportuje procent baterii, status ładowania, pozostały czas
   (jeśli nie ładuje), i ostrzeżenie o niskim lub krytycznym poziomie
   baterii.
-* NVDA+Shift+6 odczytuje wersję i servicepack systemu Windows, oraz bity
-  procesora (32 lub 64 bity).
+* NVDA+Shift+6 odczytuje wersję i pakiet serwisowy systemu Windows, oraz
+  bity procesora (32 lub 64 bity).
 * NVDA+Shift+7 Pokazuje czas pracy systemu.
 
 Jeśli masz zainstalowane NVDA 2013.3 lub nowsze, możesz zmienić te skróty
@@ -34,22 +34,22 @@ dostarczających informacji o systemie. Proszę również zwrócić uwagę na
 następujące kwestie:
 
 * Użycie CPU jest podawane dla procesorów logicznych, nie fizycznych
-  rdzeni. Jest to zauważalne dla procesorów używających technologii Hyper
-  Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
+  rdzeni. Jest to zauważalne w przypadku procesorów używających technologii
+  Hyper Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
-  wielkich plików, możliwe są opóźnienia przy pobieraniu informacji.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+  wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
+* Wsparcie dla Windowsa XP dla tego dodatku zakończyło się 31. grudnia,
+  2017. Wsparcie dla Windowsa Server 2003, Vista i Server 2008 zakończyło
+  się 30. czerwca 2018.
 
-## Version 18.04
+## Wersja 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+Wersja 18.04.x jest ostatnim wydaniem wspierającym wydania windows wcześniej
+niż 7 SP1.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Ostatnia wersjawspierająca Windows Server 2003, Vista i Server 2008.
+* Lepsze wykrywanie wydań Windowsa 10, a także rozróżnianie między wydaniami
+  publicznymi i wydaniami niejawnego programu testów.
 
 ## Wersja 17.12
 
@@ -77,9 +77,9 @@ Ważne: Wersja 17.09.x jest ostatnią wersją wspierającą Windows XP.
 
 * zaktualizowano bibliotekę psutil do wersji 5.0.1.
 * przy sprawdzaniu użycia dysku, NVDA nigdy więcej nie będzie pokazywał
-  dialog o błędzie na niektórymi systemami na którymi dyski wymienne nie są
-  rospoznane prawidłowo (Tak jak naprzykład, kiedy karta SD nie jest włożona
-  do karty pamięci).)
+  dialogu o błędzie na niektórych systemach na których dyski wymienne nie są
+  rospoznane prawidłowo (Tak jak na przykład, kiedy karta SD nie jest
+  włożona doslotu karty pamięci).)
 
 ## Wersja 16.08
 
@@ -129,7 +129,7 @@ rok.miesiąc.rewizja.
 
 ## zmiany dla wersji 2.3 ##
 
-* Dodano tłumaczenie na bułgarski.
+* Dodano tłumaczenie bułgarskie.
 
 ## zmiany dla wersji 2.2 ##
 
@@ -146,7 +146,7 @@ rok.miesiąc.rewizja.
 
 ## zmiany dla wersji 2.0 ##
 
-* wsparcie dla wielojęzyczności
+* wsparcie wielojęzyczności
 
 ## zmiany dla wersji 1.0 ##
 
