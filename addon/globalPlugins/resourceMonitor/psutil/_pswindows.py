@@ -9,6 +9,7 @@ import errno
 import functools
 import os
 import sys
+import time
 from collections import namedtuple
 
 from . import _common
@@ -26,7 +27,8 @@ except ImportError as err:
         # but if we get here it means this this was a wheel (or exe).
         msg = "this Windows version is too old (< Windows Vista); "
         msg += "psutil 3.4.2 is the latest version which supports Windows "
-        msg += "2000, XP and 2003 server"
+        msg += "2000, XP and 2003 server; it may be possible that psutil "
+        msg += "will work if compiled from sources though"
         raise RuntimeError(msg)
     else:
         raise
@@ -45,6 +47,9 @@ from ._compat import lru_cache
 from ._compat import PY3
 from ._compat import unicode
 from ._compat import xrange
+from ._exceptions import AccessDenied
+from ._exceptions import NoSuchProcess
+from ._exceptions import TimeoutExpired
 from ._psutil_windows import ABOVE_NORMAL_PRIORITY_CLASS
 from ._psutil_windows import BELOW_NORMAL_PRIORITY_CLASS
 from ._psutil_windows import HIGH_PRIORITY_CLASS
@@ -74,7 +79,6 @@ __extra__all__ = [
 # =====================================================================
 
 CONN_DELETE_TCB = "DELETE_TCB"
-WAIT_TIMEOUT = 0x00000102  # 258 in decimal
 ACCESS_DENIED_ERRSET = frozenset([errno.EPERM, errno.EACCES,
                                   cext.ERROR_ACCESS_DENIED])
 NO_SUCH_SERVICE_ERRSET = frozenset([cext.ERROR_INVALID_NAME,
@@ -139,11 +143,6 @@ pinfo_map = dict(
     mem_private=21,
 )
 
-# these get overwritten on "import psutil" from the __init__.py file
-NoSuchProcess = None
-AccessDenied = None
-TimeoutExpired = None
-
 
 # =====================================================================
 # --- named tuples
@@ -201,7 +200,7 @@ def py2_strencode(s):
         if isinstance(s, str):
             return s
         else:
-            return s.encode(ENCODING, errors=ENCODING_ERRS)
+            return s.encode(ENCODING, ENCODING_ERRS)
 
 
 # =====================================================================
@@ -218,7 +217,7 @@ def virtual_memory():
     avail = availphys
     free = availphys
     used = total - avail
-    percent = usage_percent((total - avail), total, _round=1)
+    percent = usage_percent((total - avail), total, round_=1)
     return svmem(total, avail, percent, used, free)
 
 
@@ -228,7 +227,7 @@ def swap_memory():
     total = mem[2]
     free = mem[3]
     used = total - free
-    percent = usage_percent(used, total, _round=1)
+    percent = usage_percent(used, total, round_=1)
     return _common.sswap(total, used, free, percent, 0, 0)
 
 
@@ -248,7 +247,7 @@ def disk_usage(path):
         path = path.decode(ENCODING, errors="strict")
     total, free = cext.disk_usage(path)
     used = total - free
-    percent = usage_percent(used, total, _round=1)
+    percent = usage_percent(used, total, round_=1)
     return _common.sdiskusage(total, used, free, percent)
 
 
@@ -289,7 +288,7 @@ def cpu_count_logical():
 
 
 def cpu_count_physical():
-    """Return the number of physical CPUs in the system."""
+    """Return the number of physical CPU cores in the system."""
     return cext.cpu_count_phys()
 
 
@@ -793,18 +792,43 @@ class Process(object):
         if timeout is None:
             cext_timeout = cext.INFINITE
         else:
-            # WaitForSingleObject() expects time in milliseconds
+            # WaitForSingleObject() expects time in milliseconds.
             cext_timeout = int(timeout * 1000)
+
+        timer = getattr(time, 'monotonic', time.time)
+        stop_at = timer() + timeout if timeout is not None else None
+
+        try:
+            # Exit code is supposed to come from GetExitCodeProcess().
+            # May also be None if OpenProcess() failed with
+            # ERROR_INVALID_PARAMETER, meaning PID is already gone.
+            exit_code = cext.proc_wait(self.pid, cext_timeout)
+        except cext.TimeoutExpired:
+            # WaitForSingleObject() returned WAIT_TIMEOUT. Just raise.
+            raise TimeoutExpired(timeout, self.pid, self._name)
+        except cext.TimeoutAbandoned:
+            # WaitForSingleObject() returned WAIT_ABANDONED, see:
+            # https://github.com/giampaolo/psutil/issues/1224
+            # We'll just rely on the internal polling and return None
+            # when the PID disappears. Subprocess module does the same
+            # (return None):
+            # https://github.com/python/cpython/blob/
+            #     be50a7b627d0aa37e08fa8e2d5568891f19903ce/
+            #     Lib/subprocess.py#L1193-L1194
+            exit_code = None
+
+        # At this point WaitForSingleObject() returned WAIT_OBJECT_0,
+        # meaning the process is gone. Stupidly there are cases where
+        # its PID may still stick around so we do a further internal
+        # polling.
+        delay = 0.0001
         while True:
-            ret = cext.proc_wait(self.pid, cext_timeout)
-            if ret == WAIT_TIMEOUT:
-                raise TimeoutExpired(timeout, self.pid, self._name)
-            if pid_exists(self.pid):
-                if timeout is None:
-                    continue
-                else:
-                    raise TimeoutExpired(timeout, self.pid, self._name)
-            return ret
+            if not pid_exists(self.pid):
+                return exit_code
+            if stop_at and timer() >= stop_at:
+                raise TimeoutExpired(timeout, pid=self.pid, name=self._name)
+            time.sleep(delay)
+            delay = min(delay * 2, 0.04)  # incremental delay
 
     @wrap_exceptions
     def username(self):

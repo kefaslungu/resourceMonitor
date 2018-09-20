@@ -27,6 +27,9 @@ from ._common import sockfam_to_enum
 from ._common import socktype_to_enum
 from ._common import usage_percent
 from ._compat import which
+from ._exceptions import AccessDenied
+from ._exceptions import NoSuchProcess
+from ._exceptions import ZombieProcess
 
 __extra__all__ = []
 
@@ -128,12 +131,6 @@ kinfo_proc_map = dict(
     name=24,
 )
 
-# these get overwritten on "import psutil" from the __init__.py file
-NoSuchProcess = None
-ZombieProcess = None
-AccessDenied = None
-TimeoutExpired = None
-
 
 # =====================================================================
 # --- named tuples
@@ -191,7 +188,7 @@ def virtual_memory():
                     shared = int(line.split()[1]) * 1024
     avail = inactive + cached + free
     used = active + wired + cached
-    percent = usage_percent((total - avail), total, _round=1)
+    percent = usage_percent((total - avail), total, round_=1)
     return svmem(total, avail, percent, used, free,
                  active, inactive, buffers, cached, shared, wired)
 
@@ -199,7 +196,7 @@ def virtual_memory():
 def swap_memory():
     """System swap memory as (total, used, free, sin, sout) namedtuple."""
     total, used, free, sin, sout = cext.swap_mem()
-    percent = usage_percent(used, total, _round=1)
+    percent = usage_percent(used, total, round_=1)
     return _common.sswap(total, used, free, percent, sin, sout)
 
 
@@ -348,12 +345,18 @@ def net_if_stats():
     names = net_io_counters().keys()
     ret = {}
     for name in names:
-        mtu = cext_posix.net_if_mtu(name)
-        isup = cext_posix.net_if_flags(name)
-        duplex, speed = cext_posix.net_if_duplex_speed(name)
-        if hasattr(_common, 'NicDuplex'):
-            duplex = _common.NicDuplex(duplex)
-        ret[name] = _common.snicstats(isup, duplex, speed, mtu)
+        try:
+            mtu = cext_posix.net_if_mtu(name)
+            isup = cext_posix.net_if_flags(name)
+            duplex, speed = cext_posix.net_if_duplex_speed(name)
+        except OSError as err:
+            # https://github.com/giampaolo/psutil/issues/1279
+            if err.errno != errno.ENODEV:
+                raise
+        else:
+            if hasattr(_common, 'NicDuplex'):
+                duplex = _common.NicDuplex(duplex)
+            ret[name] = _common.snicstats(isup, duplex, speed, mtu)
     return ret
 
 
@@ -394,9 +397,12 @@ def net_connections(kind):
                 # have a very short lifetime so maybe the kernel
                 # can't initialize their status?
                 status = TCP_STATUSES[cext.PSUTIL_CONN_NONE]
+            if fam in (AF_INET, AF_INET6):
+                if laddr:
+                    laddr = _common.addr(*laddr)
+                if raddr:
+                    raddr = _common.addr(*raddr)
             fam = sockfam_to_enum(fam)
-            laddr = _common.addr(*laddr)
-            raddr = _common.addr(*raddr)
             type = socktype_to_enum(type)
             nt = _common.sconn(fd, fam, type, laddr, raddr, status, pid)
             ret.add(nt)
@@ -757,10 +763,7 @@ class Process(object):
 
     @wrap_exceptions
     def wait(self, timeout=None):
-        try:
-            return _psposix.wait_pid(self.pid, timeout)
-        except _psposix.TimeoutExpired:
-            raise TimeoutExpired(timeout, self.pid, self._name)
+        return _psposix.wait_pid(self.pid, timeout, self._name)
 
     @wrap_exceptions
     def nice_get(self):
