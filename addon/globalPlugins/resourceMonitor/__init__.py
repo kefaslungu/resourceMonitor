@@ -14,16 +14,13 @@ import globalPluginHandler
 import ui
 import api
 import scriptHandler
-impPath = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(impPath)
 # Eventually use Python 3 version by default.
 # For now, Python 2 version will be used.
 if sys.version.startswith("3."):
-	import psutil
+	from . import psutil
 else:
-	import psutilpy2 as psutil
-del sys.path[-1]
-import battery
+	from . import psutilpy2 as psutil
+from . import battery
 import addonHandler
 addonHandler.initTranslation()
 
