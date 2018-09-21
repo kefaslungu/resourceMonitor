@@ -37,9 +37,20 @@ informações do sistema para o Windows. Observe também o seguinte:
   onde o número de CPU é o dobro do número de núcleos da CPU.
 * Se houver uma grande actividade do disco, como copiar ficheiros grandes,
   pode haver atrasos ao obter informações de uso do disco.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* O suporte para o Windows XP deste complemento terminou em 31 de dezembro
+  de 2017. O suporte para o Windows Server 2003, Vista e Server 2008
+  terminou em 30 de junho de 2018.
+
+## Version 18.10
+
+* Code has been made more compatible with Python 3.
+* Updated psutil dependency to 5.4.7.
+* When obtaining disk capacity and memory usage, NVDA will no longer give
+  errors if using a computer or a service with more than a petabyte of RAM
+  or disk size.
+* Values for memory and disk usage are shown with up to two decimal places
+  (e.g. 4.00 GB instead of 4.0 GB).
+* Improved detection of Windows Insider Preview builds.
 
 ## Versão 18.04
 

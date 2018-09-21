@@ -18,9 +18,9 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#, fuzzy, python-brace-format
 msgid ""
-"Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
-"is ending on June 2018. Future add-on releases will require "
+"You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
@@ -48,11 +48,13 @@ msgid "This computer does not have a battery connected."
 msgstr "இந்தக் கணினியில் மின்கலம் இணைக்கப்படவில்லை"
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, மின்கலத்தில் மின்சாரம் ஏற்றப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #. discharging battery, so provide info on it
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "மின்கலத்தில் {percent}% மின்சாரம் ஏற்றப்பட வேண்டியுள்ளது, சுமார் {time}."
 
@@ -74,6 +76,7 @@ msgstr ""
 "எச்சரித்தல் ஆகிய பணிகளை செய்கிறது "
 
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -89,10 +92,12 @@ msgstr ""
 "இடம் ஆகியவைகளை அறிவிக்கும்"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "கூறு {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%, {cores}."
 
@@ -101,12 +106,14 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "செயலியின் சராசரி சுமையையும், ஒவ்வொரு கூறின் சுமையையும் அறிவிக்கிறது."
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
@@ -127,10 +134,12 @@ msgid "32-bit"
 msgstr "32-நுண்மி"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "விண்டோஸ் பதிப்பு: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "விண்டோஸ் பதிப்பு: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -139,6 +148,7 @@ msgid "Announces the version of Windows you are using."
 msgstr "தாங்கள் பயன்படுத்தும் சாளரத்தின் பதிப்பை அறிவிக்கும்"
 
 #. Translators: The system's uptime
+#, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
 msgstr "{days} நாட்கள், {hoursMinutesSeconds}"
 
@@ -152,6 +162,7 @@ msgstr "கணினியின் செயல்பட்ட நேரத்�
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
 

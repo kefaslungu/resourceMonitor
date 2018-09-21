@@ -41,6 +41,17 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   2017. O soporte para o Windows Server 2003, o Windows Vista e o Windows
   Server 2008 rematou o 30 de xunio do 2018.
 
+## Version 18.10
+
+* Code has been made more compatible with Python 3.
+* Updated psutil dependency to 5.4.7.
+* When obtaining disk capacity and memory usage, NVDA will no longer give
+  errors if using a computer or a service with more than a petabyte of RAM
+  or disk size.
+* Values for memory and disk usage are shown with up to two decimal places
+  (e.g. 4.00 GB instead of 4.0 GB).
+* Improved detection of Windows Insider Preview builds.
+
 ## Versión 18.04
 
 A versión 18.04.x é a derradeira que soporta versións de Windows anteriores

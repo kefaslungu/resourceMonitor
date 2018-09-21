@@ -46,6 +46,17 @@
   г. Поддръжката за Windows Server 2003, Vista и Server 2008 приключи на 30
   юни 2018 г.
 
+## Version 18.10
+
+* Code has been made more compatible with Python 3.
+* Updated psutil dependency to 5.4.7.
+* When obtaining disk capacity and memory usage, NVDA will no longer give
+  errors if using a computer or a service with more than a petabyte of RAM
+  or disk size.
+* Values for memory and disk usage are shown with up to two decimal places
+  (e.g. 4.00 GB instead of 4.0 GB).
+* Improved detection of Windows Insider Preview builds.
+
 ## Версия 18.04
 
 Версия 18.04.x е последната версия, която ще поддържа издания на Windows,

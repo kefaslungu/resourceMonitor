@@ -40,6 +40,17 @@
   این افزونه از ویندوز سِروِر 2003، ویستا و سِروِر 2008 در ۹ تیرماه ۱۳۹۷
   پایان یافت.
 
+## Version 18.10
+
+* Code has been made more compatible with Python 3.
+* Updated psutil dependency to 5.4.7.
+* When obtaining disk capacity and memory usage, NVDA will no longer give
+  errors if using a computer or a service with more than a petabyte of RAM
+  or disk size.
+* Values for memory and disk usage are shown with up to two decimal places
+  (e.g. 4.00 GB instead of 4.0 GB).
+* Improved detection of Windows Insider Preview builds.
+
 ## نسخه‌ی 18.04
 
 نسخه‌ی 18.04.x آخرین نسخه‌ایست که از ویندوزهای قدیمیتر از ویندوز 7 SP1
