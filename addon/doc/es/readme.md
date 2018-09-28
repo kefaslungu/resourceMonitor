@@ -10,11 +10,11 @@ utilización de la memoria y de otra información de uso de recursos.
 # Atajos de teclado #
 
 * NVDA+Shift+E Presenta la ram utilizada, la carga promedio del procesador,
-  e información de la batería si está disponible,
+  e información de la batería si está disponible.
 * NVDA+Shift+1 Presenta la carga promedio del procesador y el promedio de la
-  carga de cada uno de los núcleos si los hay
+  carga de cada uno de los núcleos si los hay.
 * NVDA+Shift+2/5 Presenta el espacio utilizado y total de la RAM física y
-  virtual,
+  virtual.
 * NVDA+Shift+3 Presenta el espacio utilizado y el total de las unidades
   estáticas y extraíbles.
 * NVDA+Shift+4 Presenta el porcentaje de la batería, el estado de la carga,
@@ -42,16 +42,16 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   de 2017. El soporte para Windows Server 2003, Windows Vista y Windows
   Server 2008 finalizó el 30 de junio de 2018.
 
-## Version 18.10
+## Versión 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* El código se ha hecho más compatible con Python 3.
+* Actualizada la dependencia psutil a 5.4.7.
+* Al obtener la capacidad de disco o el uso de la memoria, NVDA ya no dará
+  errores si se utiliza un ordenador o servicio con más de un petabyte de
+  ram o disco.
+* Los valores de uso de la memoria y de disco se muestran con hasta dos
+  cifras decimales (por ejemplo, 4.00 GB en vez de 4.0 GB).
+* Se ha mejorado la detección de compilaciones de Windows Insider.
 
 ## Versión 18.04
 

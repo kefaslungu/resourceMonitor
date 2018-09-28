@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2018-07-07 14:18+0200\n"
+"PO-Revision-Date: 2018-09-21 12:04+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -19,14 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Resurssienvalvonta-lisäosan tuki Windows Vistalle, Server 2003:lle ja 2008:"
-"lle päättyy kesäkuussa 2018. Tulevat versiot vaativat {minSupportedVersion}:"
+"Käytät vanhaa Windowsin versiota. Tämä lisäosa vaatii {minSupportedVersion}:"
 "n tai uudemman. Haluatko silti asentaa tämän lisäosan?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.

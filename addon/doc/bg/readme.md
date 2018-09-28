@@ -46,16 +46,16 @@
   г. Поддръжката за Windows Server 2003, Vista и Server 2008 приключи на 30
   юни 2018 г.
 
-## Version 18.10
+## Версия 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Кодът е по-съвместим с Python 3.
+* Външната библиотека psutil е обновена до версия 5.4.7.
+* При получаване на капацитета на диска и употребата на паметта, NVDA няма
+  повече да дава грешки, ако се използва компютър или услуга с повече от
+  един петабайт RAM или твърд диск.
+* Стойностите за употребата на памет и на твърдия диск се показват с до два
+  десетични знака (например 4,00 GB вместо 4,0 GB).
+* Подобрено е откриването на компилациите на Windows Insider Preview.
 
 ## Версия 18.04
 

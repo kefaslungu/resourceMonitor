@@ -1,15 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Brazilian Portuguese translation of resourceMonitor.
+# Copyright (C) 2013-2018 NVDA Contributors.
+# This file is distributed under the same license as the NVDA package.
+# Cleverson Casarin Uliana <clever97@gmail.com>, 2013-2014, 2017.
+# Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2017-09-24 09:54-0300\n"
-"Last-Translator: Cleverson Casarin Uliana <clever97@gmail.com>\n"
+"PO-Revision-Date: 2018-09-24 21:13-0300\n"
+"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clever97@gmail.com>\n"
 "Language: pt_BR\n"
@@ -17,20 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, fuzzy, python-brace-format
 msgid ""
-"Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
-"is ending on June 2018. Future add-on releases will require "
+"You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"O suporte do complemento Monitor de Recursos ao Windows XP termina em "
-"dezembro de 2017. Futuros lançamentos do complemento exigirão "
+"O suporte do complemento Monitor de Recursos ao Windows Vista, Server 2003 e "
+"2008 termina em junho de 2018. Futuros lançamentos do complemento exigirão "
 "{minSupportedVersion} ou posteriores. Tem certeza que deseja instalar este "
-"complemento de qualquer maneira?"
+"complemento mesmo assim?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"

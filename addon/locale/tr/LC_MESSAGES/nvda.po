@@ -8,25 +8,25 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2018-03-08 08:50+0300\n"
+"PO-Revision-Date: 2018-09-24 09:29+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: \n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Kaynak izleme eklentisinin Windows Vista, Server 2003 ve 2008 desteği 2018 "
-"Haziran'da sona erecek. Sonraki sürümler {minSupportedVersion} ya da üstünü "
-"gerektirecek. Yine de bu eklentiyi yüklemek istediğinizden emin misiniz?"
+"Windows'un eski bir sürümünü kullanıyorsunuz. Bu eklenti  EN AZ "
+"{minSupportedVersion} veya daha yüksek bir sürümü gerektirir. Yine de bu "
+"eklentiyi yüklemek istediğinizden emin misiniz?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"

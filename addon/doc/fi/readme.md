@@ -40,16 +40,16 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 * Tämän lisäosan Windows XP -tuki päättyi 31. joulukuuta 2017. Windows
   Server 2003:n, Vistan ja Server 2008:n tuki päättyi 30. kesäkuuta 2018.
 
-## Version 18.10
+## Versio 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Koodista on tehty yhteensopivampaa Python 3:n kanssa.
+* Päivitetty psutil-riippuvuus versioksi 5.4.7.
+* NVDA ei enää ilmoita virheistä haettaessa tietoa levyn kapasiteetista ja
+  muistin käytöstä , mikäli käytetään  tietokonetta tai palvelua, jossa
+  RAM-muistin määrä tai levyn koko ylittää yhden petatavun.
+* Muistin ja levyn käytön arvot näytetään enintään kahdella desimaalilla
+  (esim. 4.00 Gt aiemman 4.0 Gt sijaan).
+* Windows Insider -esiversioiden tunnistusta paranneltu.
 
 ## Versio 18.04
 
