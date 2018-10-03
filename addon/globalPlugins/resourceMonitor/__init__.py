@@ -113,6 +113,7 @@ def tryTrunk(n):
 # Client versions will be checked via Registry.
 server10LTSBuilds={
 	14393:"Windows Server 2016",
+	17763:"Windows Server 2019",
 }
 
 def _win10RID(buildNum, isClient):
