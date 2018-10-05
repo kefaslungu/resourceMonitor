@@ -4,8 +4,8 @@
   colaboradores do NVDA
 * Baixe a [versão estável][1]
 
-This add-on gives information about CPU load, memory usage and other
-resource usage information.
+Este complemento fornece informações sobre carga de CPU, uso de memória e
+outras informações de uso de recursos.
 
 # Atalhos #
 
@@ -37,33 +37,33 @@ de informações de sistema para Windows. Note também o seguinte:
   número de CPUs é o dobro do número de núcleos de CPU.
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* O suporte para o Windows XP deste complemento terminou em 31 de dezembro
+  de 2017. O suporte para o Windows Server 2003, Vista e Server 2008
+  terminou em 30 de junho de 2018.
 
-## Version 18.10
+## Versão 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* O código ficou mais compatível com o Python 3.
+* Atualizada dependência psutil para 5.4.7.
+* Ao obter capacidade de disco e uso de memória, o NVDA não mais dará erros
+  se estiver usando um computador ou um serviço com mais de um petabyte de
+  RAM ou tamanho de disco.
+* Os valores para uso de memória e disco são mostrados com até duas casas
+  decimais (por exemplo, 4,00 GB em vez de 4,0 GB).
+* Detecção aprimorada de construções — builds — do Windows Insider Preview.
 
-## Version 18.04
+## Versão 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+Versão 18.04.x é a última versão a suportar versões anteriores ao Windows 7
+SP1.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Última versão para suporte ao Windows Server 2003, Vista e Server 2008.
+* Melhor detecção de versões do Windows 10 e distinção entre construções —
+  builds — públicas e Insider Preview.
 
-## Version 17.12
+## Versão 17.12
 
-* Added support for 64-bit ARM processors on Windows 10.
+* Adicionado suporte para processadores ARM 64-bit no Windows 10.
 
 ## Versão 17.09
 

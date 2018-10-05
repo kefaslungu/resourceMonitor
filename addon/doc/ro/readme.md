@@ -43,16 +43,16 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
   decembrie 2017. Suportul pentru Windows Server 2003 și pentru Windows
   Vista a luat sfârșit pe 30 iunie 2018.
 
-## Version 18.10
+## Versiunea 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Codul a fost făcut mai compatibil cu Python 3.
+* S-a actualizat la dependența psutil 5.0.7.
+* La obținerea capacității discului și a utilizării memoriei, NVDA nu va mai
+  da erori folosind un computer sau un service cu mai mult de un petabyte de
+  ram sau spațiu pe disc.
+* Valorile pentru memorie și pentru utilizarea discului sunt afișate cu până
+  la două zecimale (e.x. 4.00 GB în loc de 4.0 GB).
+* S-a îmbunătățit detectarea compilărilor de Insider ale Windows 10.
 
 ## Versiunea 18.04
 

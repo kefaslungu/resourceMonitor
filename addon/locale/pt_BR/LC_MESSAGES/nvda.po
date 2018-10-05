@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2018-09-24 21:13-0300\n"
+"PO-Revision-Date: 2018-09-28 11:22-0300\n"
 "Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clever97@gmail.com>\n"
@@ -20,15 +20,14 @@ msgstr ""
 "X-Generator: Poedit 1.6.11\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"O suporte do complemento Monitor de Recursos ao Windows Vista, Server 2003 e "
-"2008 termina em junho de 2018. Futuros lançamentos do complemento exigirão "
-"{minSupportedVersion} ou posteriores. Tem certeza que deseja instalar este "
+"Você está usando uma versão antiga do Windows. Este complemento requer "
+"{minSupportedVersion} ou posterior. Tem certeza de que deseja instalar este "
 "complemento mesmo assim?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
