@@ -46,14 +46,14 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
 ## Version 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Der Code wurde mit Python 3 besser kompatibel gemacht.
+* Die Paket-Abhängigkeit "psutil" wurde auf 5.4.7. aktualisiert.
+* Bei der Ermittlung der Speicher- und Medienkapazität und -auslastung
+  verursacht NVDA keinen Fehler mehr, wenn ein Computer oder ein Dienst mit
+  mehr als einem Petabyte Speichergröße verwendet werden.
+* Werte für Speicher- und Mediennutzung werden mit bis zu zwei
+  Dezimalstellen angezeigt (z. B. 4,00 GB statt 4,0 GB).
+* Verbesserte Erkennung von Windows Insider Preview Builds.
 
 ## Version 18.04
 
