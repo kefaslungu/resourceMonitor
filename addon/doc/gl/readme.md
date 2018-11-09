@@ -41,16 +41,17 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   2017. O soporte para o Windows Server 2003, o Windows Vista e o Windows
   Server 2008 rematou o 30 de xunio do 2018.
 
-## Version 18.10
+## Versión 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Fíxose o código máis compatible con Python 3.
+* Actualizada a dependencia psutil á versión Actualizado psutil dependency a
+  5.0.1.5.4.7.
+* Ao obter a capacidade de disco e o uso de memoria, NVDA xa non dará máis
+  erros cando se utilice un computador ou servizo con máis dun petabyte de
+  RAM ou tamaño de disco.
+* Os valores do uso da memoria e do disco amósanse con ata dous lugares
+  decimais (p.ex. 4.00 GB no canto de 4.0 GB).
+* Mellorada a detección de compilacións Windows Insider Preview.
 
 ## Versión 18.04
 
