@@ -25,6 +25,10 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
+
 ## Version 18.10
 
 * Code has been made more compatible with Python 3.
