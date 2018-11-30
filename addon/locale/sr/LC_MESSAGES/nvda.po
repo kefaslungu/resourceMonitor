@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-09-12 23:09+1000\n"
-"PO-Revision-Date: 2018-06-16 16:41+0100\n"
+"PO-Revision-Date: 2018-11-25 22:14+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
@@ -18,16 +18,14 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Podrška za Windows Vista, Server 2003 i 2008 od strane dodatka Resource "
-"Monitor se završava u junu 2018. Sve naredne verzije dodatka će zahtevati "
-"{minSupportedVersion} ili noviji. Da li ste sigurni da ipak želite da "
-"instalirate ovaj dodatak?"
+"Koristite staru verziju Windowsa. Ovaj dodatak zahteva {minSupportedVersion} "
+"ili noviji. Da li ste sigurni da ipak želite da instalirate ovaj dodatak?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
