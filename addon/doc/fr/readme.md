@@ -3,6 +3,7 @@
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala et
   d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
+* Compatibilité NVDA: 2017.4 à 2019.1
 
 Ce module complémentaire fournit des informations sur la charge du CPU,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des

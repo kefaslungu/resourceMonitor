@@ -3,6 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala i inni
   współtwórcy NVDA
 * Pobierz [wersja stabilna][1]
+* NVDA compatibility: 2017.4 to 2019.1
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.

@@ -8,25 +8,25 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-10-23 18:05+1000\n"
-"PO-Revision-Date: 2018-12-06 13:41+0200\n"
-"Last-Translator: shmuel_naaman@yahoo.com\n"
+"PO-Revision-Date: 2018-12-09 12:03+0200\n"
+"Last-Translator: shmuel naaman <shmuel_naaman@yahoo.com>\n"
 "Language-Team: \n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 1.6.10\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
 "תמיכה עבור Windows Vista, Server 2003 ו 2008 מהרחבת Resource Monitor מסתיימת "
-"ביוני 2018. בעתיד תוספות על מהדורות ידרוש {minSupportedVersion} או מאוחרת "
+"ביוני 2018. בעתיד תוספות על מהדורות ידרוש {minSupportedVersion}  או מאוחרת "
 "יותר. האם אתה בטוח שברצונך להתקין את ההרחבה הזו בכל זאת?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
