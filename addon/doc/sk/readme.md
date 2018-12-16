@@ -3,6 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
   NVDA contributors
 * Stiahnuť [stabilnú verziu][1]
+* NVDA compatibility: 2017.4 to 2019.1
 
 This add-on gives information about CPU load, memory usage and other
 resource usage information.
