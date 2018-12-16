@@ -224,9 +224,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64","ARM64"), ""
 		# Determine Windows version.
-		if winMajor == 6: # Vista/Server 2008 (6.0), 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-			if winMinor == 0: winverName = "Windows Vista" if server == 1 else "Windows Server 2008" # Vista.
-			elif winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
+		if winMajor == 6: # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+			if winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
 			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012" # Windows 8.
 			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2" # Windows 8.1.
 		elif winMajor == 10: # Windows 10/Server 2016 (10.0) and beyond.
