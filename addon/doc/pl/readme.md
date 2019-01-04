@@ -3,7 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala i inni
   współtwórcy NVDA
 * Pobierz [wersja stabilna][1]
-* NVDA compatibility: 2017.4 to 2019.1
+* Zgodność z wersjami NVDA: od 2017.4 do 2019.1
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -45,13 +45,13 @@ następujące kwestie:
 
 ## Wersja 18.10
 
-* Code has been made more compatible with Python 3.
+* Poprawiona została zgodność kodu źródłowego z Pythonem 3.
 * Zaktualizowano zależność psutil do wersji 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
+* Podczas wyświetlania pojemności dysku i użycia pamięci, NVDA nie będzie
+  już wyrzucać błędów, dla komputerów lub usług używających więcej niż
+  petabajt pamięci RAM lub dysku.
+* Wartości użycia pamięci i dysku wyświetlane są do dwóch miejsc po
+  przecinku, np. 4.00 GB zamiast 4.0 GB).
 * Ulepszone wykrywanie kompilacji Windows insider preview.
 
 ## Wersja 18.04
