@@ -3,7 +3,7 @@
 * Forfattere: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala og
   andre NVDA-bidragydere
 * Download [stable version][1]
-* NVDA compatibility: 2017.4 to 2019.1
+* NVDA kompatibilitet: 2017.4 til 2019.1
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
@@ -39,20 +39,20 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
   CPU-kernerne.
 * Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* Understøttelse til Windows XP af denne tilføjelse sluttede den
+  31. december 2017. Støtten til Windows Server 2003, Vista og Server 2008
+  sluttede den 30. juni 2018.
 
 ## Version 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Koden er blevet gjort mere kompatibel med Python 3.
+* Opdateret psutil dependency til 5.4.7.
+* Når der oplyses diskkapacitet og hukommelsesforbrug, vil NVDA ikke længere
+  fejle, hvis du bruger en computer eller en tjeneste med mere end en
+  petabyte RAM eller diskplads.
+* Værdier for hukommelse og diskbrug vises med op til to decimaler (fx 4,00
+  GB i stedet for 4,0 GB).
+* Forbedret detektering af Windows Insider Preview builds.
 
 ## Version 18.04
 
