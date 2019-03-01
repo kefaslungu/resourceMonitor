@@ -5,9 +5,8 @@
 * Télécharger [version stable][1]
 * Compatibilité NVDA: 2017.4 à 2019.1
 
-Ce module complémentaire fournit des informations sur la charge du CPU,
-l'utilisation de la mémoire et d'autres informations sur l'utilisation des
-ressources.
+Cette extension fournit des informations sur la charge du CPU, l'utilisation
+de la mémoire et d'autres informations sur l'utilisation des ressources.
 
 # Raccourcis #
 
@@ -31,9 +30,8 @@ modifier ces touches de raccourci.
 
 ## Remarques sur l'utilisation ##
 
-Ce module complementaire ne remplace pas le gestionnaire de tâches et les
-autres programmes d'information système pour Windows. Aussi, notez ce qui
-suit :
+Cette extension ne remplace pas le gestionnaire de tâches et les autres
+programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
 * L'utilisation du CPU est donnée pour les processeurs logiques, coeurs non
   physiques. Cela est perceptible pour les processeurs qui utilise la
@@ -42,9 +40,9 @@ suit :
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
-* La prise en charge de Windows XP à partir de ce module complémentaire a
-  pris fin le 31 décembre 2017. La prise en charge de Windows Server 2003,
-  Vista et Server 2008 a pris fin le 30 juin 2018.
+* La prise en charge de Windows XP à partir de cette extension a pris fin le
+  31 décembre 2017. La prise en charge de Windows Server 2003, Vista et
+  Server 2008 a pris fin le 30 juin 2018.
 
 ## Version 18.10
 
@@ -78,8 +76,8 @@ Windows XP.
 
 * Dernière version à exécuter sur Windows XP.
 * Windows 10 build 16278 et versions ultérieures est reconnu comme Version
-  1709. Une révision mineure pour ce module complémentaire sera publié une
-  fois que la version stable de la build 1709 sera publiée.
+  1709. Une révision mineure pour cette extension sera publié une fois que
+  la version stable de la build 1709 sera publiée.
 
 ## Version 17.07.1
 
@@ -100,8 +98,8 @@ Windows XP.
 
 ## Version 16.08
 
-À partir de la version 16.08, les publications pour le module complémentaire
-sera affiché comme year.month.revision.
+À partir de la version 16.08, les publications pour cette extension seront
+affichées comme year.month.revision.
 
 * Diverses révisions de Windows 10 sont maintenant correctement reconnues
   (tels que la 1607 pour la build 14393).
@@ -112,8 +110,8 @@ sera affiché comme year.month.revision.
 
 ## Changements pour la version 4.5 ##
 
-* Le référentiel du module complémentaire a été déplacé à GitHub (peut être
-  trouvé à https://github.com/josephsl/resourcemonitor).
+* Le référentiel de l'extension a été déplacé à GitHub (peut être trouvé à
+  https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016 est correctement reconnu.
 
 ## Changements pour la version 4.0 ##
@@ -123,8 +121,8 @@ sera affiché comme year.month.revision.
   sur la charge du CPU.
 * Ajout du support pour la reconnaissance de Windows 10.
 * Dans Windows 10, le numéro de build de Windows est également annoncé.
-* Vous pouvez utiliser le Gestionnaire de modules complémentaires pour
-  accéder à l'aide du module complémentaire.
+* Vous pouvez utiliser le Gestionnaire d'extensions pour accéder à l'aide de
+  l'extension.
 
 ## Changements pour la version 3.1 ##
 
@@ -136,8 +134,8 @@ sera affiché comme year.month.revision.
 * Mise à jour de la dépendance psutil  vers la version 1.2.1.
 * Présente l'actuelle  version de Windows, l'architecture du CPU et le
   service pack le cas échéant (NVDA+Maj+6).
-* Possibilité de modifier les touches de raccourci pour le module
-  complémentaire (NVDA 2013.3 ou version ultérieure).
+* Possibilité de modifier les touches de raccourci pour l'extension (NVDA
+  2013.3 ou version ultérieure).
 * Possibilité de copier les informations de la ressource individuelle dans
   le presse-papiers en appuyant sur commandes ressource deux fois.
 
