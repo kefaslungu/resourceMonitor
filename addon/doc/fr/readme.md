@@ -5,25 +5,27 @@
 * Télécharger [version stable][1]
 * Compatibilité NVDA: 2017.4 à 2019.1
 
-Cette extension fournit des informations sur la charge du CPU, l'utilisation
-de la mémoire et d'autres informations sur l'utilisation des ressources.
+Cette extension fournit des informations sur la charge du processeur,
+l'utilisation de la mémoire et d'autres informations sur l'utilisation des
+ressources.
 
 # Raccourcis #
 
-* NVDA+Maj+E Présente l'espace de mémoire utilisée, la charge moyenne du
-  processeur, et les informations sur la batterie si disponibles.
-* NVDA+Maj+1 Présente la charge moyenne du processeur si le CPU multi coeur
-  est présent à la charge de chaque coeur.
-* NVDA+Maj+2/5 Présente les quentités d'espace mémoire physique et virtuelle
-  totales et utilisées.
-* NVDA+Maj+3 Présente les quentités d'espace total et utilisé des disques
-  statiques et amovibles.
-* NVDA+Maj+4 Présente le pourcentage de chargement de la batterie, l'état de
+* NVDA+Maj+E Annonce le pourcentage de mémoire utilisée, la charge moyenne
+  du processeur, et des informations sur la batterie si disponibles.
+* NVDA+Maj+1 Annonce la charge moyenne du processeur et, pour les
+  processeurs  multi cœur la charge de chaque cœur.
+* NVDA+Maj+2/5 Annonce les quantités d'espace mémoire physique et virtuelle
+  utilisées et totales.
+* NVDA+Maj+3 Annonce les quentités d'espace utilisé et total des disques
+  fixes et amovibles.
+* NVDA+Maj+4 Annonce le pourcentage de charge de la batterie, l'état de
   charge si elle est en charge, le temps restant (sauf si en charge), et une
   alerte si le niveau de la batterie est faible ou critique.
-* NVDA+Maj+6 Présente l'architecture CPU 32/64-bit et   les numéros de
-  version de Windows et le service pack.
-* NVDA+Maj+7 présente le temps de bon fonctionnement du système.
+* NVDA+Maj+6 Annonce l'architecture du processeur 32/64-bit et les numéros
+  de version de Windows et du service pack.
+* NVDA+Maj+7 Annonce le temps de fonctionnement du système depuis sa mise en
+  route.
 
 Si vous avez NVDA 2013.3 ou version ultérieure installé, vous pouvez
 modifier ces touches de raccourci.
@@ -33,10 +35,10 @@ modifier ces touches de raccourci.
 Cette extension ne remplace pas le gestionnaire de tâches et les autres
 programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
-* L'utilisation du CPU est donnée pour les processeurs logiques, coeurs non
-  physiques. Cela est perceptible pour les processeurs qui utilise la
-  technologie Hyper Threading où le nombre de CPU est deux fois le nombre de
-  coeurs du processeur.
+* L'utilisation du processeur est donnée pour les processeurs logiques, non
+  pour les cœurs physiques. Cela est perceptible pour les processeurs qui
+  utilise la technologie Hyper Threading où le nombre de CPU est deux fois
+  le nombre de cœurs du processeur.
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
@@ -48,12 +50,12 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
 * Le code a été rendu plus compatible avec Python 3.
 * Mise à jour de la dépendance psutil vers la version 5.4.7.
-* Lors de l’obtention de la capacité des disques et l’utilisation de la
-  mémoire, NVDA ne donne plus erreurs si vous utilisez un ordinateur ou un
-  service contenant plus d’un pétaoctet de RAM ou un disque de taille.
-* La valeurs pour l’utilisation de la mémoire et le disque sont montrées
-  avec jusqu'à deux décimales (par exemple 4.00 Go au lieu de 4.0 Go).
-* Amélioration de la détection  des builds de Windows Insider Preview.
+* Lors de l’obtention de la capacité des disques et de l’utilisation de la
+  mémoire, NVDA ne donne plus d'erreur si vous utilisez un ordinateur ou un
+  service contenant plus d’un pétaoctet de RAM ou d'espace disque.
+* Les valeurs pour l’utilisation de la mémoire et le disque sont montrées
+  avec deux décimales (par exemple 4.00 Go au lieu de 4.0 Go).
+* Amélioration de la détection des builds de Windows Insider Preview.
 
 ## Version 18.04
 
@@ -74,51 +76,50 @@ de Windows antérieures à 7 SP1.
 Important : la version 17.09.x est la dernière version compatible avec
 Windows XP.
 
-* Dernière version à exécuter sur Windows XP.
+* Dernière version à fonctionner sous Windows XP.
 * Windows 10 build 16278 et versions ultérieures est reconnu comme Version
   1709. Une révision mineure pour cette extension sera publié une fois que
   la version stable de la build 1709 sera publiée.
 
 ## Version 17.07.1
 
-* Réintroduire le support pour Windows XP (cassé depuis la version 17.02).
+* Réintroduit le support de Windows XP (cassé depuis la version 17.02).
 
 ## Version 17.05
 
-* Annonce le temps de bon fonctionnement du système (temps passé depuis le
+* Annonce du temps de bon fonctionnement du système (temps passé depuis le
   dernier démarrage, NVDA+Maj+7).
 
 ## Version 17.02
 
 * Mise à jour de la dépendance psutil vers la version 5.0.1.
 * Lors de la vérification de l'utilisation du disque, NVDA ne présentera
-  plus de boîte de dialogue d'erreur sur certains systèmes où un support
-  amovible n'est pas correctement reconnu (par exemple lorsqu'une carte
-  n'est pas insérée dans un lecteur de carte).)
+  plus de dialogue d'erreur sur certains systèmes où un support amovible
+  n'est pas correctement reconnu (par exemple lorsqu'une carte n'est pas
+  insérée dans un lecteur de carte).)
 
 ## Version 16.08
 
 À partir de la version 16.08, les publications pour cette extension seront
-affichées comme year.month.revision.
+affichées comme année.mois.révision.
 
 * Diverses révisions de Windows 10 sont maintenant correctement reconnues
   (tels que la 1607 pour la build 14393).
 * Windows 10 build revisions (après l'installation des mises à jour
   cumulatives) sont correctement reconnues (tels que la 14393.51).
-* Si en utilisant la build Insider Preview, ceci est sûr qui va être
-  reconnu.
+* Si vous utilisez une build Insider Preview, ceelle-ci sera reconnue.
 
 ## Changements pour la version 4.5 ##
 
-* Le référentiel de l'extension a été déplacé à GitHub (peut être trouvé à
-  https://github.com/josephsl/resourcemonitor).
+* Le référentiel de l'extension a été déplacé vers GitHub (peut être trouvé
+  sur https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016 est correctement reconnu.
 
 ## Changements pour la version 4.0 ##
 
 * Mise à jour de la dépendance psutil  vers la version 2.2.1.
-* Nettement améliorée les performances lors de l'obtention d'informations
-  sur la charge du CPU.
+* Nette amélioration des performances lors de l'obtention d'informations sur
+  la charge du processeur.
 * Ajout du support pour la reconnaissance de Windows 10.
 * Dans Windows 10, le numéro de build de Windows est également annoncé.
 * Vous pouvez utiliser le Gestionnaire d'extensions pour accéder à l'aide de
@@ -126,18 +127,18 @@ affichées comme year.month.revision.
 
 ## Changements pour la version 3.1 ##
 
-* Resource Monitor officiellement prend en charge Windows 8.1.
+* Resource Monitor prend officiellement en charge Windows 8.1.
 * Mise à jour des traductions.
 
 ## Changements pour la version 3.0 ##
 
 * Mise à jour de la dépendance psutil  vers la version 1.2.1.
-* Présente l'actuelle  version de Windows, l'architecture du CPU et le
+* Annonce la version en cours de Windows, l'architecture du processeur et le
   service pack le cas échéant (NVDA+Maj+6).
-* Possibilité de modifier les touches de raccourci pour l'extension (NVDA
+* Possibilité de modifier les touches de raccourci de l'extension (NVDA
   2013.3 ou version ultérieure).
 * Possibilité de copier les informations de la ressource individuelle dans
-  le presse-papiers en appuyant sur commandes ressource deux fois.
+  le presse-papiers en appuyant deux fois sur commandes ressource.
 
 ## Changements pour la version 2.4 ##
 
@@ -152,7 +153,7 @@ affichées comme year.month.revision.
 
 * Ajout des traductions suivantes : Arabe, Aragonais, Croate, Néherlandais,
   Finnois, Français, Galicien, Allemand, Hongrois, Italien, Japonais,
-  Koréen, Népalais, Portuguais (Brésile), Russe, Slovak, Slovénien,
+  Koréen, Népalais, Portuguais (Brésilien), Russe, Slovak, Slovénien,
   Espagnol, Tamoul et Turque.
 
 ## Changements pour la version 2.1 ##
