@@ -1,7 +1,7 @@
 #Resource Monitor for NvDA
 #Presents basic info on CPU load, memory and disk usage, as well as battery information.
 #Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
-# Copyright 2013-2017, released under GPL.
+# Copyright 2013-2019, released under GPL.
 
 try:
 	import winreg #Python 3
