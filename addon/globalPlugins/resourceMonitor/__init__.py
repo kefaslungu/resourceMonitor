@@ -3,10 +3,7 @@
 #Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
 # Copyright 2013-2019, released under GPL.
 
-try:
-	import winreg #Python 3
-except ImportError:
-	import _winreg as winreg # Python 2
+import winreg
 from datetime import datetime
 import sys
 import os
