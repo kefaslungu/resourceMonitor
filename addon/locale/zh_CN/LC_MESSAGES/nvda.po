@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.04\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-04-04 12:39+0800\n"
+"PO-Revision-Date: 2019-04-06 10:19+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"资源监控器插件对Windows Vista, Server 2003 and 2008 的支持于2018年6月结束。未"
-"来的插件版本将需要{minSupportedVersion}或更高版本。 你确定要安装这个插件吗？"
+"您正在使用较旧版本的Windows。此插件需要 {minSupportedVersion} 或更高版本。您"
+"确定要安装这个插件吗？"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
