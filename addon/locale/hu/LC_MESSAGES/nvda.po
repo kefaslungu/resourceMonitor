@@ -8,26 +8,25 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2018-06-27 11:47+0200\n"
+"PO-Revision-Date: 2018-09-28 11:33+0200\n"
 "Last-Translator: oaron@nvda.hu\n"
 "Language-Team: HU <LL@li.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.8\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, fuzzy, python-brace-format
 msgid ""
-"Support for Windows Vista, Server 2003 and 2008 from Resource Monitor add-on "
-"is ending on June 2018. Future add-on releases will require "
+"You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Az Erőforrás kilistázó 2017 decembere óta nem támogatja a Windows Xp "
-"operációs rendszert. Csak {minSupportedVersion} fölött, mégis szeretné "
-"folytatni?"
+"A windows vista, server 2003, és 2008 rendszerek támogatása 2018. júniusától "
+"megszűnt ebben a bővítményben. A későbbiekben csak {minSupportedVersion} "
+"fölött lesz támogatás. Biztos, hogy mégis telepíti ezt a bővítményt?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -56,15 +55,15 @@ msgstr "{percent}%, a telep töltése folyamatban van."
 #. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent}% van hátra, körülbelül {time}."
+msgstr "{percent}% van hátra, fennmaradó idő {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "Figyelmeztetés: alacsony töltöttségű telep."
+msgstr " Figyelmeztetés: alacsony töltöttségű telep."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: battery is critically low."
-msgstr "Figyelmeztetés: Kritikusan alacsony töltöttségű telep."
+msgstr " Figyelmeztetés: Kritikusan alacsony töltöttségű telep."
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -80,23 +79,25 @@ msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
 "{driveName} ({driveType} meghajtó): {usedSpace} per {totalSpace} foglalt, a "
-"kihasználtság: {percent}százalék."
+"kihasználtság: {percent}%."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
-msgstr "Bemondja minden meghajtó foglalt és teljes méretét, típusát."
+msgstr ""
+"A fizikai, és cserélhető meghajtók használt, és fennmaradó lemezterületét "
+"jelenti be."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "{coreNumber}. mag: {corePercent}százalék."
+msgstr "Mag {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Átlagos processzorhasználat {avgLoad} százalék, {cores}."
+msgstr "Átlagos CPU használat {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -107,12 +108,15 @@ msgstr ""
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"Fizikai: {physicalUsed} / {physicalTotal} ({physicalPercent}% foglalt). "
+"Fizikai: {physicalUsed} ennyiből {physicalTotal} használva "
+"({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr "Virtuális: {virtualUsed} / {virtualTotal} ({virtualPercent}% foglalt)."
+msgstr ""
+"Virtuális: {virtualUsed} ennyiből {virtualTotal} használva "
+"({virtualPercent}%)."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
@@ -143,7 +147,7 @@ msgstr "Bemondja a használatban lévő Windows verzióját"
 #. Translators: The system's uptime
 #, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} nap, {hoursMinutesSeconds}"
+msgstr "{days} napok, {hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
@@ -157,19 +161,18 @@ msgstr "Bemondja a rendszer futási idejét."
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr ""
-"{ramPercent}% memória foglalt, {cpuPercent}% processzor van használatban. "
+msgstr "{ramPercent}% RAM használatban, CPU kihasználtsága {cpuPercent}%."
 
 #. Translators: In addition to processor and memory usage, presented when battery is low.
 msgid " Warning: critically low battery."
-msgstr "Figyelmeztetés: Kritikusan alacsony töltöttségű telep"
+msgstr " Figyelmeztetés: Kritikusan alacsony töltöttségű telep"
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"Bemondja az átlagos memóriahasználatot, a processzor terheltséget, és az "
-"akkumulátor állapotát (ha elérhető)."
+"Bemondja az átlagos Ram-ot, a processzor terheltséget, és az akkumulátor "
+"állapotát (ha elérhető)."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -177,7 +180,7 @@ msgstr " óra, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 msgid " hours, "
-msgstr " óra, "
+msgstr " órák, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 msgid " minute"
@@ -185,7 +188,7 @@ msgstr " perc"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 msgid " minutes"
-msgstr " perc"
+msgstr " percek"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -193,6 +196,7 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"Az erőforrás kilistázó meghatározza a processzor terheltségét, a használt "
-"memória és háttértár mértékét, az akkumulátor állapotát, a merevlemezek "
-"státuszát, és még jó néhány fontos számítógép jellemzőt."
+"Egy kéznél levő erőforrás kilistázó amely meghatározza a processzor "
+"terheltségét, a használt memória és háttértár mértékét, az akkumulátor "
+"állapotát, a merevlemezek státuszát, és még jó néhány fontos számítógép "
+"jellemzőt."
