@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-01-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-04 09:56+0200\n"
 "Last-Translator: Ján Kulik <johny.kulik452@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
@@ -18,15 +18,14 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Podpora pre systém Windows XP z doplnku Resource Monitor sa končí v decembri "
-"2017. Budúce prídavné verzie budú vyžadovať {minSupportedVersion} alebo "
-"novší. Naozaj chcete tento doplnok nainštalovať?"
+"Používate starú verziu operačného systému Windows. Doplnok vyžaduje "
+"{minSupportedVersion} alebo novší. Naozaj chcete tento doplnok nainštalovať?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -144,7 +143,7 @@ msgstr "Oznámy verziu operačného systému."
 #. Translators: The system's uptime
 #, python-brace-format
 msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} deň,{hoursMinutesSeconds}"
+msgstr "{days} deň, {hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
