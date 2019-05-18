@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.10\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-03-05 14:47+0100\n"
+"PO-Revision-Date: 2019-05-11 09:22+0200\n"
 "Last-Translator: Michel Such <michel.such@free.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -119,7 +119,7 @@ msgstr ""
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Présente les quentités de mémoire physique et virtuelle totales et utilisées."
+"Présente les quantités de mémoire physique et virtuelle totales et utilisées."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
