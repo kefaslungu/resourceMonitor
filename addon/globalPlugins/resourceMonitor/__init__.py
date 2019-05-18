@@ -20,7 +20,6 @@ if sys.version.startswith("3."):
 	from . import psutil
 else:
 	from . import psutilpy2 as psutil
-from . import battery
 import addonHandler
 addonHandler.initTranslation()
 
@@ -109,6 +108,54 @@ def tryTrunk(n):
 	if n==int(n): return int(n)
 	return n
 
+# Moved from battery module to the main module in 2019 (code provided by Alex Hall)
+def _batteryInfo(verbose=False):
+	# Returns current battery status provided that the computer has a detectable battery.
+	# The verbose argument will force this function to return something if there is no battery.
+	info = None
+	# Uses psutil.sensors_battery function except it also checks battery low/critical flags.
+	battery = psutil.sensors_battery()
+	if battery is None:
+		# Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+		info=_("This computer does not have a battery connected.") if verbose else None
+	else:
+		percent, secsleft, power_plugged = battery
+		if power_plugged:
+			# Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+			info=_("{percent}%, battery charging.").format(percent=tryTrunk(percent))
+		else:
+			# Announce time unknown status.
+			if secsleft == 0xffffffff:
+				# Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+				info=_("{percent}% battery remaining, battery time unknown.").format(percent=tryTrunk(percent))
+			else:
+				# Prepare hours:minutes.
+				timeLeft=""
+				hours, rest = divmod(secsleft,3600)
+				minutes, seconds = divmod(rest, 60)
+				if hours>0:
+					timeLeft+=str(hours)
+					# Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+					if hours==1: timeLeft+=_(" hour, ")
+					# Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+					else: timeLeft+=_(" hours, ")
+				timeLeft+=str(minutes)
+				# Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+				if minutes==1: timeLeft+=_(" minute")
+				# Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+				else: timeLeft+=_(" minutes")
+				# Because psutil.sensors_battery function does not present battery flags by default, manually read this info at the cost of calling the C extension twice.
+				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
+				# Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+				info=_("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=timeLeft)
+				if batteryFlags & 2:
+					# Translators: Message reported when battery level is low.
+					info+=_(" Warning: low battery.")
+				elif batteryFlags & 4:
+					# Translators: Message reported when battery level is critical.
+					info+=_(" Warning: critically low battery.")
+	return info
+
 # Record Windows Server 10 builds to release ID's.
 # Client versions will be checked via Registry.
 server10LTSBuilds={
@@ -146,22 +193,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	RMCopyMessage = _("Resource summary copied to clipboard")
 
 	def script_announceBatteryInfo(self, gesture):
-		battery.getInfo()
-		if battery.noBattery:
-			# Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
-			info=_("This computer does not have a battery connected.")
-		elif not battery.onBattery: 
-			# Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-			info=_("{percent}%, battery charging.").format(percent=tryTrunk(battery.percentage))
-		elif battery.onBattery: 
-			# Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-			info=_("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(battery.percentage), time=battery.timeLeft)
-			if battery.low:
-				# Translators: Message reported when battery level is low.
-				info+=_(" Warning: low battery.")
-			elif battery.critical:
-				# Translators: Message reported when battery level is critical.
-				info+=_(" Warning: battery is critically low.")
+		info = _batteryInfo(verbose=True)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -285,17 +317,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 		info = [(_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())))]
-		battery.getInfo()
-		if not battery.noBattery and not battery.batteryStatusUnknown and not battery.onBatteryUnknown:
-			if not battery.onBattery: info.append(_("{percent}%, battery charging.").format(percent=tryTrunk(battery.percentage)))
-			elif battery.onBattery:
-				#discharging battery, so provide info on it
-				info.append(_("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(battery.percentage), time=battery.timeLeft))
-				if battery.low:
-					info.append(_(" Warning: low battery."))
-				elif battery.critical:
-					# Translators: In addition to processor and memory usage, presented when battery is low.
-					info.append(_(" Warning: critically low battery."))
+		batteryInfo = _batteryInfo()
+		if batteryInfo is not None: info.append(batteryInfo)
 		ui.message(" ".join(info))
 	# Translators: Input help mode message about overall system resource info command in Resource Monitor
 	script_announceResourceSummary.__doc__=_("Presents used ram, average processor load, and battery info if available.")
