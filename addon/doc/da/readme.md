@@ -3,7 +3,7 @@
 * Forfattere: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala og
   andre NVDA-bidragydere
 * Download [stable version][1]
-* NVDA kompatibilitet: 2017.4 til 2019.1
+* NVDA compatibility: 2017.4 to 2019.2
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
