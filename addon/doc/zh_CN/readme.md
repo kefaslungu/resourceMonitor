@@ -3,7 +3,7 @@
 * 作者: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other NVDA
   contributors
 * 下载 [稳定版][1]
-* NVDA compatibility: 2017.4 to 2019.2
+* NVDA兼容版本: 2017.4至2019.2
 
 该插件可报读CPU负载，内存使用情况和其他资源使用信息。
 
