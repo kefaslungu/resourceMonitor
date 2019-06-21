@@ -2,7 +2,7 @@
 
 * 作者：Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala 和其他 NVDA 貢獻者
 * 下載 [穩定版][1]
-* NVDA compatibility: 2017.4 to 2019.1
+* NVDA compatibility: 2017.4 to 2019.2
 
 這個附加元件提供有關 CPU 負載，記憶體使用情形，及其他資源的使用訊息。
 

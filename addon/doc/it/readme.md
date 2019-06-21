@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e altri
   collaboratori di NVDA.
 * Scarica la [versione stabile][1]
-* Compatibilità con NVDA: dalla 2017.4 alla 2019.1
+* NVDA compatibility: 2017.4 to 2019.2
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.

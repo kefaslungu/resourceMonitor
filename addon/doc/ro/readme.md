@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala și alți
   contribuitori NVDA
 * Descărcați [versiunea stabilă][1]
-* Compatibilitate NVDA: 2017.4 - 2019.1
+* NVDA compatibility: 2017.4 to 2019.2
 
 Acest supliment oferă informații despre media procesorului, utilizarea
 memoriei și alte resurse de utilizare a informației.

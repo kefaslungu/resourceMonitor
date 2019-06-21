@@ -3,7 +3,7 @@
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala et
   d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
-* Compatibilité NVDA: 2017.4 à 2019.1
+* NVDA compatibility: 2017.4 to 2019.2
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
