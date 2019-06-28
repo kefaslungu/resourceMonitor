@@ -32,16 +32,6 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Régi Windows verzió"
 
-#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr "Erőforrás-kilistázó"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "Az összegzett adatok a vágólapra másolva"
-
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Ehhez a számítógéphez jelenleg nincs akkumulátor csatlakoztatva."
@@ -51,8 +41,28 @@ msgstr "Ehhez a számítógéphez jelenleg nincs akkumulátor csatlakoztatva."
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, a telep töltése folyamatban van."
 
+#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#, fuzzy, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "{percent}% van hátra, fennmaradó idő {time}."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " óra, "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " órák, "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " perc"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " percek"
+
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-#. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% van hátra, fennmaradó idő {time}."
@@ -62,8 +72,18 @@ msgid " Warning: low battery."
 msgstr " Figyelmeztetés: alacsony töltöttségű telep."
 
 #. Translators: Message reported when battery level is critical.
-msgid " Warning: battery is critically low."
-msgstr " Figyelmeztetés: Kritikusan alacsony töltöttségű telep."
+msgid " Warning: critically low battery."
+msgstr " Figyelmeztetés: Kritikusan alacsony töltöttségű telep"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Erőforrás-kilistázó"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Az összegzett adatok a vágólapra másolva"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -163,32 +183,12 @@ msgstr "Bemondja a rendszer futási idejét."
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM használatban, CPU kihasználtsága {cpuPercent}%."
 
-#. Translators: In addition to processor and memory usage, presented when battery is low.
-msgid " Warning: critically low battery."
-msgstr " Figyelmeztetés: Kritikusan alacsony töltöttségű telep"
-
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
 "Bemondja az átlagos Ram-ot, a processzor terheltséget, és az akkumulátor "
 "állapotát (ha elérhető)."
-
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr " óra, "
-
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr " órák, "
-
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr " perc"
-
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr " percek"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -200,3 +200,6 @@ msgstr ""
 "terheltségét, a használt memória és háttértár mértékét, az akkumulátor "
 "állapotát, a merevlemezek státuszát, és még jó néhány fontos számítógép "
 "jellemzőt."
+
+#~ msgid " Warning: battery is critically low."
+#~ msgstr " Figyelmeztetés: Kritikusan alacsony töltöttségű telep."

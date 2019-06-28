@@ -1,7 +1,7 @@
 # Prikaz Resursa #
 
-* Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala I drugi
-  NVDA doprinositelji
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * Preuzmi [stabilnu inačicu][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -25,8 +25,8 @@ druge informacije o korištenju resursa.
   i broj service packa.
 * NVDA+Shift+7: Prikazuje ažuriranost sustava.
 
-Ako imate instaliranu NVDA inačicu 2013.3 ili noviju, možete izmijeniti ove
-tipkovničke kratice.
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Upute za korištenje  ##
 
@@ -39,9 +39,16 @@ informacije o sustavu Windows. Također upamtite sljedeće:
 * Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Version 18.10
 

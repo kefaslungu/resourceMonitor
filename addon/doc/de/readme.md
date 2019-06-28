@@ -1,9 +1,10 @@
 # Ressourcen-Monitor #
 
-* Autoren: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala und andere
-  NVDA-Entwickler
+* Autoren: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst
+   und andere NVDA-Entwickler
 * [stabile version][1] herunterladen
-* NVDA compatibility: 2017.4 to 2019.2
+* NVDA-Kompatibilität: 2017.4 bis 2019.2
 
 Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
 Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -26,7 +27,7 @@ Arbeitsspeicher sowie andere nützliche Ressourcen.
   Prozessor-Architektur sowie eventuell installierte Service Packs aus.
 * NVDA+Umschalt+7 gibt die Betriebszeit des Systems aus.
 
-Ab NVDA 2013.3 können Sie die Tastenkürzel ändern.
+Ab NVDA 2013.3 können Sie die Tastenkürzel im Dialog Eingabenändern.
 
 ## Nutzungshinweise ##
 
@@ -40,10 +41,17 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Es kann zu Verzögerungen beim Abrufen von Informationen über die
   Festplattennutzung kommen, wenn starke Festplattenaktivitäten wie z.B. das
   Kopieren großer Dateien stattfinden.
-* Die Unterstützung für Windows XP aus diese Erweiterung endete am
-  31. Dezember 2017.
-  Die Unterstützung für Windows Vista, Windows Server 2003 und Windows
-  Server 2008 endete am 30. Juni 2018.
+* Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
+  erforderlich.
+
+## Version 19.07
+
+* Die Paket-Abhängigkeit "psutil" wurde auf 5.6.3 aktualisiert.
+* Interne Änderungen am Befehl "Batteriestatus ankündigen".
+
+## Version 18.12
+
+* Interne Änderungen zur Unterstützung zukünftiger NVDA-Versionen.
 
 ## Version 18.10
 

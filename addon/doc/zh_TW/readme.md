@@ -1,6 +1,7 @@
 # Resource Monitor 顯示 CPU 負載 / 記憶體、電池、磁碟使用情形 #
 
-* 作者：Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala 和其他 NVDA 貢獻者
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * 下載 [穩定版][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -16,7 +17,8 @@
 * NVDA+Shift+6 顯示作業系統版本
 * NVDA+Shift+7 顯示系統執行時間
 
-如果您安裝了 NVDA 2013.3 或更高版本，您能變更這些快速鍵。
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## 用戶請注意 ##
 
@@ -24,9 +26,16 @@
 
 * CPU 使用率是針對邏輯處理器而非實體核心。對於使用超執行緒的處理器來說，這是顯而易見的，其中 CPU 的數量是 CPU 核心數量的兩倍。
 * 如果正在進行繁忙的磁碟活動（例如復制大型檔案），則獲取磁碟使用訊息時可能出現延遲。
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Version 18.10
 

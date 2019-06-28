@@ -1,7 +1,7 @@
 # Monitor de recursos #
 
-* Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e outros
-  colaboradores do NVDA
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * Baixe a [versão estável][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -25,8 +25,8 @@ outras informações de uso de recursos.
   Windows com números do service pack.
 * NVDA+Shift+7 apresenta o tempo desde a inicialização do sistema.
 
-Caso possua instalado o NVDA 2013.3 ou mais novo, pode alterar essas teclas
-de atalho.
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Notas de uso ##
 
@@ -38,9 +38,16 @@ de informações de sistema para Windows. Note também o seguinte:
   número de CPUs é o dobro do número de núcleos de CPU.
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
-* O suporte para o Windows XP deste complemento terminou em 31 de dezembro
-  de 2017. O suporte para o Windows Server 2003, Vista e Server 2008
-  terminou em 30 de junho de 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Versão 18.10
 

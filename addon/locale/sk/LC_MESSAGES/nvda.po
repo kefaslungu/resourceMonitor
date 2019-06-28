@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-05-04 09:56+0200\n"
+"PO-Revision-Date: 2019-06-25 19:43+0200\n"
 "Last-Translator: Ján Kulik <johny.kulik452@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -31,16 +31,6 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Stará verzia Windows"
 
-#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr "Resource monitor"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "Súhrn zdrojov bol skopírovaný do schránky"
-
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Systém nie je napájaný z batérie."
@@ -48,10 +38,30 @@ msgstr "Systém nie je napájaný z batérie."
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent}% napájanie zapnuté"
+msgstr "{percent}%, napájanie zapnuté"
+
+#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#, fuzzy, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "{percent}%, zostáva {time}."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " hodina, "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " hodín, "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " minúta"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " minút"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-#. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}%, zostáva {time}."
@@ -61,8 +71,18 @@ msgid " Warning: low battery."
 msgstr "Pozor: batéria vybytá"
 
 #. Translators: Message reported when battery level is critical.
-msgid " Warning: battery is critically low."
-msgstr "Pozor: kritický stav batérie"
+msgid " Warning: critically low battery."
+msgstr "Pozor: Kritický stav batérie."
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Resource monitor"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Súhrn zdrojov bol skopírovaný do schránky"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -160,32 +180,12 @@ msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr ""
 "{ramPercent}% využitej pamäte ram, zaťaženie procesora na {cpuPercent}%. "
 
-#. Translators: In addition to processor and memory usage, presented when battery is low.
-msgid " Warning: critically low battery."
-msgstr "Pozor: Kritický stav batérie."
-
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
 "Oznámi využitie ram pamäte, priemerné vyťaženie procesora a prípadný "
 "kritický stav batérie."
-
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr " hodina,"
-
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr " hodín,"
-
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr " minúta"
-
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr " minút"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -195,3 +195,6 @@ msgid ""
 msgstr ""
 "Jednoduchý doplnok na zistenie vyťaženia procesora, využitej ram pamäte, "
 "stavu napájania, miesta na pripojených diskoch a podobne."
+
+#~ msgid " Warning: battery is critically low."
+#~ msgstr "Pozor: kritický stav batérie"

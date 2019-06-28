@@ -31,16 +31,6 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "旧版Windows"
 
-#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr "资源监控器"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "拷贝资源概要到剪贴板"
-
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "此计算机中并未连接任何电池。"
@@ -50,8 +40,28 @@ msgstr "此计算机中并未连接任何电池。"
 msgid "{percent}%, battery charging."
 msgstr "{percent}%，正在充电。"
 
+#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#, fuzzy, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "剩余电量{percent}%， 剩余运行时间 {time}"
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " 小时 "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " 个小时 "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " 分钟"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " 分钟"
+
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-#. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "剩余电量{percent}%， 剩余运行时间 {time}"
@@ -61,8 +71,18 @@ msgid " Warning: low battery."
 msgstr " 警告：电量低."
 
 #. Translators: Message reported when battery level is critical.
-msgid " Warning: battery is critically low."
-msgstr " 警告：电量严重不足."
+msgid " Warning: critically low battery."
+msgstr " 警告，电池严重不足。"
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "资源监控器"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "拷贝资源概要到剪贴板"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -159,30 +179,10 @@ msgstr "显示系统的运行时间。"
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "内存使用{ramPercent}%，CPU 使用{cpuPercent}%。"
 
-#. Translators: In addition to processor and memory usage, presented when battery is low.
-msgid " Warning: critically low battery."
-msgstr " 警告，电池严重不足。"
-
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "显示内存的使用、进城平均负载和电池信息（如果可用）。"
-
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr " 小时 "
-
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr " 个小时 "
-
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr " 分钟"
-
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr " 分钟"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -191,3 +191,6 @@ msgid ""
 "usage status and more."
 msgstr ""
 "一个方便的资源监控器，可以报告 CPU 负载、内存使用、电池和磁盘使用情况等等。"
+
+#~ msgid " Warning: battery is critically low."
+#~ msgstr " 警告：电量严重不足."

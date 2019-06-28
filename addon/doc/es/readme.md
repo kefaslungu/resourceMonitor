@@ -1,7 +1,7 @@
 # Resource Monitor #
 
-* Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala y otros
-  colaboradores de NVDA
+* Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
 * Compatibilidad con NVDA: de 2017.4 a 2019.2
 
@@ -26,7 +26,7 @@ utilización de la memoria y de otra información de uso de recursos.
 * NVDA+Shift+7 presenta el tiempo de actividad del sistema.
 
 Si tienes NVDA 2013.3 o una versión posterior, puedes cambiar estas teclas
-de acceso directo.
+de acceso directo desde el diálogo Gestos de entrada.
 
 ## Notas de uso ##
 
@@ -39,9 +39,16 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   CPU.
 * Si hay una actividad pesada de disco tal como el copiado de ficheros
   grandes, podría haber retrasos al obtener información de uso de disco.
-* El soporte para Windows XP de este complemento finalizó el 31 de diciembre
-  de 2017. El soporte para Windows Server 2003, Windows Vista y Windows
-  Server 2008 finalizó el 30 de junio de 2018.
+* Este complemento necesita Windows 7 Service Pack 1 o posterior.
+
+## Versión 19.07
+
+* Actualizada la dependencia psutil a 5.6.3.
+* Cambios internos en la orden de anuncio del estado de la batería.
+
+## Versión 18.12
+
+* Cambios internos para dar soporte a futuras versiones de NVDA.
 
 ## Versión 18.10
 

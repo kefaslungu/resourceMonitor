@@ -20,24 +20,14 @@ msgstr ""
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
-"Support for Windows XP from Resource Monitor add-on is ending on December "
-"2017. Future add-on releases will require {minSupportedVersion} or later. "
-"Are you sure you wish to install this add-on anyway?"
+"You are using an old version of Windows. This add-on requires "
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
 msgstr ""
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr ""
-
-#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr "Monitor de recursos"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "Resumen de Recursos copiau en o portafuellas"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -48,8 +38,28 @@ msgstr "Iste ordinador no tien una batería conectada."
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, a batería se ye cargando."
 
+#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#, fuzzy, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "En queda {percent}% de batería, arredol de {time}."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr " hora, "
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr " horas, "
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr " minuto"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr " minutos"
+
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-#. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "En queda {percent}% de batería, arredol de {time}."
@@ -59,8 +69,18 @@ msgid " Warning: low battery."
 msgstr "Para cuenta: Bbatería baixa."
 
 #. Translators: Message reported when battery level is critical.
-msgid " Warning: battery is critically low."
+msgid " Warning: critically low battery."
 msgstr "Para cuenta: A batería ye muit baixa."
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Monitor de recursos"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Resumen de Recursos copiau en o portafuellas"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -156,32 +176,12 @@ msgstr ""
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM usada, CPU en {cpuPercent}%. "
 
-#. Translators: In addition to processor and memory usage, presented when battery is low.
-msgid " Warning: critically low battery."
-msgstr "Para cuenta: A batería ye muit baixa."
-
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
 "Presienta a RAM usada, a carga meya d'o procesador y información d'a batería "
 "si ye disponible."
-
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr " hora, "
-
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr " horas, "
-
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr " minuto"
-
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr " minutos"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -191,3 +191,6 @@ msgid ""
 msgstr ""
 "Un monitor de recursos a man ta informar d'a carga d'a CPU, de l'uso de "
 "memoria, d'a batería, d'o estau d'uso d'o disco y de muito mas."
+
+#~ msgid " Warning: battery is critically low."
+#~ msgstr "Para cuenta: A batería ye muit baixa."

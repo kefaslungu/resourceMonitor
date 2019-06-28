@@ -32,16 +32,6 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Eski Windows sürümü "
 
-#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr "Kaynak İzleme"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "Kaynak bilgisi panoya kopyalandı"
-
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Bu bilgisayara pil takılı değil."
@@ -51,8 +41,28 @@ msgstr "Bu bilgisayara pil takılı değil."
 msgid "{percent}%, battery charging."
 msgstr "%{percent}, pil şarj oluyor."
 
+#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#, fuzzy, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "%{percent} kalan pil, yaklaşık {time}."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr "saat"
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr "saat"
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr "dakika"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr "dakika"
+
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-#. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "%{percent} kalan pil, yaklaşık {time}."
@@ -62,8 +72,18 @@ msgid " Warning: low battery."
 msgstr " Uyarı: düşük pil."
 
 #. Translators: Message reported when battery level is critical.
-msgid " Warning: battery is critically low."
+msgid " Warning: critically low battery."
 msgstr " Uyarı: pil kritik seviyede."
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Kaynak İzleme"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "Kaynak bilgisi panoya kopyalandı"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -161,30 +181,10 @@ msgstr "Sistemin çalışma süresini seslendirir."
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "yüzde {ramPercent} RAM kullanılan, CPU:  %{cpuPercent}."
 
-#. Translators: In addition to processor and memory usage, presented when battery is low.
-msgid " Warning: critically low battery."
-msgstr " Uyarı: pil kritik seviyede."
-
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "Kullanılan ram, CPU yükü, ve mevcutsa pil bilgisini verir ."
-
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr "saat"
-
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr "saat"
-
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr "dakika"
-
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr "dakika"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -194,3 +194,6 @@ msgid ""
 msgstr ""
 "CPU yükü, hafıza kullanımı, pil ve disk kullanım durumunu takip etmek ve "
 "daha fazlası için pratik bir araç."
+
+#~ msgid " Warning: battery is critically low."
+#~ msgstr " Uyarı: pil kritik seviyede."

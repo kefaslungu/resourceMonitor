@@ -1,7 +1,7 @@
 # 资源监视器 #
 
-* 作者: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other NVDA
-  contributors
+* 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
+  Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
 * NVDA兼容版本: 2017.4至2019.2
 
@@ -17,8 +17,7 @@
 * NVDA+Shift+6 报告CPU架构32/64位和Windows版本和版本号。
 * NVDA+Shift+7 报告系统的正常运行时间。
 
-注意:
-如果您安装了NvDA 2013.3或更高版本，则可以更改这些快捷键。
+如果安装了NvDA 2013.3或更高版本，则可以通过输入手势对话框更改这些快捷键。
 
 ## 使用说明 ##
 
@@ -26,8 +25,16 @@
 
 * 为逻辑处理器而不是物理内核提供CPU使用率。对于使用超线程技术的处理器来说，这是显而易见的，其中CPU的数量是CPU核心数量的两倍。
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
-* 此插件对Windows XP的支持已于2017年12月31日结束。对Windows Server 2003，Vista和Server
-  2008的支持于2018年6月30日结束。
+* 此插件需要Windows 7 Service Pack 1或更高版本。
+
+## 版本19.07
+
+* 将psutil依赖关系更新为5.6.3。
+* 电池状态通知命令的内部更改。
+
+## 版本18.12
+
+* 支持未来 NVDA 版本的内部更改。
 
 ## 版本18.10
 

@@ -1,7 +1,7 @@
 # دیده‌بان منابع (Resource Monitor) #
 
-* نویسندگان: Alex Hall، Joseph Lee، beqa gozalishvili، Tuukka Ojala و دیگر
-  مشارکت‌کنندگان NVDA
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * دانلود [نسخه‌ی پایدار][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -24,8 +24,8 @@
   بسته‌ی خدماتی (service pack) را اعلام میکند.
 * NVDA+Shift+7، زمان بالا بودن سیستم را اعلام میکند.
 
-چنانچه شما نسخه‌ی NvDA 2013.3 یا بعد از آن‌را نصب کرده باشید، میتوانید این
-کلیدهای میانبر را تغییر دهید.
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## تذکراتی در مورد استفاده از افزونه ##
 
@@ -37,9 +37,16 @@
   میکنند قابل ملاحظه است؛ زمانی که تعداد CPU دو برابر تعداد هسته‌های آن است.
 * چنانچه دیسک‌ها درگیر فعالیت سنگینی مانند کپی فایل‌های بزرگ باشند، ممکن است
   هنگام به‌دست‌آوردن اطلاعات میزان استفاده از دیسک، تأخیرهایی به وجود بیاید.
-* پشتیبانی این افزونه از ویندوز XP در ۱۰ دی‌ماه ۱۳۹۶ پایان یافت. پشتیبانی
-  این افزونه از ویندوز سِروِر 2003، ویستا و سِروِر 2008 در ۹ تیرماه ۱۳۹۷
-  پایان یافت.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Version 18.10
 

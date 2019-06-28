@@ -1,7 +1,7 @@
 # Ressourcemonitor #
 
-* Forfattere: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala og
-  andre NVDA-bidragydere
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * Download [stable version][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -25,8 +25,8 @@ hukommelse og andre oplysninger om forbrug af ressourcer.
   service pack numre.
 * NVDA+Skift+7: Oplyser systemets oppetid.
 
-Hvis du har NvDA 2013.3 eller nyere installeret, kan du ændre disse
-genvejstaster.
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Brugsanvisninger ##
 
@@ -39,9 +39,16 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
   CPU-kernerne.
 * Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
-* Understøttelse til Windows XP af denne tilføjelse sluttede den
-  31. december 2017. Støtten til Windows Server 2003, Vista og Server 2008
-  sluttede den 30. juni 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Version 18.10
 

@@ -1,7 +1,7 @@
 # Erőforrás-kilistázó #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
-  NVDA contributors
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * Letöltés [Stabil verzió][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -25,8 +25,8 @@ resource usage information.
   szervizcsomagját, ha elérhető.
 * NVDA+Shift+7 presents the system's uptime.
 
-Ha az NVDA 2013.3-as vagy újabb verzióját használja, lehetősége van a
-billentyűparancsok megváltoztatására.
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Használati megjegyzések ##
 
@@ -39,9 +39,16 @@ Windows-os programot. Fontos megjegyezni a következőket:
   kétszerese a magszámnak.
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Version 18.10
 

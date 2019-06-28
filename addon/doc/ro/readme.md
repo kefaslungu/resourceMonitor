@@ -1,7 +1,7 @@
 # Resource Monitor #
 
-* Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala și alți
-  contribuitori NVDA
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * Descărcați [versiunea stabilă][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -25,8 +25,8 @@ memoriei și alte resurse de utilizare a informației.
   Windows și numerele pachetelor de servicii.
 * NVDA+Shift+7 prezintă rularea sistemului.
 
-Dacă aveți NvDA 2013.3 sau mai nou instalat, Puteți modifica aceste comenzi
-rapide.
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Notele utilizării ##
 
@@ -40,9 +40,16 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 * În cazul în care există o activitate grea pe disc, cum ar fi copierea
   fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
   informațiilor de utilizare a discului.
-* Suportul pentru Windows XP de la acest supliment a luat sfârșit pe 31
-  decembrie 2017. Suportul pentru Windows Server 2003 și pentru Windows
-  Vista a luat sfârșit pe 30 iunie 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Versiunea 18.10
 

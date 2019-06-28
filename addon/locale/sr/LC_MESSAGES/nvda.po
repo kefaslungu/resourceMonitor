@@ -31,16 +31,6 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Stara Windows verzija"
 
-#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Resource Monitor"
-msgstr "Resource Monitor"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "kratak pregled resursa kopiran u privremenu memoriju "
-
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr ""
@@ -51,8 +41,28 @@ msgstr ""
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, punjenje baterije "
 
+#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#, fuzzy, python-brace-format
+msgid "{percent}% battery remaining, battery time unknown."
+msgstr "{percent}% baterije preostalo {time}."
+
+#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+msgid " hour, "
+msgstr "sat"
+
+#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+msgid " hours, "
+msgstr "sata"
+
+#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+msgid " minute"
+msgstr "minut"
+
+#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+msgid " minutes"
+msgstr "minuta"
+
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-#. discharging battery, so provide info on it
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% baterije preostalo {time}."
@@ -62,8 +72,18 @@ msgid " Warning: low battery."
 msgstr "upozorenje: baterija slaba "
 
 #. Translators: Message reported when battery level is critical.
-msgid " Warning: battery is critically low."
-msgstr "upozorenje : baterija kritično slaba "
+msgid " Warning: critically low battery."
+msgstr "upozorenje : kritično prazna baterija "
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Resource Monitor"
+msgstr "Resource Monitor"
+
+#. Translators: Presented when a resource summary is copied to clipboard.
+msgid "Resource summary copied to clipboard"
+msgstr "kratak pregled resursa kopiran u privremenu memoriju "
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -159,32 +179,12 @@ msgstr "Izgovara vreme rada sistema"
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM memorije iskorišćeno, CPU na{cpuPercent}%."
 
-#. Translators: In addition to processor and memory usage, presented when battery is low.
-msgid " Warning: critically low battery."
-msgstr "upozorenje : kritično prazna baterija "
-
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
 "prijavljuje status cpu-a , ram memoriju i informacije o bateriji ukoliko su "
 "dostupne "
-
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr "sat"
-
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr "sata"
-
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr "minut"
-
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr "minuta"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -194,3 +194,6 @@ msgid ""
 msgstr ""
 "dobar monitor resursa koji prijavljuje bateriju , ram memoriju , "
 "iskorišćenost memorije na hard disku i još mnogo toga "
+
+#~ msgid " Warning: battery is critically low."
+#~ msgstr "upozorenje : baterija kritično slaba "

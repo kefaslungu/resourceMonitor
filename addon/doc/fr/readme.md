@@ -1,7 +1,7 @@
 # Resource Monitor #
 
-* Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala et
-  d'autres contributeurs de NVDA
+* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors
 * Télécharger [version stable][1]
 * NVDA compatibility: 2017.4 to 2019.2
 
@@ -27,8 +27,8 @@ ressources.
 * NVDA+Maj+7 Annonce le temps de fonctionnement du système depuis sa mise en
   route.
 
-Si vous avez NVDA 2013.3 ou version ultérieure installé, vous pouvez
-modifier ces touches de raccourci.
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Remarques sur l'utilisation ##
 
@@ -42,9 +42,16 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
-* La prise en charge de Windows XP à partir de cette extension a pris fin le
-  31 décembre 2017. La prise en charge de Windows Server 2003, Vista et
-  Server 2008 a pris fin le 30 juin 2018.
+* This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 19.07
+
+* Updated psutil dependency to 5.6.3.
+* Internal changes to battery status announcement command.
+
+## Version 18.12
+
+* Internal changes to support future NVDA releases.
 
 ## Version 18.10
 
