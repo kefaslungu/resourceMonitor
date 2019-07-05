@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-07-14 19:25+0200\n"
-"PO-Revision-Date: 2017-09-15 17:23+0330\n"
+"PO-Revision-Date: 2019-07-01 19:37+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@freelists.org>\n"
 "Language: fa\n"
@@ -19,15 +19,15 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"پشتیبانیِ افزونه‌ی دیده‌بانِ منابع از ویندوز XP در دسامبر ۲۰۱۷ به پایان میرسد. "
-"انتشارهای آینده‌ی این افزونه، دستِ کم به {minSupportedVersion} یا بالاتر نیاز "
-"خواهد داشت. با این حال، مطمئنید که میخواهید این افزونه را نصب کنید؟"
+"شما دارید از یک نسخه‌ی قدیمیِ ویندوز استفاده میکنید. این افزونه نیاز به نسخه‌ی "
+"{minSupportedVersion} یا بالاتر دارد. مطمئنید که میخواهید به هر حال این "
+"افزونه را نصب کنید؟"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -43,9 +43,9 @@ msgid "{percent}%, battery charging."
 msgstr "{percent}%, در حالِ شارژِ باتری."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% از باتری مانده، حدودا {time}."
+msgstr "{percent}% از باتری مانده. زمانِ باقیمانده‌ی باتری مشخص نیست."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "

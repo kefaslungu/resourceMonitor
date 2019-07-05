@@ -3,11 +3,11 @@
 * Autoren: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst
    und andere NVDA-Entwickler
-* [stabile version][1] herunterladen
+* [Stabile Version herunterladen][1]
 * NVDA-Kompatibilität: 2017.4 bis 2019.2
 
-Diese Erweiterung gibt Informationen über Prozessor-Auslastung, verwendeten
-Arbeitsspeicher sowie andere nützliche Ressourcen.
+Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
+verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 
 # Tastenkürzel #
 
@@ -47,7 +47,7 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 ## Version 19.07
 
 * Die Paket-Abhängigkeit "psutil" wurde auf 5.6.3 aktualisiert.
-* Interne Änderungen am Befehl "Batteriestatus ankündigen".
+* Interne Änderungen am Befehl "Akku-Status ankündigen".
 
 ## Version 18.12
 

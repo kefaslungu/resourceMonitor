@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-13 10:32+0100\n"
-"PO-Revision-Date: 2018-11-25 18:52+0100\n"
+"PO-Revision-Date: 2019-06-30 11:28+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: hr <LL@li.org>\n"
 "Language: hr\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Podrška za Windows XP od strane Resource Monitora završava u prosincu 2017 "
-"godine. Bidiće inačice ovog dodatka zahtjevati će {minSupportedVersion} ili "
-"noviju. Jeste li sigurni da ga želite svejedno instalirati?"
+"Koristite staru inačicu Windows operacijskog sustava. Ovaj dodatak zahtjeva "
+"inačicu {minSupportedVersion} ili noviju. želite li svejedno instalirati "
+"ovaj dodatak?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -42,9 +42,9 @@ msgid "{percent}%, battery charging."
 msgstr "{percent}%, baterija se puni."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% preostalo baterije, od prilike {time}."
+msgstr "preostalo {percent}% baterije, vrijeme baterije nepoznato."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "

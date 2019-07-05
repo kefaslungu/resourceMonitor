@@ -1,7 +1,7 @@
 # Resource Monitor #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst and other NVDA contributors
+* Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e outros
+  colaboradores do NVDA
 * Descargar [versión estable][1]
 * Compatibilidade con NVDA: da 2017.4 á 2019.2
 
@@ -25,8 +25,8 @@ outras informacións de uso dos recursos.
   Windows e as cifras do service pack.
 * NVDA+Shift+7 presenta o tempo de actividade do sistema.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Se tes NVDA 2013.3 ou posterior instalado, podes cambiar estas teclas de
+atallo mediante o diálogo de xestos de entrada.
 
 ## Notas de uso ##
 
@@ -38,16 +38,16 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   onde o número de CPUs é o dobre do número de núcleos de CPU.
 * Se hai unha actividade pesada de disco coma o copiado de ficheiros longos,
   podería haber retrasos ao obter información de uso do disco.
-* This add-on requires Windows 7 Service Pack 1 or later.
+* Este complemento require Windows 7 Service Pack 1 ou posterior.
 
-## Version 19.07
+## Versión 19.07
 
-* Updated psutil dependency to 5.6.3.
-* Internal changes to battery status announcement command.
+* Actualizada a dependencia psutil á 5.6.3.
+* Cambios internos ao comando de anunciado do estado da batería.
 
-## Version 18.12
+## Versión 18.12
 
-* Internal changes to support future NVDA releases.
+* Cambios internos para soportar versións futuras do NVDA.
 
 ## Versión 18.10
 
