@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-06-28 12:46+0200\n"
+"PO-Revision-Date: 2019-07-15 06:05+0200\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -24,7 +24,7 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Sie verwenden eine alte Version von Windows. Diese Erweiterung erfordert "
+"Sie benutzen noch eine alte Windows-Version. Diese Erweiterung erfordert "
 "{minSupportedVersion} oder höher. Sind Sie sicher, dass Sie diese "
 "Erweiterung trotzdem installieren möchten?"
 
@@ -44,7 +44,7 @@ msgstr "{percent} %, Akku wird aufgeladen."
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent} % Akku verbleibend, Akku-Zeit unbekannt."
+msgstr "{percent} % Akku verbleibend, Zeit nicht bekannt."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -65,11 +65,11 @@ msgstr " Minuten"
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "Akkubetrieb, {percent} % verbleiben, noch {time}."
+msgstr "{percent} % Akku verbleiben, noch {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "Warnung: Akkustand niedrig!"
+msgstr "Warnung: Akku bald leer!"
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
@@ -99,7 +99,7 @@ msgstr ""
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} Laufwerk: {usedSpace} von {totalSpace} {percent}% "
+"{driveName} ({driveType} Laufwerk: {usedSpace} von {totalSpace} {percent} % "
 "verwendet."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
@@ -112,31 +112,31 @@ msgstr ""
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "Kern {coreNumber}: {corePercent} Prozent"
+msgstr "Kern {coreNumber}: {corePercent} %."
 
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Prozessor-Auslastung: ~ {avgLoad} %, {cores}"
+msgstr "Durchschnittliche CPU-Auslastung {avgLoad} %, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr ""
-"Zeigt die ungefähre CPU-Auslastung sowie die Auslastung für jeden "
-"Prozessorkern an."
+"Zeigt die durchschnittliche CPU-Auslastung sowie die Auslastung der "
+"einzelnen Prozessorkerne an."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"Physisch: {physicalUsed} von {physicalTotal} verwendet ({physicalPercent} "
-"%). "
+"Physisch: {physicalUsed} von {physicalTotal} verwendet ({physicalPercent} %)."
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
-"Virtuell: {virtualUsed} von {virtualTotal} verwendet ({virtualPercent} %)."
+"Virtueller Arbeitsspeicher: {virtualUsed} von {virtualTotal} verwendet "
+"({virtualPercent} %)."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
@@ -183,7 +183,8 @@ msgstr "Gibt die Systemlaufzeit aus."
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent} % Speicher verwendet, CPU-Auslastung bei {cpuPercent} %."
+msgstr ""
+"{ramPercent} % Arbeitsspeicher verwendet, CPU-Auslastung bei {cpuPercent} %."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -200,6 +201,3 @@ msgid ""
 msgstr ""
 "Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
-
-#~ msgid " Warning: battery is critically low."
-#~ msgstr "Warnung: Kritischer Akkustand!"

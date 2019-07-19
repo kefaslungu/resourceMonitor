@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-07-07 08:56+0200\n"
-"PO-Revision-Date: 2019-07-10 16:23+0200\n"
+"PO-Revision-Date: 2019-07-14 20:25-0700\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: Dansk NVDA <dansk@nvda.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -194,6 +194,3 @@ msgid ""
 msgstr ""
 "En smart lille ressourcemonitor, som fortææler status for "
 "processorbelastning, hukommelsesforbrug, batteri, diskforbrug m.m."
-
-#~ msgid " Warning: battery is critically low."
-#~ msgstr "Advarsel: Batteriniveau meget lavt."

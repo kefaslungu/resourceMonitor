@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-06-28 10:55+0200\n"
+"PO-Revision-Date: 2019-07-15 10:00+0200\n"
 "Last-Translator: Ján Kulik <johny.kulik452@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
@@ -43,7 +43,7 @@ msgstr "{percent}%, napájanie zapnuté"
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}%zostávajúca kapacita batérie, zostáva neznámy čas."
+msgstr "{percent}% zostávajúca kapacita batérie, zostáva neznámy čas."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -195,6 +195,3 @@ msgid ""
 msgstr ""
 "Jednoduchý doplnok na zistenie vyťaženia procesora, využitej ram pamäte, "
 "stavu napájania, miesta na pripojených diskoch a podobne."
-
-#~ msgid " Warning: battery is critically low."
-#~ msgstr "Pozor: kritický stav batérie"

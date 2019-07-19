@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-05 16:13+0100\n"
-"PO-Revision-Date: 2019-01-04 15:44+0100\n"
+"PO-Revision-Date: 2019-07-14 20:27-0700\n"
 "Last-Translator: Chris Leo Mameli <llajta2012@gmail.com>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, fuzzy, python-brace-format
@@ -196,6 +196,3 @@ msgstr ""
 "Un'utile risorsa per monitorare e segnalare in tempo reale il carico della "
 "CPU, l'utilizzo della memoria, lo stato della batteria,  la quantità di "
 "spazio utilizzato sul disco ed altro."
-
-#~ msgid " Warning: battery is critically low."
-#~ msgstr "Attenzione: la batteria è quasi scarica."

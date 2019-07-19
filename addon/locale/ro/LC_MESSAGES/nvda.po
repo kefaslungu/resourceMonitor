@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2018-03-15 12:57+0200\n"
+"PO-Revision-Date: 2019-07-14 20:31-0700\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, fuzzy, python-brace-format
@@ -201,6 +201,3 @@ msgid ""
 msgstr ""
 "Un monitor de resurse folositor pentru raportarea încărcării CPU, ratei de "
 "folosire a memoriei, baterie, stare folosire disk și altele."
-
-#~ msgid " Warning: battery is critically low."
-#~ msgstr " Alertă: nivel baterie extrem de scăzut"

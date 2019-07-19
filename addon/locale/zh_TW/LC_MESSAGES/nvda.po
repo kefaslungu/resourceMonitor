@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-04-22 18:05+1000\n"
-"PO-Revision-Date: 2018-03-15 17:24+0800\n"
+"PO-Revision-Date: 2019-07-14 20:34-0700\n"
 "Last-Translator: 蔡宗豪 <surfer0627@gmail.com>\n"
 "Language-Team: NVDA-Taiwan Volunteers Team <nvdazh_TW@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, fuzzy, python-brace-format
@@ -185,6 +185,3 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr "此資源監控元件能讀出 CPU 負載，記憶體、電池、磁碟使用情形。"
-
-#~ msgid " Warning: battery is critically low."
-#~ msgstr " 警告：電池電量非常低"
