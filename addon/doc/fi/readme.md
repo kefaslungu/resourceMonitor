@@ -1,9 +1,9 @@
 # Resurssienvalvonta #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst and other NVDA contributors
+* Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* NVDA compatibility: 2017.4 to 2019.2
+* Yhteensopivuus: NVDA 2017.4-2019.2
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -25,8 +25,8 @@ resurssien käytöstä.
   sekä Windowsin ja Service Packin version.
 * NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Voit muuttaa näitä pikanäppäimiä, mikäli käytössäsi on NVDA 2013.3 tai
+uudempi.
 
 ## Huomautuksia käytöstä ##
 
@@ -38,16 +38,16 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
-* This add-on requires Windows 7 Service Pack 1 or later.
+* Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
 
-## Version 19.07
+## Versio 19.07
 
-* Updated psutil dependency to 5.6.3.
-* Internal changes to battery status announcement command.
+* Päivitetty psutil-riippuvuus versioksi 5.6.3.
+* Sisäisiä muutoksia akun tilan ilmoittavaan komentoon.
 
-## Version 18.12
+## Versio 18.12
 
-* Internal changes to support future NVDA releases.
+* Sisäisiä muutoksia tulevien NVDA-versioiden tukemiseksi.
 
 ## Versio 18.10
 
