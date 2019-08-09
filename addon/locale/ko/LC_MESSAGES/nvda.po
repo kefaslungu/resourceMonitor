@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-07-14 20:31-0700\n"
+"PO-Revision-Date: 2019-08-08 19:07-0700\n"
 "Last-Translator: \n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -39,9 +39,9 @@ msgid "{percent}%, battery charging."
 msgstr "{percent}%, 베터리 중전중."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% 베터리 남음, {time} 사용 가능."
+msgstr "{percent}% 베터리 남음."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
