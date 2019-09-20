@@ -164,7 +164,7 @@ server10LTSBuilds={
 }
 
 def _win10RID(buildNum, isClient):
-	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
+	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
 	productName = winreg.QueryValueEx(currentVersion, "ProductName")[0]
 	buildBranch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
 	# Version 1511 and later.
@@ -263,7 +263,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif winMajor == 10: # Windows 10/Server 2016 (10.0) and beyond.
 			# Also take care of release ID, introduced in Version 1511.
 			buildNum = sys.getwindowsversion().build
-			currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
+			currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
 			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0] #UBR = Update Build Revision
 			winreg.CloseKey(currentVersion)
 			winverName = _win10RID(buildNum, server == 1)
