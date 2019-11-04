@@ -30,6 +30,10 @@ This add-on does not replace task manager and other system information programs 
 
 * NVDA 2019.3 or later is required due to extensive use of Python 3.
 
+## Version 19.11
+
+* Improved detection of Windows Insider Preview builds, especially for 20H1 and beyond.
+
 ## Version 19.07
 
 * Updated psutil dependency to 5.6.3.
