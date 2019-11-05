@@ -161,11 +161,7 @@ def _win10RID(buildNum, isClient):
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
 	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
 	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64","ARM64"):
-		# Python 2 does not allow keyword arguments for OpenKeyEx.
-		if sys.version.startswith("3"):
-			selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
-		else:
-			selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", 0, winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
+		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
 	else:
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability")
 	# Version 1511 and later.
