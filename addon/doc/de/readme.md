@@ -44,6 +44,11 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
   erforderlich.
 
+## Version 19.11
+
+* Improved detection of Windows Insider Preview builds, especially for 20H1
+  and beyond.
+
 ## Version 19.07
 
 * Die Paket-Abhängigkeit "psutil" wurde auf 5.6.3 aktualisiert.

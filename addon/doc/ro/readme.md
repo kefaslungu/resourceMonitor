@@ -42,6 +42,11 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
   informațiilor de utilizare a discului.
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 19.11
+
+* Improved detection of Windows Insider Preview builds, especially for 20H1
+  and beyond.
+
 ## Version 19.07
 
 * Updated psutil dependency to 5.6.3.
