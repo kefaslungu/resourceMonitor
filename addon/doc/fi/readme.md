@@ -40,10 +40,10 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
 
-## Version 19.11
+## Versio 19.11
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+* Windows Insider -esiversioiden tunnistusta paranneltu, erityisesti
+  20H1:ssä ja uudemmissa.
 
 ## Versio 19.07
 
