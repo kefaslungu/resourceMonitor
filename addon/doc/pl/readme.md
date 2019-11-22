@@ -41,10 +41,10 @@ następujące kwestie:
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
 
-## Version 19.11
+## Wersja19.11
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+* Ulepszone wykrywanie kompilacji insider preview, dla wersji 20H1 i
+  nowszej.
 
 ## Wersja 19.07
 

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-07-14 20:31-0700\n"
-"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
+"PO-Revision-Date: 2019-11-16 22:13-0300\n"
+"Last-Translator: Cleverson Casarin Uliana <clever97@gmail.com>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clever97@gmail.com>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -44,9 +44,9 @@ msgid "{percent}%, battery charging."
 msgstr "{percent}%, carregando bateria."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "Restam {percent}% da bateria, cerca de {time}."
+msgstr "Restam {percent}% da bateria, tempo de bateria desconhecido."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "

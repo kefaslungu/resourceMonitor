@@ -1,34 +1,34 @@
-# Prikaz Resursa #
+# Prati stanje resursa (Resource Monitor) #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst and other NVDA contributors
-* Preuzmi [stabilnu inačicu][1]
-* NVDA compatibility: 2017.4 to 2019.2
+* Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
+  Probst i drugi NVDA doprinositelji
+* Preuzmi [stabilnu verziju][1]
+* NVDA kompatibilnost: 2017.4 do 2019.2
 
-Ovaj dodatak daje informacije o učitavanju procesora, korištenju memorije i
-druge informacije o korištenju resursa.
+Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
+i druge informacije o korištenju resursa.
 
-# Kratice #
+# Prečaci #
 
 * NVDA+Shift+E Prikazuje korištenje ram memorije, prosječno opterećenje
-  procesora i informacije o stanju baterije ako su dostupne.
-* NVDA+Shift+1 Prikazuje prosječno opterećenje procesora i ako postoje
+  procesora i informacije o stanju baterije, ako su dostupne.
+* NVDA+Shift+1 Prikazuje prosječnu opterećenost procesora i ako postoje
   višejezgreni procesori, prikazuje opterećenje svake jezgre.
 * NVDA+shift+2/5 Prikazuje iskorišten i ukupni kapacitet fizičke I virtualne
   ram memorije.
 * NVDA+Shift+3 Prikazuje iskorišten i ukupni prostor na statičnim i
   prenosivim diskovima.
 * NVDA+Shift+4 Prikazuje postotak baterije, status punjenja, preostalo
-  vrijeme (ako se ne puni), te upozorenje ako je baterija prazna ili
-  kritična.
-* NVDA+Shift+6 Prikazuje strukturu procesora (32-64-bitni), inačicu Windowsa
-  i broj service packa.
-* NVDA+Shift+7: Prikazuje ažuriranost sustava.
+  vrijeme (ako se ne puni), te upozorenje, ako je baterija slaba ili skoro
+  prazna.
+* NVDA+Shift+6 Prikazuje strukturu procesora (32-64-bitni), verziju Windowsa
+  i broj service paketa.
+* NVDA+Shift+7: Prikazuje trajanje pokretanja sustava.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Ako imate instaliranu NVDA verziju 2013.3 ili noviju, možete izmijeniti ove
+tipkovničke prečace putem dijaloškog okvira za ulazne geste.
 
-## Upute za korištenje  ##
+## Upute za primjenu ##
 
 Ovaj dodatak ne zamjenjuje upravitelj zadacima i druge programe za
 informacije o sustavu Windows. Također upamtite sljedeće:
@@ -39,139 +39,139 @@ informacije o sustavu Windows. Također upamtite sljedeće:
 * Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
-* This add-on requires Windows 7 Service Pack 1 or later.
+* Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
 
 ## Version 19.11
 
 * Improved detection of Windows Insider Preview builds, especially for 20H1
   and beyond.
 
-## Version 19.07
+## Verzija 19.07
 
-* Updated psutil dependency to 5.6.3.
-* Internal changes to battery status announcement command.
+* Ažurirana je psutil zavisnost na 5.6.3.
+* Interna promjena za naredbu najavljivanja stanja baterija.
 
-## Version 18.12
+## Verzija 18.12
 
-* Internal changes to support future NVDA releases.
+* Unutarnje promjene, kako bi se podržala buduća NVDA izdanja.
 
-## Version 18.10
+## Verzija 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Kod je sada kompatibilniji s Python 3.
+* Ažurirana je psutil zavisnost na 5.4.7.
+* Prilikom dobivanja kapaciteta diska i upotrebe memorije, NVDA više neće
+  pogriješiti, ako koristi računalo ili uslugu s više od petabajta RAM-a ili
+  veličine diska.
+* Vrijednosti za memoriju i upotrebu diska prikazuju se s najviše dva
+  decimalna mjesta (npr. 4,00 GB umjesto 4,0 GB).
+* Poboljšano otkrivanje za Windows Insider Preview gradnje.
 
-## Inačica 18.04
+## Verzija 18.04
 
-Inačica 18.04.x je posljednje izdanje koje će podržavati inačice Windowsa
-starije od Windowsa 7 SP1. 
+Verzija 18.04.x je posljednje izdanje koje će podržavati verzije Windowsa
+starije od Windowsa 7 SP1.
 
 * Posljednje izdanje koje podržava Windows Server 2003, Vistu i Server 2008.
-* Poboljšana detekcija za izdanja Windowsa 10 i bolje razlikovanje između
+* Poboljšano otkrivanje za Windowsa 10 izdanja i bolje razlikovanje između
   javnih i Insider Preview izdanja.
 
-## Inačica 17.12
+## Verzija 17.12
 
 * Dodana podrška za 64-bitne ARM procesore na Windowsima 10.
 
-## Inačica 17.09
+## Verzija 17.09
 
-Važno: Inačica 17.09 je posljednje izdanje koje podržava Windows XP.
+Važno: Verzija 17.09 je posljednje izdanje koje podržava Windows XP.
 
-* Zadnja inačica koja radi na Windowsima XP.
-* Windows 10 inačica 16278 i novija prepoznata je kao Inačica 17.09. Manje
-  izdanje ovog dodatka bit će objavljeno nakon objave stabilne inačice
+* Zadnja verzija koja radi na Windowsima XP.
+* Windows 10 verzija 16278 i novija prepoznata je kao Verzija 17.09. Manje
+  izdanje ovog dodatka bit će objavljeno nakon objave stabilne verzije
   2017.9.
 
-## Inačica 17.07.1
+## Verzija 17.07.1
 
-* Ponovno uvedena podrška za Windows XP (prekinuta od inačice 17.02).
+* Ponovo uvedena podrška za Windows XP (prekinuta od verzije 17.02).
 
-## Inačica 17.05
+## Verzija 17.05
 
-* Izgovor vremena rada sustava (vrijeme proteklo od zadnjeg pokretanja
+* Najava trajanja pokretanja sustava (vrijeme proteklo od zadnjeg pokretanja
   računala); NVDA+Shift+7).
 
-## Inačica 17.02
+## Verzija 17.02
 
 * Ažurirana je psutil zavisnost na 5.0.1.
 * Tijekom provjere upotrebljivosti diska, NVDA više neće prikazivati
   dijaloški okvir pogreške na nekim sustavima gdje izmjenjivi medij nije
   ispravno prepoznat (primjerice kada kartica nije umetnuta u čitač
-  kartica.) 
+  kartica.)
 
-## Inačica 16.08
+## Verzija 16.08
 
-Počevši od inačice 16.08, izdanja ovog dodatka prikazivat će se u formatu
+Počevši od verzije 16.08, izdanja ovog dodatka prikazivat će se u formatu
 godina.mjesec.izdanje.
 
-* Različite inačice Windowsa 10 sada su ispravno prepoznate (kao što je 1607
-  za inačicu 14393).
-* Izmjene u Windowsima 10 (nakon instalacije kumulativnih ažuriranja)
-  ispravno su prepoznate (kao što je 14.393.51).
-* Ako koristite Insider Preview inačice, to je također prepoznato.
+* Različite verzije Windowsa 10 se sada ispravno prepoznaju (kao što je 1607
+  za verziju 14393).
+* Revizije Windows 10 gradnji (nakon instalacije kumulativnih ažuriranja)
+  ispravno se prepoznaju (kao što je 14.393.51).
+* Ako koristite Insider Preview gradnje, ta se činjenica prepoznaje.
 
-## Promjene u inačici 4.5 ##
+## Promjene u verziji 4.5 ##
 
 * Repozitorij dodatka premješten je na GitHub (možete ga pronaći na
   https://github.com/josephsl/resourcemonitor).
-* Windows Server 2016. ispravno je prepoznat.
+* Windows Server 2016. se ispravno prepoznaje.
 
-## Promjene u inačici 4.0 ##
+## Promjene u verziji 4.0 ##
 
 * Ažurirana je opsutil zavisnost na 2.2.1.
 * Izrazito poboljšana učinkovitost pri dobivanju informacija o opterećenosti
   procesora.
 * Dodana podrška za prepoznavanje Windowsa 10.
-* U Windowsima 10, broj inačice Windowsa također će biti izgovoren.
-* Možete koristiti Upravitelj Dodacima za pristup pomoći.
+* U Windowsima 10, broj verzije Windowsa također će biti izgovoren.
+* Možete koristiti Upravljač za dodatke za pristup pomoći.
 
-## Promjene u inačici 3.1 ##
+## Promjene u verziji 3.1 ##
 
-* Resource Monitor službeno podržava Windows 8.1.
+* „Prati stanje resursa” službeno podržava Windows 8.1.
 * Ažurirani prijevodi.
 
-## Promjene u inačici 3.0 ##
+## Promjene u verziji 3.0 ##
 
 * Ažurirana psutil zavisnost na 1.2.1.
-* Izgovor trenutne inačice Windowsa, arhitekture procesora i servisnog
+* Izgovor trenutne verzije Windowsa, arhitekture procesora i servisnog
   paketa ako postoji (NVDA+Shift+6).
-* Mogućnost promjene tipkovnih prečica (NVDA inačica 2013.3 ili novija).
+* Mogućnost promjene tipkovnih prečica (NVDA verzija 2013.3 ili novija).
 * Mogućnost kopiranja pojedinačnih informacija o resursima u međuspremnik
   pritiskom naredbi resursa dva puta.
 
-## Promjene u inačici 2.4 ##
+## Promjene u verziji 2.4 ##
 
 * Novi jezici: kineski (pojednostavljeni), ukrajinski.
 * Ažurirani prijevodi.
 
-## Promjene u inačici 2.3 ##
+## Promjene u verziji 2.3 ##
 
 * Dodan prijevod na bugarski jezik.
 
-## Promjene u inačici 2.2 ##
+## Promjene u verziji 2.2 ##
 
 * Dodani prijevodi na sljedeće jezike: arapski, aragonski, hrvatski,
   nizozemski, finski, francuski, galicijski, njemački, mađarski, talijanski,
-  Japanski, Korejski, Nepaljski, Poljski, portugalski (Grazil), ruski,
+  japanski, korejski, nepaljski, poljski, portugalski (Brazil), ruski,
   slovački, slovenski, španjolski, tamilski i turski.
 
-## Promjene u inačici 2.1 ##
+## Promjene u verziji 2.1 ##
 
-* Ažurirana psutil zavisnost na inačicu 0.6.1.
+* Ažurirana psutil zavisnost na verziju 0.6.1.
 * Riješen problem velikog kašnjenja pri dobivanju informacija o particijama.
 * Čišćenje koda.
 
-## Promjene u inačici 2.0 ##
+## Promjene u verziji 2.0 ##
 
-* Dodana podrška za prijevode i komentari.
+* Dodana podrška za prijevode i komentare prijevoda.
 
-## Promjene u inačici 1.0 ##
+## Promjene u verziji 1.0 ##
 
 * Prvo izdanje
 
