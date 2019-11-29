@@ -40,6 +40,11 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   podería haber retrasos ao obter información de uso do disco.
 * Este complemento require Windows 7 Service Pack 1 ou posterior.
 
+## Version 19.11
+
+* Improved detection of Windows Insider Preview builds, especially for 20H1
+  and beyond.
+
 ## Versión 19.07
 
 * Actualizada a dependencia psutil á 5.6.3.

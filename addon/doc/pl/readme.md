@@ -41,6 +41,11 @@ następujące kwestie:
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
 
+## Wersja19.11
+
+* Ulepszone wykrywanie kompilacji insider preview, dla wersji 20H1 i
+  nowszej.
+
 ## Wersja 19.07
 
 * Zaktualizowano zależność psutil do wersji 5.6.3.

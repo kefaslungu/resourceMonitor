@@ -40,6 +40,11 @@ de informações de sistema para Windows. Note também o seguinte:
   pode haver lentidão ao obter informações de uso do disco.
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 19.11
+
+* Improved detection of Windows Insider Preview builds, especially for 20H1
+  and beyond.
+
 ## Version 19.07
 
 * Updated psutil dependency to 5.6.3.

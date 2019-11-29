@@ -1,21 +1,24 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Hrvatska lokalizacija za NVDA.
+# Copyright (C) 2006-2019 NVDA contributors <https://www.nvda-project.org>
+# This file is distributed under the same license as the virtualRevision package.
+# Zvonimir Stanečić <zvonimirek222@yandex.com>, 2019.
+# Milo Ivir <mail@milotype.de>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-13 10:32+0100\n"
-"PO-Revision-Date: 2019-07-14 20:27-0700\n"
-"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"PO-Revision-Date: 2019-11-17 23:19+0100\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: hr <LL@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.2.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -24,13 +27,13 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Koristite staru inačicu Windows operacijskog sustava. Ovaj dodatak zahtjeva "
-"inačicu {minSupportedVersion} ili noviju. želite li svejedno instalirati "
+"Koristite staru verziju Windows operacijskog sustava. Ovaj dodatak zahtjeva "
+"verziju {minSupportedVersion} ili noviju. želite li svejedno instalirati "
 "ovaj dodatak?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr "Stara inačica operacijskog sustava Windows"
+msgstr "Stara verzija operacijskog sustava Windows"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -44,7 +47,7 @@ msgstr "{percent}%, baterija se puni."
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "preostalo {percent}% baterije, vrijeme baterije nepoznato."
+msgstr "Preostalo {percent}% baterije, vrijeme baterije nepoznato."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 msgid " hour, "
@@ -65,7 +68,7 @@ msgstr " minuta"
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent}% preostalo baterije, od prilike {time}."
+msgstr "Preostalo {percent}% baterije, otprilike {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
@@ -79,7 +82,7 @@ msgstr " Pažnja: Baterija će se uskoro potrošiti."
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Monitor resursa"
+msgstr "Prati stanje resursa"
 
 #. Translators: Presented when a resource summary is copied to clipboard.
 msgid "Resource summary copied to clipboard"
@@ -112,12 +115,12 @@ msgstr ""
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "jezgra {coreNumber}: {corePercent}%"
+msgstr "Jezgra {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "prosjek pokretanja cpu {avgLoad}%, {cores}."
+msgstr "Prosječna opterećenosti procesora {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -155,16 +158,16 @@ msgstr "32-bitni"
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
-msgstr "Inačica Windows sustava: {winVersion} ({cpuBit})"
+msgstr "Verzija Windows sustava: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 #, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "Inačica Windows sustava: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "Verzija Windows sustava: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
-msgstr "Najavljuje inačicu Windows sustava koju koristite."
+msgstr "Najavljuje verziju Windows sustava koju koristite."
 
 #. Translators: The system's uptime
 #, python-brace-format
@@ -173,11 +176,11 @@ msgstr "{days} dana {hoursMinutesSeconds}"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr "Nemoguće dohvatiti ukupno trajanje pokrenutosti sustava."
+msgstr "Nemoguće dohvatiti trajanje pokretanja sustava."
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr "Izgovara koliko je sustav pokrenut."
+msgstr "Izgovara trajanje pokretanja sustava."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
@@ -198,5 +201,5 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"Praktični monitor resursa za izvještaj o opterećenju procesora, uporabu "
-"memorije, bateriji, stanju uporabe diska i više."
+"Praktično praćenje stanja resursa za izvještavanje o opterećenju procesora, "
+"uporabu memorije, bateriji, stanju uporabe diska i više."
