@@ -46,8 +46,8 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
 ## Version 19.11
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+* Verbesserte Erkennung von Windows Insider Preview-Builds, insbesondere für
+  20H1 und darüber hinaus.
 
 ## Version 19.07
 
@@ -105,7 +105,7 @@ ausgeführt werden kann.
 
 ## Version 17.02
 
-* psutil-Abhängigkeit auf 5.0.1 aktualisiert.
+* Psutil-Abhängigkeit auf 5.0.1 aktualisiert.
 * Bei der Überprüfung der Festplattennutzung zeigt NVDA keinen Fehlerdialog
   mehr auf einigen Systemen an. Dies gilt nur auf Systemen, auf denen ein
   Wechselmedium nicht richtig erkannt wird (z.B. wenn eine Karte nicht in
@@ -132,7 +132,7 @@ angezeigt.
 
 ## Änderungen in 4.0 ##
 
-* psutil-Abhängigkeit auf 2.2.1 aktualisiert.
+* Psutil-Abhängigkeit auf 2.2.1 aktualisiert.
 * Erheblich verbesserte Leistung beim Abrufen von Informationen über die
   CPU-Auslastung.
 * Unterstützung für die Erkennung von Windows 10 hinzugefügt.
@@ -142,12 +142,12 @@ angezeigt.
 
 ## Änderungen in 3.1 ##
 
-* Der Ressourcen-Monitor unterstützt offiziell Windows 8.1
+* Der Ressourcen-Monitor unterstützt offiziell Windows 8.1.
 * Übersetzungen aktualisiert.
 
 ## Änderungen in 3.0 ##
 
-* psutil-Abhängigkeit auf 1.2.1 aktualisiert.
+* Psutil-Abhängigkeit auf 1.2.1 aktualisiert.
 * NVDA+Umschalt+6 gibt die Windows-Version, die verwendete
   Prozessor-Architektur sowie verwendete Service Packs aus.
 * Tastenkürzel der Erweiterung sind ab NVDA 2013.3 änderbar.
@@ -174,7 +174,7 @@ angezeigt.
 
 ## Änderungen in 2.1 ##
 
-* psutil auf Version 0.6.1 aktualisiert.
+* Psutil auf Version 0.6.1 aktualisiert.
 * Größere Zeitverzögerung beim Erhalten von Informationen von Datenträgern
   beseitigt.
 * Der Quellcode wurde bereinigt.

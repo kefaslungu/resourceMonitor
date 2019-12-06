@@ -11,11 +11,11 @@ outras informacións de uso dos recursos.
 # Atallos de teclado #
 
 * NVDA+Shift+E Presenta a ram utilizada, a carga media do procesador, e
-  información da batería se está dispoñible,
+  información da batería se está dispoñible.
 * NVDA+Shift+1 Presenta a carga media do procesador e CPU multicor se están
   presentes a carga de cada núcleo.
 * NVDA+Shift+2/5 Presenta o espazo utilizado e total da ram tanto física
-  coma virtual,
+  coma virtual.
 * NVDA+Shift+3 Presenta o espazo usado e total das unidades estáticas e
   extraíbles .
 * NVDA+Shift+4 Presenta a porcentaxe da batería, o estado da carga, o tempo
@@ -40,10 +40,10 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   podería haber retrasos ao obter información de uso do disco.
 * Este complemento require Windows 7 Service Pack 1 ou posterior.
 
-## Version 19.11
+## Versión 19.11
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+* Mellorada a detección de compilacións Windows Insider Preview,
+  especialmente para 20H1 e posteriores.
 
 ## Versión 19.07
 
@@ -169,7 +169,7 @@ ano.mes.revisión.
 
 ## Cambios para 2.0 ##
 
-* Engadido o soporte para traduccións e comentarios das traduccións.
+* engadido o soporte para traduccións e comentarios das traduccións.
 
 ## Cambios para 1.0 ##
 
