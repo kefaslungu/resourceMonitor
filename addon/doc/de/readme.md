@@ -4,7 +4,7 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA-Kompatibilität: 2017.4 bis 2019.2
+* NVDA compatibility: 2017.4 to 2019.3
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
