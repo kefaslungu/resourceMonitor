@@ -4,7 +4,8 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA compatibility: 2017.4 to 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -43,6 +44,10 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
   Kopieren großer Dateien stattfinden.
 * Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
   erforderlich.
+
+## Version 20.01
+
+* NVDA 2019.3 or later is required due to extensive use of Python 3.
 
 ## Version 19.11
 
@@ -190,3 +195,5 @@ angezeigt.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

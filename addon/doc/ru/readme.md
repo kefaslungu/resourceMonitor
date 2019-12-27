@@ -3,7 +3,8 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Загрузить [стабильную версию][1]
-* NVDA compatibility: 2017.4 to 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Этот плагин предоставляет информацию о загрузке процессора, используемой
 памяти и  других используемых ресурсах.
@@ -40,6 +41,10 @@ keys via input gestures dialog.
 * Если есть тяжелые дисковые операции, такие как копирование больших файлов,
   возникают задержки при получении информации об использовании диска.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.01
+
+* NVDA 2019.3 or later is required due to extensive use of Python 3.
 
 ## Version 19.11
 
@@ -178,3 +183,5 @@ Important: Version 17.09.x is the last version to support Windows XP.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

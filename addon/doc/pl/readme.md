@@ -3,7 +3,8 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* NVDA compatibility: 2017.4 to 2019.3
+* Zgodność z wersjami NVDA: 2019.3 i nowszymi
+* Pobierz [Starszą wersje][2] zgodną z NVDA 2019.2.1 lub nowszymi
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -40,6 +41,11 @@ następujące kwestie:
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
+
+## Wersja 20.01
+
+* Wymagana jest nowsza wersja NVDA 2019.3, z powodu dużego używania składni
+  języka python 3
 
 ## Wersja19.11
 
@@ -179,3 +185,5 @@ rok.miesiąc.rewizja.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

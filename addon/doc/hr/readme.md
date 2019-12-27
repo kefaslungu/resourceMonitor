@@ -3,7 +3,8 @@
 * Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA compatibility: 2017.4 to 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
@@ -41,10 +42,14 @@ informacije o sustavu Windows. Također upamtite sljedeće:
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
 
-## Version 19.11
+## Version 20.01
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+* NVDA 2019.3 or later is required due to extensive use of Python 3.
+
+## Verzija 19.11
+
+* Poboljšano otkrivanje za Windows Insider Preview gradnje, posebice za 20H1
+  i nadalje.
 
 ## Verzija 19.07
 
@@ -178,3 +183,5 @@ godina.mjesec.izdanje.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

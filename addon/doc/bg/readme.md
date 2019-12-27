@@ -3,7 +3,8 @@
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst и други сътрудници на NVDA
 * Изтегляне на [стабилна версия][1]
-* NVDA compatibility: 2017.4 to 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Тази добавка дава информация за натоварването на централния процесор,
 използваната оперативна памет и друга информация за използваните системни
@@ -44,6 +45,10 @@
   може да има закъснения при получаване на информацията за използването на
   диска.
 * Тази добавка изисква Windows 7 Service Pack 1 или по-нова версия.
+
+## Version 20.01
+
+* NVDA 2019.3 or later is required due to extensive use of Python 3.
 
 ## Версия 19.11
 
@@ -186,3 +191,5 @@
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

@@ -3,7 +3,8 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA兼容版本: 2017.4至2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 该插件可报读CPU负载，内存使用情况和其他资源使用信息。
 
@@ -26,6 +27,10 @@
 * 为逻辑处理器而不是物理内核提供CPU使用率。对于使用超线程技术的处理器来说，这是显而易见的，其中CPU的数量是CPU核心数量的两倍。
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 此插件需要Windows 7 Service Pack 1或更高版本。
+
+## Version 20.01
+
+* NVDA 2019.3 or later is required due to extensive use of Python 3.
 
 ## 版本19.11
 
@@ -142,3 +147,5 @@
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

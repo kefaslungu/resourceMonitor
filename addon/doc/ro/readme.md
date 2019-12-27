@@ -3,7 +3,8 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Descărcați [versiunea stabilă][1]
-* NVDA compatibility: 2017.4 to 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Acest supliment oferă informații despre media procesorului, utilizarea
 memoriei și alte resurse de utilizare a informației.
@@ -41,6 +42,10 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
   fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
   informațiilor de utilizare a discului.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.01
+
+* NVDA 2019.3 or later is required due to extensive use of Python 3.
 
 ## Version 19.11
 
@@ -182,3 +187,5 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019
