@@ -3,8 +3,9 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
+* Yhteensopivuus: NVDA 2019.3 tai uudempi
+* Lataa [vanhempi versio,][2] joka on yhteensopiva NVDA 2019.2.1:n ja sitä
+  vanhempien kanssa
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -41,9 +42,9 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
 
-## Version 20.01
+## Versio 20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* NVDA 2019.3 tai uudempi vaaditaan laajamittaisen Python 3:n käytön takia.
 
 ## Versio 19.11
 

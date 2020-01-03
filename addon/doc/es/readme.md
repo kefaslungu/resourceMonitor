@@ -3,8 +3,9 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
+* Compatibilidad con NVDA: 2019.3 y versiones posteriores
+* Descargar [versión más antigua][2] compatible con NVDA 2019.2.1 y
+  versiones anteriores
 
 Este plugin nos da información acerca de la carga de la CPU, de la
 utilización de la memoria y de otra información de uso de recursos.
@@ -42,9 +43,9 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   grandes, podría haber retrasos al obtener información de uso de disco.
 * Este complemento necesita Windows 7 Service Pack 1 o posterior.
 
-## Version 20.01
+## Versión 20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* Se requiere NVDA 2019.3 o posterior debido al uso extenso de Python 3.
 
 ## Versión 19.11
 
