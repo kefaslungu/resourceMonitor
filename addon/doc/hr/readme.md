@@ -3,8 +3,9 @@
 * Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
+* NVDA kompatibilnost: 2019.3 i noviji
+* Preuzmi [Stariju verziju][2] kompatibilnu sa NVDA 2019.2.1 i starijim
+  verzijama
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
@@ -42,9 +43,9 @@ informacije o sustavu Windows. Također upamtite sljedeće:
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
 
-## Version 20.01
+## Verzija 20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* Potrebna je verzija NVDA 2019.3 zbog iskorištavanja mogućnosti Pythona 3.
 
 ## Verzija 19.11
 

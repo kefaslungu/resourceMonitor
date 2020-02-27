@@ -1,10 +1,10 @@
 # Monitor de recursos #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst and other NVDA contributors
+* Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
+* Compatibilidade com NVDA: 2019.3 e posteriores
+* Baixe a [versão mais velha][2], compatível com NVDA 2019.2.1 e anteriores
 
 Este complemento fornece informações sobre carga de CPU, uso de memória e
 outras informações de uso de recursos.
@@ -26,8 +26,8 @@ outras informações de uso de recursos.
   Windows com números do service pack.
 * NVDA+Shift+7 apresenta o tempo desde a inicialização do sistema.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Caso tenha o NVDA 2013.3 ou posterior instalado, pode alterar essas teclas
+de atalho no diálogo Definir Comandos.
 
 ## Notas de uso ##
 
@@ -39,25 +39,25 @@ de informações de sistema para Windows. Note também o seguinte:
   número de CPUs é o dobro do número de núcleos de CPU.
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
-* This add-on requires Windows 7 Service Pack 1 or later.
+* Este complemento requer Windows 7 Service Pack 1 ou posterior.
 
-## Version 20.01
+## Versão 20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* Requer NVDA 2019.3 ou posterior devido ao uso ostensivo de Python 3.
 
-## Version 19.11
+## Versão 19.11
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+* Melhorada detecção de compilações do Windows Insider Preview,
+  especialmente a 20H1 e posteriores.
 
-## Version 19.07
+## Versão 19.07
 
-* Updated psutil dependency to 5.6.3.
-* Internal changes to battery status announcement command.
+* Atualizada dependência psutil para 5.6.3.
+* Alterações internas do comando status da bateria.
 
-## Version 18.12
+## Versão 18.12
 
-* Internal changes to support future NVDA releases.
+* Alterações internas para suportar futuras versões de NVDA.
 
 ## Versão 18.10
 

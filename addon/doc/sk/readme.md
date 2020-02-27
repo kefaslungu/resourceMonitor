@@ -1,12 +1,12 @@
-# Resource Monitor #
+# Monitor prostriedkov #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
-  NVDA contributors
+* Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* NVDA compatibility: 2017.4 to 2019.2
+* Funguje s NVDA od verzie 2019.3
+* Ssiahnuť [Staršiu verziu][2] pre NVDA do 2019.2.1.
 
-This add-on gives information about CPU load, memory usage and other
-resource usage information.
+Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
 # Klávesové skratky #
 
@@ -22,96 +22,111 @@ resource usage information.
   kritickom stave.
 * NVDA+Shift+6 prečíta architektúru procesora (32 alebo 64 bit), verziu
   Windows a Service packu.
-* NVDA+Shift+7 presents the system's uptime.
+* Nvda+shift+7 Oznámi čas behu systému od posledného reštartu
 
-Ak používate verziu NVDA 2013.3 alebo novšiu, môžete si skratky upraviť.
+Ak používate NVDA od verzie 2013.3, môžete si skratky upraviť v dialógu
+klávesové skratky.
 
 ## Všimnite si ##
 
 Tento doplnok nie je náhradou za správcu úloh a iné programy na zisťovanie
-informácii v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
+informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper-Threading where number of CPU's
-  is twice the number of CPU cores.
-* If there is heavy disk activity such as copying large files, there might
-  be delays when obtaining disk usage information.
-* Support for Windows XP from this add-on ended on December 31,
-  2017. Support for Windows Server 2003, Vista and Server 2008 ended on June
-  30, 2018.
+* Využitie procesora je vypočítané pre logické procesory, nie pre fyzické
+  jadrá. Toto je dôležité pri procesoroch, ktoré používajú viacero vláken,
+  kde počet procesorov je dvojnásobný, ako počet jadier.
+* Ak práve kopírujete veľké súbory, zistenie informácie o využití disku môže
+  chvíľu trvať.
+* Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
 
-## Version 18.10
+## Verzia 20.01
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* Keďže doplnok vyžaduje Python 3, Vyžaduje sa NVDA od verzie2019.3
 
-## Version 18.04
+## Verzia 19.11
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+* Vylepšená detekcia verzii Windows insider, hlavne od verzie 20H1.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+## Verzia 19.07
 
-## Version 17.12
+* Aktualizované knižnice psutil na verziu 5.6.3.
+* Interné zmeny oznamovania stavu batérie.
 
-* Added support for 64-bit ARM processors on Windows 10.
+## Verzia 18.12
+
+* Interné zmeny ako príprava na nové verzie NVDA.
+
+## Verzia 18.10
+
+* Kód upravený na Python 3.
+* Aktualizovaná knižnica psutil na verziu 5.4.7.
+* NVDA viac nevypíše chybu, ak sa pokúsite zistiť využitie disku a máte viac
+  ako petabitový disk.
+* Hodnoty pre kapacitu disku a pamäť sú interpretované s presnosťou na dve
+  miesta (nie 4,0 ale 4,00).
+* Zlepšené zisťovanie verzii Windows insider.
+
+## Verzia 18.04
+
+Verzia 18.04.x je posledná, ktorá podporuje systémy staršie ako Windows 7
+Servicepack1.
+
+* Posledná verzia, ktorá podporuje Windows Server 2003, Vista a Server 2008.
+* Vylepšená detekcia verzií Windows 10 vrátane rozlišovania medzi verejnými
+  a testovacími verziami.
+
+## Verzia 17.12
+
+* Pridaná podpora pre 64-bitové ARM procesory v systéme Windows 10.
 
 ## Version 17.09
 
-Important: Version 17.09.x is the last version to support Windows XP.
+Dôležité: Verzia 17.09.x je posledná, ktorá podporuje Windows XP.
 
-* Last version to run on Windows XP.
-* Windows 10 build 16278 and later is recognized as Version 1709. A minor
-  revision for this add-on will be released once Version 1709 stable build
-  is released.
+* Posledná verzia, ktorá funguje so systémom Windows XP.
+* Windows 10 od verzie 16278 je rozpoznaný ako Verzia 1709. Mierne upravená
+  verzia tohto doplnku bude vydaná po vydaní verejnej stabilnej verzie
+  Windowsu 1709.
 
-## Version 17.07.1
+## Verzia 17.07.1
 
-* Reintroduce support for Windows XP (broken since version 17.02).
+* Obnovená podpora pre Windows XP (nebola dostupná od verzie 17.02)
 
-## Version 17.05
+## Verzia 17.05
 
-* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
+* Pridaná možnosť zistiť čas behu  systému od posledného reštartu
+  (nvda+shift+7).
 
-## Version 17.02
+## Verzia 17.02
 
-* Updated psutil dependency to 5.0.1.
-* When checking disk usage, NVDA will no longer present an error dialog on
-  some systems where a removable media is not properly recognized (such as
-  when a card isn't inserted into a card reader).)
+* Aktualizovaná knižnica psutil na verziu 5.0.1.
+* NVDA viac nezobrazí chybu, ak pri kontrole kapacity disku nie je možné
+  načítať všetky externé disky (napríklad pamäťovú kartu, ktorá aktuálne nie
+  je vložená).
 
-## Version 16.08
+## Verzia 16.08
 
-Starting with version 16.08, add-on releases will be shown as
-year.month.revision.
+Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 
-* Various revisions of Windows 10 are now properly recognized (such as 1607
-  for build 14393).
-* Windows 10 build revisions (after installing cumulative updates) are
-  properly recognized (such as 14393.51).
-* If using Insider Preview builds, this fact is recognized.
+* Doplnok dokáže rozpoznať rôzne verzie Windows 10 (napríklad 1607 pre
+  zostavu 14393).
+* Správne sú rozpoznané zostavy Windows 10 po inštalácii kumulatívnych
+  aktualizácii (napríklad 14393.51).
+* Doplnok upozorňuje, ak používate vývojové verzie Windows (program
+  Insider).
 
-## Changes for 4.5 ##
+## Zmeny vo verzii 4.5 ##
 
-* Add-on repository has moved to GitHub (can be found at
-  https://github.com/josephsl/resourcemonitor).
-* Windows Server 2016 is properly recognized.
+* Doplnok presunutý na GitHub (https://github.com/josephsl/resourcemonitor).
+* Správne je rozpoznávaný Windows server 2016.
 
-## Changes for 4.0 ##
+## Zmeny vo verzii 4.0 ##
 
-* Updated psutil dependency to 2.2.1.
-* Vastly improved performance when obtaining information on CPU load.
-* Added support for recognition of Windows 10.
-* In Windows 10, the build number of Windows will also be announced.
-* You can use Add-ons Manager to access add-on help.
+* Aktualizovaná knižnica psutil na verziu 2.2.1.
+* Upravené zisťovanie zaťaženia procesora.
+* Pridaná podpora pre rozpoznávanie Windows 10.
+* V systéme Windows 10 je oznamované aj číslo zostavi.
+* Pomocníka k doplnku nájdete v správcovi doplnkov.
 
 ## Zmeny vo verzii 3.1 ##
 
@@ -121,7 +136,7 @@ year.month.revision.
 ## Zmeny vo verzii 3.0 ##
 
 * Aktualizovaná knižnica psutil na verziu 1.2.1.
-* Oznamovanie architektúri procesora (32 aebo 64 bit), verzie windows a
+* Oznamovanie architektúri procesora (32 alebo 64 bit), verzie windows a
   Service Packu ((NVDA+Shift+6).
 * Možnosť zmeniť klávesové skratky (NVDA 2013 a vyššie).
 * Možnosť kopírovať údaje do schránky dvojitým stlačením danej skratky.
@@ -159,3 +174,5 @@ year.month.revision.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
+
+[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019
