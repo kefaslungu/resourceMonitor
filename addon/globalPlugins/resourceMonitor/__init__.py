@@ -346,16 +346,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		batteryInfo = _batteryInfo()
 		if batteryInfo is not None: info.append(batteryInfo)
 		ui.message(" ".join(info))
-	# Translators: Input help mode message about overall system resource info command in Resource Monitor
-	script_announceResourceSummary.__doc__=_("Presents used ram, average processor load, and battery info if available.")
-
-	__gestures={
-		"KB:NVDA+shift+e":"announceResourceSummary",
-		"KB:NVDA+shift+1":"announceProcessorInfo",
-		"KB:NVDA+shift+2":"announceRamInfo",
-		"KB:NVDA+shift+3":"announceDriveInfo",
-		"KB:NVDA+shift+4":"announceBatteryInfo",
-		"KB:NVDA+shift+5":"announceRamInfo",
-		"KB:NVDA+shift+6":"announceWinVer",
-		"kb:nvda+shift+7": "announceUptime",
-	}
