@@ -195,15 +195,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented when a resource summary is copied to clipboard.
 	RMCopyMessage = _("Resource summary copied to clipboard")
 
+	@scriptHandler.script(
+		# Translators: Input help message about battery info command in Resource Monitor.
+		description=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."),
+		gesture="KB:NVDA+shift+4"
+	)
 	def script_announceBatteryInfo(self, gesture):
 		info = _batteryInfo(verbose=True)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
 			if api.copyToClip(info): ui.message(self.RMCopyMessage)
-	# Translators: Input help message about battery info command in Resource Monitor.
-	script_announceBatteryInfo.__doc__=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.")
 
+	@scriptHandler.script(
+		# Translators: Input help message about drive info command in Resource Monitor.
+		description=_("Presents the used and total space of the static and removable drives on this computer."),
+		gesture="KB:NVDA+shift+3"
+	)
 	def script_announceDriveInfo(self, gesture):
 		#goes through all registered drives and gives info on each one
 		info = []
@@ -219,9 +227,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(" ".join(info))
 		else:
 			if api.copyToClip(" ".join(info)): ui.message(self.RMCopyMessage)
-	# Translators: Input help message about drive info command in Resource Monitor.
-	script_announceDriveInfo.__doc__=_("Presents the used and total space of the static and removable drives on this computer.")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message about processor info command in Resource Monitor.
+		description=_("Presents the average processor load and the load of each core."),
+		gesture="KB:NVDA+shift+1"
+	)
 	def script_announceProcessorInfo(self, gesture):
 		cores=psutil.cpu_count() #number of cores
 		averageLoad=psutil.cpu_percent()
@@ -237,9 +248,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(info)
 		else:
 			if api.copyToClip(info): ui.message(self.RMCopyMessage)
-	# Translators: Input help mode message about processor info command in Resource Monitor.
-	script_announceProcessorInfo.__doc__=_("Presents the average processor load and the load of each core.")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message about memory info command in Resource Monitor.
+		description=_("Presents the used and total space for both physical and virtual ram."),
+		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"]
+	)
 	def script_announceRamInfo(self, gesture):
 		ram=psutil.virtual_memory()
 		# Translators: Shows RAM (physical memory) usage.
@@ -251,8 +265,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(info)
 		else:
 			if api.copyToClip(info): ui.message(self.RMCopyMessage)
-	# Translators: Input help mode message about memory info command in Resource Monitor.
-	script_announceRamInfo.__doc__=_("Presents the used and total space for both physical and virtual ram.")
 
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
@@ -282,14 +294,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if (winMajor, winMinor) == (10, 0): info = info + " build {build}".format(build = buildRevision)
 		return info
 
+	@scriptHandler.script(
+		# Translators: Input help mode message about Windows version command in Resource Monitor.
+		description=_("Announces the version of Windows you are using."),
+		gesture="KB:NVDA+shift+6"
+	)
 	def script_announceWinVer(self, gesture):
 		info = self.getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
 			if api.copyToClip(info): ui.message(self.RMCopyMessage)
-	# Translators: Input help mode message about Windows version command in Resource Monitor.
-	script_announceWinVer.__doc__=_("Announces the version of Windows you are using.")
 
 	def getUptime(self):
 		bootTimestamp = psutil.boot_time()
@@ -302,6 +317,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: The system's uptime
 		return _("{days} days, {hoursMinutesSeconds}").format(days=uptime.days, hoursMinutesSeconds=hoursMinutesSeconds)
 
+	@scriptHandler.script(
+		# Translators: Input help mode message about obtaining the system's uptime
+		description=_("Announces the system's uptime."),
+		gesture="kb:NVDA+shift+7"
+	)
 	def script_announceUptime(self, gesture):
 		try:
 			uptime = self.getUptime()
@@ -313,9 +333,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except:
 			# Translators: Obtaining uptime failed
 			ui.message(_("Failed to get the system's uptime."))
-	# Translators: Input help mode message about obtaining the system's uptime
-	script_announceUptime.__doc__=_("Announces the system's uptime.")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message about overall system resource info command in Resource Monitor
+		description=_("Presents used ram, average processor load, and battery info if available."),
+		gesture="KB:NVDA+shift+e"
+	)
 	def script_announceResourceSummary(self, gesture):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
