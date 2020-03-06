@@ -3,8 +3,7 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
+* NVDA兼容版本: 2019.3以上
 
 该插件可报读CPU负载，内存使用情况和其他资源使用信息。
 
@@ -18,7 +17,7 @@
 * NVDA+Shift+6 报告CPU架构32/64位和Windows版本和版本号。
 * NVDA+Shift+7 报告系统的正常运行时间。
 
-如果安装了NvDA 2013.3或更高版本，则可以通过输入手势对话框更改这些快捷键。
+如果安装了NVDA 2013.3或更高版本，则可以通过输入手势对话框更改这些快捷键。
 
 ## 使用说明 ##
 
@@ -28,9 +27,9 @@
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 此插件需要Windows 7 Service Pack 1或更高版本。
 
-## Version 20.01
+## 版本20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* 由于广泛使用Python 3，因此需要NVDA 2019.3或更高版本。
 
 ## 版本19.11
 
@@ -147,5 +146,3 @@
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

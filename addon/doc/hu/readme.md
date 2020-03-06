@@ -4,7 +4,6 @@
   Probst and other NVDA contributors
 * Letöltés [Stabil verzió][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 This add-on gives information about CPU load, memory usage and other
 resource usage information.
@@ -26,7 +25,7 @@ resource usage information.
   szervizcsomagját, ha elérhető.
 * NVDA+Shift+7 presents the system's uptime.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
+If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Használati megjegyzések ##
@@ -181,5 +180,3 @@ year.month.revision.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

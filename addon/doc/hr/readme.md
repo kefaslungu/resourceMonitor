@@ -4,8 +4,6 @@
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
 * NVDA kompatibilnost: 2019.3 i noviji
-* Preuzmi [Stariju verziju][2] kompatibilnu sa NVDA 2019.2.1 i starijim
-  verzijama
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
@@ -27,8 +25,8 @@ i druge informacije o korištenju resursa.
   i broj service paketa.
 * NVDA+Shift+7: Prikazuje trajanje pokretanja sustava.
 
-Ako imate instaliranu NVDA verziju 2013.3 ili noviju, možete izmijeniti ove
-tipkovničke prečace putem dijaloškog okvira za ulazne geste.
+If you have NVDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Upute za primjenu ##
 
@@ -184,5 +182,3 @@ godina.mjesec.izdanje.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

@@ -4,8 +4,6 @@
   Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
 * Compatibilidad con NVDA: 2019.3 y versiones posteriores
-* Descargar [versión más antigua][2] compatible con NVDA 2019.2.1 y
-  versiones anteriores
 
 Este plugin nos da información acerca de la carga de la CPU, de la
 utilización de la memoria y de otra información de uso de recursos.
@@ -27,8 +25,8 @@ utilización de la memoria y de otra información de uso de recursos.
   Windows y el número del Service Pack.
 * NVDA+Shift+7 presenta el tiempo de actividad del sistema.
 
-Si tienes NVDA 2013.3 o una versión posterior, puedes cambiar estas teclas
-de acceso directo desde el diálogo Gestos de entrada.
+Si tienes NVDA 2013.3 o una versión posterior instalada, puedes cambiar
+estas teclas de acceso directo desde el diálogo Gestos de entrada.
 
 ## Notas de uso ##
 
@@ -188,5 +186,3 @@ como año.mes.revisión.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

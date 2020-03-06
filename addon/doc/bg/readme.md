@@ -4,7 +4,6 @@
   Probst и други сътрудници на NVDA
 * Изтегляне на [стабилна версия][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Тази добавка дава информация за натоварването на централния процесор,
 използваната оперативна памет и друга информация за използваните системни
@@ -29,8 +28,8 @@
   такъв.
 * NVDA+Shift+7 съобщава работното време на системата.
 
-Ако използвате NVDA версия 2013.3 или по-нова, може да промените тези
-клавишни команди от диалога за настройка на жестовете на въвеждане.
+If you have NVDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Бележки за ползвателите ##
 
@@ -191,5 +190,3 @@
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

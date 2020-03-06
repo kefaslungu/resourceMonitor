@@ -4,7 +4,6 @@
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
 * Funguje s NVDA od verzie 2019.3
-* Ssiahnuť [Staršiu verziu][2] pre NVDA do 2019.2.1.
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
@@ -174,5 +173,3 @@ Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

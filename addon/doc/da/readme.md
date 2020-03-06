@@ -4,7 +4,6 @@
   Probst and other NVDA contributors
 * Download [stable version][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
@@ -26,7 +25,7 @@ hukommelse og andre oplysninger om forbrug af ressourcer.
   service pack numre.
 * NVDA+Skift+7: Oplyser systemets oppetid.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
+If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Brugsanvisninger ##
@@ -184,5 +183,3 @@ som år.måned.revision.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

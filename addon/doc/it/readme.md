@@ -4,7 +4,6 @@
   Probst and other NVDA contributors
 * Scarica la [versione stabile][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.
@@ -26,7 +25,7 @@ sistema, quali carico della CPU, utilizzo della memoria e molto altro.
   Windows e service pack. 
 * NVDA+Shift+7 riporta il tempo di attività del sistema.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
+If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Note d'utilizzo ##
@@ -182,5 +181,3 @@ year.month.revision.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

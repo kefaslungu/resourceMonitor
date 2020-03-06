@@ -4,8 +4,6 @@
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
 * Yhteensopivuus: NVDA 2019.3 tai uudempi
-* Lataa [vanhempi versio,][2] joka on yhteensopiva NVDA 2019.2.1:n ja sitä
-  vanhempien kanssa
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -27,8 +25,8 @@ resurssien käytöstä.
   sekä Windowsin ja Service Packin version.
 * NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
 
-Voit muuttaa näitä pikanäppäimiä, mikäli käytössäsi on NVDA 2013.3 tai
-uudempi.
+Mikäli käytössäsi on NVDA 2013.3 tai uudempi, voit muuttaa näitä
+pikanäppäimiä Syötekomennot-valintaikkunasta.
 
 ## Huomautuksia käytöstä ##
 
@@ -183,5 +181,3 @@ vuosi.kuukausi.tarkistusversio.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

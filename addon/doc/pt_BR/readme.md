@@ -4,7 +4,6 @@
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
 * Compatibilidade com NVDA: 2019.3 e posteriores
-* Baixe a [versão mais velha][2], compatível com NVDA 2019.2.1 e anteriores
 
 Este complemento fornece informações sobre carga de CPU, uso de memória e
 outras informações de uso de recursos.
@@ -26,8 +25,8 @@ outras informações de uso de recursos.
   Windows com números do service pack.
 * NVDA+Shift+7 apresenta o tempo desde a inicialização do sistema.
 
-Caso tenha o NVDA 2013.3 ou posterior instalado, pode alterar essas teclas
-de atalho no diálogo Definir Comandos.
+Caso tenha o NVDA 2013.3 ou posterior instalado, poderá alterar essas teclas
+de atalho através do diálogo definir comandos (gestos de entrada).
 
 ## Notas de uso ##
 
@@ -174,7 +173,7 @@ como ano.mês.revisão.
 
 ## Mudanças na 2.0 ##
 
-* Adicionado suporte a traduções e comentários para tradutores.
+* adicionado suporte a traduções e comentários para tradutores.
 
 ## Mudanças na 1.0 ##
 
@@ -183,5 +182,3 @@ como ano.mês.revisão.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

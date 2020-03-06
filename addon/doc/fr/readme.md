@@ -4,7 +4,6 @@
   Probst and other NVDA contributors
 * Télécharger [version stable][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -28,7 +27,7 @@ ressources.
 * NVDA+Maj+7 Annonce le temps de fonctionnement du système depuis sa mise en
   route.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
+If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Remarques sur l'utilisation ##
@@ -190,5 +189,3 @@ affichées comme année.mois.révision.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

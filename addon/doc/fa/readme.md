@@ -4,7 +4,6 @@
   Probst and other NVDA contributors
 * دانلود [نسخه‌ی پایدار][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 این افزونه، اطلاعاتی درباره‌ی عملکرد CPU، میزان استفاده از حافظه، و دیگر
 اطلاعات مربوط به استفاده از منابع سیستم را در اختیارتان میگذارد.
@@ -25,7 +24,7 @@
   بسته‌ی خدماتی (service pack) را اعلام میکند.
 * NVDA+Shift+7، زمان بالا بودن سیستم را اعلام میکند.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
+If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## تذکراتی در مورد استفاده از افزونه ##
@@ -182,5 +181,3 @@ keys via input gestures dialog.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

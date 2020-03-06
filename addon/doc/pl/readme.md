@@ -4,7 +4,6 @@
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
 * Zgodność z wersjami NVDA: 2019.3 i nowszymi
-* Pobierz [Starszą wersje][2] zgodną z NVDA 2019.2.1 lub nowszymi
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -26,8 +25,8 @@ także wykorzystaniu innych zasobów.
   bity procesora (32 lub 64 bity).
 * NVDA+Shift+7 Pokazuje czas pracy systemu.
 
-jeśli masz NVDA 2013.3 lub nowszą, możesz zmienić te skróty klawiaturowe
-poprzez okno dialogowe zdarzeń wejściowych.
+If you have NVDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Uwagi o użytkowaniu ##
 
@@ -185,5 +184,3 @@ rok.miesiąc.rewizja.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

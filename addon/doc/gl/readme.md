@@ -4,8 +4,6 @@
   colaboradores do NVDA
 * Descargar [versión estable][1]
 * Compatibilidade con NVDA: 2019.3 en diante
-* Descargar [versión máis antiga][2] compatible con NVDA 2019.2.1 e
-  anteriores
 
 Este plugin danos información acerca da carga da CPU, do uso da memoria e
 outras informacións de uso dos recursos.
@@ -184,5 +182,3 @@ ano.mes.revisión.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019

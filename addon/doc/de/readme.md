@@ -5,7 +5,6 @@
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][2] compatible with NVDA 2019.2.1 and earlier
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -28,7 +27,8 @@ verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
   Prozessor-Architektur sowie eventuell installierte Service Packs aus.
 * NVDA+Umschalt+7 gibt die Betriebszeit des Systems aus.
 
-Ab NVDA 2013.3 können Sie die Tastenkürzel im Dialog Eingabenändern.
+If you have NVDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Nutzungshinweise ##
 
@@ -195,5 +195,3 @@ angezeigt.
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rm-2019
