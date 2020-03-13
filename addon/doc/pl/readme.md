@@ -25,8 +25,8 @@ także wykorzystaniu innych zasobów.
   bity procesora (32 lub 64 bity).
 * NVDA+Shift+7 Pokazuje czas pracy systemu.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+jeśli masz NVDA 2013.3 lub nowszą, możesz zmienić te skróty klawiaturowe
+poprzez okno dialogowe zdarzeń wejściowych.
 
 ## Uwagi o użytkowaniu ##
 

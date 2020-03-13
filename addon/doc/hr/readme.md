@@ -10,28 +10,28 @@ i druge informacije o korištenju resursa.
 
 # Prečaci #
 
-* NVDA+Shift+E Prikazuje korištenje ram memorije, prosječno opterećenje
+* NVDA+šift+E Prikazuje korištenje ram memorije, prosječno opterećenje
   procesora i informacije o stanju baterije, ako su dostupne.
-* NVDA+Shift+1 Prikazuje prosječnu opterećenost procesora i ako postoje
+* NVDA+šift+1 Prikazuje prosječnu opterećenost procesora i ako postoje
   višejezgreni procesori, prikazuje opterećenje svake jezgre.
-* NVDA+shift+2/5 Prikazuje iskorišten i ukupni kapacitet fizičke I virtualne
+* NVDA+šift+2/5 Prikazuje iskorišten i ukupni kapacitet fizičke I virtualne
   ram memorije.
-* NVDA+Shift+3 Prikazuje iskorišten i ukupni prostor na statičnim i
+* NVDA+šift+3 Prikazuje iskorišten i ukupni prostor na statičnim i
   prenosivim diskovima.
-* NVDA+Shift+4 Prikazuje postotak baterije, status punjenja, preostalo
+* NVDA+šift+4 Prikazuje postotak baterije, status punjenja, preostalo
   vrijeme (ako se ne puni), te upozorenje, ako je baterija slaba ili skoro
   prazna.
-* NVDA+Shift+6 Prikazuje strukturu procesora (32-64-bitni), verziju Windowsa
+* NVDA+šift+6 Prikazuje strukturu procesora (32-64-bitni), verziju Windowsa
   i broj service paketa.
-* NVDA+Shift+7: Prikazuje trajanje pokretanja sustava.
+* NVDA+šift+7: Prikazuje trajanje pokretanja sustava.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Ako je instalirana NVDA verzija 2013.3 ili novija, tipkovničke prečace je
+moguće mijenjati putem dijaloškog okvira za ulazne geste.
 
 ## Upute za primjenu ##
 
-Ovaj dodatak ne zamjenjuje upravitelj zadacima i druge programe za
-informacije o sustavu Windows. Također upamtite sljedeće:
+Ovaj dodatak ne zamjenjuje upravljača zadataka i druge programe za
+informacije o sustavu Windows. Važno je znati i sljedeće:
 
 * Informacije o korištenju procesora dane su za logičke procesore, ne za
   fizičke jezgre. To se može primijetiti kod procesora koji koriste
@@ -133,7 +133,7 @@ godina.mjesec.izdanje.
   procesora.
 * Dodana podrška za prepoznavanje Windowsa 10.
 * U Windowsima 10, broj verzije Windowsa također će biti izgovoren.
-* Možete koristiti Upravljač za dodatke za pristup pomoći.
+* Moguće je koristiti Upravljač za dodatke za pristup pomoći.
 
 ## Promjene u verziji 3.1 ##
 
