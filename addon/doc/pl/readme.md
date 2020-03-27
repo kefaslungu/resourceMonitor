@@ -3,7 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* Zgodność z wersjami NVDA: 2019.3 i nowszymi
+* NVDA compatibility: 2019.3 to 2020.1
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -40,6 +40,10 @@ następujące kwestie:
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## Wersja 20.01
 

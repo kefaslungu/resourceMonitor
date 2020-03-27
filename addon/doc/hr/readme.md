@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA kompatibilnost: 2019.3 i noviji
+* NVDA kompatibilnost: 2019.3 do 2020.1
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
@@ -40,6 +40,10 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
+
+## Verzija 20.04
+
+* Ažurirana je psutil zavisnost na 5.7.0.
 
 ## Verzija 20.01
 

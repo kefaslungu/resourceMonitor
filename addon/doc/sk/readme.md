@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* Funguje s NVDA od verzie 2019.3
+* Funguje s NVDA 2019.3 a 2020.1
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
@@ -37,6 +37,10 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 * Ak práve kopírujete veľké súbory, zistenie informácie o využití disku môže
   chvíľu trvať.
 * Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
+
+## Verzia 20.04
+
+* Aktualizované knižnice psutil na verziu 5.7.0.
 
 ## Verzia 20.01
 

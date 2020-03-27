@@ -3,7 +3,7 @@
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst и други сътрудници на NVDA
 * Изтегляне на [стабилна версия][1]
-* NVDA compatibility: 2019.3 and beyond
+* Съвместимост с NVDA: от 2019.3 до 2020.1
 
 Тази добавка дава информация за натоварването на централния процесор,
 използваната оперативна памет и друга информация за използваните системни
@@ -28,8 +28,8 @@
   такъв.
 * NVDA+Shift+7 съобщава работното време на системата.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Ако използвате NVDA версия 2013.3 или по-нова, може да промените тези
+клавишни команди от диалога за настройка на жестовете на въвеждане.
 
 ## Бележки за ползвателите ##
 
@@ -45,9 +45,14 @@ keys via input gestures dialog.
   диска.
 * Тази добавка изисква Windows 7 Service Pack 1 или по-нова версия.
 
-## Version 20.01
+## Версия 20.04
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* Външната библиотека psutil е обновена до версия 5.7.0.
+
+## Версия 20.01
+
+* Изисква се NVDA 2019.3 или по-нова версия, поради широко използване на
+  Python 3.
 
 ## Версия 19.11
 

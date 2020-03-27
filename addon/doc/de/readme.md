@@ -4,7 +4,7 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA compatibility: 2019.3 to 2020.1
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -27,8 +27,7 @@ verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
   Prozessor-Architektur sowie eventuell installierte Service Packs aus.
 * NVDA+Umschalt+7 gibt die Betriebszeit des Systems aus.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Ab NVDA 2013.3 können Sie die Tastenkürzel im Dialog Eingaben ändern.
 
 ## Nutzungshinweise ##
 
@@ -45,9 +44,14 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
   erforderlich.
 
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
+
 ## Version 20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* NVDA 2019.3 oder höher ist aufgrund des umfangreichen Einsatzes von Python
+  3 erforderlich.
 
 ## Version 19.11
 

@@ -3,7 +3,7 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA兼容版本: 2019.3以上
+* NVDA compatibility: 2019.3 to 2020.1
 
 该插件可报读CPU负载，内存使用情况和其他资源使用信息。
 
@@ -26,6 +26,10 @@
 * 为逻辑处理器而不是物理内核提供CPU使用率。对于使用超线程技术的处理器来说，这是显而易见的，其中CPU的数量是CPU核心数量的两倍。
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 此插件需要Windows 7 Service Pack 1或更高版本。
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## 版本20.01
 

@@ -3,7 +3,7 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* Yhteensopivuus: NVDA 2019.3 tai uudempi
+* NVDA compatibility: 2019.3 to 2020.1
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -39,6 +39,10 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## Versio 20.01
 

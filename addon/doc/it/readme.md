@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Scarica la [versione stabile][1]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA compatibility: 2019.3 to 2020.1
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.
@@ -41,6 +41,10 @@ presente che:
   file di grandi dimensioni, ci potrebbero essere dei ritardi nell'ottenere
   informazioni sull'utilizzo del disco.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## Version 20.01
 

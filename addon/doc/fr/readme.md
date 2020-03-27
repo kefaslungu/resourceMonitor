@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Télécharger [version stable][1]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA compatibility: 2019.3 to 2020.1
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -43,6 +43,10 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## Version 20.01
 

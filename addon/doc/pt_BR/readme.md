@@ -1,9 +1,9 @@
-# Monitor de recursos #
+# Monitor de Recursos ()Resource Monitor #
 
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* Compatibilidade com NVDA: 2019.3 e posteriores
+* Compatibilidade com NVDA: 2019.3 a 2020.1
 
 Este complemento fornece informações sobre carga de CPU, uso de memória e
 outras informações de uso de recursos.
@@ -39,6 +39,10 @@ de informações de sistema para Windows. Note também o seguinte:
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
+
+## Versão 20.04
+
+* Atualizada dependência psutil para 5.7.0.
 
 ## Versão 20.01
 

@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * دانلود [نسخه‌ی پایدار][1]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA compatibility: 2019.3 to 2020.1
 
 این افزونه، اطلاعاتی درباره‌ی عملکرد CPU، میزان استفاده از حافظه، و دیگر
 اطلاعات مربوط به استفاده از منابع سیستم را در اختیارتان میگذارد.
@@ -38,6 +38,10 @@ keys via input gestures dialog.
 * چنانچه دیسک‌ها درگیر فعالیت سنگینی مانند کپی فایل‌های بزرگ باشند، ممکن است
   هنگام به‌دست‌آوردن اطلاعات میزان استفاده از دیسک، تأخیرهایی به وجود بیاید.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## Version 20.01
 

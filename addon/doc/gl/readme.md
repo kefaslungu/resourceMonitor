@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e outros
   colaboradores do NVDA
 * Descargar [versión estable][1]
-* Compatibilidade con NVDA: 2019.3 en diante
+* NVDA compatibility: 2019.3 to 2020.1
 
 Este plugin danos información acerca da carga da CPU, do uso da memoria e
 outras informacións de uso dos recursos.
@@ -39,6 +39,10 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 * Se hai unha actividade pesada de disco coma o copiado de ficheiros longos,
   podería haber retrasos ao obter información de uso do disco.
 * Este complemento require Windows 7 Service Pack 1 ou posterior.
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## Versión 20.01
 

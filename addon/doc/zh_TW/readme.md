@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * 下載 [穩定版][1]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA compatibility: 2019.3 to 2020.1
 
 這個附加元件提供有關 CPU 負載，記憶體使用情形，及其他資源的使用訊息。
 
@@ -27,6 +27,10 @@ keys via input gestures dialog.
 * CPU 使用率是針對邏輯處理器而非實體核心。對於使用超執行緒的處理器來說，這是顯而易見的，其中 CPU 的數量是 CPU 核心數量的兩倍。
 * 如果正在進行繁忙的磁碟活動（例如復制大型檔案），則獲取磁碟使用訊息時可能出現延遲。
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.04
+
+* Updated psutil dependency to 5.7.0.
 
 ## Version 20.01
 
