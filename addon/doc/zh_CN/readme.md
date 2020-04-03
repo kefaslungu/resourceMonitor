@@ -3,7 +3,7 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA compatibility: 2019.3 to 2020.1
+* NVDA兼容版本: 2019.3至2020.1
 
 该插件可报读CPU负载，内存使用情况和其他资源使用信息。
 
@@ -27,9 +27,9 @@
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 此插件需要Windows 7 Service Pack 1或更高版本。
 
-## Version 20.04
+## 版本20.04
 
-* Updated psutil dependency to 5.7.0.
+* 将psutil依赖关系更新为5.7.0。
 
 ## 版本20.01
 
