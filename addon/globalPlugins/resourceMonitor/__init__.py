@@ -240,7 +240,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+1"
 	)
 	def script_announceProcessorInfo(self, gesture):
-		cores=psutil.cpu_count() #number of cores
 		averageLoad=psutil.cpu_percent()
 		#lists load for each core
 		perCpuLoad=psutil.cpu_percent(percpu=True)
