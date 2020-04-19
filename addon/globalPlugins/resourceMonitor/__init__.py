@@ -148,6 +148,7 @@ def _batteryInfo(verbose=False):
 					info+=_(" Warning: critically low battery.")
 	return info
 
+
 # Record Windows Server 10 builds to release ID's.
 # Client versions will be checked via Registry.
 server10LTSBuilds={
