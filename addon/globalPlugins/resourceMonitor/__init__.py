@@ -293,10 +293,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Presented under 32-bit Windows.
 		else: x64 = _("32-bit")
 		# Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-		if not sp: info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion = winverName, cpuBit = x64)
+		if not sp: info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion=winverName, cpuBit=x64)
 		# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-		else: info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion = winverName, servicePackLevel = sp, cpuBit = x64)
-		if (winMajor, winMinor) == (10, 0): info = info + " build {build}".format(build = buildRevision)
+		else: info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion=winverName, servicePackLevel=sp, cpuBit=x64)
+		if (winMajor, winMinor) == (10, 0): info = info + " build {build}".format(build=buildRevision)
 		return info
 
 	@scriptHandler.script(
