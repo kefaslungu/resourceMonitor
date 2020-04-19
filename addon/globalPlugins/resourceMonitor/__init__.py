@@ -155,8 +155,8 @@ def _batteryInfo(verbose=False):
 # Record Windows Server 10 builds to release ID's.
 # Client versions will be checked via Registry.
 server10LTSBuilds = {
-	14393:"Windows Server 2016",
-	17763:"Windows Server 2019",
+	14393: "Windows Server 2016",
+	17763: "Windows Server 2019",
 }
 
 
