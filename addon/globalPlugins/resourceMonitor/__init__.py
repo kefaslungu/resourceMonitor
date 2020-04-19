@@ -126,7 +126,7 @@ def _batteryInfo(verbose=False):
 			else:
 				# Prepare hours:minutes.
 				timeLeft = ""
-				hours, rest = divmod(secsleft,3600)
+				hours, rest = divmod(secsleft, 3600)
 				minutes, seconds = divmod(rest, 60)
 				if hours > 0:
 					timeLeft += str(hours)
