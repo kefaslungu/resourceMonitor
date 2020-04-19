@@ -165,7 +165,7 @@ def _win10RID(buildNum, isClient):
 	# The former is the case for ReleaseID and the latter for Insider Preview detection.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
 	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
-	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64","ARM64"):
+	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"):
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
 	else:
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability")
@@ -274,7 +274,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
 		# Prepare to receive various components for Windows info output.
-		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64","ARM64"), ""
+		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"), ""
 		# Determine Windows version.
 		if winMajor == 6: # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 			if winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2" # Windows 7
