@@ -99,7 +99,7 @@ def size(bytes, system=traditional):
 def tryTrunk(n):
 	#this method basically removes decimal zeros, so 5.0 will just be 5.
 	#If the number ends in anything other than a 0, nothing happens (if the trunkated number is not equal to the decimal).
-	if n==int(n): return int(n)
+	if n == int(n): return int(n)
 	return n
 
 
@@ -112,49 +112,49 @@ def _batteryInfo(verbose=False):
 	battery = psutil.sensors_battery()
 	if battery is None:
 		# Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
-		info=_("This computer does not have a battery connected.") if verbose else None
+		info = _("This computer does not have a battery connected.") if verbose else None
 	else:
 		percent, secsleft, power_plugged = battery
 		if power_plugged:
 			# Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
-			info=_("{percent}%, battery charging.").format(percent=tryTrunk(percent))
+			info = _("{percent}%, battery charging.").format(percent=tryTrunk(percent))
 		else:
 			# Announce time unknown status.
 			if secsleft == 0xffffffff:
 				# Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-				info=_("{percent}% battery remaining, battery time unknown.").format(percent=tryTrunk(percent))
+				info = _("{percent}% battery remaining, battery time unknown.").format(percent=tryTrunk(percent))
 			else:
 				# Prepare hours:minutes.
-				timeLeft=""
+				timeLeft = ""
 				hours, rest = divmod(secsleft,3600)
 				minutes, seconds = divmod(rest, 60)
-				if hours>0:
-					timeLeft+=str(hours)
+				if hours > 0:
+					timeLeft += str(hours)
 					# Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-					if hours==1: timeLeft+=_(" hour, ")
+					if hours == 1: timeLeft += _(" hour, ")
 					# Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-					else: timeLeft+=_(" hours, ")
-				timeLeft+=str(minutes)
+					else: timeLeft += _(" hours, ")
+				timeLeft += str(minutes)
 				# Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-				if minutes==1: timeLeft+=_(" minute")
+				if minutes == 1: timeLeft += _(" minute")
 				# Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-				else: timeLeft+=_(" minutes")
+				else: timeLeft += _(" minutes")
 				# Because psutil.sensors_battery function does not present battery flags by default, manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
 				# Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-				info=_("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=timeLeft)
+				info = _("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=timeLeft)
 				if batteryFlags & 2:
 					# Translators: Message reported when battery level is low.
-					info+=_(" Warning: low battery.")
+					info += _(" Warning: low battery.")
 				elif batteryFlags & 4:
 					# Translators: Message reported when battery level is critical.
-					info+=_(" Warning: critically low battery.")
+					info += _(" Warning: critically low battery.")
 	return info
 
 
 # Record Windows Server 10 builds to release ID's.
 # Client versions will be checked via Registry.
-server10LTSBuilds={
+server10LTSBuilds = {
 	14393:"Windows Server 2016",
 	17763:"Windows Server 2019",
 }
@@ -226,7 +226,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# If and only if the Windows says disk is ready in order to avoid a core stack freeze when no disk is inserted into a slot.
 			# This can be checked by looking for a file system.
 			if drive.fstype:
-				driveInfo=psutil.disk_usage(drive[0])
+				driveInfo = psutil.disk_usage(drive[0])
 				# Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 				info.append(_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(driveName=drive[0], driveType=drive[2], usedSpace=size(driveInfo[1], alternative), totalSpace=size(driveInfo[0], alternative), percent=tryTrunk(driveInfo[3])))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -240,15 +240,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+1"
 	)
 	def script_announceProcessorInfo(self, gesture):
-		averageLoad=psutil.cpu_percent()
+		averageLoad = psutil.cpu_percent()
 		#lists load for each core
-		perCpuLoad=psutil.cpu_percent(percpu=True)
+		perCpuLoad = psutil.cpu_percent(percpu=True)
 		coreLoad = []
 		for i in range(len(perCpuLoad)):
 			# Translators: Shows average load of CPU cores (example: core 1, 50%).
 			coreLoad.append(_("Core {coreNumber}: {corePercent}%").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i])))
 		# Translators: Shows average load of the processor and the load for each core.
-		info=_("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad))
+		info = _("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -260,12 +260,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"]
 	)
 	def script_announceRamInfo(self, gesture):
-		ram=psutil.virtual_memory()
+		ram = psutil.virtual_memory()
 		# Translators: Shows RAM (physical memory) usage.
-		info=_("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=size(ram[3], alternative), physicalTotal=size(ram[0], alternative), physicalPercent=tryTrunk(ram[2]))
-		virtualRam=psutil.swap_memory()
+		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=size(ram[3], alternative), physicalTotal=size(ram[0], alternative), physicalPercent=tryTrunk(ram[2]))
+		virtualRam = psutil.swap_memory()
 		# Translators: Shows virtual memory usage.
-		info+=_("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=size(virtualRam[1], alternative), virtualTotal=size(virtualRam[0], alternative), virtualPercent=tryTrunk(virtualRam[3]))
+		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=size(virtualRam[1], alternative), virtualTotal=size(virtualRam[0], alternative), virtualPercent=tryTrunk(virtualRam[3]))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
