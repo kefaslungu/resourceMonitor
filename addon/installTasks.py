@@ -11,6 +11,7 @@ import wx
 import addonHandler
 addonHandler.initTranslation()
 
+
 def onInstall():
 	requiredVer = "Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1"
 	# Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).

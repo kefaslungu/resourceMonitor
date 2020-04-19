@@ -81,6 +81,7 @@ si = [
 	(1000.0**0.0, 'B'),
 	]
 
+
 def size(bytes, system=traditional):
 	for factor, suffix in system:
 		if float(bytes) >= float(factor):
@@ -94,11 +95,13 @@ def size(bytes, system=traditional):
 			suffix = multiple
 	return "{:.2F}{}".format(float(amount), suffix)
 
+
 def tryTrunk(n):
 	#this method basically removes decimal zeros, so 5.0 will just be 5.
 	#If the number ends in anything other than a 0, nothing happens (if the trunkated number is not equal to the decimal).
 	if n==int(n): return int(n)
 	return n
+
 
 # Moved from battery module to the main module in 2019 (code provided by Alex Hall)
 def _batteryInfo(verbose=False):
@@ -156,6 +159,7 @@ server10LTSBuilds={
 	17763:"Windows Server 2019",
 }
 
+
 def _win10RID(buildNum, isClient):
 	# Both CurrentVersion and WindowsSelfHost must be consulted.
 	# The former is the case for ReleaseID and the latter for Insider Preview detection.
@@ -187,6 +191,7 @@ def _win10RID(buildNum, isClient):
 		if buildNum in server10LTSBuilds:
 			return server10LTSBuilds[buildNum]
 		else: return "Windows Server {0}".format(releaseID)
+
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
