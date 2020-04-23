@@ -27,7 +27,7 @@ traditional = [
 	(1024.0**2.0, 'M'),
 	(1024.0**1.0, 'K'),
 	(1024.0**0.0, 'B'),
-	]
+]
 
 # Alternative style (displayed with most PCs): MB, KB, GB, YB, ZB, ...
 alternative = [
@@ -40,7 +40,7 @@ alternative = [
 	(1024.0**2.0, ' MB'),
 	(1024.0**1.0, ' KB'),
 	(1024.0**0.0, (' byte', ' bytes')),
-	]
+]
 
 # Verbose style: Kilobytes, Megabytes, Gigabytes, ...
 verbose = [
@@ -53,7 +53,7 @@ verbose = [
 	(1024.0**2.0, (' megabyte', ' megabytes')),
 	(1024.0**1.0, (' kilobyte', ' kilobytes')),
 	(1024.0**0.0, (' byte', ' bytes')),
-	]
+]
 
 # International Electrotechnical Commission (IEC) style: Ki, Mi, Gi, Ti, ...
 iec = [
@@ -66,7 +66,7 @@ iec = [
 	(1024.0**2, 'Mi'),
 	(1024.0**1.0, 'Ki'),
 	(1024.0**0.0, ''),
-	]
+]
 
 # International System of Units (Si) style: each unit is 1000 of another (i.e. 1000 KB is 1 MB)
 si = [
@@ -79,7 +79,7 @@ si = [
 	(1000.0**2.0, 'M'),
 	(1000.0**1.0, 'K'),
 	(1000.0**0.0, 'B'),
-	]
+]
 
 
 def size(bytes, system=traditional):
