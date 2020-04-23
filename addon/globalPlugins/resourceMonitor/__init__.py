@@ -172,13 +172,13 @@ def _win10RID(buildNum, isClient):
 	# Version 1511 and later.
 	try:
 		releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
-	except:
+	except OSError:
 		releaseID = "Unknown"
 	winreg.CloseKey(currentVersion)
 	# If IsRetailOS is present (an integer), it is an Insider Preview.
 	try:
 		isRetailOS = winreg.QueryValueEx(selfHostApplicability, "IsRetailOS")[0]
-	except:
+	except OSError:
 		isRetailOS = 1
 	winreg.CloseKey(selfHostApplicability)
 	# Insider Preview builds.
@@ -335,7 +335,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			else:
 				if api.copyToClip(uptime):
 					ui.message(self.RMCopyMessage)
-		except:
+		except TypeError:
 			# Translators: Obtaining uptime failed
 			ui.message(_("Failed to get the system's uptime."))
 
