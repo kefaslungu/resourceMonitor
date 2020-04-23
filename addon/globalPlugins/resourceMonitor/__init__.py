@@ -1,6 +1,6 @@
-#Resource Monitor for NvDA
-#Presents basic info on CPU load, memory and disk usage, as well as battery information.
-#Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
+# Resource Monitor for NvDA
+# Presents basic info on CPU load, memory and disk usage, as well as battery information.
+# Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
 # Copyright 2013-2020, released under GPL.
 
 import winreg
@@ -97,8 +97,8 @@ def size(bytes, system=traditional):
 
 
 def tryTrunk(n):
-	#this method basically removes decimal zeros, so 5.0 will just be 5.
-	#If the number ends in anything other than a 0, nothing happens (if the trunkated number is not equal to the decimal).
+	# This method basically removes decimal zeros, so 5.0 will just be 5.
+	# If the number ends in anything other than a 0, nothing happens (if the trunkated number is not equal to the decimal).
 	if n == int(n): return int(n)
 	return n
 
@@ -219,10 +219,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+3"
 	)
 	def script_announceDriveInfo(self, gesture):
-		#goes through all registered drives and gives info on each one
+		# Goes through all registered drives and gives info on each one
 		info = []
 		for drive in psutil.disk_partitions():
-			#get info on each one
+			# Get info on each one
 			# If and only if the Windows says disk is ready in order to avoid a core stack freeze when no disk is inserted into a slot.
 			# This can be checked by looking for a file system.
 			if drive.fstype:
@@ -241,7 +241,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_announceProcessorInfo(self, gesture):
 		averageLoad = psutil.cpu_percent()
-		#lists load for each core
+		# Lists load for each core
 		perCpuLoad = psutil.cpu_percent(percpu=True)
 		coreLoad = []
 		for i in range(len(perCpuLoad)):
