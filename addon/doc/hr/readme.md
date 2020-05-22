@@ -41,6 +41,10 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
 
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Verzija 20.04
 
 * Ažurirana je psutil zavisnost na 5.7.0.

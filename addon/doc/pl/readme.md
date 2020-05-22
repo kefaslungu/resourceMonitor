@@ -41,6 +41,10 @@ następujące kwestie:
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
 
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Wersja 20.04
 
 * Zaktualizowano zależność psutil dependency to 5.7.0.

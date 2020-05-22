@@ -45,6 +45,10 @@
   диска.
 * Тази добавка изисква Windows 7 Service Pack 1 или по-нова версия.
 
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Версия 20.04
 
 * Външната библиотека psutil е обновена до версия 5.7.0.

@@ -40,6 +40,10 @@ informações do sistema para o Windows. Observe também o seguinte:
   pode haver atrasos ao obter informações de uso do disco.
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Version 20.04
 
 * Updated psutil dependency to 5.7.0.

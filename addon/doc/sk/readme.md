@@ -38,6 +38,10 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
   chvíľu trvať.
 * Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
 
+## Verzia 20.06
+
+* Opravené drobné chyby v kóde.
+
 ## Verzia 20.04
 
 * Aktualizované knižnice psutil na verziu 5.7.0.

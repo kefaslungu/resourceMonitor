@@ -44,6 +44,10 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
   erforderlich.
 
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Version 20.04
 
 * Updated psutil dependency to 5.7.0.

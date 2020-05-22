@@ -28,6 +28,10 @@ keys via input gestures dialog.
 * 如果正在進行繁忙的磁碟活動（例如復制大型檔案），則獲取磁碟使用訊息時可能出現延遲。
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Version 20.04
 
 * Updated psutil dependency to 5.7.0.

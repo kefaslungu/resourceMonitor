@@ -41,6 +41,11 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   grandes, podría haber retrasos al obtener información de uso de disco.
 * Este complemento necesita Windows 7 Service Pack 1 o posterior.
 
+## Versión 20.06
+
+* Se han resuelto muchos problemas de estilo del código y fallos potenciales
+  con Flake8.
+
 ## Versión 20.04
 
 * Actualizada la dependencia psutil a 5.7.0.

@@ -42,6 +42,10 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
   informațiilor de utilizare a discului.
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
+
 ## Version 20.04
 
 * Updated psutil dependency to 5.7.0.

@@ -40,6 +40,11 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
 
+## Versio 20.06
+
+* Ratkaistu useita koodaustyylin ongelmia sekä mahdollisia bugeja Flake8:n
+  kanssa.
+
 ## Versio 20.04
 
 * Päivitetty psutil-riippuvuus versioksi 5.7.0.
