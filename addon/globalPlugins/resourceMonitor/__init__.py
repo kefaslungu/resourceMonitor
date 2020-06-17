@@ -162,18 +162,25 @@ server10LTSBuilds = {
 
 def _win10RID(buildNum, isClient):
 	# Both CurrentVersion and WindowsSelfHost must be consulted.
-	# The former is the case for ReleaseID and the latter for Insider Preview detection.
+	# The former is the case for ReleaseID (DisplayVersion in 20H2/2009 and later) and the latter for Insider Preview detection.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
 	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
 	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"):
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
 	else:
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability")
-	# Version 1511 and later.
+	# Version 20H2/2009 and later where a separate display version string is used.
+	# For backward compatibility, release ID variable will store display version string.
 	try:
-		releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
+		releaseID = winreg.QueryValueEx(currentVersion, "DisplayVersion")[0]
 	except OSError:
-		releaseID = "Unknown"
+		releaseID = None
+	# Version 1511 and later unless display version string is present.
+	if not releaseID:
+		try:
+			releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
+		except OSError:
+			releaseID = "Unknown"
 	winreg.CloseKey(currentVersion)
 	# If IsRetailOS is present (an integer), it is an Insider Preview.
 	try:
