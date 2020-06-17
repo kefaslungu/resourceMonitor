@@ -161,7 +161,10 @@ server10LTSBuilds = {
 
 
 def _win10RID(buildNum, isClient):
-	# Both CurrentVersion and WindowsSelfHost must be consulted.
+	# Special cases: Windows 10 Version 1507, Windows Server long-term servicing channel (LTSC) releases.
+	if isClient and buildNum == 10240: return "Windows 10 1507"
+	elif not isClient and buildNum in server10LTSBuilds: return server10LTSBuilds[buildNum]
+	# For others, both CurrentVersion and WindowsSelfHost must be consulted.
 	# The former is the case for ReleaseID (DisplayVersion in 20H2/2009 and later) and the latter for Insider Preview detection.
 	# When it comes to the actual order, check self-host flag first.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
@@ -192,13 +195,8 @@ def _win10RID(buildNum, isClient):
 		except OSError:
 			releaseID = "Unknown"
 	winreg.CloseKey(currentVersion)
-	if isClient:
-		if buildNum == 10240: return "Windows 10 1507"
-		else: return "Windows 10 {0}".format(releaseID)
-	else:
-		if buildNum in server10LTSBuilds:
-			return server10LTSBuilds[buildNum]
-		else: return "Windows Server {0}".format(releaseID)
+	if isClient: return "Windows 10 {0}".format(releaseID)
+	else: return "Windows Server {0}".format(releaseID)
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
