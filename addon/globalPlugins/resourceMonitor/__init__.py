@@ -163,12 +163,22 @@ server10LTSBuilds = {
 def _win10RID(buildNum, isClient):
 	# Both CurrentVersion and WindowsSelfHost must be consulted.
 	# The former is the case for ReleaseID (DisplayVersion in 20H2/2009 and later) and the latter for Insider Preview detection.
+	# When it comes to the actual order, check self-host flag first.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
-	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
+	# If IsRetailOS is present (an integer), it is an Insider Preview.
 	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"):
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
 	else:
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability")
+	try:
+		isRetailOS = winreg.QueryValueEx(selfHostApplicability, "IsRetailOS")[0]
+	except OSError:
+		isRetailOS = 1
+	winreg.CloseKey(selfHostApplicability)
+	# Insider Preview builds.
+	if not isRetailOS:
+		return "Windows 10 Insider" if isClient else "Windows Server Insider"
+	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
 	# Version 20H2/2009 and later where a separate display version string is used.
 	# For backward compatibility, release ID variable will store display version string.
 	try:
@@ -182,15 +192,6 @@ def _win10RID(buildNum, isClient):
 		except OSError:
 			releaseID = "Unknown"
 	winreg.CloseKey(currentVersion)
-	# If IsRetailOS is present (an integer), it is an Insider Preview.
-	try:
-		isRetailOS = winreg.QueryValueEx(selfHostApplicability, "IsRetailOS")[0]
-	except OSError:
-		isRetailOS = 1
-	winreg.CloseKey(selfHostApplicability)
-	# Insider Preview builds.
-	if not isRetailOS:
-		return "Windows 10 Insider" if isClient else "Windows Server Insider"
 	if isClient:
 		if buildNum == 10240: return "Windows 10Ver1507"
 		else: return "Windows 10Ver{0}".format(releaseID)
