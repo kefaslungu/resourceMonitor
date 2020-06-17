@@ -193,8 +193,8 @@ def _win10RID(buildNum, isClient):
 			releaseID = "Unknown"
 	winreg.CloseKey(currentVersion)
 	if isClient:
-		if buildNum == 10240: return "Windows 10Ver1507"
-		else: return "Windows 10Ver{0}".format(releaseID)
+		if buildNum == 10240: return "Windows 10 1507"
+		else: return "Windows 10 {0}".format(releaseID)
 	else:
 		if buildNum in server10LTSBuilds:
 			return server10LTSBuilds[buildNum]
