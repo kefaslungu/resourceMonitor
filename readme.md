@@ -2,19 +2,19 @@
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin Probst and other NVDA contributors
 * Download [stable version][1]
-* NVDA compatibility: 2019.3 to 2020.1
+* NVDA compatibility: 2019.3 to 2020.2
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
 # Shortcuts #
 
-* NVDA+Shift+E Presents used ram, average processor load, and battery info if available.
-* NVDA+Shift+1 Presents the average processor load and if multicore CPU's are present the load of each core.
-* NVDA+Shift+2/5 Presents the used and total space for both physical and virtual ram.
-* NVDA+Shift+3 Presents the used and total space of the static and removable drives.
-* NVDA+Shift+4 Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6 Presents  CPU Architecture 32/64-bit and Windows version and service pack numbers.
-* NVDA+Shift+7 presents the system's uptime.
+* NVDA+Shift+E: presents used ram, average processor load, and battery info if available.
+* NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
+* NVDA+Shift+2/5: presents the used and total space for both physical and virtual ram.
+* NVDA+Shift+3: presents the used and total space of the static and removable drives.
+* NVDA+Shift+4: presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.
+* NVDA+Shift+6: presents  CPU Architecture 32/64-bit and Windows version and service pack numbers.
+* NVDA+Shift+7: presents the system's uptime.
 
 If you have NvDA 2013.3 or later installed, you can change these shortcut keys via input gestures dialog.
 
