@@ -26,6 +26,11 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 20.07
+
+* Windows 10 Version 20H2 is properly recognized when obtaining Windows version information (NVDA+Shift+6).
+* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of Windows 10verYYMM when pressing NVDA+Shift+6.
+
 ## Version 20.06
 
 * Resolved many coding style issues and potential bugs with Flake8.
