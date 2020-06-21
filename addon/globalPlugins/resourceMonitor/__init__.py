@@ -293,7 +293,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
 			winreg.CloseKey(currentVersion)
 			winverName = _win10RID(buildNum, server == 1)
-			buildRevision = ".".join([str(buildNum), str(ubr)])
+			buildRevision = f"{buildNum}.{ubr}"
 		# Translators: Presented under 64-bit Windows.
 		if is64Bit: x64 = _("64-bit")
 		# Translators: Presented under 32-bit Windows.
@@ -302,7 +302,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not sp: info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion=winverName, cpuBit=x64)
 		# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 		else: info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion=winverName, servicePackLevel=sp, cpuBit=x64)
-		if (winMajor, winMinor) == (10, 0): info = info + " build {build}".format(build=buildRevision)
+		if (winMajor, winMinor) == (10, 0): info += " build {build}".format(build=buildRevision)
 		return info
 
 	@scriptHandler.script(
