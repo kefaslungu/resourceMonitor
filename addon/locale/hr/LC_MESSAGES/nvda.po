@@ -96,6 +96,14 @@ msgstr ""
 "Izjavljuje postotak baterije, stanje punjenja, preostalo vrijeme (ako se ne "
 "puni) te upozorenje ukoliko je baterija slaba ili skoro prazna."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Izjavljuje korišten i sveukupni prostor na statičkim i uklonjivim pogonima "
+"na ovom računalu."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -104,13 +112,10 @@ msgstr ""
 "{driveName} ({driveType} drive): {usedSpace} od {totalSpace} iskorišteno "
 "{percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
 msgstr ""
-"Izjavljuje korišten i sveukupni prostor na statičkim i uklonjivim pogonima "
-"na ovom računalu."
+"Izjavljuje prosječno opterećenje procesora te opterećenje svake jezgre."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -122,10 +127,11 @@ msgstr "Jezgra {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Prosječna opterećenosti procesora {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Izjavljuje prosječno opterećenje procesora te opterećenje svake jezgre."
+"Izjavljuje iskorišten i sveukupni prostor u fizičkoj i virtualnoj ram "
+"memoriji."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -140,12 +146,6 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtualna memorija: u uporabi je {virtualUsed} od {virtualTotal} "
 "({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"Izjavljuje iskorišten i sveukupni prostor u fizičkoj i virtualnoj ram "
-"memoriji."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -174,19 +174,13 @@ msgstr "Najavljuje verziju Windows sustava koju koristite."
 msgid "{days} days, {hoursMinutesSeconds}"
 msgstr "{days} dana {hoursMinutesSeconds}"
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr "Nemoguće dohvatiti trajanje pokretanja sustava."
-
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr "Izgovara trajanje pokretanja sustava."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% iskorišteno ram-a, CPU na {cpuPercent}%."
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Nemoguće dohvatiti trajanje pokretanja sustava."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -194,6 +188,12 @@ msgid ""
 msgstr ""
 "Izjavljuje iskorištenu ram memoriju, prosječno opterećenje procesora te "
 "informaciju o bateriji ako je ima."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% iskorišteno ram-a, CPU na {cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

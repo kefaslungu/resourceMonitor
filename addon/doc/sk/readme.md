@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* Funguje s NVDA 2019.3 a 2020.1
+* NVDA compatibility: 2019.3 to 2020.2
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
