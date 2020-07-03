@@ -10,22 +10,21 @@ informações de uso de recursos.
 
 # Teclas de atalho: #
 
-* NVDA+Shift+E apresenta A memória ram usada, a carga média do processador e
-  as informações da bateria, se disponíveis.
-* NVDA + Shift + 1 Apresenta a carga média do processador e se existirem
-  vários processadores, fornece a carga de cada núcleo.
-* NVDA+Shift+2/5 Apresenta o espaço usado e total para a memória ram física
-  e virtual.
-* NVDA+Shift+3 Apresenta o espaço usado e total das unidades estáticas e
-  removíveis.
-* NVDA+Shift+4 Apresenta a percentagem da bateria, o estado da carga, o
-  tempo restante (se não estiver a carregar) e um aviso se a bateria estiver
-  fraca ou crítica.
-* NVDA+Shift+6 apresenta a arquitectura da CPU 32/64 bits e a versão do
-  Windows e os números do service pack.
-* NVDA+Shift+7 apresenta o tempo de actividade do sistema.
+* NVDA+Shift+E: presents used ram, average processor load, and battery info
+  if available.
+* NVDA+Shift+1: presents the average processor load and if multicore CPU's
+  are present the load of each core.
+* NVDA+Shift+2/5: presents the used and total space for both physical and
+  virtual ram.
+* NVDA+Shift+3: presents the used and total space of the static and
+  removable drives.
+* NVDA+Shift+4: presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.
+* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
+  service pack numbers.
+* NVDA+Shift+7: presents the system's uptime.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
+If you have NvDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Notas de utilização: ##
@@ -39,6 +38,13 @@ informações do sistema para o Windows. Observe também o seguinte:
 * Se houver uma grande actividade do disco, como copiar ficheiros grandes,
   pode haver atrasos ao obter informações de uso do disco.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.07
+
+* Windows 10 Version 20H2 is properly recognized when obtaining Windows
+  version information (NVDA+Shift+6).
+* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
+  Windows 10verYYMM when pressing NVDA+Shift+6.
 
 ## Version 20.06
 

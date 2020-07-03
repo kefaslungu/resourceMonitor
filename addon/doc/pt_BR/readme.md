@@ -10,23 +10,22 @@ outras informações de uso de recursos.
 
 # Atalhos #
 
-* NVDA+Shift+E Apresenta uso da ram (memória), carga média do processador, e
-  informações de bateria caso disponível.
-* NVDA+Shift+1 Apresenta a carga média do processador e caso se tratem de
-  CPUs multinúcleo (multicore) mostra a carga de cada núcleo.
-* NVDA+Shift+2/5 Apresenta espaço usado e total das memórias ram física e
-  virtual.
-* NVDA+Shift+3 Apresenta espaço usado e o total das unidades fixas e
-  removíveis.
-* NVDA+Shift+4 Apresenta porcentagem da bateria, status de carga, tempo
-  restante (se não estiver carregando) e alerta caso a bateria esteja baixa
-  ou crítica.
-* NVDA+Shift+6 Apresenta arquitetura da CPU (32/64-bit) e a versão de
-  Windows com números do service pack.
-* NVDA+Shift+7 apresenta o tempo desde a inicialização do sistema.
+* NVDA+Shift+E: presents used ram, average processor load, and battery info
+  if available.
+* NVDA+Shift+1: presents the average processor load and if multicore CPU's
+  are present the load of each core.
+* NVDA+Shift+2/5: presents the used and total space for both physical and
+  virtual ram.
+* NVDA+Shift+3: presents the used and total space of the static and
+  removable drives.
+* NVDA+Shift+4: presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.
+* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
+  service pack numbers.
+* NVDA+Shift+7: presents the system's uptime.
 
-Caso tenha o NVDA 2013.3 ou posterior instalado, poderá alterar essas teclas
-de atalho através do diálogo definir comandos (gestos de entrada).
+If you have NvDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Notas de uso ##
 
@@ -39,6 +38,13 @@ de informações de sistema para Windows. Note também o seguinte:
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
+
+## Version 20.07
+
+* Windows 10 Version 20H2 is properly recognized when obtaining Windows
+  version information (NVDA+Shift+6).
+* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
+  Windows 10verYYMM when pressing NVDA+Shift+6.
 
 ## Versão 20.06
 
