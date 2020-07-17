@@ -3,29 +3,30 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* NVDA compatibility: 2019.3 to 2020.2
+* Compatibilidade com NVDA: 2019.3 a 2020.2
 
 Esse complemento fornece informações sobre carga da CPU, uso de memória e
 outras informações de uso de recursos.
 
 # Atalhos #
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5: presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3: presents the used and total space of the static and
-  removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
-  service pack numbers.
-* NVDA+Shift+7: presents the system's uptime.
+* NVDA+Shift+E: apresenta uso da ram (memória), carga média do processador,
+  e informações de bateria caso disponível.
+* NVDA+Shift+1: apresenta a carga média do processador e caso se tratem de
+  CPUs multinúcleo (multicore) mostra a carga de cada núcleo.
+* NVDA+Shift+2/5: apresenta espaço usado e total das memórias ram física e
+  virtual.
+* NVDA+Shift+3: apresenta espaço usado e o total das unidades fixas e
+  removíveis.
+* NVDA+Shift+4: apresenta porcentagem da bateria, status de carga, tempo
+  restante (se não estiver carregando) e alerta caso a bateria esteja baixa
+  ou crítica.
+* NVDA+Shift+6: apresenta arquitetura da CPU (32/64-bit) e a versão de
+  Windows com números do service pack.
+* NVDA+Shift+7: apresenta o tempo desde a inicialização do sistema.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Caso tenha o NvDA 2013.3 ou posterior instalado, poderá alterar essas teclas
+de atalho através do diálogo definir comandos (gestos de entrada).
 
 ## Notas de uso ##
 
@@ -39,12 +40,12 @@ de informações de sistema para Windows. Note também o seguinte:
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
 
-## Version 20.07
+## Versão 20.07
 
-* Windows 10 Version 20H2 is properly recognized when obtaining Windows
-  version information (NVDA+Shift+6).
-* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
-  Windows 10verYYMM when pressing NVDA+Shift+6.
+* O Windows 10 versão 20H2 é reconhecido corretamente ao obter informações
+  sobre a versão do Windows (NVDA+Shift+6).
+* Mensagem simplificada da versão do Windows 10, ou seja, Windows 10 AAMM em
+  vez de Windows 10verAAMM ao pressionar NVDA+Shift+6.
 
 ## Versão 20.06
 
