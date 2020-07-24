@@ -3,28 +3,27 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* NVDA compatibility: 2019.3 to 2020.2
+* Funguje s NVDA 2019.3 a 2020.2
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
 # Klávesové skratky #
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5: presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3: presents the used and total space of the static and
-  removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
-  service pack numbers.
-* NVDA+Shift+7: presents the system's uptime.
+* NVDA+Shift+E: oznámy využitie pamäte ram, priemerné zaťaženie procesora a
+  stav batérie, ak je dostupná.
+* NVDA+Shift+1: oznámy vyťaženie procesora a jednotlivých jadier.
+* NVDA+Shift+2/5: Oznámi využitú a celkovú fyzickú a virtuálnu pamäť.
+* NVDA+Shift+3: Oznámi využité a celkové miesto pre pevné a pamäťové disky
+  pripojené k počítaču.
+* NVDA+Shift+4: oznámy stav batérie v percentách, stav napájania,
+  zostávajúci čas (ak sa vybíja) a prípadne upozornenie ak je batéria vybytá
+  alebo v kritickom stave.
+* NVDA+Shift+6: Oznámi architektúru procesora (32 alebo 64 bit), verziu
+  Windows a Service packu.
+* Nvda+shift+7: Oznámi čas behu systému od posledného reštartu.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Ak používate NVDA od verzie 2013.3, môžete si skratky upraviť v dialógu
+klávesové skratky.
 
 ## Všimnite si ##
 
@@ -38,12 +37,11 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
   chvíľu trvať.
 * Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
 
-## Version 20.07
+## Verzia 20.07
 
-* Windows 10 Version 20H2 is properly recognized when obtaining Windows
-  version information (NVDA+Shift+6).
-* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
-  Windows 10verYYMM when pressing NVDA+Shift+6.
+* Pri zisťovaní verzie Windows (NVDA+Shift+6) je správne rozpoznaná verzia
+  Windows 10 20H2.
+* Skrátené zobrazenie verzie Windows.
 
 ## Verzia 20.06
 

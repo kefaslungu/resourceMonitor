@@ -3,29 +3,30 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* NVDA compatibility: 2019.3 to 2020.2
+* Zgodność z wersjami NVDA: 2019.3 to 2020.2
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
 
 # Skróty #
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5: presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3: presents the used and total space of the static and
-  removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
-  service pack numbers.
-* NVDA+Shift+7: presents the system's uptime.
+* NVDA+Shift+E podaje używaną pamięć, średnie obciążenie procesora,
+  informacje o baterii jeśli jest dostępna.
+* nvda+shift+1 podaje średnie obciążenie procesora i obciążenie każdego z
+  rdzeni, jeśli używany jest procesor wielordzeniowy.
+* NVDA+Shift+2/5 podaje informacje o użyciu fizycznej i wirtualnej pamięci
+  RAM.
+* NVDA+Shift+3 podaje informacje o używanej i całkowitej przestrzeni dysków
+  twardych i wymiennych.
+* NVDA+Shift+4 raportuje procent baterii, status ładowania, pozostały czas
+  (jeśli nie ładuje), i ostrzeżenie o niskim lub krytycznym poziomie
+  baterii.
+* NVDA+Shift+6 odczytuje wersję i pakiet serwisowy systemu Windows, oraz
+  bity procesora (32 lub 64 bity).
+* NVDA+Shift+7 Pokazuje czas pracy systemu.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Jeśli używasz NvDA 2013.3 lub nowszą możesz zmienić te skróty klawiaturowe z
+poziomu okna dialogowego zdarzenia wejścia.
 
 ## Uwagi o użytkowaniu ##
 
@@ -40,16 +41,16 @@ następujące kwestie:
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
 
-## Version 20.07
+## Wersja 20.04
 
-* Windows 10 Version 20H2 is properly recognized when obtaining Windows
-  version information (NVDA+Shift+6).
-* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
-  Windows 10verYYMM when pressing NVDA+Shift+6.
+* Windows 10 wersja 20H2 jest poprawnie rozpoznawana przy dostarczaniu
+  informacji o wersji za pomocą skrótu (NVDA+Shift+6).
+* Uproszczony komunikato o werji Windows Na przykład: Windows 10 YYMM
+  instead of Windows 10verYYMM when pressing NVDA+Shift+6.
 
-## Version 20.06
+## Wersja 20.06
 
-* Resolved many coding style issues and potential bugs with Flake8.
+* Naprawiono błędy związane z stylem kodu oraz linterem flake8.
 
 ## Wersja 20.04
 
