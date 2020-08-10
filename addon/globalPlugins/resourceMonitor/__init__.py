@@ -346,9 +346,33 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
-		hoursMinutesSeconds = "{hours:02}:{minutes:02}:{seconds:02}".format(hours=hours, minutes=minutes, seconds=seconds)
-		# Translators: The system's uptime
-		return _("{days} days, {hoursMinutesSeconds}").format(days=uptime.days, hoursMinutesSeconds=hoursMinutesSeconds)
+		uptimeComponents = []
+		# No need to add 'days' if it is less than 24 hours after system boot.
+		if uptime.days == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("1 day"))
+		elif uptime.days > 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} days").format(uptime.days))
+		if hours == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} hour").format(hours))
+		else:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} hours").format(hours))
+		if minutes == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} minute").format(minutes))
+		else:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} minutes").format(minutes))
+		if seconds == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} second").format(seconds))
+		else:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} seconds").format(seconds))
+		return ", ".join(uptimeComponents)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about obtaining the system's uptime
