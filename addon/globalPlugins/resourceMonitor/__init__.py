@@ -126,28 +126,26 @@ def _batteryInfo(verbose=False):
 				info = _("{percent}% battery remaining, battery time unknown.").format(percent=tryTrunk(percent))
 			else:
 				# Prepare hours:minutes.
-				timeLeft = ""
-				hours, rest = divmod(secsleft, 3600)
-				minutes, seconds = divmod(rest, 60)
-				if hours > 0:
-					timeLeft += str(hours)
-					if hours == 1:
-						# Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-						timeLeft += _(" hour, ")
-					else:
-						# Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-						timeLeft += _(" hours, ")
-				timeLeft += str(minutes)
+				# Optimization: build components list and take away seconds as it is not required (floor division with 60).
+				timeLeft = []
+				secsleft = secsleft // 60
+				hours, minutes = divmod(secsleft, 60)
+				if hours == 1:
+					# Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+					timeLeft.append(_("1 hour"))
+				elif hours > 1:
+					# Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+					timeLeft.append(_("{0} hours").format(hours))
 				if minutes == 1:
 					# Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-					timeLeft += _(" minute")
+					timeLeft.append(_("1 minute"))
 				else:
 					# Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-					timeLeft += _(" minutes")
+					timeLeft.append(_("{0} minutes").format(minutes))
 				# Because psutil.sensors_battery function does not present battery flags by default, manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
 				# Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-				info = _("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=timeLeft)
+				info = _("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=", ".join(timeLeft))
 				if batteryFlags & 2:
 					# Translators: Message reported when battery level is low.
 					info += _(" Warning: low battery.")
