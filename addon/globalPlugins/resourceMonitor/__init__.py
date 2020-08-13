@@ -353,19 +353,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			uptimeComponents.append(_("{0} days").format(uptime.days))
 		if hours == 1:
 			# Translators: system uptime in hours.
-			uptimeComponents.append(_("{0} hour").format(hours))
+			uptimeComponents.append(_("1 hour"))
 		else:
 			# Translators: system uptime in hours.
 			uptimeComponents.append(_("{0} hours").format(hours))
 		if minutes == 1:
 			# Translators: system uptime in hours.
-			uptimeComponents.append(_("{0} minute").format(minutes))
+			uptimeComponents.append(_("1 minute"))
 		else:
 			# Translators: system uptime in hours.
 			uptimeComponents.append(_("{0} minutes").format(minutes))
 		if seconds == 1:
 			# Translators: system uptime in hours.
-			uptimeComponents.append(_("{0} second").format(seconds))
+			uptimeComponents.append(_("1 second"))
 		else:
 			# Translators: system uptime in hours.
 			uptimeComponents.append(_("{0} seconds").format(seconds))
