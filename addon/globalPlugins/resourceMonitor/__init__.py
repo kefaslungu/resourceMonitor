@@ -86,7 +86,7 @@ def size(bytes, system=traditional):
 	for factor, suffix in system:
 		if float(bytes) >= float(factor):
 			break
-	amount = float(bytes/factor)
+	amount = float(bytes / factor)
 	if isinstance(suffix, tuple):
 		singular, multiple = suffix
 		if float(amount) == 1.0:
@@ -261,7 +261,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		coreLoad = []
 		for i in range(len(perCpuLoad)):
 			# Translators: Shows average load of CPU cores (example: core 1, 50%).
-			coreLoad.append(_("Core {coreNumber}: {corePercent}%").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i])))
+			coreLoad.append(_("Core {coreNumber}: {corePercent}%").format(coreNumber=str(i + 1), corePercent=tryTrunk(perCpuLoad[i])))
 		# Translators: Shows average load of the processor and the load for each core.
 		info = _("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
