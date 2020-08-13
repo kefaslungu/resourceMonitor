@@ -345,11 +345,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
 		uptimeComponents = []
-		# No need to add 'days' if it is less than 24 hours after system boot.
 		if uptime.days == 1:
 			# Translators: system uptime in hours.
 			uptimeComponents.append(_("1 day"))
-		elif uptime.days > 1:
+		else:
 			# Translators: system uptime in hours.
 			uptimeComponents.append(_("{0} days").format(uptime.days))
 		if hours == 1:
