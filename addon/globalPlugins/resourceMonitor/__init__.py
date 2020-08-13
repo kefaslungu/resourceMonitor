@@ -258,11 +258,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		averageLoad = psutil.cpu_percent()
 		# Lists load for each core
 		perCpuLoad = psutil.cpu_percent(percpu=True)
-		coreLoad = []
-		# Start counting at 1, and even then, all items will be visited.
-		for core, cpuLoad in enumerate(perCpuLoad, start=1):
+		coreLoad = [
 			# Translators: Shows average load of CPU cores (example: core 1, 50%).
-			coreLoad.append(_("Core {coreNumber}: {corePercent}%").format(coreNumber=core, corePercent=tryTrunk(cpuLoad)))
+			_("Core {coreNumber}: {corePercent}%").format(coreNumber=core, corePercent=tryTrunk(cpuLoad))
+			# Start counting at 1, and even then, all items will be visited.
+			for core, cpuLoad in enumerate(perCpuLoad, start=1)
+		]
 		# Translators: Shows average load of the processor and the load for each core.
 		info = _("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
