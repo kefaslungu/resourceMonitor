@@ -49,19 +49,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "Restam {percent}% da bateria, tempo de bateria desconhecido."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " hora, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " horas, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " minuto"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " minutos"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -95,6 +103,14 @@ msgstr ""
 "Mostra porcentagem de bateria, status da carga, tempo restante (se não "
 "estiver carregando) e alerta caso a bateria esteja baixa ou crítica."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Mostra o espaço em uso e o total das unidades fixas e removíveis do "
+"computador."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -103,13 +119,9 @@ msgstr ""
 "{driveName} (unidade {driveType}): {usedSpace} em uso de {totalSpace}, "
 "{percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Mostra o espaço em uso e o total das unidades fixas e removíveis do "
-"computador."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "Mostra a carga média do processador e a carga de cada núcleo."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -121,9 +133,9 @@ msgstr "Núcleo {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Carga média da CPU {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "Mostra a carga média do processador e a carga de cada núcleo."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "Mostra espaço em uso e total da memória física e da virtual."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -135,10 +147,6 @@ msgstr ""
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: em uso {virtualUsed} de {virtualTotal} ({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Mostra espaço em uso e total da memória física e da virtual."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -162,24 +170,31 @@ msgstr "Versão de Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Anuncia a versão de Windows que você usa."
 
-#. Translators: The system's uptime
-#, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} dias, {hoursMinutesSeconds}"
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr "Falha ou obter o tempo desde que o sistema foi iniciado."
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr "Anuncia o tempo desde que o sistema foi iniciado."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% de RAM em uso, CPU a {cpuPercent}%."
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Falha ou obter o tempo desde que o sistema foi iniciado."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -187,6 +202,12 @@ msgid ""
 msgstr ""
 "Mostra ram em uso, carga média do processador e informações de bateria se "
 "disponíveis."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% de RAM em uso, CPU a {cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -196,3 +217,6 @@ msgid ""
 msgstr ""
 "Um monitor prático de recursos que anuncia carga da CPU, uso de memória, "
 "status de bateria, uso de disco e outros."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} dias, {hoursMinutesSeconds}"

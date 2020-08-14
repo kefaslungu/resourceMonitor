@@ -46,19 +46,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% nepodarilo sa zistiť ostávajúci čas."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " hodina, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " hodín, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " minúta"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " minút"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -93,6 +101,12 @@ msgstr ""
 "o použitom zdroji napájania a prípadne informáciu o vybytí alebo kritickom "
 "stave batérie."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr "Oznámi voľné a využité miesto na všetkých pripojených diskoch."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -101,11 +115,9 @@ msgstr ""
 "disk {driveName} ({driveType}): využité: {usedSpace} z {totalSpace}, "
 "{percent}%. "
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr "Oznámi voľné a využité miesto na všetkých pripojených diskoch."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "Oznámi priemerné vyťaženie procesora a vyťaženie jednotlivých jadier."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -117,9 +129,9 @@ msgstr "jadro {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Priemerné vyťaženie CPU {avgLoad}%, {cores}"
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "Oznámi priemerné vyťaženie procesora a vyťaženie jednotlivých jadier."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "Oznámi využité a voľné miesto pre fyzickú a virtuálnu ram pamäť."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -133,10 +145,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuálna pamäť: využité {virtualUsed} z {virtualTotal} ({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Oznámi využité a voľné miesto pre fyzickú a virtuálnu ram pamäť."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -160,25 +168,31 @@ msgstr "Verzia Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Oznámy verziu operačného systému."
 
-#. Translators: The system's uptime
-#, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "Počet dní: {days}, {hoursMinutesSeconds}"
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr "Nepodarilo sa zistiť celkový čas bbehu systému od posledného reštartu."
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr "Oznámy celkový čas od posledného reštartu."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr ""
-"{ramPercent}% využitej pamäte ram, zaťaženie procesora na {cpuPercent}%. "
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Nepodarilo sa zistiť celkový čas bbehu systému od posledného reštartu."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -186,6 +200,13 @@ msgid ""
 msgstr ""
 "Oznámi využitie ram pamäte, priemerné vyťaženie procesora a prípadný "
 "kritický stav batérie."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr ""
+"{ramPercent}% využitej pamäte ram, zaťaženie procesora na {cpuPercent}%. "
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -195,3 +216,6 @@ msgid ""
 msgstr ""
 "Jednoduchý doplnok na zistenie vyťaženia procesora, využitej ram pamäte, "
 "stavu napájania, miesta na pripojených diskoch a podobne."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "Počet dní: {days}, {hoursMinutesSeconds}"

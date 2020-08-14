@@ -48,19 +48,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "Akkubetrieb, {percent} % verbleiben, noch {time}."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " Stunde, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " Stunden, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " Minute"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " Minuten"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -95,6 +103,13 @@ msgstr ""
 "Betriebszeit (falls der Akku nicht geladen wird) sowie eine Warnung an, wenn "
 "die Spannung niedrig oder kritisch ist."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Zeigt den verwendeten und den gesamten Speicherplatz aller Laufwerke an."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -103,12 +118,11 @@ msgstr ""
 "{driveName} ({driveType} Laufwerk: {usedSpace} von {totalSpace} {percent}% "
 "verwendet."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
 msgstr ""
-"Zeigt den verwendeten und den gesamten Speicherplatz aller Laufwerke an."
+"Zeigt die ungefähre CPU-Auslastung sowie die Auslastung für jeden "
+"Prozessorkern an."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -120,11 +134,11 @@ msgstr "Kern {coreNumber}: {corePercent} Prozent"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Prozessor-Auslastung: ~ {avgLoad} %, {cores}"
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Zeigt die ungefähre CPU-Auslastung sowie die Auslastung für jeden "
-"Prozessorkern an."
+"Zeigt den gesamten Speicherverbrauch für den physischen und virtuellen "
+"Arbeitsspeicher an."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -138,12 +152,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuell: {virtualUsed} von {virtualTotal} verwendet ({virtualPercent} %)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"Zeigt den gesamten Speicherverbrauch für den physischen und virtuellen "
-"Arbeitsspeicher an."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -167,24 +175,31 @@ msgstr "Windows-Version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Zeigt die aktuell verwendete Windows-Version an."
 
-#. Translators: The system's uptime
-#, fuzzy, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} Tage, {hoursMinutesseconds}"
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr "Fehler beim Abruf der Systemlaufzeit."
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr "Gibt die Systemlaufzeit aus."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent} % Speicher verwendet, CPU-Auslastung bei {cpuPercent} %."
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Fehler beim Abruf der Systemlaufzeit."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -192,6 +207,12 @@ msgid ""
 msgstr ""
 "Zeigt die Menge des verwendeten Arbeitsspeichers, die CPU-Auslastung sowie "
 "Akku-Informationen an (falls angeschlossen)."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent} % Speicher verwendet, CPU-Auslastung bei {cpuPercent} %."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -201,3 +222,7 @@ msgid ""
 msgstr ""
 "Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
+
+#, fuzzy
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} Tage, {hoursMinutesseconds}"

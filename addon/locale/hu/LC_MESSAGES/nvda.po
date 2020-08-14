@@ -47,19 +47,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% van hátra, fennmaradó idő {time}."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " óra, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " órák, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " perc"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " percek"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -93,6 +101,14 @@ msgstr ""
 "Bemondja a telep töltötségi szintjét, a töltés állapotát, a hátralévő időt "
 "(ha nem tölt), és figyelmeztet ha alacsony az akkumulátor töltöttsége."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"A fizikai, és cserélhető meghajtók használt, és fennmaradó lemezterületét "
+"jelenti be."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -101,13 +117,10 @@ msgstr ""
 "{driveName} ({driveType} meghajtó): {usedSpace} per {totalSpace} foglalt, a "
 "kihasználtság: {percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
 msgstr ""
-"A fizikai, és cserélhető meghajtók használt, és fennmaradó lemezterületét "
-"jelenti be."
+"Bemondja a processzor átlagos terheltségét, majd külön az egyes magokét."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -119,10 +132,9 @@ msgstr "Mag {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Átlagos CPU használat {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr ""
-"Bemondja a processzor átlagos terheltségét, majd külön az egyes magokét."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "Bemondja a fizikai és virtuális memória teljes és használt méretét."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -137,10 +149,6 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuális: {virtualUsed} ennyiből {virtualTotal} használva "
 "({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Bemondja a fizikai és virtuális memória teljes és használt méretét."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -164,24 +172,31 @@ msgstr "Windows verzió: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Bemondja a használatban lévő Windows verzióját"
 
-#. Translators: The system's uptime
-#, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} napok, {hoursMinutesSeconds}"
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr "Nem lehet meghatározni a rendszer futási idejét."
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr "Bemondja a rendszer futási idejét."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% RAM használatban, CPU kihasználtsága {cpuPercent}%."
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Nem lehet meghatározni a rendszer futási idejét."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -189,6 +204,12 @@ msgid ""
 msgstr ""
 "Bemondja az átlagos Ram-ot, a processzor terheltséget, és az akkumulátor "
 "állapotát (ha elérhető)."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% RAM használatban, CPU kihasználtsága {cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -200,3 +221,6 @@ msgstr ""
 "terheltségét, a használt memória és háttértár mértékét, az akkumulátor "
 "állapotát, a merevlemezek státuszát, és még jó néhány fontos számítógép "
 "jellemzőt."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} napok, {hoursMinutesSeconds}"

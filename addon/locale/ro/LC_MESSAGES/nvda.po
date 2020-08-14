@@ -47,19 +47,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% din baterie rămasă, timpul bateriei este necunoscut."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " oră, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " ore, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " minut"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " minute"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -94,6 +102,14 @@ msgstr ""
 "(dacă nu se încarcă), și alerte dacă bateria este descărcată sau la nivel "
 "extrem de scăzut."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Prezintă spațiile folosit și total ale unităților statice și detașabile de "
+"pe acest calculator."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -102,13 +118,11 @@ msgstr ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} utilizat "
 "{percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
 msgstr ""
-"Prezintă spațiile folosit și total ale unităților statice și detașabile de "
-"pe acest calculator."
+"Prezintă nivelul de încărcare mediu al procesorului și încărcarea pentru "
+"fiecare nucleu."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -120,11 +134,11 @@ msgstr "Nucleu {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Încărcarea medie Unității centrale de prelucrare {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Prezintă nivelul de încărcare mediu al procesorului și încărcarea pentru "
-"fiecare nucleu."
+"Prezintă nivelurile de încărcare folosit și total atât pentru memoria RAM "
+"fizică cât și pentru cea virtuală."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -137,12 +151,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuală: {virtualUsed} din {virtualTotal} folosită ({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"Prezintă nivelurile de încărcare folosit și total atât pentru memoria RAM "
-"fizică cât și pentru cea virtuală."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -166,24 +174,31 @@ msgstr "Versiune Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Anunță versiunea de Windows pe care o folosiți."
 
-#. Translators: The system's uptime
-#, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} zile, {hoursMinutesSeconds}"
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr "Eșuare la obținerea timpului de funcționare a sistemului."
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr "Anunță timpul de funcționare a sistemului."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% RAM folosit, procesor la {cpuPercent}%."
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Eșuare la obținerea timpului de funcționare a sistemului."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -191,6 +206,12 @@ msgid ""
 msgstr ""
 "Prezintă RAM folosit, nivel mediu de încărcare al procesorului și informație "
 "baterie, dacă este disponibilă."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% RAM folosit, procesor la {cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -200,3 +221,6 @@ msgid ""
 msgstr ""
 "Un monitor de resurse folositor pentru raportarea încărcării CPU, ratei de "
 "folosire a memoriei, baterie, stare folosire disk și altele."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} zile, {hoursMinutesSeconds}"
