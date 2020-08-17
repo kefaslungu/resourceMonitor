@@ -1,5 +1,5 @@
 # Resource Monitor for NvDA
-# Presents basic info on CPU load, memory and disk usage, as well as battery information.
+# Presents basic system info: CPU info, ram and disk usage, up time, Windows version, etc
 # Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
 # Copyright 2013-2020, released under GPL.
 
@@ -11,6 +11,8 @@ import globalPluginHandler
 import ui
 import api
 import scriptHandler
+import config
+import gui
 from . import psutil
 import addonHandler
 addonHandler.initTranslation()
@@ -201,6 +203,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented when a resource summary is copied to clipboard.
 	RMCopyMessage = _("Resource summary copied to clipboard")
 
+	configTag = "addons.resourceMonitor" #used as the key for all this addon's settings in the config
+
+	def __init__(self, *args, **kwargs):
+		super(GlobalPlugin, self).__init__(*args, **kwargs)
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettings)
+
 	@scriptHandler.script(
 		# Translators: Input help message about battery info command in Resource Monitor.
 		description=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."),
@@ -351,3 +359,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		batteryInfo = _batteryInfo()
 		if batteryInfo is not None: info.append(batteryInfo)
 		ui.message(" ".join(info))
+
+class ResourceMonitorSettings(gui.settingsDialogs.SettingsPanel):
+		title = "Resource Monitor"
