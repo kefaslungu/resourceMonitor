@@ -18,7 +18,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 # Styles of size calculation/string composition, do not change!
-# Treditional style, Y, K, M, G, B, ...
+# Traditional style, Y, K, M, G, B, ...
 traditional = [
 	(1024.0**8.0, 'Y'),
 	(1024.0**7.0, 'Z'),
@@ -96,7 +96,6 @@ def size(bytes, system=traditional):
 		else:
 			suffix = multiple
 	return "{:.2F}{}".format(float(amount), suffix)
-
 
 def tryTrunk(n):
 	# This method basically removes decimal zeros, so 5.0 will just be 5.
@@ -203,11 +202,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Presented when a resource summary is copied to clipboard.
 	RMCopyMessage = _("Resource summary copied to clipboard")
 
+	# translators: the full name of this addon, used in dialogs and other places
+	friendlyName = _("Resource Monitor")
+	shortName = "resourceMonitor"
 	configTag = "addons.resourceMonitor" #used as the key for all this addon's settings in the config
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettings)
+	
+	def onConfigDialog(self, evt):
+		gui.mainFrame._popupSettingsDialog(ResourceMonitorSettings)
+	
+	def terminate(self):
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(ResourceMonitorSettings)
 
 	@scriptHandler.script(
 		# Translators: Input help message about battery info command in Resource Monitor.
@@ -361,4 +369,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		ui.message(" ".join(info))
 
 class ResourceMonitorSettings(gui.settingsDialogs.SettingsPanel):
-		title = "Resource Monitor"
+	title = GlobalPlugin.friendlyName
+
+	def makeSettings(self, settingsSizer):
+		# translators: label for the control below whose value a CPU core's load is not output
+		minCoreLoadLabel = _("Skip speaking CPU cores at or below this load (in GhZ):")
+		settingsDialog = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		self.minCoreLoad = settingsDialog.addLabeledControl(minCoreLoadLabel, gui.nvdaControls.SelectOnFocusSpinCtrl, min=0.0, max=100.0, step=0.1, initial=config.conf[GlobalPlugin.configTag]["minCoreLoad"])
+	
+	def onSave(self):
+		config.conf[GlobalPlugin.configTag]["minCoreLoad"] = self.minCoreLoad
+
+
+#spec for use with the configuration system
+configSpec = {
+	"minCoreLoad": "float(min=0.0, max=100.0, default=1.0)"
+}
+config.conf.spec[GlobalPlugin.configTag] = configSpec
+
