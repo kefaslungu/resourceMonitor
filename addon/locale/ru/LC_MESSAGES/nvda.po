@@ -47,19 +47,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% осталось, неизвестный час батареи"
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " час, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " часов, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " минута"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " минут"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -93,6 +101,14 @@ msgstr ""
 "Предоставляет состояние заряда батареи в процентах, , оставшееся время (если "
 "не заряжается) и предупреждение о низком и критическом заряде."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Предоставляет информацию об использованном и общем объёме несъёмных и "
+"съёмных дисков этого компьютера."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -101,13 +117,9 @@ msgstr ""
 "Диск {driveName} ({driveType}): {usedSpace} из {totalSpace} использовано "
 "{percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Предоставляет информацию об использованном и общем объёме несъёмных и "
-"съёмных дисков этого компьютера."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "Предоставляет среднюю загрузку процессора и загрузку каждого ядра."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -119,9 +131,11 @@ msgstr "Ядро {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Средняя загрузка процессора {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "Предоставляет среднюю загрузку процессора и загрузку каждого ядра."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr ""
+"Предоставляет информацию об общем объёме и использованном объёме физической "
+"и виртуальной памяти."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -136,12 +150,6 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Виртуальная память: {virtualUsed} из {virtualTotal} использовано "
 "({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"Предоставляет информацию об общем объёме и использованном объёме физической "
-"и виртуальной памяти."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -165,18 +173,38 @@ msgstr "Версия Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Объявляет используемую версию Windows."
 
-#. Translators: The system's uptime
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
+
+#. Translators: system uptime in hours.
 #, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} дней, {hoursMinutesSeconds}"
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "Объявляет время работы системы."
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
 msgstr "Не удалось получить время работы системы."
 
-#. Translators: Input help mode message about obtaining the system's uptime
-msgid "Announces the system's uptime."
-msgstr "Объявляет время работы системы."
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr ""
+"Предоставляет информацию об использовании оперативной памяти, среднюю "
+"загрузку процессора и информацию о состоянии батареи, если возможно."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
@@ -186,13 +214,6 @@ msgstr ""
 "{ramPercent}% оперативной памяти использовано, загрузка процессора "
 "{cpuPercent}%."
 
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"Предоставляет информацию об использовании оперативной памяти, среднюю "
-"загрузку процессора и информацию о состоянии батареи, если возможно."
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
@@ -201,3 +222,6 @@ msgid ""
 msgstr ""
 "Удобный монитор ресурсов сообщает о загрузке процессора, использовании "
 "памяти, состоянии заряда батареи,использовании диска и многое другое."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} дней, {hoursMinutesSeconds}"

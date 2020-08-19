@@ -3,29 +3,28 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Загрузить [стабильную версию][1]
-* NVDA compatibility: 2019.3 to 2020.1
+* NVDA compatibility: 2019.3 to 2020.2
 
 Этот плагин предоставляет информацию о загрузке процессора, используемой
 памяти и  других используемых ресурсах.
 
 # Горячие клавиши #
 
-* NVDA+Shift+E предоставляет используемую память, среднюю загрузку
-  процессора и данные батареи, если доступно.
-* NVDA+Shift+1 Предоставляет среднюю загрузку процессора и загрузку каждого
-  ядра.
-* NVDA+Shift+2/5 предоставляет используемый и общий объём физической и
-  виртуальной памяти.
-* NVDA+Shift+3 предоставляет использованный и общий объём несъёмных и
-  съёмных дисков этого компьютера.
-* NVDA+Shift+4 предоставляет процентность батареи, состояние зарядки,
-  оставшееся время (если не заряжается), и предупреждение о низком или
-  критическом заряде.
-* NVDA+Shift+6 предоставляет установленную версию Windows, разрядность
-  процессора (32 или 64-разрядный) и пакет обновления, если есть.
-* NVDA+Shift+7 presents the system's uptime.
+* NVDA+Shift+E: presents used ram, average processor load, and battery info
+  if available.
+* NVDA+Shift+1: presents the average processor load and if multicore CPU's
+  are present the load of each core.
+* NVDA+Shift+2/5: presents the used and total space for both physical and
+  virtual ram.
+* NVDA+Shift+3: presents the used and total space of the static and
+  removable drives.
+* NVDA+Shift+4: presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.
+* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
+  service pack numbers.
+* NVDA+Shift+7: presents the system's uptime.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
+If you have NvDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Замечания по использованию ##
@@ -40,6 +39,17 @@ keys via input gestures dialog.
 * Если есть тяжелые дисковые операции, такие как копирование больших файлов,
   возникают задержки при получении информации об использовании диска.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.07
+
+* Windows 10 Version 20H2 is properly recognized when obtaining Windows
+  version information (NVDA+Shift+6).
+* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
+  Windows 10verYYMM when pressing NVDA+Shift+6.
+
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
 
 ## Version 20.04
 

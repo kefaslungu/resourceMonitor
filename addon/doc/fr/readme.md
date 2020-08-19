@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Télécharger [version stable][1]
-* NVDA compatibility: 2019.3 to 2020.1
+* NVDA compatibility: 2019.3 to 2020.2
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -11,23 +11,21 @@ ressources.
 
 # Raccourcis #
 
-* NVDA+Maj+E Annonce le pourcentage de mémoire utilisée, la charge moyenne
-  du processeur, et des informations sur la batterie si disponibles.
-* NVDA+Maj+1 Annonce la charge moyenne du processeur et, pour les
-  processeurs  multi cœur la charge de chaque cœur.
-* NVDA+Maj+2/5 Annonce les quantités d'espace mémoire physique et virtuelle
-  utilisées et totales.
-* NVDA+Maj+3 Annonce les quentités d'espace utilisé et total des disques
-  fixes et amovibles.
-* NVDA+Maj+4 Annonce le pourcentage de charge de la batterie, l'état de
-  charge si elle est en charge, le temps restant (sauf si en charge), et une
-  alerte si le niveau de la batterie est faible ou critique.
-* NVDA+Maj+6 Annonce l'architecture du processeur 32/64-bit et les numéros
-  de version de Windows et du service pack.
-* NVDA+Maj+7 Annonce le temps de fonctionnement du système depuis sa mise en
-  route.
+* NVDA+Shift+E: presents used ram, average processor load, and battery info
+  if available.
+* NVDA+Shift+1: presents the average processor load and if multicore CPU's
+  are present the load of each core.
+* NVDA+Shift+2/5: presents the used and total space for both physical and
+  virtual ram.
+* NVDA+Shift+3: presents the used and total space of the static and
+  removable drives.
+* NVDA+Shift+4: presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.
+* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
+  service pack numbers.
+* NVDA+Shift+7: presents the system's uptime.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
+If you have NvDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Remarques sur l'utilisation ##
@@ -43,6 +41,17 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.07
+
+* Windows 10 Version 20H2 is properly recognized when obtaining Windows
+  version information (NVDA+Shift+6).
+* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
+  Windows 10verYYMM when pressing NVDA+Shift+6.
+
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
 
 ## Version 20.04
 

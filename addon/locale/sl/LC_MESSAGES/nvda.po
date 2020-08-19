@@ -10,14 +10,15 @@ msgstr ""
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
 "PO-Revision-Date: 2019-07-14 20:35-0700\n"
 "Last-Translator: \n"
+"Language-Team: \n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
-"Language-Team: \n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
@@ -37,31 +38,42 @@ msgstr "Ta računalnik nima priključenega akumulatorja."
 
 # po testu revizija
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "Akumulator je napoljen do {percent}%."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
 "{percent}% akumulatorja je še na voljo, toda čas preostale rabe ni znan."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " ura, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " ur, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " minuta"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " minut"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Preostane še {percent}% za približno  {time}."
 
@@ -92,13 +104,6 @@ msgstr ""
 "delovanja s trenutno kapaciteto, (če se ne polni) in opozorilo o nizkem ali "
 "kritično niskem stanju akumulatorja."
 
-#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"{driveName} ({driveType} pogon): {usedSpace} od {totalSpace} v uporabi "
-"{percent}%."
-
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
@@ -107,34 +112,46 @@ msgstr ""
 "Predstavi prostor v uporabi in ves prostor, ki je na voljo na statičnih "
 "pogonih in pogonih za izmenjavo."
 
-#. Translators: Shows average load of CPU cores (example: core 1, 50%).
-msgid "Core {coreNumber}: {corePercent}%"
-msgstr "Jedro {coreNumber}: {corePercent}%"
-
-#. Translators: Shows average load of the processor and the load for each core.
-msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Povprečna obremenitev CPE {avgLoad}%, {cores}."
+#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr ""
+"{driveName} ({driveType} pogon): {usedSpace} od {totalSpace} v uporabi "
+"{percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr ""
 "Predstavi povprečno obremenitev procesorja in obremenitev vsakega jedra."
 
-#. Translators: Shows RAM (physical memory) usage.
-msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Fizični: {physicalUsed} od {physicalTotal} v uporabi  ({physicalPercent}%)."
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%"
+msgstr "Jedro {coreNumber}: {corePercent}%"
 
-#. Translators: Shows virtual memory usage.
-msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"Navidezni: {virtualUsed} od {virtualTotal} v uporabi ({virtualPercent}%)."
+#. Translators: Shows average load of the processor and the load for each core.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}."
+msgstr "Povprečna obremenitev CPE {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
 "Predstavi količino pomnilnika v uporabi in vso količino na voljo. Velja tako "
 "za fizični kot navidezni pomnilnik."
+
+#. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
+msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
+msgstr ""
+"Fizični: {physicalUsed} od {physicalTotal} v uporabi  ({physicalPercent}%)."
+
+#. Translators: Shows virtual memory usage.
+#, python-brace-format
+msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
+msgstr ""
+"Navidezni: {virtualUsed} od {virtualTotal} v uporabi ({virtualPercent}%)."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -145,10 +162,12 @@ msgid "32-bit"
 msgstr "32-bit"
 
 #. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} ({cpuBit})"
 msgstr "različica Oken: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
 msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "različica Oken: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -156,22 +175,31 @@ msgstr "različica Oken: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Naznanja različico Oken, ki jih uporabljate."
 
-#. Translators: The system's uptime
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} dni, {hoursMinutesSeconds}"
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr "Spodletela pridobitev časa sistema v delovanju"
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr "Naznani koliko časa sistem že teče."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% pomnilnikaa v uporabi, CPE na {cpuPercent}% zasedenosti."
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Spodletela pridobitev časa sistema v delovanju"
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -179,6 +207,12 @@ msgid ""
 msgstr ""
 "Predstavi pomnilnik v rabi, povprečno obremenitev procesorja in informacije "
 "o akumulatorju, če so na voljo."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% pomnilnikaa v uporabi, CPE na {cpuPercent}% zasedenosti."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -188,3 +222,6 @@ msgid ""
 msgstr ""
 "Priročni nadzornik virov poroča o obremenitvi CPE, izrabi pomnilnika, diska, "
 "o stanju porabe akumulatorja in več."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} dni, {hoursMinutesSeconds}"

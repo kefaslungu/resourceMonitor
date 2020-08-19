@@ -3,25 +3,24 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* Funguje s NVDA 2019.3 a 2020.1
+* Funguje s NVDA 2019.3 a 2020.2
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
 # Klávesové skratky #
 
-* NVDA+Shift+E oznámy využitie pamäte ram, priemerné zaťaženie procesora a
+* NVDA+Shift+E: oznámy využitie pamäte ram, priemerné zaťaženie procesora a
   stav batérie, ak je dostupná.
-* NVDA+Shift+1 oznámy vyťaženie procesora a jednotlivých jadier.
-* NVDA+Shift+2/5 povie využitú a celkovú pamäť pre fyzickú a virtuálnu ram
-  pamäť.
-* NVDA+Shift+3 povie využité a celkové miesto pre pevné a pamäťové disky
+* NVDA+Shift+1: oznámy vyťaženie procesora a jednotlivých jadier.
+* NVDA+Shift+2/5: Oznámi využitú a celkovú fyzickú a virtuálnu pamäť.
+* NVDA+Shift+3: Oznámi využité a celkové miesto pre pevné a pamäťové disky
   pripojené k počítaču.
-* NVDA+Shift+4 oznámy stav batérie v percentách, stav napájania, zostávajúci
-  čas (ak sa vybíja) a prípadne upozornenie ak je batéria vybytá alebo v
-  kritickom stave.
-* NVDA+Shift+6 prečíta architektúru procesora (32 alebo 64 bit), verziu
+* NVDA+Shift+4: oznámy stav batérie v percentách, stav napájania,
+  zostávajúci čas (ak sa vybíja) a prípadne upozornenie ak je batéria vybytá
+  alebo v kritickom stave.
+* NVDA+Shift+6: Oznámi architektúru procesora (32 alebo 64 bit), verziu
   Windows a Service packu.
-* Nvda+shift+7 Oznámi čas behu systému od posledného reštartu
+* Nvda+shift+7: Oznámi čas behu systému od posledného reštartu.
 
 Ak používate NVDA od verzie 2013.3, môžete si skratky upraviť v dialógu
 klávesové skratky.
@@ -37,6 +36,16 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 * Ak práve kopírujete veľké súbory, zistenie informácie o využití disku môže
   chvíľu trvať.
 * Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
+
+## Verzia 20.07
+
+* Pri zisťovaní verzie Windows (NVDA+Shift+6) je správne rozpoznaná verzia
+  Windows 10 20H2.
+* Skrátené zobrazenie verzie Windows.
+
+## Verzia 20.06
+
+* Opravené drobné chyby v kóde.
 
 ## Verzia 20.04
 

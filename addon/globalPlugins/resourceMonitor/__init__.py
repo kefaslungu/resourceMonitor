@@ -89,7 +89,7 @@ def size(bytes, system=traditional):
 	for factor, suffix in system:
 		if float(bytes) >= float(factor):
 			break
-	amount = float(bytes/factor)
+	amount = float(bytes / factor)
 	if isinstance(suffix, tuple):
 		singular, multiple = suffix
 		if float(amount) == 1.0:
@@ -101,7 +101,8 @@ def size(bytes, system=traditional):
 def tryTrunk(n):
 	# This method basically removes decimal zeros, so 5.0 will just be 5.
 	# If the number ends in anything other than a 0, nothing happens (if the trunkated number is not equal to the decimal).
-	if n == int(n): return int(n)
+	if n == int(n):
+		return int(n)
 	return n
 
 
@@ -127,24 +128,26 @@ def _batteryInfo(verbose=False):
 				info = _("{percent}% battery remaining, battery time unknown.").format(percent=tryTrunk(percent))
 			else:
 				# Prepare hours:minutes.
-				timeLeft = ""
-				hours, rest = divmod(secsleft, 3600)
-				minutes, seconds = divmod(rest, 60)
-				if hours > 0:
-					timeLeft += str(hours)
+				# Optimization: build components list and take away seconds as it is not required (floor division with 60).
+				timeLeft = []
+				secsleft = secsleft // 60
+				hours, minutes = divmod(secsleft, 60)
+				if hours == 1:
 					# Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-					if hours == 1: timeLeft += _(" hour, ")
+					timeLeft.append(_("1 hour"))
+				elif hours > 1:
 					# Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-					else: timeLeft += _(" hours, ")
-				timeLeft += str(minutes)
-				# Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-				if minutes == 1: timeLeft += _(" minute")
-				# Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-				else: timeLeft += _(" minutes")
+					timeLeft.append(_("{0} hours").format(hours))
+				if minutes == 1:
+					# Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+					timeLeft.append(_("1 minute"))
+				else:
+					# Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+					timeLeft.append(_("{0} minutes").format(minutes))
 				# Because psutil.sensors_battery function does not present battery flags by default, manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
 				# Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
-				info = _("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=timeLeft)
+				info = _("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=", ".join(timeLeft))
 				if batteryFlags & 2:
 					# Translators: Message reported when battery level is low.
 					info += _(" Warning: low battery.")
@@ -163,21 +166,20 @@ server10LTSBuilds = {
 
 
 def _win10RID(buildNum, isClient):
-	# Both CurrentVersion and WindowsSelfHost must be consulted.
-	# The former is the case for ReleaseID and the latter for Insider Preview detection.
+	# Special cases: Windows 10 Version 1507, Windows Server long-term servicing channel (LTSC) releases.
+	if isClient and buildNum == 10240:
+		return "Windows 10 1507"
+	elif not isClient and buildNum in server10LTSBuilds:
+		return server10LTSBuilds[buildNum]
+	# For others, both CurrentVersion and WindowsSelfHost must be consulted.
+	# The former is the case for ReleaseID (DisplayVersion in 20H2/2009 and later) and the latter for Insider Preview detection.
+	# When it comes to the actual order, check self-host flag first.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
-	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
+	# If IsRetailOS is present (an integer), it is an Insider Preview.
 	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"):
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
 	else:
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability")
-	# Version 1511 and later.
-	try:
-		releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
-	except OSError:
-		releaseID = "Unknown"
-	winreg.CloseKey(currentVersion)
-	# If IsRetailOS is present (an integer), it is an Insider Preview.
 	try:
 		isRetailOS = winreg.QueryValueEx(selfHostApplicability, "IsRetailOS")[0]
 	except OSError:
@@ -186,13 +188,24 @@ def _win10RID(buildNum, isClient):
 	# Insider Preview builds.
 	if not isRetailOS:
 		return "Windows 10 Insider" if isClient else "Windows Server Insider"
+	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
+	# Version 20H2/2009 and later where a separate display version string is used.
+	# For backward compatibility, release ID variable will store display version string.
+	try:
+		releaseID = winreg.QueryValueEx(currentVersion, "DisplayVersion")[0]
+	except OSError:
+		releaseID = None
+	# Version 1511 and later unless display version string is present.
+	if not releaseID:
+		try:
+			releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
+		except OSError:
+			releaseID = "Unknown"
+	winreg.CloseKey(currentVersion)
 	if isClient:
-		if buildNum == 10240: return "Windows 10Ver1507"
-		else: return "Windows 10Ver{0}".format(releaseID)
+		return "Windows 10 {0}".format(releaseID)
 	else:
-		if buildNum in server10LTSBuilds:
-			return server10LTSBuilds[buildNum]
-		else: return "Windows Server {0}".format(releaseID)
+		return "Windows Server {0}".format(releaseID)
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -228,7 +241,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info): ui.message(self.RMCopyMessage)
+			if api.copyToClip(info):
+				ui.message(self.RMCopyMessage)
 
 	@scriptHandler.script(
 		# Translators: Input help message about drive info command in Resource Monitor.
@@ -249,7 +263,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
 		else:
-			if api.copyToClip(" ".join(info)): ui.message(self.RMCopyMessage)
+			if api.copyToClip(" ".join(info)):
+				ui.message(self.RMCopyMessage)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about processor info command in Resource Monitor.
@@ -270,14 +285,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			#skip a core if its load is below our minimum
 			if perCpuLoad[i] <= minCoreLoad:
 				continue
+		coreLoad = [
 			# Translators: Shows average load of CPU cores (example: core 1, 50%).
-			coreLoad.append(_("Core {coreNumber}: {corePercent}%").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i])))
+			_("Core {coreNumber}: {corePercent}%").format(coreNumber=core, corePercent=tryTrunk(cpuLoad))
+			# Start counting at 1, and even then, all items will be visited.
+			for core, cpuLoad in enumerate(perCpuLoad, start=1)
+		]
 		# Translators: Shows average load of the processor and the load for each core.
 		info = _("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info): ui.message(self.RMCopyMessage)
+			if api.copyToClip(info):
+				ui.message(self.RMCopyMessage)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about memory info command in Resource Monitor.
@@ -294,7 +314,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info): ui.message(self.RMCopyMessage)
+			if api.copyToClip(info):
+				ui.message(self.RMCopyMessage)
 
 	def getWinVer(self):
 		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
@@ -302,9 +323,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"), ""
 		# Determine Windows version.
 		if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-			if winMinor == 1: winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2"  # Windows 7
-			elif winMinor == 2: winverName = "Windows 8" if server == 1 else "Windows Server 2012"  # Windows 8.
-			elif winMinor == 3: winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2"  # Windows 8.1.
+			if winMinor == 1:  # Windows 7
+				winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2"
+			elif winMinor == 2:  # Windows 8.
+				winverName = "Windows 8" if server == 1 else "Windows Server 2012"
+			elif winMinor == 3:  # Windows 8.1.
+				winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2"
 		elif winMajor == 10:  # Windows 10/Server 2016 (10.0) and beyond.
 			# Also take care of release ID, introduced in Version 1511.
 			buildNum = sys.getwindowsversion().build
@@ -312,16 +336,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
 			winreg.CloseKey(currentVersion)
 			winverName = _win10RID(buildNum, server == 1)
-			buildRevision = ".".join([str(buildNum), str(ubr)])
-		# Translators: Presented under 64-bit Windows.
-		if is64Bit: x64 = _("64-bit")
-		# Translators: Presented under 32-bit Windows.
-		else: x64 = _("32-bit")
-		# Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-		if not sp: info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion=winverName, cpuBit=x64)
-		# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-		else: info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion=winverName, servicePackLevel=sp, cpuBit=x64)
-		if (winMajor, winMinor) == (10, 0): info = info + " build {build}".format(build=buildRevision)
+			buildRevision = f"{buildNum}.{ubr}"
+		if is64Bit:
+			# Translators: Presented under 64-bit Windows.
+			x64 = _("64-bit")
+		else:
+			# Translators: Presented under 32-bit Windows.
+			x64 = _("32-bit")
+		if not sp:
+			# Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+			info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion=winverName, cpuBit=x64)
+		else:
+			# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+			info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion=winverName, servicePackLevel=sp, cpuBit=x64)
+		if (winMajor, winMinor) == (10, 0):
+			info += " build {build}".format(build=buildRevision)
 		return info
 
 	@scriptHandler.script(
@@ -334,7 +363,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info): ui.message(self.RMCopyMessage)
+			if api.copyToClip(info):
+				ui.message(self.RMCopyMessage)
 
 	def getUptime(self):
 		bootTimestamp = psutil.boot_time()
@@ -343,9 +373,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
-		hoursMinutesSeconds = "{hours:02}:{minutes:02}:{seconds:02}".format(hours=hours, minutes=minutes, seconds=seconds)
-		# Translators: The system's uptime
-		return _("{days} days, {hoursMinutesSeconds}").format(days=uptime.days, hoursMinutesSeconds=hoursMinutesSeconds)
+		uptimeComponents = []
+		if uptime.days == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("1 day"))
+		else:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} days").format(uptime.days))
+		if hours == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("1 hour"))
+		else:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} hours").format(hours))
+		if minutes == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("1 minute"))
+		else:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} minutes").format(minutes))
+		if seconds == 1:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("1 second"))
+		else:
+			# Translators: system uptime in hours.
+			uptimeComponents.append(_("{0} seconds").format(seconds))
+		return ", ".join(uptimeComponents)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about obtaining the system's uptime
@@ -374,7 +427,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 		info = [(_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())))]
 		batteryInfo = _batteryInfo()
-		if batteryInfo is not None: info.append(batteryInfo)
+		if batteryInfo is not None:
+			info.append(batteryInfo)
 		ui.message(" ".join(info))
 
 class ResourceMonitorSettings(gui.settingsDialogs.SettingsPanel):

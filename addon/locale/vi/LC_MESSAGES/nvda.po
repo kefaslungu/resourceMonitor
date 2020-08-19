@@ -47,19 +47,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "pin còn lại {percent}%, Thời gian pin không xác định."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " giờ, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " giờ, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " phút"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " phút"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -93,6 +101,14 @@ msgstr ""
 "Thông báo tình trạng pin, ví dụ như đang sạc, thời gian còn lại, tình trạng "
 "pin yếu hoặc khi gần hết pin."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"Thông báo không gian lưu trữ tổng và không gian đã sử dụng của ổ đĩa được "
+"kết nối với máy."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -101,13 +117,9 @@ msgstr ""
 "{driveName} (ổ đĩa {driveType}): {usedSpace} của {totalSpace} được sử dụng "
 "{percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Thông báo không gian lưu trữ tổng và không gian đã sử dụng của ổ đĩa được "
-"kết nối với máy."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "Thông báo tình trạng tải trung bình của bộ xử lý và của mỗi nhân."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -119,9 +131,9 @@ msgstr "Nhân {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Tải trung bình của CPU {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "Thông báo tình trạng tải trung bình của bộ xử lý và của mỗi nhân."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "Thông báo tình trạng bộ nhớ RAM vật lý và ảo."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -134,10 +146,6 @@ msgstr ""
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Ảo: {virtualUsed} của {virtualTotal} được sử dụng ({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Thông báo tình trạng bộ nhớ RAM vật lý và ảo."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -161,29 +169,42 @@ msgstr "Phiên bản Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Thông báo phiên bản Windows bạn đang sử dụng."
 
-#. Translators: The system's uptime
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
+
+#. Translators: system uptime in hours.
 #, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} ngày, {hoursMinutesSeconds}"
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "Thông báo thời gian chạy của hệ thống."
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
 msgstr "Không tìm thấy thời gian chạy của hệ thống"
 
-#. Translators: Input help mode message about obtaining the system's uptime
-msgid "Announces the system's uptime."
-msgstr "Thông báo thời gian chạy của hệ thống."
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr "Thông báo tình trạng pin, bộ nhớ RAM và tốc độ tải trung bình của CPU"
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM được sử dụng, {cpuPercent}% CPU được tải."
-
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr "Thông báo tình trạng pin, bộ nhớ RAM và tốc độ tải trung bình của CPU"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -193,3 +214,6 @@ msgid ""
 msgstr ""
 "Add-on này dùng để thông báo tình trạng sử dụng các thiết bị của máy, bao "
 "gồm: CPU, RAM, ổ đĩa và pin."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} ngày, {hoursMinutesSeconds}"

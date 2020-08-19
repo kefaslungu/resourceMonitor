@@ -1,31 +1,31 @@
-# Monitor de Recursos ()Resource Monitor #
+# Monitor de Recursos (Resource Monitor) #
 
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* Compatibilidade com NVDA: 2019.3 a 2020.1
+* Compatibilidade com NVDA: 2019.3 a 2020.2
 
-Este complemento fornece informações sobre carga de CPU, uso de memória e
+Esse complemento fornece informações sobre carga da CPU, uso de memória e
 outras informações de uso de recursos.
 
 # Atalhos #
 
-* NVDA+Shift+E mostra uso da RAM, carga média do processador e informações
-  de bateria caso disponíveis.
-* NVDA+Shift+1 Mostra a carga média do processador e caso se tratem de CPUs
-  multinúcleo mostra a carga de cada núcleo.
-* NVDA+Shift+2/5 Mostra espaço usado e total das memórias RAM física e
+* NVDA+Shift+E: apresenta uso da ram (memória), carga média do processador,
+  e informações de bateria caso disponível.
+* NVDA+Shift+1: apresenta a carga média do processador e caso se tratem de
+  CPUs multinúcleo (multicore) mostra a carga de cada núcleo.
+* NVDA+Shift+2/5: apresenta espaço usado e total das memórias ram física e
   virtual.
-* NVDA+Shift+3 Mostra espaço usado e o total das unidades fixas e
+* NVDA+Shift+3: apresenta espaço usado e o total das unidades fixas e
   removíveis.
-* NVDA+Shift+4 Mostra porcentagem da bateria, status de carga, tempo
+* NVDA+Shift+4: apresenta porcentagem da bateria, status de carga, tempo
   restante (se não estiver carregando) e alerta caso a bateria esteja baixa
   ou crítica.
-* NVDA+Shift+6 apresenta arquitetura da CPU (32/64-bit) e a versão de
+* NVDA+Shift+6: apresenta arquitetura da CPU (32/64-bit) e a versão de
   Windows com números do service pack.
-* NVDA+Shift+7 apresenta o tempo desde a inicialização do sistema.
+* NVDA+Shift+7: apresenta o tempo desde a inicialização do sistema.
 
-Caso tenha o NVDA 2013.3 ou posterior instalado, poderá alterar essas teclas
+Caso tenha o NvDA 2013.3 ou posterior instalado, poderá alterar essas teclas
 de atalho através do diálogo definir comandos (gestos de entrada).
 
 ## Notas de uso ##
@@ -39,6 +39,18 @@ de informações de sistema para Windows. Note também o seguinte:
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
+
+## Versão 20.07
+
+* O Windows 10 versão 20H2 é reconhecido corretamente ao obter informações
+  sobre a versão do Windows (NVDA+Shift+6).
+* Mensagem simplificada da versão do Windows 10, ou seja, Windows 10 AAMM em
+  vez de Windows 10verAAMM ao pressionar NVDA+Shift+6.
+
+## Versão 20.06
+
+* Foram resolvidos muitos problemas de estilo de codificação e possíveis
+  erros com o Flake8.
 
 ## Versão 20.04
 
@@ -71,7 +83,7 @@ de informações de sistema para Windows. Note também o seguinte:
   RAM ou tamanho de disco.
 * Os valores para uso de memória e disco são mostrados com até duas casas
   decimais (por exemplo, 4,00 GB em vez de 4,0 GB).
-* Detecção aprimorada de construções — builds — do Windows Insider Preview.
+* Detecção aprimorada de construções (builds) do Windows Insider Preview.
 
 ## Versão 18.04
 
@@ -79,8 +91,8 @@ Versão 18.04.x é a última versão a suportar versões anteriores ao Windows 7
 SP1.
 
 * Última versão para suporte ao Windows Server 2003, Vista e Server 2008.
-* Melhor detecção de versões do Windows 10 e distinção entre construções —
-  builds — públicas e Insider Preview.
+* Melhor detecção de versões do Windows 10 e distinção entre construções
+  (builds) públicas e Insider Preview.
 
 ## Versão 17.12
 
@@ -166,7 +178,7 @@ como ano.mês.revisão.
 
 * Acrescentadas as seguintes traduções: Árabe, Alemão, Aragonês, Coreano,
   Croata, Eslovaco, Esloveno, Espanhol, Finlandês, Francês, Galego,
-  Holandês, Húngaro, Japonês, Italiano, Nepalês, Português do Brasil, Russo,
+  Holandês, Húngaro, Japonês, Italiano, Nepalês, Português (Brasil), Russo,
   Tâmil e Turco.
 
 ## Mudanças na 2.1 ##
@@ -181,7 +193,7 @@ como ano.mês.revisão.
 
 ## Mudanças na 1.0 ##
 
-* Primeira versão
+* Versão Inicial
 
 [[!tag dev stable]]
 

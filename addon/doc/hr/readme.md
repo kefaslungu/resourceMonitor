@@ -3,25 +3,25 @@
 * Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA kompatibilnost: 2019.3 do 2020.1
+* NVDA kompatibilnost: 2019.3 do 2020.2
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
 
 # Prečaci #
 
-* NVDA+šift+E Prikazuje korištenje ram memorije, prosječno opterećenje
+* NVDA+šift+E: Prikazuje korištenje ram memorije, prosječno opterećenje
   procesora i informacije o stanju baterije, ako su dostupne.
-* NVDA+šift+1 Prikazuje prosječnu opterećenost procesora i ako postoje
+* NVDA+šift+1: Prikazuje prosječnu opterećenost procesora i ako postoje
   višejezgreni procesori, prikazuje opterećenje svake jezgre.
-* NVDA+šift+2/5 Prikazuje iskorišten i ukupni kapacitet fizičke I virtualne
+* NVDA+šift+2/5: Prikazuje iskorišten i ukupni kapacitet fizičke I virtualne
   ram memorije.
-* NVDA+šift+3 Prikazuje iskorišten i ukupni prostor na statičnim i
+* NVDA+šift+3: Prikazuje iskorišten i ukupni prostor na statičnim i
   prenosivim diskovima.
-* NVDA+šift+4 Prikazuje postotak baterije, status punjenja, preostalo
+* NVDA+šift+4: Prikazuje postotak baterije, status punjenja, preostalo
   vrijeme (ako se ne puni), te upozorenje, ako je baterija slaba ili skoro
   prazna.
-* NVDA+šift+6 Prikazuje strukturu procesora (32-64-bitni), verziju Windowsa
+* NVDA+šift+6: Prikazuje strukturu procesora (32-64-bitni), verziju Windowsa
   i broj service paketa.
 * NVDA+šift+7: Prikazuje trajanje pokretanja sustava.
 
@@ -40,6 +40,18 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
+
+## Verzija 20.07
+
+* Windows 10 verzija 20H2 pravilno se prepoznaje prilikom dohvaćanja
+  podataka o Windows verziji (NVDA+šift+6).
+* Pojednostavljena poruka verzije sustava Windows 10, tj. Windows 10 YYMM
+  umjesto Windows 10verYYMM kad se pritisne NVDA+šift+6.
+
+## Verzija 20.06
+
+* Riješeni su mnogi problemi sa stilom kodiranja i potencijalnih grešaka sa
+  Flake8.
 
 ## Verzija 20.04
 

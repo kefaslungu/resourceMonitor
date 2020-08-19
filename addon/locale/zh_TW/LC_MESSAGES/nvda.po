@@ -43,19 +43,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "電池電量{percent}%， 剩餘時間{time}。"
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr "小時"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr "小時"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr "分"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr "分"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -87,6 +95,12 @@ msgid ""
 "charging), and a warning if the battery is low or critical."
 msgstr "顯示電池電量及充電狀態。未充電時顯示剩餘時間，電池電量低時顯示警告。"
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr "顯示電腦上本機磁碟及卸除是磁碟的總計空間及已用空間。"
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -95,11 +109,9 @@ msgstr ""
 "{driveName} (檔案系統 {driveType}): 大小 {totalSpace}, 已使用 {usedSpace}, 使"
 "用率 {percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr "顯示電腦上本機磁碟及卸除是磁碟的總計空間及已用空間。"
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "顯示 CPU 平均使用率及每個核心的使用情形。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -111,9 +123,9 @@ msgstr "核心 {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "CPU 使用率 {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "顯示 CPU 平均使用率及每個核心的使用情形。"
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "顯示實體/虛擬記憶體的總計空間及已用空間。"
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -128,10 +140,6 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "虛擬記憶體: 大小 {virtualTotal}, 已使用 {virtualUsed}, 使用率 "
 "{virtualPercent}%."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "顯示實體/虛擬記憶體的總計空間及已用空間。"
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -155,18 +163,36 @@ msgstr "Windows 版本: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "顯示目前使用的 Windows  版本。"
 
-#. Translators: The system's uptime
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
+
+#. Translators: system uptime in hours.
 #, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days}天，{hoursMinutesSeconds}"
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "顯示系統執行時間。"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
 msgstr "無法獲得系統運行時間。"
 
-#. Translators: Input help mode message about obtaining the system's uptime
-msgid "Announces the system's uptime."
-msgstr "顯示系統執行時間。"
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr "顯示記憶體及 CPU 使用率，如有電池訊息也一併顯示。"
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
@@ -174,14 +200,12 @@ msgstr "顯示系統執行時間。"
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "記憶體使用率 {ramPercent}%, CPU 使用率 {cpuPercent}%."
 
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr "顯示記憶體及 CPU 使用率，如有電池訊息也一併顯示。"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr "此資源監控元件能讀出 CPU 負載，記憶體、電池、磁碟使用情形。"
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days}天，{hoursMinutesSeconds}"

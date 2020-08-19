@@ -3,7 +3,7 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* Yhteensopivuus: NVDA 2019.3-2020.1
+* Yhteensopivuus: NVDA 2019.3-2020.2
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -11,9 +11,10 @@ resurssien käytöstä.
 # Pikanäppäimet #
 
 * NVDA+Vaihto+E: Lukee käytetyn RAM-muistin määrän, suorittimen
-  keskimääräisen kuormituksen ja akun tiedot, mikäli sellainen on käytössä.
-* NVDA+Vaihto+1: Lukee suorittimen ja ydinten keskimääräisen kuormituksen,
-  mikäli käytössä on moniydinsuoritin.
+  keskimääräisen kuormituksen sekä akun tiedot, mikäli sellainen on
+  käytettävissä.
+* NVDA+Vaihto+1: Lukee suorittimen keskimääräisen kuormituksen, ja mikäli
+  käytössä on moniydinsuoritin, myös ytimien kuormituksen.
 * NVDA+Vaihto+2/5: Lukee sekä fyysisen että näennäisen RAM-muistin käytetyn
   ja kokonaismäärän.
 * NVDA+Vaihto+3: Lukee kiintolevyjen ja siirrettävien asemien käytetyn ja
@@ -25,8 +26,8 @@ resurssien käytöstä.
   sekä Windowsin ja Service Packin version.
 * NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
 
-Mikäli käytössäsi on NVDA 2013.3 tai uudempi, voit muuttaa näitä
-pikanäppäimiä Syötekomennot-valintaikkunasta.
+Jos käytössäsi on NVDA 2013.3 tai uudempi, voit muuttaa näitä pikanäppäimiä
+Syötekomennot-valintaikkunasta.
 
 ## Huomautuksia käytöstä ##
 
@@ -39,6 +40,18 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
+
+## Versio 20.07
+
+* Windows 10:n versio 20H2 tunnistetaan oikein Windowsin versiotietoja
+  haettaessa (NVDA+Vaihto+6).
+* Yksinkertaistettu Windows 10:n versioviestiä painettaessa NVDA+Vaihto+6,
+  esim. Windows 10verVVKK:n:n asemesta Windows 10 VVKK.
+
+## Versio 20.06
+
+* Ratkaistu useita koodaustyylin ongelmia sekä mahdollisia bugeja Flake8:n
+  kanssa.
 
 ## Versio 20.04
 

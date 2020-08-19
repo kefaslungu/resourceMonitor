@@ -3,27 +3,27 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
-* Compatibilidad con NVDA: de 2019.3 a 2020.1
+* Compatibilidad con NVDA: de 2019.3 a 2020.2
 
 Este plugin nos da información acerca de la carga de la CPU, de la
 utilización de la memoria y de otra información de uso de recursos.
 
 # Atajos de teclado #
 
-* NVDA+Shift+E Presenta la ram utilizada, la carga promedio del procesador,
+* NVDA+Shift+E: Presenta la ram utilizada, la carga promedio del procesador,
   e información de la batería si está disponible.
-* NVDA+Shift+1 Presenta la carga promedio del procesador y el promedio de la
-  carga de cada uno de los núcleos si los hay.
-* NVDA+Shift+2/5 Presenta el espacio utilizado y total de la RAM física y
+* NVDA+Shift+1: Presenta la carga promedio del procesador y el promedio de
+  la carga de cada uno de los núcleos si los hay.
+* NVDA+Shift+2/5: Presenta el espacio utilizado y total de la RAM física y
   virtual.
-* NVDA+Shift+3 Presenta el espacio utilizado y el total de las unidades
+* NVDA+Shift+3: Presenta el espacio utilizado y el total de las unidades
   estáticas y extraíbles.
-* NVDA+Shift+4 Presenta el porcentaje de la batería, el estado de la carga,
-  el tiempo restante (si no se está cargando), y una advertencia si
-  la. batería está baja o crítica.
-* NVDA+Shift+6 Presenta la Arquitectura 32/64-bit de la CPU y la versión de
+* NVDA+Shift+4: Presenta el porcentaje de la batería, el estado de la carga,
+  el tiempo restante (si no se está cargando), y una advertencia si la
+  batería está baja o crítica.
+* NVDA+Shift+6: Presenta la Arquitectura 32/64-bit de la CPU y la versión de
   Windows y el número del Service Pack.
-* NVDA+Shift+7 presenta el tiempo de actividad del sistema.
+* NVDA+Shift+7: presenta el tiempo de actividad del sistema.
 
 Si tienes NVDA 2013.3 o una versión posterior instalada, puedes cambiar
 estas teclas de acceso directo desde el diálogo Gestos de entrada.
@@ -40,6 +40,18 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 * Si hay una actividad pesada de disco tal como el copiado de ficheros
   grandes, podría haber retrasos al obtener información de uso de disco.
 * Este complemento necesita Windows 7 Service Pack 1 o posterior.
+
+## Versión 20.07
+
+* Al obtener información sobre la versión de Windows (NVDA+shift+6), se
+  reconoce adecuadamente la versión 20H2 de Windows 10.
+* Simplificado el mensaje de versión de Windows 10 al pulsar
+  NVDA+shift+6. Ahora será Windows 10 AAMM en vez de Windows 10 ver AAMM.
+
+## Versión 20.06
+
+* Se han resuelto muchos problemas de estilo del código y fallos potenciales
+  con Flake8.
 
 ## Versión 20.04
 

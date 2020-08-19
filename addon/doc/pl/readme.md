@@ -3,7 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* NVDA compatibility: 2019.3 to 2020.1
+* Zgodność z wersjami NVDA: 2019.3 to 2020.2
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -25,8 +25,8 @@ także wykorzystaniu innych zasobów.
   bity procesora (32 lub 64 bity).
 * NVDA+Shift+7 Pokazuje czas pracy systemu.
 
-jeśli masz NVDA 2013.3 lub nowszą, możesz zmienić te skróty klawiaturowe
-poprzez okno dialogowe zdarzeń wejściowych.
+Jeśli używasz NvDA 2013.3 lub nowszą możesz zmienić te skróty klawiaturowe z
+poziomu okna dialogowego zdarzenia wejścia.
 
 ## Uwagi o użytkowaniu ##
 
@@ -41,9 +41,20 @@ następujące kwestie:
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
 
-## Version 20.04
+## Wersja 20.04
 
-* Updated psutil dependency to 5.7.0.
+* Windows 10 wersja 20H2 jest poprawnie rozpoznawana przy dostarczaniu
+  informacji o wersji za pomocą skrótu (NVDA+Shift+6).
+* Uproszczony komunikato o werji Windows Na przykład: Windows 10 YYMM
+  instead of Windows 10verYYMM when pressing NVDA+Shift+6.
+
+## Wersja 20.06
+
+* Naprawiono błędy związane z stylem kodu oraz linterem flake8.
+
+## Wersja 20.04
+
+* Zaktualizowano zależność psutil dependency to 5.7.0.
 
 ## Wersja 20.01
 

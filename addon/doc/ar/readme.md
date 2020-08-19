@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * تحميل [الإصدار النهائي][1]
-* NVDA compatibility: 2019.3 to 2020.1
+* NVDA compatibility: 2019.3 to 2020.2
 
 This add-on gives information about CPU load, memory usage and other
 resource usage information.
@@ -39,6 +39,10 @@ keys via input gestures dialog.
 * If there is heavy disk activity such as copying large files, there might
   be delays when obtaining disk usage information.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.06
+
+* Resolved many coding style issues and potential bugs with Flake8.
 
 ## Version 20.04
 

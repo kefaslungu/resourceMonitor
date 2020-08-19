@@ -48,19 +48,27 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent} אחוזי סוללה נותרו . זמן שימוש משואר :{time} ."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 hour"
 msgstr " שעה, "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} hours"
 msgstr " שעות, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
+#. Translators: system uptime in hours.
+#, fuzzy
+msgid "1 minute"
 msgstr " דקה"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
+#. Translators: system uptime in hours.
+#, fuzzy, python-brace-format
+msgid "{0} minutes"
 msgstr " דקות"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
@@ -94,6 +102,12 @@ msgstr ""
 "מציג את רמת הטעינה של הסוללה,  מצב הטעינה,  הזמן הנותר לשימוש, ומזהיר במקרה "
 "של טעינה מנוכה באופן סביר או קיצוני."
 
+#. Translators: Input help message about drive info command in Resource Monitor.
+msgid ""
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr "מציג את השטח בשימוש של הכוננים הקשיחים והנתיקים במחשב זה."
+
 #. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
@@ -102,11 +116,9 @@ msgstr ""
 "{driveName}  (כונן  {driveType} ( שטח בשימוש   {usedSpace}מתוך  "
 "{totalSpace}  {percent}%."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr "מציג את השטח בשימוש של הכוננים הקשיחים והנתיקים במחשב זה."
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "מציג את השימוש הממוצע במעבד ובכל אחת מהליבות."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -118,9 +130,9 @@ msgstr "Core {coreNumber}: {corePercent}%"
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "שימוש ממוצע במעבד:  {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "מציג את השימוש הממוצע במעבד ובכל אחת מהליבות."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "מציג את השימוש בזכרון הפיזי והווירטואלי."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -133,10 +145,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "זכרון וירטואלי: {virtualUsed} מתוך {virtualTotal} בשימוש ({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "מציג את השימוש בזכרון הפיזי והווירטואלי."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -160,29 +168,42 @@ msgstr "גרסת מערכת הפעלה {winVersion} {servicePackLevel} ({cpuBit}
 msgid "Announces the version of Windows you are using."
 msgstr "מקריא את גרסת מערכת ההפעלה ."
 
-#. Translators: The system's uptime
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr ""
+
+#. Translators: system uptime in hours.
 #, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr "{days} ימים, {hoursMinutesSeconds}"
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr ""
+
+#. Translators: Input help mode message about obtaining the system's uptime
+msgid "Announces the system's uptime."
+msgstr "מכריז על זמן הפעילות של המערכת."
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
 msgstr "נכשל הניסיון לקבל את זמן הפעילות של המערכת."
 
-#. Translators: Input help mode message about obtaining the system's uptime
-msgid "Announces the system's uptime."
-msgstr "מכריז על זמן הפעילות של המערכת."
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
+msgstr "מציג את רמת השימוש בזכרון, במעבד ובסוללה, אם יש כזאת."
 
 #. Faster to build info on the fly rather than keep appending to a string.
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "שימוש בזכרון: {ramPercent}%  שמוש במעבד: {cpuPercent}%."
-
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr "מציג את רמת השימוש בזכרון, במעבד ובסוללה, אם יש כזאת."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -192,3 +213,6 @@ msgid ""
 msgstr ""
 "מציג דוח משאבים נגיש המפרט את רמת השימוש בזכרון, במעבד ובסוללה וכן מידע "
 "אודות שטח האיחסון בכונני הדיסקים."
+
+#~ msgid "{days} days, {hoursMinutesSeconds}"
+#~ msgstr "{days} ימים, {hoursMinutesSeconds}"
