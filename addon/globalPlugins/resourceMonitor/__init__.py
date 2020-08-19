@@ -13,6 +13,7 @@ import api
 import scriptHandler
 import config
 import gui
+import wx
 from . import psutil
 import addonHandler
 addonHandler.initTranslation()
@@ -260,7 +261,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Lists load for each core
 		perCpuLoad = psutil.cpu_percent(percpu=True)
 		coreLoad = []
+		minCoreLoad = config.conf[self.configTag]["minCoreLoad"]
+		try:
+			minCoreLoad = float(minCoreLoad)
+		except ValueError:
+			minCoreLoad = 1.0
 		for i in range(len(perCpuLoad)):
+			#skip a core if its load is below our minimum
+			if perCpuLoad[i] <= minCoreLoad:
+				continue
 			# Translators: Shows average load of CPU cores (example: core 1, 50%).
 			coreLoad.append(_("Core {coreNumber}: {corePercent}%").format(coreNumber=str(i+1), corePercent=tryTrunk(perCpuLoad[i])))
 		# Translators: Shows average load of the processor and the load for each core.
@@ -375,10 +384,11 @@ class ResourceMonitorSettings(gui.settingsDialogs.SettingsPanel):
 		# translators: label for the control below whose value a CPU core's load is not output
 		minCoreLoadLabel = _("Skip speaking CPU cores at or below this load (in GhZ):")
 		settingsDialog = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		self.minCoreLoad = settingsDialog.addLabeledControl(minCoreLoadLabel, gui.nvdaControls.SelectOnFocusSpinCtrl, min=0.0, max=100.0, step=0.1, initial=config.conf[GlobalPlugin.configTag]["minCoreLoad"])
+		currentMinCoreLoadValue = config.conf[GlobalPlugin.configTag]["minCoreLoad"]
+		self.minCoreLoadTextField = settingsDialog.addItem(wx.TextCtrl(self, name=minCoreLoadLabel, value=currentMinCoreLoadValue.__str__()))
 	
 	def onSave(self):
-		config.conf[GlobalPlugin.configTag]["minCoreLoad"] = self.minCoreLoad
+		config.conf[GlobalPlugin.configTag]["minCoreLoad"] = self.minCoreLoadTextField.GetValue()
 
 
 #spec for use with the configuration system
