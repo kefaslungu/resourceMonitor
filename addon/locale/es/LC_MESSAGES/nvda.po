@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-07-14 20:24-0700\n"
+"PO-Revision-Date: 2020-08-14 11:18+0200\n"
 "Last-Translator: José Manuel Delicado <jmdaweb@hotmail.com>\n"
 "Language-Team: Spanish NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -48,27 +48,25 @@ msgstr "{percent}% batería restante, tiempo restante desconocido."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr " hora, "
+msgstr "una hora"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr " horas, "
+msgstr "{0} horas"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 minute"
-msgstr " minuto"
+msgstr "un minuto"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr " minutos"
+msgstr "{0} minutos"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
@@ -172,21 +170,21 @@ msgstr "Anuncia la versión de Windows que estés utilizando."
 
 #. Translators: system uptime in hours.
 msgid "1 day"
-msgstr ""
+msgstr "un día"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} días"
 
 #. Translators: system uptime in hours.
 msgid "1 second"
-msgstr ""
+msgstr "un segundo"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} segundos"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."

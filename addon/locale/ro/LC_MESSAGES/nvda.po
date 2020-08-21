@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2020-01-04 16:38+0200\n"
+"PO-Revision-Date: 2020-08-16 16:41+0300\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -48,27 +48,25 @@ msgstr "{percent}% din baterie rămasă, timpul bateriei este necunoscut."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr " oră, "
+msgstr "O oră"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr " ore, "
+msgstr "{0} ore"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 minute"
-msgstr " minut"
+msgstr "Un minut"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr " minute"
+msgstr "{0} minute"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
@@ -176,21 +174,21 @@ msgstr "Anunță versiunea de Windows pe care o folosiți."
 
 #. Translators: system uptime in hours.
 msgid "1 day"
-msgstr ""
+msgstr "O zi"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} zile"
 
 #. Translators: system uptime in hours.
 msgid "1 second"
-msgstr ""
+msgstr "O secundă"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} secunde"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-09-12 23:09+1000\n"
-"PO-Revision-Date: 2019-12-15 19:03+0100\n"
+"PO-Revision-Date: 2020-08-14 19:06+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -48,27 +48,25 @@ msgstr "{percent}% baterije preostalo, vreme trajanja baterije nepoznato."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr "sat"
+msgstr "Jedan sat"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr "sata"
+msgstr "{0} sata"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 minute"
-msgstr "minut"
+msgstr "1 minut"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr "minuta"
+msgstr "{0} minuta"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
@@ -170,21 +168,21 @@ msgstr "izgovara windows verziju koju koristite "
 
 #. Translators: system uptime in hours.
 msgid "1 day"
-msgstr ""
+msgstr "1 dan"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} dana"
 
 #. Translators: system uptime in hours.
 msgid "1 second"
-msgstr ""
+msgstr "jedna sekunda"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} sekundi"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
