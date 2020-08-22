@@ -26,6 +26,10 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * This add-on requires Windows 7 Service Pack 1 or later.
 
+## Version 20.09
+
+* System uptime is now given as days, hours, minutes, seconds.
+
 ## Version 20.07
 
 * Windows 10 Version 20H2 is properly recognized when obtaining Windows version information (NVDA+Shift+6).
