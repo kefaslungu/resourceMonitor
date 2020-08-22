@@ -6,7 +6,7 @@
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
-# Shortcuts #
+# Shortcuts
 
 * NVDA+Shift+E: presents used ram, average processor load, and battery info if available.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
@@ -18,7 +18,7 @@ This add-on gives information about CPU load, memory usage and other resource us
 
 If you have NvDA 2013.3 or later installed, you can change these shortcut keys via input gestures dialog.
 
-## Usage notes ##
+## Usage notes
 
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
@@ -107,12 +107,12 @@ Starting with version 16.08, add-on releases will be shown as year.month.revisio
 * Windows 10 build revisions (after installing cumulative updates) are properly recognized (such as 14393.51).
 * If using Insider Preview builds, this fact is recognized.
 
-## Changes for 4.5 ##
+## Changes for 4.5
 
 * Add-on repository has moved to GitHub (can be found at https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016 is properly recognized.
 
-## Changes for 4.0 ##
+## Changes for 4.0
 
 * Updated psutil dependency to 2.2.1.
 * Vastly improved performance when obtaining information on CPU load.
@@ -120,42 +120,42 @@ Starting with version 16.08, add-on releases will be shown as year.month.revisio
 * In Windows 10, the build number of Windows will also be announced.
 * You can use Add-ons Manager to access add-on help.
 
-## Changes for 3.1 ##
+## Changes for 3.1
 
 * Resource Monitor officially supports Windows 8.1.
 * Updated translations.
 
-## Changes for 3.0 ##
+## Changes for 3.0
 
 * Updated psutil dependency to 1.2.1.
 * Announcement of current Windows version, CPU architecture and service pack if any (NVDA+Shift+6).
 * Ability to change add-on shortcut keys (NVDA 2013.3 or later).
 * Ability to copy individual resource information to clipboard by pressing resource commands two times.
 
-## Changes for 2.4 ##
+## Changes for 2.4
 
 * New languages: Chinese (simplified), Ukrainian.
 * Updated translations.
 
-## Changes for 2.3 ##
+## Changes for 2.3
 
 * Added Bulgarian translation.
 
-## Changes for 2.2 ##
+## Changes for 2.2
 
 * Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish, French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali, Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil and Turkish.
 
-## Changes for 2.1 ##
+## Changes for 2.1
 
 * Updated psutil dependency to version 0.6.1.
 * Fixed long delay when getting information of drives.
 * Code cleanup.
 
-## Changes for 2.0 ##
+## Changes for 2.0
 
 * added translation support and translation comments.
 
-## Changes for 1.0 ##
+## Changes for 1.0
 
 * Initial Release
 
