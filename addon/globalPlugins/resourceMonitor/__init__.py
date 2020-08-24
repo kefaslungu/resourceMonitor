@@ -1,4 +1,4 @@
-# Resource Monitor for NvDA
+# Resource Monitor for NVDA
 # Presents basic info on CPU load, memory and disk usage, as well as battery information.
 # Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
 # Copyright 2013-2020, released under GPL.
