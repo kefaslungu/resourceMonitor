@@ -16,7 +16,7 @@ This add-on gives information about CPU load, memory usage and other resource us
 * NVDA+Shift+6: presents  CPU Architecture 32/64-bit and Windows version and service pack numbers.
 * NVDA+Shift+7: presents the system's uptime.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut keys via input gestures dialog.
+If you have NVDA 2013.3 or later installed, you can change these shortcut keys via input gestures dialog.
 
 ## Usage notes
 
