@@ -169,11 +169,10 @@ def _win10RID(buildNum, isClient):
 		return "Windows 10 1507"
 	elif not isClient and buildNum in server10LTSBuilds:
 		return server10LTSBuilds[buildNum]
-	# For others, both CurrentVersion and WindowsSelfHost must be consulted.
-	# The former is the case for ReleaseID (DisplayVersion in 20H2/2009 and later) and the latter for Insider Preview detection.
-	# When it comes to the actual order, check self-host flag first.
+	# Since late 2019 (and confirmed with Server vNext build 20201), "rs_prerelease" branch designates dev channel build.
+	# Note that in some cases Insider Preview builds may come from what may appear to be feature update branch such as mn_release for 20H2 Azure release.
+	# If self-host IsRetailOS flag is present (an integer), it is an Insider Preview.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
-	# If IsRetailOS is present (an integer), it is an Insider Preview.
 	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"):
 		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
 	else:
@@ -183,10 +182,13 @@ def _win10RID(buildNum, isClient):
 	except OSError:
 		isRetailOS = 1
 	winreg.CloseKey(selfHostApplicability)
-	# Insider Preview builds.
-	if not isRetailOS:
-		return "Windows 10 Insider" if isClient else "Windows Server Insider"
 	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
+	try:
+		buildBranch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
+	except OSError:
+		buildBranch = None
+	if isRetailOS:
+		isRetailOS = buildBranch and not buildBranch.startswith("rs_prerelease")
 	# Version 20H2/2009 and later where a separate display version string is used.
 	# For backward compatibility, release ID variable will store display version string.
 	try:
@@ -200,6 +202,9 @@ def _win10RID(buildNum, isClient):
 		except OSError:
 			releaseID = "Unknown"
 	winreg.CloseKey(currentVersion)
+	# Insider Preview builds.
+	if not isRetailOS:
+		return "Windows 10 Insider" if isClient else "Windows Server Insider"
 	if isClient:
 		return "Windows 10 {0}".format(releaseID)
 	else:
