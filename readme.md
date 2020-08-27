@@ -29,6 +29,7 @@ This add-on does not replace task manager and other system information programs 
 ## Version 20.09
 
 * System uptime is now given as days, hours, minutes, seconds.
+* Windows Server Insider Preview build 20201 or later is properly recognized as a Server Insider build.
 
 ## Version 20.07
 
