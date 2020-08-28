@@ -24,7 +24,7 @@ sistema, quali carico della CPU, utilizzo della memoria e molto altro.
   service pack numbers.
 * NVDA+Shift+7: presents the system's uptime.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
+If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## Note d'utilizzo ##
@@ -40,6 +40,12 @@ si tenga presente che:
   file di grandi dimensioni, ci potrebbero essere dei ritardi nell'ottenere
   informazioni sull'utilizzo del disco.
 * Questo add-on richiede Windows 7 Service Pack 1 o superiore.
+
+## Version 20.09
+
+* System uptime is now given as days, hours, minutes, seconds.
+* Windows Server Insider Preview build 20201 or later is properly recognized
+  as a Server Insider build.
 
 ## Version 20.07
 

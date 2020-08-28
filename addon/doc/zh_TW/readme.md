@@ -23,7 +23,7 @@
   service pack numbers.
 * NVDA+Shift+7: presents the system's uptime.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
+If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
 ## 用戶請注意 ##
@@ -33,6 +33,12 @@ keys via input gestures dialog.
 * CPU 使用率是針對邏輯處理器而非實體核心。對於使用超執行緒的處理器來說，這是顯而易見的，其中 CPU 的數量是 CPU 核心數量的兩倍。
 * 如果正在進行繁忙的磁碟活動（例如復制大型檔案），則獲取磁碟使用訊息時可能出現延遲。
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 20.09
+
+* System uptime is now given as days, hours, minutes, seconds.
+* Windows Server Insider Preview build 20201 or later is properly recognized
+  as a Server Insider build.
 
 ## Version 20.07
 

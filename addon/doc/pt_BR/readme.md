@@ -25,8 +25,8 @@ outras informações de uso de recursos.
   Windows com números do service pack.
 * NVDA+Shift+7: apresenta o tempo desde a inicialização do sistema.
 
-Caso tenha o NvDA 2013.3 ou posterior instalado, poderá alterar essas teclas
-de atalho através do diálogo definir comandos (gestos de entrada).
+If you have NVDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Notas de uso ##
 
@@ -39,6 +39,12 @@ de informações de sistema para Windows. Note também o seguinte:
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
+
+## Version 20.09
+
+* System uptime is now given as days, hours, minutes, seconds.
+* Windows Server Insider Preview build 20201 or later is properly recognized
+  as a Server Insider build.
 
 ## Versão 20.07
 

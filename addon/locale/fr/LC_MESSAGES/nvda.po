@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.10\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-07-14 20:27-0700\n"
+"PO-Revision-Date: 2020-08-27 07:44+0200\n"
 "Last-Translator: Michel Such <michel.such@free.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -42,38 +42,36 @@ msgid "{percent}%, battery charging."
 msgstr "Batterie en charge, {percent}%. "
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "Il reste {percent}%, environ {time}."
+msgstr "Niveau de batterie {percent}%, temps restant inconnu"
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr " heure, "
+msgstr "une heure "
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr " heures, "
+msgstr "{0} heures "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 minute"
-msgstr " minute"
+msgstr "1 minute"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr " minutes"
+msgstr "{0} minutes"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "Il reste {percent}%, environ {time}."
+msgstr "Niveau de batterie {percent}%, environ {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
@@ -173,21 +171,21 @@ msgstr "Annonce la version de Windows que vous utilisez."
 
 #. Translators: system uptime in hours.
 msgid "1 day"
-msgstr ""
+msgstr "1 jour"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} jours"
 
 #. Translators: system uptime in hours.
 msgid "1 second"
-msgstr ""
+msgstr "une seconde"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} secondes"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."

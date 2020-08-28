@@ -4,29 +4,31 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA compatibility: 2019.3 to 2020.2
+* NVDA-Kompatibilität: 2019.3 bis 2020.2
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 
 # Tastenkürzel #
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5: presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3: presents the used and total space of the static and
-  removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
-  service pack numbers.
-* NVDA+Shift+7: presents the system's uptime.
+* NVDA+Umschalt+E: Zeigt den verbrauchten Arbeitsspeicher, die
+  durchschnittliche Prozessorauslastungen und Akku-Informationen an, falls
+  verfügbar.
+* NVDA+Umschalt+1: Zeigt die durchschnittliche Prozessorauslastung (falls
+  mehrere CPUs vorhanden sind, die Auslastung der einzelnen Kerne) an.
+* NVDA+Umschalt+2/5: Zeigt den genutzten und den Gesamtspeicher sowohl für
+  den physischen als auch für den virtuellen Arbeitsspeicher an.
+* NVDA+Umschalt+3: Zeigt den belegten und gesamten Speicherplatz aller
+  Laufwerke an.
+* NVDA+Umschalt+4: Zeigt den Akku-Status in Prozent und den Ladestatus, die
+  verbleibende Zeit (falls nicht aufgeladen) an und gibt eine Warnung aus,
+  sobald der Akku schwach oder kritisch ist.
+* NVDA+Shift+6: Zeigt die CPU-Architektur (32-/64-Bit) und die
+  Windows-Version sowie die Service-Pack-Nummer an.
+* NVDA+Shift+7: Zeigt die Laufzeit des Betriebssystems an.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Wenn Sie NVDA 2013.3 oder neuer installiert haben, können Sie diese
+Tastenkombinationen unter "Tastenbefehle" im NVDA-Menü ändern.
 
 ## Nutzungshinweise ##
 
@@ -43,20 +45,27 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
   erforderlich.
 
+## Version 20.09
+
+* Die Systemlaufzeit wird nun in Tagen, Stunden, Minuten und Sekunden
+  angegeben.
+* Windows Server Insider Preview Build 20201 oder neuer wird ordnungsgemäß
+  als Server-Insider-Build erkannt.
+
 ## Version 20.07
 
-* Windows 10 Version 20H2 is properly recognized when obtaining Windows
-  version information (NVDA+Shift+6).
-* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
-  Windows 10verYYMM when pressing NVDA+Shift+6.
+* Windows 10 Version 20H2 wird beim Abrufen von Informationen zur
+  Windows-Version (NVDA+Umschalt+6) korrekt erkannt.
+* Vereinfachte Windows 10-Versionsmeldung, d. h. Windows 10 JJMM statt
+  Windows 10VerJJMM beim Drücken von NVDA+Umschalt+6.
 
 ## Version 20.06
 
-* Resolved many coding style issues and potential bugs with Flake8.
+* Mit Flake8 wurden viele Code-Probleme und potenzielle Fehler behoben.
 
 ## Version 20.04
 
-* Updated psutil dependency to 5.7.0.
+* Die "psutil"-Abhängigkeit wurde auf 5.7.0 aktualisiert.
 
 ## Version 20.01
 

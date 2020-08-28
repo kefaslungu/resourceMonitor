@@ -14,23 +14,23 @@ i druge informacije o korištenju resursa.
   procesora i informacije o stanju baterije, ako su dostupne.
 * NVDA+šift+1: Prikazuje prosječnu opterećenost procesora i ako postoje
   višejezgreni procesori, prikazuje opterećenje svake jezgre.
-* NVDA+šift+2/5: Prikazuje iskorišten i ukupni kapacitet fizičke I virtualne
+* NVDA+šift+2/5: Prikazuje korišteni i ukupni kapacitet fizičke I virtualne
   ram memorije.
-* NVDA+šift+3: Prikazuje iskorišten i ukupni prostor na statičnim i
+* NVDA+šift+3: Prikazuje korišteni i ukupni prostor na statičnim i
   prenosivim diskovima.
-* NVDA+šift+4: Prikazuje postotak baterije, status punjenja, preostalo
+* NVDA+šift+4: Prikazuje postotak baterije, stanje punjenja, preostalo
   vrijeme (ako se ne puni), te upozorenje, ako je baterija slaba ili skoro
   prazna.
 * NVDA+šift+6: Prikazuje strukturu procesora (32-64-bitni), verziju Windowsa
   i broj service paketa.
-* NVDA+šift+7: Prikazuje trajanje pokretanja sustava.
+* NVDA+šift+7: Prikazuje vrijeme neprekidnog rada sustava.
 
 Ako je instalirana NVDA verzija 2013.3 ili novija, tipkovničke prečace je
 moguće mijenjati putem dijaloškog okvira za ulazne geste.
 
 ## Upute za primjenu ##
 
-Ovaj dodatak ne zamjenjuje upravljača zadataka i druge programe za
+Ovaj dodatak ne zamijenjuje upravljača zadataka i druge programe za
 informacije o sustavu Windows. Važno je znati i sljedeće:
 
 * Informacije o korištenju procesora dane su za logičke procesore, ne za
@@ -40,6 +40,13 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
+
+## Verzija 20.09
+
+* Vrijeme neprekidnog rada sustava sada se navodi kao dani, sati, minute,
+  sekunde.
+* Windows Server Insider Preview izgradnja 20201 ili novija, ispravno se
+  prepoznaje kao Server Insider izgradnja.
 
 ## Verzija 20.07
 

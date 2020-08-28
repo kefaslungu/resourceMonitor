@@ -25,8 +25,8 @@ także wykorzystaniu innych zasobów.
   bity procesora (32 lub 64 bity).
 * NVDA+Shift+7 Pokazuje czas pracy systemu.
 
-Jeśli używasz NvDA 2013.3 lub nowszą możesz zmienić te skróty klawiaturowe z
-poziomu okna dialogowego zdarzenia wejścia.
+If you have NVDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.
 
 ## Uwagi o użytkowaniu ##
 
@@ -40,6 +40,12 @@ następujące kwestie:
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
+
+## Version 20.09
+
+* System uptime is now given as days, hours, minutes, seconds.
+* Windows Server Insider Preview build 20201 or later is properly recognized
+  as a Server Insider build.
 
 ## Wersja 20.04
 

@@ -40,6 +40,13 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
   podería haber retrasos ao obter información de uso do disco.
 * Este complemento require Windows 7 Service Pack 1 ou posterior.
 
+## Versión 20.09
+
+* O tempo de actividade do sistema agora proporciónase en días, horas,
+  minutos, segundos.
+* A compilación 20201 de Insider Preview para Windows Server ou posterior
+  recoñécese correctamente como unha compilación Insider de Server.
+
 ## Versión 20.07
 
 * Recoñécese axeitadamente a versión 20H2 de Windows 10 ao obter a

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2020-02-04 08:45+0100\n"
-"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"PO-Revision-Date: 2020-08-22 09:32+0800\n"
+"Last-Translator: Kvark <kvark128@yandex.ru>\n"
 "Language-Team: nvda-russian-community <LL@li.org>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -24,9 +24,9 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Вы пользуетесь устаревшей версией операционной системы Windows. Это "
-"дополнение требует {minSupportedVersion} или новее. Вы уверены, что "
-"действительно всё-равно хотите установить это дополнение?"
+"Вы используете устаревшую версию Windows. Это дополнение требует "
+"{minSupportedVersion} или новее. Вы уверены, что всё-равно хотите установить "
+"это дополнение?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -34,7 +34,7 @@ msgstr "Устаревшая версия Windows"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "Этот компьютер не имеет подключенной батареи."
+msgstr "Этот компьютер не имеет подключённой батареи."
 
 #. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
 #, python-brace-format
@@ -44,44 +44,42 @@ msgstr "{percent}%, зарядка батареи."
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% осталось, неизвестный час батареи"
+msgstr "Заряд батареи {percent}%, оставшееся время неизвестно"
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr " час, "
+msgstr "1 час"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr " часов, "
+msgstr "{0} часов"
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 minute"
-msgstr " минута"
+msgstr "1 минута"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr " минут"
+msgstr "{0} минут"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent}% оставшийся заряд батареи, приблизительно {time}."
+msgstr "Заряд батареи {percent}%, осталось приблизительно {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "Внимание: низкий заряд батареи."
+msgstr " Внимание: низкий заряд батареи."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "Внимание: критически низкий заряд батареи."
+msgstr " Внимание: батарея почти полностью разряжена."
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -98,8 +96,8 @@ msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"Предоставляет состояние заряда батареи в процентах, , оставшееся время (если "
-"не заряжается) и предупреждение о низком и критическом заряде."
+"Предоставляет состояние заряда батареи в процентах, оставшееся время (если "
+"не заряжается) и предупреждение о низком или критическом уровне заряда."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
@@ -134,8 +132,8 @@ msgstr "Средняя загрузка процессора {avgLoad}%, {cores}
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"Предоставляет информацию об общем объёме и использованном объёме физической "
-"и виртуальной памяти."
+"Предоставляет информацию об использованном и общем объёме физической и "
+"виртуальной памяти."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -175,21 +173,21 @@ msgstr "Объявляет используемую версию Windows."
 
 #. Translators: system uptime in hours.
 msgid "1 day"
-msgstr ""
+msgstr "1 день"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} дней"
 
 #. Translators: system uptime in hours.
 msgid "1 second"
-msgstr ""
+msgstr "1 секунда"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} секунд"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -220,8 +218,8 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"Удобный монитор ресурсов сообщает о загрузке процессора, использовании "
-"памяти, состоянии заряда батареи,использовании диска и многое другое."
+"Удобный монитор ресурсов сообщающий о загрузке процессора, использовании "
+"памяти, состоянии заряда батареи, использовании диска и многого другого."
 
 #~ msgid "{days} days, {hoursMinutesSeconds}"
 #~ msgstr "{days} дней, {hoursMinutesSeconds}"
