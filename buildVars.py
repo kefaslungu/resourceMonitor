@@ -8,8 +8,6 @@ _ = lambda x: x
 
 # Add-on information variables
 addon_info = {
-	# for previously unpublished addons, please follow the community guidelines at:
-	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
 	# add-on Name, internal for nvda
 	"addon_name": "resourceMonitor",
 	# Add-on summary, usually the user visible name of the addon.
