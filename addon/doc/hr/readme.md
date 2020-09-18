@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA kompatibilnost: 2019.3 do 2020.2
+* NVDA compatibility: 2019.3 to 2020.3
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.

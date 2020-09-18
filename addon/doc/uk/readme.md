@@ -1,57 +1,175 @@
 # Resource Monitor #
 
-* Автори: Alex Hall, Joseph Lee, beqa gozalishvili та інші учасники
-  спільноти NVDA
-* Download [stable version][1]
-* Download [development version][2]
+* Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst та інші учасники спільноти NVDA
+* Завантажити [стабільну версію][1]
+* Сумісність: NVDA від 2019.3 до 2020.2
 
-This plugin gives information about CPU load, memory usage and other
-resource usage information.
-
-Important: Resource Monitor 3.1 is not compatible with NvDA 2013.3 or
-earlier. If you use 2013.3 or earlier, please use Resource Monitor 3.0.
+Цей додаток надає інформацію про завантаженість процесора, використання
+пам’яті та інших ресурсів.
 
 # Гарячі клавіші #
 
-* NVDA+Shift+E Presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1 Presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5 Presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3 Presents the used and total space of the static and removable
-  drives.
-* NVDA+Shift+4 Presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6 Presents CPU Architecture 32/64-bit and Windows version and
-  service pack numbers.
+* NVDA+Shift+E: Надає інформацію про використання оперативної пам’яті,
+  середню завантаженість процесора та акумулятор, якщо він є.
+* NVDA+Shift+1: Надає інформацію про середню завантаженість процесора і про
+  завантаженість кожного ядра.
+* NVDA+Shift+2/5: Надає інформацію про зайнятий та повний об'єм як фізичної,
+  так і віртуальної пам’яті.
+* NVDA+Shift+3: надає інформацію про зайнятий та повний об’єм статичних та
+  переносних дисків.
+* NVDA+Shift+4: Повідомляє про відсоток акумулятора, статус заряджання, час,
+  що залишився (якщо акумулятор не заряджається) і попередження про низький
+  та критично низький заряд акумулятора.
+* NVDA+Shift+6: називає 32/64-розрядність архітектури процесора, версію
+  Windows та номер пакета оновлень — service pack.
+* NVDA+Shift+7: повідомляє час роботи системи від моменту її завантаження.
 
-If you have NvDA 2013.3 or later installed, you can change these shortcut
-keys.
+Якщо у вас встановлено NVDA 2013.3 чи новішу, то ці комбінації клавіш можна
+змінити у діалозі «Жести вводу».
 
-## Usage notes ##
+## Примітки про користування ##
 
-This add-on does not replace task manager and other system information
-programs for Windows. Also note the following:
+Цей додаток не замінює диспетчера завдань Windows чи інших програм, які
+надають інформацію про систему.  Також запам’ятайте:
 
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper Threading where number of CPU's
-  is twice the number of CPU cores.
-* There might be a short delay when getting processor usage information.
+* Використання центрального процесора подано для логічних процесорів, а не
+  для фізичних ядер. Це важливо для процесорів, які використовують
+  Hyper-Threading, де кількість процесорів вдвічі перевищує кількість ядер
+  процесора.
+* При інтенсивних діях на диску, таких як копіювання великих файлів, можливі
+  затримки з отриманням інформації про використання диска.
+* Цей додаток вимагає мінімум Windows 7 Service Pack 1.
 
-## Changes for 3.1 ##
+## Версія 20.09
 
-* Resource Monitor officially supports Windows 8.1.
+* Час безперервної роботи системи подано у днях, годинах, хвилинах і
+  секундах.
+* Windows Server Insider Preview build 20201 чи новіша належно розпізнається
+  як Server Insider build.
+
+## Версія 20.07
+
+* Windows 10 версії 20H2 належно розпізнається при отриманні інформації про
+  версію Windows (NVDA+Shift+6).
+* Спрощено повідомлення про версію Windows 10 При натисканні NVDA+Shift+6:
+  тепер промовляється Windows 10 РРММ замість Windows 10верРРММ.
+
+## Версія 20.06
+
+* Вирішено багато проблем зі стилем кодування та потенційні помилки за
+  допомогою Flake8.
+
+## Версія 20.04
+
+* Оновлено psutil dependency до versії 5.7.0.
+
+## Версія 20.01
+
+* Через розширене використання Python 3 необхідна NVDA версії 2019.3 чи
+  новіша.
+
+## Версія 19.11
+
+* Покращене виявлення збірок Windows Insider Preview, особливо для 20H1 та
+  пізніших версій.
+
+## Версія 19.07
+
+* Оновлено psutil dependency до versії 5.6.3.
+* Внутрішні зміни до команди повідомлення про стан акумулятора.
+
+## Версія 18.12
+
+* Внутрішні зміни для підтримки майбутніх версій NVDA.
+
+## Версія 18.10
+
+* Код став більш сумісним з Python 3.
+* Оновлено psutil dependency до versії 5.4.7.
+* Отримуючи об'єм диска та використання пам’яті, NVDA більше не видаватиме
+  помилок при використанні комп'ютера або служби з обсягом оперативної
+  пам'яті або розміром диска понад петабайт.
+* Значення для використання пам'яті та диска відображаються з двома знаками
+  після крапки (наприклад, 4.00 ГБ замість 4.0 ГБ).
+* Поліпшено виявлення збірок Windows Insider Preview.
+
+## Версія 18.04
+
+Версія 18.04.x остання, яка підтримує Windows 7 без service pack 1.
+
+* Остання версія, яка підтримує Windows Server 2003, Vista і Server 2008.
+* Поліпшено виявлення версій Windows 10 і розрізнення між публічними
+  випусками та збірками Insider Preview.
+
+## Версія 17.12
+
+* Додано підтримку 64-бітних ARM-процесорів у Windows 10.
+
+## Версія 17.09
+
+Важливо: Версія 17.09.x остання, яка підтримує Windows XP.
+
+* Остання версія, яка запускається на Windows XP.
+* Збірки 16278 та пізніших версій Windows 10 розпізнаються як версія
+  1709. Незначне оновлення цього додатка буде випущено після випуску
+  стабільної збірки версії 1709.
+
+## Версія 17.07.1
+
+* Повторно запроваджено підтримку Windows XP (не працює з версії 17.02).
+
+## Версія 17.05
+
+* Повідомляє час безперервної роботи системи (рахується з часу останнього
+  завантаження; NVDA+Shift+7).
+
+## Версія 17.02
+
+* Оновлено psutil dependency до versії 5.0.1.
+* Під час перевірки використання диска NVDA більше не відображатиме  помилок
+  в деяких системах, де знімний носій не розпізнається належним чином
+  (наприклад, якщо картка не вставлена в пристрій читання карток).)
+
+## Версія 16.08
+
+Починаючи з версії 16.08, нові версії додатка називатимуться за роком і
+місяцем.
+
+* Тепер різні версії Windows 10 розпізнаються належним чином (наприклад,
+  1607 для збірки 14393).
+* Версії збірок Windows 10 (після інсталяції сукупних оновлень)
+  розпізнаються належним чином (наприклад, 14393.51).
+* Якщо ви використовуєте збірки Insider Preview, це буде виявлено.
+
+## Зміни у версії 4.5 ##
+
+* Репозиторій додатка переміщено на GitHub (знайдіть його за адресою
+  https://github.com/josephsl/resourcemonitor).
+* Належно розпізнається Windows Server 2016.
+
+## Зміни у версії 4.0 ##
+
+* Оновлено psutil dependency до versії 2.2.1.
+* Значно поліпшено продуктивність під час отримання інформації про
+  завантаженість процесора.
+* Додано підтримку розпізнавання Windows 10.
+* У Windows 10 також буде промовлятися номер збірки Windows.
+* Для перегляду довідки додатка скористайтеся менеджером додатків.
+
+## Зміни у версії 3.1 ##
+
+* Resource Monitor офіційно підтримує Windows 8.1.
 * Оновлено переклади.
 
-## Changes for 3.0 ##
+## Зміни у версії 3.0 ##
 
-* Updated psutil dependency to 1.2.1.
-* Announcement of current Windows version, CPU architecture and service pack
-  if any (NVDA+Shift+6).
-* Ability to change add-on shortcut keys (NVDA 2013.3 or later).
-* Ability to copy individual resource information to clipboard by pressing
-  resource commands two times.
+* Оновлено psutil dependency до versії 1.2.1.
+* Промовляє поточну версію Windows, архітектуру процесора і service pack за
+  наявності (NVDA+Shift+6).
+* Можливість змінити комбінації клавіш додатка (NVDA 2013.3 чи новіші).
+* Можливість копіювати інформацію про окремий ресурс у буфер обміну, двічі
+  натискаючи команди ресурсів.
 
 ## Зміни у версії 2.4 ##
 
@@ -64,28 +182,25 @@ programs for Windows. Also note the following:
 
 ## Зміни у версії 2.2 ##
 
-* Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
-  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
-  Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
-  and Turkish.
+* Додано aragonese, Galatian, арабську, іспанську, італійську, корейську,
+  непальську, нідерландську, німецьку, польську, португальську (Бразилія),
+  російську, словацьку, словенську, тамільську, турецьку, угорську, фінську,
+  французьку, хорватську та японську мови.
 
 ## Зміни у версії 2.1 ##
 
 * Оновлено psutil dependency до versії 0.6.1.
 * Виправлено велику затримку при отриманні інформації про диски.
-* %s-es замінено на {нормальніЗмінні}.
-* Code cleanup.
+* Почищено код.
 
 ## Зміни у версії 2.0 ##
 
-* Додано підтримку перекладів і коментарів до них.
+* додано підтримку перекладів і коментарів до них.
 
 ## Зміни у версії 1.0 ##
 
 * Перший реліз
 
-[[!tag stable]]
+[[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
-
-[2]: http://addons.nvda-project.org/files/get.php?file=rm-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=rm

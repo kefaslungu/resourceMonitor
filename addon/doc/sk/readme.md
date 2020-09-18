@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* Funguje s NVDA 2019.3 a 2020.2
+* NVDA compatibility: 2019.3 to 2020.3
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
@@ -22,8 +22,8 @@ Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch
   Windows a Service packu.
 * Nvda+shift+7: Oznámi čas behu systému od posledného reštartu.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Ak používate NVDA od verzie 2013.3, môžete si skratky upraviť v dialógu
+klávesové skratky.
 
 ## Všimnite si ##
 
@@ -37,11 +37,11 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
   chvíľu trvať.
 * Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
 
-## Version 20.09
+## Verzia 20.09
 
-* System uptime is now given as days, hours, minutes, seconds.
-* Windows Server Insider Preview build 20201 or later is properly recognized
-  as a Server Insider build.
+* Čas od posledného reštartovania je hlásený v tvare dni, hodiny, minúty,
+  sekundy.
+* Odteraz sú správne rozpoznané náhľady verzie Windows server insider.
 
 ## Verzia 20.07
 
