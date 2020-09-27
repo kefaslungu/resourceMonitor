@@ -98,7 +98,8 @@ def size(bytes, system=traditional):
 
 def tryTrunk(n):
 	# This method basically removes decimal zeros, so 5.0 will just be 5.
-	# If the number ends in anything other than a 0, nothing happens (if the trunkated number is not equal to the decimal).
+	# If the number ends in anything other than a 0,
+	# nothing happens (if the trunkated number is not equal to the decimal).
 	if n == int(n):
 		return int(n)
 	return n
@@ -112,39 +113,49 @@ def _batteryInfo(verbose=False):
 	# Uses psutil.sensors_battery function except it also checks battery low/critical flags.
 	battery = psutil.sensors_battery()
 	if battery is None:
-		# Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+		# Translators: Message reported when there is no battery on the system,
+		# mostly laptops with battery pack removed and running on AC power.
 		info = _("This computer does not have a battery connected.") if verbose else None
 	else:
 		percent, secsleft, power_plugged = battery
 		if power_plugged:
-			# Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+			# Translators: message presented when AC is connected and battery is charging,
+			# also show current battery percentage.
 			info = _("{percent}%, battery charging.").format(percent=tryTrunk(percent))
 		else:
 			# Announce time unknown status.
 			if secsleft == 0xffffffff:
-				# Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+				# Translators: message presented when computer is running on battery power,
+				# showing percentage remaining yet battery time is unknown.
 				info = _("{percent}% battery remaining, battery time unknown.").format(percent=tryTrunk(percent))
 			else:
 				# Prepare hours:minutes.
-				# Optimization: build components list and take away seconds as it is not required (floor division with 60).
+				# Optimization: build components list and take away seconds
+				# as it is not required (floor division with 60).
 				timeLeft = []
 				secsleft = secsleft // 60
 				hours, minutes = divmod(secsleft, 60)
 				if hours == 1:
-					# Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+					# Translators: For battery status report, if battery time is 1 hour range
+					# (example: 1 hour, 30 minutes).
 					timeLeft.append(_("1 hour"))
 				elif hours > 1:
-					# Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+					# Translators: For battery status report, if battery time is 2 hour range or greater
+					# (example: 3 hours, 10 minutes).
 					timeLeft.append(_("{0} hours").format(hours))
 				if minutes == 1:
-					# Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+					# Translators: For battery status report, minute value is 1
+					# (example: 1 hour, 1 minute).
 					timeLeft.append(_("1 minute"))
 				else:
-					# Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+					# Translators: For battery status report, minute value is 0 or between 2 and 59
+					# (example: 1 hour, 40 minutes).
 					timeLeft.append(_("{0} minutes").format(minutes))
-				# Because psutil.sensors_battery function does not present battery flags by default, manually read this info at the cost of calling the C extension twice.
+				# Because psutil.sensors_battery function does not present battery flags by default,
+				# manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
-				# Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+				# Translators: message presented when computer is running on battery power,
+				# showing percentage remaining and estimated remaining time.
 				info = _("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=", ".join(timeLeft))
 				if batteryFlags & 2:
 					# Translators: Message reported when battery level is low.
@@ -169,8 +180,10 @@ def _win10RID(buildNum, isClient):
 		return "Windows 10 1507"
 	elif not isClient and buildNum in server10LTSBuilds:
 		return server10LTSBuilds[buildNum]
-	# Since late 2019 (and confirmed with Server vNext build 20201), "rs_prerelease" branch designates dev channel build.
-	# Note that in some cases Insider Preview builds may come from what may appear to be feature update branch such as mn_release for 20H2 Azure release.
+	# Since late 2019 (and confirmed with Server vNext build 20201),
+	# "rs_prerelease" branch designates dev channel build.
+	# Note that in some cases Insider Preview builds may come from what may appear to be
+	# feature update branch such as mn_release for 20H2 Azure release.
 	# If self-host IsRetailOS flag is present (an integer), it is an Insider Preview.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
 	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"):
@@ -242,11 +255,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		info = []
 		for drive in psutil.disk_partitions():
 			# Get info on each one
-			# If and only if the Windows says disk is ready in order to avoid a core stack freeze when no disk is inserted into a slot.
+			# If and only if the Windows says disk is ready in order to avoid
+			# a core stack freeze when no disk is inserted into a slot.
 			# This can be checked by looking for a file system.
 			if drive.fstype:
 				driveInfo = psutil.disk_usage(drive[0])
-				# Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+				# Translators: Shows drive letter, type of drive (fixed or removable),
+				# used capacity and total capacity of a drive
+				# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 				info.append(_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(driveName=drive[0], driveType=drive[2], usedSpace=size(driveInfo[1], alternative), totalSpace=size(driveInfo[0], alternative), percent=tryTrunk(driveInfo[3])))
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
@@ -296,7 +312,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ui.message(self.RMCopyMessage)
 
 	def getWinVer(self):
-		# Obtain winversion. Python's Platform module provides below functionality, but platform module is not available for NVDA.
+		# Obtain winversion.
+		# Python's Platform module provides below functionality,
+		# but platform module is not available for NVDA.
 		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"), ""
 		# Determine Windows version.
@@ -322,10 +340,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: Presented under 32-bit Windows.
 			x64 = _("32-bit")
 		if not sp:
-			# Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
+			# Translators: Presents Windows version
+			# (example output: "Windows version: Windows 8.1 (32-bit)").
 			info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion=winverName, cpuBit=x64)
 		else:
-			# Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+			# Translators: Presents Windows version and service pack level
+			# (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
 			info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion=winverName, servicePackLevel=sp, cpuBit=x64)
 		if (winMajor, winMinor) == (10, 0):
 			info += " build {build}".format(build=buildRevision)
