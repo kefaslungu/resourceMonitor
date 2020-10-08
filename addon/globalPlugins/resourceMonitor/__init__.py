@@ -344,7 +344,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Python's Platform module provides below functionality,
 		# but platform module is not available for NVDA.
 		# Prepare to receive various components for Windows info output.
-		winMajor, winMinor, winverName, sp, server, is64Bit, x64 = sys.getwindowsversion().major, sys.getwindowsversion().minor, "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type, os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"), ""
+		winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
+		winverName, sp, server = "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
+		is64Bit, x64 = os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"), ""
 		# Determine Windows version.
 		if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 			if winMinor == 1:  # Windows 7
@@ -370,11 +372,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not sp:
 			# Translators: Presents Windows version
 			# (example output: "Windows version: Windows 8.1 (32-bit)").
-			info = _("Windows version: {winVersion} ({cpuBit})").format(winVersion=winverName, cpuBit=x64)
+			info = _("Windows version: {winVersion} ({cpuBit})").format(
+				winVersion=winverName, cpuBit=x64
+			)
 		else:
 			# Translators: Presents Windows version and service pack level
 			# (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-			info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(winVersion=winverName, servicePackLevel=sp, cpuBit=x64)
+			info = _("Windows version: {winVersion} {servicePackLevel} ({cpuBit})").format(
+				winVersion=winverName, servicePackLevel=sp, cpuBit=x64
+			)
 		if (winMajor, winMinor) == (10, 0):
 			info += " build {build}".format(build=buildRevision)
 		return info
