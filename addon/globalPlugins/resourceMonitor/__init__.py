@@ -154,9 +154,11 @@ def _batteryInfo(verbose=False):
 				# Because psutil.sensors_battery function does not present battery flags by default,
 				# manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
-				# Translators: message presented when computer is running on battery power,
-				# showing percentage remaining and estimated remaining time.
-				info = _("{percent}% battery remaining, about {time}.").format(percent=tryTrunk(percent), time=", ".join(timeLeft))
+				info = _(
+					# Translators: message presented when computer is running on battery power,
+					# showing percentage remaining and estimated remaining time.
+					"{percent}% battery remaining, about {time}."
+				).format(percent=tryTrunk(percent), time=", ".join(timeLeft))
 				if batteryFlags & 2:
 					# Translators: Message reported when battery level is low.
 					info += _(" Warning: low battery.")
@@ -187,9 +189,14 @@ def _win10RID(buildNum, isClient):
 	# If self-host IsRetailOS flag is present (an integer), it is an Insider Preview.
 	# Because NVDA is a 32-bit application, 64-bit view of Registry must be attempted for self-host key.
 	if os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"):
-		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
+		selfHostApplicability = winreg.OpenKeyEx(
+			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability",
+			access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
+		)
 	else:
-		selfHostApplicability = winreg.OpenKeyEx(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability")
+		selfHostApplicability = winreg.OpenKeyEx(
+			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\WindowsSelfHost\Applicability"
+		)
 	try:
 		isRetailOS = winreg.QueryValueEx(selfHostApplicability, "IsRetailOS")[0]
 	except OSError:
@@ -233,8 +240,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	RMCopyMessage = _("Resource summary copied to clipboard")
 
 	@scriptHandler.script(
-		# Translators: Input help message about battery info command in Resource Monitor.
-		description=_("Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."),
+		description=_(
+			# Translators: Input help message about battery info command in Resource Monitor.
+			"Presents battery percentage, charging status, remaining time (if not charging), "
+			"and a warning if the battery is low or critical."
+		),
 		gesture="KB:NVDA+shift+4"
 	)
 	def script_announceBatteryInfo(self, gesture):
@@ -260,10 +270,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# This can be checked by looking for a file system.
 			if drive.fstype:
 				driveInfo = psutil.disk_usage(drive[0])
-				# Translators: Shows drive letter, type of drive (fixed or removable),
-				# used capacity and total capacity of a drive
-				# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-				info.append(_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(driveName=drive[0], driveType=drive[2], usedSpace=size(driveInfo[1], alternative), totalSpace=size(driveInfo[0], alternative), percent=tryTrunk(driveInfo[3])))
+				info.append(
+					# Translators: Shows drive letter, type of drive (fixed or removable),
+					# used capacity and total capacity of a drive
+					# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(
+						driveName=drive[0],
+						driveType=drive[2],
+						usedSpace=size(driveInfo[1], alternative),
+						totalSpace=size(driveInfo[0], alternative),
+						percent=tryTrunk(driveInfo[3])
+					)
+				)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
 		else:
@@ -286,7 +304,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			for core, cpuLoad in enumerate(perCpuLoad, start=1)
 		]
 		# Translators: Shows average load of the processor and the load for each core.
-		info = _("Average CPU load {avgLoad}%, {cores}.").format(avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad))
+		info = _("Average CPU load {avgLoad}%, {cores}.").format(
+			avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad)
+		)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -301,10 +321,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceRamInfo(self, gesture):
 		ram = psutil.virtual_memory()
 		# Translators: Shows RAM (physical memory) usage.
-		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(physicalUsed=size(ram[3], alternative), physicalTotal=size(ram[0], alternative), physicalPercent=tryTrunk(ram[2]))
+		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(
+			physicalUsed=size(ram[3], alternative),
+			physicalTotal=size(ram[0], alternative),
+			physicalPercent=tryTrunk(ram[2])
+		)
 		virtualRam = psutil.swap_memory()
 		# Translators: Shows virtual memory usage.
-		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(virtualUsed=size(virtualRam[1], alternative), virtualTotal=size(virtualRam[0], alternative), virtualPercent=tryTrunk(virtualRam[3]))
+		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
+			virtualUsed=size(virtualRam[1], alternative),
+			virtualTotal=size(virtualRam[0], alternative),
+			virtualPercent=tryTrunk(virtualRam[3])
+		)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -423,7 +451,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceResourceSummary(self, gesture):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-		info = [(_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())))]
+		info = [
+			_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(
+				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
+			)
+		]
 		batteryInfo = _batteryInfo()
 		if batteryInfo is not None:
 			info.append(batteryInfo)
