@@ -345,8 +345,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# but platform module is not available for NVDA.
 		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
-		winverName, sp, server = "", sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
-		is64Bit, x64 = os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64"), ""
+		sp, server = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
+		is64Bit = os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64")
 		# Determine Windows version.
 		if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 			if winMinor == 1:  # Windows 7
