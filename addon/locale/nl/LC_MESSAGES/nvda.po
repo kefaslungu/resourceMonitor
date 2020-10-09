@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-07-14 20:31-0700\n"
-"Last-Translator: Leonard de Ruijter <mail@leonardder.nl>\n"
+"PO-Revision-Date: 2020-10-03 07:45+0200\n"
+"Last-Translator: Artin Dekker <vertalen@artindekker.com>\n"
 "Language-Team: NVDA Nederlandstalig vertaalteam <nvda-nl@googlegroups.com>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -24,10 +24,13 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
+"Je gebruikt een oude versie van Windows. Deze add-on verijst "
+"{minSupportedVersion} of later. Weet je zeker dat je deze add-on toch wil "
+"installeren?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr ""
+msgstr "Oude Windows versie"
 
 #. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -39,25 +42,31 @@ msgid "{percent}%, battery charging."
 msgstr "{percent}%, bezig met opladen van batterij."
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% batterij resterend, ongeveer {time}."
+msgstr "{percent}% batterij resterend, tijd onbekend."
 
 #. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr " uur, "
+#. Translators: system uptime in hours.
+msgid "1 hour"
+msgstr "1 uur"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr " uur, "
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} hours"
+msgstr "{0} uur, "
 
 #. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr " minuut"
+#. Translators: system uptime in hours.
+msgid "1 minute"
+msgstr "1 minuut"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr " minuten"
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} minutes"
+msgstr "{0} minuten"
 
 #. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
 #, python-brace-format
@@ -91,14 +100,6 @@ msgstr ""
 "opgeladen), en een waarschuwing als de batterij bijna leeg of zo goed als "
 "leeg is."
 
-#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, fuzzy, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"{driveName} ({driveType} schijf): {usedSpace} van {totalSpace} gebruikt "
-"{percent}%. "
-
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
@@ -107,21 +108,33 @@ msgstr ""
 "Toont de gebruikte en beschikbare ruimte van alle vaste en verwisselbare "
 "schijven van deze computer."
 
-#. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, fuzzy, python-brace-format
-msgid "Core {coreNumber}: {corePercent}%"
-msgstr "Kern {coreNumber}: {corePercent}%. "
-
-#. Translators: Shows average load of the processor and the load for each core.
-#, fuzzy, python-brace-format
-msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Gemiddelde CPU belasting {avgLoad}%, {cores}"
+#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr ""
+"{driveName} ({driveType} schijf): {usedSpace} van {totalSpace} gebruikt "
+"{percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr ""
 "Toont de gemiddelde processorbelasting en de gemiddelde belasting van elke "
 "kern."
+
+#. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
+msgid "Core {coreNumber}: {corePercent}%"
+msgstr "Kern {coreNumber}: {corePercent}%"
+
+#. Translators: Shows average load of the processor and the load for each core.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%, {cores}."
+msgstr "Gemiddelde CPU belasting {avgLoad}%, {cores}"
+
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr "Toont het gebruikte en totaal beschikbare fysieke en virtuele RAM."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -134,10 +147,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtueel: {virtualUsed} van {virtualTotal} gebruikt ({virtualPercent}%)."
-
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Toont het gebruikte en totaal beschikbare fysieke en virtuele RAM."
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -161,24 +170,31 @@ msgstr "Windowsversie: {winVersion} {servicePackLevel} ({cpuBit})"
 msgid "Announces the version of Windows you are using."
 msgstr "Meldt de versie van Windows die u gebruikt."
 
-#. Translators: The system's uptime
-#, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
-msgstr ""
+#. Translators: system uptime in hours.
+msgid "1 day"
+msgstr "1 dag"
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
-msgstr ""
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} days"
+msgstr "{0} dagen"
+
+#. Translators: system uptime in hours.
+msgid "1 second"
+msgstr "1 seconde"
+
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} seconds"
+msgstr "{0} seconden"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr ""
+msgstr "Meldt hoelang het systeem is ingeschakeld."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, fuzzy, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% RAM gebruikt, CPU op {cpuPercent}%. "
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
+msgstr "Ophalen van hoelang het systeem is ingeschakeld mislukt."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -186,6 +202,12 @@ msgid ""
 msgstr ""
 "Toont gebruikt RAM, gemiddelde CPU belasting en batterij-informatie indien "
 "beschikbaar."
+
+#. Faster to build info on the fly rather than keep appending to a string.
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% RAM gebruikt, CPU op {cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
