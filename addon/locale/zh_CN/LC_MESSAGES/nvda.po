@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.04\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2020-10-09 21:21+0800\n"
+"PO-Revision-Date: 2020-10-17 08:30+0800\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -108,7 +108,7 @@ msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
 "磁盘 {driveName} (文件系统 {driveType}):总大小 {totalSpace}， 已用 "
-"{usedSpace}，使用率 {percent}%。"
+"{usedSpace}，使用率 百分之 {percent}。"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -117,12 +117,12 @@ msgstr "读出每个 CPU 核心的负载和平均负载。"
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "核心{coreNumber}: {corePercent}%"
+msgstr "核心{coreNumber}: 百分之 {corePercent}"
 
 #. Translators: Shows average load of the processor and the load for each core.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "平均 CPU 负载： {avgLoad}%, {cores}"
+msgstr "平均 CPU 负载： 百分之 {avgLoad}, {cores}"
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
@@ -132,15 +132,15 @@ msgstr "读出物理内存和虚拟内存的容量和使用情况。"
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"物理内存： 已用 {physicalUsed}， 总大小 {physicalTotal}， 使用率 "
-"({physicalPercent}%) "
+"物理内存： 已用 {physicalUsed}， 总大小 {physicalTotal}， 使用率 百分之 "
+"{physicalPercent}。 "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
-"虚拟内存：已用 {virtualUsed}， 总大小 {virtualTotal}， 使用率 "
-"({virtualPercent}%)。"
+"虚拟内存：已用 {virtualUsed}， 总大小 {virtualTotal}， 使用率 百分之 "
+"{virtualPercent}。"
 
 #. Translators: Presented under 64-bit Windows.
 msgid "64-bit"
@@ -199,7 +199,7 @@ msgstr "读出内存的使用率、CPU 平均负载和电池信息（如果可�
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "内存已用 {ramPercent}%，CPU 已用 {cpuPercent}%。"
+msgstr "内存已用 百分之 {ramPercent}，CPU 已用 百分之 {cpuPercent}。"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
