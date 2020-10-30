@@ -3,7 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* NVDA compatibility: 2019.3 to 2020.3
+* Zgodnosć z wersjami NVDA: 2019.3 do 2020.3
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -25,8 +25,8 @@ także wykorzystaniu innych zasobów.
   bity procesora (32 lub 64 bity).
 * NVDA+Shift+7 Pokazuje czas pracy systemu.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Jeśli posiadasz NVDA 2013.3 lub nowszą, możesz mienić te skróty klawiszowe w
+dialogu zdarzeń wejścia.
 
 ## Uwagi o użytkowaniu ##
 
@@ -41,11 +41,12 @@ następujące kwestie:
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
 
-## Version 20.09
+## Wersja 20.09
 
-* System uptime is now given as days, hours, minutes, seconds.
-* Windows Server Insider Preview build 20201 or later is properly recognized
-  as a Server Insider build.
+* Czas pracy systemu od teraz jest podawany jako wartość w dniach,
+  godzinach, minutach, sekundach.
+* Windows Server kompilacja Insider Preview 20201 lub nowsze są teraz
+  prawidłowo rozpoznawane jako kompilacje insider preview.
 
 ## Wersja 20.04
 
