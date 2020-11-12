@@ -80,12 +80,6 @@ HAS_PROC_IO_PRIORITY = hasattr(cext, "proc_ioprio_get")
 HAS_CPU_AFFINITY = hasattr(cext, "proc_cpu_affinity_get")
 _DEFAULT = object()
 
-# RLIMIT_* constants, not guaranteed to be present on all kernels
-if HAS_PRLIMIT:
-    for name in dir(cext):
-        if name.startswith('RLIM'):
-            __extra__all__.append(name)
-
 # Number of clock ticks per second
 CLOCK_TICKS = os.sysconf("SC_CLK_TCK")
 PAGESIZE = os.sysconf("SC_PAGE_SIZE")
@@ -307,7 +301,7 @@ def cat(fname, fallback=_DEFAULT, binary=True):
 
 try:
     set_scputimes_ntuple("/proc")
-except Exception:
+except Exception:  # pragma: no cover
     # Don't want to crash at import time.
     traceback.print_exc()
     scputimes = namedtuple('scputimes', 'user system idle')(0.0, 0.0, 0.0)
@@ -361,7 +355,6 @@ def calculate_avail_vmem(mems):
             if line.startswith(b'low'):
                 watermark_low += int(line.split()[1])
     watermark_low *= PAGESIZE
-    watermark_low = watermark_low
 
     avail = free - watermark_low
     pagecache = lru_active_file + lru_inactive_file
@@ -619,12 +612,18 @@ def cpu_count_logical():
 def cpu_count_physical():
     """Return the number of physical cores in the system."""
     # Method #1
-    core_ids = set()
-    for path in glob.glob(
-            "/sys/devices/system/cpu/cpu[0-9]*/topology/core_id"):
+    ls = set()
+    # These 2 files are the same but */core_cpus_list is newer while
+    # */thread_siblings_list is deprecated and may disappear in the future.
+    # https://www.kernel.org/doc/Documentation/admin-guide/cputopology.rst
+    # https://github.com/giampaolo/psutil/pull/1727#issuecomment-707624964
+    # https://lkml.org/lkml/2019/2/26/41
+    p1 = "/sys/devices/system/cpu/cpu[0-9]*/topology/core_cpus_list"
+    p2 = "/sys/devices/system/cpu/cpu[0-9]*/topology/thread_siblings_list"
+    for path in glob.glob(p1) or glob.glob(p2):
         with open_binary(path) as f:
-            core_ids.add(int(f.read()))
-    result = len(core_ids)
+            ls.add(f.read().strip())
+    result = len(ls)
     if result != 0:
         return result
 
@@ -636,15 +635,15 @@ def cpu_count_physical():
             line = line.strip().lower()
             if not line:
                 # new section
-                if (b'physical id' in current_info and
-                        b'cpu cores' in current_info):
+                try:
                     mapping[current_info[b'physical id']] = \
                         current_info[b'cpu cores']
+                except KeyError:
+                    pass
                 current_info = {}
             else:
                 # ongoing section
-                if (line.startswith(b'physical id') or
-                        line.startswith(b'cpu cores')):
+                if line.startswith((b'physical id', b'cpu cores')):
                     key, value = line.split(b'\t:', 1)
                     current_info[key] = int(value)
 
@@ -716,7 +715,7 @@ elif os.path.exists("/proc/cpuinfo"):
         with open_binary('%s/cpuinfo' % get_procfs_path()) as f:
             for line in f:
                 if line.lower().startswith(b'cpu mhz'):
-                    key, value = line.split(b'\t:', 1)
+                    key, value = line.split(b':', 1)
                     ret.append(_common.scpufreq(float(value), 0., 0.))
         return ret
 
@@ -844,10 +843,6 @@ class Connections:
             else:
                 ip = socket.inet_ntop(family, base64.b16decode(ip))
         else:  # IPv6
-            # old version - let's keep it, just in case...
-            # ip = ip.decode('hex')
-            # return socket.inet_ntop(socket.AF_INET6,
-            #          ''.join(ip[i:i+4][::-1] for i in xrange(0, 16, 4)))
             ip = base64.b16decode(ip)
             try:
                 # see: https://github.com/giampaolo/psutil/issues/201
@@ -1032,7 +1027,7 @@ def net_if_stats():
     for name in names:
         try:
             mtu = cext_posix.net_if_mtu(name)
-            isup = cext_posix.net_if_flags(name)
+            isup = cext_posix.net_if_is_running(name)
             duplex, speed = cext.net_if_duplex_speed(name)
         except OSError as err:
             # https://github.com/giampaolo/psutil/issues/1279
@@ -1341,7 +1336,8 @@ def sensors_battery():
                 return int(ret) if ret.isdigit() else ret
         return None
 
-    bats = [x for x in os.listdir(POWER_SUPPLY_PATH) if x.startswith('BAT')]
+    bats = [x for x in os.listdir(POWER_SUPPLY_PATH) if x.startswith('BAT') or
+            'battery' in x.lower()]
     if not bats:
         return None
     # Get the first available battery. Usually this is "BAT0", except
@@ -1359,12 +1355,11 @@ def sensors_battery():
     energy_full = multi_cat(
         root + "/energy_full",
         root + "/charge_full")
-    if energy_now is None or power_now is None:
-        return None
+    time_to_empty = multi_cat(root + "/time_to_empty_now")
 
     # Percent. If we have energy_full the percentage will be more
     # accurate compared to reading /capacity file (float vs. int).
-    if energy_full is not None:
+    if energy_full is not None and energy_now is not None:
         try:
             percent = 100.0 * energy_now / energy_full
         except ZeroDivisionError:
@@ -1396,11 +1391,17 @@ def sensors_battery():
     #     013937745fd9050c30146290e8f963d65c0179e6/bin/battery.py#L55
     if power_plugged:
         secsleft = _common.POWER_TIME_UNLIMITED
-    else:
+    elif energy_now is not None and power_now is not None:
         try:
             secsleft = int(energy_now / power_now * 3600)
         except ZeroDivisionError:
             secsleft = _common.POWER_TIME_UNKNOWN
+    elif time_to_empty is not None:
+        secsleft = int(time_to_empty * 60)
+        if secsleft < 0:
+            secsleft = _common.POWER_TIME_UNKNOWN
+    else:
+        secsleft = _common.POWER_TIME_UNKNOWN
 
     return _common.sbattery(percent, secsleft, power_plugged)
 

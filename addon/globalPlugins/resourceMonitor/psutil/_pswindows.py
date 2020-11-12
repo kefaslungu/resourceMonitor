@@ -30,8 +30,8 @@ from ._common import usage_percent
 from ._compat import long
 from ._compat import lru_cache
 from ._compat import PY3
+from ._compat import range
 from ._compat import unicode
-from ._compat import xrange
 from ._psutil_windows import ABOVE_NORMAL_PRIORITY_CLASS
 from ._psutil_windows import BELOW_NORMAL_PRIORITY_CLASS
 from ._psutil_windows import HIGH_PRIORITY_CLASS
@@ -1060,17 +1060,17 @@ class Process(object):
     @wrap_exceptions
     def cpu_affinity_get(self):
         def from_bitmask(x):
-            return [i for i in xrange(64) if (1 << i) & x]
+            return [i for i in range(64) if (1 << i) & x]
         bitmask = cext.proc_cpu_affinity_get(self.pid)
         return from_bitmask(bitmask)
 
     @wrap_exceptions
     def cpu_affinity_set(self, value):
-        def to_bitmask(l):
-            if not l:
-                raise ValueError("invalid argument %r" % l)
+        def to_bitmask(ls):
+            if not ls:
+                raise ValueError("invalid argument %r" % ls)
             out = 0
-            for b in l:
+            for b in ls:
                 out |= 2 ** b
             return out
 

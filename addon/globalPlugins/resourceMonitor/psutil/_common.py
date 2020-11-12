@@ -303,9 +303,6 @@ class NoSuchProcess(Error):
                 details = "(pid=%s)" % self.pid
             self.msg = "process no longer exists " + details
 
-    def __path__(self):
-        return 'xxx'
-
 
 class ZombieProcess(NoSuchProcess):
     """Exception raised when querying a zombie process. This is
@@ -766,7 +763,7 @@ else:
 
 
 @memoize
-def term_supports_colors(file=sys.stdout):
+def term_supports_colors(file=sys.stdout):  # pragma: no cover
     if os.name == 'nt':
         return True
     try:
@@ -780,17 +777,18 @@ def term_supports_colors(file=sys.stdout):
         return True
 
 
-def hilite(s, color="green", bold=False):
+def hilite(s, color=None, bold=False):  # pragma: no cover
     """Return an highlighted version of 'string'."""
     if not term_supports_colors():
         return s
     attr = []
-    colors = dict(green='32', red='91', brown='33')
+    colors = dict(green='32', red='91', brown='33', yellow='93', blue='34',
+                  violet='35', lightblue='36', grey='37', darkgrey='30')
     colors[None] = '29'
     try:
         color = colors[color]
     except KeyError:
-        raise ValueError("invalid color %r; choose between %r" % (
+        raise ValueError("invalid color %r; choose between %s" % (
             list(colors.keys())))
     attr.append(color)
     if bold:
@@ -798,12 +796,13 @@ def hilite(s, color="green", bold=False):
     return '\x1b[%sm%s\x1b[0m' % (';'.join(attr), s)
 
 
-def print_color(s, color="green", bold=False, file=sys.stdout):
+def print_color(
+        s, color=None, bold=False, file=sys.stdout):  # pragma: no cover
     """Print a colorized version of string."""
     if not term_supports_colors():
-        print(s, file=file)
+        print(s, file=file)  # NOQA
     elif POSIX:
-        print(hilite(s, color, bold), file=file)
+        print(hilite(s, color, bold), file=file)  # NOQA
     else:
         import ctypes
 
@@ -812,7 +811,7 @@ def print_color(s, color="green", bold=False, file=sys.stdout):
         SetConsoleTextAttribute = \
             ctypes.windll.Kernel32.SetConsoleTextAttribute
 
-        colors = dict(green=2, red=4, brown=6)
+        colors = dict(green=2, red=4, brown=6, yellow=6)
         colors[None] = DEFAULT_COLOR
         try:
             color = colors[color]
@@ -827,7 +826,7 @@ def print_color(s, color="green", bold=False, file=sys.stdout):
         handle = GetStdHandle(handle_id)
         SetConsoleTextAttribute(handle, color)
         try:
-            print(s, file=file)
+            print(s, file=file)    # NOQA
         finally:
             SetConsoleTextAttribute(handle, DEFAULT_COLOR)
 
@@ -839,7 +838,7 @@ if bool(os.getenv('PSUTIL_DEBUG', 0)):
         """If PSUTIL_DEBUG env var is set, print a debug message to stderr."""
         fname, lineno, func_name, lines, index = inspect.getframeinfo(
             inspect.currentframe().f_back)
-        print("psutil-debug [%s:%s]> %s" % (fname, lineno, msg),
+        print("psutil-debug [%s:%s]> %s" % (fname, lineno, msg),  # NOQA
               file=sys.stderr)
 else:
     def debug(msg):
