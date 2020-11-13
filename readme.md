@@ -29,6 +29,7 @@ This add-on does not replace task manager and other system information programs 
 ## Version 21.01
 
 * Updated psutil dependency to 5.7.3.
+* Windows version message is more concise.
 
 ## Version 20.09
 
