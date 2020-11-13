@@ -371,13 +371,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			x64 = _("32-bit")
 		if not sp:
 			# Translators: Presents Windows version
-			# (example output: "Windows version: Windows 8.1 (32-bit)").
+			# (example output: "Windows 8.1 (32-bit)").
 			info = _("{winVersion} ({cpuBit})").format(
 				winVersion=winverName, cpuBit=x64
 			)
 		else:
 			# Translators: Presents Windows version and service pack level
-			# (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
+			# (example output: "Windows 7 service pack 1 (64-bit)").
 			info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
 				winVersion=winverName, servicePackLevel=sp, cpuBit=x64
 			)
