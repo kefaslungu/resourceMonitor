@@ -345,6 +345,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# but platform module is not available for NVDA.
 		# Prepare to receive various components for Windows info output.
 		winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
+		buildNum = sys.getwindowsversion().build
 		sp, server = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
 		is64Bit = os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64")
 		# Determine Windows version.
@@ -357,18 +358,29 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2"
 		elif winMajor == 10:  # Windows 10/Server 2016 (10.0) and beyond.
 			# Also take care of release ID, introduced in Version 1511.
-			buildNum = sys.getwindowsversion().build
-			currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
-			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
-			winreg.CloseKey(currentVersion)
 			winverName = _win10RID(buildNum, server == 1)
-			buildRevision = f"{buildNum}.{ubr}"
 		if is64Bit:
 			# Translators: Presented under 64-bit Windows.
 			x64 = _("64-bit")
 		else:
 			# Translators: Presented under 32-bit Windows.
 			x64 = _("32-bit")
+		# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
+		buildRevision = None
+		if (winMajor, winMinor) >= (6, 3):
+			# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
+			if is64Bit:
+				currentVersion = winreg.OpenKey(
+					winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
+					access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
+				)
+			else:
+				currentVersion = winreg.OpenKey(
+					winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
+				)
+			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
+			winreg.CloseKey(currentVersion)
+			buildRevision = f"{buildNum}.{ubr}"
 		if not sp:
 			# Translators: Presents Windows version
 			# (example output: "Windows 8.1 (32-bit)").
@@ -381,7 +393,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
 				winVersion=winverName, servicePackLevel=sp, cpuBit=x64
 			)
-		if (winMajor, winMinor) == (10, 0):
+		if buildRevision is not None:
 			info += " build {build}".format(build=buildRevision)
 		return info
 
