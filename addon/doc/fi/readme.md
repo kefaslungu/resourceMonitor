@@ -3,7 +3,7 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* NVDA compatibility: 2019.3 to 2020.3
+* Yhteensopivuus: NVDA 2019.3-2020.3
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -26,8 +26,8 @@ resurssien käytöstä.
   sekä Windowsin ja Service Packin version.
 * NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Jos asennettuna on NVDA 2013.3 tai uudempi, voit muuttaa näitä pikanäppäimiä
+Syötekomennot-valintaikkunasta.
 
 ## Huomautuksia käytöstä ##
 
@@ -41,11 +41,12 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
 
-## Version 20.09
+## Versio 20.09
 
-* System uptime is now given as days, hours, minutes, seconds.
-* Windows Server Insider Preview build 20201 or later is properly recognized
-  as a Server Insider build.
+* Järjestelmän käynnissäoloaika ilmoitetaan nyt päivinä, tunteina,
+  minuutteina ja sekunteina.
+* Windows Server Insider-esikoontiversio 20201 tai sitä uudempi tunnistetaan
+  oikein Server Insider -koontiversioksi.
 
 ## Versio 20.07
 

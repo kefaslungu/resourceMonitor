@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Télécharger [version stable][1]
-* NVDA compatibility: 2019.3 to 2020.3
+* Compatibilité NVDA: 2019.3 à 2020.3
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -40,46 +40,49 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
-* This add-on requires Windows 7 Service Pack 1 or later.
+* Cette extension requiert Windows 7 Service Pack 1 ou au-delà.
 
 ## Version 20.09
 
-* System uptime is now given as days, hours, minutes, seconds.
-* Windows Server Insider Preview build 20201 or later is properly recognized
-  as a Server Insider build.
+* Le temps de fonctionnement du système est maintenant indiqué en jours,
+  heures, minutes, secondes.
+* Windows Server Insider Preview build 20201 ou au-delà est correctement
+  reconnu comme une a Server Insider build.
 
 ## Version 20.07
 
-* Windows 10 Version 20H2 is properly recognized when obtaining Windows
-  version information (NVDA+Shift+6).
-* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
-  Windows 10verYYMM when pressing NVDA+Shift+6.
+* Windows 10 Version 20H2 est correctement reconnue quand on obtient les
+  informations de version de Windows (NVDA+maj+6).
+* Simplification du message de version de Windows 10 ex: Windows 10 AAMM au
+  lieu de Windows 10verAAMM when pressing NVDA+Shift+6.
 
 ## Version 20.06
 
-* Resolved many coding style issues and potential bugs with Flake8.
+* Résolution de beaucoup de problèmes de style de code et de bogues
+  potentiels avec Flake8.
 
 ## Version 20.04
 
-* Updated psutil dependency to 5.7.0.
+* Mise à jour de la dépendance psutil vers la version 5.7.0.
 
 ## Version 20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* NVDA 2019.3 ou au-delà est requis en raison d'une utilisation importante
+  de Python 3.
 
 ## Version 19.11
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+* Amélioration de la détection des builds de Windows Insider Preview, en
+  particulier pour20h1 et au-delà.
 
 ## Version 19.07
 
-* Updated psutil dependency to 5.6.3.
-* Internal changes to battery status announcement command.
+* Mise à jour de la dépendance psutil vers la version 5.6.3.
+* Changements internes dans la commande d'annonce de l'état de la batterie.
 
 ## Version 18.12
 
-* Internal changes to support future NVDA releases.
+* Changements internes pour supporter de futures versions de NVDA.
 
 ## Version 18.10
 
