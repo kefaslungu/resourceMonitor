@@ -29,7 +29,8 @@ This add-on does not replace task manager and other system information programs 
 ## Version 21.01
 
 * Updated psutil dependency to 5.7.3.
-* Windows version message is more concise.
+* Windows version message was shortened.
+* On Windows 8.1, build.revision will be announced as part of Windows version message, similar to Windows 10.
 
 ## Version 20.09
 
