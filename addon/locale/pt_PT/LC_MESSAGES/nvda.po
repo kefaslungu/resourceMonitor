@@ -19,7 +19,8 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
+#. (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an old version of Windows. This add-on requires "
@@ -34,43 +35,51 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Versão antiga do windows"
 
-#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+#. Translators: Message reported when there is no battery on the system,
+#. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "Este computador não tem uma bateria ligada."
 
-#. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#. Translators: message presented when AC is connected and battery is charging,
+#. also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, carga da bateria."
 
-#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% bateria restante, Tempo de bateria desconhecido"
 
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
+#. Translators: For battery status report, if battery time is 1 hour range
+#. (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
 msgid "1 hour"
 msgstr "1 hora"
 
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
+#. Translators: For battery status report, if battery time is 2 hour range or greater
+#. (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} hours"
 msgstr "{0} horas"
 
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
+#. Translators: For battery status report, minute value is 1
+#. (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
 msgid "1 minute"
 msgstr "1 minuto"
 
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
+#. Translators: For battery status report, minute value is 0 or between 2 and 59
+#. (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} minutos"
 
-#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% bateria restante, cerca de {time}."
@@ -85,7 +94,8 @@ msgstr "Alerta: bateria criticamente baixa!"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Monitor de recursos"
 
@@ -110,7 +120,9 @@ msgstr ""
 "Apresenta o espaço usado e o total em cada uma das unidades estáticas e "
 "removíveis deste computador."
 
-#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#. Translators: Shows drive letter, type of drive (fixed or removable),
+#. used capacity and total capacity of a drive
+#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
@@ -154,14 +166,16 @@ msgstr "64-bit"
 msgid "32-bit"
 msgstr "32-bit"
 
-#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
-msgid "Windows version: {winVersion} ({cpuBit})"
+#. Translators: Presents Windows version
+#. (example output: "Windows 8.1 (32-bit)").
+#, fuzzy, python-brace-format
+msgid "{winVersion} ({cpuBit})"
 msgstr "Versão do Windows: {winVersion} ({cpuBit})"
 
-#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
+#. Translators: Presents Windows version and service pack level
+#. (example output: "Windows 7 service pack 1 (64-bit)").
+#, fuzzy, python-brace-format
+msgid "{winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Versão do Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
@@ -201,8 +215,6 @@ msgstr ""
 "Apresenta a memória ram utilizada, a carga média do processador e "
 "informações sobre a bateria, se disponíveis."
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM usada, CPU at {cpuPercent}%."
