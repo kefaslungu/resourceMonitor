@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-07-14 19:25+0200\n"
-"PO-Revision-Date: 2019-07-14 20:28-0700\n"
+"PO-Revision-Date: 2020-12-04 20:01+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@freelists.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
@@ -54,30 +54,28 @@ msgstr "{percent}% از باتری مانده. زمانِ باقیمانده‌�
 #. Translators: For battery status report, if battery time is 1 hour range
 #. (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr " ساعت٬ "
+msgstr "۱ ساعت"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater
 #. (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr " ساعت٬ "
+msgstr "{0} ساعت"
 
 #. Translators: For battery status report, minute value is 1
 #. (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 minute"
-msgstr " دقیقه"
+msgstr "۱ دقیقه"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59
 #. (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr " دقیقه"
+msgstr "{0} دقیقه"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -170,13 +168,13 @@ msgstr "32 bit"
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 8.1 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "نگارشِ ویندوز: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level
 #. (example output: "Windows 7 service pack 1 (64-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "نگارشِ ویندوز: {winVersion} {servicePackLevel} ({cpuBit})"
 
@@ -186,29 +184,29 @@ msgstr "نگارشِ ویندوزی را که استفاده میکنید اعل
 
 #. Translators: system uptime in hours.
 msgid "1 day"
-msgstr ""
+msgstr "۱ روز"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} روز"
 
 #. Translators: system uptime in hours.
 msgid "1 second"
-msgstr ""
+msgstr "۱ ثانیه"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} ثانیه"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr "زمانِ بالا بودنِ سیستم را اعلام میکند."
+msgstr "زمانِ روشن بودنِ سیستم را اعلام میکند."
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr "نتوانستم زمانِ بالا بودنِ سیستم را به دست بیاورم."
+msgstr "نتوانستم زمانِ روشن بودنِ سیستم را به دست بیاورم."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""

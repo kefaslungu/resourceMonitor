@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2020-08-17 21:03+0200\n"
+"PO-Revision-Date: 2020-12-04 10:58+0100\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -25,18 +25,18 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Sie benutzen noch eine alte Windows-Version. Diese Erweiterung erfordert "
-"{minSupportedVersion} oder höher. Sind Sie sicher, dass Sie diese "
-"Erweiterung trotzdem installieren möchten?"
+"Sie verwenden noch eine ältere Windows-Version. Diese Erweiterung benötigt "
+"mindestens {minSupportedVersion} oder neuer. Möchten Sie dennoch diese "
+"Erweiterung installieren?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr "Alte Windows-Version"
+msgstr "Ältere Windows-Version"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "An diesem Computer ist kein Akku angeschlossen."
+msgstr "An diesen Computer ist kein Akku angeschlossen."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
@@ -48,7 +48,7 @@ msgstr "{percent} Prozent, Akku wird aufgeladen."
 #. showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent} Prozent Akku verbleibend, Zeit unbekannt."
+msgstr "{percent} Prozent Akku verbleibend, Batteriezeit unbekannt."
 
 #. Translators: For battery status report, if battery time is 1 hour range
 #. (example: 1 hour, 30 minutes).
@@ -80,15 +80,15 @@ msgstr "{0} Minuten"
 #. showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent} Prozent Akku verbleiben, noch {time}."
+msgstr "{percent} Prozent Akku verbleibend, ungefähr {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr " Warnung: Akku ist bald leer!"
+msgstr "Warnung: Akku ist bald leer!"
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr " Warnung: Akku ist fast leer!"
+msgstr "Warnung: Akku ist fast leer!"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -179,9 +179,9 @@ msgstr "Windows-Version: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level
 #. (example output: "Windows 7 service pack 1 (64-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "Windows-Version: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
