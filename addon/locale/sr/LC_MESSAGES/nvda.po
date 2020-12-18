@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-09-12 23:09+1000\n"
-"PO-Revision-Date: 2020-08-14 19:06+0100\n"
+"PO-Revision-Date: 2020-12-16 21:55+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -166,15 +166,15 @@ msgstr "32-bitni "
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 8.1 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
-msgstr "Windows verzija : {winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level
 #. (example output: "Windows 7 service pack 1 (64-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "windows verzija : {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."

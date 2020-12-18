@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-03-05 16:13+0100\n"
-"PO-Revision-Date: 2020-10-24 15:39+0200\n"
+"PO-Revision-Date: 2020-12-13 23:26+0100\n"
 "Last-Translator: Fabrizio Marini <marini.carlo@fastwebnet.it>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -88,7 +88,7 @@ msgstr " Attenzione: livello batteria basso."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "Attenzione: batteria quasi scarica."
+msgstr " Attenzione: batteria quasi scarica."
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -114,8 +114,8 @@ msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"Annuncia lo spazio utilizzato e totale dei drive fissi e rimovibili su "
-"questo computer."
+"Annuncia lo spazio utilizzato e totale dei drive fissi e rimovibili presenti "
+"su questo computer."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
@@ -167,13 +167,13 @@ msgstr "32-bit"
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 8.1 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "Versione Windows: {winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level
 #. (example output: "Windows 7 service pack 1 (64-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} {servicePackLevel} ({cpuBit})"
 msgstr "Versione Windows: {winVersion} {servicePackLevel} ({cpuBit})"
 
