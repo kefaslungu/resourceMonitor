@@ -1,7 +1,7 @@
 # Resource Monitor for NVDA
 # Presents basic info on CPU load, memory and disk usage, as well as battery information.
-# Authors: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala
-# Copyright 2013-2020, released under GPL.
+# Copyright 2013-2020 Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
+# released under GPL.
 
 import winreg
 from datetime import datetime
