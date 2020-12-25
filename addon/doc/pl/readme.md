@@ -3,7 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* Zgodnosć z wersjami NVDA: 2019.3 do 2020.3
+* NVDA compatibility: 2019.3 to 2020.4
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.

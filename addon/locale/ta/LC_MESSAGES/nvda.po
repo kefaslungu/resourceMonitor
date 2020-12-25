@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-04 18:03+0000\n"
-"PO-Revision-Date: 2020-08-14 20:05+0530\n"
+"PO-Revision-Date: 2020-12-25 10:48+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
@@ -42,7 +42,7 @@ msgstr "இந்தக் கணினியில் மின்கலம் 
 #. also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent}%, மின்கலத்தில் மின்சாரம் ஏற்றப்படுகிறது"
+msgstr "{percent}%, மின்கலம் மின்னூட்டப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
@@ -173,15 +173,15 @@ msgstr "32-நுண்மி"
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 8.1 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
-msgstr "விண்டோஸ் பதிப்பு: {winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level
 #. (example output: "Windows 7 service pack 1 (64-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "விண்டோஸ் பதிப்பு: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -232,6 +232,3 @@ msgid ""
 msgstr ""
 "மையச் செயலக சுமை, நினைவக, மின்கல மற்றும் வட்டின் பயன்பாடு ஆகியவைகளை அறிவிக்கும் "
 "கையடக்க வள கவனிப்பு."
-
-#~ msgid "{days} days, {hoursMinutesSeconds}"
-#~ msgstr "{days} நாட்கள், {hoursMinutesSeconds}"

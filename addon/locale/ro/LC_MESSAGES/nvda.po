@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:05+1000\n"
-"PO-Revision-Date: 2020-08-16 16:41+0300\n"
+"PO-Revision-Date: 2020-12-20 19:34-0800\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -172,15 +172,15 @@ msgstr "32-bit"
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 8.1 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
-msgstr "Versiune Windows: {winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
 
 #. Translators: Presents Windows version and service pack level
 #. (example output: "Windows 7 service pack 1 (64-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "Versiune Windows: {winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."

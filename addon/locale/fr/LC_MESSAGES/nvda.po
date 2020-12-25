@@ -8,26 +8,25 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.10\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2020-12-04 09:16+0100\n"
+"PO-Revision-Date: 2020-12-20 19:16-0800\n"
 "Last-Translator: Michel Such <michel.such@free.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
-"You are using an old version of Windows. This add-on requires "
-"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
-"anyway?"
+"You are using an old version of Windows. This add-on requires {minSupportedVersion} "
+"or later. Are you sure you wish to install this add-on anyway?"
 msgstr ""
 "Vous utilisez une ancienne version de Windows. Cette extension nécessite "
-"{minSupportedVersion} ou ultérieure. Êtes-vous sûr de vouloir quand-même "
-"installer Cette extension ?"
+"{minSupportedVersion} ou ultérieure. Êtes-vous sûr de vouloir quand-même installer "
+"Cette extension ?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -103,30 +102,28 @@ msgstr "Résumé des ressources copié dans le presse-papiers"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
+"Presents battery percentage, charging status, remaining time (if not charging), and "
+"a warning if the battery is low or critical."
 msgstr ""
-"Présente le pourcentage de chargement de la batterie, si elle est en charge, "
-"le temps restant (sauf si en charge), et une alerte si le niveau de la "
-"batterie est faible ou critique."
+"Présente le pourcentage de chargement de la batterie, si elle est en charge, le "
+"temps restant (sauf si en charge), et une alerte si le niveau de la batterie est "
+"faible ou critique."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"Présente l'espace total et l'espace utilisé des disques locaux et amovibles "
-"de cet ordinateur."
+"Présente l'espace total et l'espace utilisé des disques locaux et amovibles de cet "
+"ordinateur."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} (disque {driveType}) : {usedSpace} utilisé sur {totalSpace} "
-"{percent}%."
+"{driveName} (disque {driveType}) : {usedSpace} utilisé sur {totalSpace} {percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -144,8 +141,7 @@ msgstr "Charge moyenne du processeur {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"Présente les quantités de mémoire physique et virtuelle totales et utilisées."
+msgstr "Présente les quantités de mémoire physique et virtuelle totales et utilisées."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -210,11 +206,10 @@ msgid "Failed to get the system's uptime."
 msgstr "Impossible d'obtenir le temps de fonctionnement du système."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
+msgid "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"Présente la quantité de mémoire utilisée, la charge moyenne du processeur, "
-"et les informations sur la batterie si disponibles."
+"Présente la quantité de mémoire utilisée, la charge moyenne du processeur, et les "
+"informations sur la batterie si disponibles."
 
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
@@ -223,12 +218,9 @@ msgstr "{ramPercent}% RAM utilisée, CPU à {cpuPercent}%."
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
+"A handy resource monitor to report CPU load, memory usage, battery, disk usage "
+"status and more."
 msgstr ""
-"Un superviseur de resources clés en mains pour rapporter la charge moyenne "
-"du processeur, l'utilisation de la mémoire, l'état d'utilisation des disques "
-"et de la batterie ainsi que d'autres informations."
-
-#~ msgid "{days} days, {hoursMinutesSeconds}"
-#~ msgstr "{days} jours, {hoursMinutesSeconds}"
+"Un superviseur de resources clés en mains pour rapporter la charge moyenne du "
+"processeur, l'utilisation de la mémoire, l'état d'utilisation des disques et de la "
+"batterie ainsi que d'autres informations."
