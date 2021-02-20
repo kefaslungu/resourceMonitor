@@ -252,8 +252,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info):
-				ui.message(self.RMCopyMessage)
+			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
 		# Translators: Input help message about drive info command in Resource Monitor.
@@ -285,8 +284,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
 		else:
-			if api.copyToClip(" ".join(info)):
-				ui.message(self.RMCopyMessage)
+			api.copyToClip(" ".join(info), notify=True)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about processor info command in Resource Monitor.
@@ -310,8 +308,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info):
-				ui.message(self.RMCopyMessage)
+			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about memory info command in Resource Monitor.
@@ -336,8 +333,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info):
-				ui.message(self.RMCopyMessage)
+			api.copyToClip(info, notify=True)
 
 	def getWinVer(self):
 		# Obtain winversion.
@@ -407,8 +403,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
-			if api.copyToClip(info):
-				ui.message(self.RMCopyMessage)
+			api.copyToClip(info, notify=True)
 
 	def getUptime(self):
 		bootTimestamp = psutil.boot_time()
@@ -455,8 +450,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if scriptHandler.getLastScriptRepeatCount() == 0:
 				ui.message(uptime)
 			else:
-				if api.copyToClip(uptime):
-					ui.message(self.RMCopyMessage)
+				api.copyToClip(uptime, notify=True)
 		except TypeError:
 			# Translators: Obtaining uptime failed
 			ui.message(_("Failed to get the system's uptime."))
