@@ -2,7 +2,7 @@
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin Probst and other NVDA contributors
 * Download [stable version][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
@@ -28,7 +28,9 @@ This add-on does not replace task manager and other system information programs 
 
 ## Version 21.04
 
+* NVDA 2020.4 or later is required.
 * Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to clipboard, NVDA will announce resource summary that is being copied.
 
 ## Version 21.01
 
