@@ -236,9 +236,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 	scriptCategory = _("Resource Monitor")
 
-	# Translators: Presented when a resource summary is copied to clipboard.
-	RMCopyMessage = _("Resource summary copied to clipboard")
-
 	@scriptHandler.script(
 		description=_(
 			# Translators: Input help message about battery info command in Resource Monitor.
