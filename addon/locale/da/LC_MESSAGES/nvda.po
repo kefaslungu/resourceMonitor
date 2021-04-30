@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-07-07 08:56+0200\n"
-"PO-Revision-Date: 2020-12-20 19:12-0800\n"
+"PO-Revision-Date: 2021-02-24 14:32+0100\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: Dansk NVDA <dansk@nvda.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -54,30 +54,28 @@ msgstr "{percent}% resterende batteri, batteritid ukendt."
 #. Translators: For battery status report, if battery time is 1 hour range
 #. (example: 1 hour, 30 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr " time, "
+msgstr "1 time"
 
 #. Translators: For battery status report, if battery time is 2 hour range or greater
 #. (example: 3 hours, 10 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr " timer, "
+msgstr "{0} timer"
 
 #. Translators: For battery status report, minute value is 1
 #. (example: 1 hour, 1 minute).
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 minute"
-msgstr " minut"
+msgstr "1 minut"
 
 #. Translators: For battery status report, minute value is 0 or between 2 and 59
 #. (example: 1 hour, 40 minutes).
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr " minutter"
+msgstr "{0} minutter"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -127,7 +125,7 @@ msgstr ""
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType}): {usedSpace} af {totalSpace} brugt {percent}%. "
+"{driveName} ({driveType}): {usedSpace} af {totalSpace} brugt {percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -184,21 +182,21 @@ msgstr "Oplyser hvilken version af Windows du bruger."
 
 #. Translators: system uptime in hours.
 msgid "1 day"
-msgstr ""
+msgstr "1 dag"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} dage"
 
 #. Translators: system uptime in hours.
 msgid "1 second"
-msgstr ""
+msgstr "1 sekund"
 
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} sekunder"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."

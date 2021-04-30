@@ -3,11 +3,11 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * 下載 [穩定版][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4
 
 這個附加元件提供有關 CPU 負載，記憶體使用情形，及其他資源的使用訊息。
 
-# 快速鍵 #
+# 快速鍵
 
 * NVDA+Shift+E: presents used ram, average processor load, and battery info
   if available.
@@ -26,13 +26,27 @@
 If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
-## 用戶請注意 ##
+## 用戶請注意
 
 這個元件不會取代工作管理員及其她系統程式訊息。還要留意以下幾點：
 
 * CPU 使用率是針對邏輯處理器而非實體核心。對於使用超執行緒的處理器來說，這是顯而易見的，其中 CPU 的數量是 CPU 核心數量的兩倍。
 * 如果正在進行繁忙的磁碟活動（例如復制大型檔案），則獲取磁碟使用訊息時可能出現延遲。
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Version 20.09
 
@@ -126,12 +140,12 @@ Version 18.04.x is the last release to support Windows releases earlier than
 * Windows 10 組建版本（在安裝累積更新後），已可被正確識別，（如14393.51）。
 * 如果使用 Windows 10 Insider Preview 組建，已可是別。
 
-## 4.5 版的更新 ##
+## 4.5 版的更新
 
 * 此元件的儲存庫班一道 GitHub，地址為 (https://github.com/josephsl/resourcemonitor)。
 * Windows Server 2016 已能正確識別。
 
-## 4.0 版的更新 ##
+## 4.0 版的更新
 
 * 更新 psutil 到 2.2.1。
 * 在獲取有關 CPU 負載訊息時，效能大幅改善。
@@ -139,42 +153,42 @@ Version 18.04.x is the last release to support Windows releases earlier than
 * 在 Windows 10，已可顯示 Windows 的內部版本號。
 * 您可在「管理附加元件」中，獲得元件說明。
 
-## 3.1 版的更新 ##
+## 3.1 版的更新
 
 * Resource Monitor 正是支援 Windows 8.1。
 * 更新翻譯
 
-## 3.0 版的更新 ##
+## 3.0 版的更新
 
 * 更新 psutil 到 1.2.1。
 * 顯示目前 Windows 版本及 Service Pack。(NVDA+Shift+6)
 * 可變更元件快速鍵，（需 NVDA 2013.3 或更高版本。）
 * 可複製個別資源摘要到剪貼簿，方法是相同的元件指令連按兩次。
 
-## 2.4 版的更新 ##
+## 2.4 版的更新
 
 * 新增語言：中文（簡體）、，烏克蘭文。
 * 更新翻譯
 
-## 2.3 版的更新 ##
+## 2.3 版的更新
 
 * 新增保加利亞文翻譯。
 
-## 2.2 版的更新 ##
+## 2.2 版的更新
 
 * 新增以下翻譯：阿拉伯文、阿拉貢文、克羅埃西亞文、荷蘭文、芬蘭文、法文、加里斯亞文、德文、匈牙利文、意大利文、日文、韓文、尼泊爾文、波蘭文、葡萄牙文（巴西）、俄文、斯洛伐克文、斯洛維尼亞文、西班牙文、坦米爾文、土耳其文。
 
-## 2.1 版的更新 ##
+## 2.1 版的更新
 
 * 更新 psutil 到 0.6.1。
 * 獲取磁碟訊息時，修復延遲較長時間的問題。
 * 程式碼清理
 
-## 2.0 版的更新 ##
+## 2.0 版的更新
 
 * 支援翻譯元件及翻譯註解。
 
-## 1.0 版的更新 ##
+## 1.0 版的更新
 
 * 初始的版本
 

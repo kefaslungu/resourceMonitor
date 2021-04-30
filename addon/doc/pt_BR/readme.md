@@ -3,12 +3,12 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4
 
 Esse complemento fornece informações sobre carga da CPU, uso de memória e
 outras informações de uso de recursos.
 
-# Atalhos #
+# Atalhos
 
 * NVDA+Shift+E: apresenta uso da ram (memória), carga média do processador,
   e informações de bateria caso disponível.
@@ -28,7 +28,7 @@ outras informações de uso de recursos.
 If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
-## Notas de uso ##
+## Notas de uso
 
 Este complemento não substitui o gerenciador de tarefas e outros programas
 de informações de sistema para Windows. Note também o seguinte:
@@ -39,6 +39,20 @@ de informações de sistema para Windows. Note também o seguinte:
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Version 20.09
 
@@ -141,13 +155,13 @@ como ano.mês.revisão.
   cumulativas) são reconhecidas apropriadamente (ex. 14393.51).
 * Se usando compilações Insider Preview, tal fato é reconhecido.
 
-## Mudanças na 4.5 ##
+## Mudanças na 4.5
 
 * Repositório do complemento movido para o GitHub (pode ser encontrado em
   https://github.com/josephsl/resourcemonitor).
 * O Windows Server 2016 é reconhecido adequadamente.
 
-## Mudanças na 4.0 ##
+## Mudanças na 4.0
 
 * Atualizada dependência psutil para 2.2.1.
 * Aprimorado largamente o desempenho ao obter informações de carga da CPU.
@@ -156,12 +170,12 @@ como ano.mês.revisão.
 * Você pode usar o gestor de complementos para acessar a ajuda do
   complemento.
 
-## Mudanças na 3.1 ##
+## Mudanças na 3.1
 
 * O Monitor de Recursos suporta oficialmente Windows 8.1.
 * Atualizadas traduções.
 
-## Mudanças na 3.0 ##
+## Mudanças na 3.0
 
 * Atualizada dependência psutil para 1.2.1.
 * Anunciar versão atual de Windows, arquitetura da CPU e service pack se
@@ -171,33 +185,33 @@ como ano.mês.revisão.
 * Capacidade de copiar as informações dum recurso individual para a área de
   transferência pressionando duas vezes o comando do recurso.
 
-## Mudanças na 2.4 ##
+## Mudanças na 2.4
 
 * Novos idiomas: Chinês (simplificado), Ucraniano.
 * Atualizadas traduções.
 
-## Mudanças na 2.3 ##
+## Mudanças na 2.3
 
 * Adicionada tradução Búlgara.
 
-## Mudanças na 2.2 ##
+## Mudanças na 2.2
 
 * Acrescentadas as seguintes traduções: Árabe, Alemão, Aragonês, Coreano,
   Croata, Eslovaco, Esloveno, Espanhol, Finlandês, Francês, Galego,
   Holandês, Húngaro, Japonês, Italiano, Nepalês, Português (Brasil), Russo,
   Tâmil e Turco.
 
-## Mudanças na 2.1 ##
+## Mudanças na 2.1
 
 * Atualizada dependência psutil para versão 0.6.1.
 * Corrigida lentidão ao obter informações sobre unidades de disco.
 * Enxugamento de código.
 
-## Mudanças na 2.0 ##
+## Mudanças na 2.0
 
 * adicionado suporte a traduções e comentários para tradutores.
 
-## Mudanças na 1.0 ##
+## Mudanças na 1.0
 
 * Versão Inicial
 

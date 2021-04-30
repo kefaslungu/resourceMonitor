@@ -3,12 +3,12 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Baixar [versão estável][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4
 
 Este extra fornece informações sobre carga da CPU, uso de memória e outras
 informações de uso de recursos.
 
-# Teclas de atalho: #
+# Teclas de atalho:
 
 * NVDA+Shift+E: presents used ram, average processor load, and battery info
   if available.
@@ -27,7 +27,7 @@ informações de uso de recursos.
 If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
-## Notas de utilização: ##
+## Notas de utilização:
 
 Este extra não substitui o gestor de tarefas e outros programas de
 informações do sistema para o Windows. Observe também o seguinte:
@@ -38,6 +38,20 @@ informações do sistema para o Windows. Observe também o seguinte:
 * Se houver uma grande actividade do disco, como copiar ficheiros grandes,
   pode haver atrasos ao obter informações de uso do disco.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Version 20.09
 
@@ -139,13 +153,13 @@ ano.mês.revisão.
   actualizações cumulativas) são devidamente reconhecidas (como a 14393.51).
 * Se estiver usando versões de Insider Preview, esse fato é reconhecido.
 
-## Mudanças para 4.5 ##
+## Mudanças para 4.5
 
 * O repositório do extra foi movido para o GitHub (pode ser encontrado em
   https://github.com/josephsl/resourcemonitor).
 * O Windows Server 2016 é devidamente reconhecido.
 
-## Alterações para 4.0 ##
+## Alterações para 4.0
 
 * Dependência psutil actualizada para 2.2.1.
 * Melhorado o desempenho na rapidez ao obter informações sobre a carga da
@@ -154,12 +168,12 @@ ano.mês.revisão.
 * No Windows 10, o número de compilação do Windows também será anunciado.
 * Agora, pode usar o gestor de extras para obter ajuda.
 
-## Mudanças para 3.1 ##
+## Mudanças para 3.1
 
 * O monitor de recursos passou a suportar oficialmente o Windows 8.1.
 * Traduções actualizadas
 
-## Alterações para 3.0 ##
+## Alterações para 3.0
 
 * Dependência psutil actualizada para 1.2.1.
 * Anúncio da versão actual do Windows, arquitetura da CPU e pacote de
@@ -169,33 +183,33 @@ ano.mês.revisão.
 * Capacidade de copiar informações de recursos individuais para a área de
   transferência ao pressionar os comandos de recursos duas vezes.
 
-## Mudanças para 2.4 ##
+## Mudanças para 2.4
 
 * Novos idiomas: chinês (simplificado), ucraniano.
 * Traduções actualizadas
 
-## Alterações para 2.3 ##
+## Alterações para 2.3
 
 * Adicionada a tradução búlgara.
 
-## Mudanças para 2.2 ##
+## Mudanças para 2.2
 
 * Adicionadas as seguintes traduções: árabe, aragonês, croata, holandês,
   finlandês, francês, galego, alemão, húngaro, italiano, japonês, coreano,
   nepalês, polaco, português (Brasil), russo, eslovaco, esloveno, espanhol,
   tâmil e turco.
 
-## Mudanças para 2.1 ##
+## Mudanças para 2.1
 
 * Dependência psutil actualizada para a versão 0.6.1.
 * Corrigido grande atraso ao obter informações de unidades.
 * Limpeza de códigoCode cleanup.
 
-## Mudanças para 2.0 ##
+## Mudanças para 2.0
 
 * Foi adicionado o Suporte de tradução e respectivos comentários.
 
-## Alterações para 1.0 ##
+## Alterações para 1.0
 
 * Lançamento inicial
 

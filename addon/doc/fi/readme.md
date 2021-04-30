@@ -3,12 +3,12 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* Yhteensopivuus: NVDA 2019.3-2020.4
+* NVDA compatibility: 2020.4
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
 
-# Pikanäppäimet #
+# Pikanäppäimet
 
 * NVDA+Vaihto+E: Lukee käytetyn RAM-muistin määrän, suorittimen
   keskimääräisen kuormituksen sekä akun tiedot, mikäli sellainen on
@@ -29,7 +29,7 @@ resurssien käytöstä.
 Jos asennettuna on NVDA 2013.3 tai uudempi, voit muuttaa näitä pikanäppäimiä
 Syötekomennot-valintaikkunasta.
 
-## Huomautuksia käytöstä ##
+## Huomautuksia käytöstä
 
 Tämä lisäosa ei korvaa Windowsin tehtävienhallintaa tai muita
 järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
@@ -40,6 +40,20 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Versio 20.09
 
@@ -142,13 +156,13 @@ vuosi.kuukausi.tarkistusversio.
   asentamisen jälkeen (kuten 14393.51).
 * Insider-esiversiot tunnistetaan oikein.
 
-## Muutokset versiossa 4.5 ##
+## Muutokset versiossa 4.5
 
 * Lisäosan koodivarasto on muuttanut GitHubiin (löytyy osoitteesta
   https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016 tunnistetaan asianmukaisesti.
 
-## Muutokset versiossa 4.0 ##
+## Muutokset versiossa 4.0
 
 * Päivitetty psutil-riippuvuus versioksi 2.2.1.
 * Suorituskykyä paranneltu huomattavasti suorittimen kuormituksen tietoja
@@ -157,12 +171,12 @@ vuosi.kuukausi.tarkistusversio.
 * Windows 10:n versiota ilmoitettaessa kerrotaan myös koontiversio.
 * Ohje on käytettävissä Lisäosien hallinnasta.
 
-## Muutokset versiossa 3.1 ##
+## Muutokset versiossa 3.1
 
 * Resurssienvalvonta tukee virallisesti Windows 8.1:tä.
 * Käännöksiä päivitetty.
 
-## Muutokset versiossa 3.0 ##
+## Muutokset versiossa 3.0
 
 * Päivitetty psutil-riippuvuus versioksi 1.2.1.
 * Suorittimen arkkitehtuurin sekä Windowsin ja Service Packin version
@@ -172,33 +186,33 @@ vuosi.kuukausi.tarkistusversio.
 * Mahdollisuus kopioida yksittäisen resurssin tiedot leikepöydälle
   painamalla komentoja kahdesti.
 
-## Muutokset versiossa 2.4 ##
+## Muutokset versiossa 2.4
 
 * Uusia kieliä: kiina (yksinkertaistettu), ukraina
 * Käännöksiä päivitetty.
 
-## Muutokset versiossa 2.3 ##
+## Muutokset versiossa 2.3
 
 * Lisätty bulgariankielinen käännös.
 
-## Muutokset versiossa 2.2 ##
+## Muutokset versiossa 2.2
 
 * Lisätty seuraavat käännökset: arabia, aragonia, brasilianportugali,
   espanja, galego, hollanti, italia, japani, korea, kroatia, nepali, puola,
   ranska, saksa, slovakki, slovenia, suomi, tamili, turkki, unkari ja
   venäjä.
 
-## Muutokset versiossa 2.1 ##
+## Muutokset versiossa 2.1
 
 * Päivitetty psutil-riippuvuus versioksi 0.6.1.
 * Korjattu pitkä viive asemien tietoja haettaessa.
 * Koodia siivottu.
 
-## Muutokset versiossa 2.0 ##
+## Muutokset versiossa 2.0
 
 * Lisätty käännösten tuki ja käännöskommentteja.
 
-## Muutokset versiossa 1.0 ##
+## Muutokset versiossa 1.0
 
 * Ensimmäinen versio
 

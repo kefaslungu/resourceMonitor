@@ -3,12 +3,12 @@
 * Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA kompatibilnost: 2019.3 do 2020.4
+* NVDA compatibility: 2020.4
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
 
-# Prečaci #
+# Prečaci
 
 * NVDA+šift+E: Prikazuje korištenje ram memorije, prosječno opterećenje
   procesora i informacije o stanju baterije, ako su dostupne.
@@ -28,7 +28,7 @@ i druge informacije o korištenju resursa.
 Ako je instalirana NVDA verzija 2013.3 ili novija, tipkovničke prečace je
 moguće mijenjati putem dijaloškog okvira za ulazne geste.
 
-## Upute za primjenu ##
+## Upute za primjenu
 
 Ovaj dodatak ne zamijenjuje upravljača zadataka i druge programe za
 informacije o sustavu Windows. Važno je znati i sljedeće:
@@ -40,6 +40,20 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Verzija 20.09
 
@@ -143,13 +157,13 @@ godina.mjesec.izdanje.
   ispravno se prepoznaju (kao što je 14.393.51).
 * Ako koristite Insider Preview gradnje, ta se činjenica prepoznaje.
 
-## Promjene u verziji 4.5 ##
+## Promjene u verziji 4.5
 
 * Repozitorij dodatka premješten je na GitHub (možete ga pronaći na
   https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016. se ispravno prepoznaje.
 
-## Promjene u verziji 4.0 ##
+## Promjene u verziji 4.0
 
 * Ažurirana je opsutil zavisnost na 2.2.1.
 * Izrazito poboljšana učinkovitost pri dobivanju informacija o opterećenosti
@@ -158,12 +172,12 @@ godina.mjesec.izdanje.
 * U Windowsima 10, broj verzije Windowsa također će biti izgovoren.
 * Moguće je koristiti Upravljač za dodatke za pristup pomoći.
 
-## Promjene u verziji 3.1 ##
+## Promjene u verziji 3.1
 
 * „Prati stanje resursa” službeno podržava Windows 8.1.
 * Ažurirani prijevodi.
 
-## Promjene u verziji 3.0 ##
+## Promjene u verziji 3.0
 
 * Ažurirana psutil zavisnost na 1.2.1.
 * Izgovor trenutne verzije Windowsa, arhitekture procesora i servisnog
@@ -172,33 +186,33 @@ godina.mjesec.izdanje.
 * Mogućnost kopiranja pojedinačnih informacija o resursima u međuspremnik
   pritiskom naredbi resursa dva puta.
 
-## Promjene u verziji 2.4 ##
+## Promjene u verziji 2.4
 
 * Novi jezici: kineski (pojednostavljeni), ukrajinski.
 * Ažurirani prijevodi.
 
-## Promjene u verziji 2.3 ##
+## Promjene u verziji 2.3
 
 * Dodan prijevod na bugarski jezik.
 
-## Promjene u verziji 2.2 ##
+## Promjene u verziji 2.2
 
 * Dodani prijevodi na sljedeće jezike: arapski, aragonski, hrvatski,
   nizozemski, finski, francuski, galicijski, njemački, mađarski, talijanski,
   japanski, korejski, nepaljski, poljski, portugalski (Brazil), ruski,
   slovački, slovenski, španjolski, tamilski i turski.
 
-## Promjene u verziji 2.1 ##
+## Promjene u verziji 2.1
 
 * Ažurirana psutil zavisnost na verziju 0.6.1.
 * Riješen problem velikog kašnjenja pri dobivanju informacija o particijama.
 * Čišćenje koda.
 
-## Promjene u verziji 2.0 ##
+## Promjene u verziji 2.0
 
 * Dodana podrška za prijevode i komentare prijevoda.
 
-## Promjene u verziji 1.0 ##
+## Promjene u verziji 1.0
 
 * Prvo izdanje
 

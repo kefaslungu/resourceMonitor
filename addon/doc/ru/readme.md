@@ -3,12 +3,12 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Загрузить [стабильную версию][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4
 
 Этот плагин предоставляет информацию о загрузке процессора, используемой
 памяти и  других используемых ресурсах.
 
-# Горячие клавиши #
+# Горячие клавиши
 
 * NVDA+Shift+E: presents used ram, average processor load, and battery info
   if available.
@@ -27,7 +27,7 @@
 If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
-## Замечания по использованию ##
+## Замечания по использованию
 
 Это дополнение не заменяет диспетчер задач и другие информационные программы
 системы Windows. Также обратите внимание на следующее:
@@ -39,6 +39,20 @@ keys via input gestures dialog.
 * Если есть тяжелые дисковые операции, такие как копирование больших файлов,
   возникают задержки при получении информации об использовании диска.
 * This add-on requires Windows 7 Service Pack 1 or later.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Version 20.09
 
@@ -138,13 +152,13 @@ Important: Version 17.09.x is the last version to support Windows XP.
   теперь правильно распознаются (например, 14393.51).
 * Распознаётся факт использования сборок Insider Preview.
 
-## Изменения в версии 4.5 ##
+## Изменения в версии 4.5
 
 * Репозиторий дополнения перемещён на github (находится на
   https://github.com/josephsl/resourcemonitor).
 * Правильно распознаётся Windows Server 2016.
 
-## Изменения в версии 4.0 ##
+## Изменения в версии 4.0
 
 * Обновлён пакет psutil до версии 2.2.1.
 * Значительно улучшена производительность при получении информации о
@@ -154,12 +168,12 @@ Important: Version 17.09.x is the last version to support Windows XP.
 * Вы можете использовать Менеджер дополнений для доступа к справке
   дополнения.
 
-## Изменения в версии 3.1 ##
+## Изменения в версии 3.1
 
 * Resource Monitor официально поддерживает Windows, 8.1.
 * Обновлены переводы.
 
-## Изменения в версии 3.0 ##
+## Изменения в версии 3.0
 
 * Обновлён пакет psutil до версии 1.2.1.
 * Предоставляется установленная версия Windows, разрядность процессора (32
@@ -168,16 +182,16 @@ Important: Version 17.09.x is the last version to support Windows XP.
 * Возможность копирования индивидуальной информации о ресурсах в буфер,
   нажимая команды дважды.
 
-## Изменения в версии 2.4 ##
+## Изменения в версии 2.4
 
 * Новые языки: китайский (упрощённый), украинский.
 * Обновлены переводы.
 
-## Изменения в версии 2.3 ##
+## Изменения в версии 2.3
 
 * Добавлен болгарский перевод.
 
-## Изменения в версии 2.2 ##
+## Изменения в версии 2.2
 
 * Добавлены следующие переводы: Арабский, арагонский, хорватский,
   голландский, финский, французский, галисийский, немецкий, венгерский,
@@ -185,17 +199,17 @@ Important: Version 17.09.x is the last version to support Windows XP.
   (Бразилия), русский, словацкий, словенский, испанский, тамильский и
   турецкий.
 
-## Изменения в версии 2.1 ##
+## Изменения в версии 2.1
 
 * Обновлен пакет psutil до версии 0.6.1.
 * Исправлена ​​большая задержка при получении информации о дисках.
 * Немного очищен код
 
-## Изменения в версии 2.0 ##
+## Изменения в версии 2.0
 
 * добавлена ​​поддержка Переводов и коментариев для переводчиков.
 
-## Изменения в версии 1.0 ##
+## Изменения в версии 1.0
 
 * Первый публичный релиз
 

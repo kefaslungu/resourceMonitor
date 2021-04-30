@@ -3,12 +3,12 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e altri
   collaboratori di NVDA
 * Scarica la [versione stabile][1]
-* Compatibilità con NVDA: dalla versione 2019.3 alla 2020.4
+* NVDA compatibility: 2020.4
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.
 
-# Tasti rapidi #
+# Tasti rapidi
 
 * NVDA+Shift+E: fornisce informazioni sulla quantità di ram utilizzata, sul
   carico medio della cpu e sulla batteria, se disponibile.
@@ -29,7 +29,7 @@ sistema, quali carico della CPU, utilizzo della memoria e molto altro.
 Se si dispone di NVDA 2013.3 o superiore, è possibile modificare questi
 tasti rapidi dalla finestra Gesti e Tasti di Immissione.
 
-## Note d'utilizzo ##
+## Note d'utilizzo
 
 Questo componente aggiuntivo non sostituisce applicazioni quali Task Manager
 o altri software che forniscono informazioni di sistema per Windows. Inoltre
@@ -42,6 +42,20 @@ si tenga presente che:
   file di grandi dimensioni, ci potrebbero essere dei ritardi nell'ottenere
   informazioni sull'utilizzo del disco.
 * Questo add-on richiede Windows 7 Service Pack 1 o superiore.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Novità nella versione 20.09
 
@@ -148,13 +162,13 @@ come anno.mese.revisione.
   cumulativi) sono riconosciute correttamente (ad esempio la 14393.51).
 * Se si utilizzano le Insider Preview builds, questo fatto è riconosciuto.
 
-## Novità nella versione 4.5 ##
+## Novità nella versione 4.5
 
 * Il repository dell'add-on è stato spostato su GitHub (lo si trova
   all'indirizzo https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016 è riconosciuto correttamente.
 
-## Novità nella versione 4.0 ##
+## Novità nella versione 4.0
 
 * Aggiornata la dipendenza psutil alla versione 2.2.1.
 * Performance molto migliorate nell'acquisizione delle informazioni sul
@@ -164,12 +178,12 @@ come anno.mese.revisione.
 * Per accedere alla guida, si può utilizzare il gestore componenti
   aggiuntivi.
 
-## Novità nella versione 3.1 ##
+## Novità nella versione 3.1
 
 * Resource Monitor supporta ufficialmente Windows 8.1.
 * Traduzioni aggiornate.
 
-## Novità nella versione 3.0 ##
+## Novità nella versione 3.0
 
 * Aggiornata la dipendenza psutil alla versione 1.2.1.
 * Vocalizzazione della versione corrente di Windows, dell'architettura della
@@ -179,34 +193,34 @@ come anno.mese.revisione.
 * Possibilità di copiare ciascuna informazione sulle risorse negli appunti
   digitando i comandi due volte.
 
-## Novità nella versione 2.4 ##
+## Novità nella versione 2.4
 
 * Nuove lingue: Cinese (semplificato), Ucraino.
 * Traduzioni aggiornate.
 
-## Novità nella versione 2.3 ##
+## Novità nella versione 2.3
 
 * Aggiunta la traduzione in bulgaro.
 
-## Novità nella versione 2.2 ##
+## Novità nella versione 2.2
 
 * Aggiunte le seguenti traduzioni: Arabo, Aragonese, Croato, Olandese,
   Finlandese, Francese, Galiziano, Tedesco, Ungherese, Italiano, Giapponese,
   Coreano, Nepalese, Polacco, Portoghese (Brasile), Russo, Slovacco,
   Sloveno, Spagnolo, Tamil e Turco.
 
-## Novità nella versione 2.1 ##
+## Novità nella versione 2.1
 
 * Aggiornata la dipendenza psutil alla versione 0.6.1.
 * Corretto un grosso ritardo che si verificava quando si acquisivano
   informazioni sui drives.
 * Pulizia del codice.
 
-## Novità nella versione 2.0 ##
+## Novità nella versione 2.0
 
 * aggiunto il supporto e i commenti alle traduzioni.
 
-## Novità nella versione 1.0 ##
+## Novità nella versione 1.0
 
 * Versione iniziale
 

@@ -3,11 +3,11 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
-# 快捷键 #
+# 快捷键
 
 * NVDA+Shift+E： 读出内存的使用率、CPU 平均负载和电池信息（如果可用）。
 * NVDA+Shift+1： 读出每个 CPU 核心的负载和平均负载。
@@ -19,13 +19,27 @@
 
 如果您安装了 NvDA 2013.3 或更高版本，您可以通过输入手势对话框更改这些快捷键。
 
-## 使用说明 ##
+## 使用说明
 
 此插件不替换 Windows 的任务管理器和其他系统信息程序。另请注意以下事项：
 
 * 为逻辑处理器而不是物理内核提供CPU使用率。对于使用超线程技术的处理器来说，这是显而易见的，其中CPU的数量是CPU核心数量的两倍。
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 此插件需要Windows 7 Service Pack 1或更高版本。
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## 版本20.09
 
@@ -110,12 +124,12 @@
 * Windows 10构建版本（安装累积更新后）已正确识别（例如14393.51）。
 * 如果使用Insider Preview构建，则会认识到这一事实。
 
-## 版本4.5 ##
+## 版本4.5
 
 * 附加存储库已移至GitHub（可在https://github.com/josephsl/resourcemonitor找到）。
 * Windows Server 2016已被正确识别。
 
-## 版本4.0 ##
+## 版本4.0
 
 * 将psutil依赖关系更新为2.2.1。
 * 在获取有关CPU负载的信息时，性能得到极大改善。
@@ -123,42 +137,42 @@
 * 在Windows 10中，Windows的内部版本号也将被公布。
 * 现在您可以使用插件管理器来访问插件帮助。
 
-## 版本3.1 ##
+## 版本3.1
 
 * 资源监视器正式支持Windows 8.1。
 * 更新翻译。
 
-## 版本3.0 ##
+## 版本3.0
 
 * 将psutil依赖项更新为1.2.1。
 * 报告当前Windows版本，CPU架构和服务包（如果有）（NVDA + Shift + 6）。
 * 可以更改附加快捷键（NVDA 2013.3或更高版本）。
 * 通过按资源快捷键两次，可以将单个资源信息复制到剪贴板。
 
-## 版本2.4 ##
+## 版本2.4
 
 * 新的语言：中文（简体），乌克兰语。
 * 更新翻译。
 
-## 版本2.3 ##
+## 版本2.3
 
 * 增加保加利亚语翻译。
 
-## 版本2.2 ##
+## 版本2.2
 
 * 增加了以下翻译：阿拉伯语，阿拉贡语，克罗地亚语，荷兰语，芬兰语，法语，加利西亚语，德语，匈牙利语，意大利语，日语，韩语，尼泊尔语，波兰语，葡萄牙语（巴西），俄语，斯洛伐克语，斯洛文尼亚语，西班牙语，泰米尔语和土耳其语。
 
-## 版本2.1 ##
+## 版本2.1
 
 * 更新psutil依赖到版本0.6.1。
 * 获取驱动器信息时修复很长时间的延迟。
 * 代码清理。
 
-## 版本2.0 ##
+## 版本2.0
 
 * 增加了翻译支持和翻译评论。
 
-## 版本1.0 ##
+## 版本1.0
 
 * 发布初始版本
 

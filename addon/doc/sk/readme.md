@@ -3,11 +3,11 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
-# Klávesové skratky #
+# Klávesové skratky
 
 * NVDA+Shift+E: oznámy využitie pamäte ram, priemerné zaťaženie procesora a
   stav batérie, ak je dostupná.
@@ -25,7 +25,7 @@ Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch
 Ak používate NVDA od verzie 2013.3, môžete si skratky upraviť v dialógu
 klávesové skratky.
 
-## Všimnite si ##
+## Všimnite si
 
 Tento doplnok nie je náhradou za správcu úloh a iné programy na zisťovanie
 informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
@@ -36,6 +36,20 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 * Ak práve kopírujete veľké súbory, zistenie informácie o využití disku môže
   chvíľu trvať.
 * Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Verzia 20.09
 
@@ -133,12 +147,12 @@ Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 * Doplnok upozorňuje, ak používate vývojové verzie Windows (program
   Insider).
 
-## Zmeny vo verzii 4.5 ##
+## Zmeny vo verzii 4.5
 
 * Doplnok presunutý na GitHub (https://github.com/josephsl/resourcemonitor).
 * Správne je rozpoznávaný Windows server 2016.
 
-## Zmeny vo verzii 4.0 ##
+## Zmeny vo verzii 4.0
 
 * Aktualizovaná knižnica psutil na verziu 2.2.1.
 * Upravené zisťovanie zaťaženia procesora.
@@ -146,12 +160,12 @@ Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 * V systéme Windows 10 je oznamované aj číslo zostavi.
 * Pomocníka k doplnku nájdete v správcovi doplnkov.
 
-## Zmeny vo verzii 3.1 ##
+## Zmeny vo verzii 3.1
 
 * Resource monitor oficiálne podporuje Windows 8.1
 * Aktualizované preklady.
 
-## Zmeny vo verzii 3.0 ##
+## Zmeny vo verzii 3.0
 
 * Aktualizovaná knižnica psutil na verziu 1.2.1.
 * Oznamovanie architektúri procesora (32 alebo 64 bit), verzie windows a
@@ -159,33 +173,33 @@ Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 * Možnosť zmeniť klávesové skratky (NVDA 2013 a vyššie).
 * Možnosť kopírovať údaje do schránky dvojitým stlačením danej skratky.
 
-## Zmeny vo verzii 2.4 ##
+## Zmeny vo verzii 2.4
 
 * Nové jazyky: Ukrajinčina, zjednodušená Čínština
 * Aktualizované preklady.
 
-## Zmeny vo verzii 2.3 ##
+## Zmeny vo verzii 2.3
 
 * pridaný preklad do bulharčiny
 
-## Zmeny vo verzii 2.2 ##
+## Zmeny vo verzii 2.2
 
 * Pridané preklady: Arabčina, Aragónčina, chorvátčina, holandčina, fínčina,
   francúzština, Galijcíjčina, nemčina, maďarčina, taliančina, japončina,
   kórejčina, nepálčina, poľština, brazílska portugalčina, ruština,
   slovenčina, slovinčina, španielčina, Tamilčina a turečtina.
 
-## Zmeny vo verzii 2.1 ##
+## Zmeny vo verzii 2.1
 
 * Aktualizovaná knižnica psutil na verziu 0.6.1.
 * Skrátený čas na zistenie kapacity a miesta na diskoch.
 * drobné úpravy v kóde.
 
-## Zmeny vo verzii 2.0 ##
+## Zmeny vo verzii 2.0
 
 * Podpora pre preklady vrátane komentárov pre prekladateľov.
 
-## Zmeny vo verzii 1.0 ##
+## Zmeny vo verzii 1.0
 
 * prvé vydanie
 

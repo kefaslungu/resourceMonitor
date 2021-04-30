@@ -4,12 +4,12 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA-Kompatibilität: 2019.3 bis 2020.4
+* NVDA compatibility: 2020.4
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 
-# Tastenkürzel #
+# Tastenkürzel
 
 * NVDA+Umschalt+E: Zeigt den verbrauchten Arbeitsspeicher, die
   durchschnittliche Prozessorauslastungen und Akku-Informationen an, falls
@@ -30,7 +30,7 @@ verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 Wenn Sie NVDA 2013.3 oder neuer installiert haben, können Sie diese
 Tastenkombinationen unter "Tastenbefehle" im NVDA-Menü ändern.
 
-## Nutzungshinweise ##
+## Nutzungshinweise
 
 Diese Erweiterung ersetzt nicht den Task-Manager von Windows sowie andere
 Systeminformationsprogramme. Bitte beachten Sie Folgendes:
@@ -44,6 +44,20 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
   Kopieren großer Dateien stattfinden.
 * Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
   erforderlich.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Version 20.09
 
@@ -151,14 +165,14 @@ angezeigt.
 * Es wird nun auch erkannt, ob die aktive Windowsversion ein Build des
   Insiderprogramms ist.
 
-## Änderungen in 4.5 ##
+## Änderungen in 4.5
 
 * Der Quellordner der Erweiterung (Repository) wurde nach GitHub
   verschoben. Das Verzeichnis kann hier gefunden werden
   [https://github.com/josephsl/resourcemonitor](https://github.com/josephsl/resourcemonitor).
 * Windows-Server 2016 wird nun korrekt erkannt.
 
-## Änderungen in 4.0 ##
+## Änderungen in 4.0
 
 * Psutil-Abhängigkeit auf 2.2.1 aktualisiert.
 * Erheblich verbesserte Leistung beim Abrufen von Informationen über die
@@ -168,12 +182,12 @@ angezeigt.
 * Sie können den Add-ons-Manager verwenden, um auf die Hilfe zur Erweiterung
   zuzugreifen.
 
-## Änderungen in 3.1 ##
+## Änderungen in 3.1
 
 * Der Ressourcen-Monitor unterstützt offiziell Windows 8.1.
 * Übersetzungen aktualisiert.
 
-## Änderungen in 3.0 ##
+## Änderungen in 3.0
 
 * Psutil-Abhängigkeit auf 1.2.1 aktualisiert.
 * NVDA+Umschalt+6 gibt die Windows-Version, die verwendete
@@ -183,16 +197,16 @@ angezeigt.
   zweimaliges Drücken der Tastenkombination in die Zwischenablage zu
   kopieren.
 
-## Änderungen in 2.4 ##
+## Änderungen in 2.4
 
 * Neue Sprachen: Chinesisch (vereinfacht), Ukrainisch.
 * Übersetzungen aktualisiert.
 
-## Änderungen in 2.3 ##
+## Änderungen in 2.3
 
 * Übersetzung für Bulgarisch hinzugefügt.
 
-## Änderungen in 2.2 ##
+## Änderungen in 2.2
 
 * Folgende Übersetzungen hinzugefügt: Arabisch, Aragonesisch, Kroatisch,
   Niederländisch, Finnisch, Französisch, Galiesisch, Deutsch, Ungarisch,
@@ -200,18 +214,18 @@ angezeigt.
   (Brasilien), Russisch, Slovakisch, Slovenisch, Spanisch, Tamil und
   Türkisch.
 
-## Änderungen in 2.1 ##
+## Änderungen in 2.1
 
 * Psutil auf Version 0.6.1 aktualisiert.
 * Größere Zeitverzögerung beim Erhalten von Informationen von Datenträgern
   beseitigt.
 * Der Quellcode wurde bereinigt.
 
-## Änderungen in 2.0 ##
+## Änderungen in 2.0
 
 * Möglichkeit zur Übersetzung sowie Übersetzungskommentare hinzugefügt.
 
-## Änderungen in 1.0 ##
+## Änderungen in 1.0
 
 * Ehrstveröffentlichung
 

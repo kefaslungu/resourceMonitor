@@ -3,13 +3,13 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Télécharger [version stable][1]
-* NVDA compatibility: 2019.3 to 2020.4
+* NVDA compatibility: 2020.4
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
 ressources.
 
-# Raccourcis #
+# Raccourcis
 
 * NVDA+Shift+E: presents used ram, average processor load, and battery info
   if available.
@@ -28,7 +28,7 @@ ressources.
 If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
 
-## Remarques sur l'utilisation ##
+## Remarques sur l'utilisation
 
 Cette extension ne remplace pas le gestionnaire de tâches et les autres
 programmes d'information système pour Windows. Aussi, notez ce qui suit :
@@ -41,6 +41,20 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
 * Cette extension requiert Windows 7 Service Pack 1 ou au-delà.
+
+## Version 21.04
+
+* NVDA 2020.4 or later is required.
+* Updated psutil dependency to 5.8.0.
+* When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.
+
+## Version 21.01
+
+* Updated psutil dependency to 5.7.3.
+* Shortened Windows version message.
+* On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.
 
 ## Version 20.09
 
@@ -147,13 +161,13 @@ affichées comme année.mois.révision.
   cumulatives) sont correctement reconnues (tels que la 14393.51).
 * Si vous utilisez une build Insider Preview, ceelle-ci sera reconnue.
 
-## Changements pour la version 4.5 ##
+## Changements pour la version 4.5
 
 * Le référentiel de l'extension a été déplacé vers GitHub (peut être trouvé
   sur https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016 est correctement reconnu.
 
-## Changements pour la version 4.0 ##
+## Changements pour la version 4.0
 
 * Mise à jour de la dépendance psutil  vers la version 2.2.1.
 * Nette amélioration des performances lors de l'obtention d'informations sur
@@ -163,12 +177,12 @@ affichées comme année.mois.révision.
 * Vous pouvez utiliser le Gestionnaire d'extensions pour accéder à l'aide de
   l'extension.
 
-## Changements pour la version 3.1 ##
+## Changements pour la version 3.1
 
 * Resource Monitor prend officiellement en charge Windows 8.1.
 * Mise à jour des traductions.
 
-## Changements pour la version 3.0 ##
+## Changements pour la version 3.0
 
 * Mise à jour de la dépendance psutil  vers la version 1.2.1.
 * Annonce la version en cours de Windows, l'architecture du processeur et le
@@ -178,33 +192,33 @@ affichées comme année.mois.révision.
 * Possibilité de copier les informations de la ressource individuelle dans
   le presse-papiers en appuyant deux fois sur commandes ressource.
 
-## Changements pour la version 2.4 ##
+## Changements pour la version 2.4
 
 * Nouvelles langues: Chinois (simplifié), Ukrainien.
 * Mise à jour des traductions.
 
-## Changements pour la version 2.3 ##
+## Changements pour la version 2.3
 
 * Ajout de la traduction en bulgare.
 
-## Changements pour la version 2.2 ##
+## Changements pour la version 2.2
 
 * Ajout des traductions suivantes : Arabe, Aragonais, Croate, Néherlandais,
   Finnois, Français, Galicien, Allemand, Hongrois, Italien, Japonais,
   Koréen, Népalais, Portuguais (Brésilien), Russe, Slovak, Slovénien,
   Espagnol, Tamoul et Turque.
 
-## Changements pour la version 2.1 ##
+## Changements pour la version 2.1
 
 * Mise à jour de la dépendance psutil  vers la version 0.6.1.
 * Correction du long délai lors de l'optention des informations des disques
 * Nettoyage du code.
 
-## Changements pour la version 2.0 ##
+## Changements pour la version 2.0
 
 * Ajout du support des traductions et des commentaires pour les traducteurs.
 
-## Changements pour la version 1.0 ##
+## Changements pour la version 1.0
 
 * Première version.
 
