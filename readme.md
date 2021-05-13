@@ -4,6 +4,8 @@
 * Download [stable version][1]
 * NVDA compatibility: 2020.4
 
+Note: I (Joseph Lee) am looking for people who will maintain Resource Monitor add-on from September 1, 2021 onwards.
+
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
 # Shortcuts
