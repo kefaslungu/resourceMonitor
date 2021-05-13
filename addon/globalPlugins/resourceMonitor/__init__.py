@@ -8,6 +8,7 @@ import winreg
 from datetime import datetime
 import sys
 import os
+import gettext
 import globalPluginHandler
 import ui
 import api
@@ -136,22 +137,14 @@ def _batteryInfo(verbose=False):
 				timeLeft = []
 				secsleft = secsleft // 60
 				hours, minutes = divmod(secsleft, 60)
-				if hours == 1:
-					# Translators: For battery status report, if battery time is 1 hour range
-					# (example: 1 hour, 30 minutes).
-					timeLeft.append(_("1 hour"))
-				elif hours > 1:
-					# Translators: For battery status report, if battery time is 2 hour range or greater
-					# (example: 3 hours, 10 minutes).
-					timeLeft.append(_("{0} hours").format(hours))
-				if minutes == 1:
-					# Translators: For battery status report, minute value is 1
-					# (example: 1 hour, 1 minute).
-					timeLeft.append(_("1 minute"))
-				else:
-					# Translators: For battery status report, minute value is 0 or between 2 and 59
-					# (example: 1 hour, 40 minutes).
-					timeLeft.append(_("{0} minutes").format(minutes))
+				# For hours and minutes, formatted string literals will be appended.
+				if hours > 0:
+					# Translators: battery and system uptime in hours.
+					batteryHours = gettext.ngettext("hour", "hours", hours)
+					timeLeft.append(f"{hours} {batteryHours}")
+				# Translators: battery and system uptime in minutes.
+				batteryMinutes = gettext.ngettext("minute", "minutes", minutes)
+				timeLeft.append(f"{minutes} {batteryMinutes}")
 				# Because psutil.sensors_battery function does not present battery flags by default,
 				# manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
