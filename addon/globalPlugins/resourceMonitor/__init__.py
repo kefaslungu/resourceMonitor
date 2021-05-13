@@ -403,31 +403,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
+		# Use a combination of gettext.ngettext and formatted string literals for uptime components.
 		uptimeComponents = []
-		if uptime.days == 1:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("1 day"))
-		else:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("{0} days").format(uptime.days))
-		if hours == 1:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("1 hour"))
-		else:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("{0} hours").format(hours))
-		if minutes == 1:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("1 minute"))
-		else:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("{0} minutes").format(minutes))
-		if seconds == 1:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("1 second"))
-		else:
-			# Translators: system uptime in hours.
-			uptimeComponents.append(_("{0} seconds").format(seconds))
+		# Translators: system uptime in days.
+		uptimeDays = gettext.ngettext("day", "days", uptime.days)
+		uptimeComponents.append(f"{uptime.days} {uptimeDays}")
+		# Translators: system uptime in hours.
+		uptimeHours = gettext.ngettext("hour", "hours", hours)
+		uptimeComponents.append(f"{hours} {uptimeHours}")
+		# Translators: system uptime in minutes.
+		uptimeMinutes = gettext.ngettext("minute", "minutes", minutes)
+		uptimeComponents.append(f"{minutes} {uptimeMinutes}")
+		# Translators: system uptime in seconds.
+		uptimeSeconds = gettext.ngettext("second", "seconds", seconds)
+		uptimeComponents.append(f"{seconds} {uptimeSeconds}")
 		return ", ".join(uptimeComponents)
 
 	@scriptHandler.script(
