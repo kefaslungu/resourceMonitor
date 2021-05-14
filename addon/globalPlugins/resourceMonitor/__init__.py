@@ -140,11 +140,9 @@ def _batteryInfo(verbose=False):
 				# For hours and minutes, formatted string literals will be appended.
 				if hours > 0:
 					# Translators: battery and system uptime in hours.
-					batteryHours = gettext.ngettext("hour", "hours", hours)
-					timeLeft.append(f"{hours} {batteryHours}")
+					timeLeft.append(gettext.ngettext("1 hour", "{0} hours".format(hours), hours))
 				# Translators: battery and system uptime in minutes.
-				batteryMinutes = gettext.ngettext("minute", "minutes", minutes)
-				timeLeft.append(f"{minutes} {batteryMinutes}")
+				timeLeft.append(gettext.ngettext("1 minute", "{0} minutes".format(minutes), minutes))
 				# Because psutil.sensors_battery function does not present battery flags by default,
 				# manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
@@ -403,20 +401,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
-		# Use a combination of gettext.ngettext and formatted string literals for uptime components.
 		uptimeComponents = []
 		# Translators: system uptime in days.
-		uptimeDays = gettext.ngettext("day", "days", uptime.days)
-		uptimeComponents.append(f"{uptime.days} {uptimeDays}")
+		uptimeComponents.append(gettext.ngettext("1 day", "{0} days".format(uptime.days), uptime.days))
 		# Translators: system uptime in hours.
-		uptimeHours = gettext.ngettext("hour", "hours", hours)
-		uptimeComponents.append(f"{hours} {uptimeHours}")
+		uptimeComponents.append(gettext.ngettext("1 hour", "{0} hours".format(hours), hours))
 		# Translators: system uptime in minutes.
-		uptimeMinutes = gettext.ngettext("minute", "minutes", minutes)
-		uptimeComponents.append(f"{minutes} {uptimeMinutes}")
+		uptimeComponents.append(gettext.ngettext("1 minute", "{0} minutes".format(minutes), minutes))
 		# Translators: system uptime in seconds.
-		uptimeSeconds = gettext.ngettext("second", "seconds", seconds)
-		uptimeComponents.append(f"{seconds} {uptimeSeconds}")
+		uptimeComponents.append(gettext.ngettext("1 second", "{0} seconds".format(seconds), seconds))
 		return ", ".join(uptimeComponents)
 
 	@scriptHandler.script(
