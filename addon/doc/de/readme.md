@@ -4,7 +4,7 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA compatibility: 2020.4
+* NVDA-Kompatibilität: 2020.4
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -47,17 +47,18 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
 ## Version 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* NVDA 2020.4 oder neuer ist erforderlich.
+* Die psutil-Abhängigkeit wurde auf 5.8.0 aktualisiert.
+* Wenn Sie zweimal die Tastenbefehle der Erweiterung drücken, um
+  Ressourcen-Informationen in die Zwischenablage zu kopieren, werden diese
+  von NVDA gleichzeitig vorgelesen.
 
 ## Version 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Die psutil-Abhängigkeit wurde auf 5.7.3 aktualisiert.
+* Verkürzte Windows-Versionsmeldung.
+* Unter Windows 8.1 wird build.revision als Teil der
+  Windows-Versionsnachricht angekündigt, ähnlich wie bei Windows 10.
 
 ## Version 20.09
 

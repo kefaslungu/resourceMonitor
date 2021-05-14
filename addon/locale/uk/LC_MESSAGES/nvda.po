@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-07-14 19:25+0200\n"
 "PO-Revision-Date: 2020-12-20 19:42-0800\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"

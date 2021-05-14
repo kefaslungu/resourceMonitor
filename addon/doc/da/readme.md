@@ -3,7 +3,7 @@
 * Forfattere: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst og andre NVDA-bidragydere
 * Download [stable version][1]
-* NVDA compatibility: 2020.4
+* NVDA-kompatibilitet: 2020.4
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
@@ -43,17 +43,18 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 ## Version 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* NVDA 2020.4 eller nyere er påkrævet.
+* Opdaterede psutil dependency til 5.8.0.
+* Når tilføjelseskommandoer trykkes to gange for at kopiere
+  ressourceoplysninger til udklipsholderen, annoncerer NVDA
+  ressourceoversigt, der kopieres.
 
 ## Version 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Opdaterede psutil dependency til 5.7.3.
+* Forkortede beskeden Windows-version.
+* I Windows 8.1 vil build.revision blive annonceret som en del af
+  Windows-version beskeden, svarende til Windows 10.
 
 ## Version 20.09
 
@@ -205,13 +206,13 @@ som år.måned.revision.
 
 ## Ændringer i 2.1
 
-* opdated psutil dependency til version 0.6.1.
+* Opdaterede psutil dependency til version 0.6.1.
 * Rettet lang forsinkelse, når man bad om informationer om drev.
 * Oprydning i koden.
 
 ## Ændringer i 2.0
 
-* Tilføjet understøttelse af oversættelse og oversættelseskommentarer.
+* Tilføjet understøttelse for oversættelse og oversættelseskommentarer.
 
 ## Ændringer i 1.0
 
