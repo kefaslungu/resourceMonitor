@@ -8,7 +8,6 @@ import winreg
 from datetime import datetime
 import sys
 import os
-import gettext
 import globalPluginHandler
 import ui
 import api
@@ -139,10 +138,19 @@ def _batteryInfo(verbose=False):
 				hours, minutes = divmod(secsleft, 60)
 				# For hours and minutes, formatted string literals will be appended.
 				if hours > 0:
-					# Translators: battery and system uptime in hours.
-					timeLeft.append(gettext.ngettext("1 hour", "{0} hours".format(hours), hours))
+					timeLeft.append(
+						# Translators: battery and system uptime in hours.
+						_("1 hour")
+						# Translators: battery and system uptime in hours.
+						if hours == 1 else _("{0} hours").format(hours)
+					)
 				# Translators: battery and system uptime in minutes.
-				timeLeft.append(gettext.ngettext("1 minute", "{0} minutes".format(minutes), minutes))
+				timeLeft.append(
+					# Translators: battery and system uptime in minutes.
+					_("1 minute")
+					# Translators: battery and system uptime in minutes.
+					if minutes == 1 else _("{0} minutes").format(minutes)
+				)
 				# Because psutil.sensors_battery function does not present battery flags by default,
 				# manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
@@ -402,14 +410,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
 		uptimeComponents = []
-		# Translators: system uptime in days.
-		uptimeComponents.append(gettext.ngettext("1 day", "{0} days".format(uptime.days), uptime.days))
+		uptimeComponents.append(
+			# Translators: system uptime in days.
+			_("1 day")
+			# Translators: system uptime in days.
+			if uptime.days == 1 else _("{0} days").format(uptime.days)
+		)
 		# Translators: system uptime in hours.
-		uptimeComponents.append(gettext.ngettext("1 hour", "{0} hours".format(hours), hours))
-		# Translators: system uptime in minutes.
-		uptimeComponents.append(gettext.ngettext("1 minute", "{0} minutes".format(minutes), minutes))
+		uptimeComponents.append(
+			# Translators: system uptime in hours.
+			_("1 hour")
+			# Translators: system uptime in hours.
+			if hours == 1 else _("{0} hours").format(hours)
+		)
+		uptimeComponents.append(
+			# Translators: system uptime in minutes.
+			_("1 minute")
+			# Translators: system uptime in minutes.
+			if minutes == 1 else _("{0} minutes").format(minutes)
+		)
 		# Translators: system uptime in seconds.
-		uptimeComponents.append(gettext.ngettext("1 second", "{0} seconds".format(seconds), seconds))
+		uptimeComponents.append(
+			# Translators: system uptime in seconds.
+			_("1 second")
+			# Translators: system uptime in seconds.
+			if seconds == 1 else _("{0} seconds").format(seconds)
+		)
 		return ", ".join(uptimeComponents)
 
 	@scriptHandler.script(
