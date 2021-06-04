@@ -3,26 +3,27 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Baixar [versão estável][1]
-* NVDA compatibility: 2020.4
+* Compatibilidade com o NVDA: 2020.4
 
 Este extra fornece informações sobre carga da CPU, uso de memória e outras
 informações de uso de recursos.
 
 # Teclas de atalho:
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5: presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3: presents the used and total space of the static and
-  removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
-  service pack numbers.
-* NVDA+Shift+7: presents the system's uptime.
+* NVDA+Shift+E apresenta A memória ram usada, a carga média do processador e
+  as informações da bateria, se disponíveis.
+* NVDA+Shift+1: apresenta a carga média do processador e se estiverem
+  presentes CPU's com vários núcleos, a carga de cada núcleo.
+* NVDA+Shift+2/5: apresenta o espaço utilizado e o espaço total tanto para a
+  memória  física como para a virtual.
+* NVDA+Shift+3 Apresenta o espaço usado e total das unidades estáticas e
+  removíveis.
+* NVDA+Shift+4 Apresenta a percentagem da bateria, o estado da carga, o
+  tempo restante (se não estiver a carregar) e um aviso se a bateria estiver
+  fraca ou crítica.
+* NVDA+Shift+6 apresenta a arquitectura da CPU 32/64 bits e a versão do
+  Windows e os números do service pack.
+* NVDA+Shift+7 apresenta o tempo de actividade do sistema.
 
 If you have NVDA 2013.3 or later installed, you can change these shortcut
 keys via input gestures dialog.
@@ -37,48 +38,52 @@ informações do sistema para o Windows. Observe também o seguinte:
   onde o número de CPU é o dobro do número de núcleos da CPU.
 * Se houver uma grande actividade do disco, como copiar ficheiros grandes,
   pode haver atrasos ao obter informações de uso do disco.
-* This add-on requires Windows 7 Service Pack 1 or later.
+* Este extra requer o Service Pack 1 ou posterior do Windows 7.
 
-## Version 21.04
+## Versão 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* A versão do  NVDA 2020.4 ou posterior é necessária.
+* Dependência psutil actualizada para 5.8.0.
+* Ao pressionar duas vezes comandos adicionais para copiar informações de
+  recursos para a área de transferência, o NVDA anunciará o resumo dos
+  recursos que estão a ser copiados.
 
-## Version 21.01
+## Versão 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Dependência psutil actualizada para 5.7.3.
+* Mensagem abreviada da versão do Windows.
+* No Windows 8.1, build.revision será anunciado como parte da mensagem da
+  versão Windows, como no Windows 10.
 
-## Version 20.09
+## Versão 20.09
 
-* System uptime is now given as days, hours, minutes, seconds.
-* Windows Server Insider Preview build 20201 or later is properly recognized
-  as a Server Insider build.
+* O tempo de funcionamento do sistema é agora dado em dias, horas, minutos e
+  segundos.
+* O Windows Server Insider Preview build 20201 ou posterior é devidamente
+  reconhecido como um Servidor Insider build.
 
-## Version 20.07
+## Versão 20.07
 
-* Windows 10 Version 20H2 is properly recognized when obtaining Windows
-  version information (NVDA+Shift+6).
-* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
-  Windows 10verYYMM when pressing NVDA+Shift+6.
+* A versão 20H2 do Windows 10 é devidamente reconhecida ao obter a
+  informação da versão do Windows (NVDA+Shift+6).
+* Mensagem de versão simplificada do Windows 10, ou seja, Windows 10 YYYMM
+  em vez de Windows 10verYYYMM ao premir NVDA+Shift+6.
 
-## Version 20.06
+## Versão 20.06
 
-* Resolved many coding style issues and potential bugs with Flake8.
+* Resolvidos vários problemas de estilo de codificação e potenciais bugs com
+  Flake8.
 
-## Version 20.04
+## Versão 20.04
 
-* Updated psutil dependency to 5.7.0.
+* Dependência psutil actualizada para 5.7.0.
 
-## Version 20.01
+## Versão 20.01
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+* O NVDA 2019.3 ou posterior é necessário devido à utilização extensiva de
+  Python 3.
 
-## Version 19.11
+## Versão 19.11
 
 * Improved detection of Windows Insider Preview builds, especially for 20H1
   and beyond.
@@ -92,16 +97,16 @@ informações do sistema para o Windows. Observe também o seguinte:
 
 * Internal changes to support future NVDA releases.
 
-## Version 18.10
+## Versão 18.10
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+* O código foi tornado mais compatível com python3.
+* Dependência psutil actualizada para 5.4.7.
+* Ao obter a capacidade de disco e o uso de memória, o NVDA não mais causará
+  erros se estiver a usar um computador ou um serviço com mais de um
+  petabyte de RAM ou tamanho de disco.
+* Os valores para uso de memória e disco são mostrados com até duas casas
+  decimais (por exemplo, 4,00 GB em vez de 4,0 GB).
+* Detecção aprimorada de construções do Windows Insider Preview.
 
 ## Versão 18.04
 
