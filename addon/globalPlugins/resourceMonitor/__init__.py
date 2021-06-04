@@ -1,6 +1,6 @@
 # Resource Monitor for NVDA
 # Presents basic info on CPU load, memory and disk usage, as well as battery information.
-# Copyright 2013-2021 Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
+# Copyright 2013-2021 Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst, Quin Marilyn
 # released under GPL.
 # This add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GPL.
 
@@ -13,8 +13,17 @@ import ui
 import api
 import scriptHandler
 from . import psutil
+import gui
+import config
+from gui import guiHelper, settingsDialogs
+import wx
 import addonHandler
 addonHandler.initTranslation()
+
+confspec = {
+	"reverse": "boolean(default=False)"
+}
+config.conf.spec["resourceMonitor"] = confspec
 
 # Styles of size calculation/string composition, do not change!
 # Treditional style, Y, K, M, G, B, ...
@@ -231,10 +240,31 @@ def _win10RID(buildNum, isClient):
 		return "Windows Server {0}".format(releaseID)
 
 
+class ResourceMonitorPanel(gui.SettingsPanel):
+	# TRANSLATORS: title for the settings panel of Resource Monitor
+	title = _("Resource Monitor")
+
+	def makeSettings(self, sizer):
+		helper = guiHelper.BoxSizerHelper(self, sizer=sizer)
+		self.smReverse = helper.addItem(wx.CheckBox(
+			self,
+			# Translators: The label for the check box that reverses announcements
+			label=_("&Reverse announcements (Say free instead of used)"))
+		)
+		self.smReverse.SetValue(config.conf["resourceMonitor"]["reverse"])
+
+	def onSave(self):
+		config.conf["resourceMonitor"]["reverse"] = self.smReverse.IsChecked()
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 	scriptCategory = _("Resource Monitor")
+
+	def __init__(self, *args, **kwargs):
+		super(globalPluginHandler.GlobalPlugin, self).__init__(*args, **kwargs)
+		settingsDialogs.NVDASettingsDialog.categoryClasses.append(ResourceMonitorPanel)
 
 	@scriptHandler.script(
 		description=_(
@@ -258,6 +288,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_announceDriveInfo(self, gesture):
 		# Goes through all registered drives and gives info on each one
+		reverse = config.conf["resourceMonitor"]["reverse"]
 		info = []
 		for drive in psutil.disk_partitions():
 			# Get info on each one
@@ -266,18 +297,29 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# This can be checked by looking for a file system.
 			if drive.fstype:
 				driveInfo = psutil.disk_usage(drive[0])
-				info.append(
-					# Translators: Shows drive letter, type of drive (fixed or removable),
-					# used capacity and total capacity of a drive
-					# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(
-						driveName=drive[0],
-						driveType=drive[2],
-						usedSpace=size(driveInfo[1], alternative),
-						totalSpace=size(driveInfo[0], alternative),
-						percent=tryTrunk(driveInfo[3])
+				# Translators: Shows drive letter, type of drive (fixed or removable),
+				# used capacity and total capacity of a drive
+				# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+				if not reverse:
+					info.append(
+						_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(
+							driveName=drive[0],
+							driveType=drive[2],
+							usedSpace=size(driveInfo[1], alternative),
+							totalSpace=size(driveInfo[0], alternative),
+							percent=tryTrunk(driveInfo[3])
+						)
 					)
-				)
+				else:
+					info.append(
+						_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} free {percent}%.").format(
+							driveName=drive[0],
+							driveType=drive[2],
+							usedSpace=size(driveInfo[0] - driveInfo[1], alternative),
+							totalSpace=size(driveInfo[0], alternative),
+							percent=tryTrunk(round(100 - driveInfo[3], 2))
+						)
+					)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
 		else:
@@ -289,6 +331,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+1"
 	)
 	def script_announceProcessorInfo(self, gesture):
+		reverse = config.conf["resourceMonitor"]["reverse"]
 		averageLoad = psutil.cpu_percent()
 		# Lists load for each core
 		perCpuLoad = psutil.cpu_percent(percpu=True)
@@ -299,9 +342,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			for core, cpuLoad in enumerate(perCpuLoad, start=1)
 		]
 		# Translators: Shows average load of the processor and the load for each core.
-		info = _("Average CPU load {avgLoad}%, {cores}.").format(
-			avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad)
-		)
+		if not reverse:
+			info = _("Average CPU load {avgLoad}%, {cores}.").format(
+				avgLoad=tryTrunk(averageLoad),
+				cores=", ".join(coreLoad)
+			)
+		else:
+			info = _("Average CPU idle {avgLoad}%, core usage: {cores}.").format(
+				avgLoad=tryTrunk(round(100 - averageLoad, 0)),
+				cores=", ".join(coreLoad)
+			)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -313,20 +363,35 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"]
 	)
 	def script_announceRamInfo(self, gesture):
+		reverse = config.conf["resourceMonitor"]["reverse"]
 		ram = psutil.virtual_memory()
 		# Translators: Shows RAM (physical memory) usage.
-		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(
-			physicalUsed=size(ram[3], alternative),
-			physicalTotal=size(ram[0], alternative),
-			physicalPercent=tryTrunk(ram[2])
-		)
+		if not reverse:
+			info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(
+				physicalUsed=size(ram[3], alternative),
+				physicalTotal=size(ram[0], alternative),
+				physicalPercent=tryTrunk(ram[2])
+			)
+		else:
+			info = _("Physical: {physicalUsed} of {physicalTotal} free ({physicalPercent}%). ").format(
+				physicalUsed=size(round(ram[0] - ram[3], 2), alternative),
+				physicalTotal=size(ram[0], alternative),
+				physicalPercent=tryTrunk(round(100 - ram[2], 2))
+			)
 		virtualRam = psutil.swap_memory()
 		# Translators: Shows virtual memory usage.
-		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
-			virtualUsed=size(virtualRam[1], alternative),
-			virtualTotal=size(virtualRam[0], alternative),
-			virtualPercent=tryTrunk(virtualRam[3])
-		)
+		if not reverse:
+			info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
+				virtualUsed=size(virtualRam[1], alternative),
+				virtualTotal=size(virtualRam[0], alternative),
+				virtualPercent=tryTrunk(virtualRam[3])
+			)
+		else:
+			info += _("Virtual: {virtualUsed} of {virtualTotal} free ({virtualPercent}%).").format(
+				virtualUsed=size(round(virtualRam[0] - virtualRam[1], 2), alternative),
+				virtualTotal=size(virtualRam[0], alternative),
+				virtualPercent=tryTrunk(round(100 - virtualRam[3], 2))
+			)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
@@ -460,14 +525,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+e"
 	)
 	def script_announceResourceSummary(self, gesture):
+		reverse = config.conf["resourceMonitor"]["reverse"]
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-		info = [
-			_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(
-				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
-			)
-		]
+		if not reverse:
+			info = [(_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(
+				ramPercent=tryTrunk(psutil.virtual_memory()[2]),
+				cpuPercent=tryTrunk(psutil.cpu_percent())
+			))]
+		else:
+			info = [(_("{ramPercent}% RAM free, CPU idle at {cpuPercent}%.").format(
+				ramPercent=tryTrunk(round(100 - psutil.virtual_memory()[2], 0)),
+				cpuPercent=tryTrunk(round(100 - psutil.cpu_percent(), 0))
+			))]
 		batteryInfo = _batteryInfo()
 		if batteryInfo is not None:
 			info.append(batteryInfo)
 		ui.message(" ".join(info))
+
+	def terminate(self):
+		super(GlobalPlugin, self).terminate()
+		settingsDialogs.NVDASettingsDialog.categoryClasses.remove(ResourceMonitorPanel)
