@@ -1,9 +1,9 @@
 # Resource Monitor #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst and other NVDA contributors
+* Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst et d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
-* NVDA compatibility: 2020.4
+* Compatibilité NVDA: 2020.4
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -11,22 +11,24 @@ ressources.
 
 # Raccourcis
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5: presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3: presents the used and total space of the static and
-  removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents CPU Architecture 32/64-bit and Windows version and
-  service pack numbers.
-* NVDA+Shift+7: presents the system's uptime.
+* NVDA+Maj+E: Annonce le pourcentage de mémoire utilisée, la charge moyenne
+  du processeur et des informations sur la batterie si disponibles.
+* NVDA+Maj+1: Annonce la charge moyenne du processeur et, pour les
+  processeurs  multi cœur la charge de chaque cœur.
+* NVDA+Maj+2/5: Annonce les quantités d'espace mémoire physique et virtuelle
+  utilisées et totales.
+* NVDA+Maj+3: Annonce les quantités d'espace utilisé et total des disques
+  fixes et amovibles.
+* NVDA+Maj+4: Annonce le pourcentage de charge de la batterie, l'état de
+  charge si elle est en charge, le temps restant (sauf si en charge), et une
+  alerte si le niveau de la batterie est faible ou critique.
+* NVDA+Maj+6: Annonce l'architecture du processeur 32/64-bit et les numéros
+  de version de Windows et du service pack.
+* NVDA+Maj+7: Annonce le temps de fonctionnement du système depuis sa mise
+  en route.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Si vous avez NVDA 2013.3 ou version ultérieure installé, vous pouvez
+modifier ces touches de raccourci dans le dialogue Gestes de commandes.
 
 ## Remarques sur l'utilisation
 
@@ -44,31 +46,32 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
 ## Version 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* Nécessite NVDA 2020.4 ou au-delà.
+* Mise à jour de la dépendance psutil vers la version 5.8.0.
+* Lorsqu'on appuie deux fois sur une commande de l'extension pour copier les
+  informations sur les ressources dans le presse-papiers, NVDA annoncera le
+  résumé des ressources copié
 
 ## Version 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Mise à jour de la dépendance psutil vers la version 5.7.3.
+* Message de version Windows raccourci.
+* Sous Windows 8.1, build.revision sera annoncé dans le message de version
+  de Windows, de manière similaire à Windows 10.
 
 ## Version 20.09
 
 * Le temps de fonctionnement du système est maintenant indiqué en jours,
   heures, minutes, secondes.
 * Windows Server Insider Preview build 20201 ou au-delà est correctement
-  reconnu comme une a Server Insider build.
+  reconnu comme une build Server Insider.
 
 ## Version 20.07
 
 * Windows 10 Version 20H2 est correctement reconnue quand on obtient les
   informations de version de Windows (NVDA+maj+6).
 * Simplification du message de version de Windows 10 ex: Windows 10 AAMM au
-  lieu de Windows 10verAAMM when pressing NVDA+Shift+6.
+  lieu de Windows 10verAAMM lors de l'appui sur NVDA+Shift+6.
 
 ## Version 20.06
 
@@ -152,14 +155,14 @@ Windows XP.
 
 ## Version 16.08
 
-À partir de la version 16.08, les publications pour cette extension seront
-affichées comme année.mois.révision.
+À partir de la version 16.08, les versions pour cette extension seront de la
+forme année.mois.révision.
 
 * Diverses révisions de Windows 10 sont maintenant correctement reconnues
   (tels que la 1607 pour la build 14393).
-* Windows 10 build revisions (après l'installation des mises à jour
-  cumulatives) sont correctement reconnues (tels que la 14393.51).
-* Si vous utilisez une build Insider Preview, ceelle-ci sera reconnue.
+* Les révisions de build de Windows 10 (après l'installation des mises à
+  jour cumulatives) sont correctement reconnues (tels que la 14393.51).
+* Si vous utilisez une build Insider Preview, celle-ci sera reconnue.
 
 ## Changements pour la version 4.5
 
@@ -203,15 +206,15 @@ affichées comme année.mois.révision.
 
 ## Changements pour la version 2.2
 
-* Ajout des traductions suivantes : Arabe, Aragonais, Croate, Néherlandais,
-  Finnois, Français, Galicien, Allemand, Hongrois, Italien, Japonais,
-  Koréen, Népalais, Portuguais (Brésilien), Russe, Slovak, Slovénien,
-  Espagnol, Tamoul et Turque.
+* Ajout des traductions suivantes : Arabe, Aragonais, Néerlandais, Finnois,
+  Français, Galicien, Allemand, Croate, Hongrois, Italien, Japonais, Coréen,
+  Népalais, Portugais (Brésilien), Russe, Slovaque, Slovène, Espagnol,
+  Tamoul et Turque.
 
 ## Changements pour la version 2.1
 
 * Mise à jour de la dépendance psutil  vers la version 0.6.1.
-* Correction du long délai lors de l'optention des informations des disques
+* Correction du long délai lors de l'obtention des informations des disques
 * Nettoyage du code.
 
 ## Changements pour la version 2.0
