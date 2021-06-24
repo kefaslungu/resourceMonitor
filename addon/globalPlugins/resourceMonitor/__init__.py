@@ -202,26 +202,25 @@ def _win10RID(buildNum, isClient):
 	except OSError:
 		isRetailOS = 1
 	winreg.CloseKey(selfHostApplicability)
-	currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
-	try:
-		buildBranch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
-	except OSError:
-		buildBranch = None
-	if isRetailOS:
-		isRetailOS = buildBranch and not buildBranch.startswith("rs_prerelease")
-	# Version 20H2/2009 and later where a separate display version string is used.
-	# For backward compatibility, release ID variable will store display version string.
-	try:
-		releaseID = winreg.QueryValueEx(currentVersion, "DisplayVersion")[0]
-	except OSError:
-		releaseID = None
-	# Version 1511 and later unless display version string is present.
-	if not releaseID:
+	with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion") as currentVersion:
 		try:
-			releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
+			buildBranch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
 		except OSError:
-			releaseID = "Unknown"
-	winreg.CloseKey(currentVersion)
+			buildBranch = None
+		if isRetailOS:
+			isRetailOS = buildBranch and not buildBranch.startswith("rs_prerelease")
+		# Version 20H2/2009 and later where a separate display version string is used.
+		# For backward compatibility, release ID variable will store display version string.
+		try:
+			releaseID = winreg.QueryValueEx(currentVersion, "DisplayVersion")[0]
+		except OSError:
+			releaseID = None
+		# Version 1511 and later unless display version string is present.
+		if not releaseID:
+			try:
+				releaseID = winreg.QueryValueEx(currentVersion, "ReleaseID")[0]
+			except OSError:
+				releaseID = "Unknown"
 	# Insider Preview builds.
 	if not isRetailOS:
 		return "Windows 10 Insider" if isClient else "Windows Server Insider"
