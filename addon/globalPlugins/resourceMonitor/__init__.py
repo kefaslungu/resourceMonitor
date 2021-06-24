@@ -202,7 +202,9 @@ def _win10RID(buildNum, isClient):
 	except OSError:
 		isRetailOS = 1
 	winreg.CloseKey(selfHostApplicability)
-	with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion") as currentVersion:
+	with winreg.OpenKey(
+		winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
+	) as currentVersion:
 		try:
 			buildBranch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
 		except OSError:
