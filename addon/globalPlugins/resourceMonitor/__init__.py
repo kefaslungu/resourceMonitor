@@ -230,6 +230,65 @@ def _win10RID(buildNum, isClient):
 		return "Windows Server {0}".format(releaseID)
 
 
+def getWinVer():
+	# Obtain winversion.
+	# Python's Platform module provides below functionality,
+	# but platform module is not available for NVDA.
+	# Prepare to receive various components for Windows info output.
+	winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
+	buildNum = sys.getwindowsversion().build
+	sp, server = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
+	is64Bit = os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64")
+	# Determine Windows version.
+	if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
+		if winMinor == 1:  # Windows 7
+			winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2"
+		elif winMinor == 2:  # Windows 8.
+			winverName = "Windows 8" if server == 1 else "Windows Server 2012"
+		elif winMinor == 3:  # Windows 8.1.
+			winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2"
+	elif winMajor == 10:  # Windows 10/Server 2016 (10.0) and beyond.
+		# Also take care of release ID, introduced in Version 1511.
+		winverName = _win10RID(buildNum, server == 1)
+	if is64Bit:
+		# Translators: Presented under 64-bit Windows.
+		x64 = _("64-bit")
+	else:
+		# Translators: Presented under 32-bit Windows.
+		x64 = _("32-bit")
+	# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
+	buildRevision = None
+	if (winMajor, winMinor) >= (6, 3):
+		# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
+		if is64Bit:
+			currentVersion = winreg.OpenKey(
+				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
+				access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
+			)
+		else:
+			currentVersion = winreg.OpenKey(
+				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
+			)
+		ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
+		winreg.CloseKey(currentVersion)
+		buildRevision = f"{buildNum}.{ubr}"
+	if not sp:
+		# Translators: Presents Windows version
+		# (example output: "Windows 8.1 (32-bit)").
+		info = _("{winVersion} ({cpuBit})").format(
+			winVersion=winverName, cpuBit=x64
+		)
+	else:
+		# Translators: Presents Windows version and service pack level
+		# (example output: "Windows 7 service pack 1 (64-bit)").
+		info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
+			winVersion=winverName, servicePackLevel=sp, cpuBit=x64
+		)
+	if buildRevision is not None:
+		info += " build {build}".format(build=buildRevision)
+	return info
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -331,63 +390,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			api.copyToClip(info, notify=True)
 
-	def getWinVer(self):
-		# Obtain winversion.
-		# Python's Platform module provides below functionality,
-		# but platform module is not available for NVDA.
-		# Prepare to receive various components for Windows info output.
-		winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
-		buildNum = sys.getwindowsversion().build
-		sp, server = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
-		is64Bit = os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64")
-		# Determine Windows version.
-		if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-			if winMinor == 1:  # Windows 7
-				winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2"
-			elif winMinor == 2:  # Windows 8.
-				winverName = "Windows 8" if server == 1 else "Windows Server 2012"
-			elif winMinor == 3:  # Windows 8.1.
-				winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2"
-		elif winMajor == 10:  # Windows 10/Server 2016 (10.0) and beyond.
-			# Also take care of release ID, introduced in Version 1511.
-			winverName = _win10RID(buildNum, server == 1)
-		if is64Bit:
-			# Translators: Presented under 64-bit Windows.
-			x64 = _("64-bit")
-		else:
-			# Translators: Presented under 32-bit Windows.
-			x64 = _("32-bit")
-		# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
-		buildRevision = None
-		if (winMajor, winMinor) >= (6, 3):
-			# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
-			if is64Bit:
-				currentVersion = winreg.OpenKey(
-					winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
-					access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
-				)
-			else:
-				currentVersion = winreg.OpenKey(
-					winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
-				)
-			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
-			winreg.CloseKey(currentVersion)
-			buildRevision = f"{buildNum}.{ubr}"
-		if not sp:
-			# Translators: Presents Windows version
-			# (example output: "Windows 8.1 (32-bit)").
-			info = _("{winVersion} ({cpuBit})").format(
-				winVersion=winverName, cpuBit=x64
-			)
-		else:
-			# Translators: Presents Windows version and service pack level
-			# (example output: "Windows 7 service pack 1 (64-bit)").
-			info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
-				winVersion=winverName, servicePackLevel=sp, cpuBit=x64
-			)
-		if buildRevision is not None:
-			info += " build {build}".format(build=buildRevision)
-		return info
+	# Record Windows version in use.
+	_currentWinVer = getWinVer()
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about Windows version command in Resource Monitor.
@@ -395,11 +399,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+6"
 	)
 	def script_announceWinVer(self, gesture):
-		info = self.getWinVer()
+		# Unlike other resource usage information, current Windows version info is static.
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(info)
+			ui.message(self._currentWinVer)
 		else:
-			api.copyToClip(info, notify=True)
+			api.copyToClip(self._currentWinVer, notify=True)
 
 	def getUptime(self):
 		bootTimestamp = psutil.boot_time()
