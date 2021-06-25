@@ -353,11 +353,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Also take care of release ID, introduced in Version 1511.
 			winverName = _win10RID(buildNum, server == 1)
 		if is64Bit:
-			# Translators: Presented under 64-bit Windows.
-			x64 = _("64-bit")
+			x64 = "64-bit"
 		else:
-			# Translators: Presented under 32-bit Windows.
-			x64 = _("32-bit")
+			x64 = "32-bit"
 		# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
 		buildRevision = None
 		if (winMajor, winMinor) >= (6, 3):
