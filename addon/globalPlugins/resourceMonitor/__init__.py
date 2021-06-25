@@ -225,7 +225,7 @@ def _winRID(buildNum, isClient):
 				releaseID = "Unknown"
 	# Insider Preview builds.
 	if not isRetailOS:
-		return "Windows 10 Insider" if isClient else "Windows Server Insider"
+		return "Windows Insider" if isClient else "Windows Server Insider"
 	if isClient:
 		if buildNum < 22000:
 			return "Windows 10 {0}".format(releaseID)
