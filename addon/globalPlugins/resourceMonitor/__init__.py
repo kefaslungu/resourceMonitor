@@ -176,7 +176,7 @@ server10LTSBuilds = {
 }
 
 
-def _win10RID(buildNum, isClient):
+def _winRID(buildNum, isClient):
 	# Special cases: Windows 10 Version 1507, Windows Server long-term servicing channel (LTSC) releases.
 	if isClient and buildNum == 10240:
 		return "Windows 10 1507"
@@ -250,8 +250,9 @@ def getWinVer():
 		elif winMinor == 3:  # Windows 8.1.
 			winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2"
 	elif winMajor == 10:  # Windows 10/Server 2016 (10.0) and beyond.
-		# Also take care of release ID, introduced in Version 1511.
-		winverName = _win10RID(buildNum, server == 1)
+		# Also take care of release ID, introduced in Version 1511
+		# as well as Windows 11 (2021).
+		winverName = _winRID(buildNum, server == 1)
 	if is64Bit:
 		x64 = "64-bit"
 	else:
