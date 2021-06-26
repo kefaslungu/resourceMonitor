@@ -243,7 +243,7 @@ def getWinVer():
 	winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
 	buildNum = sys.getwindowsversion().build
 	sp, server = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
-	is64Bit = os.environ.get("PROCESSOR_ARCHITEW6432") in ("AMD64", "ARM64")
+	arch64 = os.environ.get("PROCESSOR_ARCHITEW6432")
 	# Determine Windows version.
 	if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 		if winMinor == 1:  # Windows 7
@@ -256,15 +256,15 @@ def getWinVer():
 		# Also take care of release ID, introduced in Version 1511
 		# as well as Windows 11 (2021).
 		winverName = _winRID(buildNum, server == 1)
-	if is64Bit:
-		x64 = "64-bit"
+	if arch64  in ("AMD64", "ARM64"):
+		x64 = "x64" if arch64 == "AMD64" else arch64
 	else:
 		x64 = "32-bit"
 	# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
 	buildRevision = None
 	if (winMajor, winMinor) >= (6, 3):
 		# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
-		if is64Bit:
+		if arch64:
 			currentVersion = winreg.OpenKey(
 				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
 				access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
