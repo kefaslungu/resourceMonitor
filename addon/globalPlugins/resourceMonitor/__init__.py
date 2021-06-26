@@ -13,6 +13,7 @@ import globalPluginHandler
 import ui
 import api
 import scriptHandler
+import winVersion
 from . import psutil
 import addonHandler
 addonHandler.initTranslation()
@@ -295,6 +296,62 @@ def getWinVer():
 	return info
 
 
+@functools.lru_cache(maxsize=128)
+def getWinVer2021():
+	# Obtain winversion using NvDA 2021.1 API.
+	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
+	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
+	currentWinVer = winVersion.getWinVer()
+	arch64 = os.environ.get("PROCESSOR_ARCHITEW6432")
+	isClient = currentWinVer.productType == "workstation"
+	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
+	if currentWinVer == winVersion.WIN7_SP1:
+		winverName = "Windows 7" if isClient else "Windows Server 2008 R2"
+	elif currentWinVer == winVersion.WIN8:
+		winverName = "Windows 8" if isClient else "Windows Server 2012"
+	elif currentWinVer == winVersion.WIN81:
+		winverName = "Windows 8.1" if isClient else "Windows Server 2012 R2"
+	elif currentWinVer >= winVersion.WIN10:
+		# Also take care of release ID, introduced in Windows 10 Version 1511
+		# as well as Windows 11 (2021).
+		winverName = _winRID(currentWinVer.build, isClient)
+	if arch64 in ("AMD64", "ARM64"):
+		x64 = "x64" if arch64 == "AMD64" else arch64
+	else:
+		x64 = "32-bit"
+	# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
+	buildRevision = None
+	if currentWinVer >= winVersion.WIN81:
+		# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
+		if arch64:
+			currentVersion = winreg.OpenKey(
+				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
+				access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
+			)
+		else:
+			currentVersion = winreg.OpenKey(
+				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
+			)
+		ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
+		winreg.CloseKey(currentVersion)
+		buildRevision = f"{currentWinVer.build}.{ubr}"
+	if not currentWinVer.servicePack:
+		# Translators: Presents Windows version
+		# (example output: "Windows 8.1 (32-bit)").
+		info = _("{winVersion} ({cpuBit})").format(
+			winVersion=winverName, cpuBit=x64
+		)
+	else:
+		# Translators: Presents Windows version and service pack level
+		# (example output: "Windows 7 service pack 1 (64-bit)").
+		info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
+			winVersion=winverName, servicePackLevel=currentWinVer.servicePack, cpuBit=x64
+		)
+	if buildRevision is not None:
+		info += " build {build}".format(build=buildRevision)
+	return info
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -403,7 +460,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_announceWinVer(self, gesture):
 		# Unlike other resource usage information, current Windows version info is static.
-		info = getWinVer()
+		info = getWinVer2021() if hasattr(winVersion, "getWinVer") else getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
