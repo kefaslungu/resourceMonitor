@@ -256,7 +256,7 @@ def getWinVer():
 		# Also take care of release ID, introduced in Version 1511
 		# as well as Windows 11 (2021).
 		winverName = _winRID(buildNum, server == 1)
-	if arch64  in ("AMD64", "ARM64"):
+	if arch64 in ("AMD64", "ARM64"):
 		x64 = "x64" if arch64 == "AMD64" else arch64
 	else:
 		x64 = "32-bit"
