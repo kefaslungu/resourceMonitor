@@ -8,6 +8,7 @@ import winreg
 from datetime import datetime
 import sys
 import os
+import functools
 import globalPluginHandler
 import ui
 import api
@@ -235,6 +236,7 @@ def _winRID(buildNum, isClient):
 		return "Windows Server {0}".format(releaseID)
 
 
+@functools.lru_cache(maxsize=128)
 def getWinVer():
 	# Obtain winversion.
 	# Python's Platform module provides below functionality,
@@ -394,9 +396,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			api.copyToClip(info, notify=True)
 
-	# Record Windows version in use.
-	_currentWinVer = getWinVer()
-
 	@scriptHandler.script(
 		# Translators: Input help mode message about Windows version command in Resource Monitor.
 		description=_("Announces the version of Windows you are using."),
@@ -404,10 +403,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_announceWinVer(self, gesture):
 		# Unlike other resource usage information, current Windows version info is static.
+		info = getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(self._currentWinVer)
+			ui.message(info)
 		else:
-			api.copyToClip(self._currentWinVer, notify=True)
+			api.copyToClip(info, notify=True)
 
 	def getUptime(self):
 		bootTimestamp = psutil.boot_time()
