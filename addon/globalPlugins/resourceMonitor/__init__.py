@@ -244,20 +244,20 @@ def getWinVer():
 	# Prepare to receive various components for Windows info output.
 	winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
 	buildNum = sys.getwindowsversion().build
-	sp, server = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type
+	sp, isClient = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type == 1
 	arch64 = os.environ.get("PROCESSOR_ARCHITEW6432")
 	# Determine Windows version.
 	if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
 		if winMinor == 1:  # Windows 7
-			winverName = "Windows 7" if server == 1 else "Windows Server 2008 R2"
+			winverName = "Windows 7" if isClient else "Windows Server 2008 R2"
 		elif winMinor == 2:  # Windows 8.
-			winverName = "Windows 8" if server == 1 else "Windows Server 2012"
+			winverName = "Windows 8" if isClient else "Windows Server 2012"
 		elif winMinor == 3:  # Windows 8.1.
-			winverName = "Windows 8.1" if server == 1 else "Windows Server 2012 R2"
+			winverName = "Windows 8.1" if isClient else "Windows Server 2012 R2"
 	elif winMajor == 10:  # Windows 10/Server 2016 (10.0) and beyond.
 		# Also take care of release ID, introduced in Version 1511
 		# as well as Windows 11 (2021).
-		winverName = _winRID(buildNum, server == 1)
+		winverName = _winRID(buildNum, isClient)
 	if arch64 in ("AMD64", "ARM64"):
 		x64 = "x64" if arch64 == "AMD64" else arch64
 	else:
