@@ -3,7 +3,7 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA compatibility: 2020.4
+* NVDA兼容版本: 2020.4
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
@@ -27,19 +27,17 @@
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 此插件需要Windows 7 Service Pack 1或更高版本。
 
-## Version 21.04
+## 版本21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* 需要 NVDA 2020.4 或更高版本。
+* 将psutil依赖关系更新为5.8.0。
+* 当连按两次快捷键将资源信息复制到剪贴板时，NVDA 将读出已复制的资源摘要。
 
-## Version 21.01
+## 版本21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* 将psutil依赖关系更新为5.7.3。
+* 缩短了 Windows 版本消息。
+* 在 Windows 8.1 上，build.revision 将作为 Windows 版本消息的一部分读出，类似于 Windows 10。
 
 ## 版本20.09
 

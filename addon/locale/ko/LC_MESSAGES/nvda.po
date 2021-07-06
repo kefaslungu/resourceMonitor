@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2020-12-20 19:09-0800\n"
+"PO-Revision-Date: 2021-07-02 11:26-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -16,19 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
-
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
-#. (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
-msgid ""
-"You are using an old version of Windows. This add-on requires "
-"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
-"anyway?"
-msgstr ""
-
-#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr ""
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -47,28 +34,24 @@ msgstr "{percent}%, 베터리 중전중."
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% 베터리 남음."
 
-#. Translators: For battery status report, if battery time is 1 hour range
-#. (example: 1 hour, 30 minutes).
+#. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 msgid "1 hour"
 msgstr "1시간"
 
-#. Translators: For battery status report, if battery time is 2 hour range or greater
-#. (example: 3 hours, 10 minutes).
+#. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} hours"
 msgstr "{0}시간"
 
-#. Translators: For battery status report, minute value is 1
-#. (example: 1 hour, 1 minute).
-#. Translators: system uptime in hours.
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
 msgid "1 minute"
 msgstr "1분"
 
-#. Translators: For battery status report, minute value is 0 or between 2 and 59
-#. (example: 1 hour, 40 minutes).
-#. Translators: system uptime in hours.
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
 #, python-brace-format
 msgid "{0} minutes"
 msgstr "{0}분"
@@ -87,16 +70,24 @@ msgstr "주의: 베터리 충전률 저조함."
 msgid " Warning: critically low battery."
 msgstr "주의: 베토리 방전 조심 바람.Warning: critically low battery."
 
+#. Translators: Presents Windows version
+#. (example output: "Windows 8.1 (32-bit)").
+#, python-brace-format
+msgid "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level
+#. (example output: "Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
+msgid "{winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
+
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "리소스 모니터"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "리소스 정보 클립보드에 복사됨"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -152,44 +143,24 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용중 ({virtualPercent}%)."
 
-#. Translators: Presented under 64-bit Windows.
-msgid "64-bit"
-msgstr "64비트"
-
-#. Translators: Presented under 32-bit Windows.
-msgid "32-bit"
-msgstr "32비트"
-
-#. Translators: Presents Windows version
-#. (example output: "Windows 8.1 (32-bit)").
-#, python-brace-format
-msgid "{winVersion} ({cpuBit})"
-msgstr "{winVersion} ({cpuBit})"
-
-#. Translators: Presents Windows version and service pack level
-#. (example output: "Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "사용중인 윈도우 버전을 알려줍니다."
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in days.
 msgid "1 day"
 msgstr "1일"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in days.
 #, python-brace-format
 msgid "{0} days"
 msgstr "{0}일"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in seconds.
 msgid "1 second"
 msgstr "1초"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in seconds.
 #, python-brace-format
 msgid "{0} seconds"
 msgstr "{0}초"

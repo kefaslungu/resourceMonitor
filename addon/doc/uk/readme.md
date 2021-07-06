@@ -1,9 +1,9 @@
-# Resource Monitor #
+# Resource Monitor (Монітор ресурсів) #
 
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst та інші учасники спільноти NVDA
 * Завантажити [стабільну версію][1]
-* NVDA compatibility: 2020.4
+* Сумісність: NVDA 2020.4
 
 Цей додаток надає інформацію про завантаженість процесора, використання
 пам’яті та інших ресурсів.
@@ -41,19 +41,19 @@
   затримки з отриманням інформації про використання диска.
 * Цей додаток вимагає мінімум Windows 7 Service Pack 1.
 
-## Version 21.04
+## Версія 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* Необхідна версія NVDA 2020.4 або новіша.
+* Оновлено psutil dependency до versії 5.8.0.
+* Якщо двічі натиснути команди додатка для копіювання інформації про ресурс
+  у буфер обміну, NVDA оголосить інформацію ресурсу, яка копіюється.
 
-## Version 21.01
+## Версія 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Оновлено psutil dependency до versії 5.7.3.
+* Скорочено повідомлення версії Windows.
+* У Windows 8.1 build.revision промовлятиметься як частина повідомлення про
+  версію Windows, подібно до Windows 10.
 
 ## Версія 20.09
 
