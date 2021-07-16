@@ -6,32 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2020-12-05 09:19+0100\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-07-09 12:47-0700\n"
+"PO-Revision-Date: 2021-07-09 12:51-0700\n"
 "Last-Translator: Artin Dekker <vertalen@artindekker.com>\n"
 "Language-Team: NVDA Nederlandstalig vertaalteam <nvda-nl@googlegroups.com>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
-
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
-#. (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
-msgid ""
-"You are using an old version of Windows. This add-on requires "
-"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
-"anyway?"
-msgstr ""
-"Je gebruikt een oude versie van Windows. Deze add-on verijst "
-"{minSupportedVersion} of later. Weet je zeker dat je deze add-on toch wil "
-"installeren?"
-
-#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr "Oude Windows versie"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -50,28 +34,24 @@ msgstr "{percent}%, bezig met opladen van batterij."
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% batterij resterend, tijd onbekend."
 
-#. Translators: For battery status report, if battery time is 1 hour range
-#. (example: 1 hour, 30 minutes).
+#. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 msgid "1 hour"
 msgstr "1 uur"
 
-#. Translators: For battery status report, if battery time is 2 hour range or greater
-#. (example: 3 hours, 10 minutes).
+#. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} hours"
 msgstr "{0} uur, "
 
-#. Translators: For battery status report, minute value is 1
-#. (example: 1 hour, 1 minute).
-#. Translators: system uptime in hours.
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
 msgid "1 minute"
 msgstr "1 minuut"
 
-#. Translators: For battery status report, minute value is 0 or between 2 and 59
-#. (example: 1 hour, 40 minutes).
-#. Translators: system uptime in hours.
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
 #, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} minuten"
@@ -90,16 +70,24 @@ msgstr " Waarschuwing: batterij bijna leeg."
 msgid " Warning: critically low battery."
 msgstr " Waarschuwing: batterij is zo goed als leeg."
 
+#. Translators: Presents Windows version
+#. (example output: "Windows 8.1 (32-bit)").
+#, python-brace-format
+msgid "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level
+#. (example output: "Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
+msgid "{winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
+
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Resource Monitor"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "Samenvatting naar klembord gekopieerd"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -160,44 +148,24 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtueel: {virtualUsed} van {virtualTotal} gebruikt ({virtualPercent}%)."
 
-#. Translators: Presented under 64-bit Windows.
-msgid "64-bit"
-msgstr "64-bit"
-
-#. Translators: Presented under 32-bit Windows.
-msgid "32-bit"
-msgstr "32-bit"
-
-#. Translators: Presents Windows version
-#. (example output: "Windows 8.1 (32-bit)").
-#, python-brace-format
-msgid "{winVersion} ({cpuBit})"
-msgstr "{winVersion} ({cpuBit})"
-
-#. Translators: Presents Windows version and service pack level
-#. (example output: "Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Meldt de versie van Windows die u gebruikt."
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in days.
 msgid "1 day"
 msgstr "1 dag"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in days.
 #, python-brace-format
 msgid "{0} days"
 msgstr "{0} dagen"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in seconds.
 msgid "1 second"
 msgstr "1 seconde"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in seconds.
 #, python-brace-format
 msgid "{0} seconds"
 msgstr "{0} seconden"

@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
-* Compatibilidad con NVDA: 2020.4
+* Compatibilidad con NVDA: de 2020.4 a 2021.1
 
 Este plugin nos da información acerca de la carga de la CPU, de la
 utilización de la memoria y de otra información de uso de recursos.

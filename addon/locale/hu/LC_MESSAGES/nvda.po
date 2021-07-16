@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2020-12-20 19:18-0800\n"
+"PO-Revision-Date: 2021-07-09 12:50-0700\n"
 "Last-Translator: oaron@nvda.hu\n"
 "Language-Team: HU <LL@li.org>\n"
 "Language: hu\n"
@@ -30,33 +30,31 @@ msgstr "{percent}%, a telep töltése folyamatban van."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% van hátra, fennmaradó idő {time}."
+msgstr ""
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr " óra, "
+msgstr "1 óra"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr " órák, "
+msgstr "{0} órák"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, fuzzy
 msgid "1 minute"
-msgstr " perc"
+msgstr "1 perc"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr " percek"
+msgstr "{0} percek"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -201,26 +199,3 @@ msgstr ""
 "terheltségét, a használt memória és háttértár mértékét, az akkumulátor "
 "állapotát, a merevlemezek státuszát, és még jó néhány fontos számítógép "
 "jellemzőt."
-
-#, fuzzy
-#~ msgid ""
-#~ "You are using an old version of Windows. This add-on requires "
-#~ "{minSupportedVersion} or later. Are you sure you wish to install this add-"
-#~ "on anyway?"
-#~ msgstr ""
-#~ "A windows vista, server 2003, és 2008 rendszerek támogatása 2018. "
-#~ "júniusától megszűnt ebben a bővítményben. A későbbiekben csak "
-#~ "{minSupportedVersion} fölött lesz támogatás. Biztos, hogy mégis telepíti "
-#~ "ezt a bővítményt?"
-
-#~ msgid "Old Windows version"
-#~ msgstr "Régi Windows verzió"
-
-#~ msgid "Resource summary copied to clipboard"
-#~ msgstr "Az összegzett adatok a vágólapra másolva"
-
-#~ msgid "64-bit"
-#~ msgstr "64-bit"
-
-#~ msgid "32-bit"
-#~ msgstr "32-bit"

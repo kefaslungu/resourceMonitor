@@ -6,60 +6,58 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 'resourceMonitor' '2.1'\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-03-05 06:00-0800\n"
-"PO-Revision-Date: 2019-07-14 20:22-0700\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-07-09 12:22-0700\n"
+"PO-Revision-Date: 2021-07-09 12:27-0700\n"
 "Last-Translator: \n"
+"Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
-"Language-Team: \n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
-msgid ""
-"You are using an old version of Windows. This add-on requires "
-"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
-"anyway?"
-msgstr ""
-
-#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr ""
-
-#. Translators: Message reported when there is no battery on the system, mostly laptops with battery pack removed and running on AC power.
+#. Translators: Message reported when there is no battery on the system,
+#. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
 msgstr "لا توجد بطارية متصلة بالحاسوب"
 
-#. Translators: message presented when AC is connected and battery is charging, also show current battery percentage.
+#. Translators: message presented when AC is connected and battery is charging,
+#. also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "تم شحن البطارية بنسبة {percent}%, "
 
-#. Translators: message presented when computer is running on battery power, showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining yet battery time is unknown.
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "باقي {percent}%, حوالي {time}."
+msgstr ""
 
-#. Translators: For battery status report, if battery time is 1 hour range (example: 1 hour, 30 minutes).
-msgid " hour, "
-msgstr "ساعة, "
+#. Translators: battery and system uptime in hours.
+#. Translators: system uptime in hours.
+msgid "1 hour"
+msgstr "1 ساعة"
 
-#. Translators: For battery status report, if battery time is 2 hour range or greater (example: 3 hours, 10 minutes).
-msgid " hours, "
-msgstr "ساعات, "
+#. Translators: battery and system uptime in hours.
+#. Translators: system uptime in hours.
+#, python-brace-format
+msgid "{0} hours"
+msgstr "{0} ساعات"
 
-#. Translators: For battery status report, minute value is 1 (example: 1 hour, 1 minute).
-msgid " minute"
-msgstr "دقيقة"
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
+msgid "1 minute"
+msgstr "1 دقيقة"
 
-#. Translators: For battery status report, minute value is 0 or between 2 and 59 (example: 1 hour, 40 minutes).
-msgid " minutes"
-msgstr "دقائق"
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
+#, python-brace-format
+msgid "{0} minutes"
+msgstr "{0} دقائق"
 
-#. Translators: message presented when computer is running on battery power, showing percentage remaining and estimated remaining time.
+#. Translators: message presented when computer is running on battery power,
+#. showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "باقي {percent}%, حوالي {time}."
@@ -72,15 +70,24 @@ msgstr "تحذير: البطارية منخفضة."
 msgid " Warning: critically low battery."
 msgstr "تحذير: البطارية منخفضة جدا وقاربت على النفاذ."
 
+#. Translators: Presents Windows version
+#. (example output: "Windows 8.1 (32-bit)").
+#, python-brace-format
+msgid "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level
+#. (example output: "Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
+msgid "{winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
+
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "وصف لمكونات الجهاز المادية ونظام التشغيل"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "تم النسخ إلى الحافظة"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -91,14 +98,6 @@ msgstr ""
 "متصلة بالشاحن), كما يعلن عن رسالة تحذيرية إذا كانت البطارية منخفضة أو أوشكت "
 "على النفاذ."
 
-#. Translators: Shows drive letter, type of drive (fixed or removable), used capacity and total capacity of a drive (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"{driveName} ({driveType} محرك الأقراص): {usedSpace} من {totalSpace} مستخدمة "
-"{percent}%."
-
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
@@ -106,6 +105,20 @@ msgid ""
 msgstr ""
 "يعلن عن المساحة المستخدمة وعن المساحة الكلية للأقراص الصلبة والمتحركة على "
 "الحاسوب."
+
+#. Translators: Shows drive letter, type of drive (fixed or removable),
+#. used capacity and total capacity of a drive
+#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr ""
+"{driveName} ({driveType} محرك الأقراص): {usedSpace} من {totalSpace} مستخدمة "
+"{percent}%."
+
+#. Translators: Input help mode message about processor info command in Resource Monitor.
+msgid "Presents the average processor load and the load of each core."
+msgstr "الإعلان عن متوسط حمل المعالج ونسبة تحميل كل نواة."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -117,9 +130,11 @@ msgstr "Core {coreNumber}: {corePercent}%. "
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "متوسط حمل المعالج {avgLoad}%, {cores}."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "الإعلان عن متوسط حمل المعالج ونسبة تحميل كل نواة."
+#. Translators: Input help mode message about memory info command in Resource Monitor.
+msgid "Presents the used and total space for both physical and virtual ram."
+msgstr ""
+"الإعلان عن المساحة الكلية والمساحة المستخدمة لكل من الذاكرة الفعلية والذاكرة "
+"الوهمية للحاسوب"
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
@@ -134,54 +149,35 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "الذاكرة الوهمية: {virtualUsed} من {virtualTotal} مستخدمة ({virtualPercent}%)."
 
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"الإعلان عن المساحة الكلية والمساحة المستخدمة لكل من الذاكرة الفعلية والذاكرة "
-"الوهمية للحاسوب"
-
-#. Translators: Presented under 64-bit Windows.
-msgid "64-bit"
-msgstr "64-بيت"
-
-#. Translators: Presented under 32-bit Windows.
-msgid "32-bit"
-msgstr "32-بيت"
-
-#. Translators: Presents Windows version (example output: "Windows version: Windows XP (32-bit)").
-#, python-brace-format
-msgid "Windows version: {winVersion} ({cpuBit})"
-msgstr "إصدار الويندوز: {winVersion} ({cpuBit})"
-
-#. Translators: Presents Windows version and service pack level (example output: "Windows version: Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "Windows version: {winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "إصدار الويندوز: {winVersion} {servicePackLevel} ({cpuBit})"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "يعلن عن إصدار الويندوز الذي تستخدمه"
 
-#. Translators: The system's uptime
-#, python-brace-format
-msgid "{days} days, {hoursMinutesSeconds}"
+#. Translators: system uptime in days.
+msgid "1 day"
 msgstr ""
 
-#. Translators: Obtaining uptime failed
-msgid "Failed to get the system's uptime."
+#. Translators: system uptime in days.
+#, python-brace-format
+msgid "{0} days"
+msgstr ""
+
+#. Translators: system uptime in seconds.
+msgid "1 second"
+msgstr ""
+
+#. Translators: system uptime in seconds.
+#, python-brace-format
+msgid "{0} seconds"
 msgstr ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
 msgstr ""
 
-#. Faster to build info on the fly rather than keep appending to a string.
-#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+#. Translators: Obtaining uptime failed
+msgid "Failed to get the system's uptime."
 msgstr ""
-"{ramPercent}% الذاكرة العشوائية المستخدمة, وحدة المعالجة المركزية في "
-"{cpuPercent}%."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
@@ -189,6 +185,12 @@ msgid ""
 msgstr ""
 "الإعلان عن الذاكرة العشوائية المستخدمة, متوسط تحميل المعالج, ومعلومات عن "
 "نسبة شحن البطارية والوقت المتبقي لها إن وجدت."
+
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr ""
+"{ramPercent}% الذاكرة العشوائية المستخدمة, وحدة المعالجة المركزية في "
+"{cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

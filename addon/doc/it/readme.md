@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e altri
   collaboratori di NVDA
 * Scarica la [versione stabile][1]
-* NVDA compatibility: 2020.4
+* NVDA compatibility: 2020.4 to 2021.1
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.

@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Загрузить [стабильную версию][1]
-* NVDA compatibility: 2020.4
+* NVDA compatibility: 2020.4 to 2021.1
 
 Этот плагин предоставляет информацию о загрузке процессора, используемой
 памяти и  других используемых ресурсах.

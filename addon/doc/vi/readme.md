@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Tải về [phiên bản chính thức][1]
-* NVDA compatibility: 2020.4
+* NVDA compatibility: 2020.4 to 2021.1
 
 Add-on này cung cấp các thông tin về tải CPU, sử dụng bộ nhớ và các nguồn
 tài nguyên khác.

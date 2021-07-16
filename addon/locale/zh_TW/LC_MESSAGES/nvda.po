@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-04-22 18:05+1000\n"
-"PO-Revision-Date: 2020-12-20 19:45-0800\n"
+"PO-Revision-Date: 2021-07-09 12:41-0700\n"
 "Last-Translator: 蔡宗豪 <surfer0627@gmail.com>\n"
 "Language-Team: NVDA-Taiwan Volunteers Team <nvdazh_TW@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -187,28 +187,3 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr "此資源監控元件能讀出 CPU 負載，記憶體、電池、磁碟使用情形。"
-
-#, fuzzy
-#~ msgid ""
-#~ "You are using an old version of Windows. This add-on requires "
-#~ "{minSupportedVersion} or later. Are you sure you wish to install this add-"
-#~ "on anyway?"
-#~ msgstr ""
-#~ "附加元件 Resource Monitor 對 Windows XP 的支援，於 2017 年 12 月結束。未來"
-#~ "的元件更新，將需要 {minSupportedVersion} 或更高版本。您確定要安裝這個元件"
-#~ "嗎？"
-
-#~ msgid "Old Windows version"
-#~ msgstr "Windows 舊版"
-
-#~ msgid "Resource summary copied to clipboard"
-#~ msgstr "資源摘要已複製到剪貼簿。"
-
-#~ msgid "64-bit"
-#~ msgstr "64 位元"
-
-#~ msgid "32-bit"
-#~ msgstr "32 位元"
-
-#~ msgid "{days} days, {hoursMinutesSeconds}"
-#~ msgstr "{days}天，{hoursMinutesSeconds}"

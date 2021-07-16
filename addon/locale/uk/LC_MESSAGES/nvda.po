@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2013-07-14 19:25+0200\n"
-"PO-Revision-Date: 2020-12-20 19:42-0800\n"
+"POT-Creation-Date: 2021-07-09 12:42-0700\n"
+"PO-Revision-Date: 2021-07-09 12:42-0700\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -16,22 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
-
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
-#. (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
-msgid ""
-"You are using an old version of Windows. This add-on requires "
-"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
-"anyway?"
-msgstr ""
-"Ви користуєтеся застарілою версією Windows. Цей додаток потребує "
-"{minSupportedVersion} чи новішу. Бажаєте встановити додаток попри це "
-"застереження?"
-
-#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr "Застаріла версія Windows"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -51,28 +35,24 @@ msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
 "Залишилося {percent}% заряду акумулятора, час роботи акумулятора невідомий."
 
-#. Translators: For battery status report, if battery time is 1 hour range
-#. (example: 1 hour, 30 minutes).
+#. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 msgid "1 hour"
 msgstr "1 година"
 
-#. Translators: For battery status report, if battery time is 2 hour range or greater
-#. (example: 3 hours, 10 minutes).
+#. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 #, python-brace-format
 msgid "{0} hours"
 msgstr "{0} годин"
 
-#. Translators: For battery status report, minute value is 1
-#. (example: 1 hour, 1 minute).
-#. Translators: system uptime in hours.
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
 msgid "1 minute"
 msgstr "1 хвилина"
 
-#. Translators: For battery status report, minute value is 0 or between 2 and 59
-#. (example: 1 hour, 40 minutes).
-#. Translators: system uptime in hours.
+#. Translators: battery and system uptime in minutes.
+#. Translators: system uptime in minutes.
 #, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} хвилин"
@@ -91,16 +71,24 @@ msgstr " Попередження: низький заряд акумулято�
 msgid " Warning: critically low battery."
 msgstr " Попередження: заряд акумулятора критично низький."
 
+#. Translators: Presents Windows version
+#. (example output: "Windows 8.1 (32-bit)").
+#, python-brace-format
+msgid "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit})"
+
+#. Translators: Presents Windows version and service pack level
+#. (example output: "Windows 7 service pack 1 (64-bit)").
+#, python-brace-format
+msgid "{winVersion} {servicePackLevel} ({cpuBit})"
+msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
+
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
 msgid "Resource Monitor"
 msgstr "Монітор ресурсів"
-
-#. Translators: Presented when a resource summary is copied to clipboard.
-msgid "Resource summary copied to clipboard"
-msgstr "Інформацію про ресурси скопійовано в буфер обміну"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -165,44 +153,24 @@ msgstr ""
 "Віртуальна пам’ять: {virtualUsed} із {virtualTotal} використовується "
 "({virtualPercent}%)."
 
-#. Translators: Presented under 64-bit Windows.
-msgid "64-bit"
-msgstr "64-bit"
-
-#. Translators: Presented under 32-bit Windows.
-msgid "32-bit"
-msgstr "32-bit"
-
-#. Translators: Presents Windows version
-#. (example output: "Windows 8.1 (32-bit)").
-#, python-brace-format
-msgid "{winVersion} ({cpuBit})"
-msgstr "{winVersion} ({cpuBit})"
-
-#. Translators: Presents Windows version and service pack level
-#. (example output: "Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Повідомляє про версію Windows, яку ви використовуєте."
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in days.
 msgid "1 day"
 msgstr "1 день"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in days.
 #, python-brace-format
 msgid "{0} days"
 msgstr "{0} днів"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in seconds.
 msgid "1 second"
 msgstr "1 секунда"
 
-#. Translators: system uptime in hours.
+#. Translators: system uptime in seconds.
 #, python-brace-format
 msgid "{0} seconds"
 msgstr "{0} секунд"

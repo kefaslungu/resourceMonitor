@@ -3,9 +3,9 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* NVDA compatibility: 2020.4
+* Compatibilidade com NVDA: 2020.4 a 2021.1
 
-Esse complemento fornece informações sobre carga da CPU, uso de memória e
+Este complemento fornece informações sobre carga da CPU, uso de memória e
 outras informações de uso de recursos.
 
 # Atalhos
@@ -23,10 +23,11 @@ outras informações de uso de recursos.
   ou crítica.
 * NVDA+Shift+6: apresenta arquitetura da CPU (32/64-bit) e a versão de
   Windows com números do service pack.
-* NVDA+Shift+7: apresenta o tempo desde a inicialização do sistema.
+* NVDA+Shift+7: apresenta o tempo de atividade do sistema (tempo desde a
+  inicialização).
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+Caso tenha o NVDA 2013.3 ou posterior instalado, você pode alterar essas
+teclas de atalho através do diálogo definir comandos (gestos de entrada).
 
 ## Notas de uso
 
@@ -40,25 +41,27 @@ de informações de sistema para Windows. Note também o seguinte:
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
 
-## Version 21.04
+## Versão 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* Requer NVDA 2020.4 ou posterior.
+* Atualizada dependência psutil para 5.8.0.
+* Ao pressionar duas vezes os comandos do complemento para copiar a
+  informação do recurso para a área de transferência, o NVDA anunciará o
+  resumo do recurso que está sendo copiado.
 
-## Version 21.01
+## Versão 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Atualizada dependência psutil para 5.7.3.
+* Mensagem encurtada da versão do Windows.
+* No Windows 8.1, compilação.revisão será anunciado como parte da mensagem
+  da versão do Windows, semelhante ao Windows 10.
 
-## Version 20.09
+## Versão 20.09
 
-* System uptime is now given as days, hours, minutes, seconds.
-* Windows Server Insider Preview build 20201 or later is properly recognized
-  as a Server Insider build.
+* O tempo de atividade do sistema agora é dado em dias, horas, minutos,
+  segundos.
+* A compilação do Windows Server Insider Preview 20201 ou posterior é
+  devidamente reconhecida como uma compilação do Server Insider.
 
 ## Versão 20.07
 
@@ -103,7 +106,7 @@ de informações de sistema para Windows. Note também o seguinte:
   RAM ou tamanho de disco.
 * Os valores para uso de memória e disco são mostrados com até duas casas
   decimais (por exemplo, 4,00 GB em vez de 4,0 GB).
-* Detecção aprimorada de construções (builds) do Windows Insider Preview.
+* Detecção aprimorada de compilações (builds) do Windows Insider Preview.
 
 ## Versão 18.04
 
@@ -111,7 +114,7 @@ Versão 18.04.x é a última versão a suportar versões anteriores ao Windows 7
 SP1.
 
 * Última versão para suporte ao Windows Server 2003, Vista e Server 2008.
-* Melhor detecção de versões do Windows 10 e distinção entre construções
+* Melhor detecção de versões do Windows 10 e distinção entre compilações
   (builds) públicas e Insider Preview.
 
 ## Versão 17.12
@@ -122,10 +125,10 @@ SP1.
 
 Importante: A versão 17.09.x é a última versão que suporta o Windows XP.
 
-* Última versão a rodar em Windows XP.
-* Windows 10 compilação 16278 e posteriores são reconhecidos como versão
+* Última versão a executar em Windows XP.
+* Windows 10 compilação 16278 e posteriores são reconhecidas como versão
   1709. Uma versão menor deste complemento será lançada assim que a
-  compilação estável da versão 1709 foi lançada.
+  compilação estável da versão 1709 for lançada.
 
 ## Versão 17.07.1
 
@@ -133,7 +136,7 @@ Importante: A versão 17.09.x é a última versão que suporta o Windows XP.
 
 ## Versão 17.05
 
-* Anúncio do tempo desde o início do sistema (o tempo passado desde a última
+* Anúncio do tempo de atividade do sistema (o tempo passado desde a última
   inicialização; NVDA+Shift+7).
 
 ## Versão 17.02
@@ -152,7 +155,7 @@ como ano.mês.revisão.
 * Agora são reconhecidas apropriadamente várias revisões do Windows 10 (ex.:
   1607 para a compilação 14393).
 * Compilações revisadas do Windows 10 (após instalar atualizações
-  cumulativas) são reconhecidas apropriadamente (ex. 14393.51).
+  cumulativas) são reconhecidas apropriadamente (exemplo, 14393.51).
 * Se usando compilações Insider Preview, tal fato é reconhecido.
 
 ## Mudanças na 4.5
