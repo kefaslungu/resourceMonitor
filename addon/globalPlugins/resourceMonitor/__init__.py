@@ -175,6 +175,7 @@ def _batteryInfo(verbose=False):
 server10LTSBuilds = {
 	14393: "Windows Server 2016",
 	17763: "Windows Server 2019",
+	20348: "Windows Server 2022",
 }
 
 
