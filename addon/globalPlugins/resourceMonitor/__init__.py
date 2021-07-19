@@ -230,10 +230,10 @@ def _winRID(buildNum, isClient):
 	if not isRetailOS:
 		return "Windows Insider" if isClient else "Windows Server Insider"
 	if isClient:
-		if buildNum < 22000:
-			return "Windows 10 {0}".format(releaseID)
-		else:
+		if buildNum >= 22000:
 			return "Windows 11 {0}".format(releaseID)
+		else:
+			return "Windows 10 {0}".format(releaseID)
 	else:
 		return "Windows Server {0}".format(releaseID)
 
