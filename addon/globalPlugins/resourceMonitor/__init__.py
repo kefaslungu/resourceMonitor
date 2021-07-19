@@ -238,7 +238,7 @@ def _winRID(buildNum, isClient):
 		return "Windows Server {0}".format(releaseID)
 
 
-@functools.lru_cache(maxsize=128)
+@functools.lru_cache(maxsize=1)
 def getWinVer():
 	# Obtain winversion.
 	# Python's Platform module provides below functionality,
@@ -297,7 +297,7 @@ def getWinVer():
 	return info
 
 
-@functools.lru_cache(maxsize=128)
+@functools.lru_cache(maxsize=1)
 def getWinVer2021():
 	# Obtain winversion using NvDA 2021.1 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
