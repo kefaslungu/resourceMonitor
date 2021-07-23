@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e outros
   colaboradores do NVDA
 * Descargar [versión estable][1]
-* NVDA compatibility: 2020.4 to 2021.1
+* Compatibilidade con NVDA: da 2020.4 á 2021.1
 
 Este plugin danos información acerca da carga da CPU, do uso da memoria e
 outras informacións de uso dos recursos.
@@ -44,14 +44,14 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 
 * Requírese NVDA 2020.4 ou posterior.
 * Actualizada a dependencia psutil á 5.8.0.
-* ao premer ordes do complemento dúas veces para copiar a informacion do
+* Ó premer ordes do complemento dúas veces para copiar a informacion do
   recurso ó portapapeis, NVDA anunciará o resumo do recurso que se está a
   copiar.
 
 ## Versión 21.01
 
 * Actualizada a dependencia psutil á 5.7.3.
-* encurtada a mensaxe de versión de Windows.
+* Encurtada a mensaxe de versión de Windows.
 * En Windows 8.1, compilación.revisión anunciarase como parte da mensaxe de
   versión de windows, de xeito similar a Windows 10.
 
