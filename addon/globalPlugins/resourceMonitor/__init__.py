@@ -240,65 +240,6 @@ def _winRID(buildNum, isClient):
 
 @functools.lru_cache(maxsize=1)
 def getWinVer():
-	# Obtain winversion.
-	# Python's Platform module provides below functionality,
-	# but platform module is not available for NVDA.
-	# Prepare to receive various components for Windows info output.
-	winMajor, winMinor = sys.getwindowsversion().major, sys.getwindowsversion().minor
-	buildNum = sys.getwindowsversion().build
-	sp, isClient = sys.getwindowsversion().service_pack, sys.getwindowsversion().product_type == 1
-	arch64 = os.environ.get("PROCESSOR_ARCHITEW6432")
-	# Determine Windows version.
-	if winMajor == 6:  # 7/2008 R2 (6.1), 8/2012 (6.2), 8.1/2012 R2 (6.3).
-		if winMinor == 1:  # Windows 7
-			winverName = "Windows 7" if isClient else "Windows Server 2008 R2"
-		elif winMinor == 2:  # Windows 8.
-			winverName = "Windows 8" if isClient else "Windows Server 2012"
-		elif winMinor == 3:  # Windows 8.1.
-			winverName = "Windows 8.1" if isClient else "Windows Server 2012 R2"
-	elif winMajor == 10:  # Windows 10/Server 2016 (10.0) and beyond.
-		# Also take care of release ID, introduced in Version 1511
-		# as well as Windows 11 (2021).
-		winverName = _winRID(buildNum, isClient)
-	if arch64 in ("AMD64", "ARM64"):
-		x64 = "x64" if arch64 == "AMD64" else arch64
-	else:
-		x64 = "32-bit"
-	# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
-	buildRevision = None
-	if (winMajor, winMinor) >= (6, 3):
-		# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
-		if arch64:
-			currentVersion = winreg.OpenKey(
-				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
-				access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
-			)
-		else:
-			currentVersion = winreg.OpenKey(
-				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
-			)
-		ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
-		winreg.CloseKey(currentVersion)
-		buildRevision = f"{buildNum}.{ubr}"
-	if not sp:
-		# Translators: Presents Windows version
-		# (example output: "Windows 8.1 (32-bit)").
-		info = _("{winVersion} ({cpuBit})").format(
-			winVersion=winverName, cpuBit=x64
-		)
-	else:
-		# Translators: Presents Windows version and service pack level
-		# (example output: "Windows 7 service pack 1 (64-bit)").
-		info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
-			winVersion=winverName, servicePackLevel=sp, cpuBit=x64
-		)
-	if buildRevision is not None:
-		info += " build {build}".format(build=buildRevision)
-	return info
-
-
-@functools.lru_cache(maxsize=1)
-def getWinVer2021():
 	# Obtain winversion using NvDA 2021.1 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
