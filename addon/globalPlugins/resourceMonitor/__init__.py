@@ -402,7 +402,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_announceWinVer(self, gesture):
 		# Unlike other resource usage information, current Windows version info is static.
-		info = getWinVer2021() if hasattr(winVersion, "getWinVer") else getWinVer()
+		info = getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
