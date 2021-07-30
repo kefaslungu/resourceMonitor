@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
-* Compatibilidad con NVDA: de 2020.4 a 2021.1
+* Compatibilidad con NVDA: de 2020.4 en adelante
 
 Este plugin nos da información acerca de la carga de la CPU, de la
 utilización de la memoria y de otra información de uso de recursos.
@@ -40,6 +40,20 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 * Si hay una actividad pesada de disco tal como el copiado de ficheros
   grandes, podría haber retrasos al obtener información de uso de disco.
 * Este complemento necesita Windows 7 Service Pack 1 o posterior.
+
+Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
+3-Clause BSD, que es compatible con la Licencia Pública General GNU.
+
+## Versión 21.08
+
+* El requisito mínimo de versión de Windows ahora está vinculado a la
+  versión de NVDA.
+* Las compilaciones de Windows 20348 y 22000 se reconocen como Windows
+  Server 2022 y Windows 11, respectivamente.
+* En compilaciones de prueba Insider, no se usarán versiones de Windows como
+  "Windows 10". En su lugar, NVDA anunciará "Windows Insider".
+* En sistemas de 64 bits, se anunciará la arquitectura del procesador (X64 o
+  ARM64) como parte de la información de versión de Windows.
 
 ## Versión 21.04
 
@@ -220,6 +234,7 @@ como año.mes.revisión.
 ## Cambios para 1.0
 
 * Versión inicial
+
 
 [[!tag dev stable]]
 

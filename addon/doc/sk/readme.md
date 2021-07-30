@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* NVDA compatibility: 2020.4 to 2021.1
+* NVDA compatibility: 2020.4 and beyond
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
@@ -36,6 +36,19 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 * Ak práve kopírujete veľké súbory, zistenie informácie o využití disku môže
   chvíľu trvať.
 * Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
+
+Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
+License which is compatible with GNU General Public License.
+
+## Version 21.08
+
+* Minimum Windows release requirement is now tied to NVDA releases.
+* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
+  Windows 11, respectively.
+* On Insider Preview builds, Windows release such as "Windows 10" will not
+  be used. Instead NvDA will announce "Windows Insider".
+* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
+  as part of Windows version information.
 
 ## Version 21.04
 
@@ -202,6 +215,7 @@ Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 ## Zmeny vo verzii 1.0
 
 * prvé vydanie
+
 
 [[!tag dev stable]]
 

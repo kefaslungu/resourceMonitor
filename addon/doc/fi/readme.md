@@ -3,7 +3,7 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* NVDA compatibility: 2020.4 to 2021.1
+* Yhteensopivuus: NVDA 2020.4 ja uudemmat
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -40,6 +40,20 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
+
+Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
+kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
+-lisenssin kanssa.
+
+## Versio 21.08
+
+* Windowsin vähimmäisversiovaatimus on nyt sidottu NVDA-versioihin.
+* Windowsin koontiversiot 20348 ja 22000 tunnistetaan Windows Server
+  2022:ksi ja Windows 11:ksi.
+* Windows-versiota, kuten "Windows 10", ei käytetä
+  Insider-esiversioissa. Sen sijaan NVDA ilmoittaa "Windows Insider".
+* Suorittimen arkkitehtuuri (x64 tai ARM64) ilmoitetaan osana Windowsin
+  versiotietoja 64-bittisissä järjestelmissä.
 
 ## Versio 21.04
 
@@ -215,6 +229,7 @@ vuosi.kuukausi.tarkistusversio.
 ## Muutokset versiossa 1.0
 
 * Ensimmäinen versio
+
 
 [[!tag dev stable]]
 

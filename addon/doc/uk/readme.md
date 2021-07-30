@@ -3,7 +3,7 @@
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst та інші учасники спільноти NVDA
 * Завантажити [стабільну версію][1]
-* NVDA compatibility: 2020.4 to 2021.1
+* NVDA compatibility: 2020.4 and beyond
 
 Цей додаток надає інформацію про завантаженість процесора, використання
 пам’яті та інших ресурсів.
@@ -40,6 +40,19 @@
 * При інтенсивних діях на диску, таких як копіювання великих файлів, можливі
   затримки з отриманням інформації про використання диска.
 * Цей додаток вимагає мінімум Windows 7 Service Pack 1.
+
+Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
+License which is compatible with GNU General Public License.
+
+## Version 21.08
+
+* Minimum Windows release requirement is now tied to NVDA releases.
+* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
+  Windows 11, respectively.
+* On Insider Preview builds, Windows release such as "Windows 10" will not
+  be used. Instead NvDA will announce "Windows Insider".
+* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
+  as part of Windows version information.
 
 ## Версія 21.04
 
@@ -214,6 +227,7 @@
 ## Зміни у версії 1.0
 
 * Перший реліз
+
 
 [[!tag dev stable]]
 
