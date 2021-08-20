@@ -3,7 +3,7 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA兼容版本: 2020.4或更高
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
@@ -27,18 +27,15 @@
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 此插件需要Windows 7 Service Pack 1或更高版本。
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+关于许可证的说明：此附加组件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
 
-## Version 21.08
+## 版本21.08
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* 最低 Windows 版本要求现在与 NVDA 版本相关联。
+* Windows 构建 20348 和 22000 分别被确认为 Windows Server 2022 和 Windows 11。
+* 在 Insider Preview 版本中，不会使用诸如“Windows 10”之类的 Windows 版本。相反，NvDA 将宣布“Windows
+  Insider”。
+* 在 64 位系统上，处理器架构（x64 或 ARM64）将作为 Windows 版本信息的一部分公布。
 
 ## 版本21.04
 
