@@ -3,7 +3,7 @@
 * Forfattere: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst og andre NVDA-bidragydere
 * Download [stable version][1]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA compatibility: 2021.1 and beyond
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
@@ -43,6 +43,11 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 21.10
+
+* NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.
 
 ## Version 21.08
 
@@ -230,7 +235,6 @@ som år.måned.revision.
 ## Ændringer i 1.0
 
 * Første udgivelse
-
 
 [[!tag dev stable]]
 

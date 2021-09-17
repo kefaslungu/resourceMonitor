@@ -3,7 +3,7 @@
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst и други сътрудници на NVDA
 * Изтегляне на [стабилна версия][1]
-* Съвместимост с NVDA: от 2020.4 и по-нови версии
+* NVDA compatibility: 2021.1 and beyond
 
 Тази добавка дава информация за натоварването на централния процесор,
 използваната оперативна памет и друга информация за използваните системни
@@ -46,6 +46,11 @@
 
 Забележка относно лиценза: Тази добавка използва Psutil, лицензиран под BSD
 лиценз с 3 клаузи, който е съвместим с GNU General Public License.
+
+## Version 21.10
+
+* NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.
 
 ## Версия 21.08
 
@@ -239,7 +244,6 @@
 ## Промени във версия 1.0
 
 * Първоначално издание
-
 
 [[!tag dev stable]]
 

@@ -3,7 +3,7 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* Yhteensopivuus: NVDA 2020.4 ja uudemmat
+* NVDA compatibility: 2021.1 and beyond
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -44,6 +44,11 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
+
+## Version 21.10
+
+* NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.
 
 ## Versio 21.08
 
@@ -229,7 +234,6 @@ vuosi.kuukausi.tarkistusversio.
 ## Muutokset versiossa 1.0
 
 * Ensimmäinen versio
-
 
 [[!tag dev stable]]
 

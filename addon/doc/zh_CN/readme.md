@@ -3,7 +3,7 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA兼容版本: 2020.4或更高
+* NVDA compatibility: 2021.1 and beyond
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
@@ -28,6 +28,11 @@
 * 此插件需要Windows 7 Service Pack 1或更高版本。
 
 关于许可证的说明：此附加组件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
+
+## Version 21.10
+
+* NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.
 
 ## 版本21.08
 
@@ -183,7 +188,6 @@
 ## 版本1.0
 
 * 发布初始版本
-
 
 [[!tag dev stable]]
 

@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Descărcați [versiunea stabilă][1]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA compatibility: 2021.1 and beyond
 
 Acest supliment oferă informații despre media procesorului, utilizarea
 memoriei și alte resurse de utilizare a informației.
@@ -43,6 +43,11 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 21.10
+
+* NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.
 
 ## Version 21.08
 
@@ -229,7 +234,6 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 ## Modificări aduse în versiunea 1.0
 
 * Lansarea inițială
-
 
 [[!tag dev stable]]
 

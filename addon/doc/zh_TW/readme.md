@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * 下載 [穩定版][1]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA compatibility: 2021.1 and beyond
 
 這個附加元件提供有關 CPU 負載，記憶體使用情形，及其他資源的使用訊息。
 
@@ -36,6 +36,11 @@ keys via input gestures dialog.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 21.10
+
+* NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.
 
 ## Version 21.08
 
@@ -204,7 +209,6 @@ Version 18.04.x is the last release to support Windows releases earlier than
 ## 1.0 版的更新
 
 * 初始的版本
-
 
 [[!tag dev stable]]
 

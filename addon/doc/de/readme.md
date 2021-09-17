@@ -4,7 +4,7 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA compatibility: 2021.1 and beyond
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -47,6 +47,11 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 21.10
+
+* NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.
 
 ## Version 21.08
 
@@ -242,7 +247,6 @@ angezeigt.
 ## Änderungen in 1.0
 
 * Ehrstveröffentlichung
-
 
 [[!tag dev stable]]
 
