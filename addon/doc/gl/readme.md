@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e outros
   colaboradores do NVDA
 * Descargar [versión estable][1]
-* NVDA compatibility: 2021.1 and beyond
+* Compatibilidade con NVDA: 2021.1 en diante
 
 Este plugin danos información acerca da carga da CPU, do uso da memoria e
 outras informacións de uso dos recursos.
@@ -43,10 +43,10 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 Nota sobre a licenza: este complemento utiliza Psutil, licenciado baixo a
 3-Clause BSD License que é compatible coa GNU General Public License.
 
-## Version 21.10
+## Versión 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* Requírese NVDA 2021.2 ou posterior debido a cambios en NVDA que afectan a
+  este complemento.
 
 ## Versión 21.08
 
