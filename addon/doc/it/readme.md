@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e altri
   collaboratori di NVDA
 * Scarica la [versione stabile][1]
-* NVDA compatibility: 2021.1 and beyond
+* Compatibilità con NVDA: versione 2021.1 e successive 
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.
@@ -43,37 +43,39 @@ si tenga presente che:
   informazioni sull'utilizzo del disco.
 * Questo add-on richiede Windows 7 Service Pack 1 o superiore.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Nota sulla licenza: questo componente aggiuntivo utilizza Psutil, concesso
+con licenza 3-Clause BSD compatibile con GNU General Public License.
 
-## Version 21.10
+## Novità nella versione 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* NVDA 2021.1 o successive sono richiesti per modifiche a NVDA che
+  interessano questo componente aggiuntivo.
 
-## Version 21.08
+## Novità nella versione 21.08
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* Il requisito minimo di rilascio di Windows è ora legato alle versioni di
+  NVDA.
+* Le build di Windows 20348 e 22000 sono riconosciute rispettivamente come
+  Windows Server 2022 e Windows 11.
+* Nelle build di Insider Preview, la versione di Windows come "Windows 10"
+  non verrà utilizzata. NVDA annuncerà "Windows Insider".
+* Sui sistemi a 64 bit, l'architettura del processore (x64 o ARM64) verrà
+  annunciata come parte delle informazioni sulla versione di Windows.
 
-## Version 21.04
+## Novità nella versione 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* E' richiesto NVDA 2020.4 o successive.
+* Aggiornato psutil alla versione 5.8.0.
+* Quando si premono due volte i comandi aggiuntivi per copiare le
+  informazioni negli appunti, NVDA annuncerà il riepilogo delle informazioni
+  copiate.
 
-## Version 21.01
+## Novità nella versione 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Aggiornato psutil alla versione 5.7.3.
+* Messaggio abbreviato sulla versione di Windows.
+* Su Windows 8.1, build.revision verrà annunciato come parte del messaggio
+  di versione di Windows, simile a Windows 10.
 
 ## Novità nella versione 20.09
 
