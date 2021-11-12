@@ -4,7 +4,7 @@
   Probst
    und andere NVDA-Entwickler
 * [Stabile Version herunterladen][1]
-* NVDA compatibility: 2021.1 and beyond
+* NVDA-Kompatibilität: 2021.1 und neuer
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -45,23 +45,25 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Für diese Erweiterung ist Windows 7 Service Pack 1 oder höher
   erforderlich.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
+der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
+Public Lizenz kompatibel.
 
 ## Version 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* NVDA 2021.2 oder neuer ist erforderlich, da die Änderungen diese
+  Erweiterung betreffen.
 
 ## Version 21.08
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* Die Mindestanforderungen für Windows-Versionen sind jetzt an
+  NVDA-Versionen gebunden.
+* Windows Builds 20348 und 22000 werden als Windows Server 2022 und Windows
+  11 erkannt.
+* In Windows Insider-Vorabversionen wird nicht mehr Windows Version 10 oder
+  ähnliches angesagt. Stattdessen wird "Windows Insider" gesagt.
+* Auf 64-bit-Systemen, wird die Prozessorarchitektur (x64 oder ARM64) mit
+  der Windows Version ausgegeben.
 
 ## Version 21.04
 
