@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:46-0700\n"
-"PO-Revision-Date: 2021-10-30 22:40+0100\n"
+"PO-Revision-Date: 2021-11-18 23:22+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -70,7 +70,7 @@ msgstr " Aviso: bateria fraca."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "Alerta: bateria criticamente baixa."
+msgstr " Alerta: bateria criticamente baixa."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 8.1 (32-bit)").
@@ -139,7 +139,7 @@ msgstr "Apresenta o espaço usado e total para memória ram física e virtual."
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr "Físico: {physicalUsed} de {physicalTotal} usado ({physicalPercent}%)"
+msgstr "Físico: {physicalUsed} de {physicalTotal} usado ({physicalPercent}%) q"
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
