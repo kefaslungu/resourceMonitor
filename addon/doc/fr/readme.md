@@ -3,7 +3,7 @@
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst et d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
-* Compatibilité NVDA: 2021.1 et ultérieure
+* NVDA compatibility: 2021.2 and beyond
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -46,6 +46,10 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
+
+## Version 22.01
+
+* NVDA 2021.2 or later is required.
 
 ## Version 21.10
 

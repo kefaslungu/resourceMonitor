@@ -3,7 +3,7 @@
 * Yazarlar: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst ve diğer NVDA katkıda bulunanlar
 * [Kararlı sürümü][1] indir
-* NVDA uyumluluğu: 2021.1 ve sonrası
+* NVDA uyumluluğu: 2021.2 ve sonrası
 
 Bu eklenti, CPU yükü, bellek kullanımı ve diğer kaynak kullanımları hakkında
 bilgi verir.
@@ -41,6 +41,10 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
+
+## Sürüm 22.01
+
+* NVDA 2021.2 veya üstü gereklidir.
 
 ## Sürüm 21.10
 

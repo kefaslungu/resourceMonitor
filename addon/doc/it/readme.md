@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e altri
   collaboratori di NVDA
 * Scarica la [versione stabile][1]
-* Compatibilità con NVDA: versione 2021.1 e successive 
+* NVDA compatibility: 2021.2 and beyond
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.
@@ -45,6 +45,10 @@ si tenga presente che:
 
 Nota sulla licenza: questo componente aggiuntivo utilizza Psutil, concesso
 con licenza 3-Clause BSD compatibile con GNU General Public License.
+
+## Version 22.01
+
+* NVDA 2021.2 or later is required.
 
 ## Novità nella versione 21.10
 
