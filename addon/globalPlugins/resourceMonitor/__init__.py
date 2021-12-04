@@ -193,12 +193,17 @@ def getWinVer():
 	# NVDA uses client release names for "releaseName" attribute.
 	# Specifically, NVDA 2021.2 obtains Windows 10/11 release names from Windows Registry.
 	winverName = currentWinVer.releaseName
+	# All server release names are housed inside a dedicated map.
+	serverReleaseNameRecorded = not isClient and currentWinVer.build in serverReleaseNames
+	if serverReleaseNameRecorded:
+		winverName = serverReleaseNames[currentWinVer.build]
 	# On Windows 10 and later, NVDA uses a three-part string (Windows name releaseId).
 	# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
-	if currentWinVer >= winVersion.WIN10:
-		releaseId = winverName.rpartition(" ")
+	# Skip all this if server release name was already obtained.
+	if currentWinVer >= winVersion.WIN10 and not serverReleaseNameRecorded:
+		releaseId = winverName.rpartition(" ")[-1]
 		# From 2020, Windows Insider Preview (client and server) release name includes "Dev" suffix.
-		isInsiderPreview = releaseId[-1] == "Dev"
+		isInsiderPreview = releaseId == "Dev"
 		if isInsiderPreview:
 			winverName = "Windows Insider" if isClient else "Windows Server Insider"
 		elif not isInsiderPreview and not isClient:
