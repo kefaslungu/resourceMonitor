@@ -184,9 +184,8 @@ serverReleaseNames = {
 
 @functools.lru_cache(maxsize=1)
 def getWinVer():
-	# Obtain winversion using NvDA 2021.1 API.
+	# Obtain winversion using NvDA 2021.1 API, later extended to use 2021.2 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
-	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
 	currentWinVer = winVersion.getWinVer()
 	arch64 = os.environ.get("PROCESSOR_ARCHITEW6432")
 	isClient = currentWinVer.productType == "workstation"
@@ -194,9 +193,21 @@ def getWinVer():
 	# NVDA uses client release names for "releaseName" attribute.
 	# Specifically, NVDA 2021.2 obtains Windows 10/11 release names from Windows Registry.
 	winverName = currentWinVer.releaseName
+	# On Windows 10 and later, NVDA uses a three-part string (Windows name releaseId).
+	# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
+	if currentWinVer >= winVersion.WIN10:
+		releaseId = winverName.rpartition(" ")
+		# From 2020, Windows Insider Preview (client and server) release name includes "Dev" suffix.
+		isInsiderPreview = releaseId[-1] == "Dev"
+		if isInsiderPreview:
+			winverName = "Windows Insider" if isClient else "Windows Server Insider"
+		elif not isInsiderPreview and not isClient:
+			winverName = f"Windows Server {releaseId}"
 	# All server release names will be housed inside a dedicated map.
-	if not isClient:
-		winverName = serverReleaseNames[currentWinVer.build]
+	else:
+		# All server release names will be housed inside a dedicated map.
+		if not isClient:
+			winverName = serverReleaseNames[currentWinVer.build]
 	if currentWinVer >= winVersion.WIN10:
 		# Also take care of release Id, introduced in Windows 10 Version 1511
 		# as well as Windows 11 (2021).
