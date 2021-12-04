@@ -186,8 +186,8 @@ def _winRID(buildNum, isClient):
 	# Special cases: Windows 10 Version 1507, Windows Server long-term servicing channel (LTSC) releases.
 	if isClient and buildNum == 10240:
 		return "Windows 10 1507"
-	elif not isClient and buildNum in server10LTSBuilds:
-		return server10LTSBuilds[buildNum]
+	elif not isClient and buildNum in serverReleaseNames:
+		return serverReleaseNames[buildNum]
 	# Since late 2019 (and confirmed with Server vNext build 20201),
 	# "rs_prerelease" branch designates dev channel build.
 	# Note that in some cases Insider Preview builds may come from what may appear to be
@@ -250,12 +250,12 @@ def getWinVer():
 	arch64 = os.environ.get("PROCESSOR_ARCHITEW6432")
 	isClient = currentWinVer.productType == "workstation"
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
-	if currentWinVer == winVersion.WIN7_SP1:
-		winverName = "Windows 7" if isClient else "Windows Server 2008 R2"
-	elif currentWinVer == winVersion.WIN8:
-		winverName = "Windows 8" if isClient else "Windows Server 2012"
-	elif currentWinVer == winVersion.WIN81:
-		winverName = "Windows 8.1" if isClient else "Windows Server 2012 R2"
+	# NVDA uses client release names for "releaseName" attribute.
+	# Specifically, NVDA 2021.2 obtains Windows 10/11 release names from Windows Registry.
+	winverName = currentWinVer.releaseName
+	# All server release names will be housed inside a dedicated map.
+	if not isClient:
+		winverName = serverReleaseNames[currentWinVer.build]
 	elif currentWinVer >= winVersion.WIN10:
 		# Also take care of release ID, introduced in Windows 10 Version 1511
 		# as well as Windows 11 (2021).
