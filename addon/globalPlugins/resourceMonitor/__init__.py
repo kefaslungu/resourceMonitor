@@ -6,7 +6,6 @@
 
 import winreg
 from datetime import datetime
-import sys
 import os
 import functools
 import globalPluginHandler
