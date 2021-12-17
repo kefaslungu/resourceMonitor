@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* NVDA compatibility: 2021.2 and later
+* Compatibilidade com NVDA: 2021.2 e posteriores
 
 Este complemento fornece informações sobre carga da CPU, uso de memória e
 outras informações de uso de recursos.
@@ -41,27 +41,28 @@ de informações de sistema para Windows. Note também o seguinte:
   pode haver lentidão ao obter informações de uso do disco.
 * Este complemento requer Windows 7 Service Pack 1 ou posterior.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
+BSD de 3 cláusulas, que é compatível com a GNU General Public License.
 
-## Version 22.01
+## Versão 22.01
 
-* NVDA 2021.2 or later is required.
+* Requer NVDA 2021.2 ou posteriores.
 
-## Version 21.10
+## Versão 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* O NVDA 2021.2 ou posterior é necessário devido a mudanças no NVDA que
+  afetam este complemento.
 
-## Version 21.08
+## Versão 21.08
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* O requisito mínimo de versão do Windows agora está vinculado às versões do
+  NVDA.
+* As compilações do Windows 20348 e 22000 são reconhecidas como Windows
+  Server 2022 e Windows 11, respectivamente.
+* Nas compilações do Insider Preview, a versão do Windows, como "Windows
+  10", não será usada. Em vez disso, o NvDA anunciará "Windows Insider".
+* Em sistemas de 64-bit, a arquitetura do processador (x64 ou ARM64) será
+  anunciada como parte das informações de versão do Windows.
 
 ## Versão 21.04
 
