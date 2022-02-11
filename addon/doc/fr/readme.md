@@ -3,7 +3,7 @@
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst et d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
-* NVDA compatibility: 2021.2 and later
+* Compatibilité NVDA : 2021.2 et versions ultérieures
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -49,7 +49,7 @@ Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 
 ## Version 22.01
 
-* NVDA 2021.2 or later is required.
+* NVDA 2021.2 ou version ultérieure est requis.
 
 ## Version 21.10
 
