@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA compatibility: 2021.2 and later
+* NVDA kompatibilnost: 2021.2 i novija
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
@@ -41,19 +41,19 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
   diska.
 * Ovaj dodatak zahtijeva Windows 7 Service Pack 1 ili kasniji.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
+s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
 
-## Version 22.01
+## Verzija 22.01
 
-* NVDA 2021.2 or later is required.
+* Potrebna je NVDA verzija 2021.2 ili novija.
 
-## Version 21.10
+## Verzija 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* Potrebna je NVDA verzija 2021.1 ili novija zbog promjena u NVDA čitaču
+  koje utječu na ovaj dodatak.
 
-## Version 21.08
+## Verzija 21.08
 
 * Minimum Windows release requirement is now tied to NVDA releases.
 * Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
@@ -63,17 +63,17 @@ License which is compatible with GNU General Public License.
 * On 64-bit systems, processor architecture (x64 or ARM64) will be announced
   as part of Windows version information.
 
-## Version 21.04
+## Verzija 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
+* Potrebna je NVDA verzija 2020.4 ili novija.
+* Ažurirana je psutil zavisnost na 5.8.0.
 * When pressing add-on commands twice to copy resource information to
   clipboard, NVDA will announce resource summary that is being copied.
 
-## Version 21.01
+## Verzija 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
+* Ažurirana je psutil zavisnost na 5.7.3.
+* Skraćena je poruka Windows verzije.
 * On Windows 8.1, build.revision will be announced as part of Windows
   version message, similar to Windows 10.
 
