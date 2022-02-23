@@ -333,7 +333,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			physicalTotal=size(ram[0], alternative),
 			physicalPercent=tryTrunk(ram[2])
 		)
-		virtualRam = psutil.swap_memory()
+		# psutil 5.9.0 returns size of the swap file when swap_memory function is called.
+		# Therefore, combine swap file and RAM capacities for backward compatibility.
+		virtualRam = list(psutil.swap_memory())
+		virtualRam[1] += ram[3]
+		virtualRam[0] += ram[0]
+		virtualRam[3] = round((virtualRam[1] / virtualRam[0]) * 100, 1)
 		# Translators: Shows virtual memory usage.
 		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
 			virtualUsed=size(virtualRam[1], alternative),
