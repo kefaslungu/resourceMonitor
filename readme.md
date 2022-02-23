@@ -30,6 +30,10 @@ This add-on does not replace task manager and other system information programs 
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
 
+## Version 22.03
+
+* Updated psutil dependency to 5.9.0.
+
 ## Version 22.01
 
 * NVDA 2021.2 or later is required.
