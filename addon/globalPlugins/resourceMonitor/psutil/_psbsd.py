@@ -9,24 +9,24 @@ import errno
 import functools
 import os
 import xml.etree.ElementTree as ET
-from collections import namedtuple
 from collections import defaultdict
+from collections import namedtuple
 
 from . import _common
 from . import _psposix
 from . import _psutil_bsd as cext
 from . import _psutil_posix as cext_posix
+from ._common import FREEBSD
+from ._common import NETBSD
+from ._common import OPENBSD
 from ._common import AccessDenied
+from ._common import NoSuchProcess
+from ._common import ZombieProcess
 from ._common import conn_tmap
 from ._common import conn_to_ntuple
-from ._common import FREEBSD
 from ._common import memoize
 from ._common import memoize_when_activated
-from ._common import NETBSD
-from ._common import NoSuchProcess
-from ._common import OPENBSD
 from ._common import usage_percent
-from ._common import ZombieProcess
 from ._compat import FileNotFoundError
 from ._compat import PermissionError
 from ._compat import ProcessLookupError
@@ -249,19 +249,19 @@ def cpu_count_logical():
 
 
 if OPENBSD or NETBSD:
-    def cpu_count_physical():
+    def cpu_count_cores():
         # OpenBSD and NetBSD do not implement this.
         return 1 if cpu_count_logical() == 1 else None
 else:
-    def cpu_count_physical():
-        """Return the number of physical CPUs in the system."""
+    def cpu_count_cores():
+        """Return the number of CPU cores in the system."""
         # From the C module we'll get an XML string similar to this:
         # http://manpages.ubuntu.com/manpages/precise/man4/smp.4freebsd.html
         # We may get None in case "sysctl kern.sched.topology_spec"
         # is not supported on this BSD version, in which case we'll mimic
         # os.cpu_count() and return None.
         ret = None
-        s = cext.cpu_count_phys()
+        s = cext.cpu_topology()
         if s is not None:
             # get rid of padding chars appended at the end of the string
             index = s.rfind("</groups>")
@@ -274,8 +274,7 @@ else:
                     # needed otherwise it will memleak
                     root.clear()
         if not ret:
-            # If logical CPUs are 1 it's obvious we'll have only 1
-            # physical CPU.
+            # If logical CPUs == 1 it's obvious we' have only 1 core.
             if cpu_count_logical() == 1:
                 return 1
         return ret
