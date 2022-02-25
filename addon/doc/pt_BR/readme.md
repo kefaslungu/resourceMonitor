@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst e outros colaboradores do NVDA
 * Baixe a [versão estável][1]
-* Compatibilidade com NVDA: 2021.2 e posteriores
+* NVDA compatibility: 2021.3 and later
 
 Este complemento fornece informações sobre carga da CPU, uso de memória e
 outras informações de uso de recursos.

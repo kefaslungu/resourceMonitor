@@ -3,7 +3,7 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* Yhteensopivuus: NVDA 2021.2 ja uudemmat
+* Yhteensopivuus: NVDA 2021.3 ja uudemmat
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
