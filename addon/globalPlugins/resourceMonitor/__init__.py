@@ -9,6 +9,7 @@ from datetime import datetime
 import os
 import functools
 import globalPluginHandler
+import globalVars
 import ui
 import api
 import scriptHandler
@@ -244,6 +245,12 @@ def getWinVer():
 	return info
 
 
+# Security: disable the global plugin altogether in secure mode.
+def disableInSecureMode(cls):
+	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
+
+
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
