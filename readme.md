@@ -24,6 +24,7 @@ If you have NVDA 2013.3 or later installed, you can change these shortcut keys v
 
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
+* This add-on is not intended to be used in secure screens.
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * This add-on requires Windows 7 Service Pack 1 or later.
@@ -32,6 +33,8 @@ Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License wh
 
 ## Version 22.03
 
+* NVDA 2021.3 or later is required.
+* To improve security, add-on commands cannot be performed if NVDA is running in secure mode.
 * Updated psutil dependency to 5.9.0.
 
 ## Version 22.01
