@@ -22,3 +22,4 @@ def onInstall():
 			# Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
 			_("Old Windows version"), wx.OK | wx.ICON_WARNING
 		)
+		raise RuntimeError("Attempting to install Resource Monitor add-on on Windows releases earlier than 10")
