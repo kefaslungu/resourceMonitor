@@ -34,6 +34,8 @@ teclas de atalho através do diálogo definir comandos (gestos de entrada).
 Este complemento não substitui o gerenciador de tarefas e outros programas
 de informações de sistema para Windows. Note também o seguinte:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * O uso de CPU é fornecido em processadores lógicos e não em núcleos
   físicos. Nota-se isso em processadores que usam Hyper-Threading, em que o
   número de CPUs é o dobro do número de núcleos de CPU.
@@ -43,6 +45,16 @@ de informações de sistema para Windows. Note também o seguinte:
 
 Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
 BSD de 3 cláusulas, que é compatível com a GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Versão 22.01
 

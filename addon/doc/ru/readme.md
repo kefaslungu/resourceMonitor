@@ -32,6 +32,8 @@ keys via input gestures dialog.
 Это дополнение не заменяет диспетчер задач и другие информационные программы
 системы Windows. Также обратите внимание на следующее:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * Использование процессора предоставляется для логических процессоров, а не
   физических ядер. Это касается процессоров, которые использует Hyper
   Threading, где количество процессоров в два раза превышает количество
@@ -42,6 +44,16 @@ keys via input gestures dialog.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Version 22.01
 

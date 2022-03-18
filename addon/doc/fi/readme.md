@@ -34,6 +34,8 @@ Syötekomennot-valintaikkunasta.
 Tämä lisäosa ei korvaa Windowsin tehtävienhallintaa tai muita
 järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * Suorittimen käyttö ilmoitetaan loogisille suorittimille, ei fyysisille
   ytimille. Tällä on merkitystä Hyper Threading -teknologiaa käyttävissä
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
@@ -44,6 +46,16 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Versio 22.01
 

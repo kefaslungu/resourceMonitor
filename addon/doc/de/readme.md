@@ -35,6 +35,8 @@ Tastenkombinationen unter "Tastenbefehle" im NVDA-Menü ändern.
 Diese Erweiterung ersetzt nicht den Task-Manager von Windows sowie andere
 Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
+* Die Ressourcen-Informationen können nicht in die Zwischenablage kopiert
+  werden, wenn die Erweiterung im geschützten Bereich ausgeführt wird.
 * Die Prozessor-Auslastung wird für logische Prozessoren, jedoch nicht für
   physische Kerne ausgegeben. Dies ist bei Prozessoren bemerkbar, welche
   Hyper Threading verwenden. Bei diesen Prozessoren ist die Anzahl der
@@ -48,6 +50,16 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
+
+## Version 22.03
+
+Version 22.03 ist die letzte Version, die Windows 7 Service Pack 1 und
+Windows 8/8.1 unterstützt.
+
+* NVDA 2021.3 oder neuer wird benötigt.
+* Beim Versuch, die Erweiterung unter Windows 7, 8 und 8.1 zu installieren,
+  wird eine Warnung angezeigt.
+* Die Python-Abhängigkeit "psutil" wurde auf 5.9.0 aktualisiert.
 
 ## Version 22.01
 

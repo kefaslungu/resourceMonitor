@@ -32,6 +32,8 @@ keys via input gestures dialog.
 Add-on này không thay thế cho task manager và các trình kiểm tra thông tin
 hệ thống khác của Windows. Cũng lưu ý những điểm sau:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * Sử dụng CPU được cung cấp cho bộ vi xử lý logic chứ không phải lõi vật
   lý. Cần lưu ý điều này với các bộ vi xử lý dùng Hyper-Threading có số CPU
   gấp đôi số lõi vật lý.
@@ -41,6 +43,16 @@ hệ thống khác của Windows. Cũng lưu ý những điểm sau:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Version 22.01
 

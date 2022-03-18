@@ -35,6 +35,8 @@
 Тази добавка не замества мениджъра на задачите и другите програми за преглед
 на системна информация в Windows. Също така имайте предвид следното:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * Натовареността на централния процесор се посочва за логическите процесори,
   а не за физическите ядра. Това е забележимо при процесори използващи
   Hyper-Threading, където броят на централните процесори е два пъти повече
@@ -46,6 +48,16 @@
 
 Забележка относно лиценза: Тази добавка използва Psutil, лицензиран под BSD
 лиценз с 3 клаузи, който е съвместим с GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Версия 22.01
 

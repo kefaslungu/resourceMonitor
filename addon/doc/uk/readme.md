@@ -33,6 +33,8 @@
 Цей додаток не замінює диспетчера завдань Windows чи інших програм, які
 надають інформацію про систему.  Також запам’ятайте:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * Використання центрального процесора подано для логічних процесорів, а не
   для фізичних ядер. Це важливо для процесорів, які використовують
   Hyper-Threading, де кількість процесорів вдвічі перевищує кількість ядер
@@ -43,6 +45,16 @@
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Version 22.01
 

@@ -33,6 +33,8 @@ estas teclas de acceso directo desde el diálogo Gestos de entrada.
 Este complemento no sustituye al administrador de tareas y a otros programas
 de información del sistema para Windows. También ten en cuenta lo siguiente:
 
+* No se puede copiar la información de recursos al portapapeles si el
+  complemento se ejecuta en pantallas seguras.
 * El uso de la CPU se da para procesadores lógicos, y no núcleos
   físicos. Esto es perceptible para los procesadores que utilizan Hyper
   Threading donde el número de CPUs es el doble del número de núcleos de
@@ -43,6 +45,16 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
+
+## Versión 22.03
+
+La versión 22.03 es la última versión estable que soporta Windows 7 Service
+Pack 1, 8 y 8.1.
+
+* Se requiere NVDA 2021.3 o posterior.
+* Se mostrará un mensaje de aviso al intentar instalar el complemento en
+  Windows 7, 8 y 8.1.
+* Actualizada la dependencia psutil a 5.9.0.
 
 ## Versión 22.01
 

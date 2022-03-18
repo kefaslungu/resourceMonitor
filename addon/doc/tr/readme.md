@@ -32,6 +32,8 @@ girdi hareketleri iletişim kutusundan değiştirebilirsiniz.
 Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka
 uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * CPU kullanımı fiziksel çekirdekler için değil mantıksal işlemciler için
   verilmiştir. Bu, CPU sayısının CPU çekirdeği sayısının iki katı olduğu
   Hyper-Threading kullanan işlemciler için fark edilebilir.
@@ -41,6 +43,16 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Sürüm 22.01
 

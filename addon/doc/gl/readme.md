@@ -33,6 +33,8 @@ atallo mediante o diálogo de xestos de entrada.
 Este complemento non substitúe ó xestor de tarefas e a outros programas de
 información do sistema para Windows. Ademais, ten en conta o seguinte:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * O Uso da CPU dase para os procesadores lóxicos, non para os núcleos
   físicos. Isto é perceptible para os procesadores que usan Hyper Threading
   onde o número de CPUs é o dobre do número de núcleos de CPU.
@@ -42,6 +44,16 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 
 Nota sobre a licenza: este complemento utiliza Psutil, licenciado baixo a
 3-Clause BSD License que é compatible coa GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Versión 22.01
 

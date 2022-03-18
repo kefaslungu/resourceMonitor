@@ -35,6 +35,8 @@ Questo componente aggiuntivo non sostituisce applicazioni quali Task Manager
 o altri software che forniscono informazioni di sistema per Windows. Inoltre
 si tenga presente che:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * L'utilizzo della CPU è riportato per processori logici, non core
   fisici. Questo è evidente per i processori che utilizzano Hyper-Threading
   dove il numero di CPU è il doppio del numero di core della CPU.
@@ -45,6 +47,16 @@ si tenga presente che:
 
 Nota sulla licenza: questo componente aggiuntivo utilizza Psutil, concesso
 con licenza 3-Clause BSD compatibile con GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Version 22.01
 

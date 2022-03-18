@@ -35,6 +35,8 @@ modifier ces touches de raccourci dans le dialogue Gestes de commandes.
 Cette extension ne remplace pas le gestionnaire de tâches et les autres
 programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
+* Les informations sur les ressources ne peuvent pas être copiées dans le
+  presse-papiers si vous exécutez l'extension dans des écrans sécurisés.
 * L'utilisation du processeur est donnée pour les processeurs logiques, non
   pour les cœurs physiques. Cela est perceptible pour les processeurs qui
   utilise la technologie Hyper Threading où le nombre de CPU est deux fois
@@ -46,6 +48,16 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
+
+## Version 22.03
+
+La version 22.03 est la dernière version stable à prendre en charge Windows
+7 Service Pack 1, 8 et 8.1.
+
+* NVDA 2021.3 ou version ultérieure est requis.
+* Un message d'avertissement s'affichera si vous installez l'extension sur
+  Windows 7, 8 et 8.1.
+* Mise à jour de la dépendance psutil vers la version 5.9.0.
 
 ## Version 22.01
 
@@ -74,7 +86,7 @@ Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 * Mise à jour de la dépendance psutil vers la version 5.8.0.
 * Lorsqu'on appuie deux fois sur une commande de l'extension pour copier les
   informations sur les ressources dans le presse-papiers, NVDA annoncera le
-  résumé des ressources copié
+  résumé des ressources copiés.
 
 ## Version 21.01
 
@@ -238,7 +250,7 @@ forme année.mois.révision.
 ## Changements pour la version 2.1
 
 * Mise à jour de la dépendance psutil  vers la version 0.6.1.
-* Correction du long délai lors de l'obtention des informations des disques
+* Correction du long délai lors de l'obtention des informations des disques.
 * Nettoyage du code.
 
 ## Changements pour la version 2.0
@@ -247,7 +259,7 @@ forme année.mois.révision.
 
 ## Changements pour la version 1.0
 
-* Première version.
+* Première version
 
 [[!tag dev stable]]
 

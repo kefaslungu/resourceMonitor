@@ -33,6 +33,8 @@ keys via input gestures dialog.
 Este extra não substitui o gestor de tarefas e outros programas de
 informações do sistema para o Windows. Observe também o seguinte:
 
+* Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.
 * O uso da CPU é dado para processadores lógicos, e não para núcleos
   físicos. Isso é notável para os processadores que usam o Hyper-Threading,
   onde o número de CPU é o dobro do número de núcleos da CPU.
@@ -42,6 +44,16 @@ informações do sistema para o Windows. Observe também o seguinte:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 22.03
+
+Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.
+
+* NVDA 2021.3 or later is required.
+* A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.
+* Updated psutil dependency to 5.9.0.
 
 ## Version 22.01
 
