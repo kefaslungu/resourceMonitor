@@ -172,9 +172,6 @@ def _batteryInfo(verbose=False):
 # Record Windows Server builds to release names.
 # Client versions will be checked via Registry.
 serverReleaseNames = {
-	7601: "Windows Server 2008 R2",
-	9200: "Windows Server 2012",
-	9600: "Windows Server 2012 R2",
 	14393: "Windows Server 2016",
 	17763: "Windows Server 2019",
 	20348: "Windows Server 2022",
