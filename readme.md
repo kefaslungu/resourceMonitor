@@ -4,7 +4,7 @@
 * Download [stable version][1]
 * NVDA compatibility: 2021.3 and later
 
-Note: I (Joseph Lee) am looking for people who will maintain Resource Monitor add-on from January 1, 2022 onwards.
+Note: I (Joseph Lee) am looking for people who will maintain Resource Monitor add-on from April 1, 2022 onwards.
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
