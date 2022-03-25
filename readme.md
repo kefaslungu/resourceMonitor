@@ -15,7 +15,7 @@ This add-on gives information about CPU load, memory usage and other resource us
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual ram.
 * NVDA+Shift+3: presents the used and total space of the static and removable drives.
 * NVDA+Shift+4: presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents  CPU Architecture 32/64-bit and Windows version and service pack numbers.
+* NVDA+Shift+6: presents  CPU Architecture 32/64-bit and Windows version.
 * NVDA+Shift+7: presents the system's uptime.
 
 If you have NVDA 2013.3 or later installed, you can change these shortcut keys via input gestures dialog.
@@ -27,7 +27,7 @@ This add-on does not replace task manager and other system information programs 
 * Resource information cannot be copied to clipboard if running the add-on in secure screens.
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
-* This add-on requires Windows 7 Service Pack 1 or later.
+* This add-on requires Windows 10 or later.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
 
