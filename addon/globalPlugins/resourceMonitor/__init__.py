@@ -208,22 +208,20 @@ def getWinVer():
 		x64 = "x64" if arch64 == "AMD64" else arch64
 	else:
 		x64 = "32-bit"
-	# Announce build.revision on Windows 8.1/Server 2012 R2 and later.
-	buildRevision = None
-	if currentWinVer >= winVersion.WIN81:
-		# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
-		if arch64:
-			currentVersion = winreg.OpenKey(
-				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
-				access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
-			)
-		else:
-			currentVersion = winreg.OpenKey(
-				winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
-			)
-		ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
-		winreg.CloseKey(currentVersion)
-		buildRevision = f"{currentWinVer.build}.{ubr}"
+	# Announce build.revision.
+	# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
+	if arch64:
+		currentVersion = winreg.OpenKey(
+			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
+			access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
+		)
+	else:
+		currentVersion = winreg.OpenKey(
+			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
+		)
+	ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
+	winreg.CloseKey(currentVersion)
+	buildRevision = f"{currentWinVer.build}.{ubr}"
 	if not currentWinVer.servicePack:
 		# Translators: Presents Windows version
 		# (example output: "Windows 8.1 (32-bit)").
@@ -236,8 +234,7 @@ def getWinVer():
 		info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
 			winVersion=winverName, servicePackLevel=currentWinVer.servicePack, cpuBit=x64
 		)
-	if buildRevision is not None:
-		info += " build {build}".format(build=buildRevision)
+	info += " build {build}".format(build=buildRevision)
 	return info
 
 
