@@ -222,18 +222,11 @@ def getWinVer():
 	ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
 	winreg.CloseKey(currentVersion)
 	buildRevision = f"{currentWinVer.build}.{ubr}"
-	if not currentWinVer.servicePack:
-		# Translators: Presents Windows version
-		# (example output: "Windows 8.1 (32-bit)").
-		info = _("{winVersion} ({cpuBit})").format(
-			winVersion=winverName, cpuBit=x64
-		)
-	else:
-		# Translators: Presents Windows version and service pack level
-		# (example output: "Windows 7 service pack 1 (64-bit)").
-		info = _("{winVersion} {servicePackLevel} ({cpuBit})").format(
-			winVersion=winverName, servicePackLevel=currentWinVer.servicePack, cpuBit=x64
-		)
+	# Translators: Presents Windows version
+	# (example output: "Windows 10 (32-bit)").
+	info = _("{winVersion} ({cpuBit})").format(
+		winVersion=winverName, cpuBit=x64
+	)
 	info += " build {build}".format(build=buildRevision)
 	return info
 
