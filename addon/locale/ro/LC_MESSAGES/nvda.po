@@ -17,6 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
 
+#. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
+msgid ""
+"You are using an older version of Windows. This add-on requires Windows 10 "
+"or later."
+msgstr ""
+
+#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
+msgid "Old Windows version"
+msgstr ""
+
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -71,16 +81,10 @@ msgid " Warning: critically low battery."
 msgstr " Alertă: nivel baterie extrem de scăzut."
 
 #. Translators: Presents Windows version
-#. (example output: "Windows 8.1 (32-bit)").
+#. (example output: "Windows 10 (32-bit)").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
-
-#. Translators: Presents Windows version and service pack level
-#. (example output: "Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -199,3 +203,6 @@ msgid ""
 msgstr ""
 "Un monitor de resurse folositor pentru raportarea încărcării CPU, ratei de "
 "folosire a memoriei, baterie, stare folosire disk și altele."
+
+#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
+#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"

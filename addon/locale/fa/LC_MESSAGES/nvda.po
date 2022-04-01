@@ -18,6 +18,16 @@ msgstr ""
 "X-Generator: Poedit 1.8.9\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+#. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
+msgid ""
+"You are using an older version of Windows. This add-on requires Windows 10 "
+"or later."
+msgstr ""
+
+#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
+msgid "Old Windows version"
+msgstr ""
+
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -72,16 +82,10 @@ msgid " Warning: critically low battery."
 msgstr "هشدار: باتری خیلی ضعیف است."
 
 #. Translators: Presents Windows version
-#. (example output: "Windows 8.1 (32-bit)").
+#. (example output: "Windows 10 (32-bit)").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
-
-#. Translators: Presents Windows version and service pack level
-#. (example output: "Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -92,24 +96,28 @@ msgstr "دیده‌بانِ منابع"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
-"Presents battery percentage, charging status, remaining time (if not charging), and a "
-"warning if the battery is low or critical."
+"Presents battery percentage, charging status, remaining time (if not "
+"charging), and a warning if the battery is low or critical."
 msgstr ""
-"درصدِ باتری، وضعیتِ شارژ، زمانِ باقیمانده در صورتی که شارژ نشود، و هشداری مبنی بر ضعیف "
-"یا خیلی ضعیف بودن باتری را ارائه میدهد."
+"درصدِ باتری، وضعیتِ شارژ، زمانِ باقیمانده در صورتی که شارژ نشود، و هشداری مبنی "
+"بر ضعیف یا خیلی ضعیف بودن باتری را ارائه میدهد."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
-"Presents the used and total space of the static and removable drives on this computer."
-msgstr "فضای استفاده شده و کلِّ فضای درایو‌های ثابت و متحرکِ این رایانه را بیان میکند."
+"Presents the used and total space of the static and removable drives on this "
+"computer."
+msgstr ""
+"فضای استفاده شده و کلِّ فضای درایو‌های ثابت و متحرکِ این رایانه را بیان میکند."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
-msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgid ""
+"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} (درایوِ {driveType}): {usedSpace} از {totalSpace} استفاده شده، {percent}%."
+"{driveName} (درایوِ {driveType}): {usedSpace} از {totalSpace} استفاده شده، "
+"{percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -133,12 +141,14 @@ msgstr "فضای استفاده شده و کلِّ فضای فیزیکی و مج
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"رمِ فیزیکی: {physicalUsed} از {physicalTotal} استفاده شده، ({physicalPercent}%). "
+"رمِ فیزیکی: {physicalUsed} از {physicalTotal} استفاده شده، "
+"({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr "رمِ مجازی: {virtualUsed} از {virtualTotal} استفاده شده، ({virtualPercent}%)."
+msgstr ""
+"رمِ مجازی: {virtualUsed} از {virtualTotal} استفاده شده، ({virtualPercent}%)."
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -171,10 +181,11 @@ msgid "Failed to get the system's uptime."
 msgstr "نتوانستم زمانِ روشن بودنِ سیستم را به دست بیاورم."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid "Presents used ram, average processor load, and battery info if available."
+msgid ""
+"Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"مقدارِ رمِ استفاده‌شده، میانگینِ بارِ پردازنده، و چنانچه در دسترس باشد، اطلاعات باتری را "
-"بیان میکند."
+"مقدارِ رمِ استفاده‌شده، میانگینِ بارِ پردازنده، و چنانچه در دسترس باشد، اطلاعات "
+"باتری را بیان میکند."
 
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
@@ -183,8 +194,11 @@ msgstr "{ramPercent}% از رم استفاده شده، سیپی‌یو {cpuPerc
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk usage status "
-"and more."
+"A handy resource monitor to report CPU load, memory usage, battery, disk "
+"usage status and more."
 msgstr ""
-"یک دیده‌بانِ منابعِ دمِ دستی برای اعلامِ بارِ سیپی‌یو، میزانِ استفاده‌ی حافظه، باتری، وضعیتِ "
-"استفاده از دیسک و بیشتر."
+"یک دیده‌بانِ منابعِ دمِ دستی برای اعلامِ بارِ سیپی‌یو، میزانِ استفاده‌ی حافظه، باتری، "
+"وضعیتِ استفاده از دیسک و بیشتر."
+
+#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
+#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
