@@ -8,24 +8,26 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:30-0700\n"
-"PO-Revision-Date: 2021-11-07 19:47+0100\n"
-"Last-Translator: Bernd Dorer <mail@bdorer.de>\n"
+"PO-Revision-Date: 2022-04-01 21:37+0200\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
 msgid ""
 "You are using an older version of Windows. This add-on requires Windows 10 "
 "or later."
 msgstr ""
+"Sie verwenden eine ältere Windows-Version. Diese Erweiterung benötigt "
+"Windows 10 oder neuer."
 
 #. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr ""
+msgstr "Ältere Windows-Version"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -74,11 +76,11 @@ msgstr "{percent} Prozent Akku verbleibend, ungefähr {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "Warnung: Akku schwach."
+msgstr "Warnung: Niedriger Akku-Stand."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "Warnung: Akku sehr schwach."
+msgstr "Warnung: Akku bald leer."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
