@@ -1,8 +1,7 @@
 # Ressourcen-Monitor #
 
-* Autoren: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst
-   und andere NVDA-Entwickler
+* Autoren: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
+  Probst und weitere NVDA-Mitwirkende
 * [Stabile Version herunterladen][1]
 * NVDA compatibility: 2021.3 und neuer
 
