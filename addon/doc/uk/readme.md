@@ -3,7 +3,7 @@
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst та інші учасники спільноти NVDA
 * Завантажити [стабільну версію][1]
-* NVDA compatibility: 2021.3 and later
+* Сумісність: NVDA 2021.3 і новіші
 
 Цей додаток надає інформацію про завантаженість процесора, використання
 пам’яті та інших ресурсів.
@@ -33,8 +33,8 @@
 Цей додаток не замінює диспетчера завдань Windows чи інших програм, які
 надають інформацію про систему.  Також запам’ятайте:
 
-* Resource information cannot be copied to clipboard if running the add-on
-  in secure screens.
+* Інформацію про ресурси тепер неможливо скопіювати в буфер обміну, якщо
+  додаток запущено на захищеному екрані.
 * Використання центрального процесора подано для логічних процесорів, а не
   для фізичних ядер. Це важливо для процесорів, які використовують
   Hyper-Threading, де кількість процесорів вдвічі перевищує кількість ядер
@@ -43,37 +43,38 @@
   затримки з отриманням інформації про використання диска.
 * Цей додаток вимагає мінімум Windows 7 Service Pack 1.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
+ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
 
-## Version 22.03
+## Версія 22.03
 
-Version 22.03 is the last stable version to support Windows 7 Service Pack
-1, 8, and 8.1.
+Версія 22.03  остання стабільна версія, яка підтримує Windows 7 service pack
+1, 8 і 8.1.
 
-* NVDA 2021.3 or later is required.
-* A warning message will be displayed when attempting to install the add-on
-  on Windows 7, 8, and 8.1.
-* Updated psutil dependency to 5.9.0.
+* Необхідна версія NVDA 2021.3 або новіша.
+* Під час спроби встановити додаток на Windows 7, 8 і 8.1 з’являтиметься
+  попереджувальне повідомлення.
+* Залежність psutil оновлено до versії 5.9.0.
 
-## Version 22.01
+## Версія 22.01
 
-* NVDA 2021.2 or later is required.
+* Необхідна версія NVDA 2021.2 або новіша.
 
-## Version 21.10
+## Версія 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* Через зміни в NVDA, які впливають на цей додаток, потрібна версія NVDA
+  2021.1 або новіша.
 
-## Version 21.08
+## Версія 21.08
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* Мінімальні вимоги до версії Windows тепер прив’язані до версій NVDA.
+* Збірки Windows 20348 і 22000 тепер розпізнаються як Windows Server 2022 і
+  Windows 11, відповідно.
+* У збірках Insider Preview тепер не використовуватиметься випуск Windows,
+  наприклад, «Windows 10». Замість цього NVDA промовлятиме «Windows
+  Insider».
+* У 64-розрядних системах, архітектура процесора (x64 чи ARM64)
+  промовлятиметься як частина інформації про версію Windows.
 
 ## Версія 21.04
 
