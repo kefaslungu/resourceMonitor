@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:47-0700\n"
-"PO-Revision-Date: 2022-04-02 14:27+0200\n"
+"PO-Revision-Date: 2022-05-29 10:55+0200\n"
 "Last-Translator: Zvonimir Stanečić <zvonimirek222@webczatnet.pl>\n"
 "Language-Team: killer-of-god <killer@tyflonet.com>\n"
 "Language: pl\n"
@@ -23,7 +23,7 @@ msgid ""
 "or later."
 msgstr ""
 "Używasz starszej wersji systemu Windows. Ten dodatek wymaga systemu Windows "
-"10 lub nowszej."
+"10 lub nowszego."
 
 #. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -32,13 +32,13 @@ msgstr "Stara wersja systemu Windows"
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "brak baterji"
+msgstr "Ten komputer nie ma podłączonej baterii."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent}%, ładowanie"
+msgstr "{percent}%, ładowanie akumulatora."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
@@ -76,11 +76,11 @@ msgstr "{percent}% pozostało około {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "ostrzeżenie. Niski poziom baterji."
+msgstr " Ostrzeżenie: niski poziom naładowania baterii."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "ostrzeżenie. Krytycznie niski poziom baterji."
+msgstr " Ostrzeżenie: krytycznie niski poziom naładowania baterii."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
@@ -100,15 +100,16 @@ msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"odczytuje poziom naładowania baterji w procentach, status ładowania, "
-"pozostały czas pracy na baterii (gdy nie ładuje)  oraz ostrzeżenia w "
-"przypadku krytycznie niskiego poziomu jej naładowania"
+"Przedstawia procent baterii, stan ładowania, pozostały czas (jeśli nie "
+"ładuje) oraz ostrzeżenie, jeśli bateria jest niska lub krytyczna."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
-msgstr "odczytuje używaną, oraz całkowitą przestrzeń na dyskach komputera"
+msgstr ""
+"Przedstawia używane i całkowite miejsce na dyskach statycznych i wymiennych "
+"na tym komputerze."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
@@ -122,7 +123,7 @@ msgstr ""
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "odczytuje przeciętne użycie procesora i obciąrzenie każdego z rdzeni"
+msgstr "Przedstawia średnie obciążenie procesora i obciążenie każdego rdzenia."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
@@ -137,8 +138,8 @@ msgstr "Średnie obciążenie procesora {avgLoad}%, {cores}."
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
-"odczytuje użytą obecnie i dostępną przestrzeń w pamięci fizycznej i "
-"wirtualnej."
+"Przedstawia używaną i całkowitą przestrzeń zarówno dla fizycznej, jak i "
+"wirtualnej pamięci RAM."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format

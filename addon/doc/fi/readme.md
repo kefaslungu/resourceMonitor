@@ -27,7 +27,7 @@ resurssien käytöstä.
 * NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
 
 Jos asennettuna on NVDA 2013.3 tai uudempi, voit muuttaa näitä pikanäppäimiä
-Syötekomennot-valintaikkunasta.
+Näppäinkomennot-valintaikkunasta.
 
 ## Huomautuksia käytöstä
 

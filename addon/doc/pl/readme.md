@@ -3,7 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* NVDA compatibility: 2021.3 and later
+* Zgodność z NVDA: 2021.3 i nowsze
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -12,8 +12,8 @@ także wykorzystaniu innych zasobów.
 
 * NVDA+Shift+E podaje używaną pamięć, średnie obciążenie procesora,
   informacje o baterii jeśli jest dostępna.
-* nvda+shift+1 podaje średnie obciążenie procesora i obciążenie każdego z
-  rdzeni, jeśli używany jest procesor wielordzeniowy.
+* NVDA+Shift+1: przedstawia średnie obciążenie procesora, a jeśli obecne są
+  procesory wielordzeniowe, obciążenie każdego rdzenia.
 * NVDA+Shift+2/5 podaje informacje o użyciu fizycznej i wirtualnej pamięci
   RAM.
 * NVDA+Shift+3 podaje informacje o używanej i całkowitej przestrzeni dysków
@@ -34,8 +34,8 @@ Ten dodatek nie zastępuje Menedżera zadań i innych programów dla Windows,
 dostarczających informacji o systemie. Proszę również zwrócić uwagę na
 następujące kwestie:
 
-* Resource information cannot be copied to clipboard if running the add-on
-  in secure screens.
+* Informacji o zasobach nie można skopiować do schowka, jeśli dodatek jest
+  uruchamiany na bezpiecznych ekranach.
 * Użycie CPU jest podawane dla procesorów logicznych, nie fizycznych
   rdzeni. Jest to zauważalne w przypadku procesorów używających technologii
   Hyper Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
@@ -43,51 +43,52 @@ następujące kwestie:
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Uwaga dotycząca licencji: ten dodatek używa Psutil, licencjonowanego na
+3-klauzulowej licencji BSD, która jest zgodna z GNU General Public License.
 
-## Version 22.03
+## Wersja 22.03
 
-Version 22.03 is the last stable version to support Windows 7 Service Pack
-1, 8, and 8.1.
+Wersja 22.03 jest ostatnią stabilną wersją obsługującą system Windows 7 z
+dodatkiem Service Pack 1, 8 i 8.1.
 
-* NVDA 2021.3 or later is required.
-* A warning message will be displayed when attempting to install the add-on
-  on Windows 7, 8, and 8.1.
-* Updated psutil dependency to 5.9.0.
+* Wymagana jest nvda 2021.3 lub nowsza.
+* Podczas próby zainstalowania dodatku w systemie Windows 7, 8 i 8.1
+  zostanie wyświetlony komunikat ostrzegawczy.
+* Zaktualizowano zależność psutil do wersji 5.9.0.
 
-## Version 22.01
+## Wersja 22.01
 
-* NVDA 2021.2 or later is required.
+* Wymagana jest nvda 2021.2 lub nowsza.
 
-## Version 21.10
+## Wersja 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* NVDA 2021.1 lub nowsza jest wymagana ze względu na zmiany w NVDA, które
+  mają wpływ na ten dodatek.
 
-## Version 21.08
+## Wersja 21.08
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* Minimalne wymagania dotyczące wersji systemu Windows są teraz powiązane z
+  wersjami NVDA.
+* Kompilacje systemu Windows 20348 i 22000 są rozpoznawane odpowiednio jako
+  Windows Server 2022 i Windows 11.
+* W kompilacjach Insider Preview wersja systemu Windows, taka jak "Windows
+  10", nie będzie używana. Zamiast tego NvDA ogłosi "Windows Insider".
+* W systemach 64-bitowych architektura procesora (x64 lub ARM64) zostanie
+  ogłoszona jako część informacji o wersji systemu Windows.
 
-## Version 21.04
+## Wersja 21.04
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* Wymagana jest wersja NVDA 2020.4 lub nowsza.
+* Zaktualizowano zależność psutil do wersji 5.8.0.
+* Po dwukrotnym naciśnięciu poleceń dodatków w celu skopiowania informacji o
+  zasobach do schowka, NVDA ogłosi kopiowane podsumowanie zasobów.
 
-## Version 21.01
+## Wersja 21.01
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* Zaktualizowano zależność psutil do wersji 5.7.3.
+* Komunikat o skróconej wersji systemu Windows.
+* W systemie Windows 8.1 wersja build.revision zostanie ogłoszona jako część
+  komunikatu o wersji systemu Windows, podobnie jak w systemie Windows 10.
 
 ## Wersja 20.09
 
@@ -113,8 +114,8 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 
 ## Wersja 20.01
 
-* Wymagana jest nowsza wersja NVDA 2019.3, z powodu dużego używania składni
-  języka python 3
+* NVDA 2019.3 lub nowsza jest wymagana ze względu na szerokie wykorzystanie
+  Pythona 3.
 
 ## Wersja19.11
 
@@ -126,7 +127,7 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 * Zaktualizowano zależność psutil do wersji 5.6.3.
 * Zmiany wewnętrzne do polecenia baterii.
 
-## wersja 18.12
+## Wersja 18.12
 
 * Zmiany wewnętrzne do wspierania przyszłych wersji NVDA.
 
@@ -174,82 +175,83 @@ Ważne: Wersja 17.09.x jest ostatnią wersją wspierającą Windows XP.
 
 ## Wersja 17.02
 
-* zaktualizowano bibliotekę psutil do wersji 5.0.1.
-* przy sprawdzaniu użycia dysku, NVDA nigdy więcej nie będzie pokazywał
-  dialogu o błędzie na niektórych systemach na których dyski wymienne nie są
-  rospoznane prawidłowo (Tak jak na przykład, kiedy karta SD nie jest
-  włożona doslotu karty pamięci).)
+* Zaktualizowano zależność psutil do wersji 5.0.1.
+* Podczas sprawdzania użycia dysku NVDA nie będzie już wyświetlać okna
+  dialogowego błędu w niektórych systemach, w których nośnik wymienny nie
+  jest prawidłowo rozpoznawany (na przykład gdy karta nie jest włożona do
+  czytnika kart).)
 
 ## Wersja 16.08
 
 Zaczynając od wersji 16.08, wersje dodatku będą wyświetlane jako
 rok.miesiąc.rewizja.
 
-* Różne wydania Windowsa 10 teraz są rozpoznawane, (tak jak 1607, dla
-  kompilacji 14393). 
+* Różne wersje systemu Windows 10 są teraz poprawnie rozpoznawane (takie jak
+  1607 dla kompilacji 14393).
 * Wydania kompilacji windowsa 10 (po instalacji aktualizacji zbiorczych) są
   rozpoznawane poprawnie (tak jak 14393.51).
 * Jeżeli są używane kompilacje Insider Preview, ten stan jest rospoznany.
 
-## zmiany dla wersji 4.5
+## Zmiany w wersji 4.5
 
 * Repozytorium tego dodatku został przeniesiony do GitHuba (można go znaleźć
   pod adresem https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016 jest rozpoznawany poprawnie.
 
-## zmiany dla wersji 4.0
+## Zmiany w wersji 4.0
 
-* zaktualizowano bibliotekę psutil do wersji 2.2.1.
+* Zaktualizowano zależność psutil do wersji 2.2.1.
 * Znacznie ulepszona zawodność przy pobieraniu informacji o użyciu
   procesora.
 * Dodano wsparcie dla rospoznawania Windows 10.
-* W Windowsie 10, numer kompilacji także będzie oznajmiany. 
+* W systemie Windows 10 zostanie również ogłoszony numer kompilacji systemu
+  Windows.
 * Teraz państwo może użyć menedżera dodatków, aby dostać się do pomocy
   dodatku.
 
-## zmiany dla wersji 3.1
+## Zmiany dla wersji 3.1
 
 * Monitor zasobów oficjalnie obsługuje Windows 8.1.
 * Zaktualizowano tłumaczenia.
 
-## zmiany dla wersji 3.0
+## Zmiany dla wersji 3.0
 
-* zaktualizowano bibliotekę psutil do wersji 1.2.1.
+* Zaktualizowano zależność psutil do wersji 1.2.1.
 * NVDA+Shift+6 odczytuje wersję i servicepack systemu Windows, oraz bity
   procesora (32 lub 64 bity).
 * Możliwość zmiany klawiszy skrótu dodatku (NVDA 2013.3 lub nowsza).
 * Możliwość skopiowania do schowka pojedynczych informacji o zasobach, przez
   naciśnięcie dwukrotnie klawisza polecenia wypowiadającego daną informację.
 
-## zmiany dla wersji 2.4
+## Zmiany w wersji 2.4
 
 * Nowe języki: chiński (uproszczony), ukraiński.
 * Zaktualizowano tłumaczenia.
 
-## zmiany dla wersji 2.3
+## Zmiany dla 2.3
 
 * Dodano tłumaczenie bułgarskie.
 
-## zmiany dla wersji 2.2
+## Zmiany w wersji 2.2
 
 * Dodano następujące języki: arabski, aragoński, chorwacki, holenderski,
   fiński, francuski, galicyjski, niemiecki, węgierski, włoski, japoński,
   koreański, nepalski, polski, portugalski(brazylijski), rosyjski, słowacki,
   słoweński, hiszpański, tamilski i turecki.
 
-## zmiany dla wersji 2.1
+## Zmiany dla wersji 2.1
 
-* zaktualizowano psutil do wersji 0.6.1.
-* poprawiono opóźnienie przy uzyskiwaniu informacji o dyskach
-* porządki w kodzie.
+* Zaktualizowano zależność psutil do wersji 0.6.1.
+* Naprawiono duże opóźnienie podczas uzyskiwania informacji o dyskach.
+* Czyszczenie kodu.
 
-## zmiany dla wersji 2.0
+## Zmiany dla wersji 2.0
 
-* wsparcie wielojęzyczności
+* dodano wsparcie tłumaczeniowe i komentarze do tłumaczeń.
 
-## zmiany dla wersji 1.0
+## Zmiany dla wersji 1.0
 
-* wydanie wstępne
+* Wstępne wydanie
 
 [[!tag dev stable]]
 
