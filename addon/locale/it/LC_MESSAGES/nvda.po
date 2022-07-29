@@ -8,24 +8,26 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:48-0700\n"
-"PO-Revision-Date: 2021-07-09 12:49-0700\n"
-"Last-Translator: Fabrizio Marini <marini.carlo@fastwebnet.it>\n"
+"PO-Revision-Date: 2022-07-24 14:30+0100\n"
+"Last-Translator: Chris <llajta2012@gmail.com>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
 msgid ""
 "You are using an older version of Windows. This add-on requires Windows 10 "
 "or later."
 msgstr ""
+"Stai utilizzando una versione precedente di Windows. Questo componente "
+"aggiuntivo richiede Windows 10 o versioni successive."
 
 #. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr ""
+msgstr "Versione di Windows non aggiornata"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
