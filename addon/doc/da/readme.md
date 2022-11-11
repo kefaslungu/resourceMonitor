@@ -3,7 +3,7 @@
 * Forfattere: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst og andre NVDA-bidragydere
 * Download [stable version][1]
-* NVDA compatibility: 2021.3 and later
+* NVDA-kompatibilitet: 2021.3 og nyere
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
@@ -33,8 +33,8 @@ genvejstaster under NVDA-menuen/Indstillinger/Håndter kommandoer.
 Denne tilføjelse erstatter ikke Jobliste og andre
 systeminformationsprogrammer til Windows. Bemærk også følgende:
 
-* Resource information cannot be copied to clipboard if running the add-on
-  in secure screens.
+* Ressourceoplysninger kan ikke kopieres til udklipsholderen, hvis
+  tilføjelsen kører på sikre skærme.
 * CPU-brug bliver angivet for logiske processorer, ikke fysiske
   kerner. Dette har betydning for processorer, som bruger
   hypertrådningsteknologi. Her er antallet af CPU'er er det dobbelte af
@@ -43,37 +43,37 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
 * Denne tilføjelse kræver Windows 7 Service Pack 1 eller nyere.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
+3-klausul BSD-licens, som er kompatibel med GNU General Public License.
 
 ## Version 22.03
 
-Version 22.03 is the last stable version to support Windows 7 Service Pack
-1, 8, and 8.1.
+Version 22.03 er den sidste stabile version, der understøtter Windows 7
+Service Pack 1, 8 og 8.1.
 
-* NVDA 2021.3 or later is required.
-* A warning message will be displayed when attempting to install the add-on
-  on Windows 7, 8, and 8.1.
-* Updated psutil dependency to 5.9.0.
+* NVDA 2021.3 eller nyere er påkrævet.
+* En advarselsmeddelelse vil blive vist, når du forsøger at installere
+  tilføjelsen på Windows 7, 8 og 8.1.
+* Opdateret psutil-dependency til 5.9.0.
 
 ## Version 22.01
 
-* NVDA 2021.2 or later is required.
+* NVDA 2021.2 eller nyere er påkrævet.
 
 ## Version 21.10
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+* NVDA 2021.1 eller nyere er påkrævet på grund af ændringer til NVDA, der
+  påvirker denne tilføjelse.
 
 ## Version 21.08
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* Minimumskravet til Windows-udgivelse er nu knyttet til NVDA-udgivelser.
+* Windows builds 20348 og 22000 genkendes som henholdsvis Windows Server
+  2022 og Windows 11.
+* I Insider Preview-builds vil Windows-udgivelser såsom "Windows 10" ikke
+  blive brugt. I stedet vil NvDA annoncere "Windows Insider".
+* På 64-bit-systemer vil processorarkitektur (x64 eller ARM64) blive
+  annonceret som en del af Windows-versionsoplysningerne.
 
 ## Version 21.04
 
