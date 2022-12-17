@@ -184,7 +184,7 @@ def getWinVer():
 	# Obtain winversion using NvDA 2021.1 API, later extended to use 2021.2 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	currentWinVer = winVersion.getWinVer()
-	arch64 = platform.machine()
+	arch = platform.machine()
 	isClient = currentWinVer.productType == "workstation"
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
 	# NVDA uses client release names for "releaseName" attribute.
@@ -205,13 +205,13 @@ def getWinVer():
 			winverName = "Windows Insider" if isClient else "Windows Server Insider"
 		elif not isInsiderPreview and not isClient:
 			winverName = f"Windows Server {releaseId}"
-	if arch64 in ("AMD64", "ARM64"):
-		x64 = "x64" if arch64 == "AMD64" else arch64
+	if arch in ("AMD64", "ARM64"):
+		x64 = "x64" if arch == "AMD64" else arch
 	else:
 		x64 = "32-bit"
 	# Announce build.revision.
 	# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
-	if arch64:
+	if arch in ("AMD64", "ARM64"):
 		currentVersion = winreg.OpenKey(
 			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
 			access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
