@@ -8,6 +8,7 @@ import winreg
 from datetime import datetime
 import os
 import functools
+import platform
 import globalPluginHandler
 import ui
 import api
@@ -183,7 +184,7 @@ def getWinVer():
 	# Obtain winversion using NvDA 2021.1 API, later extended to use 2021.2 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	currentWinVer = winVersion.getWinVer()
-	arch64 = os.environ.get("PROCESSOR_ARCHITEW6432")
+	arch64 = platform.machine()
 	isClient = currentWinVer.productType == "workstation"
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
 	# NVDA uses client release names for "releaseName" attribute.
