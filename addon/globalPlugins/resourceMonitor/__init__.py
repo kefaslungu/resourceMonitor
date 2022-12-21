@@ -295,10 +295,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Start counting at 1, and even then, all items will be visited.
 			for core, cpuLoad in enumerate(perCpuLoad, start=1)
 		]
-		# Translators: Shows average load of the processor and the load for each core.
-		info = _("Average CPU load {avgLoad}%, {cores}.").format(
-			avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad)
-		)
+		# Only display average CPU load on single-core systems.
+		if psutil.cpu_count() == 1:
+			# Translators: Shows average load of the processor on single-core systems.
+			info = _("Average CPU load {avgLoad}%.").format(avgLoad=tryTrunk(averageLoad))
+		else:
+			# Translators: Shows average load of the processor and the load for each core on multi-core systems.
+			info = _("Average CPU load {avgLoad}%, {cores}.").format(
+				avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad)
+			)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
