@@ -131,7 +131,12 @@ msgstr "Présente la charge moyenne du processeur et la charge de chaque coeur."
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Coeur {coreNumber}: {corePercent}%"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Charge moyenne du processeur {avgLoad}%, {cores}."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Charge moyenne du processeur {avgLoad}%, {cores}."

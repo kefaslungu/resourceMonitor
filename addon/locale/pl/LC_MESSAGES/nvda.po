@@ -130,7 +130,12 @@ msgstr "Przedstawia średnie obciążenie procesora i obciążenie każdego rdze
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Rdzeń {coreNumber}: {corePercent}%"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Średnie obciążenie procesora {avgLoad}%, {cores}."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Średnie obciążenie procesora {avgLoad}%, {cores}."

@@ -3,7 +3,7 @@
 * Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst a ďalší.
 * Stiahnuť [stabilnú verziu][1]
-* NVDA compatibility: 2021.3 and later
+* NVDA compatibility: 2022.3 and later
 
 Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch.
 
@@ -18,12 +18,11 @@ Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch
 * NVDA+Shift+4: oznámy stav batérie v percentách, stav napájania,
   zostávajúci čas (ak sa vybíja) a prípadne upozornenie ak je batéria vybytá
   alebo v kritickom stave.
-* NVDA+Shift+6: Oznámi architektúru procesora (32 alebo 64 bit), verziu
-  Windows a Service packu.
+* NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.
 * Nvda+shift+7: Oznámi čas behu systému od posledného reštartu.
 
-Ak používate NVDA od verzie 2013.3, môžete si skratky upraviť v dialógu
-klávesové skratky.
+You can change these shortcut keys via input gestures dialog.
 
 ## Všimnite si
 
@@ -37,10 +36,23 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
   kde počet procesorov je dvojnásobný, ako počet jadier.
 * Ak práve kopírujete veľké súbory, zistenie informácie o využití disku môže
   chvíľu trvať.
-* Tento doplnok funguje na systémoch Windows od verzie 7 Servicepack 1.
+* When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* This add-on requires Windows 10 or later.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.
+* Updated psutil dependency to 5.9.4.
+* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.
+* On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.
 
 ## Version 22.03
 

@@ -3,7 +3,7 @@
 * Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
-* Compatibilidad con NVDA: de 2021.3 en adelante
+* Compatibilidad con NVDA: de 2022.3 en adelante
 
 Este plugin nos da información acerca de la carga de la CPU, de la
 utilización de la memoria y de otra información de uso de recursos.
@@ -21,12 +21,11 @@ utilización de la memoria y de otra información de uso de recursos.
 * NVDA+Shift+4: Presenta el porcentaje de la batería, el estado de la carga,
   el tiempo restante (si no se está cargando), y una advertencia si la
   batería está baja o crítica.
-* NVDA+Shift+6: Presenta la Arquitectura 32/64-bit de la CPU y la versión de
-  Windows y el número del Service Pack.
+* NVDA+Shift+6: Presenta la Arquitectura de la CPU y la versión de Windows y
+  el número del Service Pack.
 * NVDA+Shift+7: presenta el tiempo de actividad del sistema.
 
-Si tienes NVDA 2013.3 o una versión posterior instalada, puedes cambiar
-estas teclas de acceso directo desde el diálogo Gestos de entrada.
+Puedes cambiar estos atajos desde el diálogo Gestos de entrada.
 
 ## Notas de uso
 
@@ -41,10 +40,23 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   CPU.
 * Si hay una actividad pesada de disco tal como el copiado de ficheros
   grandes, podría haber retrasos al obtener información de uso de disco.
-* Este complemento necesita Windows 7 Service Pack 1 o posterior.
+* Al anunciar la información de arquitectura del procesador, "x86" y "AMD64"
+  se refieren a procesadores (Intel y AMD) de 32 y 64 bits, respectivamente.
+* Este complemento necesita Windows 10 o posterior.
 
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
+
+## Versión 23.01
+
+* Se requiere NVDA 2022.3 o posterior.
+* Se requiere Windows 10 o posterior, ya que Microsoft no soporta Windows 7,
+  8 y 8.1 a partir de enero de 2023.
+* Actualizada la dependencia psutil a 5.9.4.
+* NVDA anunciará la arquitectura real del procesador (x86 / AMD64 / ARM64)
+  como parte de la información de versión de Windows.
+* En sistemas de un solo núcleo, NVDA ya no anunciará la carga del núcleo de
+  CPU, ya que coincide con la carga media de la CPU.
 
 ## Versión 22.03
 

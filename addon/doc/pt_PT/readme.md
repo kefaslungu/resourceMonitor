@@ -3,7 +3,7 @@
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * Baixar [versão estável][1]
-* NVDA compatibility: 2021.3 and later
+* NVDA compatibility: 2022.3 and later
 
 Este extra fornece informações sobre carga da CPU, uso de memória e outras
 informações de uso de recursos.
@@ -21,12 +21,11 @@ informações de uso de recursos.
 * NVDA+Shift+4 Apresenta a percentagem da bateria, o estado da carga, o
   tempo restante (se não estiver a carregar) e um aviso se a bateria estiver
   fraca ou crítica.
-* NVDA+Shift+6 apresenta a arquitectura da CPU 32/64 bits e a versão do
-  Windows e os números do service pack.
+* NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.
 * NVDA+Shift+7 apresenta o tempo de actividade do sistema.
 
-If you have NVDA 2013.3 or later installed, you can change these shortcut
-keys via input gestures dialog.
+You can change these shortcut keys via input gestures dialog.
 
 ## Notas de utilização:
 
@@ -40,10 +39,23 @@ informações do sistema para o Windows. Observe também o seguinte:
   onde o número de CPU é o dobro do número de núcleos da CPU.
 * Se houver uma grande actividade do disco, como copiar ficheiros grandes,
   pode haver atrasos ao obter informações de uso do disco.
-* Este extra requer o Service Pack 1 ou posterior do Windows 7.
+* When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* This add-on requires Windows 10 or later.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.
+* Updated psutil dependency to 5.9.4.
+* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.
+* On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.
 
 ## Version 22.03
 

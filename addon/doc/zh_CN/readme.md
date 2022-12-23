@@ -3,7 +3,7 @@
 * 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
   Probst和其他NVDA贡献者
 * 下载 [稳定版][1]
-* NVDA 兼容性：2021.3 及更高版本
+* NVDA compatibility: 2022.3 and later
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
@@ -14,10 +14,11 @@
 * NVDA+Shift+2/5： 读出物理内存和虚拟内存的容量和使用情况。
 * NVDA+Shift+3： 读出此计算机上所有驱动器的文件系统和空间使用情况。
 * NVDA+Shift+4： 读出电量、充电状态、剩余时间（如果没有充电）且在电量不足时发出警告。
-* NVDA+Shift+6： 读出当前 Windows 的版本信息。
+* NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.
 * NVDA+Shift+7： 读出当前系统的运行时间。
 
-如果您安装了 NvDA 2013.3 或更高版本，您可以通过输入手势对话框更改这些快捷键。
+You can change these shortcut keys via input gestures dialog.
 
 ## 使用说明
 
@@ -26,9 +27,22 @@
 * 如果在安全屏幕中使用该插件，则无法将资源信息复制到剪贴板。
 * 为逻辑处理器而不是物理内核提供CPU使用率。对于使用超线程技术的处理器来说，这是显而易见的，其中CPU的数量是CPU核心数量的两倍。
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
-* 此插件需要Windows 7 Service Pack 1或更高版本。
+* When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* This add-on requires Windows 10 or later.
 
 关于许可证的说明：此附加组件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
+
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.
+* Updated psutil dependency to 5.9.4.
+* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.
+* On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.
 
 ## 版本 22.03
 

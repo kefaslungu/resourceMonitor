@@ -127,7 +127,12 @@ msgstr "Oznámi priemerné vyťaženie procesora a vyťaženie jednotlivých jad
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "jadro {coreNumber}: {corePercent}%. "
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Priemerné vyťaženie CPU {avgLoad}%, {cores}"
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Priemerné vyťaženie CPU {avgLoad}%, {cores}"

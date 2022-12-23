@@ -3,7 +3,7 @@
 * Yazarlar: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst ve diğer NVDA katkıda bulunanlar
 * [Kararlı sürümü][1] indir
-* NVDA compatibility: 2021.3 and later
+* NVDA compatibility: 2022.3 and later
 
 Bu eklenti, CPU yükü, bellek kullanımı ve diğer kaynak kullanımları hakkında
 bilgi verir.
@@ -20,12 +20,11 @@ bilgi verir.
   alanını sunar.
 * NVDA+Shift+4: pil yüzdesini, şarj durumunu, kalan süreyi (şarjda değilse)
   ve pil zayıf veya kritikse bir uyarı gösterir.
-* NVDA+Shift+6: CPU Mimarisi 32/64-bit ve Windows sürümünü ve hizmet paketi
-  numaralarını sunar.
+* NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.
 * NVDA+Shift+7: sistemin çalışma süresini gösterir.
 
-NVDA 2013.3 veya sonraki bir sürümünü yüklediyseniz, bu kısayol tuşlarını
-girdi hareketleri iletişim kutusundan değiştirebilirsiniz.
+You can change these shortcut keys via input gestures dialog.
 
 ## Kullanım notları
 
@@ -39,10 +38,23 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
   Hyper-Threading kullanan işlemciler için fark edilebilir.
 * Büyük dosyaların kopyalanması gibi yoğun disk etkinliği varsa, disk
   kullanım bilgilerinin alınmasında gecikmeler olabilir.
-* Bu eklenti, Windows 7 Service Pack 1 veya sonraki bir sürümünü gerektirir.
+* When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* This add-on requires Windows 10 or later.
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
+
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.
+* Updated psutil dependency to 5.9.4.
+* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.
+* On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.
 
 ## Version 22.03
 

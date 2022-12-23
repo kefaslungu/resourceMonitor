@@ -3,7 +3,7 @@
 * Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
-* Yhteensopivuus: NVDA 2021.3 ja uudemmat
+* Yhteensopivuus: NVDA 2022.3 ja uudemmat
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -22,12 +22,11 @@ resurssien käytöstä.
 * NVDA+Vaihto+4: Lukee akun varauksen prosentteina, latauksen tilan,
   jäljellä olevan ajan (jos ei latauksessa) sekä varoituksen, mikäli
   varauksen taso on alhainen tai kriittinen.
-* NVDA+Vaihto+6: Ilmoittaa suorittimen arkkitehtuurin (32- tai 64-bittinen)
-  sekä Windowsin ja Service Packin version.
+* NVDA+Vaihto+6: Ilmoittaa suorittimen arkkitehtuurin sekä Windowsin ja
+  Service Packin version.
 * NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
 
-Jos asennettuna on NVDA 2013.3 tai uudempi, voit muuttaa näitä pikanäppäimiä
-Näppäinkomennot-valintaikkunasta.
+Voit muuttaa näitä pikanäppäimiä Näppäinkomennot-valintaikkunasta.
 
 ## Huomautuksia käytöstä
 
@@ -41,11 +40,25 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
-* Tämä lisäosa edellyttää Windows 7 Service Pack 1:tä tai uudempaa.
+* Suorittimen arkkitehtuuritietoja ilmoitettaessa "x86" ja "AMD64"
+  viittaavat 32- ja 64-bittisiin (x64) Intel- ja AMD-suorittimiin.
+* Tämä lisäosa edellyttää Windows 10:tä tai uudempaa.
 
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
+
+## Versio 23.01
+
+* Edellyttää NVDA 2022.3:ea tai uudempaa.
+* Windows 10 tai uudempi vaaditaan, koska Microsoft ei enää tue Windows
+  7:ää, 8:aa tai 8.1:tä tammikuusta 2023 alkaen.
+* Päivitetty psutil-riippuvuus versioksi 5.9.4.
+* Suorittimen arkkitehtuuri (x86/AMD64/ARM64) ilmoitetaan osana Windowsin
+  versiotietoja.
+* NVDA ei enää ilmoita suoritinytimen kuormitusta yhden ytimen
+  järjestelmissä, koska keskimääräinen suorittimen kuormitus on sama kuin
+  ytimen kuormitus.
 
 ## Versio 22.03
 

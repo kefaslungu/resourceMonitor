@@ -128,7 +128,12 @@ msgstr "Предоставляет среднюю загрузку процес�
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Ядро {coreNumber}: {corePercent}%"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Средняя загрузка процессора {avgLoad}%, {cores}."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Средняя загрузка процессора {avgLoad}%, {cores}."

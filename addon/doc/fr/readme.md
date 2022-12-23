@@ -3,7 +3,7 @@
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst et d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
-* Compatibilité NVDA : 2021.3 et versions ultérieures
+* NVDA compatibility: 2022.3 and later
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -22,13 +22,12 @@ ressources.
 * NVDA+Maj+4: Annonce le pourcentage de charge de la batterie, l'état de
   charge si elle est en charge, le temps restant (sauf si en charge), et une
   alerte si le niveau de la batterie est faible ou critique.
-* NVDA+Maj+6: Annonce l'architecture du processeur 32/64-bit et les numéros
-  de version de Windows et du service pack.
+* NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.
 * NVDA+Maj+7: Annonce le temps de fonctionnement du système depuis sa mise
   en route.
 
-Si vous avez NVDA 2013.3 ou version ultérieure installé, vous pouvez
-modifier ces touches de raccourci dans le dialogue Gestes de commandes.
+You can change these shortcut keys via input gestures dialog.
 
 ## Remarques sur l'utilisation
 
@@ -44,10 +43,23 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
-* Cette extension requiert Windows 7 Service Pack 1 ou au-delà.
+* When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* This add-on requires Windows 10 or later.
 
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
+
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.
+* Updated psutil dependency to 5.9.4.
+* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.
+* On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.
 
 ## Version 22.03
 

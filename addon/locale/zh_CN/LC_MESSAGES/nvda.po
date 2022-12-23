@@ -124,7 +124,12 @@ msgstr "读出每个 CPU 核心的负载和平均负载。"
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心{coreNumber}: 百分之 {corePercent}"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "平均 CPU 负载： 百分之 {avgLoad}, {cores}"
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "平均 CPU 负载： 百分之 {avgLoad}, {cores}"

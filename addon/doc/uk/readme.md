@@ -3,7 +3,7 @@
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst та інші учасники спільноти NVDA
 * Завантажити [стабільну версію][1]
-* Сумісність: NVDA 2021.3 і новіші
+* NVDA compatibility: 2022.3 and later
 
 Цей додаток надає інформацію про завантаженість процесора, використання
 пам’яті та інших ресурсів.
@@ -21,12 +21,11 @@
 * NVDA+Shift+4: Повідомляє про відсоток акумулятора, статус заряджання, час,
   що залишився (якщо акумулятор не заряджається) і попередження про низький
   та критично низький заряд акумулятора.
-* NVDA+Shift+6: називає 32/64-розрядність архітектури процесора, версію
-  Windows та номер пакета оновлень — service pack.
+* NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.
 * NVDA+Shift+7: повідомляє час роботи системи від моменту її завантаження.
 
-Якщо у вас встановлено NVDA 2013.3 чи новішу, то ці комбінації клавіш можна
-змінити у діалозі «Жести вводу».
+You can change these shortcut keys via input gestures dialog.
 
 ## Примітки про користування
 
@@ -41,10 +40,23 @@
   процесора.
 * При інтенсивних діях на диску, таких як копіювання великих файлів, можливі
   затримки з отриманням інформації про використання диска.
-* Цей додаток вимагає мінімум Windows 7 Service Pack 1.
+* When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* This add-on requires Windows 10 or later.
 
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
+
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.
+* Updated psutil dependency to 5.9.4.
+* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.
+* On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.
 
 ## Версія 22.03
 

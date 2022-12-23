@@ -3,7 +3,7 @@
 * Autorzy: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst i inni współtwórcy
 * Pobierz [wersja stabilna][1]
-* Zgodność z NVDA: 2021.3 i nowsze
+* NVDA compatibility: 2022.3 and later
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -21,12 +21,11 @@ także wykorzystaniu innych zasobów.
 * NVDA+Shift+4 raportuje procent baterii, status ładowania, pozostały czas
   (jeśli nie ładuje), i ostrzeżenie o niskim lub krytycznym poziomie
   baterii.
-* NVDA+Shift+6 odczytuje wersję i pakiet serwisowy systemu Windows, oraz
-  bity procesora (32 lub 64 bity).
+* NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.
 * NVDA+Shift+7 Pokazuje czas pracy systemu.
 
-Jeśli posiadasz NVDA 2013.3 lub nowszą, możesz mienić te skróty klawiszowe w
-dialogu zdarzeń wejścia.
+You can change these shortcut keys via input gestures dialog.
 
 ## Uwagi o użytkowaniu
 
@@ -41,10 +40,23 @@ następujące kwestie:
   Hyper Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
-* Ten dodatek wygląda Windows 7 Service Pack 1 lub nowszy.
+* When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* This add-on requires Windows 10 or later.
 
 Uwaga dotycząca licencji: ten dodatek używa Psutil, licencjonowanego na
 3-klauzulowej licencji BSD, która jest zgodna z GNU General Public License.
+
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.
+* Updated psutil dependency to 5.9.4.
+* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.
+* On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.
 
 ## Wersja 22.03
 

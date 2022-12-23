@@ -128,7 +128,12 @@ msgstr "Thông báo tình trạng trung bình của bộ xử lý và của mỗ
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Nhân {coreNumber}: {corePercent}%"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Tải CPU trung bình{avgLoad}%, {cores}."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Tải CPU trung bình{avgLoad}%, {cores}."

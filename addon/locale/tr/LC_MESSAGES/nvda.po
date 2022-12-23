@@ -128,7 +128,12 @@ msgstr "Ortalama işlemci yükü ve çekirdek kullanımı bilgisini verir."
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Çekirdek {coreNumber}: yüzde {corePercent}"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Ortalama CPU yükü %{avgLoad}, {cores}."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Ortalama CPU yükü %{avgLoad}, {cores}."

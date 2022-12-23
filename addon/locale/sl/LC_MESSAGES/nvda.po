@@ -37,11 +37,13 @@ msgstr "Ta računalnik nima priključenega akumulatorja."
 # po testu revizija
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "Akumulator je napoljen do {percent}%."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
 "{percent}% akumulatorja je še na voljo, toda čas preostale rabe ni znan."
@@ -53,6 +55,7 @@ msgstr "1 ura"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#, python-brace-format
 msgid "{0} hours"
 msgstr "{0} ur"
 
@@ -63,11 +66,13 @@ msgstr "1 minute"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} minut"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Preostane še {percent}% za približno  {time}."
 
@@ -81,6 +86,7 @@ msgstr " Opozorilo: kritično nizko stanje akumulatorja."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
 
@@ -111,6 +117,7 @@ msgstr ""
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -123,10 +130,17 @@ msgstr ""
 "Predstavi povprečno obremenitev procesorja in obremenitev vsakega jedra."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Jedro {coreNumber}: {corePercent}%"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Povprečna obremenitev CPE {avgLoad}%, {cores}."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Povprečna obremenitev CPE {avgLoad}%, {cores}."
 
@@ -137,11 +151,13 @@ msgstr ""
 "za fizični kot navidezni pomnilnik."
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "Fizični: {physicalUsed} od {physicalTotal} v uporabi  ({physicalPercent}%)."
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Navidezni: {virtualUsed} od {virtualTotal} v uporabi ({virtualPercent}%)."
@@ -155,6 +171,7 @@ msgid "1 day"
 msgstr "1 dan"
 
 #. Translators: system uptime in days.
+#, python-brace-format
 msgid "{0} days"
 msgstr "{0} dni"
 
@@ -163,6 +180,7 @@ msgid "1 second"
 msgstr "1 sekunda"
 
 #. Translators: system uptime in seconds.
+#, python-brace-format
 msgid "{0} seconds"
 msgstr "{0} sekund"
 
@@ -181,6 +199,7 @@ msgstr ""
 "Predstavi pomnilnik v rabi, povprečno obremenitev procesorja in informacije "
 "o akumulatorju, če so na voljo."
 
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% pomnilnikaa v uporabi, CPE na {cpuPercent}% zasedenosti."
 

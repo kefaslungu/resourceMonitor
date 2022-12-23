@@ -132,7 +132,12 @@ msgstr "Ilmoittaa suorittimen ja ydinten keskimääräisen kuormituksen."
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Ydin {coreNumber}: {corePercent} %"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, fuzzy, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "Suorittimen keskimääräinen kuormitus {avgLoad} %, {cores}."
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Suorittimen keskimääräinen kuormitus {avgLoad} %, {cores}."
