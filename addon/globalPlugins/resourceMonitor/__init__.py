@@ -197,7 +197,7 @@ def getWinVer():
 	# On Windows 10 and later, NVDA uses a three-part string (Windows name releaseId).
 	# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
 	# Skip all this if server release name was already obtained.
-	if currentWinVer >= winVersion.WIN10 and not serverReleaseNameRecorded:
+	if not serverReleaseNameRecorded:
 		releaseId = winverName.rpartition(" ")[-1]
 		# From 2020, Windows Insider Preview (client and server) release name includes "Dev" suffix.
 		isInsiderPreview = releaseId == "Dev"
