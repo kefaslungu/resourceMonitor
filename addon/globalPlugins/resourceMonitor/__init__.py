@@ -183,8 +183,8 @@ def getWinVer():
 	# Obtain winversion using NvDA 2021.1 API, later extended to use 2021.2 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	currentWinVer = winVersion.getWinVer()
-	# Announce actual machine name (x86/32-bit, AMD64, ARM64).
-	arch = platform.machine()
+	# Announce actual machine architecture (x86/32-bit, AMD64, ARM64).
+	arch = getattr(currentWinVer, "processorArchitecture", platform.machine())
 	isClient = currentWinVer.productType == "workstation"
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
 	# NVDA uses client release names for "releaseName" attribute.
