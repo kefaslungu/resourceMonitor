@@ -2,7 +2,7 @@
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin Probst and other NVDA contributors
 * Download [stable version][1]
-* NVDA compatibility: 2021.3 and later
+* NVDA compatibility: 2022.3 and later
 
 Note: I (Joseph Lee) am looking for people who will maintain Resource Monitor add-on from April 1, 2022 onwards.
 
