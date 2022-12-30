@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:33-0700\n"
-"PO-Revision-Date: 2022-04-02 10:30+0200\n"
+"PO-Revision-Date: 2022-12-24 09:18+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -133,9 +133,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Ydin {coreNumber}: {corePercent} %"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Suorittimen keskimääräinen kuormitus {avgLoad} %, {cores}."
+msgstr "Suorittimen keskimääräinen kuormitus {avgLoad} %."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format

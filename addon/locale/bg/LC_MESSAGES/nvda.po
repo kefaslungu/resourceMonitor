@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:28-0700\n"
-"PO-Revision-Date: 2022-04-01 21:49+0300\n"
+"PO-Revision-Date: 2022-12-23 20:19+0200\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
 msgid ""
@@ -138,9 +138,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Ядро {coreNumber}: {corePercent} процента"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Средно натоварване на централния процесор {avgLoad} процента, {cores}."
+msgstr "Средно натоварване на централния процесор: {avgLoad} процента."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format

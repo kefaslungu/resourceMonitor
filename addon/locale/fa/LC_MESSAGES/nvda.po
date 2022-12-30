@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:32-0700\n"
-"PO-Revision-Date: 2022-05-24 16:36+0330\n"
+"PO-Revision-Date: 2022-12-26 21:43+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
@@ -131,9 +131,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "هسته‌ی {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "میانگینِ بارِ سیپی‌یو {avgLoad}%, {cores} است."
+msgstr "میانگینِ بارِ سیپی‌یو {avgLoad}% است."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
