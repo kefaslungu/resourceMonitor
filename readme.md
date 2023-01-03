@@ -2,7 +2,7 @@
 
 * Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin Probst and other NVDA contributors
 * Download [stable version][1]
-* NVDA compatibility: 2022.3 and later
+* NVDA compatibility: 2022.4 and later
 
 Note: I (Joseph Lee) am looking for people who will maintain Resource Monitor add-on from April 1, 2022 onwards.
 
@@ -31,6 +31,10 @@ This add-on does not replace task manager and other system information programs 
 * This add-on requires Windows 10 or later.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
+
+## Version 23.02
+
+* NVDA 2022.4 or later is required.
 
 ## Version 23.01
 
