@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.04\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:41-0700\n"
-"PO-Revision-Date: 2022-04-03 10:49+0800\n"
+"PO-Revision-Date: 2023-01-06 12:18+0800\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -17,15 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.3\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
-msgstr "您正在使用较旧版本的 Windows。此插件需要 Windows 10 或更高版本。"
+#. Resource Monitor requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
+msgstr ""
 
-#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr "不受支持的 Windows 版本"
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+msgstr ""
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -125,9 +130,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心{coreNumber}: 百分之 {corePercent}"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "平均 CPU 负载： 百分之 {avgLoad}, {cores}"
+msgstr "平均 CPU 负载： 百分之 {avgLoad}"
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
@@ -198,6 +203,14 @@ msgid ""
 "usage status and more."
 msgstr ""
 "一个方便的资源监控器，可以报告 CPU 负载、内存使用、电池和磁盘使用情况等等。"
+
+#~ msgid ""
+#~ "You are using an older version of Windows. This add-on requires Windows "
+#~ "10 or later."
+#~ msgstr "您正在使用较旧版本的 Windows。此插件需要 Windows 10 或更高版本。"
+
+#~ msgid "Old Windows version"
+#~ msgstr "不受支持的 Windows 版本"
 
 #~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
 #~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"

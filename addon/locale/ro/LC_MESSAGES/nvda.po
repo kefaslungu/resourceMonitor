@@ -8,23 +8,28 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:46-0700\n"
-"PO-Revision-Date: 2021-07-09 12:52-0700\n"
+"PO-Revision-Date: 2023-01-03 10:53+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 3.2.2\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
+#. Resource Monitor requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
 msgstr ""
 
-#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
-msgid "Old Windows version"
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
 
 #. Translators: Message reported when there is no battery on the system,
@@ -132,9 +137,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Nucleu {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Încărcarea medie Unității centrale de prelucrare {avgLoad}%, {cores}."
+msgstr "Media de încărcare a procesorului {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
@@ -208,6 +213,16 @@ msgid ""
 msgstr ""
 "Un monitor de resurse folositor pentru raportarea încărcării CPU, ratei de "
 "folosire a memoriei, baterie, stare folosire disk și altele."
+
+#~ msgid ""
+#~ "You are using an older version of Windows. This add-on requires Windows "
+#~ "10 or later."
+#~ msgstr ""
+#~ "Utilizați o versiune mai veche de Windows. Acest supliment necesită "
+#~ "Windows 10 sau versiuni mai noi ale acestui sistem de operare."
+
+#~ msgid "Old Windows version"
+#~ msgstr "Versiune veche de Windows"
 
 #~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
 #~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"

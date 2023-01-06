@@ -17,17 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
+#. Resource Monitor requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
 msgstr ""
-"Vous utilisez une ancienne version de Windows. Cette extension nécessite "
-"Windows 10 ou une version ultérieure."
 
-#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr "Ancienne version de Windows"
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+msgstr ""
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -210,6 +213,16 @@ msgstr ""
 "Un superviseur de resources clés en mains pour rapporter la charge moyenne "
 "du processeur, l'utilisation de la mémoire, l'état d'utilisation des disques "
 "et de la batterie ainsi que d'autres informations."
+
+#~ msgid ""
+#~ "You are using an older version of Windows. This add-on requires Windows "
+#~ "10 or later."
+#~ msgstr ""
+#~ "Vous utilisez une ancienne version de Windows. Cette extension nécessite "
+#~ "Windows 10 ou une version ultérieure."
+
+#~ msgid "Old Windows version"
+#~ msgstr "Ancienne version de Windows"
 
 #~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
 #~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
