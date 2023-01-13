@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:34-0700\n"
-"PO-Revision-Date: 2022-06-10 09:44+0200\n"
-"Last-Translator: Michel Such <michel.such@free.fr>\n"
+"PO-Revision-Date: 2023-01-08 08:53+0100\n"
+"Last-Translator: Michel Such <michelsuch93@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "Version de Windows non prise en charge"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -31,6 +31,10 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Vous utilisez {releaseName} ({build}), une version de Windows non prise en "
+"charge par cette extension.\n"
+"Cette extension nécessite {supportedReleaseName} ({supportedBuild}) ou "
+"version ultérieure."
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -135,9 +139,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Coeur {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Charge moyenne du processeur {avgLoad}%, {cores}."
+msgstr "Charge moyenne du processeur {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
@@ -213,16 +217,3 @@ msgstr ""
 "Un superviseur de resources clés en mains pour rapporter la charge moyenne "
 "du processeur, l'utilisation de la mémoire, l'état d'utilisation des disques "
 "et de la batterie ainsi que d'autres informations."
-
-#~ msgid ""
-#~ "You are using an older version of Windows. This add-on requires Windows "
-#~ "10 or later."
-#~ msgstr ""
-#~ "Vous utilisez une ancienne version de Windows. Cette extension nécessite "
-#~ "Windows 10 ou une version ultérieure."
-
-#~ msgid "Old Windows version"
-#~ msgstr "Ancienne version de Windows"
-
-#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"

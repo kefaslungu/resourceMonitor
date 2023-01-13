@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:31-0700\n"
-"PO-Revision-Date: 2022-12-23 22:21+0100\n"
+"PO-Revision-Date: 2023-01-06 19:32+0100\n"
 "Last-Translator: José Manuel Delicado <jmdaweb@hotmail.com>\n"
 "Language-Team: Spanish NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "Versión de Windows no soportada"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -31,6 +31,10 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Estás usando {releaseName} ({build}), una versión de Windows no soportada "
+"por este complemento.\n"
+"Este complemento requiere {supportedReleaseName} ({supportedBuild}) o "
+"posterior."
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -209,13 +213,3 @@ msgid ""
 msgstr ""
 "Un monitor de recursos a mano para informar de la carga de la CPU, del uso "
 "de memoria, de la batería, del estado de uso del disco y de mucho más."
-
-#~ msgid ""
-#~ "You are using an older version of Windows. This add-on requires Windows "
-#~ "10 or later."
-#~ msgstr ""
-#~ "Estás utilizando una versión antigua de Windows. Este complemento "
-#~ "requiere Windows 10 o posterior."
-
-#~ msgid "Old Windows version"
-#~ msgstr "Versión de Windows antigua"

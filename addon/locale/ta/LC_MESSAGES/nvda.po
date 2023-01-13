@@ -8,29 +8,30 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:43-0700\n"
-"PO-Revision-Date: 2022-12-24 10:21+0530\n"
+"PO-Revision-Date: 2023-01-08 06:21-0800\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "ஆதரிக்கப்படாத விண்டோஸ் வெளியீடு"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
-#, python-brace-format
 msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
+"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"இக்கூட்டுக்கூறு ஆதரிக்காத {releaseName} ({build}) விண்டோஸ் வெளியீட்டை தாங்கள் பயன்படுத்துகிறீர்கள்.\n"
+"{supportedReleaseName} ({supportedBuild}), அல்லது அதற்கும் பிறகான வெளியீடு இக்கூட்டுக்கூறுக்குத் "
+"தேவைப்படுகிறது."
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -39,16 +40,13 @@ msgstr "இந்தக் கணினியில் மின்கலம் 
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, மின்கலம் மின்னூட்டப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
-#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr ""
-"மின்கலத்தில் {percent}% மின்சாரம் எஞ்சியுள்ளது. மின்சாரம் நீடிக்கும் நேரம் தெரியவில்லை. "
+msgstr "மின்கலத்தில் {percent}% மின்சாரம் எஞ்சியுள்ளது. மின்சாரம் நீடிக்கும் நேரம் தெரியவில்லை. "
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
@@ -57,7 +55,6 @@ msgstr "ஒரு மணி நேரம்"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, python-brace-format
 msgid "{0} hours"
 msgstr "{0} மணி நேரங்"
 
@@ -68,13 +65,11 @@ msgstr "ஒரு நிமிடம்"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} நிமிடங்கள்"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "மின்கலத்தில் {percent}% மின்சாரம் ஏற்றப்பட வேண்டியுள்ளது, சுமார் {time}."
 
@@ -88,7 +83,6 @@ msgstr "எச்சரிக்கை: மின்கலத்தில் ம
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
 
@@ -101,69 +95,54 @@ msgstr "வள கவனிப்பு"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
+"Presents battery percentage, charging status, remaining time (if not charging), and a "
+"warning if the battery is low or critical."
 msgstr ""
-"மின்கலத்தின் மின்னளவு, மின்சாரம் ஏற்றப்படும் நிலை, மின்சாரம் ஏற்றப்படாத நிலையில் எஞ்சியுள்ள "
-"நேரம், மின்கலத்தில் மின்சாரம் குறைவாக, அல்லது மிகவும் குறைவாக இருக்கும் நிலையில் "
-"எச்சரித்தல் ஆகிய பணிகளை செய்கிறது "
+"மின்கலத்தின் மின்னளவு, மின்சாரம் ஏற்றப்படும் நிலை, மின்சாரம் ஏற்றப்படாத நிலையில் எஞ்சியுள்ள நேரம், மின்கலத்தில் "
+"மின்சாரம் குறைவாக, அல்லது மிகவும் குறைவாக இருக்கும் நிலையில் எச்சரித்தல் ஆகிய பணிகளை செய்கிறது "
 
 #. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
+msgid "Presents the used and total space of the static and removable drives on this computer."
 msgstr ""
-"இக்கணினியில் இருக்கும் நிலையான, பெயர்த்தகு இயக்ககங்களின் மொத்த இடம், பயன்பாட்டிலிருக்கும் "
-"இடம் ஆகியவைகளை அறிவிக்கும்"
+"இக்கணினியில் இருக்கும் நிலையான, பெயர்த்தகு இயக்ககங்களின் மொத்த இடம், பயன்பாட்டிலிருக்கும் இடம் ஆகியவைகளை "
+"அறிவிக்கும்"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} இயக்ககம்): {usedSpace}, {totalSpace}ல் {percent}% "
-"பயன்படுத்தப்பட்டுள்ளது. "
+"{driveName} ({driveType} இயக்ககம்): {usedSpace}, {totalSpace}ல் {percent}% பயன்படுத்தப்பட்டுள்ளது. "
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
 msgstr "செயலியின் சராசரி சுமையையும், ஒவ்வொரு கூறின் சுமையையும் அறிவிக்கிறது."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "கூறு {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"மெய் மற்றும் மெய்நிகர் இடை நினைவகத்தின் மொத்த மற்றும் பயன்பாட்டிலிருக்கும் இட அளவை "
-"அறிவிக்கும். "
+msgstr "மெய் மற்றும் மெய்நிகர் இடை நினைவகத்தின் மொத்த மற்றும் பயன்பாட்டிலிருக்கும் இட அளவை அறிவிக்கும். "
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
-"({physicalPercent}%). "
+"மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
-"மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
-"({virtualPercent}%)."
+"மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} ({virtualPercent}%)."
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -174,7 +153,6 @@ msgid "1 day"
 msgstr "ஒரு நாள்"
 
 #. Translators: system uptime in days.
-#, python-brace-format
 msgid "{0} days"
 msgstr "{0} நாட்கள்"
 
@@ -183,7 +161,6 @@ msgid "1 second"
 msgstr "ஒரு விநாடி"
 
 #. Translators: system uptime in seconds.
-#, python-brace-format
 msgid "{0} seconds"
 msgstr "{0} விநாடிகள்"
 
@@ -196,34 +173,16 @@ msgid "Failed to get the system's uptime."
 msgstr "கணினியின் செயல்பட்ட நேரத்தைப் பெறுவதில் தோல்வி "
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை "
-"அறிவிக்கிறது."
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை அறிவிக்கிறது."
 
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
+"A handy resource monitor to report CPU load, memory usage, battery, disk usage status and "
+"more."
 msgstr ""
-"மையச் செயலக சுமை, நினைவக, மின்கல மற்றும் வட்டின் பயன்பாடு ஆகியவைகளை அறிவிக்கும் "
-"கையடக்க வள கவனிப்பு."
-
-#~ msgid ""
-#~ "You are using an older version of Windows. This add-on requires Windows "
-#~ "10 or later."
-#~ msgstr ""
-#~ "பழைய விண்டோஸ் பதிப்பைத் தாங்கள் பயன்படுத்துகிறீர்கள். இக்கூட்டுக் கூறுக்கு விண்டோஸ் 10, "
-#~ "அல்லது அதற்கும் பிறகான பதிப்பு தேவைப்படுகிறது."
-
-#~ msgid "Old Windows version"
-#~ msgstr "பழைய விண்டோஸ் பதிப்பு"
-
-#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
+"மையச் செயலக சுமை, நினைவக, மின்கல மற்றும் வட்டின் பயன்பாடு ஆகியவைகளை அறிவிக்கும் கையடக்க வள கவனிப்பு."

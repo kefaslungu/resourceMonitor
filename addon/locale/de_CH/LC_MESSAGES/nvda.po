@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:31-0700\n"
-"PO-Revision-Date: 2021-07-09 12:31-0700\n"
+"PO-Revision-Date: 2023-01-08 07:36-0800\n"
 "Last-Translator: Robert Hänggi <aarjay.robert@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
 msgid ""
@@ -131,9 +131,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Kern {coreNumber}: {corePercent} Prozent"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Durchschnittliche CPU-Auslastung {avgLoad} Prozent, {cores}."
+msgstr "Durchschnittliche CPU-Auslastung {avgLoad} Prozent."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
@@ -211,6 +211,3 @@ msgid ""
 msgstr ""
 "Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
-
-#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"

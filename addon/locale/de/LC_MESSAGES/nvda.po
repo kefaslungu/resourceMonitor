@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:30-0700\n"
-"PO-Revision-Date: 2022-04-01 21:37+0200\n"
+"PO-Revision-Date: 2023-01-08 07:37-0800\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -136,9 +136,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Kern {coreNumber}: {corePercent} Prozent"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Durchschnittliche CPU-Auslastung {avgLoad} Prozent, {cores}."
+msgstr "Durchschnittliche CPU-Auslastung {avgLoad} Prozent."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
@@ -216,16 +216,3 @@ msgid ""
 msgstr ""
 "Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
-
-#~ msgid ""
-#~ "You are using an older version of Windows. This add-on requires Windows "
-#~ "10 or later."
-#~ msgstr ""
-#~ "Sie verwenden eine ältere Windows-Version. Diese Erweiterung benötigt "
-#~ "Windows 10 oder neuer."
-
-#~ msgid "Old Windows version"
-#~ msgstr "Ältere Windows-Version"
-
-#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"

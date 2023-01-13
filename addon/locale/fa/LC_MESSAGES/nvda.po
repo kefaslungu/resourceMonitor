@@ -8,30 +8,33 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:32-0700\n"
-"PO-Revision-Date: 2022-12-26 21:43+0330\n"
+"PO-Revision-Date: 2023-01-08 06:59-0800\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "نسخه‌ی پشتیبانی‌نشده‌ی ویندوز"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
 #, python-brace-format
 msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
+"You are using {releaseName} ({build}), a Windows release not supported by this add-"
+"on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"شما دارید از {releaseName} ({build}) استفاده میکنید که توسط این افزونه پشتیبانی "
+"نمیشود.\n"
+"این افزونه به نسخه‌ی {supportedReleaseName} ({supportedBuild}) یا بالاتر نیاز دارد."
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -101,28 +104,24 @@ msgstr "دیده‌بانِ منابع"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
+"Presents battery percentage, charging status, remaining time (if not charging), and a "
+"warning if the battery is low or critical."
 msgstr ""
-"درصدِ باتری، وضعیتِ شارژ، زمانِ باقیمانده در صورتی که شارژ نشود، و هشداری مبنی "
-"بر ضعیف یا خیلی ضعیف بودن باتری را ارائه میدهد."
+"درصدِ باتری، وضعیتِ شارژ، زمانِ باقیمانده در صورتی که شارژ نشود، و هشداری مبنی بر ضعیف "
+"یا خیلی ضعیف بودن باتری را ارائه میدهد."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"فضای استفاده شده و کلِّ فضای درایو‌های ثابت و متحرکِ این رایانه را بیان میکند."
+"Presents the used and total space of the static and removable drives on this computer."
+msgstr "فضای استفاده شده و کلِّ فضای درایو‌های ثابت و متحرکِ این رایانه را بیان میکند."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} (درایوِ {driveType}): {usedSpace} از {totalSpace} استفاده شده، "
-"{percent}%."
+"{driveName} (درایوِ {driveType}): {usedSpace} از {totalSpace} استفاده شده، {percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -151,14 +150,12 @@ msgstr "فضای استفاده شده و کلِّ فضای فیزیکی و مج
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"رمِ فیزیکی: {physicalUsed} از {physicalTotal} استفاده شده، "
-"({physicalPercent}%). "
+"رمِ فیزیکی: {physicalUsed} از {physicalTotal} استفاده شده، ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"رمِ مجازی: {virtualUsed} از {virtualTotal} استفاده شده، ({virtualPercent}%)."
+msgstr "رمِ مجازی: {virtualUsed} از {virtualTotal} استفاده شده، ({virtualPercent}%)."
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -191,11 +188,10 @@ msgid "Failed to get the system's uptime."
 msgstr "نتوانستم زمانِ روشن بودنِ سیستم را به دست بیاورم."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
+msgid "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"مقدارِ رمِ استفاده‌شده، میانگینِ بارِ پردازنده، و چنانچه در دسترس باشد، اطلاعات "
-"باتری را بیان میکند."
+"مقدارِ رمِ استفاده‌شده، میانگینِ بارِ پردازنده، و چنانچه در دسترس باشد، اطلاعات باتری را "
+"بیان میکند."
 
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
@@ -204,21 +200,8 @@ msgstr "{ramPercent}% از رم استفاده شده، سیپی‌یو {cpuPerc
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
+"A handy resource monitor to report CPU load, memory usage, battery, disk usage status "
+"and more."
 msgstr ""
-"یک دیده‌بانِ منابعِ دمِ دستی برای اعلامِ بارِ سیپی‌یو، میزانِ استفاده‌ی حافظه، باتری، "
-"وضعیتِ استفاده از دیسک و بیشتر."
-
-#~ msgid ""
-#~ "You are using an older version of Windows. This add-on requires Windows "
-#~ "10 or later."
-#~ msgstr ""
-#~ "شما دارید از یک نسخه‌ی قدیمیِ ویندوز استفاده میکنید. این افزونه نیازمندِ "
-#~ "ویندوزِ ۱۰ یا بالاتر است."
-
-#~ msgid "Old Windows version"
-#~ msgstr "نسخه‌ی قدیمیِ ویندوز"
-
-#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
+"یک دیده‌بانِ منابعِ دمِ دستی برای اعلامِ بارِ سیپی‌یو، میزانِ استفاده‌ی حافظه، باتری، وضعیتِ "
+"استفاده از دیسک و بیشتر."

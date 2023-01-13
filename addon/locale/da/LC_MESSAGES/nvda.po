@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:29-0700\n"
-"PO-Revision-Date: 2022-11-05 11:52+0100\n"
+"PO-Revision-Date: 2023-01-08 06:31-0800\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: Dansk NVDA <dansk@nvda.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -134,9 +134,9 @@ msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Kerne {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Gennemsnitlig CPU-belastning {avgLoad}%, {cores}"
+msgstr "Gennemsnitlig CPU-belastning {avgLoad}%"
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
@@ -206,16 +206,3 @@ msgid ""
 msgstr ""
 "En smart lille ressourcemonitor, som fortææler status for "
 "processorbelastning, hukommelsesforbrug, batteri, diskforbrug m.m."
-
-#~ msgid ""
-#~ "You are using an older version of Windows. This add-on requires Windows "
-#~ "10 or later."
-#~ msgstr ""
-#~ "Du bruger en ældre version af Windows. Denne tilføjelse kræver Windows 10 "
-#~ "eller nyere."
-
-#~ msgid "Old Windows version"
-#~ msgstr "Gammel version af Windows"
-
-#~ msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-#~ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
