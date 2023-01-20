@@ -3,7 +3,7 @@
 * Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst et d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
-* NVDA compatibility: 2022.3 and later
+* NVDA compatibility: 2022.4 and later
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des

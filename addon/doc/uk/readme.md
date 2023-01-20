@@ -3,7 +3,7 @@
 * Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst та інші учасники спільноти NVDA
 * Завантажити [стабільну версію][1]
-* NVDA compatibility: 2022.3 and later
+* Сумісність: NVDA 2022.4 і новіші
 
 Цей додаток надає інформацію про завантаженість процесора, використання
 пам’яті та інших ресурсів.
@@ -21,11 +21,11 @@
 * NVDA+Shift+4: Повідомляє про відсоток акумулятора, статус заряджання, час,
   що залишився (якщо акумулятор не заряджається) і попередження про низький
   та критично низький заряд акумулятора.
-* NVDA+Shift+6: presents CPU Architecture and Windows version and service
-  pack numbers.
+* NVDA+Shift+6: називає архітектуру процесора, версію Windows та номер
+  пакета оновлень — service pack.
 * NVDA+Shift+7: повідомляє час роботи системи від моменту її завантаження.
 
-You can change these shortcut keys via input gestures dialog.
+Ці комбінації клавіш можна змінити у діалозі «Жести вводу».
 
 ## Примітки про користування
 
@@ -40,23 +40,25 @@ You can change these shortcut keys via input gestures dialog.
   процесора.
 * При інтенсивних діях на диску, таких як копіювання великих файлів, можливі
   затримки з отриманням інформації про використання диска.
-* When announcing processor architecture information, "x86" and "AMD64"
-  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* This add-on requires Windows 10 or later.
+* При оголошенні інформації про архітектуру процесора, «x86» і «AMD64»
+  відносяться до 32-розрядних і 64-розрядних (x64) процесорів Intel і AMD
+  відповідно.
+* Цей додаток вимагає Windows 10 чи пізнішу.
 
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
 
-## Version 23.01
+## Версія 23.01
 
-* NVDA 2022.3 or later is required.
-* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
-  supported by Microsoft as of January 2023.
-* Updated psutil dependency to 5.9.4.
-* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
-  of Windows version information.
-* On single-core systems, NVDA will no longer announce CPU core load as
-  average CPU load is the same as core load.
+* Необхідна версія NVDA 2022.3 або новіша.
+* Вимагається Windows 10, оскільки в січні 2023 року Майкрософт припинила
+  підтримку Windows 7, 8 і 8.1.
+* Залежність psutil оновлено до 5.9.4.
+* NVDA повідомлятиме поточну архітектуру процесора (x86/AMD64/ARM64) як
+  частину інформації про версію Windows.
+* На одноядерних системах NVDA більше не повідомлятиме про навантаження на
+  ядро процесора, оскільки середнє навантаження на процесор збігається з
+  навантаженням на ядро.
 
 ## Версія 22.03
 

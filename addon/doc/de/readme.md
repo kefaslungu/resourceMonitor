@@ -3,7 +3,7 @@
 * Autoren: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
   Probst und weitere NVDA-Mitwirkende
 * [Stabile Version herunterladen][1]
-* NVDA-Kompatibilität: 2022.3 und neuer
+* NVDA-Kompatibilität: 2022.4 und neuer
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.

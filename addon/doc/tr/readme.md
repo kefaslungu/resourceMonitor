@@ -3,7 +3,7 @@
 * Yazarlar: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst ve diğer NVDA katkıda bulunanlar
 * [Kararlı sürümü][1] indir
-* NVDA compatibility: 2022.3 and later
+* NVDA compatibility: 2022.4 and later
 
 Bu eklenti, CPU yükü, bellek kullanımı ve diğer kaynak kullanımları hakkında
 bilgi verir.
