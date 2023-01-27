@@ -48,6 +48,11 @@ información do sistema para Windows. Ademais, ten en conta o seguinte:
 Nota sobre a licenza: este complemento utiliza Psutil, licenciado baixo a
 3-Clause BSD License que é compatible coa GNU General Public License.
 
+## Version 23.02
+
+* NVDA 2022.4 or later is required.
+* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+
 ## Versión 23.01
 
 * Require NVDA 2022.3 ou posterior.

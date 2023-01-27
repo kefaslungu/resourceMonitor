@@ -48,6 +48,11 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
 
+## Version 23.02
+
+* NVDA 2022.4 or later is required.
+* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+
 ## Verzija 23.01
 
 * Zahtijeva NVDA 2022.3 ili noviju verziju.

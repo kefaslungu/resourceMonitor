@@ -47,6 +47,11 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
 
+## Version 23.02
+
+* NVDA 2022.4 or later is required.
+* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+
 ## Version 23.01
 
 * NVDA 2022.3 or later is required.
