@@ -53,8 +53,9 @@ Public Lizenz kompatibel.
 
 ## Version 23.02
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* NVDA 2022.4 oder neuer wird benötigt.
+* Windows 10 Version 21H2 (November 2021 Update / Build 19044) oder neuer
+  wird benötigt.
 
 ## Version 23.01
 
