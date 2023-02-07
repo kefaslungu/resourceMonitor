@@ -8,7 +8,7 @@ import winreg
 from datetime import datetime
 import functools
 import platform
-from typing import List, Tuple
+from typing import List, Tuple, Union, Any
 import globalPluginHandler
 import ui
 import api
@@ -99,7 +99,7 @@ def size(bytes: int, system: List[Tuple[float, Any]] = traditional) -> str:
 	return "{:.2F}{}".format(float(amount), suffix)
 
 
-def tryTrunk(n):
+def tryTrunk(n: float) -> Union[int, float]:
 	# This method basically removes decimal zeros, so 5.0 will just be 5.
 	# If the number ends in anything other than a 0,
 	# nothing happens (if the trunkated number is not equal to the decimal).
