@@ -8,6 +8,7 @@ import winreg
 from datetime import datetime
 import functools
 import platform
+from typing import List, Tuple
 import globalPluginHandler
 import ui
 import api
@@ -84,7 +85,7 @@ si = [
 ]
 
 
-def size(bytes, system=traditional):
+def size(bytes: int, system: List[Tuple[float, Any]] = traditional) -> str:
 	for factor, suffix in system:
 		if float(bytes) >= float(factor):
 			break
@@ -108,7 +109,7 @@ def tryTrunk(n):
 
 
 # Moved from battery module to the main module in 2019 (code provided by Alex Hall)
-def _batteryInfo(verbose=False):
+def _batteryInfo(verbose: bool = False) -> str:
 	# Returns current battery status provided that the computer has a detectable battery.
 	# The verbose argument will force this function to return something if there is no battery.
 	info = None
@@ -179,7 +180,7 @@ serverReleaseNames = {
 
 
 @functools.lru_cache(maxsize=1)
-def getWinVer():
+def getWinVer() -> str:
 	# Obtain winversion using NvDA 2021.1 API, later extended to use 2021.2 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	currentWinVer = winVersion.getWinVer()
@@ -352,7 +353,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			api.copyToClip(info, notify=True)
 
-	def getUptime(self):
+	def getUptime(self) -> str:
 		bootTimestamp = psutil.boot_time()
 		if bootTimestamp == 0.0:
 			raise TypeError
