@@ -214,4 +214,4 @@ Starting with version 16.08, add-on releases will be shown as year.month.revisio
 
 * Initial Release
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rm
+[1]: http://addons.nvda-project.org/files/get.php?file=resourceMonitor
