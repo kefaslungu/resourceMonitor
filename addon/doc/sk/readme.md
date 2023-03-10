@@ -256,4 +256,4 @@ Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rm
+[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor

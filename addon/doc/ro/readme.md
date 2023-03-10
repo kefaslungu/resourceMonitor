@@ -270,4 +270,4 @@ Important: Versiunea 17.09.x este ultima care suportă Windows XP.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rm
+[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor

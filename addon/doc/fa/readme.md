@@ -266,4 +266,4 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rm
+[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
