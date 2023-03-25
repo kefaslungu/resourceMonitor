@@ -1,10 +1,8 @@
 # Resource Monitor
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin Probst and other NVDA contributors
+* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst and other NVDA contributors
 * Download [stable version][1]
 * NVDA compatibility: 2022.4 and later
-
-Note: I (Joseph Lee) am looking for people who will maintain Resource Monitor add-on from April 1, 2022 onwards.
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
