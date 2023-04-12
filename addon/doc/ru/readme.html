@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Resource Monitor 23.05</title>
+</head>
+<body>
+<h1>Resource Monitor</h1>
+<ul>
+<li>Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors</li>
+<li>Загрузить <a href="https://addons.nvda-project.org/files/get.php?file=resourceMonitor">стабильную версию</a></li>
+<li>NVDA compatibility: 2022.4 and later</li>
+</ul>
+<p>Этот плагин предоставляет информацию о загрузке процессора, используемой
+памяти и  других используемых ресурсах.</p>
+<h1>Горячие клавиши</h1>
+<ul>
+<li>NVDA+Shift+E: presents used ram, average processor load, and battery info
+  if available.</li>
+<li>NVDA+Shift+1: presents the average processor load and if multicore CPU's
+  are present the load of each core.</li>
+<li>NVDA+Shift+2/5: presents the used and total space for both physical and
+  virtual ram.</li>
+<li>NVDA+Shift+3: presents the used and total space of the static and
+  removable drives.</li>
+<li>NVDA+Shift+4: presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.</li>
+<li>NVDA+Shift+6: presents CPU Architecture and Windows version and service
+  pack numbers.</li>
+<li>NVDA+Shift+7: presents the system's uptime.</li>
+</ul>
+<p>You can change these shortcut keys via input gestures dialog.</p>
+<h2>Замечания по использованию</h2>
+<p>Это дополнение не заменяет диспетчер задач и другие информационные программы
+системы Windows. Также обратите внимание на следующее:</p>
+<ul>
+<li>Resource information cannot be copied to clipboard if running the add-on
+  in secure screens.</li>
+<li>Использование процессора предоставляется для логических процессоров, а не
+  физических ядер. Это касается процессоров, которые использует Hyper
+  Threading, где количество процессоров в два раза превышает количество
+  процессорных ядер.</li>
+<li>Если есть тяжелые дисковые операции, такие как копирование больших файлов,
+  возникают задержки при получении информации об использовании диска.</li>
+<li>When announcing processor architecture information, "x86" and "AMD64"
+  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.</li>
+<li>This add-on requires Windows 10 or later.</li>
+</ul>
+<p>Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
+License which is compatible with GNU General Public License.</p>
+<h2>Version 23.02</h2>
+<ul>
+<li>NVDA 2022.4 or later is required.</li>
+<li>Windows 10 21H2 (November 2021 Update/build 19044) or later is required.</li>
+</ul>
+<h2>Version 23.01</h2>
+<ul>
+<li>NVDA 2022.3 or later is required.</li>
+<li>Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
+  supported by Microsoft as of January 2023.</li>
+<li>Updated psutil dependency to 5.9.4.</li>
+<li>NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
+  of Windows version information.</li>
+<li>On single-core systems, NVDA will no longer announce CPU core load as
+  average CPU load is the same as core load.</li>
+</ul>
+<h2>Version 22.03</h2>
+<p>Version 22.03 is the last stable version to support Windows 7 Service Pack
+1, 8, and 8.1.</p>
+<ul>
+<li>NVDA 2021.3 or later is required.</li>
+<li>A warning message will be displayed when attempting to install the add-on
+  on Windows 7, 8, and 8.1.</li>
+<li>Updated psutil dependency to 5.9.0.</li>
+</ul>
+<h2>Version 22.01</h2>
+<ul>
+<li>NVDA 2021.2 or later is required.</li>
+</ul>
+<h2>Version 21.10</h2>
+<ul>
+<li>NVDA 2021.1 or later is required due to changes to NVDA that affects this
+  add-on.</li>
+</ul>
+<h2>Version 21.08</h2>
+<ul>
+<li>Minimum Windows release requirement is now tied to NVDA releases.</li>
+<li>Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
+  Windows 11, respectively.</li>
+<li>On Insider Preview builds, Windows release such as "Windows 10" will not
+  be used. Instead NvDA will announce "Windows Insider".</li>
+<li>On 64-bit systems, processor architecture (x64 or ARM64) will be announced
+  as part of Windows version information.</li>
+</ul>
+<h2>Version 21.04</h2>
+<ul>
+<li>NVDA 2020.4 or later is required.</li>
+<li>Updated psutil dependency to 5.8.0.</li>
+<li>When pressing add-on commands twice to copy resource information to
+  clipboard, NVDA will announce resource summary that is being copied.</li>
+</ul>
+<h2>Version 21.01</h2>
+<ul>
+<li>Updated psutil dependency to 5.7.3.</li>
+<li>Shortened Windows version message.</li>
+<li>On Windows 8.1, build.revision will be announced as part of Windows
+  version message, similar to Windows 10.</li>
+</ul>
+<h2>Version 20.09</h2>
+<ul>
+<li>System uptime is now given as days, hours, minutes, seconds.</li>
+<li>Windows Server Insider Preview build 20201 or later is properly recognized
+  as a Server Insider build.</li>
+</ul>
+<h2>Version 20.07</h2>
+<ul>
+<li>Windows 10 Version 20H2 is properly recognized when obtaining Windows
+  version information (NVDA+Shift+6).</li>
+<li>Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
+  Windows 10verYYMM when pressing NVDA+Shift+6.</li>
+</ul>
+<h2>Version 20.06</h2>
+<ul>
+<li>Resolved many coding style issues and potential bugs with Flake8.</li>
+</ul>
+<h2>Version 20.04</h2>
+<ul>
+<li>Updated psutil dependency to 5.7.0.</li>
+</ul>
+<h2>Version 20.01</h2>
+<ul>
+<li>NVDA 2019.3 or later is required due to extensive use of Python 3.</li>
+</ul>
+<h2>Version 19.11</h2>
+<ul>
+<li>Improved detection of Windows Insider Preview builds, especially for 20H1
+  and beyond.</li>
+</ul>
+<h2>Version 19.07</h2>
+<ul>
+<li>Updated psutil dependency to 5.6.3.</li>
+<li>Internal changes to battery status announcement command.</li>
+</ul>
+<h2>Version 18.12</h2>
+<ul>
+<li>Internal changes to support future NVDA releases.</li>
+</ul>
+<h2>Version 18.10</h2>
+<ul>
+<li>Code has been made more compatible with Python 3.</li>
+<li>Updated psutil dependency to 5.4.7.</li>
+<li>When obtaining disk capacity and memory usage, NVDA will no longer give
+  errors if using a computer or a service with more than a petabyte of RAM
+  or disk size.</li>
+<li>Values for memory and disk usage are shown with up to two decimal places
+  (e.g. 4.00 GB instead of 4.0 GB).</li>
+<li>Improved detection of Windows Insider Preview builds.</li>
+</ul>
+<h2>Версия 18.04</h2>
+<p>Version 18.04.x is the last release to support Windows releases earlier than
+7 SP1.</p>
+<ul>
+<li>Last release to support Windows Server 2003, Vista and Server 2008.</li>
+<li>Better detection of Windows 10 releases and distinguishing between public
+  and Insider Preview builds.</li>
+</ul>
+<h2>Версия 17.12</h2>
+<ul>
+<li>Added support for 64-bit ARM processors on Windows 10.</li>
+</ul>
+<h2>Версия 17.09</h2>
+<p>Important: Version 17.09.x is the last version to support Windows XP.</p>
+<ul>
+<li>Last version to run on Windows XP.</li>
+<li>Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.</li>
+</ul>
+<h2>Версия 17.07.1</h2>
+<ul>
+<li>Reintroduce support for Windows XP (broken since version 17.02).</li>
+</ul>
+<h2>Версия 17.05</h2>
+<ul>
+<li>Announcement of system uptime (time passed since last boot; NVDA+Shift+7).</li>
+</ul>
+<h2>Версия 17.02</h2>
+<ul>
+<li>Обновлён пакет psutil до версии 5.0.1.</li>
+<li>При проверке использования диска, NVDA больше не будет предоставлять
+  диалог ошибки на некоторых системах, где съемный носитель не распознаётся
+  (например, если карта не вставлена в устройство чтения карт памяти).)</li>
+</ul>
+<h2>Версия 16.08</h2>
+<p>Начиная с версии 16.08, выпуски ревизий дополнения будут показаны в
+год.месяц.</p>
+<ul>
+<li>Различные ревизии системы Windows 10 теперь правильно распознаются
+  (например, 1607 для сборки 14393).</li>
+<li>Ревизии сборок Windows 10 (после установки накопительных обновлений)
+  теперь правильно распознаются (например, 14393.51).</li>
+<li>Распознаётся факт использования сборок Insider Preview.</li>
+</ul>
+<h2>Изменения в версии 4.5</h2>
+<ul>
+<li>Репозиторий дополнения перемещён на github (находится на
+  https://github.com/josephsl/resourcemonitor).</li>
+<li>Правильно распознаётся Windows Server 2016.</li>
+</ul>
+<h2>Изменения в версии 4.0</h2>
+<ul>
+<li>Обновлён пакет psutil до версии 2.2.1.</li>
+<li>Значительно улучшена производительность при получении информации о
+  загрузке процессора.</li>
+<li>Добавлена поддержка для распознавания Windows 10.</li>
+<li>В Windows 10, также будет объявляться номер сборки Windows.</li>
+<li>Вы можете использовать Менеджер дополнений для доступа к справке
+  дополнения.</li>
+</ul>
+<h2>Изменения в версии 3.1</h2>
+<ul>
+<li>Resource Monitor официально поддерживает Windows, 8.1.</li>
+<li>Обновлены переводы.</li>
+</ul>
+<h2>Изменения в версии 3.0</h2>
+<ul>
+<li>Обновлён пакет psutil до версии 1.2.1.</li>
+<li>Предоставляется установленная версия Windows, разрядность процессора (32
+  или 64-разрядный) и пакет обновления, если есть (NVDA+Shift+6).</li>
+<li>Возможность изменения сочетания клавиш дополнения (NVDA 2013.3 или выше).</li>
+<li>Возможность копирования индивидуальной информации о ресурсах в буфер,
+  нажимая команды дважды.</li>
+</ul>
+<h2>Изменения в версии 2.4</h2>
+<ul>
+<li>Новые языки: китайский (упрощённый), украинский.</li>
+<li>Обновлены переводы.</li>
+</ul>
+<h2>Изменения в версии 2.3</h2>
+<ul>
+<li>Добавлен болгарский перевод.</li>
+</ul>
+<h2>Изменения в версии 2.2</h2>
+<ul>
+<li>Добавлены следующие переводы: Арабский, арагонский, хорватский,
+  голландский, финский, французский, галисийский, немецкий, венгерский,
+  итальянский, японский, корейский, непальский, польский, португальский
+  (Бразилия), русский, словацкий, словенский, испанский, тамильский и
+  турецкий.</li>
+</ul>
+<h2>Изменения в версии 2.1</h2>
+<ul>
+<li>Обновлен пакет psutil до версии 0.6.1.</li>
+<li>Исправлена ​​большая задержка при получении информации о дисках.</li>
+<li>Немного очищен код</li>
+</ul>
+<h2>Изменения в версии 2.0</h2>
+<ul>
+<li>добавлена ​​поддержка Переводов и коментариев для переводчиков.</li>
+</ul>
+<h2>Изменения в версии 1.0</h2>
+<ul>
+<li>Первый публичный релиз</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

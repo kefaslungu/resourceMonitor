@@ -1,13 +1,15 @@
 # Resource Monitor for NVDA
 # Presents basic info on CPU load, memory and disk usage, as well as battery information.
-# Copyright 2013-2023 Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
+# Copyright 2013-2023 Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
 # released under GPL.
 # This add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GPL.
 
 import winreg
-from datetime import datetime
+import re
 import functools
 import platform
+from datetime import datetime
+from subprocess import getoutput
 from typing import List, Tuple, Union, Any
 import globalPluginHandler
 import ui
@@ -352,6 +354,40 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(info)
 		else:
 			api.copyToClip(info, notify=True)
+
+	@scriptHandler.script(
+		# Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+		description=_("Announces the system's wireless network ssid name, and its strength."),
+		gesture="kb:NVDA+shift+8"
+	)    
+	def script_network_information(self, gesture):
+		# Get the SSID of the current network
+		network_info = getoutput("netsh wlan show interface")
+		ssid_pattern = re.compile(r'SSID\s+:\s(.+)')
+		match = ssid_pattern.search(network_info)
+		if match:
+			ssid = match.group(1)
+		else:
+			# Translators: a message telling the user SSID not found.
+			ui.message("SSID not found")
+			return
+
+		# Get the signal strength of the current network
+		signal_strength = re.compile(r'Signal\s+:\s(\d+)')
+		match = signal_strength.search(network_info)
+
+		if match:
+			strength = int(match.group(1))
+		else:
+			# Translators: Message reported when there is no information on the strength of the ssid
+			ui.message("Signal strength not found")
+			return
+
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			# Translators: get information on the connected network information, and its strength.
+			ui.message((f"Connected wireless network: {ssid}, Signal Strength: {strength}%"))
+		else:
+			api.copyToClip((f"Connected wireless network: {ssid}, Signal Strength: {strength}%"), notify=True)
 
 	def getUptime(self) -> str:
 		bootTimestamp = psutil.boot_time()

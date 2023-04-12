@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Resource Monitor 23.05</title>
+</head>
+<body>
+<h1>Resource Monitor</h1>
+<ul>
+<li>Authors: Alex Hall, Joseph Lee, Kefas Lungu, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst and other NVDA contributors</li>
+<li>تحميل <a href="https://addons.nvda-project.org/files/get.php?file=rm">الإصدار النهائي</a></li>
+<li>NVDA compatibility: 2019.3 to 2020.2</li>
+</ul>
+<p>This add-on gives information about CPU load, memory usage and other
+resource usage information.</p>
+<h1>مفاتيح الاختصار</h1>
+<ul>
+<li>NVDA+Shift+E يعطي معلومات عن الذاكرة العشوائية المستخدمة, متوسط حمولة
+  المعالج, ومعلومات عن حالة البطارية إذا كان الجهاز به بطارية,</li>
+<li>NVDA+Shift+1 يعطي معلومات عن متوسط حمولة المعالج وعن حمولة كل نواة,</li>
+<li>NVDA+Shift+2/5 يعطي معلومات عن المساحة المستخدمة والمساحة الكلية لكل من
+  الذاكرة الفعلية والذاكرة العشوائية,</li>
+<li>NVDA+Shift+3 يعطي معلومات عن المساحة المستخدمة والمساحة الكلية للأقراص
+  الثابتة والأقراص التي يمكن إزالتها بالحاسوب,</li>
+<li>NVDA+Shift+4 يعطي معلومات عن نسبة شحن البطارية, وحالة الشحن, والوقت
+  المتبقي (إذا لم يتم شحنها), ورسالة تحذير إذا كانت البطارية منخفضة أو أوشك
+  الشحن على النفاذ.</li>
+<li>NVDA+Shift+6 يعلمك بإصدار الويندوز المستخدم حاليا وهندسة وحدة المعالجة
+  المركزية 32 أو 64-bit  ورقم الحزمة.</li>
+<li>NVDA+Shift+7 presents the system's uptime.</li>
+</ul>
+<p>If you have NVDA 2013.3 or later installed, you can change these shortcut
+keys via input gestures dialog.</p>
+<h2>ملاحظات الاستخدام</h2>
+<p>لا تحل هذه الإضافة محل خدمة مدير المهام بويندوز أو أية برامج أخرى تخبر
+المستخدم بمعلومات النظام. كما ينبغي عليك ملاحظة الآتي:</p>
+<ul>
+<li>يتم الإعلان عن معدل الاستخدام لوحدات المعالجة المركزية للمعالجات المنطقية
+  وليست للنوى المادية. ويلاحظ هذا بشكل واضح للمعالجات التي تستخدم الخيط
+  التشاعبي (Hyper Threading) والتي فيها يكون رقم وحدة المعالجة المركزية هو
+  ضعف رقم نوى وحدة المعالجة المركزية. </li>
+<li>If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.</li>
+<li>This add-on requires Windows 7 Service Pack 1 or later.</li>
+</ul>
+<h2>Version 20.06</h2>
+<ul>
+<li>Resolved many coding style issues and potential bugs with Flake8.</li>
+</ul>
+<h2>Version 20.04</h2>
+<ul>
+<li>Updated psutil dependency to 5.7.0.</li>
+</ul>
+<h2>Version 20.01</h2>
+<ul>
+<li>NVDA 2019.3 or later is required due to extensive use of Python 3.</li>
+</ul>
+<h2>Version 19.11</h2>
+<ul>
+<li>Improved detection of Windows Insider Preview builds, especially for 20H1
+  and beyond.</li>
+</ul>
+<h2>Version 19.07</h2>
+<ul>
+<li>Updated psutil dependency to 5.6.3.</li>
+<li>Internal changes to battery status announcement command.</li>
+</ul>
+<h2>Version 18.12</h2>
+<ul>
+<li>Internal changes to support future NVDA releases.</li>
+</ul>
+<h2>Version 18.10</h2>
+<ul>
+<li>Code has been made more compatible with Python 3.</li>
+<li>Updated psutil dependency to 5.4.7.</li>
+<li>When obtaining disk capacity and memory usage, NVDA will no longer give
+  errors if using a computer or a service with more than a petabyte of RAM
+  or disk size.</li>
+<li>Values for memory and disk usage are shown with up to two decimal places
+  (e.g. 4.00 GB instead of 4.0 GB).</li>
+<li>Improved detection of Windows Insider Preview builds.</li>
+</ul>
+<h2>Version 18.04</h2>
+<p>Version 18.04.x is the last release to support Windows releases earlier than
+7 SP1.</p>
+<ul>
+<li>Last release to support Windows Server 2003, Vista and Server 2008.</li>
+<li>Better detection of Windows 10 releases and distinguishing between public
+  and Insider Preview builds.</li>
+</ul>
+<h2>Version 17.12</h2>
+<ul>
+<li>Added support for 64-bit ARM processors on Windows 10.</li>
+</ul>
+<h2>Version 17.09</h2>
+<p>Important: Version 17.09.x is the last version to support Windows XP.</p>
+<ul>
+<li>Last version to run on Windows XP.</li>
+<li>Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.</li>
+</ul>
+<h2>Version 17.07.1</h2>
+<ul>
+<li>Reintroduce support for Windows XP (broken since version 17.02).</li>
+</ul>
+<h2>Version 17.05</h2>
+<ul>
+<li>Announcement of system uptime (time passed since last boot; NVDA+Shift+7).</li>
+</ul>
+<h2>Version 17.02</h2>
+<ul>
+<li>Updated psutil dependency to 5.0.1.</li>
+<li>When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)</li>
+</ul>
+<h2>Version 16.08</h2>
+<p>Starting with version 16.08, add-on releases will be shown as
+year.month.revision.</p>
+<ul>
+<li>Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).</li>
+<li>Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).</li>
+<li>If using Insider Preview builds, this fact is recognized.</li>
+</ul>
+<h2>Changes for 4.5</h2>
+<ul>
+<li>Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).</li>
+<li>Windows Server 2016 is properly recognized.</li>
+</ul>
+<h2>مستجدات الإصدار 4.0</h2>
+<ul>
+<li>تحديث توابع psutil حتى الإصدار 2.2.1.</li>
+<li>تحسين الأداء بشكل كبير عند الحصول على معلومات عن تحميل المعالج.</li>
+<li>إضافة دعم للتعرف على ويندوز 10</li>
+<li>سيتم الإعلان عن رقم بناء الويندوز أيضا في ويندوز 10</li>
+<li>يمكنك استخدام مدير الإضافات البرمجية للوصول لملف المساعدة.</li>
+</ul>
+<h2>مستجدات الإصدار 3.1</h2>
+<ul>
+<li>تدعم الإضافة نظام التشغيل ويندوز 8.1 رسميا.</li>
+<li>تحديث ترجمة الإضافة</li>
+</ul>
+<h2>مستجدات الإصدار 3.0</h2>
+<ul>
+<li>تحديث توابع psutil حتى الإصدار 1.2.1.</li>
+<li>للاستعلام عن إصدار الويندوز المستخدم حاليا وهندسة وحدة المعالجة المركزية
+  وإصدار الحزمة إن وجد (NVDA+Shift+6).</li>
+<li>إمكانية تغيير اختصارات الإضافة (NVDA2013.3 وما بعده).</li>
+<li>إمكانية نسخ معلومة النظام بالضغط على الأمر المنوط بالإخبار عنها مرتين
+  متعاقبتين.</li>
+</ul>
+<h2>مستجدات الإصدار 2.4</h2>
+<ul>
+<li>ترجمة الإضافة إلى: الصينية (المبسطة) والأوكرانية.</li>
+<li>تحديث ترجمة الإضافة</li>
+</ul>
+<h2>مستجدات الإصدار 2.3</h2>
+<ul>
+<li>ترجمة الإضافة للغة البلغارية.</li>
+</ul>
+<h2>مستجدات الإصدار 2.2</h2>
+<ul>
+<li>ترجمة الإضافة إلى اللغات: العربية, والأرجانيزية, والكرواتية, والهولندية,
+  والفنلندية, والفرنسية, والغالية, والألمانية, والمجرية, والإيطالية,
+  واليابانية, والكورية, والنيبالية, والبولندية, والبرتغالية (برازيلي),
+  والروسية, والسلوفاكية, والسلوفينية, والإسبانية, وتامل والتركية.</li>
+</ul>
+<h2>مستجدات الإصدار 2.1</h2>
+<ul>
+<li>تحديث psutil dependency للإصدار 0.6.1.</li>
+<li>معالجة التأخر الذي يحدث عند استحضار معلومات عن الأقراص.</li>
+<li>قليل من الترتيب لكود الإضافة.</li>
+</ul>
+<h2>مستجدات الإصدار 2.0</h2>
+<ul>
+<li>إضافة إمكانية ترجمة الإضافة مع وضع تعليقات عن كل رسالة</li>
+</ul>
+<h2>مستجدات الإصدار 1.0</h2>
+<ul>
+<li>إصدار أولي</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

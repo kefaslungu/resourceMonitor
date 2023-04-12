@@ -1,6 +1,6 @@
 # Resource Monitor #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+* Authors: Alex Hall, Joseph Lee, Kefas Lungu, beqa gozalishvili, Tuukka Ojala, Ethin
   Probst and other NVDA contributors
 * تحميل [الإصدار النهائي][1]
 * NVDA compatibility: 2019.3 to 2020.2

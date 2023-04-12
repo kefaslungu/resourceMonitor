@@ -4,3 +4,4 @@
 *.nvda-addon
 .sconsign.dblite
 *.ini
+suggestions.txt

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Resource Monitor 23.05</title>
+</head>
+<body>
+<h1>Resurssienvalvonta</h1>
+<ul>
+<li>Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
+  Probst sekä muut NVDA:n tekijät</li>
+<li>Lataa <a href="https://addons.nvda-project.org/files/get.php?file=resourceMonitor">vakaa versio</a></li>
+<li>Yhteensopivuus: NVDA 2022.4 ja uudemmat</li>
+</ul>
+<p>Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
+resurssien käytöstä.</p>
+<h1>Pikanäppäimet</h1>
+<ul>
+<li>NVDA+Vaihto+E: Lukee käytetyn RAM-muistin määrän, suorittimen
+  keskimääräisen kuormituksen sekä akun tiedot, mikäli sellainen on
+  käytettävissä.</li>
+<li>NVDA+Vaihto+1: Lukee suorittimen keskimääräisen kuormituksen, ja mikäli
+  käytössä on moniydinsuoritin, myös ytimien kuormituksen.</li>
+<li>NVDA+Vaihto+2/5: Lukee sekä fyysisen että näennäisen RAM-muistin käytetyn
+  ja kokonaismäärän.</li>
+<li>NVDA+Vaihto+3: Lukee kiintolevyjen ja siirrettävien asemien käytetyn ja
+  kokonaistilan.</li>
+<li>NVDA+Vaihto+4: Lukee akun varauksen prosentteina, latauksen tilan,
+  jäljellä olevan ajan (jos ei latauksessa) sekä varoituksen, mikäli
+  varauksen taso on alhainen tai kriittinen.</li>
+<li>NVDA+Vaihto+6: Ilmoittaa suorittimen arkkitehtuurin sekä Windowsin ja
+  Service Packin version.</li>
+<li>NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.</li>
+</ul>
+<p>Voit muuttaa näitä pikanäppäimiä Näppäinkomennot-valintaikkunasta.</p>
+<h2>Huomautuksia käytöstä</h2>
+<p>Tämä lisäosa ei korvaa Windowsin tehtävienhallintaa tai muita
+järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:</p>
+<ul>
+<li>Resurssitietoja ei voi kopioida leikepöydälle, jos lisäosaa käytetään
+  suojatuissa ruuduissa.</li>
+<li>Suorittimen käyttö ilmoitetaan loogisille suorittimille, ei fyysisille
+  ytimille. Tällä on merkitystä Hyper Threading -teknologiaa käyttävissä
+  suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.</li>
+<li>Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
+  kuten suurten tiedostojen kopiointia, on runsaasti.</li>
+<li>Suorittimen arkkitehtuuritietoja ilmoitettaessa "x86" ja "AMD64"
+  viittaavat 32- ja 64-bittisiin (x64) Intel- ja AMD-suorittimiin.</li>
+<li>Tämä lisäosa edellyttää Windows 10:tä tai uudempaa.</li>
+</ul>
+<p>Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
+kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
+-lisenssin kanssa.</p>
+<h2>Versio 23.02</h2>
+<ul>
+<li>Edellyttää NVDA 2022.4:ää tai uudempaa.</li>
+<li>Windows 10 21H2 (marraskuun 2021 päivitys/koontiversio 19044) tai uudempi
+  vaaditaan.</li>
+</ul>
+<h2>Versio 23.01</h2>
+<ul>
+<li>Edellyttää NVDA 2022.3:ea tai uudempaa.</li>
+<li>Windows 10 tai uudempi vaaditaan, koska Microsoft ei enää tue Windows
+  7:ää, 8:aa tai 8.1:tä tammikuusta 2023 alkaen.</li>
+<li>Päivitetty psutil-riippuvuus versioksi 5.9.4.</li>
+<li>Suorittimen arkkitehtuuri (x86/AMD64/ARM64) ilmoitetaan osana Windowsin
+  versiotietoja.</li>
+<li>NVDA ei enää ilmoita suoritinytimen kuormitusta yhden ytimen
+  järjestelmissä, koska keskimääräinen suorittimen kuormitus on sama kuin
+  ytimen kuormitus.</li>
+</ul>
+<h2>Versio 22.03</h2>
+<p>Versio 22.03 is the last stable version to support Windows 7 Service Pack 1,
+8, and 8.1.</p>
+<ul>
+<li>Edellyttää NVDA 2021.3:ea tai uudempaa.</li>
+<li>Varoitus näytetään yritettäessä asentaa lisäosaa Windows 7:ään, 8:aan tai
+  8.1:een.</li>
+<li>Päivitetty psutil-riippuvuus versioksi 5.9.0.</li>
+</ul>
+<h2>Versio 22.01</h2>
+<ul>
+<li>Edellyttää NVDA 2021.2:ta tai uudempaa.</li>
+</ul>
+<h2>Versio 21.10</h2>
+<ul>
+<li>NVDA 2021.1 tai uudempi vaaditaan tähän lisäosaan vaikuttavien
+  NVDA-muutosten takia.</li>
+</ul>
+<h2>Versio 21.08</h2>
+<ul>
+<li>Windowsin vähimmäisversiovaatimus on nyt sidottu NVDA-versioihin.</li>
+<li>Windowsin koontiversiot 20348 ja 22000 tunnistetaan Windows Server
+  2022:ksi ja Windows 11:ksi.</li>
+<li>Windows-versiota, kuten "Windows 10", ei käytetä
+  Insider-esiversioissa. Sen sijaan NVDA ilmoittaa "Windows Insider".</li>
+<li>Suorittimen arkkitehtuuri (x64 tai ARM64) ilmoitetaan osana Windowsin
+  versiotietoja 64-bittisissä järjestelmissä.</li>
+</ul>
+<h2>Versio 21.04</h2>
+<ul>
+<li>Edellyttää NVDA 2020.4:ää tai uudempaa.</li>
+<li>Päivitetty psutil-riippuvuus versioksi 5.8.0.</li>
+<li>Kun lisäosan komentoja painetaan kahdesti resurssitietojen kopioimiseksi
+  leikepöydälle, NVDA ilmoittaa kopioitavan resurssiyhteenvedon.</li>
+</ul>
+<h2>Versio 21.01</h2>
+<ul>
+<li>Päivitetty psutil-riippuvuus versioksi 5.7.3.</li>
+<li>Windowsin versioilmoitusta lyhennetty.</li>
+<li>Windows 8.1:ssä koontiversio.tarkennus ilmoitetaan osana Windowsin
+  versiota samalla tavalla kuin Windows 10:ssä.</li>
+</ul>
+<h2>Versio 20.09</h2>
+<ul>
+<li>Järjestelmän käynnissäoloaika ilmoitetaan nyt päivinä, tunteina,
+  minuutteina ja sekunteina.</li>
+<li>Windows Server Insider-esikoontiversio 20201 tai sitä uudempi tunnistetaan
+  oikein Server Insider -koontiversioksi.</li>
+</ul>
+<h2>Versio 20.07</h2>
+<ul>
+<li>Windows 10:n versio 20H2 tunnistetaan oikein Windowsin versiotietoja
+  haettaessa (NVDA+Vaihto+6).</li>
+<li>Yksinkertaistettu Windows 10:n versioviestiä painettaessa NVDA+Vaihto+6,
+  esim. Windows 10verVVKK:n:n asemesta Windows 10 VVKK.</li>
+</ul>
+<h2>Versio 20.06</h2>
+<ul>
+<li>Ratkaistu useita koodaustyylin ongelmia sekä mahdollisia bugeja Flake8:n
+  kanssa.</li>
+</ul>
+<h2>Versio 20.04</h2>
+<ul>
+<li>Päivitetty psutil-riippuvuus versioksi 5.7.0.</li>
+</ul>
+<h2>Versio 20.01</h2>
+<ul>
+<li>NVDA 2019.3 tai uudempi vaaditaan laajamittaisen Python 3:n käytön takia.</li>
+</ul>
+<h2>Versio 19.11</h2>
+<ul>
+<li>Windows Insider -esiversioiden tunnistusta paranneltu, erityisesti
+  20H1:ssä ja uudemmissa.</li>
+</ul>
+<h2>Versio 19.07</h2>
+<ul>
+<li>Päivitetty psutil-riippuvuus versioksi 5.6.3.</li>
+<li>Sisäisiä muutoksia akun tilan ilmoittavaan komentoon.</li>
+</ul>
+<h2>Versio 18.12</h2>
+<ul>
+<li>Sisäisiä muutoksia tulevien NVDA-versioiden tukemiseksi.</li>
+</ul>
+<h2>Versio 18.10</h2>
+<ul>
+<li>Koodista on tehty yhteensopivampaa Python 3:n kanssa.</li>
+<li>Päivitetty psutil-riippuvuus versioksi 5.4.7.</li>
+<li>NVDA ei enää ilmoita virheistä haettaessa tietoa levyn kapasiteetista ja
+  muistin käytöstä , mikäli käytetään  tietokonetta tai palvelua, jossa
+  RAM-muistin määrä tai levyn koko ylittää yhden petatavun.</li>
+<li>Muistin ja levyn käytön arvot näytetään enintään kahdella desimaalilla
+  (esim. 4.00 Gt aiemman 4.0 Gt sijaan).</li>
+<li>Windows Insider -esiversioiden tunnistusta paranneltu.</li>
+</ul>
+<h2>Versio 18.04</h2>
+<p>Versio 18.04.x on viimeinen julkaisu, joka tukee 7 SP1:tä vanhempia
+Windows-versioita.</p>
+<ul>
+<li>Viimeinen Windows Server 2003:a, Vistaa ja Server 2008:aa tukeva versio.</li>
+<li>Parempi Windows 10 -versioiden tunnistaminen sekä julkisten ja
+  Insider-esiversioiden erottaminen toisistaan.</li>
+</ul>
+<h2>Versio 17.12</h2>
+<ul>
+<li>Lisätty tuki 64-bittisille ARM-suorittimille Windows 10:ssä.</li>
+</ul>
+<h2>Versio 17.09</h2>
+<p>Tärkeää: 17.09.x on viimeinen Windows XP:tä tukeva versio.</p>
+<ul>
+<li>Viimeinen Windows XP:ssä ajettava versio.</li>
+<li>Windows 10:n koontiversio 16278 ja uudemmat tunnistetaan versioksi</li>
+<li>Tästä lisäosasta julkaistaan pieni päivitys, kun version 1709 vakaa
+  koontiversio on julkistettu.</li>
+</ul>
+<h2>Versio 17.07.1</h2>
+<ul>
+<li>Palautettu Windows XP:n tuki (ollut rikki versiosta 17.02 lähtien).</li>
+</ul>
+<h2>Versio 17.05</h2>
+<ul>
+<li>Järjestelmän käynnissäoloajan ilmoittaminen (edellisestä käynnistyksestä
+  kulunut aika; NVDA+Shift+7).</li>
+</ul>
+<h2>Versio 17.02</h2>
+<ul>
+<li>Päivitetty psutil-riippuvuus versioksi 5.0.1.</li>
+<li>NVDA ei näytä enää virheilmoitusta levynkäyttötietoja tarkistettaessa
+  järjestelmissä, joissa siirrettävää tietovälinettä ei tunnistettu oikein
+  (esim. kun muistikorttia ei ole asetettu kortinlukijaan).</li>
+</ul>
+<h2>Versio 16.08</h2>
+<p>Lisäosan versionumerot ovat Versiosta 16.08 alkaen muotoa
+vuosi.kuukausi.tarkistusversio.</p>
+<ul>
+<li>Windows 10:n eri versiot tunnistetaan nyt oikein (kuten 1607
+  koontiversiossa 14393).</li>
+<li>Windows 10:n koontiversiot tunnistetaan oikein kumulatiivisten päivitysten
+  asentamisen jälkeen (kuten 14393.51).</li>
+<li>Insider-esiversiot tunnistetaan oikein.</li>
+</ul>
+<h2>Muutokset versiossa 4.5</h2>
+<ul>
+<li>Lisäosan koodivarasto on muuttanut GitHubiin (löytyy osoitteesta
+  https://github.com/josephsl/resourcemonitor).</li>
+<li>Windows Server 2016 tunnistetaan asianmukaisesti.</li>
+</ul>
+<h2>Muutokset versiossa 4.0</h2>
+<ul>
+<li>Päivitetty psutil-riippuvuus versioksi 2.2.1.</li>
+<li>Suorituskykyä paranneltu huomattavasti suorittimen kuormituksen tietoja
+  haettaessa.</li>
+<li>Lisätty tuki Windows 10:n tunnistamiselle.</li>
+<li>Windows 10:n versiota ilmoitettaessa kerrotaan myös koontiversio.</li>
+<li>Ohje on käytettävissä Lisäosien hallinnasta.</li>
+</ul>
+<h2>Muutokset versiossa 3.1</h2>
+<ul>
+<li>Resurssienvalvonta tukee virallisesti Windows 8.1:tä.</li>
+<li>Käännöksiä päivitetty.</li>
+</ul>
+<h2>Muutokset versiossa 3.0</h2>
+<ul>
+<li>Päivitetty psutil-riippuvuus versioksi 1.2.1.</li>
+<li>Suorittimen arkkitehtuurin sekä Windowsin ja Service Packin version
+  ilmoittaminen (NVDA+Shift+6).</li>
+<li>Mahdollisuus vaihtaa lisäosan pikanäppäimiä (NVDA:n 2013.3-versiossa tai
+  uudemmassa).</li>
+<li>Mahdollisuus kopioida yksittäisen resurssin tiedot leikepöydälle
+  painamalla komentoja kahdesti.</li>
+</ul>
+<h2>Muutokset versiossa 2.4</h2>
+<ul>
+<li>Uusia kieliä: kiina (yksinkertaistettu), ukraina</li>
+<li>Käännöksiä päivitetty.</li>
+</ul>
+<h2>Muutokset versiossa 2.3</h2>
+<ul>
+<li>Lisätty bulgariankielinen käännös.</li>
+</ul>
+<h2>Muutokset versiossa 2.2</h2>
+<ul>
+<li>Lisätty seuraavat käännökset: arabia, aragonia, brasilianportugali,
+  espanja, galego, hollanti, italia, japani, korea, kroatia, nepali, puola,
+  ranska, saksa, slovakki, slovenia, suomi, tamili, turkki, unkari ja
+  venäjä.</li>
+</ul>
+<h2>Muutokset versiossa 2.1</h2>
+<ul>
+<li>Päivitetty psutil-riippuvuus versioksi 0.6.1.</li>
+<li>Korjattu pitkä viive asemien tietoja haettaessa.</li>
+<li>Koodia siivottu.</li>
+</ul>
+<h2>Muutokset versiossa 2.0</h2>
+<ul>
+<li>Lisätty käännösten tuki ja käännöskommentteja.</li>
+</ul>
+<h2>Muutokset versiossa 1.0</h2>
+<ul>
+<li>Ensimmäinen versio</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>
