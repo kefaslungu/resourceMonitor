@@ -48,10 +48,11 @@ następujące kwestie:
 Uwaga dotycząca licencji: ten dodatek używa Psutil, licencjonowanego na
 3-klauzulowej licencji BSD, która jest zgodna z GNU General Public License.
 
-## Version 23.02
+## Wersja 23.02
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* Wymagana jest NVDA 2022.4 lub nowsza.
+* Wymagany jest system Windows 10 21H2 (aktualizacja z listopada 2021
+  r./kompilacja 19044) lub nowszy.
 
 ## Wersja 23.01
 
