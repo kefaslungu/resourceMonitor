@@ -1,7 +1,6 @@
 # Resource Monitor (Монітор ресурсів) #
-
-* Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst та інші учасники спільноти NVDA
+* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst and other NVDA contributors
 * Завантажити [стабільну версію][1]
 * Сумісність: NVDA 2022.4 і новіші
 
@@ -24,6 +23,8 @@
 * NVDA+Shift+6: називає архітектуру процесора, версію Windows та номер
   пакета оновлень — service pack.
 * NVDA+Shift+7: повідомляє час роботи системи від моменту її завантаження.
+* NVDA+Shift+8: presents information on the wireless connection, ssid name
+  and strength, or no ssid if there is none available.
 
 Ці комбінації клавіш можна змінити у діалозі «Жести вводу».
 
@@ -47,6 +48,17 @@
 
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
+
+# Version history:
+
+## Version 23.05
+
+* added the ability to deteched and presents the state of the connected
+  wireless network.
+
+	* Announces the name of the connected wireless SSID.
+	* Announces the strength of the SSID
+	* Announce SSID not found if None is detected.
 
 ## Version 23.02
 
@@ -271,4 +283,4 @@
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

@@ -1,7 +1,6 @@
 # Kaynak izleme #
-
-* Yazarlar: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst ve diğer NVDA katkıda bulunanlar
+* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst and other NVDA contributors
 * [Kararlı sürümü][1] indir
 * NVDA compatibility: 2022.4 and later
 
@@ -23,6 +22,8 @@ bilgi verir.
 * NVDA+Shift+6: presents CPU Architecture and Windows version and service
   pack numbers.
 * NVDA+Shift+7: sistemin çalışma süresini gösterir.
+* NVDA+Shift+8: presents information on the wireless connection, ssid name
+  and strength, or no ssid if there is none available.
 
 You can change these shortcut keys via input gestures dialog.
 
@@ -44,6 +45,17 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
+
+# Version history:
+
+## Version 23.05
+
+* added the ability to deteched and presents the state of the connected
+  wireless network.
+
+	* Announces the name of the connected wireless SSID.
+	* Announces the strength of the SSID
+	* Announce SSID not found if None is detected.
 
 ## Version 23.02
 
@@ -264,4 +276,4 @@ gösterilecektir.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

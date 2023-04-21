@@ -1,9 +1,8 @@
 # Prati stanje resursa (Resource Monitor) #
-
-* Autori: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
-  Probst i drugi NVDA doprinositelji
+* Autori: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
-* NVDA compatibility: 2022.4 and later
+* NVDA kompatibilnost: 2022.4 i novije verzije
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
@@ -24,6 +23,8 @@ i druge informacije o korištenju resursa.
 * NVDA+šift+6: Prikazuje arhitekturu procesora, Windows verziju i broj
   service paketa.
 * NVDA+šift+7: Prikazuje vrijeme neprekidnog rada sustava.
+* NVDA+šift+8: prikazuje informacije o bežičnoj vezi, ime i snagu ssid-a ili
+  ne prikazuje ssid ako nije dostupan.
 
 Tipkovničke prečace je moguće mijenjati putem dijaloškog okvira za ulazne
 geste.
@@ -48,10 +49,22 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
 
-## Version 23.02
+# Povijest verzija:
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+## Verzija 23.05
+
+* Dodana je mogućnost otkrivanja nespojenih uređaja i prikaza stanja
+  povezane bežične mreže.
+
+	* Najavljuje ime priključenog bežičnog SSID-a.
+	* Najavljuje jačinu SSID-a
+	* Najavljuje da SSID nije pronađen ako nijedan nije otkriven.
+
+## Verzija 23.03
+
+* Zahtijeva NVDA 2022.4 ili noviju verziju.
+* Potreban je sustav Windows 10 21H2 (aktualizirana verzija iz studenog
+  2021./izgradnja 19044) ili novija verzija.
 
 ## Verzija 23.01
 
@@ -271,4 +284,4 @@ godina.mjesec.izdanje.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

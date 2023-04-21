@@ -1,7 +1,6 @@
 # Resurssienvalvonta #
-
-* Tekijät: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst sekä muut NVDA:n tekijät
+* Tekijät: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
 * Yhteensopivuus: NVDA 2022.4 ja uudemmat
 
@@ -25,6 +24,9 @@ resurssien käytöstä.
 * NVDA+Vaihto+6: Ilmoittaa suorittimen arkkitehtuurin sekä Windowsin ja
   Service Packin version.
 * NVDA+Vaihto+7 ilmoittaa järjestelmän käynnissäoloajan.
+* NVDA+Vaihto+8: Ilmoittaa langattoman verkon tiedot, kuten SSID-nimen ja
+  signaalin voimakkuuden tai "SSID:tä ei löydy", jos verkkoa ei ole
+  saatavilla.
 
 Voit muuttaa näitä pikanäppäimiä Näppäinkomennot-valintaikkunasta.
 
@@ -47,6 +49,17 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
+
+# Versiohistoria
+
+## Versio 23.05
+
+* Lisätty mahdollisuus yhdistetyn langattoman verkon tilan tunnistamiseen ja
+  näyttämiseen.
+
+	* Ilmoittaa yhdistetyn langattoman verkon SSID-nimen.
+	* Ilmoittaa langattoman verkon signaalin voimakkuuden.
+	* Ilmoittaa "SSID:tä ei löydy", mikäli langatonta verkkoa ei löydy.
 
 ## Versio 23.02
 
@@ -272,4 +285,4 @@ vuosi.kuukausi.tarkistusversio.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor
