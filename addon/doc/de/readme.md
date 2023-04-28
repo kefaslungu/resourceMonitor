@@ -1,6 +1,6 @@
 # Ressourcen-Monitor #
-* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
-  Ojala, Ethin Probst and other NVDA contributors
+* Autoren: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst und weitere Mitwirkende aus der NVDA-Community
 * [Stabile Version herunterladen][1]
 * NVDA-Kompatibilität: 2022.4 und neuer
 
@@ -24,8 +24,8 @@ verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 * NVDA+Umschalt+6: Zeigt die CPU-Architektur und die Windows-Versions- und
   Service-Pack-Nummern an.
 * NVDA+Shift+7: Zeigt die Laufzeit des Betriebssystems an.
-* NVDA+Shift+8: presents information on the wireless connection, ssid name
-  and strength, or no ssid if there is none available.
+* NVDA+Umschalt+8: Zeigt Informationen über die WLAN-Verbindung, die Stärke
+  des Signals, den Namen und die SSID an, falls vorhanden.
 
 Sie können diese Tastenkombinationen über das Dialogfeld der Tastenbefehle
 ändern.
@@ -52,16 +52,16 @@ Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
 
-# Version history:
+# Versionsverlauf:
 
 ## Version 23.05
 
-* added the ability to deteched and presents the state of the connected
-  wireless network.
+* Möglichkeit hinzugefügt, den Status der WLAN-Verbindung im Netzwerk zu
+  ermitteln und darzustellen.
 
-	* Announces the name of the connected wireless SSID.
-	* Announces the strength of the SSID
-	* Announce SSID not found if None is detected.
+	* Teilt die SSID und den Namen der WLAN-Verbindung mit.
+	* Teilt die Signalstärke der WLAN-Verbindung mit
+	* Teilt mit, sofern keine SSID im Netzwerk gefunden wurde.
 
 ## Version 23.02
 
