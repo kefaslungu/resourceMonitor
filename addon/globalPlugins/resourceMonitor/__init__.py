@@ -4,24 +4,60 @@
 # released under GPL.
 # This add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GPL.
 
-import winreg
-import re
 import functools
+import os.path
 import platform
+import queueHandler
+import winreg
+import winsound
+from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
-from subprocess import getoutput
 from typing import List, Tuple, Union, Any
-import globalPluginHandler
-import ui
 import api
+import globalCommands
+import globalPluginHandler
 import scriptHandler
+import ui
 import winVersion
 from . import psutil
+from . import wlanapi
 import addonHandler
 addonHandler.initTranslation()
+MODULE_DIR = os.path.dirname(__file__)
+def message(text, fileName):
+	ui.message(text)
+	path = os.path.join(MODULE_DIR, fileName)
+	if os.path.exists(path):
+		winsound.PlaySound(path, winsound.SND_ASYNC)
+
+SECURITY_TYPE = {
+	wlanapi.DOT11_AUTH_ALGO_80211_OPEN: _("No authentication (Open)"),
+	wlanapi.DOT11_AUTH_ALGO_80211_SHARED_KEY: "WEP",
+	wlanapi.DOT11_AUTH_ALGO_WPA: "WPA-Enterprise",
+	wlanapi.DOT11_AUTH_ALGO_WPA_PSK: "WPA-PSK",
+	wlanapi.DOT11_AUTH_ALGO_RSNA: "WPA2-Enterprise",
+	wlanapi.DOT11_AUTH_ALGO_RSNA_PSK: "WPA2-PSK",
+}
+@wlanapi.WLAN_NOTIFICATION_CALLBACK
+def notifyHandler(pData, pCtx):
+	if pData.contents.NotificationSource != wlanapi.WLAN_NOTIFICATION_SOURCE_ACM:
+		return
+	if pData.contents.NotificationCode == wlanapi.wlan_notification_acm_connection_complete:
+		ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+		queueHandler.queueFunction(queueHandler.eventQueue, message, _("Connected to {}").format(ssid.decode("utf-8")), "connect.wav")
+	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_disconnected:
+		ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+		queueHandler.queueFunction(queueHandler.eventQueue, message, _("Disconnected from {}").format(ssid.decode("utf-8")), "disconnect.wav")
+	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_arrival:
+		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been enabled"), "enable.wav")
+	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_removal:
+		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been disabled"), "disable.wav")
+
+def customResize(array, newSize):
+	return (array._type_ * newSize).from_address(addressof(array))
 
 # Styles of size calculation/string composition, do not change!
-# Treditional style, Y, K, M, G, B, ...
+# Traditional style, Y, K, M, G, B, ...
 traditional = [
 	(1024.0**8.0, 'Y'),
 	(1024.0**7.0, 'Z'),
@@ -232,9 +268,15 @@ def getWinVer() -> str:
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 	scriptCategory = _("Resource Monitor")
+
+	def __init__(self):
+		super().__init__()
+		self._negotiated_version = wintypes.DWORD()
+		self._client_handle = wintypes.HANDLE()
+		wlanapi.WlanOpenHandle(wlanapi.CLIENT_VERSION_WINDOWS_VISTA_OR_LATER, None, byref(self._negotiated_version), byref(self._client_handle))
+		wlanapi.WlanRegisterNotification(self._client_handle, wlanapi.WLAN_NOTIFICATION_SOURCE_ACM, True, notifyHandler, None, None, None)
 
 	@scriptHandler.script(
 		description=_(
@@ -359,35 +401,33 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 		description=_("Announces the system's wireless network ssid name, and its strength."),
 		gesture="kb:NVDA+shift+8"
-	)    
-	def script_network_information(self, gesture):
-		# Get the SSID of the current network
-		network_info = getoutput("netsh wlan show interface")
-		ssid_pattern = re.compile(r'SSID\s+:\s(.+)')
-		match = ssid_pattern.search(network_info)
-		if match:
-			ssid = match.group(1)
-		else:
-			# Translators: a message telling the user SSID not found.
-			ui.message("SSID not found")
+	)
+	def script_wlanStatusReport(self, gesture):
+		wlan_ifaces = POINTER(wlanapi.WLAN_INTERFACE_INFO_LIST)()
+		wlanapi.WlanEnumInterfaces(self._client_handle, None, byref(wlan_ifaces))
+
+		if wlan_ifaces.contents.NumberOfItems == 0:
+			info = _("No wireless devices")
+			wlanapi.WlanFreeMemory(wlan_ifaces)
 			return
 
-		# Get the signal strength of the current network
-		signal_strength = re.compile(r'Signal\s+:\s(\d+)')
-		match = signal_strength.search(network_info)
+		for i in customResize(wlan_ifaces.contents.InterfaceInfo, wlan_ifaces.contents.NumberOfItems):
+			if i.isState != wlanapi.wlan_interface_state_connected:
+				info = _("No wireless connections")
+				continue
 
-		if match:
-			strength = int(match.group(1))
-		else:
-			# Translators: Message reported when there is no information on the strength of the ssid
-			ui.message("Signal strength not found")
-			return
-
+			wlan_available_network_list = POINTER(wlanapi.WLAN_AVAILABLE_NETWORK_LIST)()
+			wlanapi.WlanGetAvailableNetworkList(self._client_handle, byref(i.InterfaceGuid), 0, None, byref(wlan_available_network_list))
+			for n in customResize(wlan_available_network_list.contents.Network, wlan_available_network_list.contents.NumberOfItems):
+				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
+					info = _("Connected wireless network: {}. Signal strength: {}%. Security type: {}").format(n.dot11Ssid.SSID.decode(), n.wlanSignalQuality, SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm))
+					break
+			wlanapi.WlanFreeMemory(wlan_available_network_list)
+		wlanapi.WlanFreeMemory(wlan_ifaces)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			# Translators: get information on the connected network information, and its strength.
-			ui.message((f"Connected wireless network: {ssid}, Signal Strength: {strength}%"))
+			ui.message(info)
 		else:
-			api.copyToClip((f"Connected wireless network: {ssid}, Signal Strength: {strength}%"), notify=True)
+			api.copyToClip(info, notify=True)
 
 	def getUptime(self) -> str:
 		bootTimestamp = psutil.boot_time()

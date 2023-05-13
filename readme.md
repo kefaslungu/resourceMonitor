@@ -32,6 +32,13 @@ This add-on does not replace task manager and other system information programs 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
 
 # Version history:
+## Version 23.05.1
+wlanReporter NVDA-addon is now part of resourceMonitor!
+
+* The old way of checking for wireless connections has been replaced by the windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+  * After speaking SSID name and strength, NVDA will also now tell you the security type of your network.
+  * NVDA will now alert you when you connect and disconnect from a wireless network.
+  * NVDA will now alert you when wireless connections is turned on or off.
 
 ## Version 23.05
 
