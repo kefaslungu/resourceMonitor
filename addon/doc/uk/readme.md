@@ -1,6 +1,6 @@
 # Resource Monitor (Монітор ресурсів) #
-* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
-  Ojala, Ethin Probst and other NVDA contributors
+* Автори: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst та інші учасники спільноти NVDA
 * Завантажити [стабільну версію][1]
 * Сумісність: NVDA 2022.4 і новіші
 
@@ -23,8 +23,8 @@
 * NVDA+Shift+6: називає архітектуру процесора, версію Windows та номер
   пакета оновлень — service pack.
 * NVDA+Shift+7: повідомляє час роботи системи від моменту її завантаження.
-* NVDA+Shift+8: presents information on the wireless connection, ssid name
-  and strength, or no ssid if there is none available.
+* NVDA+Shift+8: показує інформацію про бездротове з'єднання, ім'я SSID та
+  потужність мережі, або не показує імені, якщо воно відсутнє.
 
 Ці комбінації клавіш можна змінити у діалозі «Жести вводу».
 
@@ -49,21 +49,20 @@
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
 
-# Version history:
+# Історія версій:
 
-## Version 23.05
+## Версія 23.05
 
-* added the ability to deteched and presents the state of the connected
-  wireless network.
+* додано можливість виявлення й показу стану підключеної бездротової мережі.
 
-	* Announces the name of the connected wireless SSID.
-	* Announces the strength of the SSID
-	* Announce SSID not found if None is detected.
+	* Повідомляє ім’я SSID підключеної бездротової мережі.
+	* Повідомляє потужність SSID
+	* Якщо не знайдено жодного SSID, повідомляє про це.
 
-## Version 23.02
+## Версія 23.02
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* Необхідна версія NVDA 2022.4 або новіша.
+* Необхідна Windows 10 21H2 (November 2021 Update/build 19044) чи пізніша.
 
 ## Версія 23.01
 
