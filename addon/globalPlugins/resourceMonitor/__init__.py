@@ -275,8 +275,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__()
 		self._negotiated_version = wintypes.DWORD()
 		self._client_handle = wintypes.HANDLE()
-		wlanapi.WlanOpenHandle(wlanapi.CLIENT_VERSION_WINDOWS_VISTA_OR_LATER, None, byref(self._negotiated_version), byref(self._client_handle))
-		wlanapi.WlanRegisterNotification(self._client_handle, wlanapi.WLAN_NOTIFICATION_SOURCE_ACM, True, notifyHandler, None, None, None)
+		try:
+			wlanapi.WlanOpenHandle(wlanapi.CLIENT_VERSION_WINDOWS_VISTA_OR_LATER, None, byref(self._negotiated_version), byref(self._client_handle))
+			wlanapi.WlanRegisterNotification(self._client_handle, wlanapi.WLAN_NOTIFICATION_SOURCE_ACM, True, notifyHandler, None, None, None)
+		except OSError:
+			pass
 
 	@scriptHandler.script(
 		description=_(
@@ -403,13 +406,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="kb:NVDA+shift+8"
 	)
 	def script_wlanStatusReport(self, gesture):
+		info = self._getWlanInfo()
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			api.copyToClip(info, notify=True)
+
+	def _getWlanInfo(self):
+		if not self._client_handle:
+			return _("No wireless devices")
+
 		wlan_ifaces = POINTER(wlanapi.WLAN_INTERFACE_INFO_LIST)()
 		wlanapi.WlanEnumInterfaces(self._client_handle, None, byref(wlan_ifaces))
 
 		if wlan_ifaces.contents.NumberOfItems == 0:
-			info = _("No wireless devices")
 			wlanapi.WlanFreeMemory(wlan_ifaces)
-			return
+			return _("No wireless devices")
 
 		for i in customResize(wlan_ifaces.contents.InterfaceInfo, wlan_ifaces.contents.NumberOfItems):
 			if i.isState != wlanapi.wlan_interface_state_connected:
@@ -424,10 +436,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					break
 			wlanapi.WlanFreeMemory(wlan_available_network_list)
 		wlanapi.WlanFreeMemory(wlan_ifaces)
-		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(info)
-		else:
-			api.copyToClip(info, notify=True)
+		return info
 
 	def getUptime(self) -> str:
 		bootTimestamp = psutil.boot_time()
