@@ -5,14 +5,15 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-04-22 18:05+1000\n"
-"PO-Revision-Date: 2021-07-09 12:41-0700\n"
+"PO-Revision-Date: 2023-05-02 10:45+0800\n"
 "Last-Translator: 蔡宗豪 <surfer0627@gmail.com>\n"
-"Language-Team: NVDA-Taiwan Volunteers Team <nvdazh_TW@googlegroups.com>\n"
+"Language-Team: c469591@mail.batol.net, NVDA-Taiwan Volunteers Team "
+"<nvdazh_TW@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -86,7 +87,7 @@ msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Resource Monitor"
+msgstr "Resource Monitor資源監視器"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
@@ -132,7 +133,7 @@ msgstr "顯示實體/虛擬記憶體的總計空間及已用空間。"
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"實體記憶體: 大小 {physicalTotal}, 已使用 {physicalUsed}, 使用率 "
+"實體記憶體:已使用 {physicalUsed}, 大小 {physicalTotal}, 使用率 "
 "{physicalPercent}%. "
 
 #. Translators: Shows virtual memory usage.
@@ -148,21 +149,21 @@ msgstr "顯示目前使用的 Windows  版本。"
 
 #. Translators: system uptime in days.
 msgid "1 day"
-msgstr ""
+msgstr "系統已運作 1 天"
 
 #. Translators: system uptime in days.
 #, python-brace-format
 msgid "{0} days"
-msgstr ""
+msgstr "{0} 天"
 
 #. Translators: system uptime in seconds.
 msgid "1 second"
-msgstr ""
+msgstr "1 秒"
 
 #. Translators: system uptime in seconds.
 #, python-brace-format
 msgid "{0} seconds"
-msgstr ""
+msgstr "{0} 秒"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -179,7 +180,7 @@ msgstr "顯示記憶體及 CPU 使用率，如有電池訊息也一併顯示。"
 
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "記憶體使用率 {ramPercent}%, CPU 使用率 {cpuPercent}%."
+msgstr "CPU 使用率 {cpuPercent}%, 記憶體使用率 {ramPercent}%"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -187,3 +188,7 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr "此資源監控元件能讀出 CPU 負載，記憶體、電池、磁碟使用情形。"
+
+# Announces the system's wireless network ssid name, and its strength.
+msgid "Announces the system's wireless network ssid name, and its strength."
+msgstr "顯示系統連線的無線網路名稱及其強度"
