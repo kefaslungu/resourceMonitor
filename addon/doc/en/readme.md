@@ -32,6 +32,8 @@ This add-on does not replace task manager and other system information programs 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
 
 # Version history:
+## Version 23.06
+situation where resourceMonitor doesn't work properly due to unavailability of wireless adapters has been fixed.
 ## Version 23.05.1
 wlanReporter NVDA-addon is now part of resourceMonitor!
 

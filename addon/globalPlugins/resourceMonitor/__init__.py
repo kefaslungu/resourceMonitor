@@ -49,9 +49,9 @@ def notifyHandler(pData, pCtx):
 		ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
 		queueHandler.queueFunction(queueHandler.eventQueue, message, _("Disconnected from {}").format(ssid.decode("utf-8")), "disconnect.wav")
 	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_arrival:
-		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been enabled"), "enable.wav")
+		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been enabled"), "connect.wav")
 	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_removal:
-		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been disabled"), "disable.wav")
+		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been disabled"), "disconnect.wav")
 
 def customResize(array, newSize):
 	return (array._type_ * newSize).from_address(addressof(array))
