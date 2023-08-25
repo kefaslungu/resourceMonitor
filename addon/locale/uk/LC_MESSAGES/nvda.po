@@ -6,16 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:42-0700\n"
-"PO-Revision-Date: 2023-01-19 19:05+0200\n"
-"Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2023-08-21 17:40+0300\n"
+"PO-Revision-Date: 2023-08-21 17:47+0300\n"
+"Last-Translator: Heorhii <nvda.translation.uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -34,6 +34,21 @@ msgstr ""
 "Ви використовуєте версію Windows {releaseName} ({build}), яку цей додаток не "
 "підтримує.\n"
 "Цей додаток вимагає {supportedReleaseName} ({supportedBuild}) чи пізнішу."
+
+msgid "No authentication (Open)"
+msgstr "Без автентифікації (Відкрито)"
+
+msgid "Connected to {}"
+msgstr "Підключено до {}"
+
+msgid "Disconnected from {}"
+msgstr "Відключено від {}"
+
+msgid "A wireless device has been enabled"
+msgstr "Бездротовий пристрій увімкнено"
+
+msgid "A wireless device has been disabled"
+msgstr "Бездротовий пристрій вимкнено"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -173,6 +188,19 @@ msgstr ""
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Повідомляє про версію Windows, яку ви використовуєте."
+
+#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+msgid "Announces the system's wireless network ssid name, and its strength."
+msgstr "Повідомляє ім'я ssid бездротової мережі системи та її потужність."
+
+msgid "No wireless devices"
+msgstr "Немає бездротових пристроїв"
+
+msgid "No wireless connections"
+msgstr "Немає бездротових з'єднань"
+
+msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+msgstr "Підключено бездротову мережу: {}. Рівень сигналу: {}%. Тип захисту: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"
