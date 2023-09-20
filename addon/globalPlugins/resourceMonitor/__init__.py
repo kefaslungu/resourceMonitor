@@ -35,28 +35,31 @@ def message(text, fileName):
 	if os.path.exists(path):
 		winsound.PlaySound(path, winsound.SND_ASYNC)
 
-SECURITY_TYPE = {
-	wlanapi.DOT11_AUTH_ALGO_80211_OPEN: _("No authentication (Open)"),
-	wlanapi.DOT11_AUTH_ALGO_80211_SHARED_KEY: "WEP",
-	wlanapi.DOT11_AUTH_ALGO_WPA: "WPA-Enterprise",
-	wlanapi.DOT11_AUTH_ALGO_WPA_PSK: "WPA-PSK",
-	wlanapi.DOT11_AUTH_ALGO_RSNA: "WPA2-Enterprise",
-	wlanapi.DOT11_AUTH_ALGO_RSNA_PSK: "WPA2-PSK",
-}
-@wlanapi.WLAN_NOTIFICATION_CALLBACK
-def notifyHandler(pData, pCtx):
-	if pData.contents.NotificationSource != wlanapi.WLAN_NOTIFICATION_SOURCE_ACM:
-		return
-	if pData.contents.NotificationCode == wlanapi.wlan_notification_acm_connection_complete:
-		ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
-		queueHandler.queueFunction(queueHandler.eventQueue, message, _("Connected to {}").format(ssid.decode("utf-8")), "connect.wav")
-	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_disconnected:
-		ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
-		queueHandler.queueFunction(queueHandler.eventQueue, message, _("Disconnected from {}").format(ssid.decode("utf-8")), "disconnect.wav")
-	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_arrival:
-		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been enabled"), "connect.wav")
-	elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_removal:
-		queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been disabled"), "disconnect.wav")
+try:
+	SECURITY_TYPE = {
+		wlanapi.DOT11_AUTH_ALGO_80211_OPEN: _("No authentication (Open)"),
+		wlanapi.DOT11_AUTH_ALGO_80211_SHARED_KEY: "WEP",
+		wlanapi.DOT11_AUTH_ALGO_WPA: "WPA-Enterprise",
+		wlanapi.DOT11_AUTH_ALGO_WPA_PSK: "WPA-PSK",
+		wlanapi.DOT11_AUTH_ALGO_RSNA: "WPA2-Enterprise",
+		wlanapi.DOT11_AUTH_ALGO_RSNA_PSK: "WPA2-PSK",
+	}
+	@wlanapi.WLAN_NOTIFICATION_CALLBACK
+	def notifyHandler(pData, pCtx):
+		if pData.contents.NotificationSource != wlanapi.WLAN_NOTIFICATION_SOURCE_ACM:
+			return
+		if pData.contents.NotificationCode == wlanapi.wlan_notification_acm_connection_complete:
+			ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+			queueHandler.queueFunction(queueHandler.eventQueue, message, _("Connected to {}").format(ssid.decode("utf-8")), "connect.wav")
+		elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_disconnected:
+			ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+			queueHandler.queueFunction(queueHandler.eventQueue, message, _("Disconnected from {}").format(ssid.decode("utf-8")), "disconnect.wav")
+		elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_arrival:
+			queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been enabled"), "connect.wav")
+		elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_removal:
+			queueHandler.queueFunction(queueHandler.eventQueue, message, _("A wireless device has been disabled"), "disconnect.wav")
+except NameError:
+	pass
 
 def customResize(array, newSize):
 	return (array._type_ * newSize).from_address(addressof(array))
