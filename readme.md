@@ -24,17 +24,23 @@ You can change these shortcut keys via input gestures dialog.
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
 * Resource information cannot be copied to clipboard if running the add-on in secure screens.
-* CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores.
+* CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
 * This add-on requires Windows 10 or later.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
 
-# Version history:
+## Version 23.09
+
+* NVDA will no longer log startup error messages on Windows Server systems when wireless capability modules are unavailable.
+
 ## Version 23.06
-situation where resourceMonitor doesn't work properly due to unavailability of wireless adapters has been fixed.
+
+* Situation where resourceMonitor doesn't work properly due to unavailability of wireless adapters has been fixed.
+
 ## Version 23.05.1
+
 wlanReporter NVDA-addon is now part of resourceMonitor!
 
 * The old way of checking for wireless connections has been replaced by the windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
@@ -44,7 +50,7 @@ wlanReporter NVDA-addon is now part of resourceMonitor!
 
 ## Version 23.05
 
-* added the ability to deteched and presents the state of the connected wireless network.
+* added the ability to detect and present the state of the connected wireless network.
   * Announces the name of the connected wireless SSID.
   * Announces the strength of the ssid
   * Announce SSID not found if None is detected.
