@@ -29,7 +29,7 @@ addon_info = {
 	# Author(s)
 	"addon_author": "Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
-	"addon_url": "https://addons.nvda-project.org/",
+	"addon_url": "https://github.com/kefaslungu/resourceMonitor",
 	# URL for the add-on repository where the source code can be found
 	"addon_sourceURL": "https://github.com/kefaslungu/resourceMonitor",
 	# Documentation file name
