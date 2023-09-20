@@ -20,7 +20,12 @@ import scriptHandler
 import ui
 import winVersion
 from . import psutil
-from . import wlanapi
+# Windows Server systems do not include wlanapi.dll.
+try:
+	from . import wlanapi
+	wlanapiAvailable = True
+except OSError:
+	wlanapiAvailable = False
 import addonHandler
 addonHandler.initTranslation()
 MODULE_DIR = os.path.dirname(__file__)
