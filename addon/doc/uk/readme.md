@@ -1,7 +1,6 @@
 # Resource Monitor (Монітор ресурсів) #
-
-* Автори: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst та інші учасники спільноти NVDA
+* Автори: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst та інші учасники спільноти NVDA
 * Завантажити [стабільну версію][1]
 * Сумісність: NVDA 2022.4 і новіші
 
@@ -24,6 +23,8 @@
 * NVDA+Shift+6: називає архітектуру процесора, версію Windows та номер
   пакета оновлень — service pack.
 * NVDA+Shift+7: повідомляє час роботи системи від моменту її завантаження.
+* NVDA+Shift+8: показує інформацію про бездротове з'єднання, ім'я SSID та
+  потужність мережі, або не показує імені, якщо воно відсутнє.
 
 Ці комбінації клавіш можна змінити у діалозі «Жести вводу».
 
@@ -48,10 +49,20 @@
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
 
-## Version 23.02
+# Історія версій:
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+## Версія 23.05
+
+* додано можливість виявлення й показу стану підключеної бездротової мережі.
+
+	* Повідомляє ім’я SSID підключеної бездротової мережі.
+	* Повідомляє потужність SSID
+	* Якщо не знайдено жодного SSID, повідомляє про це.
+
+## Версія 23.02
+
+* Необхідна версія NVDA 2022.4 або новіша.
+* Необхідна Windows 10 21H2 (November 2021 Update/build 19044) чи пізніша.
 
 ## Версія 23.01
 
@@ -271,4 +282,4 @@
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

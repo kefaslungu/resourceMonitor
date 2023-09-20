@@ -1,7 +1,6 @@
 # Resource Monitor #
-
-* Autores: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst y otros colaboradores de NVDA
+* Autores: Alex Hall, Joseph Lee, Kefas Lungu, beqa gozalishvili, Tuukka
+  Ojala, Ethin Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
 * Compatibilidad con NVDA: de 2022.4 en adelante
 
@@ -24,6 +23,8 @@ utilización de la memoria y de otra información de uso de recursos.
 * NVDA+Shift+6: Presenta la Arquitectura de la CPU y la versión de Windows y
   el número del Service Pack.
 * NVDA+Shift+7: presenta el tiempo de actividad del sistema.
+* NVDA+shift+8: presenta información sobre la conexión inalámbrica, nombre
+  de SSID e intensidad, o sin nombre si no hay ninguno disponible.
 
 Puedes cambiar estos atajos desde el diálogo Gestos de entrada.
 
@@ -46,6 +47,17 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
+
+# Historial de versiones:
+
+## Versión 23.05
+
+* se ha añadido la capacidad de detectar y presentar el estado de la red
+  inalámbrica conectada.
+
+	* Anuncia el nombre del SSID inalámbrico conectado.
+	* Anuncia la intensidad del SSID
+	* Anuncia SSID no encontrado si no se detecta ninguno.
 
 ## Versión 23.02
 
@@ -276,4 +288,4 @@ como año.mes.revisión.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

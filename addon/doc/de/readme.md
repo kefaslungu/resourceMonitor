@@ -1,7 +1,6 @@
 # Ressourcen-Monitor #
-
-* Autoren: Alex Hall, Joseph Lee, Beqa Gozalishvili, Tuukka Ojala, Ethin
-  Probst und weitere NVDA-Mitwirkende
+* Autoren: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst und weitere Mitwirkende aus der NVDA-Community
 * [Stabile Version herunterladen][1]
 * NVDA-Kompatibilität: 2022.4 und neuer
 
@@ -25,6 +24,8 @@ verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 * NVDA+Umschalt+6: Zeigt die CPU-Architektur und die Windows-Versions- und
   Service-Pack-Nummern an.
 * NVDA+Shift+7: Zeigt die Laufzeit des Betriebssystems an.
+* NVDA+Umschalt+8: Zeigt Informationen über die WLAN-Verbindung, die Stärke
+  des Signals, den Namen und die SSID an, falls vorhanden.
 
 Sie können diese Tastenkombinationen über das Dialogfeld der Tastenbefehle
 ändern.
@@ -50,6 +51,17 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
+
+# Versionsverlauf:
+
+## Version 23.05
+
+* Möglichkeit hinzugefügt, den Status der WLAN-Verbindung im Netzwerk zu
+  ermitteln und darzustellen.
+
+	* Teilt die SSID und den Namen der WLAN-Verbindung mit.
+	* Teilt die Signalstärke der WLAN-Verbindung mit
+	* Teilt mit, sofern keine SSID im Netzwerk gefunden wurde.
 
 ## Version 23.02
 
@@ -285,4 +297,4 @@ angezeigt.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

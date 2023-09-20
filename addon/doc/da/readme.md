@@ -1,9 +1,8 @@
 # Ressourcemonitor #
-
-* Forfattere: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst og andre NVDA-bidragydere
+* Forfattere: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst og andre NVDA-bidragydere
 * Download [stable version][1]
-* NVDA compatibility: 2022.4 and later
+* NVDA-kompatibilitet: 2022.4 og nyere
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
@@ -21,11 +20,12 @@ hukommelse og andre oplysninger om forbrug af ressourcer.
 * NVDA+Shift+4: Oplyser batteristatus i procent, opladestatus, resterende
   batteritid (hvis det ikke er ved at blive opladet) og en advarsel, hvis
   batteriniveauet er lavt eller kritisk.
-* NVDA+Shift+6: presents CPU Architecture and Windows version and service
-  pack numbers.
+* NVDA+Shift+6: Oplyser CPU-arkitekturen, WIndows version og servicepakke.
 * NVDA+Shift+7: Oplyser systemets oppetid.
+* NVDA+Shift+8: Oplyser information om den trådløse forbindelse, ssid-navn
+  og signalstyrke, eller ingen ssid, hvis der ikke er nogen tilgængelig.
 
-You can change these shortcut keys via input gestures dialog.
+Du kan ændre disse genveje via dialogen "Håndter kommandoer"
 
 ## Brugsanvisninger
 
@@ -40,28 +40,41 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
   CPU-kernerne.
 * Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
-* When announcing processor architecture information, "x86" and "AMD64"
-  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* This add-on requires Windows 10 or later.
+* Når der annoncerer processorarkitekturoplysninger, henviser "x86" og
+  "AMD64" til henholdsvis 32-bit og 64-bit (x64) Intel- og AMD-processorer.
+* Denne tilføjelse kræver Windows 10 eller nyere.
 
 Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 3-klausul BSD-licens, som er kompatibel med GNU General Public License.
 
+# Versionshistorik:
+
+## Version 23.05
+
+* Tilføjet muligheden for at detektere og oplyse forbindelsesstatus for det
+  tilsluttede netværk.
+
+	* Oplyser navnet på det tilsluttede trådløse SSID.
+	* Oplyser signalstyrken af SSID
+	* Oplys "SSID" ikke fundet, hvis dette er tilfældet.
+
 ## Version 23.02
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* NVDA 2022.4 eller nyere er påkrævet.
+* Windows 10 21H2 (november 2021 Update/build 19044) eller nyere er
+  påkrævet.
 
 ## Version 23.01
 
-* NVDA 2022.3 or later is required.
-* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
-  supported by Microsoft as of January 2023.
-* Updated psutil dependency to 5.9.4.
-* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
-  of Windows version information.
-* On single-core systems, NVDA will no longer announce CPU core load as
-  average CPU load is the same as core load.
+* NVDA 2022.3 eller nyere er påkrævet.
+* Windows 10 eller nyere er påkrævet, da Windows 7, 8 og 8.1 ikke længere
+  understøttes af Microsoft fra januar 2023.
+* Opdateret psutil-afhængighed til 5.9.4.
+* NVDA vil annoncere den faktiske processorarkitektur (x86/AMD64/ARM64) som
+  en del af Windows-versionsoplysningerne.
+* På enkeltkernesystemer vil NVDA ikke længere annoncere
+  CPU-kernebelastning, da den gennemsnitlige CPU-belastning er den samme som
+  kernebelastningen.
 
 ## Version 22.03
 
@@ -271,4 +284,4 @@ som år.måned.revision.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

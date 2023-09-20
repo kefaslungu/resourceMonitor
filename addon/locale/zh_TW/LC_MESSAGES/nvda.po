@@ -5,101 +5,109 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-04-22 18:05+1000\n"
-"PO-Revision-Date: 2023-05-02 10:45+0800\n"
+"PO-Revision-Date: 2023-08-27 22:36+0800\n"
 "Last-Translator: 蔡宗豪 <surfer0627@gmail.com>\n"
-"Language-Team: c469591@mail.batol.net, NVDA-Taiwan Volunteers Team "
-"<nvdazh_TW@googlegroups.com>\n"
+"Language-Team: NVDA-Taiwan Volunteers Team <nvdazh_TW@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. Resource Monitor requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
+msgstr ""
+
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+msgstr ""
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "沒有連接電池。"
+msgstr "此電腦沒有連接電池。"
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent}% 正在充電"
+msgstr "{percent}% 電池充電中。"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "電池電量{percent}%， 剩餘時間{time}。"
+msgstr "電池還剩 {percent}%，電池時間未知。"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, fuzzy
 msgid "1 hour"
-msgstr "小時"
+msgstr "1 小時"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} hours"
-msgstr "小時"
+msgstr "{0} 小時"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, fuzzy
 msgid "1 minute"
-msgstr "分"
+msgstr "1 分"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{0} minutes"
-msgstr "分"
+msgstr "{0} 分"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "電池電量{percent}%， 剩餘時間{time}。"
+msgstr "電池還剩 {percent}%，大約 {time}。"
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr " 警告：電池電量低"
+msgstr " 警告: 電池電量低。"
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr " 警告：電池電量非常低"
+msgstr " 警告: 電池電量非常低。"
 
 #. Translators: Presents Windows version
-#. (example output: "Windows 8.1 (32-bit)").
+#. (example output: "Windows 10 (32-bit)").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
-
-#. Translators: Presents Windows version and service pack level
-#. (example output: "Windows 7 service pack 1 (64-bit)").
-#, python-brace-format
-msgid "{winVersion} {servicePackLevel} ({cpuBit})"
-msgstr "{winVersion} {servicePackLevel} ({cpuBit})"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Resource Monitor資源監視器"
+msgstr "資源監視器"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
-msgstr "顯示電池電量及充電狀態。未充電時顯示剩餘時間，電池電量低時顯示警告。"
+msgstr ""
+"顯示電池百分比、充電狀態、剩餘時間 (若沒有在充電)，及電池電量低或非常低時的警"
+"告。"
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
-msgstr "顯示電腦上本機磁碟及卸除是磁碟的總計空間及已用空間。"
+msgstr "顯示電腦上本機磁碟及卸除是磁碟的已使用空間及總計空間。"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
@@ -108,48 +116,50 @@ msgstr "顯示電腦上本機磁碟及卸除是磁碟的總計空間及已用空
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} (檔案系統 {driveType}): 大小 {totalSpace}, 已使用 {usedSpace}, 使"
-"用率 {percent}%."
+"{driveName} ({driveType} 磁碟): 已使用 {totalSpace} 中的 {usedSpace} 共 "
+"{percent}%。"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "顯示 CPU 平均使用率及每個核心的使用情形。"
+msgstr "顯示處理器平均負載及每個核心的負載。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心 {coreNumber}: {corePercent}%"
 
-#. Translators: Shows average load of the processor and the load for each core.
+#. Translators: Shows average load of the processor on single-core systems.
+#, python-brace-format
+msgid "Average CPU load {avgLoad}%."
+msgstr "CPU 平均負載 {avgLoad}%。"
+
+#. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "CPU 使用率 {avgLoad}%, {cores}."
+msgstr "CPU 平均負載 {avgLoad}%， {cores}。"
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "顯示實體/虛擬記憶體的總計空間及已用空間。"
+msgstr "顯示實體及虛擬記憶體的已使用空間及總計空間。"
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"實體記憶體:已使用 {physicalUsed}, 大小 {physicalTotal}, 使用率 "
-"{physicalPercent}%. "
+"實體: 已使用 {physicalTotal} 中的 {physicalUsed} ({physicalPercent}%)。 "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"虛擬記憶體: 大小 {virtualTotal}, 已使用 {virtualUsed}, 使用率 "
-"{virtualPercent}%."
+msgstr "虛擬: 已使用 {virtualTotal} 中的 {virtualUsed} ({virtualPercent}%)。"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
-msgstr "顯示目前使用的 Windows  版本。"
+msgstr "讀出您目前使用的 Windows 版本。"
 
 #. Translators: system uptime in days.
 msgid "1 day"
-msgstr "系統已運作 1 天"
+msgstr "1 天"
 
 #. Translators: system uptime in days.
 #, python-brace-format
@@ -167,28 +177,35 @@ msgstr "{0} 秒"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr "顯示系統執行時間。"
+msgstr "讀出系統執行時間。"
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr "無法獲得系統運行時間。"
+msgstr "無法取得系統執行時間。"
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
-msgstr "顯示記憶體及 CPU 使用率，如有電池訊息也一併顯示。"
+msgstr "顯示已使用記憶體、處理器平均負載、電池資訊 (若可用)。"
 
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "CPU 使用率 {cpuPercent}%, 記憶體使用率 {ramPercent}%"
+msgstr "已使用記憶體 {ramPercent}%、CPU {cpuPercent}%。"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
-msgstr "此資源監控元件能讀出 CPU 負載，記憶體、電池、磁碟使用情形。"
+msgstr ""
+"一個方便的資源監視器，能夠讀出 CPU 負載、記憶體使用情況、電池、磁碟使用狀態及"
+"更多。。"
 
-# Announces the system's wireless network ssid name, and its strength.
-msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr "顯示系統連線的無線網路名稱及其強度"
+#~ msgid ""
+#~ "You are using an older version of Windows. This add-on requires Windows "
+#~ "10 or later."
+#~ msgstr ""
+#~ "您正在使用較舊的 Windows 版本，此附加元件需要 Windows 10 或之後版本。"
+
+#~ msgid "Old Windows version"
+#~ msgstr "舊的 Windows 版本"

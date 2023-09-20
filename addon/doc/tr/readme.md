@@ -1,9 +1,8 @@
 # Kaynak izleme #
-
-* Yazarlar: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst ve diğer NVDA katkıda bulunanlar
+* Yazarlar: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Ethin
+  Probst ve diğer NVDA katılımcıları
 * [Kararlı sürümü][1] indir
-* NVDA compatibility: 2022.4 and later
+* NVDA uyumluluğu: 2022.4 ve sonrası
 
 Bu eklenti, CPU yükü, bellek kullanımı ve diğer kaynak kullanımları hakkında
 bilgi verir.
@@ -20,56 +19,70 @@ bilgi verir.
   alanını sunar.
 * NVDA+Shift+4: pil yüzdesini, şarj durumunu, kalan süreyi (şarjda değilse)
   ve pil zayıf veya kritikse bir uyarı gösterir.
-* NVDA+Shift+6: presents CPU Architecture and Windows version and service
-  pack numbers.
+* NVDA+Shift+6: CPU Mimarisini,  Windows sürümünü ve hizmet paketi
+  numaralarını duyurur.
 * NVDA+Shift+7: sistemin çalışma süresini gösterir.
+* NVDA+Shift+8: kablosuz bağlantı, ssid adı ve gücü veya yoksa ssid olmadığı
+  konusunda bilgi verir.
 
-You can change these shortcut keys via input gestures dialog.
+Girdi hareketleri iletişim kutusu aracılığıyla bu kısayol tuşlarını
+değiştirebilirsiniz.
 
 ## Kullanım notları
 
 Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka
 uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
-* Resource information cannot be copied to clipboard if running the add-on
-  in secure screens.
+* Eklenti güvenli ekranlarda çalıştırılıyorsa kaynak bilgileri panoya
+  kopyalanamaz.
 * CPU kullanımı fiziksel çekirdekler için değil mantıksal işlemciler için
   verilmiştir. Bu, CPU sayısının CPU çekirdeği sayısının iki katı olduğu
   Hyper-Threading kullanan işlemciler için fark edilebilir.
 * Büyük dosyaların kopyalanması gibi yoğun disk etkinliği varsa, disk
   kullanım bilgilerinin alınmasında gecikmeler olabilir.
-* When announcing processor architecture information, "x86" and "AMD64"
-  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* This add-on requires Windows 10 or later.
+* İşlemci mimarisi bilgileri açıklanırken "x86" ve "AMD64" sırasıyla 32 bit
+  ve 64 bit (x64) Intel ve AMD işlemcileri ifade eder.
+* Bu eklenti, Windows 10 veya üst sürümlerini gerektirir.
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
 
-## Version 23.02
+# Sürüm geçmişi:
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+## Sürüm 23.05
 
-## Version 23.01
+* bağlı kablosuz ağın durumunu algılama ve sunma yeteneği eklendi.
 
-* NVDA 2022.3 or later is required.
-* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
-  supported by Microsoft as of January 2023.
-* Updated psutil dependency to 5.9.4.
-* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
-  of Windows version information.
-* On single-core systems, NVDA will no longer announce CPU core load as
-  average CPU load is the same as core load.
+	* Bağlı kablosuz SSID'nin adını duyurur.
+	* SSID'nin gücünü duyurur
+	* Hiçbir SSID algılanmazsa bulunamadığı konusunda bilgi duyurur.
 
-## Version 22.03
+## Sürüm 23.02
 
-Version 22.03 is the last stable version to support Windows 7 Service Pack
-1, 8, and 8.1.
+* NVDA 2022.4 veya üstü gereklidir.
+* Windows 10 21H2 (Kasım 2021 Güncellemesi/derlemesi 19044) veya üstü
+  gereklidir.
 
-* NVDA 2021.3 or later is required.
-* A warning message will be displayed when attempting to install the add-on
-  on Windows 7, 8, and 8.1.
-* Updated psutil dependency to 5.9.0.
+## Sürüm 23.01
+
+* NVDA 2022.3 veya üstü gereklidir.
+* Ocak 2023 itibariyle Windows 7, 8 ve 8.1 artık Microsoft tarafından
+  desteklenmediğinden Windows 10 veya sonraki sürümleri gereklidir.
+* Psutil bağımlılığı 5.9.4'e güncellendi.
+* NVDA, Windows sürüm bilgilerinin bir parçası olarak gerçek işlemci
+  mimarisini (x86/AMD64/ARM64) duyurur.
+* Tek çekirdekli sistemlerde, ortalama CPU yükü çekirdek yükü ile aynı
+  olduğundan, NVDA artık CPU çekirdek yükünü duyurmayacaktır.
+
+## Sürüm 22.03
+
+Sürüm 22.03, Windows 7 Service Pack 1, 8 ve 8.1'i destekleyen son kararlı
+sürümdür.
+
+* NVDA 2021.3 veya üstü gereklidir.
+* Eklentiyi Windows 7, 8 ve 8.1'e yüklemeye çalışırken bir uyarı mesajı
+  görüntülenecektir.
+* psutil bağımlılığı 5.9.0 olarak güncellendi.
 
 ## Sürüm 22.01
 
@@ -93,13 +106,13 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 ## Sürüm 21.04
 
 * NVDA 2020.4 veya üstü gereklidir.
-* psutil bağımlılığı 5.8.0 olarak güncellendi.
+* Psutil bağımlılığı 5.8.0 olarak güncellendi.
 * Kaynak bilgilerini panoya kopyalamak için eklenti komutlarına iki kez
   basıldığında, NVDA kopyalanmakta olan kaynak özetini söyler.
 
 ## Sürüm 21.01
 
-* psutil bağımlılığı 5.7.3 olarak güncellendi.
+* Psutil bağımlılığı 5.7.3 olarak güncellendi.
 * Kısaltılmış Windows sürüm mesajı.
 * Windows 8.1'de build.revision, Windows 10'a benzer şekilde Windows sürüm
   mesajının bir parçası olarak duyurulacaktır.
@@ -124,7 +137,7 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 
 ## Sürüm 20.04
 
-* psutil bağımlılığı 5.7.0'a güncellendi.
+* Psutil bağımlılığı 5.7.0'a güncellendi.
 
 ## Sürüm 20.01
 
@@ -137,7 +150,7 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 
 ## Sürüm 19.07
 
-* psutil bağımlılığı 5.6.3 olarak güncellendi.
+* Psutil bağımlılığı 5.6.3 olarak güncellendi.
 * Pil durumu duyuru komutunda dahili değişiklikler.
 
 ## Sürüm 18.12
@@ -147,7 +160,7 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 ## Sürüm 18.10
 
 * Kod Python 3 ile daha uyumlu hale getirildi.
-* psutil bağımlılığı 5.4.7 olarak güncellendi.
+* Ppsutil bağımlılığı 5.4.7 olarak güncellendi.
 * Disk kapasitesi ve bellek kullanımı elde edilirken, NVDA, bir petabayttan
   fazla RAM veya disk boyutuna sahip bir bilgisayar veya hizmet
   kullanıldığında artık hata vermeyecektir.
@@ -188,7 +201,7 @@ sürümdür.
 
 ## Sürüm 17.02
 
-* psutil bağımlılığı 5.0.1'e güncellendi.
+* Psutil bağımlılığı 5.0.1'e güncellendi.
 * Disk kullanımını kontrol ederken, NVDA, çıkarılabilir medyanın düzgün
   tanınmadığı bazı sistemlerde (örneğin, bir kart okuyucuya bir kart
   takılmadığında) artık bir hata iletişim kutusu göstermeyecektir.)
@@ -212,7 +225,7 @@ gösterilecektir.
 
 ## 4.0 için değişiklikler
 
-* psutil bağımlılığı 2.2.1'e güncellendi.
+* Psutil bağımlılığı 2.2.1'e güncellendi.
 * CPU yükü hakkında bilgi alırken büyük ölçüde geliştirilmiş performans.
 * Windows 10'un tanınması için destek eklendi.
 * Windows 10'da Windows'un derleme numarası da duyurulacak.
@@ -230,7 +243,7 @@ gösterilecektir.
   duyurusu (NVDA+Shift+6).
 * Kısayol tuşları, NVDA 2013.3 sürümüyle birlikte değiştirilebilir.
 * Kaynak bilgisi öğrenme komutlarına iki kez basıldığında bilgi panoya
-  kopyalanıyor
+  kopyalanıyor.
 
 ## 2.4 için değişiklikler
 
@@ -256,12 +269,12 @@ gösterilecektir.
 
 ## 2.0 için değişiklikler
 
-* çeviri desteği ve açıklamalar eklendi
+* çeviri desteği ve açıklamalar eklendi.
 
 ## 1.0 için değişiklikler
 
-* ilk sürüm
+* İlk sürüm
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

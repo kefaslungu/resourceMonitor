@@ -1,7 +1,6 @@
 # 资源监控器 #
-
-* 作者:Alex Hall，Joseph Lee，beqa gozalishvili，Tuukka Ojala，Ethin
-  Probst和其他NVDA贡献者
+* 作者: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala,
+  Ethin Probst 和其他NVDA贡献者
 * 下载 [稳定版][1]
 * NVDA 兼容性：2022.4 及更高版本
 
@@ -16,6 +15,7 @@
 * NVDA+Shift+4： 读出电量、充电状态、剩余时间（如果没有充电）且在电量不足时发出警告。
 * NVDA+Shift+6：读出 CPU 架构以及 Windows 版本和 Service Pack 编号。
 * NVDA+Shift+7： 读出当前系统的运行时间。
+* NVDA+Shift+8：显示有关无线连接、ssid 名称和强度的信息，如果没有可用的 ssid，则不显示。
 
 您可以通过按键与手势对话框更改这些快捷键。
 
@@ -30,6 +30,16 @@
 * 此插件需要 Windows 10 或更高版本。
 
 关于许可证的说明：此插件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
+
+# 版本历史：
+
+## 版本 23.05
+
+* 添加了检测已连接无线网络状态的功能。
+
+	* 读出连接的无线 SSID 的名称。
+	* 读出 SSID 的强度
+	* 如果未检测到，则读出未找到 SSID。
 
 ## 版本 23.02
 
@@ -217,4 +227,4 @@
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

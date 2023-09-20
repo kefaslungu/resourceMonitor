@@ -1,9 +1,8 @@
 # Resource Monitor #
-
-* Auteurs : Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst et d'autres contributeurs de NVDA
+* Auteurs : Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst et d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
-* NVDA compatibility: 2022.4 and later
+* Compatibilité NVDA : 2022.4 et versions ultérieures
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -22,12 +21,15 @@ ressources.
 * NVDA+Maj+4: Annonce le pourcentage de charge de la batterie, l'état de
   charge si elle est en charge, le temps restant (sauf si en charge), et une
   alerte si le niveau de la batterie est faible ou critique.
-* NVDA+Shift+6: presents CPU Architecture and Windows version and service
-  pack numbers.
+* NVDA+Maj+6: Annonce l'architecture du processeur et les numéros de version
+  de Windows et du service pack.
 * NVDA+Maj+7: Annonce le temps de fonctionnement du système depuis sa mise
   en route.
+* NVDA+Maj+8: Annonce des informations sur la connexion sans fil, le nom et
+  la force SSID, ou pas de SSID s'il n'y en a pas disponible.
 
-You can change these shortcut keys via input gestures dialog.
+Vous pouvez modifier ces touches de raccourci dans le dialogue Gestes de
+commandes.
 
 ## Remarques sur l'utilisation
 
@@ -43,28 +45,41 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
-* When announcing processor architecture information, "x86" and "AMD64"
-  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* This add-on requires Windows 10 or later.
+* Lors de l'annonce des informations d'architecture du processeur, "x86" et
+  "AMD64" se réfèrent aux processeurs Intel et AMD 32 bits et 64 bits (x64),
+  respectivement.
+* Cette extension requiert Windows 10 ou au-delà.
 
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
 
+# Historique de version :
+
+## Version 23.05
+
+* Ajout de la possibilité de détendre et d'annoncer l'état du réseau sans
+  fil connecté.
+
+	* Annonce le nom du SSID sans fil connecté.
+	* Annonce la force du SSID
+	* Annoncez SSID non trouvé si aucun n'est détecté.
+
 ## Version 23.02
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* NVDA 2022.4 ou version ultérieure est requis.
+* Windows 10 21H2 (November 2021 Update/build 19044) ou au-delà est requis.
 
 ## Version 23.01
 
-* NVDA 2022.3 or later is required.
-* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
-  supported by Microsoft as of January 2023.
-* Updated psutil dependency to 5.9.4.
-* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
-  of Windows version information.
-* On single-core systems, NVDA will no longer announce CPU core load as
-  average CPU load is the same as core load.
+* NVDA 2022.3 ou version ultérieure est requis.
+* Windows 10 ou ultérieure est requis car Windows 7, 8 et 8.1 ne sont plus
+  pris en charge par Microsoft en janvier 2023.
+* Mise à jour de la dépendance psutil vers la version 5.9.4.
+* NVDA annoncera l'architecture du processeur actuel (x86 / AMD64 / ARM64)
+  avec les informations de version de Windows.
+* Sur les systèmes d'un seul cœur, NVDA n'annoncera plus la charge du cœur
+  du processeur car la charge moyenne du processeur est la même que la
+  charge du cœur.
 
 ## Version 22.03
 
@@ -99,7 +114,7 @@ La version 22.03 est la dernière version stable à prendre en charge Windows
 
 ## Version 21.04
 
-* Nécessite NVDA 2020.4 ou au-delà.
+* NVDA 2020.4 ou version ultérieure est requis.
 * Mise à jour de la dépendance psutil vers la version 5.8.0.
 * Lorsqu'on appuie deux fois sur une commande de l'extension pour copier les
   informations sur les ressources dans le presse-papiers, NVDA annoncera le
@@ -280,4 +295,4 @@ forme année.mois.révision.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

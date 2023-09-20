@@ -1,7 +1,6 @@
 # Resource Monitor #
-
-* Autori: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala e altri
-  collaboratori di NVDA
+* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst and other NVDA contributors
 * Scarica la [versione stabile][1]
 * NVDA compatibility: 2022.4 and later
 
@@ -25,6 +24,8 @@ sistema, quali carico della CPU, utilizzo della memoria e molto altro.
 * NVDA+Shift+6: presents CPU Architecture and Windows version and service
   pack numbers.
 * NVDA+Shift+7 riporta il tempo di attività del sistema.
+* NVDA+Shift+8: presents information on the wireless connection, ssid name
+  and strength, or no ssid if there is none available.
 
 You can change these shortcut keys via input gestures dialog.
 
@@ -48,6 +49,17 @@ si tenga presente che:
 
 Nota sulla licenza: questo componente aggiuntivo utilizza Psutil, concesso
 con licenza 3-Clause BSD compatibile con GNU General Public License.
+
+# Version history:
+
+## Version 23.05
+
+* added the ability to deteched and presents the state of the connected
+  wireless network.
+
+	* Announces the name of the connected wireless SSID.
+	* Announces the strength of the SSID
+	* Announce SSID not found if None is detected.
 
 ## Version 23.02
 
@@ -279,4 +291,4 @@ come anno.mese.revisione.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor
