@@ -278,6 +278,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		if not wlanapiAvailable:
+			self._client_handle = None
+			return
 		self._negotiated_version = wintypes.DWORD()
 		self._client_handle = wintypes.HANDLE()
 		try:
