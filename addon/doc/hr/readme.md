@@ -1,4 +1,5 @@
 # Prati stanje resursa (Resource Monitor) #
+
 * Autori: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst i drugi NVDA doprinositelji
 * Preuzmi [stabilnu verziju][1]
@@ -36,9 +37,10 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 
 * Podaci o resursima ne mogu se kopirati u međuspremnik ako se dodatak
   pokreće na sigurnim ekranima.
-* Informacije o korištenju procesora dane su za logičke procesore, ne za
-  fizičke jezgre. To se može primijetiti kod procesora koji koriste
-  Hyper-Threading gdje je broj procesora dvostruko veći od broja jezgri.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores. On some newer computers, not all CPU
+  cores will have hyper-threading enabled.
 * Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
@@ -49,15 +51,36 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
 
-# Povijest verzija:
+## Version 23.09
+
+* NVDA will no longer log startup error messages on Windows Server systems
+  when wireless capability modules are unavailable.
+
+## Version 23.06
+
+* Situation where resourceMonitor doesn't work properly due to
+  unavailability of wireless adapters has been fixed.
+
+## Version 23.05.1
+
+wlanReporter NVDA-addon is now part of resourceMonitor!
+
+* The old way of checking for wireless connections has been replaced by the
+  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+
+	* After speaking SSID name and strength, NVDA will also now tell you the
+	  security type of your network.
+	* NVDA will now alert you when you connect and disconnect from a wireless
+	  network.
+	* NVDA will now alert you when wireless connections is turned on or off.
 
 ## Verzija 23.05
 
-* Dodana je mogućnost otkrivanja nespojenih uređaja i prikaza stanja
-  povezane bežične mreže.
+* added the ability to detect and present the state of the connected
+  wireless network.
 
 	* Najavljuje ime priključenog bežičnog SSID-a.
-	* Najavljuje jačinu SSID-a
+	* Announces the strength of the ssid
 	* Najavljuje da SSID nije pronađen ako nijedan nije otkriven.
 
 ## Verzija 23.03

@@ -1,4 +1,5 @@
 # Resource Monitor #
+
 * Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst and other NVDA contributors
 * Pobierz [wersja stabilna][1]
@@ -36,9 +37,10 @@ następujące kwestie:
 
 * Informacji o zasobach nie można skopiować do schowka, jeśli dodatek jest
   uruchamiany na bezpiecznych ekranach.
-* Użycie CPU jest podawane dla procesorów logicznych, nie fizycznych
-  rdzeni. Jest to zauważalne w przypadku procesorów używających technologii
-  Hyper Threading gdzie liczba CPU jest dwukrotnie większa od liczby rdzeni.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores. On some newer computers, not all CPU
+  cores will have hyper-threading enabled.
 * Jeśli aktywność dysku jest za duża, tak jak na przykład kopiowanie
   wielkich plików, możliwe są opóźnienia w trakcie pobierania informacji.
 * Podczas ogłaszania informacji o architekturze procesora "x86" i "AMD64"
@@ -49,15 +51,36 @@ następujące kwestie:
 Uwaga dotycząca licencji: ten dodatek używa Psutil, licencjonowanego na
 3-klauzulowej licencji BSD, która jest zgodna z GNU General Public License.
 
-# Version history:
+## Version 23.09
+
+* NVDA will no longer log startup error messages on Windows Server systems
+  when wireless capability modules are unavailable.
+
+## Version 23.06
+
+* Situation where resourceMonitor doesn't work properly due to
+  unavailability of wireless adapters has been fixed.
+
+## Version 23.05.1
+
+wlanReporter NVDA-addon is now part of resourceMonitor!
+
+* The old way of checking for wireless connections has been replaced by the
+  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+
+	* After speaking SSID name and strength, NVDA will also now tell you the
+	  security type of your network.
+	* NVDA will now alert you when you connect and disconnect from a wireless
+	  network.
+	* NVDA will now alert you when wireless connections is turned on or off.
 
 ## Version 23.05
 
-* added the ability to deteched and presents the state of the connected
+* added the ability to detect and present the state of the connected
   wireless network.
 
 	* Announces the name of the connected wireless SSID.
-	* Announces the strength of the SSID
+	* Announces the strength of the ssid
 	* Announce SSID not found if None is detected.
 
 ## Wersja 23.02

@@ -1,4 +1,5 @@
 # Resource Monitor #
+
 * Auteurs : Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst et d'autres contributeurs de NVDA
 * Télécharger [version stable][1]
@@ -41,7 +42,8 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 * L'utilisation du processeur est donnée pour les processeurs logiques, non
   pour les cœurs physiques. Cela est perceptible pour les processeurs qui
   utilise la technologie Hyper Threading où le nombre de CPU est deux fois
-  le nombre de cœurs du processeur.
+  le nombre de cœurs du processeur. Sur certains ordinateurs plus récents,
+  tous les cœurs du CPU ne seront pas activés par l'Hyper Threading.
 * Si l'activité du disque est lourde, comme la copie de fichiers volumineux,
   il peut y avoir des retards lors de l'obtention d'informations sur
   l'utilisation du disque.
@@ -53,7 +55,30 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
 
-# Historique de version :
+## Version 23.09
+
+* NVDA ne journalisera plus les messages d'erreur de démarrage sur les
+  systèmes Windows Server lorsque les modules de capacité sans fil ne sont
+  pas disponibles.
+
+## Version 23.06
+
+* La situation où resourceMonitor ne fonctionne pas correctement en raison
+  de l'indisponibilité des adaptateurs sans fil a été corrigé.
+
+## Version 23.05.1
+
+wlanReporter NVDA-addon fait maintenant partie de resourceMonitor !
+
+* L'ancienne façon de vérifier les connexions sans fil a été remplacée par
+  l'API Windows de wlanReporter: https://github.com/kvark128/WlanReporter/ .
+
+	* Après avoir annoncé le nom et la force SSID, NVDA vous dira également le
+	  type de sécurité de votre réseau.
+	* NVDA vous alertera désormais lorsque vous vous connectez et vous
+	  déconnectez d'un réseau sans fil.
+	* NVDA vous alertera désormais lorsque les connexions sans fil sont
+	  activées ou désactivées.
 
 ## Version 23.05
 

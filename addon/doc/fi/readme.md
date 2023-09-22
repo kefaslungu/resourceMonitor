@@ -1,4 +1,5 @@
 # Resurssienvalvonta #
+
 * Tekijät: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst sekä muut NVDA:n tekijät
 * Lataa [vakaa versio][1]
@@ -39,7 +40,9 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   suojatuissa ruuduissa.
 * Suorittimen käyttö ilmoitetaan loogisille suorittimille, ei fyysisille
   ytimille. Tällä on merkitystä Hyper Threading -teknologiaa käyttävissä
-  suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten määrä.
+  suorittimissa, joissa suorittimien määrä on kaksi kertaa ydinten
+  määrä. Joissakin uudemmissa tietokoneissa Hyper Threading ei ole käytössä
+  kaikilla suoritinytimillä.
 * Levynkäyttötietoja haettaessa saattaa olla viivettä, mikäli levytoimintaa,
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Suorittimen arkkitehtuuritietoja ilmoitettaessa "x86" ja "AMD64"
@@ -50,7 +53,30 @@ Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
 
-# Versiohistoria
+## Versio 23.09
+
+* NVDA ei enää kirjoita lokiin käynnistyksen virheilmoituksia Windows Server
+  -järjestelmissä, kun langaton verkkosovitin ei ole käytettävissä.
+
+## Versio 23.06
+
+* Korjattu tilanne, jossa Resurssienvalvonta ei toimi oikein langattoman
+  verkkosovittimen puuttumisen vuoksi.
+
+## Versio 23.05.1
+
+WlanReporter-lisäosa sisältyy nyt Resurssienvalvontaan!
+
+* Aiempi langattomien yhteyksien etsintätapa on korvattu Windowsin
+  rajapinnalla, jota käytetään wlanReporter-lisäosassa:
+  https://github.com/kvark128/WlanReporter/.
+
+	* NVDA kertoo nyt SSID-nimen ja signaalin voimakkuuden jälkeen myös verkon
+	  suojauksen tyypin.
+	* NVDA ilmoittaa nyt langattoman verkon yhteyden muodostamisesta ja
+	  katkaisusta.
+	* NVDA ilmoittaa nyt, kun langattomat yhteydet otetaan käyttöön tai
+	  poistetaan käytöstä.
 
 ## Versio 23.05
 

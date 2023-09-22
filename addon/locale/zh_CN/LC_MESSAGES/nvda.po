@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 18.04\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:41-0700\n"
-"PO-Revision-Date: 2023-01-17 02:08+0800\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2023-09-21 09:22+0800\n"
+"PO-Revision-Date: 2023-09-21 09:23+0800\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -25,7 +25,6 @@ msgstr "不支持的 Windows 版本"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
-#, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "this add-on.\n"
@@ -34,6 +33,21 @@ msgstr ""
 "您正在使用 {releaseName} ({build})，插件不支持此版本。\n"
 "此插件需要 {supportedReleaseName} ({supportedBuild}) 或更高版本。"
 
+msgid "No authentication (Open)"
+msgstr "开放（无需验证）"
+
+msgid "Connected to {}"
+msgstr "{} 已连接"
+
+msgid "Disconnected from {}"
+msgstr "{} 已断开"
+
+msgid "A wireless device has been enabled"
+msgstr "已启用无线设备"
+
+msgid "A wireless device has been disabled"
+msgstr "已禁用无线设备"
+
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -41,13 +55,11 @@ msgstr "未连接电池。"
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "正在充电，百分之 {percent}。"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
-#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "百分之 {percent} 电量,剩余时间未知。"
 
@@ -58,7 +70,6 @@ msgstr "1 小时"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, python-brace-format
 msgid "{0} hours"
 msgstr "{0} 小时"
 
@@ -69,13 +80,11 @@ msgstr "1 分"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} 分"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "百分之 {percent} 电量，约运行 {time}"
 
@@ -89,7 +98,6 @@ msgstr " 警告，电量严重不足。"
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
 
@@ -115,7 +123,6 @@ msgstr "读出此计算机上所有驱动器的文件系统和空间使用情况
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -127,17 +134,14 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "读出每个 CPU 核心的负载和平均负载。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心{coreNumber}: 百分之 {corePercent}"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "平均 CPU 负载： 百分之 {avgLoad}"
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "平均 CPU 负载： 百分之 {avgLoad}, {cores}"
 
@@ -146,14 +150,12 @@ msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "读出物理内存和虚拟内存的容量和使用情况。"
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "物理内存： 已用 {physicalUsed}， 总大小 {physicalTotal}， 使用率 百分之 "
 "{physicalPercent}。 "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "虚拟内存：已用 {virtualUsed}， 总大小 {virtualTotal}， 使用率 百分之 "
@@ -163,12 +165,24 @@ msgstr ""
 msgid "Announces the version of Windows you are using."
 msgstr "读出当前 Windows 的版本信息。"
 
+#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+msgid "Announces the system's wireless network ssid name, and its strength."
+msgstr "读出已连接的无线网络名称及其信号强度。"
+
+msgid "No wireless devices"
+msgstr "没有无线设备"
+
+msgid "No wireless connections"
+msgstr "未连接无线网络"
+
+msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+msgstr "{} 已连接，信号强度： 百分之 {}， 安全类型： {}"
+
 #. Translators: system uptime in days.
 msgid "1 day"
 msgstr "系统已运行 1 天"
 
 #. Translators: system uptime in days.
-#, python-brace-format
 msgid "{0} days"
 msgstr "系统已运行 {0}天"
 
@@ -177,7 +191,6 @@ msgid "1 second"
 msgstr "1秒"
 
 #. Translators: system uptime in seconds.
-#, python-brace-format
 msgid "{0} seconds"
 msgstr "{0}秒"
 
@@ -194,7 +207,6 @@ msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "读出内存的使用率、CPU 平均负载和电池信息（如果可用）。"
 
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "内存已用 百分之 {ramPercent}，CPU 已用 百分之 {cpuPercent}。"
 

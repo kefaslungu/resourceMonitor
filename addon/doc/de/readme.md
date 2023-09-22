@@ -1,4 +1,5 @@
 # Ressourcen-Monitor #
+
 * Autoren: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst und weitere Mitwirkende aus der NVDA-Community
 * [Stabile Version herunterladen][1]
@@ -37,10 +38,11 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 
 * Die Ressourcen-Informationen können nicht in die Zwischenablage kopiert
   werden, wenn die Erweiterung im geschützten Bereich ausgeführt wird.
-* Die Prozessor-Auslastung wird für logische Prozessoren, jedoch nicht für
-  physische Kerne ausgegeben. Dies ist bei Prozessoren bemerkbar, welche
-  Hyper Threading verwenden. Bei diesen Prozessoren ist die Anzahl der
-  Prozessoren das doppelte der Prozessorkerne.
+* Die CPU-Nutzung wird für logische Prozessoren angegeben, nicht für
+  physische Kerne. Dies macht sich bei Prozessoren mit Hyper-Threading
+  bemerkbar, bei denen die Anzahl der CPUs doppelt so hoch ist wie die
+  Anzahl der CPU-Kerne. Auf einigen neueren Computern ist Hyper-Threading
+  nicht für alle CPU-Kerne aktiviert.
 * Es kann zu Verzögerungen beim Abrufen von Informationen über die
   Festplattennutzung kommen, wenn starke Festplattenaktivitäten wie z.B. das
   Kopieren großer Dateien stattfinden.
@@ -52,15 +54,37 @@ Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
 
-# Versionsverlauf:
+## Version 23.09
+
+* NVDA protokolliert keine Fehlermeldungen mehr beim Start auf Windows
+  Servern, sofern keine Wireless-Module verfügbar sind.
+
+## Version 23.06
+
+* Die Situation, in der diese NVDA-Erweiterung auf Grund der
+  Nichtverfügbarkeit von drahtlosen Adaptern nicht richtig funktioniert,
+  wurde behoben.
+
+## Version 23.05.1
+
+Die NVDA-Erweiterung "wlanReporter" ist jetzt Teil dieser NVDA-Erweiterung!
+
+* The old way of checking for wireless connections has been replaced by the
+  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+
+	* After speaking SSID name and strength, NVDA will also now tell you the
+	  security type of your network.
+	* NVDA will now alert you when you connect and disconnect from a wireless
+	  network.
+	* NVDA will now alert you when wireless connections is turned on or off.
 
 ## Version 23.05
 
-* Möglichkeit hinzugefügt, den Status der WLAN-Verbindung im Netzwerk zu
-  ermitteln und darzustellen.
+* added the ability to detect and present the state of the connected
+  wireless network.
 
 	* Teilt die SSID und den Namen der WLAN-Verbindung mit.
-	* Teilt die Signalstärke der WLAN-Verbindung mit
+	* Announces the strength of the ssid
 	* Teilt mit, sofern keine SSID im Netzwerk gefunden wurde.
 
 ## Version 23.02

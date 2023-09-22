@@ -36,6 +36,21 @@ msgstr ""
 "Cette extension nécessite {supportedReleaseName} ({supportedBuild}) ou "
 "version ultérieure."
 
+msgid "No authentication (Open)"
+msgstr ""
+
+msgid "Connected to {}"
+msgstr ""
+
+msgid "Disconnected from {}"
+msgstr ""
+
+msgid "A wireless device has been enabled"
+msgstr ""
+
+msgid "A wireless device has been disabled"
+msgstr ""
+
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
@@ -170,6 +185,19 @@ msgstr ""
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Annonce la version de Windows que vous utilisez."
+
+#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+msgid "Announces the system's wireless network ssid name, and its strength."
+msgstr ""
+
+msgid "No wireless devices"
+msgstr ""
+
+msgid "No wireless connections"
+msgstr ""
+
+msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+msgstr ""
 
 #. Translators: system uptime in days.
 msgid "1 day"

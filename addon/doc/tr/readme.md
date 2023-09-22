@@ -1,4 +1,5 @@
 # Kaynak izleme #
+
 * Yazarlar: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Ethin
   Probst ve diğer NVDA katılımcıları
 * [Kararlı sürümü][1] indir
@@ -37,7 +38,9 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
   kopyalanamaz.
 * CPU kullanımı fiziksel çekirdekler için değil mantıksal işlemciler için
   verilmiştir. Bu, CPU sayısının CPU çekirdeği sayısının iki katı olduğu
-  Hyper-Threading kullanan işlemciler için fark edilebilir.
+  Hyper-Threading kullanan işlemciler için fark edilir. Bazı yeni
+  bilgisayarlarda, tüm CPU çekirdeklerinde hiper iş parçacığı etkin
+  olmayacaktır.
 * Büyük dosyaların kopyalanması gibi yoğun disk etkinliği varsa, disk
   kullanım bilgilerinin alınmasında gecikmeler olabilir.
 * İşlemci mimarisi bilgileri açıklanırken "x86" ve "AMD64" sırasıyla 32 bit
@@ -47,11 +50,35 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
 
-# Sürüm geçmişi:
+## Sürüm 23.09
+
+* NVDA, kablosuz özellik modülleri kullanılamadığında artık Windows Server
+  sistemlerinde başlatma hata mesajlarını günlüğe kaydetmeyecektir.
+
+## Sürüm 23.06
+
+* Kablosuz bağdaştırıcıların bulunmaması nedeniyle Kaynak İzleyici'nin
+  düzgün çalışmaması durumu düzeltildi.
+
+## Sürüm 23.05.1
+
+kablosuz Ağ Bilgilendirici NVDA eklentisi, artık Kaynak İzleyici'nin bir
+parçası!
+
+* Kablosuz bağlantıları kontrol etmenin eski yönteminin yerini Kablosuz Ağ
+  Bilgilendirici'nin Windows API'si aldı:
+  https://github.com/kvark128/WlanReporter/ .
+
+	* SSID adını ve gücünü söyledikten sonra, NVDA şimdi size ağınızın güvenlik
+	  türünü de söyleyecektir.
+	* NVDA artık kablosuz bir ağa bağlandığınızda ve bağlantıyı kestiğinizde
+	  sizi uyaracak.
+	* NVDA artık kablosuz bağlantılar açıldığında veya kapatıldığında sizi
+	  uyaracak.
 
 ## Sürüm 23.05
 
-* bağlı kablosuz ağın durumunu algılama ve sunma yeteneği eklendi.
+* bağlı kablosuz ağın durumunu tespit etme ve sunma yeteneği eklendi.
 
 	* Bağlı kablosuz SSID'nin adını duyurur.
 	* SSID'nin gücünü duyurur
@@ -82,7 +109,7 @@ sürümdür.
 * NVDA 2021.3 veya üstü gereklidir.
 * Eklentiyi Windows 7, 8 ve 8.1'e yüklemeye çalışırken bir uyarı mesajı
   görüntülenecektir.
-* psutil bağımlılığı 5.9.0 olarak güncellendi.
+* Psutil bağımlılığı 5.9.0'a güncellendi.
 
 ## Sürüm 22.01
 

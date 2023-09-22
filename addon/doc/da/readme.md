@@ -1,4 +1,5 @@
 # Ressourcemonitor #
+
 * Forfattere: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst og andre NVDA-bidragydere
 * Download [stable version][1]
@@ -34,10 +35,10 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 * Ressourceoplysninger kan ikke kopieres til udklipsholderen, hvis
   tilføjelsen kører på sikre skærme.
-* CPU-brug bliver angivet for logiske processorer, ikke fysiske
-  kerner. Dette har betydning for processorer, som bruger
-  hypertrådningsteknologi. Her er antallet af CPU'er er det dobbelte af
-  CPU-kernerne.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores. On some newer computers, not all CPU
+  cores will have hyper-threading enabled.
 * Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
 * Når der annoncerer processorarkitekturoplysninger, henviser "x86" og
@@ -47,15 +48,36 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 3-klausul BSD-licens, som er kompatibel med GNU General Public License.
 
-# Versionshistorik:
+## Version 23.09
+
+* NVDA will no longer log startup error messages on Windows Server systems
+  when wireless capability modules are unavailable.
+
+## Version 23.06
+
+* Situation where resourceMonitor doesn't work properly due to
+  unavailability of wireless adapters has been fixed.
+
+## Version 23.05.1
+
+wlanReporter NVDA-addon is now part of resourceMonitor!
+
+* The old way of checking for wireless connections has been replaced by the
+  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+
+	* After speaking SSID name and strength, NVDA will also now tell you the
+	  security type of your network.
+	* NVDA will now alert you when you connect and disconnect from a wireless
+	  network.
+	* NVDA will now alert you when wireless connections is turned on or off.
 
 ## Version 23.05
 
-* Tilføjet muligheden for at detektere og oplyse forbindelsesstatus for det
-  tilsluttede netværk.
+* added the ability to detect and present the state of the connected
+  wireless network.
 
 	* Oplyser navnet på det tilsluttede trådløse SSID.
-	* Oplyser signalstyrken af SSID
+	* Announces the strength of the ssid
 	* Oplys "SSID" ikke fundet, hvis dette er tilfældet.
 
 ## Version 23.02

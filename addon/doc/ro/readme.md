@@ -1,4 +1,5 @@
 # Resource Monitor #
+
 * Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst and other NVDA contributors
 * Descărcați [versiunea stabilă][1]
@@ -34,10 +35,10 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 
 * Resource information cannot be copied to clipboard if running the add-on
   in secure screens.
-* Utilizarea procesorului este dată pentru procesoare logice, nu nuclee
-  fizice. Acest lucru este vizibil pentru procesoare care utilizează
-  Hyper-Threading în cazul în care numărul de procesoare este de două ori
-  mai mare decât numărul de nuclee CPU.
+* CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores. On some newer computers, not all CPU
+  cores will have hyper-threading enabled.
 * În cazul în care există o activitate grea pe disc, cum ar fi copierea
   fișierelor de mari dimensiuni, ar putea exista întârzieri la obținerea
   informațiilor de utilizare a discului.
@@ -48,15 +49,36 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
 
-# Version history:
+## Version 23.09
+
+* NVDA will no longer log startup error messages on Windows Server systems
+  when wireless capability modules are unavailable.
+
+## Version 23.06
+
+* Situation where resourceMonitor doesn't work properly due to
+  unavailability of wireless adapters has been fixed.
+
+## Version 23.05.1
+
+wlanReporter NVDA-addon is now part of resourceMonitor!
+
+* The old way of checking for wireless connections has been replaced by the
+  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+
+	* After speaking SSID name and strength, NVDA will also now tell you the
+	  security type of your network.
+	* NVDA will now alert you when you connect and disconnect from a wireless
+	  network.
+	* NVDA will now alert you when wireless connections is turned on or off.
 
 ## Version 23.05
 
-* added the ability to deteched and presents the state of the connected
+* added the ability to detect and present the state of the connected
   wireless network.
 
 	* Announces the name of the connected wireless SSID.
-	* Announces the strength of the SSID
+	* Announces the strength of the ssid
 	* Announce SSID not found if None is detected.
 
 ## Version 23.02

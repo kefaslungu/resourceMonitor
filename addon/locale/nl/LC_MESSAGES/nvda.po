@@ -17,14 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
+#. Resource Monitor requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
 msgstr ""
 
-#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
-msgid "Old Windows version"
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+msgstr ""
+
+msgid "No authentication (Open)"
+msgstr ""
+
+msgid "Connected to {}"
+msgstr ""
+
+msgid "Disconnected from {}"
+msgstr ""
+
+msgid "A wireless device has been enabled"
+msgstr ""
+
+msgid "A wireless device has been disabled"
 msgstr ""
 
 #. Translators: Message reported when there is no battery on the system,
@@ -160,6 +180,19 @@ msgstr ""
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Meldt de versie van Windows die u gebruikt."
+
+#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+msgid "Announces the system's wireless network ssid name, and its strength."
+msgstr ""
+
+msgid "No wireless devices"
+msgstr ""
+
+msgid "No wireless connections"
+msgstr ""
+
+msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+msgstr ""
 
 #. Translators: system uptime in days.
 msgid "1 day"

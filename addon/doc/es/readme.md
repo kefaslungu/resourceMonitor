@@ -1,4 +1,5 @@
 # Resource Monitor #
+
 * Autores: Alex Hall, Joseph Lee, Kefas Lungu, beqa gozalishvili, Tuukka
   Ojala, Ethin Probst y otros colaboradores de NVDA
 * Descargar [versión estable][1]
@@ -38,7 +39,8 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 * El uso de la CPU se da para procesadores lógicos, y no núcleos
   físicos. Esto es perceptible para los procesadores que utilizan Hyper
   Threading donde el número de CPUs es el doble del número de núcleos de
-  CPU.
+  CPU. En algunos ordenadores más modernos, no todos los núcleos de CPU
+  tienen activado el Hyper Threading.
 * Si hay una actividad pesada de disco tal como el copiado de ficheros
   grandes, podría haber retrasos al obtener información de uso de disco.
 * Al anunciar la información de arquitectura del procesador, "x86" y "AMD64"
@@ -48,7 +50,30 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
 
-# Historial de versiones:
+## Versión 23.09
+
+* NVDA ya no registrará mensajes de error al iniciar en sistemas Windows
+  Server cuando los módulos de red inalámbrica no estén disponibles.
+
+## Versión 23.06
+
+* Se ha corregido una situación en la que Resource Monitor no funcionaba
+  adecuadamente a causa de falta de disponibilidad de los módulos de red
+  inalámbrica.
+
+## Versión 23.05.1
+
+¡El complemento Wlan Reporter para NVDA ahora forma parte de Resource
+Monitor!
+
+* Se ha sustituido el método antiguo para comprobar las conexiones
+  inalámbricas por la API de Windows de Wlan Reporter:
+  https://github.com/kvark128/WlanReporter/ .
+
+	* Tras verbalizar el nombre de la red y su intensidad, NVDA también
+	  indicará el tipo de seguridad de la red.
+	* NVDA ahora avisará al conectarse y desconectarse de una red inalámbrica.
+	* NVDA ahora avisará al activar o desactivar las conexiones inalámbricas.
 
 ## Versión 23.05
 
