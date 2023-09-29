@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:34-0700\n"
-"PO-Revision-Date: 2023-01-08 08:53+0100\n"
-"Last-Translator: Michel Such <michelsuch93@gmail.com>\n"
+"PO-Revision-Date: 2023-09-22 21:38+0200\n"
+"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -37,19 +37,19 @@ msgstr ""
 "version ultérieure."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Pas d'authentification (ouvert)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Connecté à {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Déconnecté de {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Un appareil sans fil a été activé"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Un appareil sans fil a été désactivé"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -188,16 +188,17 @@ msgstr "Annonce la version de Windows que vous utilisez."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Annonce le nom SSID du réseau sans fil du système et sa force."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Pas d'appareils sans fil"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Pas de connexions sans fil"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr ""
+"Réseau sans fil connecté : {}. Force du signal : {}%. Type de sécurité : {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"

@@ -35,10 +35,11 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 * Ressourceoplysninger kan ikke kopieres til udklipsholderen, hvis
   tilføjelsen kører på sikre skærme.
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper-Threading where number of CPU's
-  is twice the number of CPU cores. On some newer computers, not all CPU
-  cores will have hyper-threading enabled.
+* CPU-brug bliver angivet for logiske processorer, ikke fysiske
+  kerner. Dette har betydning for processorer, som bruger
+  hypertrådningsteknologi. Her er antallet af CPU'er er det dobbelte af
+  CPU-kernerne. På nogle nyere CPU'er, vil denne teknologi ikke nødvendigvis
+  være aktiveret.
 * Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
 * Når der annoncerer processorarkitekturoplysninger, henviser "x86" og
@@ -50,34 +51,35 @@ Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 
 ## Version 23.09
 
-* NVDA will no longer log startup error messages on Windows Server systems
-  when wireless capability modules are unavailable.
+* NVDA vil ikke længere logge opstartsfejlmeddelelser på Windows
+  Server-systemer, når moduler med trådløse egenskaber ikke er tilgængelige.
 
 ## Version 23.06
 
-* Situation where resourceMonitor doesn't work properly due to
-  unavailability of wireless adapters has been fixed.
+* Situationen, hvor resourceMonitor ikke fungerer korrekt på grund af
+  manglende tilgængelighed af trådløse adaptere, er blevet rettet.
 
 ## Version 23.05.1
 
-wlanReporter NVDA-addon is now part of resourceMonitor!
+Tilføjelsen wlanReporter er nu en del af resourceMonitor!
 
-* The old way of checking for wireless connections has been replaced by the
-  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+* Den gamle måde at tjekke for trådløse forbindelser på er blevet erstattet
+  af windows API fra wlanReporter: https://github.com/kvark128/WlanReporter/
+  .
 
-	* After speaking SSID name and strength, NVDA will also now tell you the
-	  security type of your network.
-	* NVDA will now alert you when you connect and disconnect from a wireless
-	  network.
-	* NVDA will now alert you when wireless connections is turned on or off.
+	* Efter SSID navn og styrke er blevet oplæst af NVDA, vil NVDA også nu
+	  fortælle dig sikkerhedstypen for dit netværk.
+	* NVDA vil nu advare dig, når du opretter og afbryder forbindelse til et
+	  trådløst netværk.
+	* NVDA vil nu advare dig, når trådløse forbindelser slås til eller fra.
 
 ## Version 23.05
 
-* added the ability to detect and present the state of the connected
-  wireless network.
+* Tilføjet muligheden for at detektere og oplyse forbindelsesstatus for det
+  tilsluttede netværk.
 
 	* Oplyser navnet på det tilsluttede trådløse SSID.
-	* Announces the strength of the ssid
+	* Oplyser signalstyrken af SSID
 	* Oplys "SSID" ikke fundet, hvis dette er tilfældet.
 
 ## Version 23.02

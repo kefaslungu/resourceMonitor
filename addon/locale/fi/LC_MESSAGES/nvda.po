@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:33-0700\n"
-"PO-Revision-Date: 2023-01-08 07:00-0800\n"
+"PO-Revision-Date: 2023-09-23 15:06+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -37,19 +37,19 @@ msgstr ""
 "tai uudempaa."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Ei tunnistautumista (avoin)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Yhdistetty verkkoon {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Yhteys katkaistu verkosta {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Langaton verkkosovitin otettu käyttöön"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Langaton verkkosovitin poistettu käytöstä"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -189,16 +189,18 @@ msgstr "Ilmoittaa käyttämäsi Windowsin version."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Ilmoittaa langattoman verkon SSID-nimen ja signaalin voimakkuuden."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Ei langattomia verkkosovittimia"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Ei langattomia verkkoyhteyksiä"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr ""
+"Yhdistetty langaton verkko: {}. Signaalin voimakkuus: {} %. Suojauksen "
+"tyyppi: {}."
 
 #. Translators: system uptime in days.
 msgid "1 day"

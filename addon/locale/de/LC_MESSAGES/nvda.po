@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:30-0700\n"
-"PO-Revision-Date: 2023-03-01 03:49+0100\n"
+"PO-Revision-Date: 2023-09-23 07:24+0200\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -33,23 +33,22 @@ msgid ""
 msgstr ""
 "Sie verwenden {releaseName} ({build}), eine Windows-Version, die von dieser "
 "NVDA-Erweiterung nicht unterstützt wird.\n"
-"Diese NVDA-Erweiterung benötigt {supportedReleaseName} ({supportedBuild}) "
-"oder neuer."
+"Es wird {supportedReleaseName} ({supportedBuild}) oder neuer benötigt."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Keine Authentifizierung (offen)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Mit {} verbunden"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Von {} getrennt"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Ein drahtloses Gerät wurde aktiviert"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Ein drahtloses Gerät wurde deaktiviert"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -98,11 +97,11 @@ msgstr "{percent} Prozent Akku verbleibend, ungefähr {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "Warnung: Niedriger Akku-Stand."
+msgstr " Warnung: Niedriger Akku-Stand."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "Warnung: Akku bald leer."
+msgstr " Warnung: Akku bald leer."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
@@ -191,15 +190,17 @@ msgstr "Zeigt die aktuell verwendete Windows-Version an."
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr ""
+"Zeigt den Namen des Drahtlosnetzwerks des Systems und dessen Signalstärke an."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Keine drahtlosen Geräte"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Keine drahtlosen Verbindungen"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr ""
+"Verbundenes drahtlosnetzwerk: {}. Signalstärke: {}%. Sicherheitstyp: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"

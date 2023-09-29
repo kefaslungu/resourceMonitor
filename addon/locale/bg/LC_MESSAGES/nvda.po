@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:28-0700\n"
-"PO-Revision-Date: 2023-01-08 05:46-0800\n"
+"PO-Revision-Date: 2023-09-23 08:54+0300\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -39,19 +39,19 @@ msgstr ""
 "версия."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Без удостоверяване (свободна)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Свързано с {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Връзката с {} е преустановена"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Безжичното устройство е разрешено"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Безжичното устройство е забранено"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -196,15 +196,18 @@ msgstr "Съобщава текущо използваната версия на
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr ""
+"Докладва SSID името на безжичната мрежа на системата и нейната сила на "
+"сигнала."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Няма безжични устройства"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Няма безжични връзки"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr ""
+"Свързана безжична мрежа: {}. Сила на сигнала: {} процента. Тип защита: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"
