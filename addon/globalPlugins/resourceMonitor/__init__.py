@@ -14,7 +14,6 @@ from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
 from typing import List, Tuple, Union, Any
 import api
-import globalCommands
 import globalPluginHandler
 import scriptHandler
 import ui
