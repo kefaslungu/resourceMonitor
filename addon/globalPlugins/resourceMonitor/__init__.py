@@ -27,12 +27,17 @@ except OSError:
 	wlanapiAvailable = False
 import addonHandler
 addonHandler.initTranslation()
+
+
 MODULE_DIR = os.path.dirname(__file__)
+
+
 def message(text, fileName):
 	ui.message(text)
 	path = os.path.join(MODULE_DIR, fileName)
 	if os.path.exists(path):
 		winsound.PlaySound(path, winsound.SND_ASYNC)
+
 
 try:
 	SECURITY_TYPE = {
@@ -43,6 +48,7 @@ try:
 		wlanapi.DOT11_AUTH_ALGO_RSNA: "WPA2-Enterprise",
 		wlanapi.DOT11_AUTH_ALGO_RSNA_PSK: "WPA2-PSK",
 	}
+
 	@wlanapi.WLAN_NOTIFICATION_CALLBACK
 	def notifyHandler(pData, pCtx):
 		if pData.contents.NotificationSource != wlanapi.WLAN_NOTIFICATION_SOURCE_ACM:
@@ -60,8 +66,10 @@ try:
 except NameError:
 	pass
 
+
 def customResize(array, newSize):
 	return (array._type_ * newSize).from_address(addressof(array))
+
 
 # Styles of size calculation/string composition, do not change!
 # Traditional style, Y, K, M, G, B, ...
