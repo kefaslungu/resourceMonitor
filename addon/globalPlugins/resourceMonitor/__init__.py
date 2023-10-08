@@ -306,8 +306,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._negotiated_version = wintypes.DWORD()
 		self._client_handle = wintypes.HANDLE()
 		try:
-			wlanapi.WlanOpenHandle(wlanapi.CLIENT_VERSION_WINDOWS_VISTA_OR_LATER, None, byref(self._negotiated_version), byref(self._client_handle))
-			wlanapi.WlanRegisterNotification(self._client_handle, wlanapi.WLAN_NOTIFICATION_SOURCE_ACM, True, notifyHandler, None, None, None)
+			wlanapi.WlanOpenHandle(
+				wlanapi.CLIENT_VERSION_WINDOWS_VISTA_OR_LATER, None,
+				byref(self._negotiated_version), byref(self._client_handle)
+			)
+			wlanapi.WlanRegisterNotification(
+				self._client_handle, wlanapi.WLAN_NOTIFICATION_SOURCE_ACM, True, notifyHandler,
+				None, None, None
+			)
 		except OSError:
 			pass
 
@@ -431,7 +437,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
-		# Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+		# Translators: Input help mode message about obtaining the ssid of the wireless network,
+		# and the strength of the network.
 		description=_("Announces the system's wireless network ssid name, and its strength."),
 		gesture="kb:NVDA+shift+8"
 	)
@@ -459,10 +466,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				continue
 
 			wlan_available_network_list = POINTER(wlanapi.WLAN_AVAILABLE_NETWORK_LIST)()
-			wlanapi.WlanGetAvailableNetworkList(self._client_handle, byref(i.InterfaceGuid), 0, None, byref(wlan_available_network_list))
-			for n in customResize(wlan_available_network_list.contents.Network, wlan_available_network_list.contents.NumberOfItems):
+			wlanapi.WlanGetAvailableNetworkList(
+				self._client_handle, byref(i.InterfaceGuid), 0, None, byref(wlan_available_network_list)
+			)
+			for n in customResize(
+				wlan_available_network_list.contents.Network, wlan_available_network_list.contents.NumberOfItems
+			):
 				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
-					info = _("Connected wireless network: {}. Signal strength: {}%. Security type: {}").format(n.dot11Ssid.SSID.decode(), n.wlanSignalQuality, SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm))
+					info = _("Connected wireless network: {}. Signal strength: {}%. Security type: {}").format(
+						n.dot11Ssid.SSID.decode(),
+						n.wlanSignalQuality,
+						SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm)
+					)
 					break
 			wlanapi.WlanFreeMemory(wlan_available_network_list)
 		wlanapi.WlanFreeMemory(wlan_ifaces)
