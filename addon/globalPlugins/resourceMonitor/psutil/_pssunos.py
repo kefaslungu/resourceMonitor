@@ -143,7 +143,7 @@ def swap_memory():
     p = subprocess.Popen(['/usr/bin/env', 'PATH=/usr/sbin:/sbin:%s' %
                           os.environ['PATH'], 'swap', '-l'],
                          stdout=subprocess.PIPE)
-    stdout, stderr = p.communicate()
+    stdout, _ = p.communicate()
     if PY3:
         stdout = stdout.decode(sys.stdout.encoding)
     if p.returncode != 0:
@@ -542,7 +542,7 @@ class Process(object):
             return os.readlink("%s/%s/path/cwd" % (procfs_path, self.pid))
         except FileNotFoundError:
             os.stat("%s/%s" % (procfs_path, self.pid))  # raise NSP or AD
-            return None
+            return ""
 
     @wrap_exceptions
     def memory_info(self):

@@ -211,7 +211,7 @@ if hasattr(_psplatform.Process, "rlimit"):
 AF_LINK = _psplatform.AF_LINK
 
 __author__ = "Giampaolo Rodola'"
-__version__ = "5.9.4"
+__version__ = "5.9.5"
 version_info = tuple([int(num) for num in __version__.split('.')])
 
 _timer = getattr(time, 'monotonic', time.time)
@@ -516,7 +516,7 @@ class Process(object):
                     "s" if len(invalid_names) > 1 else "",
                     ", ".join(map(repr, invalid_names))))
 
-        retdict = dict()
+        retdict = {}
         ls = attrs or valid_names
         with self.oneshot():
             for name in ls:
@@ -626,7 +626,12 @@ class Process(object):
             # Examples are "gnome-keyring-d" vs. "gnome-keyring-daemon".
             try:
                 cmdline = self.cmdline()
-            except AccessDenied:
+            except (AccessDenied, ZombieProcess):
+                # Just pass and return the truncated name: it's better
+                # than nothing. Note: there are actual cases where a
+                # zombie process can return a name() but not a
+                # cmdline(), see:
+                # https://github.com/giampaolo/psutil/issues/2239
                 pass
             else:
                 if cmdline:
