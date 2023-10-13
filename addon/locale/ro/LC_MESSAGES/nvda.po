@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:46-0700\n"
-"PO-Revision-Date: 2023-01-08 07:57-0800\n"
+"PO-Revision-Date: 2023-10-11 10:37+0300\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "Versiune incompatibilă de Windows"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -31,21 +31,25 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Utilizați {releaseName} ({build}), o versiune de Windows care nu este "
+"compatibilă cu acest supliment.\n"
+"Acest supliment necesită {supportedReleaseName} ({supportedBuild}) sau o "
+"versiune ulterioară."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Nicio autentificare (deschis)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "conectat la {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Deconectat de la {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "A fost activat un dispozitiv wireless"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "A fost dezactivat un dispozitiv wireless"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -185,16 +189,16 @@ msgstr "Anunță versiunea de Windows pe care o folosiți."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Anunță numele și puterea rețelei wireless a sistemului."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Nu există dispozitive wireless"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Nu există conexiuni wireless"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
+msgstr "Rețea wireless conectată: {}. Putere semnal: {}. Tip de securitate: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"

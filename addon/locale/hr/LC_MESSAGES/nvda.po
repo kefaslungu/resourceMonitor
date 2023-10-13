@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:51-0700\n"
-"PO-Revision-Date: 2023-01-16 22:10+0100\n"
+"PO-Revision-Date: 2023-10-09 15:32+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: hr <LL@li.org>\n"
 "Language: hr\n"
@@ -40,19 +40,19 @@ msgstr ""
 "verziju."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Bez autentifikacije (otvoreno)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Povezano s {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Odspjeno od {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Bežični uređaj je aktiviran"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Bežični uređaj je deaktiviran"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -191,16 +191,16 @@ msgstr "Najavljuje tvoju verziju Windows sustava."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Najavljuje ssid ime bežične mreže sustava i njegovu jačinu."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Nema bežičnih uređaja"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Nema bežičnih veza"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
+msgstr "Povezana bežična mreža: {}. Jačina signala: {}%. Vrsta sigurnosti: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"

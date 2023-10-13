@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:43-0700\n"
-"PO-Revision-Date: 2023-01-08 06:21-0800\n"
+"PO-Revision-Date: 2023-10-07 10:07+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -25,7 +25,6 @@ msgstr "ஆதரிக்கப்படாத விண்டோஸ் வெ�
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
-#, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "this add-on.\n"
@@ -37,19 +36,19 @@ msgstr ""
 "இக்கூட்டுக்கூறுக்குத் தேவைப்படுகிறது."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "அங்கீகாரம் ஏதுமில்லை (திறந்தநிலை)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "இதனுடன் இணைக்கப்பட்டுள்ளது: {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "இதனிடமிருந்து துண்டிக்கப்பட்டுள்ளது: {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "இழையிலாக் கருவி ஒன்று முடுக்கப்பட்டுள்ளது"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "இழையிலாக் கருவி ஒன்று முடக்கப்பட்டுள்ளது"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -58,13 +57,11 @@ msgstr "இந்தக் கணினியில் மின்கலம் 
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, மின்கலம் மின்னூட்டப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
-#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
 "மின்கலத்தில் {percent}% மின்சாரம் எஞ்சியுள்ளது. மின்சாரம் நீடிக்கும் நேரம் தெரியவில்லை. "
@@ -76,7 +73,6 @@ msgstr "ஒரு மணி நேரம்"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, python-brace-format
 msgid "{0} hours"
 msgstr "{0} மணி நேரங்"
 
@@ -87,13 +83,11 @@ msgstr "ஒரு நிமிடம்"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} நிமிடங்கள்"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "மின்கலத்தில் {percent}% மின்சாரம் ஏற்றப்பட வேண்டியுள்ளது, சுமார் {time}."
 
@@ -107,7 +101,6 @@ msgstr "எச்சரிக்கை: மின்கலத்தில் ம
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
 
@@ -138,7 +131,6 @@ msgstr ""
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -150,17 +142,14 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "செயலியின் சராசரி சுமையையும், ஒவ்வொரு கூறின் சுமையையும் அறிவிக்கிறது."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "கூறு {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%, {cores}."
 
@@ -171,14 +160,12 @@ msgstr ""
 "அறிவிக்கும். "
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
@@ -190,23 +177,22 @@ msgstr "தாங்கள் பயன்படுத்தும் சாள�
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "கணினியின் இழையிலாப் பிணையத்தின் ssid பெயரையும் அதன் வலிமையையும் அறிவிக்கிறது"
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "இழையிலாக் கருவிகள் ஏதுமில்லை"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "இழையிலா இணைப்புகள் ஏதுமில்லை"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
+msgstr "இணைக்கப்பட்டுள்ள இழையிலாப் பிணையம்: {}. சமிக்ஞை வலிமை: {}%. பாதுகாப்பு வகை: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"
 msgstr "ஒரு நாள்"
 
 #. Translators: system uptime in days.
-#, python-brace-format
 msgid "{0} days"
 msgstr "{0} நாட்கள்"
 
@@ -215,7 +201,6 @@ msgid "1 second"
 msgstr "ஒரு விநாடி"
 
 #. Translators: system uptime in seconds.
-#, python-brace-format
 msgid "{0} seconds"
 msgstr "{0} விநாடிகள்"
 
@@ -234,7 +219,6 @@ msgstr ""
 "பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை "
 "அறிவிக்கிறது."
 
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
 

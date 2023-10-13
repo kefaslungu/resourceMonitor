@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:34-0700\n"
-"PO-Revision-Date: 2023-01-18 12:15+0100\n"
-"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
+"PO-Revision-Date: 2023-10-06 23:38+0200\n"
+"Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
 "Language-Team: Galician NVDA add-ons translation tema <oprisniki@gmail.com>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -37,19 +37,19 @@ msgstr ""
 "posterior."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Sin autentificación (Abrir)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Conectado a {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Desconectado de {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Activouse un dispositivo inalámbrico"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Desactivouse un dispositivo inalámbrico"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -184,16 +184,17 @@ msgstr "Anuncia a versión do Windows que esteas a utilizar."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Anuncia o nome SSID da rede inalámbrica do sistema e a súa forza."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Non hai dispositivos inalámbricos"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Non hai conexións inalámbricas"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr ""
+"Rede inalámbrica conectada: {}. forza da Sinal: {}%. Tipo de seguridade: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"

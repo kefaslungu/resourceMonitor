@@ -37,10 +37,11 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 
 * Podaci o resursima ne mogu se kopirati u međuspremnik ako se dodatak
   pokreće na sigurnim ekranima.
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper-Threading where number of CPU's
-  is twice the number of CPU cores. On some newer computers, not all CPU
-  cores will have hyper-threading enabled.
+* Informacije o korištenju procesora dane su za logičke procesore, ne za
+  fizičke jezgre. To se može primijetiti kod procesora koji koriste
+  Hyper-Threading gdje je broj procesora dvostruko veći od broja jezgri. Na
+  nekim novijim računalima Hyper-Threading neće biti aktivirano za sve
+  jezgre CPU-a.
 * Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih
   datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
   diska.
@@ -51,17 +52,17 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
 
-## Version 23.09
+## Verzija 23.09
 
-* NVDA will no longer log startup error messages on Windows Server systems
-  when wireless capability modules are unavailable.
+* NVDA više neće bilježiti poruke o greškama pri pokretanju na Windows
+  Server sustavima kada moduli bežičnih mogućnosti nisu dostupni.
 
-## Version 23.06
+## Verzija 23.06
 
 * Situation where resourceMonitor doesn't work properly due to
   unavailability of wireless adapters has been fixed.
 
-## Version 23.05.1
+## Verzija 23.05.1
 
 wlanReporter NVDA-addon is now part of resourceMonitor!
 
@@ -76,11 +77,10 @@ wlanReporter NVDA-addon is now part of resourceMonitor!
 
 ## Verzija 23.05
 
-* added the ability to detect and present the state of the connected
-  wireless network.
+* Dodana je mogućnost otkrivanja i prikaza stanja povezane bežične mreže.
 
 	* Najavljuje ime priključenog bežičnog SSID-a.
-	* Announces the strength of the ssid
+	* Najavljuje jačinu ssid-a
 	* Najavljuje da SSID nije pronađen ako nijedan nije otkriven.
 
 ## Verzija 23.03
