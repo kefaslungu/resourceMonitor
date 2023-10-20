@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:48-0700\n"
-"PO-Revision-Date: 2023-05-29 15:52+0100\n"
+"PO-Revision-Date: 2023-10-20 09:21+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language: it\n"
@@ -37,19 +37,19 @@ msgstr ""
 "({supportedBuild}) o versioni successive."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Nessuna autenticazione (Aperta)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Collegato a {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Disconnesso da {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Abilitato un dispositivo wireless"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Disabilitato un dispositivo wireless"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -184,16 +184,16 @@ msgstr "Annuncia la versione di Windows in uso."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Legge nome ssid e potenza della rete wireless del sistema."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Nessun dispositivo wireless"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Nessuna connessione wireless"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
+msgstr "Rete wireless connessa: {}. potenza segnale: {}%. Tipo sicurezza: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"
