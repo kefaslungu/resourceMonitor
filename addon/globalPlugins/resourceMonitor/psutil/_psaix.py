@@ -465,8 +465,8 @@ class Process(object):
 
     @wrap_exceptions
     def cpu_times(self):
-        t = cext.proc_cpu_times(self.pid, self._procfs_path)
-        return _common.pcputimes(*t)
+        cpu_times = cext.proc_cpu_times(self.pid, self._procfs_path)
+        return _common.pcputimes(*cpu_times)
 
     @wrap_exceptions
     def terminal(self):
@@ -487,7 +487,7 @@ class Process(object):
             return result.rstrip('/')
         except FileNotFoundError:
             os.stat("%s/%s" % (procfs_path, self.pid))  # raise NSP or AD
-            return ""
+            return None
 
     @wrap_exceptions
     def memory_info(self):

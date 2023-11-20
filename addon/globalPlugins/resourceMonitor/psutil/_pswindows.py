@@ -244,22 +244,16 @@ def swap_memory():
     mem = cext.virtual_mem()
 
     total_phys = mem[0]
+    free_phys = mem[1]
     total_system = mem[2]
+    free_system = mem[3]
 
     # system memory (commit total/limit) is the sum of physical and swap
     # thus physical memory values need to be substracted to get swap values
     total = total_system - total_phys
-    # commit total is incremented immediately (decrementing free_system)
-    # while the corresponding free physical value is not decremented until
-    # pages are accessed, so we can't use free system memory for swap.
-    # instead, we calculate page file usage based on performance counter
-    if (total > 0):
-        percentswap = cext.swap_percent()
-        used = int(0.01 * percentswap * total)
-    else:
-        used = 0
-    free = total - used
-    percent = round(percentswap, 1)
+    free = min(total, free_system - free_phys)
+    used = total - free
+    percent = usage_percent(used, total, round_=1)
     return _common.sswap(total, used, free, percent, 0, 0)
 
 
@@ -705,7 +699,7 @@ def retry_error_partial_copy(fun):
     def wrapper(self, *args, **kwargs):
         delay = 0.0001
         times = 33
-        for _ in range(times):  # retries for roughly 1 second
+        for x in range(times):  # retries for roughly 1 second
             try:
                 return fun(self, *args, **kwargs)
             except WindowsError as _:
