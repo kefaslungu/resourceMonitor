@@ -408,16 +408,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		)
 		# psutil 5.9.0 returns size of the swap file when swap_memory function is called.
 		# Therefore, combine swap file and RAM capacities for backward compatibility.
-		virtualRam = list(psutil.swap_memory())
-		virtualRam[1] += ram[3]
-		virtualRam[0] += ram[0]
-		virtualRam[3] = round((virtualRam[1] / virtualRam[0]) * 100, 1)
-		# Translators: Shows virtual memory usage.
-		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
-			virtualUsed=size(virtualRam[1], alternative),
-			virtualTotal=size(virtualRam[0], alternative),
-			virtualPercent=tryTrunk(virtualRam[3])
-		)
+		# psutil 5.9.5 causes virtual memory to not be reported on some systems
+		# due to disabled performance counters reported by an API function.
+		try:
+			virtualRam = list(psutil.swap_memory())
+			virtualRam[1] += ram[3]
+			virtualRam[0] += ram[0]
+			virtualRam[3] = round((virtualRam[1] / virtualRam[0]) * 100, 1)
+			# Translators: Shows virtual memory usage.
+			info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
+				virtualUsed=size(virtualRam[1], alternative),
+				virtualTotal=size(virtualRam[0], alternative),
+				virtualPercent=tryTrunk(virtualRam[3])
+			)
+		except RuntimeError:
+			# Translators: Reported when virtual memory information cannot be obtained.
+			info += _("Virtual memory information unavailable")
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
