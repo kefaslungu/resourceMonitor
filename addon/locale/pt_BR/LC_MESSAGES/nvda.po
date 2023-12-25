@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:46-0700\n"
-"PO-Revision-Date: 2023-01-08 07:59-0800\n"
+"PO-Revision-Date: 2023-12-24 22:20-0300\n"
 "Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
 "Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
 "tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "Versão do Windows sem suporte"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -34,21 +34,25 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Você está usando {releaseName} ({build}), uma versão do Windows não "
+"suportada por este complemento.\n"
+"Este complemento requer {supportedReleaseName} ({supportedBuild}) ou "
+"posterior."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Sem autenticação (pública)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Conectado a {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Desconectado de {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "O Wi-Fi foi ativado"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "O Wi-Fi  foi desativado"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -182,16 +186,16 @@ msgstr "Anuncia a versão de Windows que você usa."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Anuncia o nome SSID da rede wi-fi  conectada e a intensidade."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Não há dispositivos wi-fi |"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Sem conexões wi-fi"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
+msgstr "Conectado à: {}. intensidade do sinal: {}%. Tipo de segurança: {}"
 
 #. Translators: system uptime in days.
 msgid "1 day"
