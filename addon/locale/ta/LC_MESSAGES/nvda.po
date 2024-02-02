@@ -25,6 +25,7 @@ msgstr "ஆதரிக்கப்படாத விண்டோஸ் வெ�
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
+#, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "this add-on.\n"
@@ -57,11 +58,13 @@ msgstr "இந்தக் கணினியில் மின்கலம் 
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, மின்கலம் மின்னூட்டப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
 "மின்கலத்தில் {percent}% மின்சாரம் எஞ்சியுள்ளது. மின்சாரம் நீடிக்கும் நேரம் தெரியவில்லை. "
@@ -73,6 +76,7 @@ msgstr "ஒரு மணி நேரம்"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#, python-brace-format
 msgid "{0} hours"
 msgstr "{0} மணி நேரங்"
 
@@ -83,11 +87,13 @@ msgstr "ஒரு நிமிடம்"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} நிமிடங்கள்"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "மின்கலத்தில் {percent}% மின்சாரம் ஏற்றப்பட வேண்டியுள்ளது, சுமார் {time}."
 
@@ -101,6 +107,7 @@ msgstr "எச்சரிக்கை: மின்கலத்தில் ம
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
 
@@ -131,6 +138,7 @@ msgstr ""
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -142,14 +150,17 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "செயலியின் சராசரி சுமையையும், ஒவ்வொரு கூறின் சுமையையும் அறிவிக்கிறது."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "கூறு {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%, {cores}."
 
@@ -160,22 +171,29 @@ msgstr ""
 "அறிவிக்கும். "
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
 "({virtualPercent}%)."
 
+#. Translators: Reported when virtual memory information cannot be obtained.
+msgid "Virtual memory information unavailable"
+msgstr ""
+
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "தாங்கள் பயன்படுத்தும் சாளரத்தின் பதிப்பை அறிவிக்கும்"
 
-#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+#. Translators: Input help mode message about obtaining the ssid of the wireless network,
+#. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "கணினியின் இழையிலாப் பிணையத்தின் ssid பெயரையும் அதன் வலிமையையும் அறிவிக்கிறது"
 
@@ -193,6 +211,7 @@ msgid "1 day"
 msgstr "ஒரு நாள்"
 
 #. Translators: system uptime in days.
+#, python-brace-format
 msgid "{0} days"
 msgstr "{0} நாட்கள்"
 
@@ -201,6 +220,7 @@ msgid "1 second"
 msgstr "ஒரு விநாடி"
 
 #. Translators: system uptime in seconds.
+#, python-brace-format
 msgid "{0} seconds"
 msgstr "{0} விநாடிகள்"
 
@@ -219,6 +239,7 @@ msgstr ""
 "பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை "
 "அறிவிக்கிறது."
 
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
 

@@ -25,6 +25,7 @@ msgstr "不支持的 Windows 版本"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
+#, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "this add-on.\n"
@@ -55,11 +56,13 @@ msgstr "未连接电池。"
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "正在充电，百分之 {percent}。"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "百分之 {percent} 电量,剩余时间未知。"
 
@@ -70,6 +73,7 @@ msgstr "1 小时"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#, python-brace-format
 msgid "{0} hours"
 msgstr "{0} 小时"
 
@@ -80,11 +84,13 @@ msgstr "1 分"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#, python-brace-format
 msgid "{0} minutes"
 msgstr "{0} 分"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "百分之 {percent} 电量，约运行 {time}"
 
@@ -98,6 +104,7 @@ msgstr " 警告，电量严重不足。"
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
+#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
 
@@ -123,6 +130,7 @@ msgstr "读出此计算机上所有驱动器的文件系统和空间使用情况
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -134,14 +142,17 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "读出每个 CPU 核心的负载和平均负载。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心{coreNumber}: 百分之 {corePercent}"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "平均 CPU 负载： 百分之 {avgLoad}"
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "平均 CPU 负载： 百分之 {avgLoad}, {cores}"
 
@@ -150,22 +161,29 @@ msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "读出物理内存和虚拟内存的容量和使用情况。"
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "物理内存： 已用 {physicalUsed}， 总大小 {physicalTotal}， 使用率 百分之 "
 "{physicalPercent}。 "
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "虚拟内存：已用 {virtualUsed}， 总大小 {virtualTotal}， 使用率 百分之 "
 "{virtualPercent}。"
 
+#. Translators: Reported when virtual memory information cannot be obtained.
+msgid "Virtual memory information unavailable"
+msgstr ""
+
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "读出当前 Windows 的版本信息。"
 
-#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+#. Translators: Input help mode message about obtaining the ssid of the wireless network,
+#. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "读出已连接的无线网络名称及其信号强度。"
 
@@ -183,6 +201,7 @@ msgid "1 day"
 msgstr "系统已运行 1 天"
 
 #. Translators: system uptime in days.
+#, python-brace-format
 msgid "{0} days"
 msgstr "系统已运行 {0}天"
 
@@ -191,6 +210,7 @@ msgid "1 second"
 msgstr "1秒"
 
 #. Translators: system uptime in seconds.
+#, python-brace-format
 msgid "{0} seconds"
 msgstr "{0}秒"
 
@@ -207,6 +227,7 @@ msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr "读出内存的使用率、CPU 平均负载和电池信息（如果可用）。"
 
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "内存已用 百分之 {ramPercent}，CPU 已用 百分之 {cpuPercent}。"
 

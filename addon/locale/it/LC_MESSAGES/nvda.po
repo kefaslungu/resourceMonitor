@@ -178,11 +178,16 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuale: {virtualUsed} su {virtualTotal} utilizzati ({virtualPercent}%)."
 
+#. Translators: Reported when virtual memory information cannot be obtained.
+msgid "Virtual memory information unavailable"
+msgstr ""
+
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Annuncia la versione di Windows in uso."
 
-#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+#. Translators: Input help mode message about obtaining the ssid of the wireless network,
+#. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "Legge nome ssid e potenza della rete wireless del sistema."
 

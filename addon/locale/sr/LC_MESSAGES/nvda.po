@@ -177,11 +177,16 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "virtuelna : {virtualUsed} od{virtualTotal} koristi se({virtualPercent}%)."
 
+#. Translators: Reported when virtual memory information cannot be obtained.
+msgid "Virtual memory information unavailable"
+msgstr ""
+
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "izgovara windows verziju koju koristite "
 
-#. Translators: Input help mode message about obtaining the ssid of the wireless network, and the strength of the network.
+#. Translators: Input help mode message about obtaining the ssid of the wireless network,
+#. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "Izgovara ssid ime bežične mreže, kao i jačinu signala."
 
