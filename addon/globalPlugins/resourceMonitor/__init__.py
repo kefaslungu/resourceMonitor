@@ -18,6 +18,7 @@ import globalPluginHandler
 import scriptHandler
 import ui
 import winVersion
+import versionInfo
 from . import psutil
 # Windows Server systems do not include wlanapi.dll.
 try:
@@ -292,6 +293,10 @@ def getWinVer() -> str:
 	)
 	info += " build {build}".format(build=buildRevision)
 	return info
+
+
+# Support speak on demand mode.
+speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year >= 2024 else {}
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
