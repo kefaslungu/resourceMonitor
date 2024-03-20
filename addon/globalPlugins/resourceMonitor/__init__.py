@@ -1,6 +1,6 @@
 # Resource Monitor for NVDA
 # Presents basic info on CPU load, memory and disk usage, as well as battery information.
-# Copyright 2013-2023 Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
+# Copyright 2013-2024 Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
 # released under GPL.
 # This add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GPL.
 
