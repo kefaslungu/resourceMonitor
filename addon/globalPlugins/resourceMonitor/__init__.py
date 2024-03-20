@@ -19,7 +19,11 @@ import scriptHandler
 import ui
 import winVersion
 import versionInfo
-from . import psutil
+# NVDA 2024.2 includes psutil.
+try:
+	import psutil
+except ModuleNotFoundError:
+	from . import psutil
 # Windows Server systems do not include wlanapi.dll.
 try:
 	from . import wlanapi
