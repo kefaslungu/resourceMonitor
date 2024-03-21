@@ -56,28 +56,29 @@ try:
 	def notifyHandler(pData, pCtx):
 		if pData.contents.NotificationSource != wlanapi.WLAN_NOTIFICATION_SOURCE_ACM:
 			return
-		if pData.contents.NotificationCode == wlanapi.wlan_notification_acm_connection_complete:
-			ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
-			queueHandler.queueFunction(
-				queueHandler.eventQueue, message,
-				_("Connected to {}").format(ssid.decode("utf-8")), "connect.wav"
-			)
-		elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_disconnected:
-			ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
-			queueHandler.queueFunction(
-				queueHandler.eventQueue, message,
-				_("Disconnected from {}").format(ssid.decode("utf-8")), "disconnect.wav"
-			)
-		elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_arrival:
-			queueHandler.queueFunction(
-				queueHandler.eventQueue, message,
-				_("A wireless device has been enabled"), "connect.wav"
-			)
-		elif pData.contents.NotificationCode == wlanapi.wlan_notification_acm_interface_removal:
-			queueHandler.queueFunction(
-				queueHandler.eventQueue, message,
-				_("A wireless device has been disabled"), "disconnect.wav"
-			)
+		match pData.contents.NotificationCode:
+			case wlanapi.wlan_notification_acm_connection_complete:
+				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+				queueHandler.queueFunction(
+					queueHandler.eventQueue, message,
+					_("Connected to {}").format(ssid.decode("utf-8")), "connect.wav"
+				)
+			case wlanapi.wlan_notification_acm_disconnected:
+				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+				queueHandler.queueFunction(
+					queueHandler.eventQueue, message,
+					_("Disconnected from {}").format(ssid.decode("utf-8")), "disconnect.wav"
+				)
+			case wlanapi.wlan_notification_acm_interface_arrival:
+				queueHandler.queueFunction(
+					queueHandler.eventQueue, message,
+					_("A wireless device has been enabled"), "connect.wav"
+				)
+			case wlanapi.wlan_notification_acm_interface_removal:
+				queueHandler.queueFunction(
+					queueHandler.eventQueue, message,
+					_("A wireless device has been disabled"), "disconnect.wav"
+				)
 except NameError:
 	pass
 
