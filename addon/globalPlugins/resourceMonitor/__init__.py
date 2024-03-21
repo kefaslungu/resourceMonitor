@@ -6,7 +6,6 @@
 
 import functools
 import os.path
-import platform
 import queueHandler
 import winreg
 import winsound
@@ -250,7 +249,7 @@ def getWinVer() -> str:
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	currentWinVer = winVersion.getWinVer()
 	# Announce actual machine architecture (x86/32-bit, AMD64, ARM64).
-	arch = getattr(currentWinVer, "processorArchitecture", platform.machine())
+	arch = currentWinVer.processorArchitecture
 	isClient = currentWinVer.productType == "workstation"
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
 	# NVDA uses client release names for "releaseName" attribute.
