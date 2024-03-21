@@ -18,7 +18,6 @@ import globalPluginHandler
 import scriptHandler
 import ui
 import winVersion
-import versionInfo
 # NVDA 2024.2 includes psutil.
 try:
 	import psutil
@@ -297,10 +296,6 @@ def getWinVer() -> str:
 	)
 	info += " build {build}".format(build=buildRevision)
 	return info
-
-
-# Support speak on demand mode.
-speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year >= 2024 else {}
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
