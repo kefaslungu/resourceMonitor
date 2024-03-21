@@ -211,16 +211,12 @@ def _batteryInfo(verbose: bool = False) -> str:
 				if hours > 0:
 					timeLeft.append(
 						# Translators: battery and system uptime in hours.
-						_("1 hour")
-						# Translators: battery and system uptime in hours.
-						if hours == 1 else _("{0} hours").format(hours)
+						ngettext("{hours:d} hour", "{hours:d} hours", hours).format(hours=hours)
 					)
 				# Translators: battery and system uptime in minutes.
 				timeLeft.append(
 					# Translators: battery and system uptime in minutes.
-					_("1 minute")
-					# Translators: battery and system uptime in minutes.
-					if minutes == 1 else _("{0} minutes").format(minutes)
+					ngettext("{minutes:d} minute", "{minutes:d} minutes", minutes).format(minutes=minutes)
 				)
 				# Because psutil.sensors_battery function does not present battery flags by default,
 				# manually read this info at the cost of calling the C extension twice.
@@ -509,29 +505,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		uptimeComponents = []
 		uptimeComponents.append(
 			# Translators: system uptime in days.
-			_("1 day")
-			# Translators: system uptime in days.
-			if uptime.days == 1 else _("{0} days").format(uptime.days)
+			ngettext("{days:d} day", "{days:d} days", uptime.days).format(days=uptime.days)
 		)
-		# Translators: system uptime in hours.
 		uptimeComponents.append(
 			# Translators: system uptime in hours.
-			_("1 hour")
-			# Translators: system uptime in hours.
-			if hours == 1 else _("{0} hours").format(hours)
+			ngettext("{hours:d} hour", "{hours:d} hours", hours).format(hours=hours)
 		)
 		uptimeComponents.append(
 			# Translators: system uptime in minutes.
-			_("1 minute")
-			# Translators: system uptime in minutes.
-			if minutes == 1 else _("{0} minutes").format(minutes)
+			ngettext("{minutes:d} minute", "{minutes:d} minutes", minutes).format(minutes=minutes)
 		)
-		# Translators: system uptime in seconds.
 		uptimeComponents.append(
 			# Translators: system uptime in seconds.
-			_("1 second")
-			# Translators: system uptime in seconds.
-			if seconds == 1 else _("{0} seconds").format(seconds)
+			ngettext("{seconds:d} second", "{seconds:d} seconds", seconds).format(seconds=seconds)
 		)
 		return ", ".join(uptimeComponents)
 
