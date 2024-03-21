@@ -1,5 +1,5 @@
 # resourceMonitor/installTasks.py
-# Copyright 2017-2023 Joseph Lee, released under GPL.
+# Copyright 2017-2024 Joseph Lee, released under GPL.
 
 # Provides needed routines during add-on installation and removal.
 # Mostly checks compatibility.
