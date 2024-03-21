@@ -20,7 +20,7 @@ def onInstall():
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
-	minimumWinVer = winVersion.WIN10_21H2
+	minimumWinVer = winVersion.WIN10_22H2
 	if currentWinVer < minimumWinVer:
 		if not globalVars.appArgs.minimal:
 			gui.messageBox(
