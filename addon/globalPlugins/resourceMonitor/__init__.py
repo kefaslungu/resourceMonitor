@@ -333,7 +333,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"and a warning if the battery is low or critical."
 		),
 		gesture="KB:NVDA+shift+4",
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_announceBatteryInfo(self, gesture):
 		info = _batteryInfo(verbose=True)
@@ -346,7 +346,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help message about drive info command in Resource Monitor.
 		description=_("Presents the used and total space of the static and removable drives on this computer."),
 		gesture="KB:NVDA+shift+3",
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_announceDriveInfo(self, gesture):
 		# Goes through all registered drives and gives info on each one
@@ -379,7 +379,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about processor info command in Resource Monitor.
 		description=_("Presents the average processor load and the load of each core."),
 		gesture="KB:NVDA+shift+1",
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_announceProcessorInfo(self, gesture):
 		averageLoad = psutil.cpu_percent()
@@ -409,7 +409,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about memory info command in Resource Monitor.
 		description=_("Presents the used and total space for both physical and virtual ram."),
 		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_announceRamInfo(self, gesture):
 		ram = psutil.virtual_memory()
@@ -446,7 +446,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about Windows version command in Resource Monitor.
 		description=_("Announces the version of Windows you are using."),
 		gesture="KB:NVDA+shift+6",
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_announceWinVer(self, gesture):
 		# Unlike other resource usage information, current Windows version info is static.
@@ -461,7 +461,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# and the strength of the network.
 		description=_("Announces the system's wireless network ssid name, and its strength."),
 		gesture="kb:NVDA+shift+8",
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_wlanStatusReport(self, gesture):
 		info = self._getWlanInfo()
@@ -544,7 +544,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about obtaining the system's uptime
 		description=_("Announces the system's uptime."),
 		gesture="kb:NVDA+shift+7",
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_announceUptime(self, gesture):
 		try:
@@ -561,7 +561,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about overall system resource info command in Resource Monitor
 		description=_("Presents used ram, average processor load, and battery info if available."),
 		gesture="KB:NVDA+shift+e",
-		**speakOnDemand
+		speakOnDemand=True
 	)
 	def script_announceResourceSummary(self, gesture):
 		# Faster to build info on the fly rather than keep appending to a string.
