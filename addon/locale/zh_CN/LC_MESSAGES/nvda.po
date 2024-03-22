@@ -68,25 +68,19 @@ msgstr "百分之 {percent} 电量,剩余时间未知。"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "1 小时"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-#, python-brace-format
-msgid "{0} hours"
-msgstr "{0} 小时"
+#, fuzzy, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{0} 小时"
+msgstr[1] "{0} 小时"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 分"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} 分"
+#, fuzzy, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{0} 分"
+msgstr[1] "{0} 分"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -197,22 +191,18 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "{} 已连接，信号强度： 百分之 {}， 安全类型： {}"
 
 #. Translators: system uptime in days.
-msgid "1 day"
-msgstr "系统已运行 1 天"
-
-#. Translators: system uptime in days.
-#, python-brace-format
-msgid "{0} days"
-msgstr "系统已运行 {0}天"
+#, fuzzy, python-brace-format
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "系统已运行 {0}天"
+msgstr[1] "系统已运行 {0}天"
 
 #. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "1秒"
-
-#. Translators: system uptime in seconds.
-#, python-brace-format
-msgid "{0} seconds"
-msgstr "{0}秒"
+#, fuzzy, python-brace-format
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{0}秒"
+msgstr[1] "{0}秒"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -239,3 +229,15 @@ msgid ""
 msgstr ""
 "一个易于使用的资源监控器，可以读出 CPU 负载、内存使用、电池和磁盘使用情况等"
 "等。"
+
+#~ msgid "1 hour"
+#~ msgstr "1 小时"
+
+#~ msgid "1 minute"
+#~ msgstr "1 分"
+
+#~ msgid "1 day"
+#~ msgstr "系统已运行 1 天"
+
+#~ msgid "1 second"
+#~ msgstr "1秒"

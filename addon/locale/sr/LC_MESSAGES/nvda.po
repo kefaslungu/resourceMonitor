@@ -70,25 +70,19 @@ msgstr "{percent}% baterije preostalo, vreme trajanja baterije nepoznato."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "Jedan sat"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-#, python-brace-format
-msgid "{0} hours"
-msgstr "{0} sata"
+#, fuzzy, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{0} sata"
+msgstr[1] "{0} sata"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 minut"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} minuta"
+#, fuzzy, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{0} minuta"
+msgstr[1] "{0} minuta"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -200,22 +194,18 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "Povezana bežična mreža: {}. Jačina signala: {}%. Vrsta bezbednosti: {}"
 
 #. Translators: system uptime in days.
-msgid "1 day"
-msgstr "1 dan"
-
-#. Translators: system uptime in days.
-#, python-brace-format
-msgid "{0} days"
-msgstr "{0} dana"
+#, fuzzy, python-brace-format
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{0} dana"
+msgstr[1] "{0} dana"
 
 #. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "jedna sekunda"
-
-#. Translators: system uptime in seconds.
-#, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} sekundi"
+#, fuzzy, python-brace-format
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{0} sekundi"
+msgstr[1] "{0} sekundi"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -244,3 +234,15 @@ msgid ""
 msgstr ""
 "dobar monitor resursa koji prijavljuje bateriju , ram memoriju , "
 "iskorišćenost memorije na hard disku i još mnogo toga "
+
+#~ msgid "1 hour"
+#~ msgstr "Jedan sat"
+
+#~ msgid "1 minute"
+#~ msgstr "1 minut"
+
+#~ msgid "1 day"
+#~ msgstr "1 dan"
+
+#~ msgid "1 second"
+#~ msgstr "jedna sekunda"

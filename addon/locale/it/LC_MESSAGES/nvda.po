@@ -70,25 +70,19 @@ msgstr "{percent}% di batteria rimanente; tempo rimanente sconosciuto."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "1 ora,"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-#, python-brace-format
-msgid "{0} hours"
-msgstr "{0} ore,"
+#, fuzzy, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{0} ore,"
+msgstr[1] "{0} ore,"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 minuto"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} minuti"
+#, fuzzy, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{0} minuti"
+msgstr[1] "{0} minuti"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -201,22 +195,18 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "Rete wireless connessa: {}. potenza segnale: {}%. Tipo sicurezza: {}"
 
 #. Translators: system uptime in days.
-msgid "1 day"
-msgstr "1 giorno"
-
-#. Translators: system uptime in days.
-#, python-brace-format
-msgid "{0} days"
-msgstr "{0} giorni"
+#, fuzzy, python-brace-format
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{0} giorni"
+msgstr[1] "{0} giorni"
 
 #. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "1 secondo"
-
-#. Translators: system uptime in seconds.
-#, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} secondi"
+#, fuzzy, python-brace-format
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{0} secondi"
+msgstr[1] "{0} secondi"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -246,3 +236,15 @@ msgstr ""
 "Un'utile analizzatore di risorse per segnalare il carico della CPU, "
 "l'utilizzo della memoria, lo stato della batteria,  la quantità di spazio "
 "utilizzato sul disco ed altro."
+
+#~ msgid "1 hour"
+#~ msgstr "1 ora,"
+
+#~ msgid "1 minute"
+#~ msgstr "1 minuto"
+
+#~ msgid "1 day"
+#~ msgstr "1 giorno"
+
+#~ msgid "1 second"
+#~ msgstr "1 secondo"

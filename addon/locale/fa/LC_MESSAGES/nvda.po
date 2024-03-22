@@ -71,25 +71,19 @@ msgstr "{percent}% از باتری مانده. زمانِ باقیمانده‌�
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "۱ ساعت"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-#, python-brace-format
-msgid "{0} hours"
-msgstr "{0} ساعت"
+#, fuzzy, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{0} ساعت"
+msgstr[1] "{0} ساعت"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "۱ دقیقه"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} دقیقه"
+#, fuzzy, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{0} دقیقه"
+msgstr[1] "{0} دقیقه"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -202,22 +196,18 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "شبکه‌ی بی‌سیمِ متصل: {}. قدرتِ سیگنال: {}%. نوعِ امنیت: {}"
 
 #. Translators: system uptime in days.
-msgid "1 day"
-msgstr "۱ روز"
-
-#. Translators: system uptime in days.
-#, python-brace-format
-msgid "{0} days"
-msgstr "{0} روز"
+#, fuzzy, python-brace-format
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{0} روز"
+msgstr[1] "{0} روز"
 
 #. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "۱ ثانیه"
-
-#. Translators: system uptime in seconds.
-#, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} ثانیه"
+#, fuzzy, python-brace-format
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{0} ثانیه"
+msgstr[1] "{0} ثانیه"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -246,3 +236,15 @@ msgid ""
 msgstr ""
 "یک دیده‌بانِ منابعِ دمِ دستی برای اعلامِ بارِ سیپی‌یو، میزانِ استفاده‌ی حافظه، باتری، "
 "وضعیتِ استفاده از دیسک و بیشتر."
+
+#~ msgid "1 hour"
+#~ msgstr "۱ ساعت"
+
+#~ msgid "1 minute"
+#~ msgstr "۱ دقیقه"
+
+#~ msgid "1 day"
+#~ msgstr "۱ روز"
+
+#~ msgid "1 second"
+#~ msgstr "۱ ثانیه"

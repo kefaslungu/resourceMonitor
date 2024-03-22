@@ -70,25 +70,19 @@ msgstr "{percent}% batería restante, duración da batería descoñecida."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "1 hora"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-#, python-brace-format
-msgid "{0} hours"
-msgstr "{0} horas"
+#, fuzzy, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{0} horas"
+msgstr[1] "{0} horas"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 minuto"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} minutos"
+#, fuzzy, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{0} minutos"
+msgstr[1] "{0} minutos"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -202,22 +196,18 @@ msgstr ""
 "Rede inalámbrica conectada: {}. forza da Sinal: {}%. Tipo de seguridade: {}"
 
 #. Translators: system uptime in days.
-msgid "1 day"
-msgstr "1 día"
-
-#. Translators: system uptime in days.
-#, python-brace-format
-msgid "{0} days"
-msgstr "{0} días"
+#, fuzzy, python-brace-format
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{0} días"
+msgstr[1] "{0} días"
 
 #. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "1 segundo"
-
-#. Translators: system uptime in seconds.
-#, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} segundos"
+#, fuzzy, python-brace-format
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{0} segundos"
+msgstr[1] "{0} segundos"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -246,3 +236,15 @@ msgid ""
 msgstr ""
 "Un monitor de recursos á man para informar da carga da CPU, utilización da "
 "memoria, do estado da batería e da utilización do disco."
+
+#~ msgid "1 hour"
+#~ msgstr "1 hora"
+
+#~ msgid "1 minute"
+#~ msgstr "1 minuto"
+
+#~ msgid "1 day"
+#~ msgstr "1 día"
+
+#~ msgid "1 second"
+#~ msgstr "1 segundo"

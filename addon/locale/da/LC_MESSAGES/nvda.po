@@ -70,25 +70,19 @@ msgstr "{percent}% resterende batteri, batteritid ukendt."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "1 time"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-#, python-brace-format
-msgid "{0} hours"
-msgstr "{0} timer"
+#, fuzzy, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{0} timer"
+msgstr[1] "{0} timer"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 minut"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} minutter"
+#, fuzzy, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{0} minutter"
+msgstr[1] "{0} minutter"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -199,22 +193,18 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "Forbundet trådløst netværk: {}. Signalstyrke: {}%. Sikkerhedstype: {}"
 
 #. Translators: system uptime in days.
-msgid "1 day"
-msgstr "1 dag"
-
-#. Translators: system uptime in days.
-#, python-brace-format
-msgid "{0} days"
-msgstr "{0} dage"
+#, fuzzy, python-brace-format
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{0} dage"
+msgstr[1] "{0} dage"
 
 #. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "1 sekund"
-
-#. Translators: system uptime in seconds.
-#, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} sekunder"
+#, fuzzy, python-brace-format
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{0} sekunder"
+msgstr[1] "{0} sekunder"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -243,3 +233,15 @@ msgid ""
 msgstr ""
 "En smart lille ressourcemonitor, som fortææler status for "
 "processorbelastning, hukommelsesforbrug, batteri, diskforbrug m.m."
+
+#~ msgid "1 hour"
+#~ msgstr "1 time"
+
+#~ msgid "1 minute"
+#~ msgstr "1 minut"
+
+#~ msgid "1 day"
+#~ msgstr "1 dag"
+
+#~ msgid "1 second"
+#~ msgstr "1 sekund"
