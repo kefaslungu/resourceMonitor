@@ -8,6 +8,8 @@ This add-on gives information about CPU load, memory usage and other resource us
 
 # Shortcuts
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E: presents used ram, average processor load, and battery info if available.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual ram.
@@ -34,6 +36,7 @@ Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License wh
 ## Version 24.04
 
 * Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be announced in this mode.
 
 ## Version 23.11
 
