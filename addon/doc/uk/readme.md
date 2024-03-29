@@ -10,6 +10,8 @@
 
 # Гарячі клавіші
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E: Надає інформацію про використання оперативної пам’яті,
   середню завантаженість процесора та акумулятор, якщо він є.
 * NVDA+Shift+1: Надає інформацію про середню завантаженість процесора і про
@@ -50,6 +52,21 @@
 
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Версія 23.09
 

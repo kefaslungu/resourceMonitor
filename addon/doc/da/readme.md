@@ -10,6 +10,8 @@ hukommelse og andre oplysninger om forbrug af ressourcer.
 
 # Genveje
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E: Oplyser hukommelse i brug, processorbelastning og
   batteriinformation, hvis denne er tilgængelig.
 * NVDA+Shift+1: Oplyser den gennemsnitlige processorbelastning, og hvis
@@ -48,6 +50,21 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 3-klausul BSD-licens, som er kompatibel med GNU General Public License.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Version 23.09
 

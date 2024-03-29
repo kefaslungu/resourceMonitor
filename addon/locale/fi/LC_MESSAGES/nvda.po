@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:33-0700\n"
-"PO-Revision-Date: 2023-09-23 15:06+0200\n"
+"PO-Revision-Date: 2024-03-23 15:14+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -70,19 +70,19 @@ msgstr "{percent} % akkua jäljellä, käyttöaika tuntematon."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
-msgstr[0] "{0} tuntia"
-msgstr[1] "{0} tuntia"
+msgstr[0] "{hours:d} tunti"
+msgstr[1] "{hours:d} hours"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
-msgstr[0] "{0} minuuttia"
-msgstr[1] "{0} minuuttia"
+msgstr[0] "{minutes:d} minuutti"
+msgstr[1] "{minutes:d} minutes"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -179,7 +179,7 @@ msgstr ""
 
 #. Translators: Reported when virtual memory information cannot be obtained.
 msgid "Virtual memory information unavailable"
-msgstr ""
+msgstr "Näennäismuistin tietoja ei saatavilla"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -202,18 +202,18 @@ msgstr ""
 "tyyppi: {}."
 
 #. Translators: system uptime in days.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
-msgstr[0] "{0} päivää"
-msgstr[1] "{0} päivää"
+msgstr[0] "{days:d} päivä"
+msgstr[1] "{days:d} days"
 
 #. Translators: system uptime in seconds.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
-msgstr[0] "{0} sekuntia"
-msgstr[1] "{0} sekuntia"
+msgstr[0] "{seconds:d} sekunti"
+msgstr[1] "{seconds:d} seconds"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."

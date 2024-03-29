@@ -9,6 +9,8 @@ Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch
 
 # Klávesové skratky
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E: oznámy využitie pamäte ram, priemerné zaťaženie procesora a
   stav batérie, ak je dostupná.
 * NVDA+Shift+1: oznámy vyťaženie procesora a jednotlivých jadier.
@@ -45,6 +47,21 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Version 23.09
 

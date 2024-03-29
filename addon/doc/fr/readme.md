@@ -11,6 +11,9 @@ ressources.
 
 # Raccourcis
 
+Toutes les commandes prennent en charge le mode parole à la demande (NVDA
+2024.1 et versions ultérieures).
+
 * NVDA+Maj+E: Annonce le pourcentage de mémoire utilisée, la charge moyenne
   du processeur et des informations sur la batterie si disponibles.
 * NVDA+Maj+1: Annonce la charge moyenne du processeur et, pour les
@@ -55,6 +58,21 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
 
+## Version 24.04
+
+* Mise à jour de la dépendance psutil vers la version 5.9.8.
+* Ajout de la prise en charge du mode parole à la demande afin que les
+  informations sur les ressources puissent être annoncées dans ce mode.
+
+## Version 23.11
+
+* Dépendance psutil rétrogradée à 5.9.4 en raison de problèmes avec les
+  annonces d'utilisation de la mémoire.
+
+## Version 23.10
+
+* Mise à jour de la dépendance psutil vers la version 5.9.5.
+
 ## Version 23.09
 
 * NVDA ne journalisera plus les messages d'erreur de démarrage sur les
@@ -82,7 +100,7 @@ wlanReporter NVDA-addon fait maintenant partie de resourceMonitor !
 
 ## Version 23.05
 
-* Ajout de la possibilité de détendre et d'annoncer l'état du réseau sans
+* ajout de la possibilité de détecter et de présenter l'état du réseau sans
   fil connecté.
 
 	* Annonce le nom du SSID sans fil connecté.
@@ -312,7 +330,7 @@ forme année.mois.révision.
 
 ## Changements pour la version 2.0
 
-* Ajout du support des traductions et des commentaires pour les traducteurs.
+* ajout d'un support de traduction et de commentaires de traduction.
 
 ## Changements pour la version 1.0
 

@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kaynak izleme 23.05.1\n"
+"Project-Id-Version: kaynak izleme\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:31-0700\n"
-"PO-Revision-Date: 2024-02-03 13:20+0300\n"
+"PO-Revision-Date: 2024-03-23 14:37+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language: tr_TR\n"
@@ -75,19 +75,19 @@ msgstr "%{percent} kalan pil, pil süresi bilinmiyor."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
-msgstr[0] "{0} saat"
-msgstr[1] "{0} saat"
+msgstr[0] "{hours:d} saat"
+msgstr[1] "{hours:d} hours"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
-msgstr[0] "{0} dakika"
-msgstr[1] "{0} dakika"
+msgstr[0] "{minutes:d} dakika"
+msgstr[1] "{minutes:d} minutes"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -201,18 +201,18 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "Bağlı kablosuz ağ: {}. Sinyal gücü: %{}. Güvenlik türü: {}"
 
 #. Translators: system uptime in days.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
-msgstr[0] "{0} gün"
-msgstr[1] "{0} gün"
+msgstr[0] "{days:d} gün"
+msgstr[1] "{days:d} days"
 
 #. Translators: system uptime in seconds.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
-msgstr[0] "{0} saniye"
-msgstr[1] "{0} saniye"
+msgstr[0] "{seconds:d} saniye"
+msgstr[1] "{seconds:d} seconds"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."

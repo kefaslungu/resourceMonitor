@@ -10,6 +10,8 @@ bilgi verir.
 
 # Kısayollar
 
+Tüm komutlar isteğe bağlı konuşma modunu destekler (NVDA 2024.1 ve üzeri).
+
 * NVDA+Shift+E: kullanılan ram, ortalama işlemci yükü ve varsa pil
   bilgilerini sunar.
 * NVDA+Shift+1: ortalama işlemci yükünü ve çok çekirdekli CPU'lar varsa her
@@ -49,6 +51,21 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
+
+## Sürüm 24.04
+
+* Psutil bağımlılığı 5.9.8'e güncellendi.
+* Kaynak bilgilerinin bu modda duyurulabilmesi için isteğe bağlı konuşma
+  modu desteği eklendi.
+
+## Sürüm 23.11
+
+* Bellek kullanımı duyurularındaki sorunlar nedeniyle psutil bağımlılığı
+  5.9.4'e düşürüldü.
+
+## Sürüm 23.10
+
+* Psutil bağımlılığı 5.9.5'e güncellendi.
 
 ## Sürüm 23.09
 

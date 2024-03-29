@@ -9,6 +9,8 @@
 
 # 快捷键
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E： 读出内存的使用率、CPU 平均负载和电池信息（如果可用）。
 * NVDA+Shift+1： 读出每个 CPU 核心的负载和平均负载。
 * NVDA+Shift+2/5： 读出物理内存和虚拟内存的容量和使用情况。
@@ -32,6 +34,21 @@
 * 此插件需要 Windows 10 或更高版本。
 
 关于许可证的说明：此插件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## 版本23.09
 

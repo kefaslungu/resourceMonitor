@@ -10,6 +10,8 @@ outras informações de uso de recursos.
 
 # Atalhos
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E: apresenta uso da ram (memória), carga média do processador,
   e informações de bateria caso disponível.
 * NVDA+Shift+1: apresenta a carga média do processador e caso se tratem de
@@ -49,6 +51,21 @@ de informações de sistema para Windows. Note também o seguinte:
 
 Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
 BSD de 3 cláusulas, que é compatível com a GNU General Public License.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Version 23.09
 

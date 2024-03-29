@@ -10,6 +10,8 @@ verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 
 # Tastenkürzel
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Umschalt+E: Zeigt den verbrauchten Arbeitsspeicher, die
   durchschnittliche Prozessorauslastungen und Akku-Informationen an, falls
   verfügbar.
@@ -53,6 +55,21 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Version 23.09
 

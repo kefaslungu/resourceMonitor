@@ -10,6 +10,8 @@ memoriei și alte resurse de utilizare a informației.
 
 # Scurtături
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E: presents used ram, average processor load, and battery info
   if available.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's
@@ -48,6 +50,21 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Version 23.09
 

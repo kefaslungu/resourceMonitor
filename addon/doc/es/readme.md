@@ -10,6 +10,9 @@ utilización de la memoria y de otra información de uso de recursos.
 
 # Atajos de teclado
 
+Todas las órdenes soportan el modo de voz a petición (NVDA 2024.1 o
+posterior).
+
 * NVDA+Shift+E: Presenta la ram utilizada, la carga promedio del procesador,
   e información de la batería si está disponible.
 * NVDA+Shift+1: Presenta la carga promedio del procesador y el promedio de
@@ -49,6 +52,21 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
+
+## Versión 24.04
+
+* Actualizada la dependencia psutil a 5.9.8.
+* Se añade soporte para el modo de voz a petición, por lo que la información
+  de los recursos se anuncia con este modo.
+
+## Versión 23.11
+
+* Se vuelve a usar la dependencia Psutil 5.9.4 a causa de problemas con los
+  mensajes de anuncio de memoria.
+
+## Versión 23.10
+
+* Actualizada la dependencia psutil a 5.9.5.
 
 ## Versión 23.09
 

@@ -10,6 +10,8 @@ i druge informacije o korištenju resursa.
 
 # Prečaci
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+šift+E: Prikazuje korištenje ram memorije, prosječno opterećenje
   procesora i informacije o stanju baterije, ako su dostupne.
 * NVDA+šift+1: Prikazuje prosječnu opterećenost procesora i ako postoje
@@ -51,6 +53,21 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Verzija 23.09
 

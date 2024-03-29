@@ -10,6 +10,8 @@ także wykorzystaniu innych zasobów.
 
 # Skróty
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E podaje używaną pamięć, średnie obciążenie procesora,
   informacje o baterii jeśli jest dostępna.
 * NVDA+Shift+1: przedstawia średnie obciążenie procesora, a jeśli obecne są
@@ -50,6 +52,21 @@ następujące kwestie:
 
 Uwaga dotycząca licencji: ten dodatek używa Psutil, licencjonowanego na
 3-klauzulowej licencji BSD, która jest zgodna z GNU General Public License.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Version 23.09
 

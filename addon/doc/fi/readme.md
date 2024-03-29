@@ -10,6 +10,9 @@ resurssien käytöstä.
 
 # Pikanäppäimet
 
+Kaikki komennot tukevat pyydettäessä-puhetilaa (NVDA 2024.1 ja sitä
+uudemmat).
+
 * NVDA+Vaihto+E: Lukee käytetyn RAM-muistin määrän, suorittimen
   keskimääräisen kuormituksen sekä akun tiedot, mikäli sellainen on
   käytettävissä.
@@ -52,6 +55,21 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
+
+## Versio 24.04
+
+* Päivitetty psutil-riippuvuus versioksi 5.9.8.
+* Lisätty tuki pyydettäessä-puhetilalle, jotta resurssitiedot voidaan
+  puhuttaa sitä käytettäessä.
+
+## Versio 23.11
+
+* Päivitetty psutil-riippuvuus alaspäin versioksi 5.9.4 muistinkäytön
+  puhumisessa ilmenneiden ongelmien vuoksi.
+
+## Versio 23.10
+
+* Päivitetty psutil-riippuvuus versioksi 5.9.5.
 
 ## Versio 23.09
 

@@ -10,6 +10,8 @@ sistema, quali carico della CPU, utilizzo della memoria e molto altro.
 
 # Tasti rapidi
 
+All commands support speech on demand mode (NVDA 2024.1 and later).
+
 * NVDA+Shift+E: fornisce informazioni sulla quantità di ram utilizzata, sul
   carico medio della cpu e sulla batteria, se disponibile.
 * NVDA+Shift+1: Fornisce informazioni sul carico medio delle CPU e, se sono
@@ -51,6 +53,21 @@ si tenga presente che:
 
 Nota sulla licenza: questo componente aggiuntivo utilizza Psutil, concesso
 con licenza 3-Clause BSD compatibile con GNU General Public License.
+
+## Version 24.04
+
+* Updated psutil dependency to 5.9.8.
+* Added support for speech on demand mode so resource information can be
+  announced in this mode.
+
+## Version 23.11
+
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.
+
+## Version 23.10
+
+* Updated psutil dependency to 5.9.5.
 
 ## Version 23.09
 

@@ -1,5 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +6,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:43-0700\n"
-"PO-Revision-Date: 2024-02-17 10:31+0530\n"
+"PO-Revision-Date: 2024-03-24 10:06+0530\n"
 "Last-Translator: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language-Team: DINAKAR T.D. <td.dinkar@gmail.com>\n"
 "Language: ta_IN\n"
@@ -16,6 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -25,7 +24,6 @@ msgstr "ஆதரிக்கப்படாத விண்டோஸ் வெ�
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
-#, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "this add-on.\n"
@@ -58,42 +56,37 @@ msgstr "இந்தக் கணினியில் மின்கலம் 
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
-#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, மின்கலம் மின்னூட்டப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
-#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
 "மின்கலத்தில் {percent}% மின்சாரம் எஞ்சியுள்ளது. மின்சாரம் நீடிக்கும் நேரம் அறியப்படவில்லை. "
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-#, fuzzy, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
-msgstr[0] "{0} மணி நேரங்"
-msgstr[1] "{0} மணி நேரங்"
+msgstr[0] "{hours:d} மணி நேரம்"
+msgstr[1] "{hours:d} மணி நேரம்"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
-#, fuzzy, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
-msgstr[0] "{0} நிமிடங்கள்"
-msgstr[1] "{0} நிமிடங்கள்"
+msgstr[0] "{minutes:d} நிமிடம்"
+msgstr[1] "{minutes:d} நிமிடங்கள்"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
-#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "மின்கலத்தில் {percent}% மின்சாரம் ஏற்றப்பட வேண்டியுள்ளது, சுமார் {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "எச்சரிக்கை: மின்கலத்தில் மின்சாரம் குறைவாக உள்ளது"
+msgstr "எச்சரிக்கை: மின்கலத்தில் மின்னளவு குறைவாக உள்ளது"
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
@@ -101,7 +94,6 @@ msgstr "எச்சரிக்கை: மின்கலத்தில் ம
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, python-brace-format
 msgid "{winVersion} ({cpuBit})"
 msgstr "{winVersion} ({cpuBit})"
 
@@ -132,7 +124,6 @@ msgstr ""
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -144,17 +135,14 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "செயலியின் சராசரி சுமையையும், ஒவ்வொரு கூறின் சுமையையும் அறிவிக்கிறது."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "கூறு {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%, {cores}."
 
@@ -165,14 +153,12 @@ msgstr ""
 "அறிவிக்கும். "
 
 #. Translators: Shows RAM (physical memory) usage.
-#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
@@ -201,18 +187,16 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "இணைக்கப்பட்டுள்ள இழையிலாப் பிணையம்: {}. சமிக்ஞை வலிமை: {}%. பாதுகாப்பு வகை: {}"
 
 #. Translators: system uptime in days.
-#, fuzzy, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
-msgstr[0] "{0} நாட்கள்"
-msgstr[1] "{0} நாட்கள்"
+msgstr[0] "{days:d} நாள்"
+msgstr[1] "{days:d} நாட்கள்"
 
 #. Translators: system uptime in seconds.
-#, fuzzy, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
-msgstr[0] "{0} விநாடிகள்"
-msgstr[1] "{0} விநாடிகள்"
+msgstr[0] "{seconds:d} விநாடி"
+msgstr[1] "{seconds:d} விநாடிகள்"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -229,7 +213,6 @@ msgstr ""
 "பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை "
 "அறிவிக்கிறது."
 
-#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
 
