@@ -50,6 +50,10 @@ try:
 		wlanapi.DOT11_AUTH_ALGO_WPA_PSK: "WPA-PSK",
 		wlanapi.DOT11_AUTH_ALGO_RSNA: "WPA2-Enterprise",
 		wlanapi.DOT11_AUTH_ALGO_RSNA_PSK: "WPA2-PSK",
+		wlanapi.DOT11_AUTH_ALGO_WPA3_ENT_192: "WPA3-Enterprise-192bit",
+		wlanapi.DOT11_AUTH_ALGO_WPA3_SAE: "WPA3-SAE",
+		wlanapi.DOT11_AUTH_ALGO_OWE: "OWE",
+		wlanapi.DOT11_AUTH_ALGO_WPA3_ENT: "WPA3-Enterprise",
 	}
 
 	@wlanapi.WLAN_NOTIFICATION_CALLBACK
