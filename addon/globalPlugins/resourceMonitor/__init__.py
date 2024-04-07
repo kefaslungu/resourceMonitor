@@ -287,10 +287,9 @@ def getWinVer() -> str:
 	buildRevision = f"{currentWinVer.build}.{ubr}"
 	# Translators: Presents Windows version
 	# (example output: "Windows 10 (32-bit)").
-	info = _("{winVersion} ({cpuBit})").format(
-		winVersion=winverName, cpuBit=arch
+	info = _("{winVersion} ({cpuBit}) build {build}").format(
+		winVersion=winverName, cpuBit=arch, build=buildRevision
 	)
-	info += " build {build}".format(build=buildRevision)
 	return info
 
 
