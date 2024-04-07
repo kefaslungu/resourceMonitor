@@ -22,7 +22,7 @@ try:
 	import psutil
 except ModuleNotFoundError:
 	from . import psutil
-# Windows Server systems do not include wlanapi.dll.
+# Windows Server systems prior to Server 2025 do not include wlanapi.dll.
 try:
 	from . import wlanapi
 	wlanapiAvailable = True
