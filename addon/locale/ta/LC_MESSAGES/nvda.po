@@ -24,6 +24,7 @@ msgstr "ஆதரிக்கப்படாத விண்டோஸ் வெ�
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
+#, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "this add-on.\n"
@@ -56,17 +57,20 @@ msgstr "இந்தக் கணினியில் மின்கலம் 
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, மின்கலம் மின்னூட்டப்படுகிறது"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
 "மின்கலத்தில் {percent}% மின்சாரம் எஞ்சியுள்ளது. மின்சாரம் நீடிக்கும் நேரம் அறியப்படவில்லை. "
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
 msgstr[0] "{hours:d} மணி நேரம்"
@@ -74,6 +78,7 @@ msgstr[1] "{hours:d} மணி நேரம்"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
 msgstr[0] "{minutes:d} நிமிடம்"
@@ -81,6 +86,7 @@ msgstr[1] "{minutes:d} நிமிடங்கள்"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "மின்கலத்தில் {percent}% மின்சாரம் ஏற்றப்பட வேண்டியுள்ளது, சுமார் {time}."
 
@@ -94,7 +100,8 @@ msgstr "எச்சரிக்கை: மின்கலத்தில் ம
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-msgid "{winVersion} ({cpuBit})"
+#, fuzzy, python-brace-format
+msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit})"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -124,6 +131,7 @@ msgstr ""
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
@@ -135,14 +143,17 @@ msgid "Presents the average processor load and the load of each core."
 msgstr "செயலியின் சராசரி சுமையையும், ஒவ்வொரு கூறின் சுமையையும் அறிவிக்கிறது."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "கூறு {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "சராசரி மையச் செயலக சுமை {avgLoad}%, {cores}."
 
@@ -153,12 +164,14 @@ msgstr ""
 "அறிவிக்கும். "
 
 #. Translators: Shows RAM (physical memory) usage.
+#, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
 "மெய் இடை நினைவகம்: {physicalUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {physicalTotal} "
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
+#, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "மெய்நிகர் இடை நினைவகம்: {virtualUsed} பயன்பாட்டிலுள்ளது, மொத்தம் {virtualTotal} "
@@ -187,12 +200,14 @@ msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "இணைக்கப்பட்டுள்ள இழையிலாப் பிணையம்: {}. சமிக்ஞை வலிமை: {}%. பாதுகாப்பு வகை: {}"
 
 #. Translators: system uptime in days.
+#, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{days:d} நாள்"
 msgstr[1] "{days:d} நாட்கள்"
 
 #. Translators: system uptime in seconds.
+#, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} விநாடி"
@@ -213,6 +228,7 @@ msgstr ""
 "பயன்பாட்டிலுள்ள இடை நினைவகம், செயலியின் சராசரி சுமை, மின்கலத் தகவல் ஆகியவைகளை "
 "அறிவிக்கிறது."
 
+#, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% இடை நினைவகம் பயன்பாட்டிலுள்ளது, மையச் செயலகம் {cpuPercent}%. "
 
