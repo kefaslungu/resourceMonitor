@@ -245,12 +245,13 @@ serverReleaseNames = {
 	14393: "Windows Server 2016",
 	17763: "Windows Server 2019",
 	20348: "Windows Server 2022",
+	26100: "Windows Server 2025",
 }
 
 
 @functools.lru_cache(maxsize=1)
 def getWinVer() -> str:
-	# Obtain winversion using NvDA 2021.1 API, later extended to use 2021.2 API.
+	# Obtain winversion using NVDA 2021.1 API, later extended to use 2021.2 API.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	currentWinVer = winVersion.getWinVer()
 	# Announce actual machine architecture (x86/32-bit, AMD64, ARM64).
