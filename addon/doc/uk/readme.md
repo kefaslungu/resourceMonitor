@@ -2,8 +2,6 @@
 
 * Автори: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst та інші учасники спільноти NVDA
-* Завантажити [стабільну версію][1]
-* Сумісність: NVDA 2022.4 і новіші
 
 Цей додаток надає інформацію про завантаженість процесора, використання
 пам’яті та інших ресурсів.
@@ -52,6 +50,12 @@ All commands support speech on demand mode (NVDA 2024.1 and later).
 
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

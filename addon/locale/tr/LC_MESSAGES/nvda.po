@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kaynak izleme\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:31-0700\n"
-"PO-Revision-Date: 2024-03-23 14:37+0300\n"
+"PO-Revision-Date: 2024-04-26 22:38+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language: tr_TR\n"
@@ -105,9 +105,9 @@ msgstr " Uyarı: pil kritik seviyede."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
-msgstr "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit}) Yapı {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.

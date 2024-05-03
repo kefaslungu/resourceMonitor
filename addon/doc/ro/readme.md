@@ -2,8 +2,6 @@
 
 * Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst and other NVDA contributors
-* Descărcați [versiunea stabilă][1]
-* NVDA compatibility: 2022.4 and later
 
 Acest supliment oferă informații despre media procesorului, utilizarea
 memoriei și alte resurse de utilizare a informației.
@@ -50,6 +48,12 @@ programelor de sistem pentru Windows. De asemenea, notați următoarele:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

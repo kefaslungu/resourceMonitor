@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 18.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:34-0700\n"
-"PO-Revision-Date: 2024-03-23 16:37+0100\n"
+"PO-Revision-Date: 2024-05-02 11:55+0200\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -101,9 +101,9 @@ msgstr " Alerte : niveau de batterie critique."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
-msgstr "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit}) build {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.

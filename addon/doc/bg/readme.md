@@ -2,8 +2,6 @@
 
 * Автори: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst и други сътрудници на NVDA
-* Изтегляне на [стабилна версия][1]
-* Съвместимост с NVDA: от 2022.4 и по-нови версии
 
 Тази добавка дава информация за натоварването на централния процесор,
 използваната оперативна памет и друга информация за използваните системни
@@ -57,6 +55,12 @@
 
 Забележка относно лиценза: Тази добавка използва Psutil, лицензиран под BSD
 лиценз с 3 клаузи, който е съвместим с GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Версия 24.04
 

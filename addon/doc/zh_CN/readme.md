@@ -2,8 +2,6 @@
 
 * 作者: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala,
   Ethin Probst 和其他NVDA贡献者
-* 下载 [稳定版][1]
-* NVDA 兼容性：2022.4 及更高版本
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
@@ -34,6 +32,12 @@ All commands support speech on demand mode (NVDA 2024.1 and later).
 * 此插件需要 Windows 10 或更高版本。
 
 关于许可证的说明：此插件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

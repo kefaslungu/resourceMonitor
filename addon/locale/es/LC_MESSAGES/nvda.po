@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:31-0700\n"
-"PO-Revision-Date: 2024-03-22 19:23+0100\n"
+"PO-Revision-Date: 2024-04-26 20:24+0200\n"
 "Last-Translator: José Manuel Delicado <jm.delicado@nvda.es>\n"
 "Language-Team: Spanish NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
@@ -101,9 +101,9 @@ msgstr " Advertencia: batería críticamente baja."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
-msgstr "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit}) compilación {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.

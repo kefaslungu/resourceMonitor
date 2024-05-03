@@ -2,8 +2,6 @@
 
 * Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst and other NVDA contributors
-* Pobierz [wersja stabilna][1]
-* Zgodność z NVDA: 2022.4 i nowsze
 
 Ta wtyczka podaje informacje o obciążeniu procesora, użyciu pamięci RAM, a
 także wykorzystaniu innych zasobów.
@@ -52,6 +50,12 @@ następujące kwestie:
 
 Uwaga dotycząca licencji: ten dodatek używa Psutil, licencjonowanego na
 3-klauzulowej licencji BSD, która jest zgodna z GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

@@ -2,8 +2,6 @@
 
 * Autores: Alex Hall, Joseph Lee, Kefas Lungu, beqa gozalishvili, Tuukka
   Ojala, Ethin Probst y otros colaboradores de NVDA
-* Descargar [versión estable][1]
-* Compatibilidad con NVDA: de 2022.4 en adelante
 
 Este plugin nos da información acerca de la carga de la CPU, de la
 utilización de la memoria y de otra información de uso de recursos.
@@ -52,6 +50,12 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
+
+## Versión 24.05
+
+* Se requiere NVDA 2024.1 o posterior.
+* NVDA reconocerá redes inalámbricas con métodos de autenticación WPA3 como
+  autenticación compartida de iguales (SAE).
 
 ## Versión 24.04
 

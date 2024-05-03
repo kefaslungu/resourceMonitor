@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:33-0700\n"
-"PO-Revision-Date: 2024-03-23 15:14+0200\n"
+"PO-Revision-Date: 2024-04-26 21:50+0300\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -100,9 +100,9 @@ msgstr " Varoitus: akun varaus kriittisen alhainen."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
-msgstr "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit}) koontiversio {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.

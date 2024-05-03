@@ -2,8 +2,6 @@
 
 * Tekijät: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst sekä muut NVDA:n tekijät
-* Lataa [vakaa versio][1]
-* Yhteensopivuus: NVDA 2022.4 ja uudemmat
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden
 resurssien käytöstä.
@@ -55,6 +53,12 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Versio 24.04
 

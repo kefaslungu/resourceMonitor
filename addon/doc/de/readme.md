@@ -2,8 +2,6 @@
 
 * Autoren: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst und weitere Mitwirkende aus der NVDA-Community
-* [Stabile Version herunterladen][1]
-* NVDA-Kompatibilität: 2022.4 und neuer
 
 Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
@@ -55,6 +53,12 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

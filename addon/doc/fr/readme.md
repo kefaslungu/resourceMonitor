@@ -2,8 +2,6 @@
 
 * Auteurs : Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst et d'autres contributeurs de NVDA
-* Télécharger [version stable][1]
-* Compatibilité NVDA : 2022.4 et versions ultérieures
 
 Cette extension fournit des informations sur la charge du processeur,
 l'utilisation de la mémoire et d'autres informations sur l'utilisation des
@@ -57,6 +55,12 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

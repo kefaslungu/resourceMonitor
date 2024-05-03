@@ -2,8 +2,6 @@
 
 * Forfattere: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst og andre NVDA-bidragydere
-* Download [stable version][1]
-* NVDA-kompatibilitet: 2022.4 og nyere
 
 Dette tilføjelsesprogram giver information om CPU-belastning, brug af
 hukommelse og andre oplysninger om forbrug af ressourcer.
@@ -50,6 +48,12 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 3-klausul BSD-licens, som er kompatibel med GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

@@ -2,8 +2,6 @@
 
 * Autori: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst i drugi NVDA doprinositelji
-* Preuzmi [stabilnu verziju][1]
-* NVDA kompatibilnost: 2022.4 i novije verzije
 
 Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
 i druge informacije o korištenju resursa.
@@ -53,6 +51,12 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

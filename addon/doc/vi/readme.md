@@ -2,8 +2,6 @@
 
 * Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst and other NVDA contributors
-* Tải về [phiên bản chính thức][1]
-* NVDA compatibility: 2022.4 and later
 
 Add-on này cung cấp các thông tin về tải CPU, sử dụng bộ nhớ và các nguồn
 tài nguyên khác.
@@ -49,6 +47,12 @@ hệ thống khác của Windows. Cũng lưu ý những điểm sau:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 

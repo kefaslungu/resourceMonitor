@@ -2,8 +2,6 @@
 
 * Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst and other NVDA contributors
-* Scarica la [versione stabile][1]
-* NVDA compatibility: 2022.4 and later
 
 Questo componente aggiuntivo fornisce informazioni sulle prestazioni di
 sistema, quali carico della CPU, utilizzo della memoria e molto altro.
@@ -53,6 +51,12 @@ si tenga presente che:
 
 Nota sulla licenza: questo componente aggiuntivo utilizza Psutil, concesso
 con licenza 3-Clause BSD compatibile con GNU General Public License.
+
+## Version 24.05
+
+* NVDA 2024.1 or later is required.
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as shared authentication of equals (SAE).
 
 ## Version 24.04
 
