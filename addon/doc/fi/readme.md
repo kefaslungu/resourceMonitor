@@ -54,11 +54,12 @@ Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
 
-## Version 24.05
+## Versio 24.05
 
-* NVDA 2024.1 or later is required.
-* NVDA will recognize wireless networks with WPA3 authentication methods
-  such as shared authentication of equals (SAE).
+* Edellyttää NVDA 2024.1:tä tai uudempaa.
+* NVDA tunnistaa langattomat verkot, joissa käytetään
+  WPA3-autentikointimenetelmiä, kuten Tasavertaista samanaikaista todennusta
+  (SAE).
 
 ## Versio 24.04
 

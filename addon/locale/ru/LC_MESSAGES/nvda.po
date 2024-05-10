@@ -8,20 +8,22 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:45-0700\n"
-"PO-Revision-Date: 2023-01-08 08:01-0800\n"
+"PO-Revision-Date: 2024-05-09 13:34+0300\n"
 "Last-Translator: Kvark <kvark128@yandex.ru>\n"
 "Language-Team: nvda-russian-community <LL@li.org>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "Неподдерживаемая версия Windows"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -31,21 +33,25 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Вы используете {releaseName} ({build}), версия Windows, не поддерживаемая "
+"этим дополнением.\n"
+"Для этого дополнения требуется {supportedReleaseName} ({supportedBuild}) или "
+"более поздняя версия."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Нет аутентификации (открытая)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Подключён к {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Отключён от  {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Беспроводное устройство подключено"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Беспроводное устройство отключено"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -62,29 +68,25 @@ msgstr "{percent}%, зарядка батареи."
 #. showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "Заряд батареи {percent}%, оставшееся время неизвестно"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "1 час"
+msgstr "осталось {percent}% заряда батареи , оставшееся время неизвестно."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 #, python-brace-format
-msgid "{0} hours"
-msgstr "{0} часов"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 минута"
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{hours:d} час"
+msgstr[1] "{hours:d} часа"
+msgstr[2] "{hours:d} часов"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
 #, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} минут"
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{minutes:d} минута"
+msgstr[1] "{minutes:d} минуты"
+msgstr[2] "{minutes:d} минут"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -103,8 +105,8 @@ msgstr " Внимание: батарея почти полностью разр
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
 #, python-brace-format
-msgid "{winVersion} ({cpuBit})"
-msgstr "{winVersion} ({cpuBit})"
+msgid "{winVersion} ({cpuBit}) build {build}"
+msgstr "{winVersion} ({cpuBit}) сборка {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -180,7 +182,7 @@ msgstr ""
 
 #. Translators: Reported when virtual memory information cannot be obtained.
 msgid "Virtual memory information unavailable"
-msgstr ""
+msgstr "Информация о виртуальной памяти недоступна"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -189,34 +191,33 @@ msgstr "Объявляет используемую версию Windows."
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Объявляет имя ssid беспроводной сети системы и её надёжность."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Нет беспроводных устройств"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Нет беспроводных подключений"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr ""
-
-#. Translators: system uptime in days.
-msgid "1 day"
-msgstr "1 день"
+"Подключённая беспроводная сеть: {}. Мощность сигнала: {}%. Тип защиты: {}"
 
 #. Translators: system uptime in days.
 #, python-brace-format
-msgid "{0} days"
-msgstr "{0} дней"
-
-#. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "1 секунда"
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{days:d} день"
+msgstr[1] "{days:d} дня"
+msgstr[2] "{days:d} дней"
 
 #. Translators: system uptime in seconds.
 #, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} секунд"
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{seconds:d} секунда"
+msgstr[1] "{seconds:d} секунды"
+msgstr[2] "{seconds:d} секунд"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -247,3 +248,15 @@ msgid ""
 msgstr ""
 "Удобный монитор ресурсов сообщающий о загрузке процессора, использовании "
 "памяти, состоянии заряда батареи, использовании диска и многого другого."
+
+#~ msgid "1 hour"
+#~ msgstr "1 час"
+
+#~ msgid "1 minute"
+#~ msgstr "1 минута"
+
+#~ msgid "1 day"
+#~ msgstr "1 день"
+
+#~ msgid "1 second"
+#~ msgstr "1 секунда"

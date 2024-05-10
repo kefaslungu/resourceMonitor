@@ -52,7 +52,7 @@ License which is compatible with GNU General Public License.
 
 * NVDA 2024.1 or later is required.
 * NVDA will recognize wireless networks with WPA3 authentication methods
-  such as shared authentication of equals (SAE).
+  such as simultaneous authentication of equals (SAE).
 
 ## Version 24.04
 

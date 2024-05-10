@@ -54,8 +54,8 @@ Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 ## Versión 24.05
 
 * Se requiere NVDA 2024.1 o posterior.
-* NVDA reconocerá redes inalámbricas con métodos de autenticación WPA3 como
-  autenticación compartida de iguales (SAE).
+* NVDA will recognize wireless networks with WPA3 authentication methods
+  such as simultaneous authentication of equals (SAE).
 
 ## Versión 24.04
 

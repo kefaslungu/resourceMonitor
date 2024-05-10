@@ -7,7 +7,7 @@
 
 # 快捷键
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+所有命令都支持手动朗读模式（NVDA 2024.1 及更高版本）。
 
 * NVDA+Shift+E： 读出内存的使用率、CPU 平均负载和电池信息（如果可用）。
 * NVDA+Shift+1： 读出每个 CPU 核心的负载和平均负载。
@@ -33,26 +33,23 @@ All commands support speech on demand mode (NVDA 2024.1 and later).
 
 关于许可证的说明：此插件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
 
-## Version 24.05
+## 版本24.05
 
-* NVDA 2024.1 or later is required.
-* NVDA will recognize wireless networks with WPA3 authentication methods
-  such as shared authentication of equals (SAE).
+* 需要 NVDA 2024.1 或更高版本。
+* 通过 WPA3 身份验证方法（例如同时身份验证 (SAE)）来识别无线网络。
 
-## Version 24.04
+## 版本24.04
 
-* Updated psutil dependency to 5.9.8.
-* Added support for speech on demand mode so resource information can be
-  announced in this mode.
+* 将 psutil 更新到 5.9.8。
+* 新增对手动朗读模式的支持，可以在此模式下朗读资源信息。
 
-## Version 23.11
+## 版本23.11
 
-* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
-  announcements.
+* 由于内存使用问题，将 psutil 依赖项降级至 5.9.4。
 
-## Version 23.10
+## 版本23.10
 
-* Updated psutil dependency to 5.9.5.
+* 将 psutil 更新到 5.9.5。
 
 ## 版本23.09
 
