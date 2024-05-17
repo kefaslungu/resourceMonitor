@@ -58,9 +58,9 @@ Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 
 ## Version 24.05
 
-* NVDA 2024.1 or later is required.
-* NVDA will recognize wireless networks with WPA3 authentication methods
-  such as simultaneous authentication of equals (SAE).
+* NVDA 2024.1 ou version ultérieure est requis.
+* NVDA reconnaîtra les réseaux sans fil avec des méthodes d'authentification
+  WPA3 telles que l'authentification simultanée d'égaux (SAE).
 
 ## Version 24.04
 
