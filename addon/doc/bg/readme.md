@@ -56,11 +56,11 @@
 Забележка относно лиценза: Тази добавка използва Psutil, лицензиран под BSD
 лиценз с 3 клаузи, който е съвместим с GNU General Public License.
 
-## Version 24.05
+## Версия 24.05
 
-* NVDA 2024.1 or later is required.
-* NVDA will recognize wireless networks with WPA3 authentication methods
-  such as simultaneous authentication of equals (SAE).
+* Изисква се NVDA 2024.1 или по-нова версия.
+* NVDA ще разпознава безжични мрежи с WPA3 методи за удостоверяване като
+  едновременно удостоверяване на равни (SAE).
 
 ## Версия 24.04
 

@@ -8,7 +8,7 @@ i druge informacije o korištenju resursa.
 
 # Prečaci
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+Sve naredbe podržavaju govor na zahtjev (NVDA 2024.1 i novije verzije).
 
 * NVDA+šift+E: Prikazuje korištenje ram memorije, prosječno opterećenje
   procesora i informacije o stanju baterije, ako su dostupne.
