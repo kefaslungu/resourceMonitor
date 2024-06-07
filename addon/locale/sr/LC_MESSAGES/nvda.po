@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:43-0700\n"
-"PO-Revision-Date: 2024-04-02 16:15+0100\n"
+"PO-Revision-Date: 2024-06-03 05:41+0200\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -55,14 +55,13 @@ msgstr "Bežični uređaj je onemogućen"
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr ""
-"ovaj računar nema povezanu bateriju овај рачунар нема повезану батерију"
+msgstr "Ovaj računar nema povezanu bateriju."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent}%, punjenje baterije "
+msgstr "{percent}%, punjenje baterije."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
@@ -92,43 +91,44 @@ msgstr[2] "{minutes:d} minuta"
 #. showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent}% baterije preostalo {time}."
+msgstr "{percent}% baterije preostalo, oko {time}."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "upozorenje: baterija slaba "
+msgstr " Upozorenje: baterija slaba."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "upozorenje : kritično prazna baterija "
+msgstr " Upozorenje: Kritično prazna baterija."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
-msgstr "{winVersion} ({cpuBit})"
+msgstr "{winVersion} ({cpuBit}) podverzija {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
 msgid "Resource Monitor"
-msgstr "Resource Monitor"
+msgstr "Monitor resursa"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"prijavljuje status baterije i preostalo vreme (ako punjač nije uključen )"
+"Prikazuje procenat baterije, status punjenja, preostalo vreme (ako se "
+"baterija ne puni) i upozorenje ako je baterija slaba ili kritična."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
 msgstr ""
-"prijavljuje trenutnu memoriju , iskorišćenu memoriju i dostupnu memoriju "
-"diskova na računaru "
+"Prikazuje iskorišćeni i ukupan prostor statičkih diskova i diskova koji se "
+"mogu ukloniti na ovom računaru."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
@@ -137,43 +137,43 @@ msgstr ""
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} disk): {usedSpace} od{totalSpace} "
-"iskorišćeno{percent}%."
+"{driveName} ({driveType} disk): {usedSpace} od {totalSpace} iskorišćeno "
+"{percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
-msgstr "prijavljuje cpu status i status svakog jezgra "
+msgstr "Prikazuje prosečno opterećenje procesora i opterećenje svakog jezgra."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
-msgstr "Jezgro{coreNumber}: {corePercent}%"
+msgstr "Jezgro {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%."
-msgstr "Prosečna iskorišćenost procesora{avgLoad}%."
+msgstr "Prosečno opterećenje procesora {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Prosečna iskorišćenost procesora{avgLoad}%, {cores}."
+msgstr "Prosečno opterećenje procesora {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "prijavljuje status fizičke i virtuelne memorije "
+msgstr "Prikazuje iskorišćeni i ukupan prostor za fizički i virtuelni RAM."
 
 #. Translators: Shows RAM (physical memory) usage.
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"fizička : {physicalUsed} od {physicalTotal} koristi se({physicalPercent}%). "
+"Fizička: {physicalUsed} od {physicalTotal} iskorišćeno ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
-"virtuelna : {virtualUsed} od{virtualTotal} koristi se({virtualPercent}%)."
+"Virtuelna: {virtualUsed} od {virtualTotal} iskorišćeno ({virtualPercent}%)."
 
 #. Translators: Reported when virtual memory information cannot be obtained.
 msgid "Virtual memory information unavailable"
@@ -181,7 +181,7 @@ msgstr "Informacije o virtuelnoj memoriji nedostupne"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
-msgstr "izgovara windows verziju koju koristite "
+msgstr "Izgovara verziju Windowsa koju koristite."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
@@ -215,22 +215,22 @@ msgstr[2] "{seconds:d} sekundi"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr "Izgovara vreme rada sistema"
+msgstr "Izgovara vreme rada sistema."
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr "Nije moguće pronaći vreme rada sistema"
+msgstr "Nije moguće preuzeti vreme rada sistema."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"prijavljuje status cpu-a , ram memoriju i informacije o bateriji ukoliko su "
-"dostupne "
+"Prikazuje iskorišćeni RAM, prosečno opterećenje procesora i informacije o "
+"bateriji ako su dostupne."
 
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% RAM memorije iskorišćeno, CPU na{cpuPercent}%."
+msgstr "{ramPercent}% RAM-a iskorišćeno, CPU na {cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
@@ -238,8 +238,8 @@ msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
-"dobar monitor resursa koji prijavljuje bateriju , ram memoriju , "
-"iskorišćenost memorije na hard disku i još mnogo toga "
+"Jednostavan monitor resursa koji prijavljuje opterećenost procesora, "
+"iskorišćenu memoriju, bateriju, status korišćenja diskova i još toga."
 
 #~ msgid "1 hour"
 #~ msgstr "Jedan sat"
