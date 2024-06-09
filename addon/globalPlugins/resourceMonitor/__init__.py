@@ -3,6 +3,7 @@
 # Copyright 2013-2024 Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
 # released under GPL.
 # This add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GPL.
+# psutil is included in NVDA 2024.2 and later.
 
 import functools
 import os.path
@@ -17,11 +18,7 @@ import globalPluginHandler
 import scriptHandler
 import ui
 import winVersion
-# NVDA 2024.2 includes psutil.
-try:
-	import psutil
-except ModuleNotFoundError:
-	from . import psutil
+import psutil
 # Windows Server systems prior to Server 2025 do not include wlanapi.dll.
 try:
 	from . import wlanapi
