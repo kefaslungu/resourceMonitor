@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kaynak izleme\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:31-0700\n"
-"PO-Revision-Date: 2024-05-19 16:54+0300\n"
+"PO-Revision-Date: 2024-06-16 04:40+0300\n"
 "Last-Translator: Burak Yüksek <burakyuksek94@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language: tr_TR\n"
@@ -79,7 +79,7 @@ msgstr "%{percent} kalan pil, pil süresi bilinmiyor."
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
 msgstr[0] "{hours:d} saat"
-msgstr[1] "{hours:d} hours"
+msgstr[1] "{hours:d} saat"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
@@ -87,7 +87,7 @@ msgstr[1] "{hours:d} hours"
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
 msgstr[0] "{minutes:d} dakika"
-msgstr[1] "{minutes:d} minutes"
+msgstr[1] "{minutes:d} dakika"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.

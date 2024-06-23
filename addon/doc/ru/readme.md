@@ -1,189 +1,255 @@
 # Resource Monitor #
 
-* Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala, Ethin
-  Probst and other NVDA contributors
-* Загрузить [стабильную версию][1]
-* NVDA compatibility: 2022.4 and later
+* Авторы: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst и другие участники NVDA
 
 Этот плагин предоставляет информацию о загрузке процессора, используемой
 памяти и  других используемых ресурсах.
 
 # Горячие клавиши
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info
-  if available.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's
-  are present the load of each core.
-* NVDA+Shift+2/5: presents the used and total space for both physical and
-  virtual ram.
-* NVDA+Shift+3: presents the used and total space of the static and
-  removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time
-  (if not charging), and a warning if the battery is low or critical.
-* NVDA+Shift+6: presents CPU Architecture and Windows version and service
-  pack numbers.
-* NVDA+Shift+7: presents the system's uptime.
+Все команды поддерживают режим речи по требованию (NVDA 2024.1 и позднее).
 
-You can change these shortcut keys via input gestures dialog.
+* NVDA+Shift+E: предоставляет используемую память, среднюю загрузку
+  процессора и данные батареи, если доступно.
+* NVDA+Shift+1: Предоставляет среднюю загрузку процессора и загрузку каждого
+  ядра.
+* NVDA+Shift+2/5: предоставляет используемый и общий объём физической и
+  виртуальной памяти.
+* NVDA+Shift+3: предоставляет использованный и общий объём несъёмных и
+  съёмных дисков этого компьютера.
+* NVDA+Shift+4: предоставляет процентность батареи, состояние зарядки,
+  оставшееся время (если не заряжается), и предупреждение о низком или
+  критическом заряде.
+* NVDA+Shift+6: предоставляет разрядность процессора, установленную версию
+  Windows и пакет исправления.
+* NVDA+Shift+7: показывает время безотказной работы системы.
+* NVDA+Shift+8: отображает информацию о беспроводном соединении, имени ssid
+  и его надежности или об отсутствии ssid, если таковой недоступен.
+
+Вы можете изменить эти сочетания клавиш в диалоге жестов ввода.
 
 ## Замечания по использованию
 
 Это дополнение не заменяет диспетчер задач и другие информационные программы
 системы Windows. Также обратите внимание на следующее:
 
-* Resource information cannot be copied to clipboard if running the add-on
-  in secure screens.
+* Информация о ресурсе не может быть скопирована в буфер обмена при запуске
+  дополнения в режиме защищенных экранов.
 * Использование процессора предоставляется для логических процессоров, а не
   физических ядер. Это касается процессоров, которые использует Hyper
   Threading, где количество процессоров в два раза превышает количество
-  процессорных ядер.
+  процессорных ядер. На некоторых новых компьютерах не на всех ядрах
+  процессора будет включена поддержка hyper-threading.
 * Если есть тяжелые дисковые операции, такие как копирование больших файлов,
   возникают задержки при получении информации об использовании диска.
-* When announcing processor architecture information, "x86" and "AMD64"
-  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* This add-on requires Windows 10 or later.
+* При объявлении информации об архитектуре процессора "x86" и "AMD64"
+  относятся к 32-разрядным и 64-разрядным (x64) процессорам Intel и AMD
+  соответственно.
+* Для этого дополнения требуется Windows 10 или позднее.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
-License which is compatible with GNU General Public License.
+Примечание по лицензии: это дополнение использует Psutil, лицензированный по
+лицензии BSD из 3 пунктов, которая совместима с GNU General Public License.
 
-## Version 23.02
+## Версия 24.05
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* Требуется NVDA 2024.1 или позднее.
+* NVDA распознает беспроводные сети с методами аутентификации WPA3, такими
+  как одновременная аутентификация равных (SAE).
 
-## Version 23.01
+## Версия 24.04
 
-* NVDA 2022.3 or later is required.
-* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
-  supported by Microsoft as of January 2023.
-* Updated psutil dependency to 5.9.4.
-* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
-  of Windows version information.
-* On single-core systems, NVDA will no longer announce CPU core load as
-  average CPU load is the same as core load.
+* Обновлён пакет psutil до версии 5.9.8.
+* Добавлена поддержка режима речи по требованию, чтобы в этом режиме можно
+  было объявлять информацию о ресурсах.
 
-## Version 22.03
+## Версия 23.11
 
-Version 22.03 is the last stable version to support Windows 7 Service Pack
-1, 8, and 8.1.
+* Состарен пакет psutil до версии 5.9.4 из-за проблем с объявлениями об
+  использовании памяти.
 
-* NVDA 2021.3 or later is required.
-* A warning message will be displayed when attempting to install the add-on
-  on Windows 7, 8, and 8.1.
-* Updated psutil dependency to 5.9.0.
+## Версия 23.10
 
-## Version 22.01
+* Обновлён пакет psutil до версии 5.9.5.
 
-* NVDA 2021.2 or later is required.
+## Версия 23.09
 
-## Version 21.10
+* NVDA больше не будет регистрировать сообщения об ошибках при запуске в
+  системах Windows Server, когда модули беспроводной связи недоступны.
 
-* NVDA 2021.1 or later is required due to changes to NVDA that affects this
-  add-on.
+## Версия 23.06
 
-## Version 21.08
+* Исправлена ситуация, когда resourceMonitor не работал должным образом
+  из-за недоступности беспроводных адаптеров.
 
-* Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+## Версия 23.05.1
 
-## Version 21.04
+wlanReporter NVDA-addon теперь является частью resourceMonitor!
 
-* NVDA 2020.4 or later is required.
-* Updated psutil dependency to 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* Старый способ проверки беспроводных подключений был заменен Windows API от
+  wlanReporter: https://github.com/kvark128/WlanReporter/ .
 
-## Version 21.01
+	* После объявления имени SSID и уровня защиты, NVDA также сообщит вам тип
+	  безопасности вашей сети.
+	* Теперь NVDA будет предупреждать вас о подключении к беспроводной сети и
+	  отключении от неё.
+	* Теперь NVDA будет предупреждать вас о включении или выключении
+	  беспроводных подключений.
 
-* Updated psutil dependency to 5.7.3.
-* Shortened Windows version message.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+## Версия 23.05
 
-## Version 20.09
+* добавлена возможность определять и отображать состояние подключенной
+  беспроводной сети.
 
-* System uptime is now given as days, hours, minutes, seconds.
-* Windows Server Insider Preview build 20201 or later is properly recognized
-  as a Server Insider build.
+	* Объявляет имя подключенного беспроводного SSID.
+	* Объявляет об уровне сигнала ssid
+	* Объявляет, что SSID не найден, если он не обнаружен.
 
-## Version 20.07
+## Версия 23.02
 
-* Windows 10 Version 20H2 is properly recognized when obtaining Windows
-  version information (NVDA+Shift+6).
-* Simplified Windows 10 version message i.e. Windows 10 YYMM instead of
-  Windows 10verYYMM when pressing NVDA+Shift+6.
+* Требуется NVDA 2022.4 или позднее.
+* Требуется Windows 10 21H2 (обновление от ноября 2021 года/сборка 19044)
+  или позднее.
 
-## Version 20.06
+## Версия 23.01
 
-* Resolved many coding style issues and potential bugs with Flake8.
+* Требуется NVDA 2022.3 или позднее.
+* Требуется Windows 10 или позднее, поскольку Windows 7, 8 и 8.1 больше не
+  поддерживаются Корпорацией Майкрософт с января 2023 года.
+* Обновлён пакет psutil до версии 5.9.4.
+* NVDA объявит актуальную архитектуру процессора (x86/AMD64/ARM64) как часть
+  информации о версии Windows.
+* В одноядерных системах NVDA больше не будет сообщать о загрузке ядра
+  процессора, поскольку средняя загрузка процессора совпадает с загрузкой
+  ядра.
 
-## Version 20.04
+## Версия 22.03
 
-* Updated psutil dependency to 5.7.0.
+Версия 22.03 - это последняя стабильная версия, поддерживающая Windows 7 с
+пакетами обновления 1, 8 и 8.1.
 
-## Version 20.01
+* Требуется NVDA 2021.3 или позднее.
+* При попытке установить дополнение в Windows 7, 8 и 8.1 будет выведено
+  предупреждающее сообщение.
+* Обновлён пакет psutil до версии 5.9.0.
 
-* NVDA 2019.3 or later is required due to extensive use of Python 3.
+## Версия 22.01
 
-## Version 19.11
+* Требуется NVDA 2021.2 или позднее.
 
-* Improved detection of Windows Insider Preview builds, especially for 20H1
-  and beyond.
+## Версия 21.10
 
-## Version 19.07
+* Требуется NVDA 2021.1 или позднее из-за изменений в NVDA, которые влияют
+  на это дополнение.
 
-* Updated psutil dependency to 5.6.3.
-* Internal changes to battery status announcement command.
+## Версия 21.08
 
-## Version 18.12
+* Требования к минимальному выпуску Windows теперь привязаны к выпускам
+  NVDA.
+* Сборки Windows 20348 и 22000 распознаются как Windows Server 2022 и
+  Windows 11 соответственно.
+* В предварительных версиях Insider Preview не будут использоваться версии
+  Windows, такие как "Windows 10". Вместо этого NVDA объявит "Windows
+  Insider".
+* В 64-разрядных системах архитектура процессора (x64 или ARM64) будет
+  объявлена как часть информации о версии Windows.
 
-* Internal changes to support future NVDA releases.
+## Версия 21.04
 
-## Version 18.10
+* Требуется NVDA 2020.4 или позднее.
+* Обновлён пакет psutil до версии 5.8.0.
+* При двойном нажатии команд дополнения для копирования информации о ресурсе
+  в буфер обмена NVDA объявит сводку о копируемом ресурсе.
 
-* Code has been made more compatible with Python 3.
-* Updated psutil dependency to 5.4.7.
-* When obtaining disk capacity and memory usage, NVDA will no longer give
-  errors if using a computer or a service with more than a petabyte of RAM
-  or disk size.
-* Values for memory and disk usage are shown with up to two decimal places
-  (e.g. 4.00 GB instead of 4.0 GB).
-* Improved detection of Windows Insider Preview builds.
+## Версия 21.01
+
+* Обновлён пакет psutil до версии 5.7.3.
+* Сокращено сообщение о версии Windows.
+* В Windows 8.1 обновление build.revision будет объявлено как часть
+  сообщения о версии Windows, аналогично Windows 10.
+
+## Версия 20.09
+
+* Время безотказной работы системы теперь указывается в днях, часах,
+  минутах, секундах.
+* Предварительная сборка Windows Server Insider Preview версии 20201 или
+  позднее правильно распознаётся как внутренняя серверная сборка.
+
+## Версия 20.07
+
+* Windows 10 версии 20H2 правильно распознаётся при получении информации о
+  версии Windows (NVDA+Shift+6).
+* Упрощено сообщение о версии Windows 10, т.е. Windows 10 YYMM вместо
+  Windows 10verYYMM при нажатии NVDA+Shift+6.
+
+## Версия 20.06
+
+* Устранены многие проблемы со стилем кодирования и потенциальные ошибки с
+  помощью Flake8.
+
+## Версия 20.04
+
+* Обновлён пакет psutil до версии 5.7.0.
+
+## Версия 20.01
+
+* Из-за широкого использования Python 3 требуется NVDA 2019.3 или позднее.
+
+## Версия 19.11
+
+* Улучшено обнаружение сборок Windows Insider Preview, особенно для 20H1 и
+  последующих версий.
+
+## Версия 19.07
+
+* Обновлён пакет psutil до версии 5.6.3.
+* Внутренние изменения в команде оповещения о состоянии батареи.
+
+## Версия 18.12
+
+* Внутренние изменения для поддержки будущих выпусков NVDA.
+
+## Версия 18.10
+
+* Код был сделан более совместимым с Python 3.
+* Обновлён пакет psutil до версии 5.4.7.
+* При получении данных о емкости диска и использовании памяти NVDA больше не
+  будет выдавать ошибок при использовании компьютера или сервиса с объемом
+  оперативной памяти или диска более петабайта.
+* Значения для объема используемой памяти и диска указаны с точностью до
+  двух знаков после запятой (например, 4,00 ГБ вместо 4,0 ГБ).
+* Улучшено обнаружение сборок Windows Insider Preview.
 
 ## Версия 18.04
 
-Version 18.04.x is the last release to support Windows releases earlier than
-7 SP1.
+Версия 18.04.x является последней версией, поддерживающей Windows более
+ранних версий, чем 7 SP1.
 
-* Last release to support Windows Server 2003, Vista and Server 2008.
-* Better detection of Windows 10 releases and distinguishing between public
-  and Insider Preview builds.
+* Последняя версия для поддержки Windows Server 2003, Vista и Server 2008.
+* Улучшено распознавание выпусков Windows 10 и проведение различий между
+  общедоступными и внутренними предварительными сборками.
 
 ## Версия 17.12
 
-* Added support for 64-bit ARM processors on Windows 10.
+* Добавлена поддержка 64-разрядных ARM-процессоров в Windows 10.
 
 ## Версия 17.09
 
-Important: Version 17.09.x is the last version to support Windows XP.
+Важно: Версия 17.09.x является последней версией, поддерживающей Windows XP.
 
-* Last version to run on Windows XP.
-* Windows 10 build 16278 and later is recognized as Version 1709. A minor
-  revision for this add-on will be released once Version 1709 stable build
-  is released.
+* Последняя версия для работы в Windows XP.
+* Windows 10 сборки 16278 и позднее распознаётся как версия 1709. Небольшая
+  редакция этого дополнения будет выпущена после выхода стабильной сборки
+  версии 1709.
 
 ## Версия 17.07.1
 
-* Reintroduce support for Windows XP (broken since version 17.02).
+* Восстановлена поддержка Windows XP (не работает с версии 17.02).
 
 ## Версия 17.05
 
-* Announcement of system uptime (time passed since last boot; NVDA+Shift+7).
+* Сообщение о времени безотказной работы системы (время, прошедшее с момента
+  последней загрузки; NVDA+Shift+7).
 
 ## Версия 17.02
 
@@ -254,7 +320,7 @@ Important: Version 17.09.x is the last version to support Windows XP.
 
 * Обновлен пакет psutil до версии 0.6.1.
 * Исправлена ​​большая задержка при получении информации о дисках.
-* Немного очищен код
+* Очищен код.
 
 ## Изменения в версии 2.0
 
@@ -262,8 +328,8 @@ Important: Version 17.09.x is the last version to support Windows XP.
 
 ## Изменения в версии 1.0
 
-* Первый публичный релиз
+* Первый выпуск
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=resourceMonitor
+[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor
