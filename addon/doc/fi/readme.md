@@ -48,7 +48,9 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   kuten suurten tiedostojen kopiointia, on runsaasti.
 * Suorittimen arkkitehtuuritietoja ilmoitettaessa "x86" ja "AMD64"
   viittaavat 32- ja 64-bittisiin (x64) Intel- ja AMD-suorittimiin.
-* Tämä lisäosa edellyttää Windows 10:tä tai uudempaa.
+* Tämä lisäosa edellyttää Windows 10 22H2:ta (2022-päivitys/koontiversio
+  19045) tai uudempaa.
+* Tämän lisäosan asentamista ei tueta Windows 10:n/11:n LTSC-versioissa.
 
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL

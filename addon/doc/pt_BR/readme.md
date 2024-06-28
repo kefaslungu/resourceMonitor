@@ -45,7 +45,8 @@ de informações de sistema para Windows. Note também o seguinte:
   pode haver lentidão ao obter informações de uso do disco.
 * When announcing processor architecture information, "x86" and "AMD64"
   refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* This add-on requires Windows 10 or later.
+* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
+* Installing the add-on on Windows 10/11 LTSC is not supported.
 
 Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
 BSD de 3 cláusulas, que é compatível com a GNU General Public License.

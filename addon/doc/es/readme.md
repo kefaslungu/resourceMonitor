@@ -46,7 +46,9 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   grandes, podría haber retrasos al obtener información de uso de disco.
 * Al anunciar la información de arquitectura del procesador, "x86" y "AMD64"
   se refieren a procesadores (Intel y AMD) de 32 y 64 bits, respectivamente.
-* Este complemento necesita Windows 10 o posterior.
+* Este complemento necesita Windows 10 22H2 (Actualización de 2022
+  /compilación 19045) o posterior.
+* No se soporta la instalación del complemento en Windows 10/11 LTSC.
 
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.

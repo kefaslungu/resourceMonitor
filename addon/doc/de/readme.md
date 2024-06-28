@@ -3,12 +3,13 @@
 * Autoren: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
   Ojala, Ethin Probst und weitere Mitwirkende aus der NVDA-Community
 
-Diese Erweiterung enthält Informationen über Prozessor-Auslastung,
+Diese NVDA-Erweiterung enthält Informationen über Prozessor-Auslastung,
 verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 
 # Tastenkürzel
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+Alle Befehle unterstützen den Modus "Bei Bedarf vorlesen" (NVDA 2024.1 und
+neuer).
 
 * NVDA+Umschalt+E: Zeigt den verbrauchten Arbeitsspeicher, die
   durchschnittliche Prozessorauslastungen und Akku-Informationen an, falls
@@ -48,7 +49,10 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
   Kopieren großer Dateien stattfinden.
 * Bei den Informationen zur Prozessorarchitektur beziehen sich "x86" und
   "AMD64" auf 32-Bit- bzw. 64-Bit-Prozessoren (x64) von Intel bzw. AMD.
-* Für diese Erweiterung ist Windows 10 oder neuer erforderlich.
+* Für diese NVDA-Erweiterung wird Windows 10 Version 22H2 (2022 Update /
+  Build 19045) oder neuer benötigt.
+* Die Installation der NVDA-Erweiterung unter Windows 10/11 LTSC wird nicht
+  unterstützt.
 
 Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
@@ -56,24 +60,24 @@ Public Lizenz kompatibel.
 
 ## Version 24.05
 
-* NVDA 2024.1 or later is required.
-* NVDA will recognize wireless networks with WPA3 authentication methods
-  such as simultaneous authentication of equals (SAE).
+* NVDA 2024.1 oder neuer ist erforderlich.
+* NVDA erkennt WLAN-Netzwerke mit WPA3-Authentifizierungsmethoden, wie
+  z. B. die gleichzeitige Authentifizierung von Gleichgestellten (SAE).
 
 ## Version 24.04
 
-* Updated psutil dependency to 5.9.8.
-* Added support for speech on demand mode so resource information can be
-  announced in this mode.
+* Die Python-Abhängigkeit "psutil" wurde auf 5.9.8 aktualisiert.
+* Unterstützung für den Modus "Bei Bedarf vorlesen" wurde hinzugefügt, so
+  dass Informationen zu Ressourcen in diesem Modus mitgeteilt werden können.
 
 ## Version 23.11
 
-* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
-  announcements.
+* Downgrade der Python-Abhängigkeit "psutil" auf 5.9.4 bezüglich Probleme
+  mit den Meldungen über die Speichernutzung.
 
 ## Version 23.10
 
-* Updated psutil dependency to 5.9.5.
+* Die Python-Abhängigkeit "psutil" wurde auf 5.9.5 aktualisiert.
 
 ## Version 23.09
 
@@ -90,22 +94,24 @@ Public Lizenz kompatibel.
 
 Die NVDA-Erweiterung "wlanReporter" ist jetzt Teil dieser NVDA-Erweiterung!
 
-* The old way of checking for wireless connections has been replaced by the
-  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+* Die alte Methode zur Überprüfung von drahtlosen Verbindungen wurde durch
+  die Windows-API von wlanReporter ersetzt:
+  https://github.com/kvark128/WlanReporter/.
 
-	* After speaking SSID name and strength, NVDA will also now tell you the
-	  security type of your network.
-	* NVDA will now alert you when you connect and disconnect from a wireless
-	  network.
-	* NVDA will now alert you when wireless connections is turned on or off.
+	* Nach der Angabe von SSID-Name und Signalstärke teilt NVDA nun auch den
+	  Sicherheitstyp des verbundenen WLAN-Netzwerks mit.
+	* NVDA informiert Sie jetzt darüber, wenn Sie eine Verbindung zu einem
+	  WLAN-Netzwerk herstellen oder trennen.
+	* NVDA teilt nun mit, sobald ein WLAN-Netzwerk ein- oder ausgeschaltet
+	  wird.
 
 ## Version 23.05
 
-* added the ability to detect and present the state of the connected
-  wireless network.
+* Status hinzugefügt, um das verbundene WLAN-Netzwerk zu erkennen und
+  anzuzeigen.
 
 	* Teilt die SSID und den Namen der WLAN-Verbindung mit.
-	* Announces the strength of the ssid
+	* Teilt die Signalstärke des WLAN-Netzwerks mit
 	* Teilt mit, sofern keine SSID im Netzwerk gefunden wurde.
 
 ## Version 23.02
