@@ -45,7 +45,9 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
   kullanım bilgilerinin alınmasında gecikmeler olabilir.
 * İşlemci mimarisi bilgileri açıklanırken "x86" ve "AMD64" sırasıyla 32 bit
   ve 64 bit (x64) Intel ve AMD işlemcileri ifade eder.
-* Bu eklenti, Windows 10 veya üst sürümlerini gerektirir.
+* Bu eklenti, Windows 10 22H2 (2022 Güncellemesi/derleme 19045) veya üzerini
+  gerektirir.
+* Eklentinin Windows 10/11 LTSC'ye yüklenmesi desteklenmemektedir.
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.

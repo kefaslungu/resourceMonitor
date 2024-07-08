@@ -51,7 +51,10 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 * Lors de l'annonce des informations d'architecture du processeur, "x86" et
   "AMD64" se réfèrent aux processeurs Intel et AMD 32 bits et 64 bits (x64),
   respectivement.
-* Cette extension requiert Windows 10 ou au-delà.
+* Cette extension requiert Windows 10 22H2 (2022 Update/build 19045) ou
+  au-delà.
+* L'installation de l'extension sur Windows 10/11 LTSC n'est pas prise en
+  charge.
 
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.

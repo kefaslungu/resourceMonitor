@@ -47,7 +47,8 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
   diska.
 * Kada se najavljuju informacije o arhitekturi procesora, „x86” i „AMD64”
   odnose se na 32-bitne i 64-bitne (x64) Intel odnosno AMD procesore.
-* Ovaj dodatak zahtijeva Windows 10 ili noviju verziju.
+* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
+* Installing the add-on on Windows 10/11 LTSC is not supported.
 
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.

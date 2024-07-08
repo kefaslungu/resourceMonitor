@@ -51,7 +51,8 @@
 * При докладване на информация за архитектурата на процесора, "x86" и
   "AMD64" се отнасят съответно за 32-битови и 64-битови (x64) процесори на
   Intel и AMD.
-* Тази добавка изисква Windows 10 или по-нова версия.
+* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
+* Installing the add-on on Windows 10/11 LTSC is not supported.
 
 Забележка относно лиценза: Тази добавка използва Psutil, лицензиран под BSD
 лиценз с 3 клаузи, който е съвместим с GNU General Public License.

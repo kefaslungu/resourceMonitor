@@ -44,7 +44,8 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
   filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
 * Når der annoncerer processorarkitekturoplysninger, henviser "x86" og
   "AMD64" til henholdsvis 32-bit og 64-bit (x64) Intel- og AMD-processorer.
-* Denne tilføjelse kræver Windows 10 eller nyere.
+* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
+* Installing the add-on on Windows 10/11 LTSC is not supported.
 
 Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 3-klausul BSD-licens, som er kompatibel med GNU General Public License.

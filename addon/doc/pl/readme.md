@@ -46,7 +46,8 @@ następujące kwestie:
 * Podczas ogłaszania informacji o architekturze procesora "x86" i "AMD64"
   odnoszą się odpowiednio do 32-bitowych i 64-bitowych (x64) procesorów
   Intel i AMD.
-* Ten dodatek wymaga systemu Windows 10 lub nowszego.
+* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
+* Installing the add-on on Windows 10/11 LTSC is not supported.
 
 Uwaga dotycząca licencji: ten dodatek używa Psutil, licencjonowanego na
 3-klauzulowej licencji BSD, która jest zgodna z GNU General Public License.
