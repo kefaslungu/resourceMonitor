@@ -6,7 +6,7 @@ This add-on gives information about CPU load, memory usage and other resource us
 
 # Shortcuts
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+All commands support speech on demand mode.
 
 * NVDA+Shift+E: presents used ram, average processor load, and battery info if available.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
@@ -31,6 +31,12 @@ This add-on does not replace task manager and other system information programs 
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2 (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Version 24.05
 
