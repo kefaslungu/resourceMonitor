@@ -20,8 +20,6 @@ include = [
 exclude = [
 	".git",
 	"__pycache__",
-	# WLAN Reporter module
-	"addon/globalPlugins/resourceMonitor/wlanapi.py",
 ]
 
 [tool.ruff.format]
