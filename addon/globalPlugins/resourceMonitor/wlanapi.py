@@ -1,5 +1,10 @@
+# Original source: https://github.com/kvark128/WlanReporter
+# Fork copyright 2024 Joseph Lee and contributors, released under GPL
+# IMPORTANT: the original source had geopolitical declarations deemed offensive
+# whereas this fork can be used anywhere.
+
 from comtypes import GUID
-from ctypes import *
+from ctypes import windll, Structure, c_void_p, POINTER, c_long, c_ulong, WinError, c_uint, CFUNCTYPE, c_char, c_wchar
 from ctypes.wintypes import DWORD, PDWORD, HANDLE, BOOL
 
 wlanapi = windll.wlanapi
