@@ -8,7 +8,7 @@ bilgi verir.
 
 # Kısayollar
 
-Tüm komutlar isteğe bağlı konuşma modunu destekler (NVDA 2024.1 ve üzeri).
+Tüm komutlar isteğe bağlı konuşma modunu destekler.
 
 * NVDA+Shift+E: kullanılan ram, ortalama işlemci yükü ve varsa pil
   bilgilerini sunar.
@@ -51,6 +51,14 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
+
+## Sürüm 24.08
+
+* NVDA 2024.2 veya sonrası gereklidir. Bu, NVDA'nın içerdiği psutil
+  bağımlılığının eklentiden kaldırılmasına olanak tanır.
+* Psutil bağımlılığı NVDA 2024.2 (6.0.0) ile birlikte gelen sürüme
+  güncellendi.
+* Ruff, kod linter olarak Flake8'in yerini alır.
 
 ## Sürüm 24.05
 

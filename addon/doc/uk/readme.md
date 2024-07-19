@@ -8,7 +8,7 @@
 
 # Гарячі клавіші
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+All commands support speech on demand mode.
 
 * NVDA+Shift+E: Надає інформацію про використання оперативної пам’яті,
   середню завантаженість процесора та акумулятор, якщо він є.
@@ -51,6 +51,14 @@ All commands support speech on demand mode (NVDA 2024.1 and later).
 
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Version 24.05
 

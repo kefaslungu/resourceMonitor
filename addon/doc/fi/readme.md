@@ -8,8 +8,7 @@ resurssien käytöstä.
 
 # Pikanäppäimet
 
-Kaikki komennot tukevat pyydettäessä-puhetilaa (NVDA 2024.1 ja sitä
-uudemmat).
+Kaikki komennot tukevat pyydettäessä-puhetilaa.
 
 * NVDA+Vaihto+E: Lukee käytetyn RAM-muistin määrän, suorittimen
   keskimääräisen kuormituksen sekä akun tiedot, mikäli sellainen on
@@ -55,6 +54,14 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
 Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
+
+## Versio 24.08
+
+* Edellyttää NVDA 2024.2:ta tai uudempaa. Tämä mahdollistaa
+  psutil-riippuvuuden poistamisen lisäosasta, koska NVDA sisältää sen.
+* Päivitetty psutil-riippuvuus NVDA 2024.2:n mukana tulevaan versioon
+  (6.0.0).
+* Ruff korvaa Flake8:n koodin tarkastimena.
 
 ## Versio 24.05
 

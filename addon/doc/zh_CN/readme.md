@@ -7,7 +7,7 @@
 
 # 快捷键
 
-所有命令都支持手动朗读模式（NVDA 2024.1 及更高版本）。
+All commands support speech on demand mode.
 
 * NVDA+Shift+E： 读出内存的使用率、CPU 平均负载和电池信息（如果可用）。
 * NVDA+Shift+1： 读出每个 CPU 核心的负载和平均负载。
@@ -33,6 +33,14 @@
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
 关于许可证的说明：此插件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## 版本24.05
 

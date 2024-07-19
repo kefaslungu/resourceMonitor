@@ -8,7 +8,7 @@ outras informações de uso de recursos.
 
 # Atalhos
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+All commands support speech on demand mode.
 
 * NVDA+Shift+E: apresenta uso da ram (memória), carga média do processador,
   e informações de bateria caso disponível.
@@ -50,6 +50,14 @@ de informações de sistema para Windows. Note também o seguinte:
 
 Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
 BSD de 3 cláusulas, que é compatível com a GNU General Public License.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Version 24.05
 

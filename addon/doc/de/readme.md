@@ -8,8 +8,7 @@ verwendeten Arbeitsspeicher sowie andere nützliche Ressourcen.
 
 # Tastenkürzel
 
-Alle Befehle unterstützen den Modus "Bei Bedarf vorlesen" (NVDA 2024.1 und
-neuer).
+All commands support speech on demand mode.
 
 * NVDA+Umschalt+E: Zeigt den verbrauchten Arbeitsspeicher, die
   durchschnittliche Prozessorauslastungen und Akku-Informationen an, falls
@@ -57,6 +56,14 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Version 24.05
 

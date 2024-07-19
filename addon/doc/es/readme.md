@@ -8,8 +8,7 @@ utilización de la memoria y de otra información de uso de recursos.
 
 # Atajos de teclado
 
-Todas las órdenes soportan el modo de voz a petición (NVDA 2024.1 o
-posterior).
+Todas las órdenes soportan el modo de voz a petición.
 
 * NVDA+Shift+E: Presenta la ram utilizada, la carga promedio del procesador,
   e información de la batería si está disponible.
@@ -52,6 +51,14 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
+
+## Versión 24.08
+
+* Se requiere NVDA 2024.2 o posterior. Esto permite eliminar la dependencia
+  psutil del complemento, ya que NVDA la incluye.
+* Actualizada la dependencia sutíl a la versión incluida en NVDA 2024.2
+  (6.0.0).
+* Ruff sustituye a Flake8 como comprobador del código.
 
 ## Versión 24.05
 

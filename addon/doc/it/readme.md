@@ -8,7 +8,7 @@ sistema, quali carico della CPU, utilizzo della memoria e molto altro.
 
 # Tasti rapidi
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+All commands support speech on demand mode.
 
 * NVDA+Shift+E: fornisce informazioni sulla quantità di ram utilizzata, sul
   carico medio della cpu e sulla batteria, se disponibile.
@@ -52,6 +52,14 @@ si tenga presente che:
 
 Nota sulla licenza: questo componente aggiuntivo utilizza Psutil, concesso
 con licenza 3-Clause BSD compatibile con GNU General Public License.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Version 24.05
 

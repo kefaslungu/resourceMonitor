@@ -8,7 +8,7 @@ hukommelse og andre oplysninger om forbrug af ressourcer.
 
 # Genveje
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+All commands support speech on demand mode.
 
 * NVDA+Shift+E: Oplyser hukommelse i brug, processorbelastning og
   batteriinformation, hvis denne er tilgængelig.
@@ -49,6 +49,14 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 
 Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 3-klausul BSD-licens, som er kompatibel med GNU General Public License.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Version 24.05
 

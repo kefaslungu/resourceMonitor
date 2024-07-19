@@ -9,8 +9,7 @@
 
 # Бързи клавиши
 
-Всички команди поддържат режим на реч "при поискване" (NVDA 2024.1 и
-по-нови).
+All commands support speech on demand mode.
 
 * NVDA+Shift+E: Предоставя информация за използваната RAM памет, средното
   натоварване на процесора и информация за батерията, ако е налична.
@@ -56,6 +55,14 @@
 
 Забележка относно лиценза: Тази добавка използва Psutil, лицензиран под BSD
 лиценз с 3 клаузи, който е съвместим с GNU General Public License.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Версия 24.05
 

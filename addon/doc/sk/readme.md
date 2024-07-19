@@ -7,7 +7,7 @@ Poskytuje informácie o zaťažení procesora, stave pamäte a o iných zdrojoch
 
 # Klávesové skratky
 
-All commands support speech on demand mode (NVDA 2024.1 and later).
+All commands support speech on demand mode.
 
 * NVDA+Shift+E: oznámy využitie pamäte ram, priemerné zaťaženie procesora a
   stav batérie, ak je dostupná.
@@ -46,6 +46,14 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Version 24.05
 

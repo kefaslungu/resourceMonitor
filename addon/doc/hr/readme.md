@@ -8,7 +8,7 @@ i druge informacije o korištenju resursa.
 
 # Prečaci
 
-Sve naredbe podržavaju govor na zahtjev (NVDA 2024.1 i novije verzije).
+All commands support speech on demand mode.
 
 * NVDA+šift+E: Prikazuje korištenje ram memorije, prosječno opterećenje
   procesora i informacije o stanju baterije, ako su dostupne.
@@ -52,6 +52,14 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
+
+## Version 24.08
+
+* NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).
+* Ruff replaces Flake8 as code linter.
 
 ## Verzija 24.05
 
