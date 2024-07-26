@@ -36,36 +36,36 @@ msgstr ""
 "{supportedReleaseName}({supportedBuild}) 이상으로 업그레이드하십시오."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "인증 없음 (공개)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "{}에 연결됨"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "{}에 연결 해제됨"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "무선 장치가 활성화되었습니다"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "무선 장치가 비활성화되었습니다"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
 msgid "This computer does not have a battery connected."
-msgstr "사용자 컴퓨터에 베터리가 없습니다."
+msgstr "사용자 컴퓨터에 배터리가 없습니다."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
 #, python-brace-format
 msgid "{percent}%, battery charging."
-msgstr "{percent}%, 베터리 중전중."
+msgstr "{percent}%, 배터리 충전 중."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% 베터리 남음."
+msgstr "{percent}% 배터리 남음."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
@@ -85,15 +85,15 @@ msgstr[0] "{minutes:d}분"
 #. showing percentage remaining and estimated remaining time.
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent}% 베터리 남음, {time} 사용 가능."
+msgstr "{percent}% 배터리 남음, {time} 사용 가능."
 
 #. Translators: Message reported when battery level is low.
 msgid " Warning: low battery."
-msgstr "주의: 베터리 충전률 저조함."
+msgstr "주의: 배터리 부족."
 
 #. Translators: Message reported when battery level is critical.
 msgid " Warning: critically low battery."
-msgstr "주의: 베토리 방전 조심 바람."
+msgstr "경고: 배터리 매우 부족."
 
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
@@ -113,7 +113,7 @@ msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
 msgstr ""
-"베터리 충전률, 전원 사용 여부, 베터리 사용시간 및 베터리 방전 주의를 알려줍니"
+"배터리 충전률, 전원 사용 여부, 배터리 사용 시간 및 배터리 방전 주의를 알려줍니"
 "다."
 
 #. Translators: Input help message about drive info command in Resource Monitor.
@@ -129,8 +129,8 @@ msgstr "내장 및 확장 드라이브의 사용 공간 및 전체 공간을 알
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} 드라이브): 총 {totalSpace} 중 {usedSpace} 사용중 "
-"{percent}%. "
+"{driveName} ({driveType} 드라이브): 총 {totalSpace} 중 {usedSpace} 사용 중 "
+"{percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -159,13 +159,13 @@ msgstr "물리 (RAM) 및 가상 메모리의 사용 공간 및 총 메모리를 
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"RAM: 총 {physicalTotal} 중 {physicalUsed} 사용중 ({physicalPercent}%). "
+"메모리: 총 {physicalTotal} 중 {physicalUsed} 사용 중 ({physicalPercent}%)."
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
-"가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용중 ({virtualPercent}%)."
+"가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용 중 ({virtualPercent}%)."
 
 #. Translators: Reported when virtual memory information cannot be obtained.
 msgid "Virtual memory information unavailable"
@@ -178,16 +178,16 @@ msgstr "사용중인 윈도우 버전을 알려줍니다."
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "시스템의 무선 네트워크 SSID와 신호 강도를 알려줍니다."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "무선 장치 없음"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "무선 연결 없음"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
+msgstr "연결된 무선 네트워크: {}. 신호 강도: {}%. 보안 유형: {}"
 
 #. Translators: system uptime in days.
 #, python-brace-format
@@ -203,24 +203,24 @@ msgstr[0] "{seconds:d}초"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
-msgstr ""
+msgstr "시스템의 가동 시간을 알려줍니다."
 
 #. Translators: Obtaining uptime failed
 msgid "Failed to get the system's uptime."
-msgstr ""
+msgstr "시스템 가동 시간을 가져오지 못했습니다."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
-msgstr "메모리, 프로세서 사용률 및 메터리 사용에 관한 정보를 제공합니다."
+msgstr "메모리, 프로세서 사용률 및 배터리 사용에 관한 정보를 제공합니다."
 
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
+msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용 중."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
-msgstr "프로세서, 디스크, 메모리 사용률 및 베터리 상태를 알려줍니다."
+msgstr "프로세서, 디스크, 메모리 사용률 및 배터리 상태를 알려줍니다."
