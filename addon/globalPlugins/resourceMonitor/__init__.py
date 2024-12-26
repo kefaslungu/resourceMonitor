@@ -19,13 +19,16 @@ import scriptHandler
 import ui
 import winVersion
 import psutil
+
 # Windows Server systems prior to Server 2025 do not include wlanapi.dll.
 try:
 	from . import wlanapi
+
 	wlanapiAvailable = True
 except OSError:
 	wlanapiAvailable = False
 import addonHandler
+
 addonHandler.initTranslation()
 
 
@@ -59,26 +62,35 @@ try:
 			return
 		match pData.contents.NotificationCode:
 			case wlanapi.wlan_notification_acm_connection_complete:
-				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(
+					pData.contents.pData
+				).dot11Ssid.SSID
 				queueHandler.queueFunction(
-					queueHandler.eventQueue, message,
-					_("Connected to {}").format(ssid.decode("utf-8")), "connect.wav"
+					queueHandler.eventQueue,
+					message,
+					_("Connected to {}").format(ssid.decode("utf-8")),
+					"connect.wav",
 				)
 			case wlanapi.wlan_notification_acm_disconnected:
-				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData).dot11Ssid.SSID
+				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(
+					pData.contents.pData
+				).dot11Ssid.SSID
 				queueHandler.queueFunction(
-					queueHandler.eventQueue, message,
-					_("Disconnected from {}").format(ssid.decode("utf-8")), "disconnect.wav"
+					queueHandler.eventQueue,
+					message,
+					_("Disconnected from {}").format(ssid.decode("utf-8")),
+					"disconnect.wav",
 				)
 			case wlanapi.wlan_notification_acm_interface_arrival:
 				queueHandler.queueFunction(
-					queueHandler.eventQueue, message,
-					_("A wireless device has been enabled"), "connect.wav"
+					queueHandler.eventQueue, message, _("A wireless device has been enabled"), "connect.wav"
 				)
 			case wlanapi.wlan_notification_acm_interface_removal:
 				queueHandler.queueFunction(
-					queueHandler.eventQueue, message,
-					_("A wireless device has been disabled"), "disconnect.wav"
+					queueHandler.eventQueue,
+					message,
+					_("A wireless device has been disabled"),
+					"disconnect.wav",
 				)
 except NameError:
 	pass
@@ -91,67 +103,67 @@ def customResize(array, newSize):
 # Styles of size calculation/string composition, do not change!
 # Traditional style, Y, K, M, G, B, ...
 traditional = [
-	(1024.0**8.0, 'Y'),
-	(1024.0**7.0, 'Z'),
-	(1024.0**6.0, 'E'),
-	(1024.0**5.0, 'P'),
-	(1024.0**4.0, 'T'),
-	(1024.0**3.0, 'G'),
-	(1024.0**2.0, 'M'),
-	(1024.0**1.0, 'K'),
-	(1024.0**0.0, 'B'),
+	(1024.0**8.0, "Y"),
+	(1024.0**7.0, "Z"),
+	(1024.0**6.0, "E"),
+	(1024.0**5.0, "P"),
+	(1024.0**4.0, "T"),
+	(1024.0**3.0, "G"),
+	(1024.0**2.0, "M"),
+	(1024.0**1.0, "K"),
+	(1024.0**0.0, "B"),
 ]
 
 # Alternative style (displayed with most PCs): MB, KB, GB, YB, ZB, ...
 alternative = [
-	(1024.0**8.0, ' YB'),
-	(1024.0**7.0, ' ZB'),
-	(1024.0**6.0, ' EB'),
-	(1024.0**5.0, ' PB'),
-	(1024.0**4.0, ' TB'),
-	(1024.0**3.0, ' GB'),
-	(1024.0**2.0, ' MB'),
-	(1024.0**1.0, ' KB'),
-	(1024.0**0.0, (' byte', ' bytes')),
+	(1024.0**8.0, " YB"),
+	(1024.0**7.0, " ZB"),
+	(1024.0**6.0, " EB"),
+	(1024.0**5.0, " PB"),
+	(1024.0**4.0, " TB"),
+	(1024.0**3.0, " GB"),
+	(1024.0**2.0, " MB"),
+	(1024.0**1.0, " KB"),
+	(1024.0**0.0, (" byte", " bytes")),
 ]
 
 # Verbose style: Kilobytes, Megabytes, Gigabytes, ...
 verbose = [
-	(1024.0**8.0, ' yottabytes'),
-	(1024.0**7.0, ' zettabytes'),
-	(1024.0**6.0, ' exabytes'),
-	(1024.0**5.0, (' petabyte', ' petabytes')),
-	(1024.0**4.0, (' terabyte', ' terabytes')),
-	(1024.0**3.0, (' gigabyte', ' gigabytes')),
-	(1024.0**2.0, (' megabyte', ' megabytes')),
-	(1024.0**1.0, (' kilobyte', ' kilobytes')),
-	(1024.0**0.0, (' byte', ' bytes')),
+	(1024.0**8.0, " yottabytes"),
+	(1024.0**7.0, " zettabytes"),
+	(1024.0**6.0, " exabytes"),
+	(1024.0**5.0, (" petabyte", " petabytes")),
+	(1024.0**4.0, (" terabyte", " terabytes")),
+	(1024.0**3.0, (" gigabyte", " gigabytes")),
+	(1024.0**2.0, (" megabyte", " megabytes")),
+	(1024.0**1.0, (" kilobyte", " kilobytes")),
+	(1024.0**0.0, (" byte", " bytes")),
 ]
 
 # International Electrotechnical Commission (IEC) style: Ki, Mi, Gi, Ti, ...
 iec = [
-	(1024.0**8.0, 'Yi'),
-	(1024.0**7.0, 'Zi'),
-	(1024.0**6.0, 'Ei'),
-	(1024.0**5.0, 'Pi'),
-	(1024.0**4.0, 'Ti'),
-	(1024.0**3.0, 'Gi'),
-	(1024.0**2, 'Mi'),
-	(1024.0**1.0, 'Ki'),
-	(1024.0**0.0, ''),
+	(1024.0**8.0, "Yi"),
+	(1024.0**7.0, "Zi"),
+	(1024.0**6.0, "Ei"),
+	(1024.0**5.0, "Pi"),
+	(1024.0**4.0, "Ti"),
+	(1024.0**3.0, "Gi"),
+	(1024.0**2, "Mi"),
+	(1024.0**1.0, "Ki"),
+	(1024.0**0.0, ""),
 ]
 
 # International System of Units (Si) style: each unit is 1000 of another (i.e. 1000 KB is 1 MB)
 si = [
-	(1000.0**8.0, 'Y'),
-	(1000.0**7.0, 'Z'),
-	(1000.0**6.0, 'E'),
-	(1000.0**5.0, 'P'),
-	(1000.0**4.0, 'T'),
-	(1000.0**3.0, 'G'),
-	(1000.0**2.0, 'M'),
-	(1000.0**1.0, 'K'),
-	(1000.0**0.0, 'B'),
+	(1000.0**8.0, "Y"),
+	(1000.0**7.0, "Z"),
+	(1000.0**6.0, "E"),
+	(1000.0**5.0, "P"),
+	(1000.0**4.0, "T"),
+	(1000.0**3.0, "G"),
+	(1000.0**2.0, "M"),
+	(1000.0**1.0, "K"),
+	(1000.0**0.0, "B"),
 ]
 
 
@@ -197,10 +209,12 @@ def _batteryInfo(verbose: bool = False) -> str:
 			info = _("{percent}%, battery charging.").format(percent=tryTrunk(percent))
 		else:
 			# Announce time unknown status.
-			if secsleft == 0xffffffff:
+			if secsleft == 0xFFFFFFFF:
 				# Translators: message presented when computer is running on battery power,
 				# showing percentage remaining yet battery time is unknown.
-				info = _("{percent}% battery remaining, battery time unknown.").format(percent=tryTrunk(percent))
+				info = _("{percent}% battery remaining, battery time unknown.").format(
+					percent=tryTrunk(percent)
+				)
 			else:
 				# Prepare hours:minutes.
 				# Optimization: build components list and take away seconds
@@ -277,8 +291,9 @@ def getWinVer() -> str:
 	# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
 	if arch in ("AMD64", "ARM64"):
 		currentVersion = winreg.OpenKey(
-			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion",
-			access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY
+			winreg.HKEY_LOCAL_MACHINE,
+			r"Software\Microsoft\Windows NT\CurrentVersion",
+			access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY,
 		)
 	else:
 		currentVersion = winreg.OpenKey(
@@ -308,12 +323,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._client_handle = wintypes.HANDLE()
 		try:
 			wlanapi.WlanOpenHandle(
-				wlanapi.CLIENT_VERSION_WINDOWS_VISTA_OR_LATER, None,
-				byref(self._negotiated_version), byref(self._client_handle)
+				wlanapi.CLIENT_VERSION_WINDOWS_VISTA_OR_LATER,
+				None,
+				byref(self._negotiated_version),
+				byref(self._client_handle),
 			)
 			wlanapi.WlanRegisterNotification(
-				self._client_handle, wlanapi.WLAN_NOTIFICATION_SOURCE_ACM, True, notifyHandler,
-				None, None, None
+				self._client_handle,
+				wlanapi.WLAN_NOTIFICATION_SOURCE_ACM,
+				True,
+				notifyHandler,
+				None,
+				None,
+				None,
 			)
 		except OSError:
 			pass
@@ -325,7 +347,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"and a warning if the battery is low or critical."
 		),
 		gesture="KB:NVDA+shift+4",
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_announceBatteryInfo(self, gesture):
 		info = _batteryInfo(verbose=True)
@@ -336,9 +358,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help message about drive info command in Resource Monitor.
-		description=_("Presents the used and total space of the static and removable drives on this computer."),
+		description=_(
+			"Presents the used and total space of the static and removable drives on this computer."
+		),
 		gesture="KB:NVDA+shift+3",
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_announceDriveInfo(self, gesture):
 		# Goes through all registered drives and gives info on each one
@@ -359,7 +383,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						driveType=drive[2],
 						usedSpace=size(driveInfo[1], alternative),
 						totalSpace=size(driveInfo[0], alternative),
-						percent=tryTrunk(driveInfo[3])
+						percent=tryTrunk(driveInfo[3]),
 					)
 				)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -371,7 +395,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about processor info command in Resource Monitor.
 		description=_("Presents the average processor load and the load of each core."),
 		gesture="KB:NVDA+shift+1",
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_announceProcessorInfo(self, gesture):
 		averageLoad = psutil.cpu_percent()
@@ -401,7 +425,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about memory info command in Resource Monitor.
 		description=_("Presents the used and total space for both physical and virtual ram."),
 		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_announceRamInfo(self, gesture):
 		ram = psutil.virtual_memory()
@@ -409,7 +433,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(
 			physicalUsed=size(ram[3], alternative),
 			physicalTotal=size(ram[0], alternative),
-			physicalPercent=tryTrunk(ram[2])
+			physicalPercent=tryTrunk(ram[2]),
 		)
 		# psutil 5.9.0 returns size of the swap file when swap_memory function is called.
 		# Therefore, combine swap file and RAM capacities for backward compatibility.
@@ -424,7 +448,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
 				virtualUsed=size(virtualRam[1], alternative),
 				virtualTotal=size(virtualRam[0], alternative),
-				virtualPercent=tryTrunk(virtualRam[3])
+				virtualPercent=tryTrunk(virtualRam[3]),
 			)
 		except RuntimeError:
 			# Translators: Reported when virtual memory information cannot be obtained.
@@ -438,7 +462,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about Windows version command in Resource Monitor.
 		description=_("Announces the version of Windows you are using."),
 		gesture="KB:NVDA+shift+6",
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_announceWinVer(self, gesture):
 		# Unlike other resource usage information, current Windows version info is static.
@@ -453,7 +477,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# and the strength of the network.
 		description=_("Announces the system's wireless network ssid name, and its strength."),
 		gesture="kb:NVDA+shift+8",
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_wlanStatusReport(self, gesture):
 		info = self._getWlanInfo()
@@ -483,13 +507,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				self._client_handle, byref(i.InterfaceGuid), 0, None, byref(wlan_available_network_list)
 			)
 			for n in customResize(
-				wlan_available_network_list.contents.Network, wlan_available_network_list.contents.NumberOfItems
+				wlan_available_network_list.contents.Network,
+				wlan_available_network_list.contents.NumberOfItems,
 			):
 				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
-					info = _("Connected wireless network: {}. Signal strength: {}%. Security type: {}").format(
+					info = _(
+						"Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+					).format(
 						n.dot11Ssid.SSID.decode(),
 						n.wlanSignalQuality,
-						SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm)
+						SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm),
 					)
 					break
 			wlanapi.WlanFreeMemory(wlan_available_network_list)
@@ -526,7 +553,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about obtaining the system's uptime
 		description=_("Announces the system's uptime."),
 		gesture="kb:NVDA+shift+7",
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_announceUptime(self, gesture):
 		try:
@@ -543,7 +570,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about overall system resource info command in Resource Monitor
 		description=_("Presents used ram, average processor load, and battery info if available."),
 		gesture="KB:NVDA+shift+e",
-		speakOnDemand=True
+		speakOnDemand=True,
 	)
 	def script_announceResourceSummary(self, gesture):
 		# Faster to build info on the fly rather than keep appending to a string.
