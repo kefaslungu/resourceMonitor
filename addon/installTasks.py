@@ -6,13 +6,13 @@
 # Partly based on other add-ons, particularly Place Markers by Noelia Martinez (thanks add-on authors).
 
 import addonHandler
+import gui
+import winVersion
+
 addonHandler.initTranslation()
 
 
 def onInstall():
-	import gui
-	import wx
-	import winVersion
 	currentWinVer = winVersion.getWinVer()
 	# Resource Monitor requires Windows 10 21H2 or later.
 	minimumWinVer = winVersion.WIN10_21H2
@@ -27,9 +27,11 @@ def onInstall():
 				releaseName=currentWinVer.releaseName,
 				build=currentWinVer.build,
 				supportedReleaseName=minimumWinVer.releaseName,
-				supportedBuild=minimumWinVer.build
+				supportedBuild=minimumWinVer.build,
 			),
 			# Translators: dialog title shown when trying to install the add-on in unsupported systems.
 			_("Unsupported Windows release"),
 		)
-		raise RuntimeError("Attempting to install Resource Monitor add-on on Windows releases earlier than 10")
+		raise RuntimeError(
+			"Attempting to install Resource Monitor add-on on Windows releases earlier than 10"
+		)
