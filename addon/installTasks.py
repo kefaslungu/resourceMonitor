@@ -14,11 +14,8 @@ def onInstall():
 	import wx
 	import winVersion
 	currentWinVer = winVersion.getWinVer()
-	# Resource Monitor requires Windows 10 22H2 or later.
-	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
-	minimumWinVer = winVersion.WIN10_22H2
+	# Resource Monitor requires Windows 10 21H2 or later.
+	minimumWinVer = winVersion.WIN10_21H2
 	if currentWinVer < minimumWinVer:
 		gui.messageBox(
 			_(
@@ -31,6 +28,8 @@ def onInstall():
 				build=currentWinVer.build,
 				supportedReleaseName=minimumWinVer.releaseName,
 				supportedBuild=minimumWinVer.build
-			), unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR
+			),
+			# Translators: dialog title shown when trying to install the add-on in unsupported systems.
+			_("Unsupported Windows release"),
 		)
 		raise RuntimeError("Attempting to install Resource Monitor add-on on Windows releases earlier than 10")
