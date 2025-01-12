@@ -288,11 +288,10 @@ def getWinVer() -> str:
 		elif not isInsiderPreview and not isClient:
 			winverName = f"Windows Server {releaseId}"
 	# Announce build.revision.
-	currentVersion = winreg.OpenKey(
+	with winreg.OpenKey(
 		winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
-	)
-	ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
-	winreg.CloseKey(currentVersion)
+	) as currentVersion:
+		ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
 	buildRevision = f"{currentWinVer.build}.{ubr}"
 	# Translators: Presents Windows version
 	# (example output: "Windows 10 (32-bit)").
