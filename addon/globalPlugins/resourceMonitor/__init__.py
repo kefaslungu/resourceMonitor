@@ -20,6 +20,8 @@ import ui
 import winVersion
 import psutil
 
+from . import memory
+
 # Windows Server systems prior to Server 2025 do not include wlanapi.dll.
 try:
 	from . import wlanapi
@@ -428,31 +430,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		speakOnDemand=True,
 	)
 	def script_announceRamInfo(self, gesture):
-		ram = psutil.virtual_memory()
+		physicalRamUsed, physicalRamTotal = memory.get_physical_memory()
 		# Translators: Shows RAM (physical memory) usage.
 		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(
-			physicalUsed=size(ram[3], alternative),
-			physicalTotal=size(ram[0], alternative),
-			physicalPercent=tryTrunk(ram[2]),
+			physicalUsed=size(physicalRamUsed, alternative),
+			physicalTotal=size(physicalRamTotal, alternative),
+			physicalPercent=tryTrunk(round(physicalRamUsed / physicalRamTotal * 100, 1))
 		)
-		# psutil 5.9.0 returns size of the swap file when swap_memory function is called.
-		# Therefore, combine swap file and RAM capacities for backward compatibility.
-		# psutil 5.9.5 causes virtual memory to not be reported on some systems
-		# due to disabled performance counters reported by an API function.
-		try:
-			virtualRam = list(psutil.swap_memory())
-			virtualRam[1] += ram[3]
-			virtualRam[0] += ram[0]
-			virtualRam[3] = round((virtualRam[1] / virtualRam[0]) * 100, 1)
-			# Translators: Shows virtual memory usage.
-			info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
-				virtualUsed=size(virtualRam[1], alternative),
-				virtualTotal=size(virtualRam[0], alternative),
-				virtualPercent=tryTrunk(virtualRam[3]),
-			)
-		except RuntimeError:
-			# Translators: Reported when virtual memory information cannot be obtained.
-			info += _("Virtual memory information unavailable")
+		virtualRamUsed, virtualRamTotal = memory.get_virtual_memory()
+		# Translators: Shows virtual memory usage.
+		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
+			virtualUsed=size(virtualRamUsed, alternative),
+			virtualTotal=size(virtualRamTotal, alternative),
+			virtualPercent=tryTrunk(round(virtualRamUsed / virtualRamTotal * 100, 1))
+		)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
