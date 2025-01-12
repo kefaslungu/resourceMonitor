@@ -20,8 +20,6 @@ import ui
 import winVersion
 import psutil
 
-from . import memory
-
 # Windows Server systems prior to Server 2025 do not include wlanapi.dll.
 try:
 	from . import wlanapi
@@ -430,19 +428,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		speakOnDemand=True,
 	)
 	def script_announceRamInfo(self, gesture):
-		physicalRamUsed, physicalRamTotal = memory.get_physical_memory()
+		memory = psutil.virtual_memory()
+		physicalRamUsed, physicalRamTotal = memory.used, memory.total
 		# Translators: Shows RAM (physical memory) usage.
 		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(
 			physicalUsed=size(physicalRamUsed, alternative),
 			physicalTotal=size(physicalRamTotal, alternative),
-			physicalPercent=tryTrunk(round(physicalRamUsed / physicalRamTotal * 100, 1))
+			physicalPercent=tryTrunk(round(physicalRamUsed / physicalRamTotal * 100, 1)),
 		)
-		virtualRamUsed, virtualRamTotal = memory.get_virtual_memory()
+		virtualMemory = psutil._psutil_windows.virtual_mem()
+		virtualRamUsed, virtualRamTotal = virtualMemory[2] - virtualMemory[3], virtualMemory[2]
 		# Translators: Shows virtual memory usage.
 		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
 			virtualUsed=size(virtualRamUsed, alternative),
 			virtualTotal=size(virtualRamTotal, alternative),
-			virtualPercent=tryTrunk(round(virtualRamUsed / virtualRamTotal * 100, 1))
+			virtualPercent=tryTrunk(round(virtualRamUsed / virtualRamTotal * 100, 1)),
 		)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
