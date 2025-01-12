@@ -35,7 +35,7 @@ addonHandler.initTranslation()
 MODULE_DIR = os.path.dirname(__file__)
 
 
-def message(text, fileName):
+def message(text: str, fileName: str) -> None:
 	ui.message(text)
 	path = os.path.join(MODULE_DIR, fileName)
 	if os.path.exists(path):
