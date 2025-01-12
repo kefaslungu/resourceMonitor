@@ -288,17 +288,9 @@ def getWinVer() -> str:
 		elif not isInsiderPreview and not isClient:
 			winverName = f"Windows Server {releaseId}"
 	# Announce build.revision.
-	# Just like retail OS check for Insider Preview builds, 64-bit systems require a different access token.
-	if arch in ("AMD64", "ARM64"):
-		currentVersion = winreg.OpenKey(
-			winreg.HKEY_LOCAL_MACHINE,
-			r"Software\Microsoft\Windows NT\CurrentVersion",
-			access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY,
-		)
-	else:
-		currentVersion = winreg.OpenKey(
-			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
-		)
+	currentVersion = winreg.OpenKey(
+		winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
+	)
 	ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
 	winreg.CloseKey(currentVersion)
 	buildRevision = f"{currentWinVer.build}.{ubr}"
