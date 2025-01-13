@@ -293,8 +293,7 @@ def getWinVer() -> str:
 	) as currentVersion:
 		ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
 	buildRevision = f"{currentWinVer.build}.{ubr}"
-	# Translators: Presents Windows version
-	# (example output: "Windows 10 (32-bit)").
+	# Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 	info = _("{winVersion} ({cpuBit}) build {build}").format(
 		winVersion=winverName, cpuBit=arch, build=buildRevision
 	)
