@@ -17,25 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4\n"
 
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Versiune incompatibilă de Windows"
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"Utilizați {releaseName} ({build}), o versiune de Windows care nu este "
-"compatibilă cu acest supliment.\n"
-"Acest supliment necesită {supportedReleaseName} ({supportedBuild}) sau o "
-"versiune ulterioară."
-
 msgid "No authentication (Open)"
 msgstr "Nicio autentificare (deschis)"
 
@@ -98,8 +79,7 @@ msgstr " Alertă: nivel baterie scăzut."
 msgid " Warning: critically low battery."
 msgstr " Alertă: nivel baterie extrem de scăzut."
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, fuzzy, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit})"
@@ -120,7 +100,6 @@ msgstr ""
 "(dacă nu se încarcă), și alerte dacă bateria este descărcată sau la nivel "
 "extrem de scăzut."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -176,10 +155,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuală: {virtualUsed} din {virtualTotal} folosită ({virtualPercent}%)."
-
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr ""
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -240,6 +215,20 @@ msgid ""
 msgstr ""
 "Un monitor de resurse folositor pentru raportarea încărcării CPU, ratei de "
 "folosire a memoriei, baterie, stare folosire disk și altele."
+
+#~ msgid "Unsupported Windows release"
+#~ msgstr "Versiune incompatibilă de Windows"
+
+#, python-brace-format
+#~ msgid ""
+#~ "You are using {releaseName} ({build}), a Windows release not supported by "
+#~ "this add-on.\n"
+#~ "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+#~ msgstr ""
+#~ "Utilizați {releaseName} ({build}), o versiune de Windows care nu este "
+#~ "compatibilă cu acest supliment.\n"
+#~ "Acest supliment necesită {supportedReleaseName} ({supportedBuild}) sau o "
+#~ "versiune ulterioară."
 
 #~ msgid "1 hour"
 #~ msgstr "O oră"

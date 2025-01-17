@@ -1,30 +1,32 @@
 # Brazilian Portuguese translation of resourceMonitor.
-# Copyright (C) 2013-2022 NVDA Contributors.
+# Copyright (C) 2013-2025 NVDA Contributors.
 # This file is distributed under the same license as the NVDA package.
 # Cleverson Casarin Uliana <clever97@gmail.com>, 2013-2014, 2017, 2019.
 # Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>, 2018, 2021-2022.
+# Josevan Barbosa Fernandes <josevanfernandes@yahoo.com.br>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-09 12:46-0700\n"
-"PO-Revision-Date: 2023-01-08 07:59-0800\n"
-"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
+"PO-Revision-Date: 2025-01-15 20:23-0300\n"
+"Last-Translator: Josevan Fernandes <josevanfernandes@yahoo.com.br>\n"
 "Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
 "tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Resource Monitor requires Windows 10 21H2 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
-msgstr ""
+msgstr "Versão do Windows sem suporte"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -34,21 +36,24 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Você está usando {releaseName} ({build}), uma versão do Windows não "
+"suportada por este complemento.\n"
+"Este add-on requer {supportedReleaseName} ({supportedBuild}) ou posterior."
 
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Sem autenticação (Aberto)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Conectado a {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Desconectado de {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Um dispositivo sem fio foi ativado"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Um dispositivo sem fio foi desativado"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -69,25 +74,19 @@ msgstr "Restam {percent}% da bateria, tempo de bateria desconhecido."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "1 hora"
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
 #, python-brace-format
-msgid "{0} hours"
-msgstr "{0} horas"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 minuto"
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{hours:d} hora"
+msgstr[1] "{hours:d} horas"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
 #, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} minutos"
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{minutes:d} minuto"
+msgstr[1] "{minutes:d} minutos"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -106,8 +105,8 @@ msgstr " Alerta: bateria criticamente baixa."
 #. Translators: Presents Windows version
 #. (example output: "Windows 10 (32-bit)").
 #, python-brace-format
-msgid "{winVersion} ({cpuBit})"
-msgstr "{winVersion} ({cpuBit})"
+msgid "{winVersion} ({cpuBit}) build {build}"
+msgstr "{winVersion} ({cpuBit}) construir {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -178,7 +177,7 @@ msgstr "Virtual: em uso {virtualUsed} de {virtualTotal} ({virtualPercent}%)."
 
 #. Translators: Reported when virtual memory information cannot be obtained.
 msgid "Virtual memory information unavailable"
-msgstr ""
+msgstr "Informações sobre a memória virtual indisponíveis"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -187,34 +186,31 @@ msgstr "Anuncia a versão de Windows que você usa."
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Anuncia o nome do ssid da rede sem fio do sistema e sua força."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Nenhum dispositivo sem fio"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Sem conexões sem fio"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr ""
-
-#. Translators: system uptime in days.
-msgid "1 day"
-msgstr "1 dia"
+"Rede sem fio conectada: {}. Intensidade do sinal: {}%. Tipo de segurança: {}"
 
 #. Translators: system uptime in days.
 #, python-brace-format
-msgid "{0} days"
-msgstr "{0} dias"
-
-#. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "1 segundo"
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{days:d} dia"
+msgstr[1] "{days:d} dias"
 
 #. Translators: system uptime in seconds.
 #, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} segundos"
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{seconds:d} segundo"
+msgstr[1] "{seconds:d} segundos"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -243,3 +239,15 @@ msgid ""
 msgstr ""
 "Um monitor prático de recursos que anuncia carga da CPU, uso de memória, "
 "status de bateria, uso de disco e outros."
+
+#~ msgid "1 hour"
+#~ msgstr "1 hora"
+
+#~ msgid "1 minute"
+#~ msgstr "1 minuto"
+
+#~ msgid "1 day"
+#~ msgstr "1 dia"
+
+#~ msgid "1 second"
+#~ msgstr "1 segundo"

@@ -1,14 +1,14 @@
 # Monitor de Recursos (Resource Monitor) #
 
-* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
-  Ojala, Ethin Probst and other NVDA contributors
+* Autores: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst e outros colaboradores do NVDA
 
 Este complemento fornece informações sobre carga da CPU, uso de memória e
 outras informações de uso de recursos.
 
 # Atalhos
 
-All commands support speech on demand mode.
+Todos os comandos suportam o modo de fala sob demanda.
 
 * NVDA+Shift+E: apresenta uso da ram (memória), carga média do processador,
   e informações de bateria caso disponível.
@@ -21,122 +21,129 @@ All commands support speech on demand mode.
 * NVDA+Shift+4: apresenta porcentagem da bateria, status de carga, tempo
   restante (se não estiver carregando) e alerta caso a bateria esteja baixa
   ou crítica.
-* NVDA+Shift+6: presents CPU Architecture and Windows version and service
-  pack numbers.
+* NVDA+Shift+6: apresenta a arquitetura da CPU e os números da versão do
+  Windows e do service pack.
 * NVDA+Shift+7: apresenta o tempo de atividade do sistema (tempo desde a
   inicialização).
-* NVDA+Shift+8: presents information on the wireless connection, ssid name
-  and strength, or no ssid if there is none available.
+* NVDA+Shift+8: apresenta informações sobre a conexão sem fio, nome e
+  intensidade do ssid ou nenhum ssid, se não houver nenhum disponível.
 
-You can change these shortcut keys via input gestures dialog.
+Você pode alterar essas teclas de atalho por meio da caixa de diálogo de
+gestos de entrada.
 
 ## Notas de uso
 
 Este complemento não substitui o gerenciador de tarefas e outros programas
 de informações de sistema para Windows. Note também o seguinte:
 
-* Resource information cannot be copied to clipboard if running the add-on
-  in secure screens.
-* CPU usage is given for logical processors, not physical cores. This is
-  noticeable for processors which uses Hyper-Threading where number of CPU's
-  is twice the number of CPU cores. On some newer computers, not all CPU
-  cores will have hyper-threading enabled.
+* As informações de recursos não podem ser copiadas para a área de
+  transferência se o complemento for executado em telas seguras.
+* O uso da CPU é fornecido para processadores lógicos, não para núcleos
+  físicos. Isso é perceptível nos processadores que usam Hyper-Threading, em
+  que o número de CPUs é o dobro do número de núcleos da CPU. Em alguns
+  computadores mais novos, nem todos os núcleos da CPU terão o
+  hyper-threading ativado.
 * Se houver atividade intença de disco, como ao copiar arquivos grandes,
   pode haver lentidão ao obter informações de uso do disco.
-* When announcing processor architecture information, "x86" and "AMD64"
-  refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
-* Installing the add-on on Windows 10/11 LTSC is not supported.
+* Ao anunciar informações sobre a arquitetura do processador, “x86” e
+  “AMD64” referem-se aos processadores Intel e AMD de 32 e 64 bits (x64),
+  respectivamente.
+* Esse complemento requer o Windows 10 22H2 (2022 Update/build 19045) ou
+  posterior.
+* Não há suporte para a instalação do complemento no Windows 10/11 LTSC.
 
 Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
 BSD de 3 cláusulas, que é compatível com a GNU General Public License.
 
-## Version 24.08
+## Versão 24.08
 
-* NVDA 2024.2 or later is required. This allows psutil dependency to be
-  removed from the add-on as NVDA includes it.
-* Updated psutil dependency to the version included with NVDA 2024.2
+* É necessário o NVDA 2024.2 ou posterior. Isso permite que a dependência do
+  psutil seja removida do complemento, pois o NVDA o inclui.
+* Atualizada a dependência do psutil para a versão incluída no NVDA 2024.2
   (6.0.0).
-* Ruff replaces Flake8 as code linter.
+* Ruff substitui Flake8 como codificador.
 
-## Version 24.05
+## Versão 24.05
 
-* NVDA 2024.1 or later is required.
-* NVDA will recognize wireless networks with WPA3 authentication methods
-  such as simultaneous authentication of equals (SAE).
+* Requer NVDA 2024.1 ou posteriores.
+* O NVDA reconhecerá redes sem fio com métodos de autenticação WPA3, como a
+  autenticação simultânea de iguais (SAE).
 
-## Version 24.04
+## Versão 24.04
 
-* Updated psutil dependency to 5.9.8.
-* Added support for speech on demand mode so resource information can be
-  announced in this mode.
+* Atualização da dependência do psutil para a versão 5.9.8.
+* Foi adicionado suporte ao modo de fala sob demanda para que as informações
+  sobre recursos possam ser anunciadas nesse modo.
 
-## Version 23.11
+## Versão 23.11
 
-* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
-  announcements.
+* Rebaixamento da dependência do psutil para a versão 5.9.4 devido a
+  problemas com anúncios de uso de memória.
 
-## Version 23.10
+## Versão 23.10
 
-* Updated psutil dependency to 5.9.5.
+* Atualização da dependência do psutil para a versão 5.9.5.
 
-## Version 23.09
+## Versão 23.09
 
-* NVDA will no longer log startup error messages on Windows Server systems
-  when wireless capability modules are unavailable.
+* O NVDA não registrará mais mensagens de erro de inicialização nos sistemas
+  Windows Server quando os módulos de capacidade sem fio não estiverem
+  disponíveis.
 
-## Version 23.06
+## Versão 23.06
 
-* Situation where resourceMonitor doesn't work properly due to
-  unavailability of wireless adapters has been fixed.
+* Foi corrigida a situação em que o resourceMonitor não funcionava
+  corretamente devido à indisponibilidade de adaptadores sem fio.
 
-## Version 23.05.1
+## Versão 23.05.1
 
-wlanReporter NVDA-addon is now part of resourceMonitor!
+o wlanReporter NVDA-addon agora faz parte do resourceMonitor!
 
-* The old way of checking for wireless connections has been replaced by the
-  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+* A maneira antiga de verificar as conexões sem fio foi substituída pela API
+  do Windows do wlanReporter: https://github.com/kvark128/WlanReporter/ .
 
-	* After speaking SSID name and strength, NVDA will also now tell you the
-	  security type of your network.
-	* NVDA will now alert you when you connect and disconnect from a wireless
-	  network.
-	* NVDA will now alert you when wireless connections is turned on or off.
+	* Depois de falar o nome e a força do SSID, o NVDA também informará o tipo
+	  de segurança da sua rede.
+	* O NVDA agora o alertará quando você se conectar e se desconectar de uma
+	  rede sem fio.
+	* O NVDA agora o alertará quando as conexões sem fio forem ativadas ou
+	  desativadas.
 
-## Version 23.05
+## Versão 23.05
 
-* added the ability to detect and present the state of the connected
-  wireless network.
+* adicionada a capacidade de detectar e apresentar o estado da rede sem fio
+  conectada.
 
-	* Announces the name of the connected wireless SSID.
-	* Announces the strength of the ssid
-	* Announce SSID not found if None is detected.
+	* Anuncia o nome do SSID sem fio conectado.
+	* Anuncia a força do ssid
+	* Anuncia que o SSID não foi encontrado se nenhum for detectado.
 
-## Version 23.02
+## Versão 23.02
 
-* NVDA 2022.4 or later is required.
-* Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* Requer NVDA 2022.4 ou posteriores.
+* É necessário o Windows 10 21H2 (atualização/compilação 19044 de novembro
+  de 2021) ou posterior.
 
-## Version 23.01
+## Versão 23.01
 
-* NVDA 2022.3 or later is required.
-* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer
-  supported by Microsoft as of January 2023.
-* Updated psutil dependency to 5.9.4.
-* NVDA will announce actual processor architecture (x86/AMD64/ARM64) as part
-  of Windows version information.
-* On single-core systems, NVDA will no longer announce CPU core load as
-  average CPU load is the same as core load.
+* Requer NVDA 2022.3 ou posteriores.
+* É necessário ter o Windows 10 ou posterior, pois o Windows 7, 8 e 8.1 não
+  serão mais suportados pela Microsoft a partir de janeiro de 2023.
+* Atualização da dependência do psutil para a versão 5.9.4.
+* O NVDA anunciará a arquitetura real do processador (x86/AMD64/ARM64) como
+  parte das informações da versão do Windows.
+* Em sistemas de núcleo único, o NVDA não anunciará mais a carga do núcleo
+  da CPU, pois a carga média da CPU é a mesma que a carga do núcleo.
 
-## Version 22.03
+## Versão 22.03
 
-Version 22.03 is the last stable version to support Windows 7 Service Pack
-1, 8, and 8.1.
+A versão 22.03 é a última versão estável compatível com o Windows 7 Service
+Pack 1, 8 e 8.1.
 
-* NVDA 2021.3 or later is required.
-* A warning message will be displayed when attempting to install the add-on
-  on Windows 7, 8, and 8.1.
-* Updated psutil dependency to 5.9.0.
+* Requer NVDA 2021.3 ou posteriores.
+* Uma mensagem de aviso será exibida ao tentar instalar o complemento no
+  Windows 7, 8 e 8.1.
+* Atualização da dependência do psutil para a versão 5.9.0.
 
 ## Versão 22.01
 
@@ -154,7 +161,7 @@ Version 22.03 is the last stable version to support Windows 7 Service Pack
 * As compilações do Windows 20348 e 22000 são reconhecidas como Windows
   Server 2022 e Windows 11, respectivamente.
 * Nas compilações do Insider Preview, a versão do Windows, como "Windows
-  10", não será usada. Em vez disso, o NvDA anunciará "Windows Insider".
+  10", não será usada. Em vez disso, o NVDA anunciará "Windows Insider".
 * Em sistemas de 64-bit, a arquitetura do processador (x64 ou ARM64) será
   anunciada como parte das informações de versão do Windows.
 
