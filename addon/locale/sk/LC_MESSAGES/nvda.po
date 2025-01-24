@@ -15,37 +15,23 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr ""
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-
 msgid "No authentication (Open)"
-msgstr ""
+msgstr "Žiadne zabezpečenie (Bez hesla)"
 
 msgid "Connected to {}"
-msgstr ""
+msgstr "Pripojené k sieti {}"
 
 msgid "Disconnected from {}"
-msgstr ""
+msgstr "Odpojené od siete {}"
 
 msgid "A wireless device has been enabled"
-msgstr ""
+msgstr "Zariadenie bezdrôtovej siete zapnuté"
 
 msgid "A wireless device has been disabled"
-msgstr ""
+msgstr "Zariadenie bezdrôtovej siete vypnuté"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
@@ -62,29 +48,27 @@ msgstr "{percent}%, napájanie zapnuté"
 #. showing percentage remaining yet battery time is unknown.
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% nepodarilo sa zistiť ostávajúci čas."
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "Jedna hodina"
+msgstr "{percent}% nepodarilo sa zistiť zostávajúci čas."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
 #, python-brace-format
-msgid "{0} hours"
-msgstr "{0} hodín"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "jedna minúta"
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{hours:d} hodina"
+msgstr[1] "{hours:d} hodiny"
+msgstr[2] "{hours:d} hodín"
+msgstr[3] "{hours:d} hodín"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
 #, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} minút"
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{minutes:d} minút"
+msgstr[1] "{minutes:d} minúty"
+msgstr[2] "{minutes:d} minút"
+msgstr[3] "{minutes:d} minút"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -100,11 +84,10 @@ msgstr "Pozor: batéria vybytá."
 msgid " Warning: critically low battery."
 msgstr "Pozor: Kritický stav batérie."
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, python-brace-format
-msgid "{winVersion} ({cpuBit})"
-msgstr "{winVersion} ({cpuBit})"
+msgid "{winVersion} ({cpuBit}) build {build}"
+msgstr ""
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary, usually the user visible name of the addon.
@@ -122,7 +105,6 @@ msgstr ""
 "o použitom zdroji napájania a prípadne informáciu o vybytí alebo kritickom "
 "stave batérie."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -174,10 +156,6 @@ msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuálna pamäť: využité {virtualUsed} z {virtualTotal} ({virtualPercent}%)."
 
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr ""
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Oznámy verziu operačného systému."
@@ -185,34 +163,34 @@ msgstr "Oznámy verziu operačného systému."
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr ""
+msgstr "Oznámi názov  ssid bezdrôtovej siete a úroveň signálu, ku ktorej je systém pripojený."
 
 msgid "No wireless devices"
-msgstr ""
+msgstr "Žiadne zariadenia bezdrôtovej siete"
 
 msgid "No wireless connections"
-msgstr ""
+msgstr "Nepripojené k bezdrôtovej sieti"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
-
-#. Translators: system uptime in days.
-msgid "1 day"
-msgstr "Jeden deň"
+msgstr "Pripojené k bezdrôtovej sieti: {}. Úroveň signálu: {}%. Typ zabezpečenia: {}"
 
 #. Translators: system uptime in days.
 #, python-brace-format
-msgid "{0} days"
-msgstr "{0} dní"
-
-#. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr "Jednu sekundu"
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{days:d} deň"
+msgstr[1] "{days:d} dni"
+msgstr[2] "{days:d} dní"
+msgstr[3] "{days:d} dní"
 
 #. Translators: system uptime in seconds.
 #, python-brace-format
-msgid "{0} seconds"
-msgstr "{0} sekúnd"
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{seconds:d} sekunda"
+msgstr[1] "{seconds:d} sekundy"
+msgstr[2] "{seconds:d} sekúnd"
+msgstr[3] "{seconds:d} sekúnd"
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -226,7 +204,7 @@ msgstr "Nepodarilo sa zistiť celkový čas bbehu systému od posledného rešta
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
-"Oznámi využitie ram pamäte, priemerné vyťaženie procesora a prípadný "
+"Oznámi využitie pamäte ram, priemerné vyťaženie procesora a prípadný "
 "kritický stav batérie."
 
 #, python-brace-format
@@ -242,3 +220,15 @@ msgid ""
 msgstr ""
 "Jednoduchý doplnok na zistenie vyťaženia procesora, využitej ram pamäte, "
 "stavu napájania, miesta na pripojených diskoch a podobne."
+
+#~ msgid "1 hour"
+#~ msgstr "Jedna hodina"
+
+#~ msgid "1 minute"
+#~ msgstr "jedna minúta"
+
+#~ msgid "1 day"
+#~ msgstr "Jeden deň"
+
+#~ msgid "1 second"
+#~ msgstr "Jednu sekundu"
