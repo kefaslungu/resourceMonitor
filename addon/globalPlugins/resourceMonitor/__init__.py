@@ -27,6 +27,9 @@ try:
 	wlanapiAvailable = True
 except OSError:
 	wlanapiAvailable = False
+
+from .networkSpeed import NetworkSpeed
+
 import addonHandler
 
 addonHandler.initTranslation()
@@ -327,6 +330,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			)
 		except OSError:
 			pass
+		# Create and start the thread that monitors the network connection to calculate the transmission speed
+		self.internetSpeedMonitor =  NetworkSpeed()
+		self.internetSpeedMonitor.start()
 
 	@scriptHandler.script(
 		description=_(
@@ -544,6 +550,40 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except TypeError:
 			# Translators: Obtaining uptime failed
 			ui.message(_("Failed to get the system's uptime."))
+
+	@scriptHandler.script(
+		# Translators: Input help mode message about Internet speed in Resource Monitor
+		description=_("Presents the speed of Internet."),
+		gesture="KB:NVDA+shift+9",
+		speakOnDemand=True,
+	)
+	def script_announceIngternetSpeed(self, gesture):
+		def shorten(bps):
+			if bps < 1000:
+				return "{} bps".format(bps)
+			elif 1000 <= bps < 1000000:
+				return "{} Kbps".format(round(bps/1000,2))
+			elif bps >= 1000000:
+				return "{} Mbps".format(round(bps/1000000,2))
+		info = _(
+"""Download: {download},
+upload: {upload},
+Maximum download: {maxdownload},
+maximum upload: {maxupload},
+average download: {avdownload},
+average upload: {avupload}."""
+		).format(
+			download = shorten(self.internetSpeedMonitor.download),
+			upload = shorten(self.internetSpeedMonitor.upload),
+			maxdownload = shorten(self.internetSpeedMonitor.maxDownload),
+			maxupload = shorten(self.internetSpeedMonitor.maxUpload),
+			avdownload = shorten(self.internetSpeedMonitor.averageDownload),
+			avupload = shorten(self.internetSpeedMonitor.averageUpload)
+		)
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about overall system resource info command in Resource Monitor
