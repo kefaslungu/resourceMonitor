@@ -273,14 +273,13 @@ def getWinVer() -> str:
 	winverName = currentWinVer.releaseName
 	# Report "Windows Server version" on servers.
 	if currentWinVer.productType != "workstation":
-		if currentWinVer.build in serverReleaseNames
+		winverName = serverReleaseNames.get(
 			# All publicly available server release names are housed inside a dedicated map.
-			winverName = serverReleaseNames[currentWinVer.build]
-		else:
+			currentWinVer.build,
 			# On Windows 10 and later, NVDA uses a three-part string (Windows name releaseId).
 			# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
-			releaseId = winverName.rpartition(" ")[-1]
-			winverName = f"Windows Server {releaseId}"
+			f"Windows Server {winverName.rpartition(' ')[-1]}",
+		)
 	# Announce build.revision.
 	with winreg.OpenKey(
 		winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
