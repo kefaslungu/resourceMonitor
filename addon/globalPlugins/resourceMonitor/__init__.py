@@ -272,20 +272,15 @@ def getWinVer() -> str:
 	# NVDA uses client release names for "releaseName" attribute.
 	# Specifically, NVDA obtains Windows 10/11 release names from Windows Registry.
 	winverName = currentWinVer.releaseName
-	# All server release names are housed inside a dedicated map.
-	serverReleaseNameRecorded = not isClient and currentWinVer.build in serverReleaseNames
-	if serverReleaseNameRecorded:
-		winverName = serverReleaseNames[currentWinVer.build]
-	# On Windows 10 and later, NVDA uses a three-part string (Windows name releaseId).
-	# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
-	# Skip all this if server release name was already obtained.
-	if not serverReleaseNameRecorded:
-		releaseId = winverName.rpartition(" ")[-1]
-		# Some Windows Insider Preview (client and server) builds identify themselves as "Dev".
-		isInsiderPreview = releaseId == "Dev"
-		if isInsiderPreview:
-			winverName = "Windows Insider" if isClient else "Windows Server Insider"
-		elif not isInsiderPreview and not isClient:
+	# Report "Windows Server version" on servers.
+	if currentWinVer.productType != "workstation":
+		if currentWinVer.build in serverReleaseNames
+			# All publicly available server release names are housed inside a dedicated map.
+			winverName = serverReleaseNames[currentWinVer.build]
+		else:
+			# On Windows 10 and later, NVDA uses a three-part string (Windows name releaseId).
+			# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
+			releaseId = winverName.rpartition(" ")[-1]
 			winverName = f"Windows Server {releaseId}"
 	# Announce build.revision.
 	with winreg.OpenKey(
