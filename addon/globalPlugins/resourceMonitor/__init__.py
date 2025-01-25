@@ -280,8 +280,9 @@ def getWinVer() -> str:
 	# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
 	# Skip all this if server release name was already obtained.
 	if not serverReleaseNameRecorded:
+		releaseId = winverName.rpartition(" ")[-1]
 		# Some Windows Insider Preview (client and server) builds identify themselves as "Dev".
-		isInsiderPreview = (releaseId := winverName.rpartition(" ")[-1]) == "Dev"
+		isInsiderPreview = releaseId == "Dev"
 		if isInsiderPreview:
 			winverName = "Windows Insider" if isClient else "Windows Server Insider"
 		elif not isInsiderPreview and not isClient:
