@@ -267,7 +267,6 @@ def getWinVer() -> str:
 	currentWinVer = winVersion.getWinVer()
 	# Announce actual machine architecture (x86/32-bit, AMD64, ARM64).
 	arch = currentWinVer.processorArchitecture
-	isClient = currentWinVer.productType == "workstation"
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
 	# NVDA uses client release names for "releaseName" attribute.
 	# Specifically, NVDA obtains Windows 10/11 release names from Windows Registry.
