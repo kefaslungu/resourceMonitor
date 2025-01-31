@@ -52,6 +52,16 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
 
+## Sürüm 25.02
+
+* Windows 8.1 için sınırlı destek geri yüklendi.
+* Kullanılan ve toplam hafıza bilgisi duyurusunun (@danstiv) doğruluğu
+  iyileştirildi.
+* NVDA'yı başlattıktan sonra ilk kez bellek kullanım komutu (NVDA+Shift+2/5)
+  gerçekleştirilirken NVDA artık kısa bir süre donuyor gibi görünmeyecek.
+* Windows Insider Preview sürümleri artık "Windows Insider" olarak
+  raporlanmıyor.
+
 ## Sürüm 24.08
 
 * NVDA 2024.2 veya sonrası gereklidir. Bu, NVDA'nın içerdiği psutil

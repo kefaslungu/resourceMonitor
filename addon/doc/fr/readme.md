@@ -58,6 +58,16 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
 
+## Version 25.02
+
+* Restored limited support for Windows 8.1.
+* Improved accuracy of used and total memory information announcement
+  (@danstiv).
+* NVDA will no longer appear to freeze briefly when performing memory usage
+  command (NVDA+Shift+2/5) the first time after starting NVDA.
+* Windows Insider Preview releases are no longer reported as "Windows
+  Insider".
+
 ## Version 24.08
 
 * NVDA 2024.2 ou version ultérieure est requis. Cela permet de supprimer la

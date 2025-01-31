@@ -55,6 +55,16 @@ Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
 
+## Version 25.02
+
+* Restored limited support for Windows 8.1.
+* Improved accuracy of used and total memory information announcement
+  (@danstiv).
+* NVDA will no longer appear to freeze briefly when performing memory usage
+  command (NVDA+Shift+2/5) the first time after starting NVDA.
+* Windows Insider Preview releases are no longer reported as "Windows
+  Insider".
+
 ## Versio 24.08
 
 * Edellyttää NVDA 2024.2:ta tai uudempaa. Tämä mahdollistaa

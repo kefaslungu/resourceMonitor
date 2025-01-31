@@ -52,6 +52,16 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
 
+## Version 25.02
+
+* Restored limited support for Windows 8.1.
+* Improved accuracy of used and total memory information announcement
+  (@danstiv).
+* NVDA will no longer appear to freeze briefly when performing memory usage
+  command (NVDA+Shift+2/5) the first time after starting NVDA.
+* Windows Insider Preview releases are no longer reported as "Windows
+  Insider".
+
 ## Versión 24.08
 
 * Se requiere NVDA 2024.2 o posterior. Esto permite eliminar la dependencia

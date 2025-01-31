@@ -56,6 +56,16 @@ All commands support speech on demand mode.
 Забележка относно лиценза: Тази добавка използва Psutil, лицензиран под BSD
 лиценз с 3 клаузи, който е съвместим с GNU General Public License.
 
+## Version 25.02
+
+* Restored limited support for Windows 8.1.
+* Improved accuracy of used and total memory information announcement
+  (@danstiv).
+* NVDA will no longer appear to freeze briefly when performing memory usage
+  command (NVDA+Shift+2/5) the first time after starting NVDA.
+* Windows Insider Preview releases are no longer reported as "Windows
+  Insider".
+
 ## Version 24.08
 
 * NVDA 2024.2 or later is required. This allows psutil dependency to be

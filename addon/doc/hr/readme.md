@@ -53,6 +53,16 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
 
+## Version 25.02
+
+* Restored limited support for Windows 8.1.
+* Improved accuracy of used and total memory information announcement
+  (@danstiv).
+* NVDA will no longer appear to freeze briefly when performing memory usage
+  command (NVDA+Shift+2/5) the first time after starting NVDA.
+* Windows Insider Preview releases are no longer reported as "Windows
+  Insider".
+
 ## Version 24.08
 
 * NVDA 2024.2 or later is required. This allows psutil dependency to be
