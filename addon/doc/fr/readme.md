@@ -60,12 +60,13 @@ Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 
 ## Version 25.02
 
-* Restored limited support for Windows 8.1.
-* Improved accuracy of used and total memory information announcement
-  (@danstiv).
-* NVDA will no longer appear to freeze briefly when performing memory usage
-  command (NVDA+Shift+2/5) the first time after starting NVDA.
-* Windows Insider Preview releases are no longer reported as "Windows
+* Restauré prise en charge limitée pour Windows 8.1.
+* Amélioration de la précision de l'annonce d'informations de mémoire
+  utilisée et totale (@danstiv).
+* NVDA ne semblera plus geler brièvement lors de l'exécution de la commande
+  d'utilisation de la mémoire (NVDA+Maj+2/5) la première fois après le
+  démarrage de NVDA.
+* Les versions Windows Insider Preview ne sont plus signalées comme "Windows
   Insider".
 
 ## Version 24.08
