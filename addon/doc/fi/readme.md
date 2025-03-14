@@ -55,15 +55,16 @@ Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
 
-## Version 25.02
+## Versio 25.02
 
-* Restored limited support for Windows 8.1.
-* Improved accuracy of used and total memory information announcement
+* Palautettu rajoitettu tuki Windows 8.1:lle.
+* Paranneltu käytetyn ja kokonaismuistimäärän ilmoituksen tarkkuutta
   (@danstiv).
-* NVDA will no longer appear to freeze briefly when performing memory usage
-  command (NVDA+Shift+2/5) the first time after starting NVDA.
-* Windows Insider Preview releases are no longer reported as "Windows
-  Insider".
+* NVDA ei enää näytä hetkellisesti jäävän jumiin suoritettaessa muistin
+  käyttöön liittyvää komentoa (NVDA+Vaihto+2/5) ensimmäistä kertaa NVDA:n
+  käynnistämisen jälkeen.
+* Windows Insider -esiversioita ei enää ilmoiteta "Windows Insider"
+  -versioiksi.
 
 ## Versio 24.08
 
@@ -107,7 +108,7 @@ kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 
 ## Versio 23.05.1
 
-WlanReporter-lisäosa sisältyy nyt Resurssienvalvontaan!
+WlanReporter-lisäosa sisältyy nyt Resurssienvalvontaan.
 
 * Aiempi langattomien yhteyksien etsintätapa on korvattu Windowsin
   rajapinnalla, jota käytetään wlanReporter-lisäosassa:
