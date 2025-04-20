@@ -17,12 +17,12 @@ def _(arg):
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
 	"addon_name": "resourceMonitor",
-	# Add-on summary, usually the user visible name of the addon.
-	# Translators: Summary for this add-on
-	# to be shown on installation and add-on information.
+	# Add-on summary/title, usually the user visible name of the add-on
+	# Translators: Summary/title for this add-on
+	# to be shown on installation and add-on information found in add-on store
 	"addon_summary": _("Resource Monitor"),
 	# Add-on description
-	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	"addon_description": _("A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."),
 	# version
 	"addon_version": "25.02",
@@ -97,6 +97,6 @@ brailleTables = {}
 # If your add-on includes custom speech symbol dictionaries (most will not), fill out this dictionary.
 # Each key is the name of the dictionary,
 # with keys inside recording the following attributes:
-# displayName (name of the speech dictionary  shown to users and translatable),
+# displayName (name of the speech dictionary shown to users and translatable),
 # mandatory (True when always enabled, False when not.
 symbolDictionaries = {}
