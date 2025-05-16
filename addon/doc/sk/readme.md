@@ -329,6 +329,4 @@ Od verzie 16.08 používame na číslovanie verzii systém rok.mesiac.
 
 * prvé vydanie
 
-[[!tag dev stable]]
-
 [1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

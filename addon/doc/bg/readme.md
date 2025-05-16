@@ -359,6 +359,4 @@ Pack 1, 8 и 8.1.
 
 * Първоначално издание
 
-[[!tag dev stable]]
-
 [1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

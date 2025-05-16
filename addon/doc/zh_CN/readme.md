@@ -281,6 +281,4 @@ NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中。
 
 * 发布初始版本
 
-[[!tag dev stable]]
-
 [1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

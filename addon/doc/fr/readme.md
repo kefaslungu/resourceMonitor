@@ -361,6 +361,4 @@ forme année.mois.révision.
 
 * Première version
 
-[[!tag dev stable]]
-
 [1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

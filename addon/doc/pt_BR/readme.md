@@ -352,6 +352,4 @@ como ano.mês.revisão.
 
 * Versão Inicial
 
-[[!tag dev stable]]
-
 [1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor
