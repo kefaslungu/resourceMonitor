@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 18.04\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-09-21 09:22+0800\n"
-"PO-Revision-Date: 2024-06-10 19:27+0800\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 19:49-0600\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -16,24 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.4\n"
-
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "不支持的 Windows 版本"
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"您正在使用 {releaseName} ({build})，插件不支持此版本。\n"
-"此插件需要 {supportedReleaseName} ({supportedBuild}) 或更高版本。"
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "开放（无需验证）"
@@ -95,16 +78,15 @@ msgstr " 警告：电量不足。"
 msgid " Warning: critically low battery."
 msgstr " 警告，电量严重不足。"
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) build {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "资源监控器"
 
@@ -114,7 +96,6 @@ msgid ""
 "charging), and a warning if the battery is low or critical."
 msgstr "读出电量、充电状态、剩余时间（如果没有充电）且在电量不足时发出警告。"
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -167,10 +148,6 @@ msgstr ""
 "虚拟内存：已用 {virtualUsed}， 总大小 {virtualTotal}， 使用率 百分之 "
 "{virtualPercent}。"
 
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr "虚拟内存信息不可用"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "读出当前 Windows 的版本信息。"
@@ -219,22 +196,10 @@ msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "内存已用 百分之 {ramPercent}，CPU 已用 百分之 {cpuPercent}。"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "一个易于使用的资源监控器，可以读出 CPU 负载、内存使用、电池和磁盘使用情况等"
 "等。"
-
-#~ msgid "1 hour"
-#~ msgstr "1 小时"
-
-#~ msgid "1 minute"
-#~ msgstr "1 分"
-
-#~ msgid "1 day"
-#~ msgstr "系统已运行 1 天"
-
-#~ msgid "1 second"
-#~ msgstr "1秒"

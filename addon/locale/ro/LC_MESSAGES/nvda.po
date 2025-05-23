@@ -7,15 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:46-0700\n"
-"PO-Revision-Date: 2023-10-11 10:37+0300\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 20:09-0600\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || (n!=1 && n%100>=1 && "
+"n%100<=19) ? 1 : 2);\n"
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Nicio autentificare (deschis)"
@@ -56,6 +58,7 @@ msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
 msgstr[0] "{0} ore"
 msgstr[1] "{0} ore"
+msgstr[2] ""
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
@@ -64,6 +67,7 @@ msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
 msgstr[0] "{0} minute"
 msgstr[1] "{0} minute"
+msgstr[2] ""
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
@@ -85,9 +89,9 @@ msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit})"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Resource Monitor"
 
@@ -180,6 +184,7 @@ msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{0} zile"
 msgstr[1] "{0} zile"
+msgstr[2] ""
 
 #. Translators: system uptime in seconds.
 #, fuzzy, python-brace-format
@@ -187,6 +192,7 @@ msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{0} secunde"
 msgstr[1] "{0} secunde"
+msgstr[2] ""
 
 #. Translators: Input help mode message about obtaining the system's uptime
 msgid "Announces the system's uptime."
@@ -208,36 +214,10 @@ msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM folosit, procesor la {cpuPercent}%."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "Un monitor de resurse folositor pentru raportarea încărcării CPU, ratei de "
 "folosire a memoriei, baterie, stare folosire disk și altele."
-
-#~ msgid "Unsupported Windows release"
-#~ msgstr "Versiune incompatibilă de Windows"
-
-#, python-brace-format
-#~ msgid ""
-#~ "You are using {releaseName} ({build}), a Windows release not supported by "
-#~ "this add-on.\n"
-#~ "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-#~ msgstr ""
-#~ "Utilizați {releaseName} ({build}), o versiune de Windows care nu este "
-#~ "compatibilă cu acest supliment.\n"
-#~ "Acest supliment necesită {supportedReleaseName} ({supportedBuild}) sau o "
-#~ "versiune ulterioară."
-
-#~ msgid "1 hour"
-#~ msgstr "O oră"
-
-#~ msgid "1 minute"
-#~ msgstr "Un minut"
-
-#~ msgid "1 day"
-#~ msgstr "O zi"
-
-#~ msgid "1 second"
-#~ msgstr "O secundă"

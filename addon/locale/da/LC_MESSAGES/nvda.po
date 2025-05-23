@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:29-0700\n"
-"PO-Revision-Date: 2023-09-25 12:11+0200\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 19:54-0600\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: Dansk NVDA <dansk@nvda.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Ingen godkendelse (åben)"
@@ -85,9 +86,9 @@ msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit})"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Ressourcemonitor"
 
@@ -201,36 +202,10 @@ msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% hukommelse brugt, CPU {cpuPercent}%."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "En smart lille ressourcemonitor, som fortææler status for "
 "processorbelastning, hukommelsesforbrug, batteri, diskforbrug m.m."
-
-#~ msgid "Unsupported Windows release"
-#~ msgstr "Ikke-understøttet Windows-version"
-
-#, python-brace-format
-#~ msgid ""
-#~ "You are using {releaseName} ({build}), a Windows release not supported by "
-#~ "this add-on.\n"
-#~ "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-#~ msgstr ""
-#~ "Du bruger {releaseName} ({build}), en Windows-version, der ikke "
-#~ "understøttes af denne tilføjelse.\n"
-#~ "Denne tilføjelse kræver {supportedReleaseName} ({supportedBuild}) eller "
-#~ "nyere."
-
-#~ msgid "1 hour"
-#~ msgstr "1 time"
-
-#~ msgid "1 minute"
-#~ msgstr "1 minut"
-
-#~ msgid "1 day"
-#~ msgstr "1 dag"
-
-#~ msgid "1 second"
-#~ msgstr "1 sekund"

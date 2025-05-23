@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:33-0700\n"
-"PO-Revision-Date: 2024-04-26 21:50+0300\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 19:56-0600\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -16,25 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
-
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Ei-tuettu Windows-versio"
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"Käytät {releaseName}:n versiota ({build}), jota tämä lisäosa ei tue.\n"
-"Tämä lisäosa edellyttää {supportedReleaseName}:n versiota ({supportedBuild}) "
-"tai uudempaa."
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Ei tunnistautumista (avoin)"
@@ -98,16 +80,15 @@ msgstr " Varoitus: akun varaus alhainen."
 msgid " Warning: critically low battery."
 msgstr " Varoitus: akun varaus kriittisen alhainen."
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) koontiversio {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Resurssienvalvonta"
 
@@ -120,7 +101,6 @@ msgstr ""
 "(jos ei latauksessa) sekä antaa varoituksen, jos varaus on alhainen tai "
 "kriittinen."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -177,10 +157,6 @@ msgstr ""
 "Näennäismuisti: käytetty {virtualUsed} / {virtualTotal}, ({virtualPercent} "
 "%)."
 
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr "Näennäismuistin tietoja ei saatavilla"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Ilmoittaa käyttämäsi Windowsin version."
@@ -236,22 +212,10 @@ msgstr ""
 "RAM-muistia käytetty {ramPercent} %, suorittimen kuormitus {cpuPercent} %."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "Monipuolinen resurssienvalvontalisäosa suorittimen kuormituksen, muistin-, "
 "akun- ja levynkäytön tilan sekä monien muiden tietojen lukemiseen."
-
-#~ msgid "1 hour"
-#~ msgstr "1 tunti"
-
-#~ msgid "1 minute"
-#~ msgstr "1 minuutti"
-
-#~ msgid "1 day"
-#~ msgstr "1 päivä"
-
-#~ msgid "1 second"
-#~ msgstr "1 sekunti"

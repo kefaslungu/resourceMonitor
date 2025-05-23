@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:30-0700\n"
-"PO-Revision-Date: 2024-04-27 04:08+0200\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 19:55-0600\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,25 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
-
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Nicht unterstützte Windows-Version"
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"Sie verwenden {releaseName} ({build}), eine Windows-Version, die von dieser "
-"NVDA-Erweiterung nicht unterstützt wird.\n"
-"Es wird {supportedReleaseName} ({supportedBuild}) oder neuer benötigt."
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Keine Authentifizierung (offen)"
@@ -98,16 +80,15 @@ msgstr " Warnung: Niedriger Akku-Stand."
 msgid " Warning: critically low battery."
 msgstr " Warnung: Akku bald leer."
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) Build {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Ressourcen-Monitor"
 
@@ -120,7 +101,6 @@ msgstr ""
 "Betriebszeit (falls der Akku nicht geladen wird) sowie eine Warnung bei "
 "niedrigem oder kritischem Akku-Stand an."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -178,10 +158,6 @@ msgstr ""
 "Virtueller Arbeitsspeicher: {virtualUsed} von {virtualTotal} verwendet "
 "({virtualPercent} Prozent)."
 
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr "Informationen zum virtuellen Speicher sind nicht verfügbar"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Zeigt die aktuell verwendete Windows-Version an."
@@ -238,22 +214,10 @@ msgstr ""
 "{cpuPercent} Prozent."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "Ein praktischer Ressourcen-Monitor zur Anzeige von CPU-Auslastung, "
 "Arbeitsspeicher, Akkustatus, Speicherplatz auf Laufwerken und mehr."
-
-#~ msgid "1 hour"
-#~ msgstr "eine Stunde"
-
-#~ msgid "1 minute"
-#~ msgstr "eine Minute"
-
-#~ msgid "1 day"
-#~ msgstr "ein Tag"
-
-#~ msgid "1 second"
-#~ msgstr "eine Sekunde"

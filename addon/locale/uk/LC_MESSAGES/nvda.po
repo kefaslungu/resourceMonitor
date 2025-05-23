@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-08-21 17:40+0300\n"
-"PO-Revision-Date: 2024-05-26 06:51+0300\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 20:04-0600\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -17,25 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.4\n"
-
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Непідтримувана версія Windows"
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"Ви використовуєте версію Windows {releaseName} ({build}), яку цей додаток не "
-"підтримує.\n"
-"Цей додаток вимагає {supportedReleaseName} ({supportedBuild}) чи пізнішу."
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Без автентифікації (Відкрито)"
@@ -102,16 +84,15 @@ msgstr " Попередження: низький заряд акумулято�
 msgid " Warning: critically low battery."
 msgstr " Попередження: заряд акумулятора критично низький."
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) збірка {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Монітор ресурсів"
 
@@ -124,7 +105,6 @@ msgstr ""
 "залишився (якщо акумулятор не заряджається) і попередження про низький та "
 "критично низький заряд акумулятора."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -183,10 +163,6 @@ msgstr ""
 "Віртуальна пам’ять: {virtualUsed} із {virtualTotal} використовується "
 "({virtualPercent}%)."
 
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr "Інформація віртуальної пам’яті недоступна"
-
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
 msgstr "Повідомляє про версію Windows, яку ви використовуєте."
@@ -243,7 +219,7 @@ msgstr ""
 "{cpuPercent}%."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
@@ -251,15 +227,3 @@ msgstr ""
 "Зручний монітор ресурсів повідомляє про завантаженість процесора, "
 "використання оперативної пам'яті, статус акумулятора і дискового простору, "
 "та іншу інформацію."
-
-#~ msgid "1 hour"
-#~ msgstr "1 година"
-
-#~ msgid "1 minute"
-#~ msgstr "1 хвилина"
-
-#~ msgid "1 day"
-#~ msgstr "1 день"
-
-#~ msgid "1 second"
-#~ msgstr "1 секунда"

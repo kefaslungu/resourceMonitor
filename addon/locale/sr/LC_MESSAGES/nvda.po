@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:43-0700\n"
-"PO-Revision-Date: 2024-06-03 05:41+0200\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 20:10-0600\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
@@ -17,25 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.4\n"
-
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Windows verzija nije podržana"
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"Koristite {releaseName} ({build}), Windows verziju koju ovaj dodatak ne "
-"podržava.\n"
-"Ovaj dodatak zahteva {supportedReleaseName} ({supportedBuild}) ili noviji."
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Nema autentikacije (otvorena)"
@@ -101,16 +83,15 @@ msgstr " Upozorenje: baterija slaba."
 msgid " Warning: critically low battery."
 msgstr " Upozorenje: Kritično prazna baterija."
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) podverzija {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Monitor resursa"
 
@@ -122,7 +103,6 @@ msgstr ""
 "Prikazuje procenat baterije, status punjenja, preostalo vreme (ako se "
 "baterija ne puni) i upozorenje ako je baterija slaba ili kritična."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -174,10 +154,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Virtuelna: {virtualUsed} od {virtualTotal} iskorišćeno ({virtualPercent}%)."
-
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr "Informacije o virtuelnoj memoriji nedostupne"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -233,22 +209,10 @@ msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM-a iskorišćeno, CPU na {cpuPercent}%."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "Jednostavan monitor resursa koji prijavljuje opterećenost procesora, "
 "iskorišćenu memoriju, bateriju, status korišćenja diskova i još toga."
-
-#~ msgid "1 hour"
-#~ msgstr "Jedan sat"
-
-#~ msgid "1 minute"
-#~ msgstr "1 minut"
-
-#~ msgid "1 day"
-#~ msgstr "1 dan"
-
-#~ msgid "1 second"
-#~ msgstr "jedna sekunda"

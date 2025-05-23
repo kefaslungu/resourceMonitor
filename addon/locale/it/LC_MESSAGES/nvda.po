@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:48-0700\n"
-"PO-Revision-Date: 2023-10-20 09:21+0100\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 20:03-0600\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: Simone Dal Maso <simone.dalmaso@juvox.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Nessuna autenticazione (Aperta)"
@@ -85,9 +86,9 @@ msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit})"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Resource Monitor"
 
@@ -203,7 +204,7 @@ msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% di RAM usata, CPU al {cpuPercent}%."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
@@ -211,29 +212,3 @@ msgstr ""
 "Un'utile analizzatore di risorse per segnalare il carico della CPU, "
 "l'utilizzo della memoria, lo stato della batteria,  la quantità di spazio "
 "utilizzato sul disco ed altro."
-
-#~ msgid "Unsupported Windows release"
-#~ msgstr "Versione di Windows non supportata"
-
-#, python-brace-format
-#~ msgid ""
-#~ "You are using {releaseName} ({build}), a Windows release not supported by "
-#~ "this add-on.\n"
-#~ "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-#~ msgstr ""
-#~ "Stai utilizzando {releaseName} ({build}), una versione di Windows non "
-#~ "supportata da questo componente aggiuntivo.\n"
-#~ "Questo componente aggiuntivo richiede {supportedReleaseName} "
-#~ "({supportedBuild}) o versioni successive."
-
-#~ msgid "1 hour"
-#~ msgstr "1 ora,"
-
-#~ msgid "1 minute"
-#~ msgstr "1 minuto"
-
-#~ msgid "1 day"
-#~ msgstr "1 giorno"
-
-#~ msgid "1 second"
-#~ msgstr "1 secondo"

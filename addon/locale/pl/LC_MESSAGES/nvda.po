@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:47-0700\n"
-"PO-Revision-Date: 2024-12-01 10:29+0100\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 20:07-0600\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: killer-of-god <killer@tyflonet.com>\n"
 "Language: pl\n"
@@ -17,25 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
 "|| n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
-
-#. Resource Monitor requires Windows 10 21H2 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Nieobsługiwana wersja systemu Windows"
-
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
-#, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
-"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"Używasz {releaseName} ({build}), wersji systemu Windows, która nie jest "
-"obsługiwana przez ten dodatek.\n"
-"Ten dodatek wymaga {supportedReleaseName} ({supportedBuild}) lub nowszej."
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Bez uwierzytelniania (otwarta)"
@@ -101,16 +83,15 @@ msgstr " Ostrzeżenie: niski poziom naładowania baterii."
 msgid " Warning: critically low battery."
 msgstr " Ostrzeżenie: krytycznie niski poziom naładowania baterii."
 
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) kompilacja {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Monitor zasobów"
 
@@ -122,7 +103,6 @@ msgstr ""
 "Przedstawia procent baterii, stan ładowania, pozostały czas (jeśli nie "
 "ładuje) oraz ostrzeżenie, jeśli bateria jest niska lub krytyczna."
 
-#. Translators: Input help message about drive info command in Resource Monitor.
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -137,8 +117,8 @@ msgstr ""
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
 msgstr ""
-"{driveName} ({driveType} dysk): {usedSpace} z {totalSpace} w użyciu "
-"{percent}%."
+"{driveName} ({driveType} dysk): {usedSpace} z {totalSpace} w użyciu {percent}"
+"%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
 msgid "Presents the average processor load and the load of each core."
@@ -176,10 +156,6 @@ msgstr ""
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
 "Wirtualna: {virtualUsed} z {virtualTotal} w użyciu ({virtualPercent}%)."
-
-#. Translators: Reported when virtual memory information cannot be obtained.
-msgid "Virtual memory information unavailable"
-msgstr "Informacje o pamięci wirtualnej są niedostępne"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
 msgid "Announces the version of Windows you are using."
@@ -237,22 +213,10 @@ msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% pamięci w użyciu, Procesor na {cpuPercent}%."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "Podręczny monitor zasobów zgłaszający obciążenie CPU, użycie pamięci, "
 "baterię, status użycia dysku i więcej."
-
-#~ msgid "1 hour"
-#~ msgstr "1 godzina"
-
-#~ msgid "1 minute"
-#~ msgstr "1 minuta"
-
-#~ msgid "1 day"
-#~ msgstr "1 dzień"
-
-#~ msgid "1 second"
-#~ msgstr "1 sekunda"

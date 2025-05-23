@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:45-0700\n"
-"PO-Revision-Date: 2023-01-08 07:54-0800\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-05-21 20:10-0600\n"
 "Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.6\n"
 
 msgid "No authentication (Open)"
 msgstr "Žiadne zabezpečenie (Bez hesla)"
@@ -90,9 +90,9 @@ msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr ""
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Resource Monitor"
 msgstr "Monitor prostriedkov"
 
@@ -147,8 +147,8 @@ msgstr "Oznámi využité a voľné miesto pre fyzickú a virtuálnu ram pamäť
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
-"fyzická pamäť: využité {physicalUsed} z {physicalTotal} "
-"({physicalPercent}%). "
+"fyzická pamäť: využité {physicalUsed} z {physicalTotal} ({physicalPercent}"
+"%). "
 
 #. Translators: Shows virtual memory usage.
 #, python-brace-format
@@ -163,7 +163,9 @@ msgstr "Oznámy verziu operačného systému."
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
 msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr "Oznámi názov  ssid bezdrôtovej siete a úroveň signálu, ku ktorej je systém pripojený."
+msgstr ""
+"Oznámi názov  ssid bezdrôtovej siete a úroveň signálu, ku ktorej je systém "
+"pripojený."
 
 msgid "No wireless devices"
 msgstr "Žiadne zariadenia bezdrôtovej siete"
@@ -172,7 +174,8 @@ msgid "No wireless connections"
 msgstr "Nepripojené k bezdrôtovej sieti"
 
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr "Pripojené k bezdrôtovej sieti: {}. Úroveň signálu: {}%. Typ zabezpečenia: {}"
+msgstr ""
+"Pripojené k bezdrôtovej sieti: {}. Úroveň signálu: {}%. Typ zabezpečenia: {}"
 
 #. Translators: system uptime in days.
 #, python-brace-format
@@ -213,22 +216,10 @@ msgstr ""
 "{ramPercent}% využitej pamäte ram, zaťaženie procesora na {cpuPercent}%. "
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
 msgstr ""
 "Jednoduchý doplnok na zistenie vyťaženia procesora, využitej ram pamäte, "
 "stavu napájania, miesta na pripojených diskoch a podobne."
-
-#~ msgid "1 hour"
-#~ msgstr "Jedna hodina"
-
-#~ msgid "1 minute"
-#~ msgstr "jedna minúta"
-
-#~ msgid "1 day"
-#~ msgstr "Jeden deň"
-
-#~ msgid "1 second"
-#~ msgstr "Jednu sekundu"
