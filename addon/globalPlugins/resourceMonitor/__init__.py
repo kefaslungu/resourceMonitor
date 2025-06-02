@@ -62,9 +62,10 @@ try:
 			return
 		match pData.contents.NotificationCode:
 			case wlanapi.wlan_notification_acm_connection_complete:
-				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(
-					pData.contents.pData
-				).dot11Ssid.SSID
+				notificationData = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData)
+				if notificationData.wlanReasonCode != wlanapi.ERROR_SUCCESS:
+					return
+				ssid = notificationData.dot11Ssid.SSID
 				queueHandler.queueFunction(
 					queueHandler.eventQueue,
 					message,
