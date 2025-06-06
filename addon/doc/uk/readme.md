@@ -52,6 +52,11 @@ All commands support speech on demand mode.
 Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
 ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.

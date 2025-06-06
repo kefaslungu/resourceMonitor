@@ -34,6 +34,11 @@ All commands support speech on demand mode.
 
 关于许可证的说明：此插件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.

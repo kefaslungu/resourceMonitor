@@ -52,6 +52,11 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
 BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
 
+## Sürüm 25.06
+
+* Kablosuz ağlara bağlanırken bağlantı durumu duyurusu iyileştirildi
+  (@danstiv).
+
 ## Sürüm 25.02
 
 * Windows 8.1 için sınırlı destek geri yüklendi.

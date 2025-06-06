@@ -47,6 +47,11 @@ informácií v systéme Windows. Vezmite preto navedomie tieto skutočnosti:
 Note on license: this add-on uses Psutil, licensed under 3-Clause BSD
 License which is compatible with GNU General Public License.
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.

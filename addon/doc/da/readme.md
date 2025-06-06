@@ -50,6 +50,11 @@ systeminformationsprogrammer til Windows. Bemærk også følgende:
 Bemærkninger til licensen: denne tilføjelse bruger Psutil, licenseret under
 3-klausul BSD-licens, som er kompatibel med GNU General Public License.
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.

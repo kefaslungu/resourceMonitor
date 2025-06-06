@@ -57,6 +57,11 @@ Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
 der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
 Public Lizenz kompatibel.
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.

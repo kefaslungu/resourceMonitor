@@ -53,6 +53,11 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 Napomena o licenci: ovaj dodatak koristi Psutil, licenciran pod BSD licencom
 s 3 klauzule koja je kompatibilna s GNU Općom javnom licencom.
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.

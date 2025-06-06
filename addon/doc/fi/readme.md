@@ -55,6 +55,11 @@ Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
 kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
 -lisenssin kanssa.
 
+## Versio 25.06
+
+* Paranneltu yhteystilan ilmoitusta langattomiin verkkoihin
+  yhdistettäessä. (@danstiv).
+
 ## Versio 25.02
 
 * Palautettu rajoitettu tuki Windows 8.1:lle.

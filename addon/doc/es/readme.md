@@ -52,6 +52,11 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
 Nota sobre licencias: este complemento usa Psutil, liberado bajo la licencia
 3-Clause BSD, que es compatible con la Licencia Pública General GNU.
 
+## Versión 25.06
+
+* Se mejora el anuncio de estado de conexión al conectar a redes
+  inalámbricas (@danstiv).
+
 ## Versión 25.02
 
 * Se restaura el soporte limitado para Windows 8.1.

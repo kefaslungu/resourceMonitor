@@ -58,6 +58,11 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 3 clauses compatible avec la GNU General Public License.
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restauré prise en charge limitée pour Windows 8.1.

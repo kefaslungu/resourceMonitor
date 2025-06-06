@@ -55,6 +55,11 @@ de informações de sistema para Windows. Note também o seguinte:
 Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
 BSD de 3 cláusulas, que é compatível com a GNU General Public License.
 
+## Version 25.06
+
+* Improved connection status announcement when connecting to wireless
+  networks (@danstiv).
+
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.
