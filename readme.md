@@ -16,6 +16,7 @@ All commands support speech on demand mode.
 * NVDA+Shift+6: presents  CPU Architecture and Windows version and service pack numbers.
 * NVDA+Shift+7: presents the system's uptime.
 * NVDA+Shift+8: presents information on the wireless connection, ssid name and strength, or no ssid if there is none available.
+* NVDA+Shift+9: presents the internet speed (Download and upload, current, maximum and average of the session).
 
 You can change these shortcut keys via input gestures dialog.
 
