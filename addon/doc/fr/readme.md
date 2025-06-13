@@ -60,8 +60,8 @@ Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
 
 ## Version 25.06
 
-* Improved connection status announcement when connecting to wireless
-  networks (@danstiv).
+* Amélioration de l'annonce de l'état de la connexion lors de la connexion
+  aux réseaux sans fil (@danstiv).
 
 ## Version 25.02
 
