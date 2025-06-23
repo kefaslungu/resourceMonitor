@@ -30,7 +30,9 @@ This add-on does not replace task manager and other system information programs 
 * While this add-on supports windows 8.1 (limited support), Windows 10 22H2 (2022 Update/build 19045) or later is recommended.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
-Note on license: this add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GNU General Public License.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static type checker).
 
 ## Version 25.06
 
