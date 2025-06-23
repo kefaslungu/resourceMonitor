@@ -283,11 +283,14 @@ def getWinVer() -> str:
 			# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
 			f"Windows Server {winverName.rpartition(' ')[-1]}",
 		)
-	# Announce build.revision.
-	with winreg.OpenKey(
-		winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
-	) as currentVersion:
-		ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
+	# Announce build.revision (directly in NVDA 2025.2, via registry in 2025.1 and earlier).
+	if hasattr(currentWinVer, "revision"):
+		ubr = currentWinVer.revision
+	else:
+		with winreg.OpenKey(
+			winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion"
+		) as currentVersion:
+			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0]  # UBR = Update Build Revision
 	buildRevision = f"{currentWinVer.build}.{ubr}"
 	# Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 	info = _("{winVersion} ({cpuBit}) build {build}").format(
