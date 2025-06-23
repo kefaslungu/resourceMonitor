@@ -83,6 +83,7 @@ reportAttributeAccessIssue = true
 reportCallInDefaultInitializer = true
 reportCallIssue = true
 reportConstantRedefinition = true
+reportDeprecated = true
 reportDuplicateImport = true
 reportFunctionMemberAccess = true
 reportGeneralTypeIssues = true
@@ -140,8 +141,6 @@ reportUnusedFunction = true
 reportUnusedImport = true
 reportUnusedVariable = true
 reportWildcardImportFromLibrary = true
-
-reportDeprecated = true
 
 # Can be enabled by generating type stubs for modules via pyright CLI
 reportMissingTypeStubs = false
