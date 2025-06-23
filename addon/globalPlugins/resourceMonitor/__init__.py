@@ -93,6 +93,8 @@ try:
 					_("A wireless device has been disabled"),
 					"disconnect.wav",
 				)
+			case _:
+				pass
 except NameError:
 	pass
 
