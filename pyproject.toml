@@ -54,6 +54,8 @@ exclude = [
 	# When excluding concrete paths relative to a directory,
 	# not matching multiple folders by name e.g. `__pycache__`,
 	# paths are relative to the configuration file.
+	# WLAN API is a third-party module
+	"addon/globalPlugins/resourceMonitor/wlanapi.py",
 ]
 
 # Tell pyright where to load python code from
