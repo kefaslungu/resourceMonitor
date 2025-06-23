@@ -100,6 +100,7 @@ reportInvalidStubStatement = true
 reportInvalidTypeArguments = true
 reportInvalidTypeForm = true
 reportInvalidTypeVarUse = true
+reportMatchNotExhaustive = true
 reportMissingModuleSource = true
 reportMissingSuperCall = true
 reportMissingTypeArgument = true
@@ -148,15 +149,14 @@ reportMissingTypeStubs = false
 # Bad rules
 # These are sorted alphabetically and should be enabled and moved to compliant rules section when resolved.
 reportImplicitStringConcatenation = false  # Split lengthy script description onto separate lines
-reportMatchNotExhaustive = false  # 1 error
 reportMissingImports = false  # NVDA Core modules
-reportMissingParameterType = false  # 12 errors
+reportMissingParameterType = false  # WLAN data and script gesture
 reportPrivateUsage = false  # _psutil_windows is part of psutil package
-reportUnboundVariable = false  # 36 errors
-reportUndefinedVariable = false  # 39 errors
-reportUnknownArgumentType = false  # 25 errors
-reportUnknownMemberType  = false  # 99 errors
-reportUnknownParameterType = false  # 14 errors
-reportUnknownVariableType = false  # 42 errors
+reportUnboundVariable = false  # WLAN module and info, memory size reporting
+reportUndefinedVariable = false  # _ = gettext.gettext call, ngettext comes from gettext
+reportUnknownArgumentType = false  # Battery, WLAN, and other resource usage reporting texts
+reportUnknownMemberType  = false  # NVDA Core, psutil, WLAN module member types
+reportUnknownParameterType = false  # WLAN data/array and script gesture
+reportUnknownVariableType = true  # Tuple unpacking, third-party modules, unexpected variable types
 reportUntypedBaseClass = false  # globalPluginHandler.GlobalPlugin comes from NVDA Core
-reportUntypedFunctionDecorator = false  # 8 errors
+reportUntypedFunctionDecorator = false  # scriptHandler.script decorator
