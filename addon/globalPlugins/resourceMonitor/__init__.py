@@ -463,7 +463,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			api.copyToClip(info, notify=True)
 
-	def _getWlanInfo(self):
+	def _getWlanInfo(self) -> str:
 		if not self._client_handle:
 			return _("No wireless devices")
 
