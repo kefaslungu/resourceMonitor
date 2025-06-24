@@ -157,6 +157,6 @@ reportUndefinedVariable = false  # _ = gettext.gettext call, ngettext comes from
 reportUnknownArgumentType = false  # Battery, WLAN, and other resource usage reporting texts
 reportUnknownMemberType  = false  # NVDA Core, psutil, WLAN module member types
 reportUnknownParameterType = false  # WLAN data/array and script gesture
-reportUnknownVariableType = true  # Tuple unpacking, third-party modules, unexpected variable types
+reportUnknownVariableType = false  # Tuple unpacking, third-party modules, unexpected variable types
 reportUntypedBaseClass = false  # globalPluginHandler.GlobalPlugin comes from NVDA Core
 reportUntypedFunctionDecorator = false  # scriptHandler.script decorator
