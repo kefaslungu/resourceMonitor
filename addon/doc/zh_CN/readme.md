@@ -32,7 +32,10 @@ All commands support speech on demand mode.
 * This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
-关于许可证的说明：此插件使用Psutil，根据与GNU通用公共许可证兼容的3条款BSD许可证进行许可。
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Version 25.06
 

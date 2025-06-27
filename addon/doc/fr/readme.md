@@ -55,8 +55,10 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 * L'installation de l'extension sur Windows 10/11 LTSC n'est pas prise en
   charge.
 
-Remarque sur la licence : cette extension utilise Psutil, sous licence BSD à
-3 clauses compatible avec la GNU General Public License.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Version 25.06
 

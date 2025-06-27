@@ -53,9 +53,10 @@ Systeminformationsprogramme. Bitte beachten Sie Folgendes:
 * Die Installation der NVDA-Erweiterung unter Windows 10/11 LTSC wird nicht
   unterstützt.
 
-Hinweis zur Lizensierung: Diese Erweiterung verwendet Psutil, welches  mit
-der 3-Clause BSD Lizenz veröffentlicht wurd. Diese ist mit der General
-Public Lizenz kompatibel.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Version 25.06
 

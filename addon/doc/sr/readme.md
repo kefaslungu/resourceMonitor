@@ -48,8 +48,10 @@ sistemu za Windows. Takođe imajte sledeće na umu:
 * This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
-Napomena o licenci: ovaj dodatak koristi Psutil, koji je licenciran pod
-3-Clause BSD licencom koja je kompatibilna sa GNU opštom javnom licencom.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Version 25.06
 

@@ -51,9 +51,10 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   19045) tai uudempaa.
 * Tämän lisäosan asentamista ei tueta Windows 10:n/11:n LTSC-versioissa.
 
-Huomautus lisenssistä: tämä lisäosa käyttää Psutil-riippuvuutta, joka on
-kolmilausekkeisen BSD-lisenssin alainen, joka on yhteensopiva GNU GPL
--lisenssin kanssa.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Versio 25.06
 

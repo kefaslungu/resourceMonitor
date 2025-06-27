@@ -49,8 +49,10 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
   gerektirir.
 * Eklentinin Windows 10/11 LTSC'ye yüklenmesi desteklenmemektedir.
 
-Lisansla ilgili not: bu eklenti, GNU Genel Kamu Lisansı ile uyumlu 3 Maddeli
-BSD Lisansı kapsamında lisanslanan Psutil'i kullanır.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Sürüm 25.06
 

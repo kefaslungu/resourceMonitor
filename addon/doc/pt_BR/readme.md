@@ -52,8 +52,10 @@ de informações de sistema para Windows. Note também o seguinte:
   posterior.
 * Não há suporte para a instalação do complemento no Windows 10/11 LTSC.
 
-Nota sobre a licença: este complemento usa Psutil, licenciado sob a Licença
-BSD de 3 cláusulas, que é compatível com a GNU General Public License.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Version 25.06
 

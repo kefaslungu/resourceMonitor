@@ -49,8 +49,10 @@ All commands support speech on demand mode.
 * This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
-Примітка про ліцензування: цей додаток використовує Psutil, проліцензований
-ліцензією 3-Clause BSD, яка сумісна з GNU General Public License.
+## Version 25.07
+
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
 
 ## Version 25.06
 
