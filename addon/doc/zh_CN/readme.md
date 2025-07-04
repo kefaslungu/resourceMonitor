@@ -7,7 +7,7 @@
 
 # 快捷键
 
-All commands support speech on demand mode.
+所有命令都支持手动朗读模式。
 
 * NVDA+Shift+E： 读出内存的使用率、CPU 平均负载和电池信息（如果可用）。
 * NVDA+Shift+1： 读出每个 CPU 核心的负载和平均负载。
@@ -29,36 +29,29 @@ All commands support speech on demand mode.
   核心数量的两倍。在一些较新的计算机上，并非所有 CPU 核心都启用了超线程。
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 所读出的处理器架构信息“x86”和“AMD64”分别指代的是 32 位和 64 位 (x64) Intel 和 AMD 处理器。
-* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
-* Installing the add-on on Windows 10/11 LTSC is not supported.
+* 此插件需要 Windows 10  22H2 (2022 Update/build 19045 或更高版本。
+* 不支持在 Windows 10/11 LTSC 上安装本插件。
 
-## Version 25.07
+## 版本 25.07
 
-* Made the add-on code more robust with help from Pyright (a Python static
-  type checker).
+* 在Pyright（Python静态类型检查器）的帮助下，使插件代码更加健壮。
 
-## Version 25.06
+## 版本 25.06
 
-* Improved connection status announcement when connecting to wireless
-  networks (@danstiv).
+* 改进了连接无线网络时的连接状态朗读（@danstiv）。
 
-## Version 25.02
+## 版本 25.02
 
-* Restored limited support for Windows 8.1.
-* Improved accuracy of used and total memory information announcement
-  (@danstiv).
-* NVDA will no longer appear to freeze briefly when performing memory usage
-  command (NVDA+Shift+2/5) the first time after starting NVDA.
-* Windows Insider Preview releases are no longer reported as "Windows
-  Insider".
+* 恢复对 Windows 8.1 的有限支持。
+* 提高了已使用和总内存信息的准确性（@danstiv）。
+* 修复了启动NVDA后第一次查看内存使用（NVDA+Shift+2/5）时NVDA短暂卡顿的错误。
+* 修复了将“Windows Insider Preview”识别为“Windows Insider”的问题。
 
-## Version 24.08
+## 版本 24.08
 
-* NVDA 2024.2 or later is required. This allows psutil dependency to be
-  removed from the add-on as NVDA includes it.
-* Updated psutil dependency to the version included with NVDA 2024.2
-  (6.0.0).
-* Ruff replaces Flake8 as code linter.
+* 需要 NVDA 2024.2 或更高版本。这可以删除 psutil 依赖，因为 NVDA 已经内置。
+* 将 psutil 依赖更新到 NVDA 2024.2 内置的版本（6.0.0）。
+* Ruff取代Flake8成为新的代码静态分析工具。
 
 ## 版本24.05
 
@@ -88,7 +81,7 @@ All commands support speech on demand mode.
 
 ## 版本 23.05.1
 
-NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中。
+NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中！
 
 * 使用 wlanReporter 的 Windows API 取代检测无线连接的旧方法
   ：https://github.com/kvark128/WlanReporter/。

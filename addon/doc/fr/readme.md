@@ -57,8 +57,8 @@ programmes d'information système pour Windows. Aussi, notez ce qui suit :
 
 ## Version 25.07
 
-* Made the add-on code more robust with help from Pyright (a Python static
-  type checker).
+* Rendu le code de l'extension plus robuste avec l'aide de Pyright (un
+  vérificateur de type statique Python).
 
 ## Version 25.06
 

@@ -49,10 +49,10 @@ de información del sistema para Windows. También ten en cuenta lo siguiente:
   /compilación 19045) o posterior.
 * No se soporta la instalación del complemento en Windows 10/11 LTSC.
 
-## Version 25.07
+## Versión 25.07
 
-* Made the add-on code more robust with help from Pyright (a Python static
-  type checker).
+* Se ha hecho el código del complemento más robusto con la ayuda de Pyright
+  (un comprobador de tipado estático en Python).
 
 ## Versión 25.06
 

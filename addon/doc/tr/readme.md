@@ -49,10 +49,10 @@ uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
   gerektirir.
 * Eklentinin Windows 10/11 LTSC'ye yüklenmesi desteklenmemektedir.
 
-## Version 25.07
+## Sürüm 25.07
 
-* Made the add-on code more robust with help from Pyright (a Python static
-  type checker).
+* Eklenti kodu Pyright'ın (Python statik tip denetleyicisi) yardımıyla daha
+  sağlam hale getirildi.
 
 ## Sürüm 25.06
 
