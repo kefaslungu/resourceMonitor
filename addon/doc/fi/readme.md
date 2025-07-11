@@ -51,10 +51,10 @@ järjestelmätietoja näyttäviä ohjelmia. Huomaa lisäksi seuraavat seikat:
   19045) tai uudempaa.
 * Tämän lisäosan asentamista ei tueta Windows 10:n/11:n LTSC-versioissa.
 
-## Version 25.07
+## Versio 25.07
 
-* Made the add-on code more robust with help from Pyright (a Python static
-  type checker).
+* Lisäosan koodin vakautta parannettu Pyrightin (Pythonin staattinen
+  tyypintarkistustyökalu) avulla.
 
 ## Versio 25.06
 

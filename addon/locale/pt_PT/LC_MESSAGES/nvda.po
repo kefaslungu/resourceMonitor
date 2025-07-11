@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: resourceMonitor 3.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-21 20:08-0600\n"
+"PO-Revision-Date: 2025-07-06 19:22+0100\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -184,7 +184,7 @@ msgstr[1] "{days:d} days"
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
-msgstr[0] "{segundos:d} segundo"
+msgstr[0] "{seconds:d} segundo"
 msgstr[1] "{seconds:d} seconds"
 
 #. Translators: Input help mode message about obtaining the system's uptime
