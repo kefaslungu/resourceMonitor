@@ -284,8 +284,7 @@ def getWinVer() -> str:
 			f"Windows Server {winverName.rpartition(' ')[-1]}",
 		)
 	# Announce build.revision.
-	ubr = currentWinVer.revision
-	buildRevision = f"{currentWinVer.build}.{ubr}"
+	buildRevision = f"{currentWinVer.build}.{currentWinVer.revision}"
 	# Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 	info = _("{winVersion} ({cpuBit}) build {build}").format(
 		winVersion=winverName, cpuBit=arch, build=buildRevision
