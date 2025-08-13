@@ -24,6 +24,9 @@ addon_info = AddonInfo(
 	addon_description=_("A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."),
 	# version
 	addon_version="25.07",
+	# Brief changelog for this version
+	# Translators: what's new content for the add-on version to be shown in the add-on store
+	addon_changelog=_("""* NVDA 2025.2 or later is required."""),
 	# Author(s)
 	addon_author="Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
