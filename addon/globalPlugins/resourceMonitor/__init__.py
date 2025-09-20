@@ -446,6 +446,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
+		# Translators: Input help mode message about getting current running app's name and version
+		description=_("Announces the current app's name and version."),
+		gesture="kb:NVDA+shift+9",
+		speakOnDemand=True,
+	)
+	def script_appVersion(self, gesture):
+		obj = api.getNavigatorObject()
+		currentAppName = obj.appModule.productName
+		currentAppVersion = obj.appModule.productVersion
+		info = f"Current running app with focus: {currentAppName} Version: {currentAppVersion}"
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			api.copyToClip(info, notify=True)
+
+	@scriptHandler.script(
 		# Translators: Input help mode message about obtaining the ssid of the wireless network,
 		# and the strength of the network.
 		description=_("Announces the system's wireless network ssid name, and its strength."),
