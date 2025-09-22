@@ -447,11 +447,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about getting current running app's name and version
-		description=_("Announces the current app's name and version."),
+		description=_("Announces the current running app's name and version."),
 		gesture="kb:NVDA+shift+9",
 		speakOnDemand=True,
 	)
-	def script_appVersion(self, gesture):
+	def script_appVersionInfo(self, gesture):
 		obj = api.getNavigatorObject()
 		currentAppName = obj.appModule.productName
 		currentAppVersion = obj.appModule.productVersion
