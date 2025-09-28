@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Kaynak İzleme 25.10</title>
+</head>
+<body>
+<h1>Kaynak izleme</h1>
+<ul>
+<li>Yazarlar: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Ethin
+  Probst ve diğer NVDA katılımcıları</li>
+</ul>
+<p>Bu eklenti, CPU yükü, bellek kullanımı ve diğer kaynak kullanımları hakkında
+bilgi verir.</p>
+<h1>Kısayollar</h1>
+<p>Tüm komutlar isteğe bağlı konuşma modunu destekler.</p>
+<ul>
+<li>NVDA+Shift+E: kullanılan ram, ortalama işlemci yükü ve varsa pil
+  bilgilerini sunar.</li>
+<li>NVDA+Shift+1: ortalama işlemci yükünü ve çok çekirdekli CPU'lar varsa her
+  bir çekirdeğin yükünü gösterir.</li>
+<li>NVDA+Shift+2/5: hem fiziksel hem de sanal ram için kullanılan ve toplam
+  alanı sunar.</li>
+<li>NVDA+Shift+3: statik ve çıkarılabilir sürücülerin kullanılan ve toplam
+  alanını sunar.</li>
+<li>NVDA+Shift+4: pil yüzdesini, şarj durumunu, kalan süreyi (şarjda değilse)
+  ve pil zayıf veya kritikse bir uyarı gösterir.</li>
+<li>NVDA+Shift+6: CPU Mimarisini,  Windows sürümünü ve hizmet paketi
+  numaralarını duyurur.</li>
+<li>NVDA+Shift+7: sistemin çalışma süresini gösterir.</li>
+<li>NVDA+Shift+8: kablosuz bağlantı, ssid adı ve gücü veya yoksa ssid olmadığı
+  konusunda bilgi verir.</li>
+</ul>
+<p>Girdi hareketleri iletişim kutusu aracılığıyla bu kısayol tuşlarını
+değiştirebilirsiniz.</p>
+<h2>Kullanım notları</h2>
+<p>Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka
+uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:</p>
+<ul>
+<li>Eklenti güvenli ekranlarda çalıştırılıyorsa kaynak bilgileri panoya
+  kopyalanamaz.</li>
+<li>CPU kullanımı fiziksel çekirdekler için değil mantıksal işlemciler için
+  verilmiştir. Bu, CPU sayısının CPU çekirdeği sayısının iki katı olduğu
+  Hyper-Threading kullanan işlemciler için fark edilir. Bazı yeni
+  bilgisayarlarda, tüm CPU çekirdeklerinde hiper iş parçacığı etkin
+  olmayacaktır.</li>
+<li>Büyük dosyaların kopyalanması gibi yoğun disk etkinliği varsa, disk
+  kullanım bilgilerinin alınmasında gecikmeler olabilir.</li>
+<li>İşlemci mimarisi bilgileri açıklanırken "x86" ve "AMD64" sırasıyla 32 bit
+  ve 64 bit (x64) Intel ve AMD işlemcileri ifade eder.</li>
+<li>Bu eklenti, Windows 10 22H2 (2022 Güncellemesi/derleme 19045) veya üzerini
+  gerektirir.</li>
+<li>Eklentinin Windows 10/11 LTSC'ye yüklenmesi desteklenmemektedir.</li>
+</ul>
+<h2>Sürüm 25.07</h2>
+<ul>
+<li>Eklenti kodu Pyright'ın (Python statik tip denetleyicisi) yardımıyla daha
+  sağlam hale getirildi.</li>
+</ul>
+<h2>Sürüm 25.06</h2>
+<ul>
+<li>Kablosuz ağlara bağlanırken bağlantı durumu duyurusu iyileştirildi
+  (@danstiv).</li>
+</ul>
+<h2>Sürüm 25.02</h2>
+<ul>
+<li>Windows 8.1 için sınırlı destek geri yüklendi.</li>
+<li>Kullanılan ve toplam hafıza bilgisi duyurusunun (@danstiv) doğruluğu
+  iyileştirildi.</li>
+<li>NVDA'yı başlattıktan sonra ilk kez bellek kullanım komutu (NVDA+Shift+2/5)
+  gerçekleştirilirken NVDA artık kısa bir süre donuyor gibi görünmeyecek.</li>
+<li>Windows Insider Preview sürümleri artık "Windows Insider" olarak
+  raporlanmıyor.</li>
+</ul>
+<h2>Sürüm 24.08</h2>
+<ul>
+<li>NVDA 2024.2 veya sonrası gereklidir. Bu, NVDA'nın içerdiği psutil
+  bağımlılığının eklentiden kaldırılmasına olanak tanır.</li>
+<li>Psutil bağımlılığı NVDA 2024.2 (6.0.0) ile birlikte gelen sürüme
+  güncellendi.</li>
+<li>Ruff, kod linter olarak Flake8'in yerini alır.</li>
+</ul>
+<h2>Sürüm 24.05</h2>
+<ul>
+<li>NVDA 2024.1 veya üstü gereklidir.</li>
+<li>NVDA, eşitlerin eşzamanlı kimlik doğrulaması (SAE) gibi WPA3 kimlik
+  doğrulama yöntemlerine sahip kablosuz ağları tanıyacaktır.</li>
+</ul>
+<h2>Sürüm 24.04</h2>
+<ul>
+<li>Psutil bağımlılığı 5.9.8'e güncellendi.</li>
+<li>Kaynak bilgilerinin bu modda duyurulabilmesi için isteğe bağlı konuşma
+  modu desteği eklendi.</li>
+</ul>
+<h2>Sürüm 23.11</h2>
+<ul>
+<li>Bellek kullanımı duyurularındaki sorunlar nedeniyle psutil bağımlılığı
+  5.9.4'e düşürüldü.</li>
+</ul>
+<h2>Sürüm 23.10</h2>
+<ul>
+<li>Psutil bağımlılığı 5.9.5'e güncellendi.</li>
+</ul>
+<h2>Sürüm 23.09</h2>
+<ul>
+<li>NVDA, kablosuz özellik modülleri kullanılamadığında artık Windows Server
+  sistemlerinde başlatma hata mesajlarını günlüğe kaydetmeyecektir.</li>
+</ul>
+<h2>Sürüm 23.06</h2>
+<ul>
+<li>Kablosuz bağdaştırıcıların bulunmaması nedeniyle Kaynak İzleyici'nin
+  düzgün çalışmaması durumu düzeltildi.</li>
+</ul>
+<h2>Sürüm 23.05.1</h2>
+<p>kablosuz Ağ Bilgilendirici NVDA eklentisi, artık Kaynak İzleyici'nin bir
+parçası!</p>
+<ul>
+<li>
+<p>Kablosuz bağlantıları kontrol etmenin eski yönteminin yerini Kablosuz Ağ
+  Bilgilendirici'nin Windows API'si aldı:
+  https://github.com/kvark128/WlanReporter/ .</p>
+<ul>
+<li>SSID adını ve gücünü söyledikten sonra, NVDA şimdi size ağınızın güvenlik
+  türünü de söyleyecektir.</li>
+<li>NVDA artık kablosuz bir ağa bağlandığınızda ve bağlantıyı kestiğinizde
+  sizi uyaracak.</li>
+<li>NVDA artık kablosuz bağlantılar açıldığında veya kapatıldığında sizi
+  uyaracak.</li>
+</ul>
+</li>
+</ul>
+<h2>Sürüm 23.05</h2>
+<ul>
+<li>
+<p>bağlı kablosuz ağın durumunu tespit etme ve sunma yeteneği eklendi.</p>
+<ul>
+<li>Bağlı kablosuz SSID'nin adını duyurur.</li>
+<li>SSID'nin gücünü duyurur</li>
+<li>Hiçbir SSID algılanmazsa bulunamadığı konusunda bilgi duyurur.</li>
+</ul>
+</li>
+</ul>
+<h2>Sürüm 23.02</h2>
+<ul>
+<li>NVDA 2022.4 veya üstü gereklidir.</li>
+<li>Windows 10 21H2 (Kasım 2021 Güncellemesi/derlemesi 19044) veya üstü
+  gereklidir.</li>
+</ul>
+<h2>Sürüm 23.01</h2>
+<ul>
+<li>NVDA 2022.3 veya üstü gereklidir.</li>
+<li>Ocak 2023 itibariyle Windows 7, 8 ve 8.1 artık Microsoft tarafından
+  desteklenmediğinden Windows 10 veya sonraki sürümleri gereklidir.</li>
+<li>Psutil bağımlılığı 5.9.4'e güncellendi.</li>
+<li>NVDA, Windows sürüm bilgilerinin bir parçası olarak gerçek işlemci
+  mimarisini (x86/AMD64/ARM64) duyurur.</li>
+<li>Tek çekirdekli sistemlerde, ortalama CPU yükü çekirdek yükü ile aynı
+  olduğundan, NVDA artık CPU çekirdek yükünü duyurmayacaktır.</li>
+</ul>
+<h2>Sürüm 22.03</h2>
+<p>Sürüm 22.03, Windows 7 Service Pack 1, 8 ve 8.1'i destekleyen son kararlı
+sürümdür.</p>
+<ul>
+<li>NVDA 2021.3 veya üstü gereklidir.</li>
+<li>Eklentiyi Windows 7, 8 ve 8.1'e yüklemeye çalışırken bir uyarı mesajı
+  görüntülenecektir.</li>
+<li>Psutil bağımlılığı 5.9.0'a güncellendi.</li>
+</ul>
+<h2>Sürüm 22.01</h2>
+<ul>
+<li>NVDA 2021.2 veya üstü gereklidir.</li>
+</ul>
+<h2>Sürüm 21.10</h2>
+<ul>
+<li>Bu eklentiyi etkileyen NVDA değişiklikleri nedeniyle NVDA 2021.1 veya üstü
+  gereklidir.</li>
+</ul>
+<h2>Sürüm 21.08</h2>
+<ul>
+<li>Minimum Windows sürüm gereksinimi artık NVDA sürümlerine bağlıdır.</li>
+<li>Windows derlemeleri 20348 ve 22000, sırasıyla Windows Server 2022 ve
+  Windows 11 olarak tanınır.</li>
+<li>Insider Preview derlemelerinde, "Windows 10" gibi Windows sürümleri
+  kullanılmayacaktır. Bunun yerine NvDA "Windows Insider" duyurusunu yapar.</li>
+<li>64 bit sistemlerde, işlemci mimarisi (x64 veya ARM64), Windows sürüm
+  bilgilerinin bir parçası olarak duyurulacaktır.</li>
+</ul>
+<h2>Sürüm 21.04</h2>
+<ul>
+<li>NVDA 2020.4 veya üstü gereklidir.</li>
+<li>Psutil bağımlılığı 5.8.0 olarak güncellendi.</li>
+<li>Kaynak bilgilerini panoya kopyalamak için eklenti komutlarına iki kez
+  basıldığında, NVDA kopyalanmakta olan kaynak özetini söyler.</li>
+</ul>
+<h2>Sürüm 21.01</h2>
+<ul>
+<li>Psutil bağımlılığı 5.7.3 olarak güncellendi.</li>
+<li>Kısaltılmış Windows sürüm mesajı.</li>
+<li>Windows 8.1'de build.revision, Windows 10'a benzer şekilde Windows sürüm
+  mesajının bir parçası olarak duyurulacaktır.</li>
+</ul>
+<h2>Sürüm 20.09</h2>
+<ul>
+<li>Sistem çalışma süresi artık gün, saat, dakika, saniye olarak
+  verilmektedir.</li>
+<li>Windows Server Insider Preview derlemesi 20201 veya üstü, bir Server
+  Insider derlemesi olarak doğru şekilde tanınır.</li>
+</ul>
+<h2>Sürüm 20.07</h2>
+<ul>
+<li>Windows 10 Sürüm 20H2, Windows sürüm bilgisi (NVDA+Shift+6) alınırken
+  düzgün şekilde tanınır.</li>
+<li>Basitleştirilmiş Windows 10 sürüm mesajı, yani NVDA+Shift+6 tuşlarına
+  basıldığında Windows 10verYYAA yerine Windows 10 YYAA.</li>
+</ul>
+<h2>Sürüm 20.06</h2>
+<ul>
+<li>Flake8 ile birçok kodlama stili sorunu ve olası hatalar çözüldü.</li>
+</ul>
+<h2>Sürüm 20.04</h2>
+<ul>
+<li>Psutil bağımlılığı 5.7.0'a güncellendi.</li>
+</ul>
+<h2>Sürüm 20.01</h2>
+<ul>
+<li>Python 3'ün yoğun kullanımı nedeniyle NVDA 2019.3 veya üstü gereklidir.</li>
+</ul>
+<h2>Sürüm 19.11</h2>
+<ul>
+<li>Özellikle 20H1 ve sonrası için Windows Insider Preview derlemelerinin
+  iyileştirilmiş tespiti.</li>
+</ul>
+<h2>Sürüm 19.07</h2>
+<ul>
+<li>Psutil bağımlılığı 5.6.3 olarak güncellendi.</li>
+<li>Pil durumu duyuru komutunda dahili değişiklikler.</li>
+</ul>
+<h2>Sürüm 18.12</h2>
+<ul>
+<li>Gelecekteki NVDA sürümlerini desteklemek için dahili değişiklikler.</li>
+</ul>
+<h2>Sürüm 18.10</h2>
+<ul>
+<li>Kod Python 3 ile daha uyumlu hale getirildi.</li>
+<li>Ppsutil bağımlılığı 5.4.7 olarak güncellendi.</li>
+<li>Disk kapasitesi ve bellek kullanımı elde edilirken, NVDA, bir petabayttan
+  fazla RAM veya disk boyutuna sahip bir bilgisayar veya hizmet
+  kullanıldığında artık hata vermeyecektir.</li>
+<li>Bellek ve disk kullanımına ilişkin değerler en fazla iki ondalık basamakla
+  gösterilir (ör. 4.0 GB yerine 4.00 GB).</li>
+<li>Windows Insider Preview derlemelerinin algılanması iyileştirildi.</li>
+</ul>
+<h2>Sürüm 18.04</h2>
+<p>Sürüm 18.04.x, 7 SP1'den önceki Windows sürümlerini destekleyen son
+sürümdür.</p>
+<ul>
+<li>Windows Server 2003, Vista ve Server 2008'i destekleyen son sürüm.</li>
+<li>Windows 10 sürümlerinin daha iyi algılanması ve genel ve Insider Preview
+  derlemeleri arasında ayrım yapılması.</li>
+</ul>
+<h2>Sürüm 17.12</h2>
+<ul>
+<li>Windows 10'da 64 bit ARM işlemciler için destek eklendi.</li>
+</ul>
+<h2>Sürüm 17.09</h2>
+<p>Önemli: Sürüm 17.09.x, Windows XP'yi destekleyen son sürümdür.</p>
+<ul>
+<li>Windows XP'de çalışacak son sürüm.</li>
+<li>Windows 10 build 16278 ve sonraki sürümleri Sürüm 1709 olarak
+  tanınır. Sürüm 1709 kararlı yapı yayınlandığında bu eklenti için küçük bir
+  revizyon yayınlanacaktır.</li>
+</ul>
+<h2>Sürüm 17.07.1</h2>
+<ul>
+<li>Windows XP desteğini yeniden verildi (17.02 sürümünden beri bozulmuştu).</li>
+</ul>
+<h2>Sürüm 17.05</h2>
+<ul>
+<li>Sistem çalışma süresinin duyurusu (son önyüklemeden bu yana geçen süre;
+  NVDA+Shift+7).</li>
+</ul>
+<h2>Sürüm 17.02</h2>
+<ul>
+<li>Psutil bağımlılığı 5.0.1'e güncellendi.</li>
+<li>Disk kullanımını kontrol ederken, NVDA, çıkarılabilir medyanın düzgün
+  tanınmadığı bazı sistemlerde (örneğin, bir kart okuyucuya bir kart
+  takılmadığında) artık bir hata iletişim kutusu göstermeyecektir.)</li>
+</ul>
+<h2>Sürüm 16.08</h2>
+<p>16.08 sürümünden itibaren, eklenti sürümleri yıl.ay.revizyonu olarak
+gösterilecektir.</p>
+<ul>
+<li>Windows 10'un çeşitli revizyonları artık düzgün bir şekilde tanınmaktadır
+  (derleme 14393 için 1607 gibi).</li>
+<li>Windows 10 derleme revizyonları (kümülatif güncellemeleri yükledikten
+  sonra) düzgün bir şekilde tanınır (14393.51 gibi).</li>
+<li>Insider Preview derlemelerini kullanıyorsanız, bu gerçek kabul edilir.</li>
+</ul>
+<h2>4.5 için değişiklikler</h2>
+<ul>
+<li>Eklenti deposu GitHub'a taşındı
+  (https://github.com/josephsl/resourcemonitor adresinde bulunabilir).</li>
+<li>Windows Server 2016 düzgün bir şekilde tanındı.</li>
+</ul>
+<h2>4.0 için değişiklikler</h2>
+<ul>
+<li>Psutil bağımlılığı 2.2.1'e güncellendi.</li>
+<li>CPU yükü hakkında bilgi alırken büyük ölçüde geliştirilmiş performans.</li>
+<li>Windows 10'un tanınması için destek eklendi.</li>
+<li>Windows 10'da Windows'un derleme numarası da duyurulacak.</li>
+<li>Eklenti yardımına erişmek için Eklenti Yöneticisi'ni kullanabilirsiniz.</li>
+</ul>
+<h2>3.1 için değişiklikler</h2>
+<ul>
+<li>Kaynak İzleyicisi resmi olarak Windows 8.1'i destekler.</li>
+<li>Çeviriler güncellendi.</li>
+</ul>
+<h2>3.0 için değişiklikler</h2>
+<ul>
+<li>1.2.1 için psutil bağımlılık güncellendi.</li>
+<li>Mevcut Windows sürümünün, CPU mimarisinin ve varsa hizmet paketinin
+  duyurusu (NVDA+Shift+6).</li>
+<li>Kısayol tuşları, NVDA 2013.3 sürümüyle birlikte değiştirilebilir.</li>
+<li>Kaynak bilgisi öğrenme komutlarına iki kez basıldığında bilgi panoya
+  kopyalanıyor.</li>
+</ul>
+<h2>2.4 için değişiklikler</h2>
+<ul>
+<li>Yeni diller: Çince (basitleştirilmiş), Ukrayna.</li>
+<li>Çeviriler güncellendi.</li>
+</ul>
+<h2>2.3 için değişiklikler</h2>
+<ul>
+<li>Bulgarca çeviri eklendi.</li>
+</ul>
+<h2>2.2 için değişiklikler</h2>
+<ul>
+<li>Şu çeviriler eklendi: Arapça, Aragonca, Hırvatça, Felemenkçe, Fince,
+  Fransızca, Galiçyaca, Almanca, Macarca, İtalyanca, Japonca, Korece,
+  Nepalce, Lehçe, Portekizce (Brezilya), Rusça, Slovakça, Slovence,
+  İspanyolca, Tamilce ve Türkçe.</li>
+</ul>
+<h2>2.1 için değişiklikler</h2>
+<ul>
+<li>Updated psutil dependency to version 0.6.1.</li>
+<li>Fixed long delay when getting information of drives.</li>
+<li>Kod temizlendi.</li>
+</ul>
+<h2>2.0 için değişiklikler</h2>
+<ul>
+<li>çeviri desteği ve açıklamalar eklendi.</li>
+</ul>
+<h2>1.0 için değişiklikler</h2>
+<ul>
+<li>İlk sürüm</li>
+</ul>
+</body>
+</html>

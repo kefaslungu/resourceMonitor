@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Monitor de Recursos 25.10</title>
+</head>
+<body>
+<h1>Monitor de Recursos (Resource Monitor)</h1>
+<ul>
+<li>Autores: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst e outros colaboradores do NVDA</li>
+</ul>
+<p>Este complemento fornece informações sobre carga da CPU, uso de memória e
+outras informações de uso de recursos.</p>
+<h1>Atalhos</h1>
+<p>Todos os comandos suportam o modo de fala sob demanda.</p>
+<ul>
+<li>NVDA+Shift+E: apresenta uso da ram (memória), carga média do processador,
+  e informações de bateria caso disponível.</li>
+<li>NVDA+Shift+1: apresenta a carga média do processador e caso se tratem de
+  CPUs multinúcleo (multicore) mostra a carga de cada núcleo.</li>
+<li>NVDA+Shift+2/5: apresenta espaço usado e total das memórias ram física e
+  virtual.</li>
+<li>NVDA+Shift+3: apresenta espaço usado e o total das unidades fixas e
+  removíveis.</li>
+<li>NVDA+Shift+4: apresenta porcentagem da bateria, status de carga, tempo
+  restante (se não estiver carregando) e alerta caso a bateria esteja baixa
+  ou crítica.</li>
+<li>NVDA+Shift+6: apresenta a arquitetura da CPU e os números da versão do
+  Windows e do service pack.</li>
+<li>NVDA+Shift+7: apresenta o tempo de atividade do sistema (tempo desde a
+  inicialização).</li>
+<li>NVDA+Shift+8: apresenta informações sobre a conexão sem fio, nome e
+  intensidade do ssid ou nenhum ssid, se não houver nenhum disponível.</li>
+</ul>
+<p>Você pode alterar essas teclas de atalho por meio da caixa de diálogo de
+gestos de entrada.</p>
+<h2>Notas de uso</h2>
+<p>Este complemento não substitui o gerenciador de tarefas e outros programas
+de informações de sistema para Windows. Note também o seguinte:</p>
+<ul>
+<li>As informações de recursos não podem ser copiadas para a área de
+  transferência se o complemento for executado em telas seguras.</li>
+<li>O uso da CPU é fornecido para processadores lógicos, não para núcleos
+  físicos. Isso é perceptível nos processadores que usam Hyper-Threading, em
+  que o número de CPUs é o dobro do número de núcleos da CPU. Em alguns
+  computadores mais novos, nem todos os núcleos da CPU terão o
+  hyper-threading ativado.</li>
+<li>Se houver atividade intença de disco, como ao copiar arquivos grandes,
+  pode haver lentidão ao obter informações de uso do disco.</li>
+<li>Ao anunciar informações sobre a arquitetura do processador, “x86” e
+  “AMD64” referem-se aos processadores Intel e AMD de 32 e 64 bits (x64),
+  respectivamente.</li>
+<li>Esse complemento requer o Windows 10 22H2 (2022 Update/build 19045) ou
+  posterior.</li>
+<li>Não há suporte para a instalação do complemento no Windows 10/11 LTSC.</li>
+</ul>
+<h2>Version 25.07</h2>
+<ul>
+<li>Made the add-on code more robust with help from Pyright (a Python static
+  type checker).</li>
+</ul>
+<h2>Version 25.06</h2>
+<ul>
+<li>Improved connection status announcement when connecting to wireless
+  networks (@danstiv).</li>
+</ul>
+<h2>Version 25.02</h2>
+<ul>
+<li>Restored limited support for Windows 8.1.</li>
+<li>Improved accuracy of used and total memory information announcement
+  (@danstiv).</li>
+<li>NVDA will no longer appear to freeze briefly when performing memory usage
+  command (NVDA+Shift+2/5) the first time after starting NVDA.</li>
+<li>Windows Insider Preview releases are no longer reported as "Windows
+  Insider".</li>
+</ul>
+<h2>Versão 24.08</h2>
+<ul>
+<li>É necessário o NVDA 2024.2 ou posterior. Isso permite que a dependência do
+  psutil seja removida do complemento, pois o NVDA o inclui.</li>
+<li>Atualizada a dependência do psutil para a versão incluída no NVDA 2024.2
+  (6.0.0).</li>
+<li>Ruff substitui Flake8 como codificador.</li>
+</ul>
+<h2>Versão 24.05</h2>
+<ul>
+<li>Requer NVDA 2024.1 ou posteriores.</li>
+<li>O NVDA reconhecerá redes sem fio com métodos de autenticação WPA3, como a
+  autenticação simultânea de iguais (SAE).</li>
+</ul>
+<h2>Versão 24.04</h2>
+<ul>
+<li>Atualização da dependência do psutil para a versão 5.9.8.</li>
+<li>Foi adicionado suporte ao modo de fala sob demanda para que as informações
+  sobre recursos possam ser anunciadas nesse modo.</li>
+</ul>
+<h2>Versão 23.11</h2>
+<ul>
+<li>Rebaixamento da dependência do psutil para a versão 5.9.4 devido a
+  problemas com anúncios de uso de memória.</li>
+</ul>
+<h2>Versão 23.10</h2>
+<ul>
+<li>Atualização da dependência do psutil para a versão 5.9.5.</li>
+</ul>
+<h2>Versão 23.09</h2>
+<ul>
+<li>O NVDA não registrará mais mensagens de erro de inicialização nos sistemas
+  Windows Server quando os módulos de capacidade sem fio não estiverem
+  disponíveis.</li>
+</ul>
+<h2>Versão 23.06</h2>
+<ul>
+<li>Foi corrigida a situação em que o resourceMonitor não funcionava
+  corretamente devido à indisponibilidade de adaptadores sem fio.</li>
+</ul>
+<h2>Versão 23.05.1</h2>
+<p>o wlanReporter NVDA-addon agora faz parte do resourceMonitor!</p>
+<ul>
+<li>
+<p>A maneira antiga de verificar as conexões sem fio foi substituída pela API
+  do Windows do wlanReporter: https://github.com/kvark128/WlanReporter/ .</p>
+<ul>
+<li>Depois de falar o nome e a força do SSID, o NVDA também informará o tipo
+  de segurança da sua rede.</li>
+<li>O NVDA agora o alertará quando você se conectar e se desconectar de uma
+  rede sem fio.</li>
+<li>O NVDA agora o alertará quando as conexões sem fio forem ativadas ou
+  desativadas.</li>
+</ul>
+</li>
+</ul>
+<h2>Versão 23.05</h2>
+<ul>
+<li>
+<p>adicionada a capacidade de detectar e apresentar o estado da rede sem fio
+  conectada.</p>
+<ul>
+<li>Anuncia o nome do SSID sem fio conectado.</li>
+<li>Anuncia a força do ssid</li>
+<li>Anuncia que o SSID não foi encontrado se nenhum for detectado.</li>
+</ul>
+</li>
+</ul>
+<h2>Versão 23.02</h2>
+<ul>
+<li>Requer NVDA 2022.4 ou posteriores.</li>
+<li>É necessário o Windows 10 21H2 (atualização/compilação 19044 de novembro
+  de 2021) ou posterior.</li>
+</ul>
+<h2>Versão 23.01</h2>
+<ul>
+<li>Requer NVDA 2022.3 ou posteriores.</li>
+<li>É necessário ter o Windows 10 ou posterior, pois o Windows 7, 8 e 8.1 não
+  serão mais suportados pela Microsoft a partir de janeiro de 2023.</li>
+<li>Atualização da dependência do psutil para a versão 5.9.4.</li>
+<li>O NVDA anunciará a arquitetura real do processador (x86/AMD64/ARM64) como
+  parte das informações da versão do Windows.</li>
+<li>Em sistemas de núcleo único, o NVDA não anunciará mais a carga do núcleo
+  da CPU, pois a carga média da CPU é a mesma que a carga do núcleo.</li>
+</ul>
+<h2>Versão 22.03</h2>
+<p>A versão 22.03 é a última versão estável compatível com o Windows 7 Service
+Pack 1, 8 e 8.1.</p>
+<ul>
+<li>Requer NVDA 2021.3 ou posteriores.</li>
+<li>Uma mensagem de aviso será exibida ao tentar instalar o complemento no
+  Windows 7, 8 e 8.1.</li>
+<li>Atualização da dependência do psutil para a versão 5.9.0.</li>
+</ul>
+<h2>Versão 22.01</h2>
+<ul>
+<li>Requer NVDA 2021.2 ou posteriores.</li>
+</ul>
+<h2>Versão 21.10</h2>
+<ul>
+<li>O NVDA 2021.2 ou posterior é necessário devido a mudanças no NVDA que
+  afetam este complemento.</li>
+</ul>
+<h2>Versão 21.08</h2>
+<ul>
+<li>O requisito mínimo de versão do Windows agora está vinculado às versões do
+  NVDA.</li>
+<li>As compilações do Windows 20348 e 22000 são reconhecidas como Windows
+  Server 2022 e Windows 11, respectivamente.</li>
+<li>Nas compilações do Insider Preview, a versão do Windows, como "Windows
+  10", não será usada. Em vez disso, o NVDA anunciará "Windows Insider".</li>
+<li>Em sistemas de 64-bit, a arquitetura do processador (x64 ou ARM64) será
+  anunciada como parte das informações de versão do Windows.</li>
+</ul>
+<h2>Versão 21.04</h2>
+<ul>
+<li>Requer NVDA 2020.4 ou posterior.</li>
+<li>Atualizada dependência psutil para 5.8.0.</li>
+<li>Ao pressionar duas vezes os comandos do complemento para copiar a
+  informação do recurso para a área de transferência, o NVDA anunciará o
+  resumo do recurso que está sendo copiado.</li>
+</ul>
+<h2>Versão 21.01</h2>
+<ul>
+<li>Atualizada dependência psutil para 5.7.3.</li>
+<li>Mensagem encurtada da versão do Windows.</li>
+<li>No Windows 8.1, compilação.revisão será anunciado como parte da mensagem
+  da versão do Windows, semelhante ao Windows 10.</li>
+</ul>
+<h2>Versão 20.09</h2>
+<ul>
+<li>O tempo de atividade do sistema agora é dado em dias, horas, minutos,
+  segundos.</li>
+<li>A compilação do Windows Server Insider Preview 20201 ou posterior é
+  devidamente reconhecida como uma compilação do Server Insider.</li>
+</ul>
+<h2>Versão 20.07</h2>
+<ul>
+<li>O Windows 10 versão 20H2 é reconhecido corretamente ao obter informações
+  sobre a versão do Windows (NVDA+Shift+6).</li>
+<li>Mensagem simplificada da versão do Windows 10, ou seja, Windows 10 AAMM em
+  vez de Windows 10verAAMM ao pressionar NVDA+Shift+6.</li>
+</ul>
+<h2>Versão 20.06</h2>
+<ul>
+<li>Foram resolvidos muitos problemas de estilo de codificação e possíveis
+  erros com o Flake8.</li>
+</ul>
+<h2>Versão 20.04</h2>
+<ul>
+<li>Atualizada dependência psutil para 5.7.0.</li>
+</ul>
+<h2>Versão 20.01</h2>
+<ul>
+<li>Requer NVDA 2019.3 ou posterior devido ao uso ostensivo de Python 3.</li>
+</ul>
+<h2>Versão 19.11</h2>
+<ul>
+<li>Melhorada detecção de compilações do Windows Insider Preview,
+  especialmente a 20H1 e posteriores.</li>
+</ul>
+<h2>Versão 19.07</h2>
+<ul>
+<li>Atualizada dependência psutil para 5.6.3.</li>
+<li>Alterações internas do comando status da bateria.</li>
+</ul>
+<h2>Versão 18.12</h2>
+<ul>
+<li>Alterações internas para suportar futuras versões de NVDA.</li>
+</ul>
+<h2>Versão 18.10</h2>
+<ul>
+<li>O código ficou mais compatível com o Python 3.</li>
+<li>Atualizada dependência psutil para 5.4.7.</li>
+<li>Ao obter capacidade de disco e uso de memória, o NVDA não mais dará erros
+  se estiver usando um computador ou um serviço com mais de um petabyte de
+  RAM ou tamanho de disco.</li>
+<li>Os valores para uso de memória e disco são mostrados com até duas casas
+  decimais (por exemplo, 4,00 GB em vez de 4,0 GB).</li>
+<li>Detecção aprimorada de compilações (builds) do Windows Insider Preview.</li>
+</ul>
+<h2>Versão 18.04</h2>
+<p>Versão 18.04.x é a última versão a suportar versões anteriores ao Windows 7
+SP1.</p>
+<ul>
+<li>Última versão para suporte ao Windows Server 2003, Vista e Server 2008.</li>
+<li>Melhor detecção de versões do Windows 10 e distinção entre compilações
+  (builds) públicas e Insider Preview.</li>
+</ul>
+<h2>Versão 17.12</h2>
+<ul>
+<li>Adicionado suporte para processadores ARM 64-bit no Windows 10.</li>
+</ul>
+<h2>Versão 17.09</h2>
+<p>Importante: A versão 17.09.x é a última versão que suporta o Windows XP.</p>
+<ul>
+<li>Última versão a executar em Windows XP.</li>
+<li>Windows 10 compilação 16278 e posteriores são reconhecidas como versão</li>
+<li>Uma versão menor deste complemento será lançada assim que a
+  compilação estável da versão 1709 for lançada.</li>
+</ul>
+<h2>Versão 17.07.1</h2>
+<ul>
+<li>Reintroduzido suporte a Windows XP (quebrado desde a versão 17.02).</li>
+</ul>
+<h2>Versão 17.05</h2>
+<ul>
+<li>Anúncio do tempo de atividade do sistema (o tempo passado desde a última
+  inicialização; NVDA+Shift+7).</li>
+</ul>
+<h2>Versão 17.02</h2>
+<ul>
+<li>Atualizada dependência psutil para 5.0.1.</li>
+<li>Ao verificar o uso de discos, o NVDA não vai mais apresentar uma mensagem
+  de erro em alguns sistemas onde uma mídia removível não é reconhecida
+  apropriadamente (por exemplo quando um cartão não está inserido num leitor
+  de cartões).</li>
+</ul>
+<h2>Versão 16.08</h2>
+<p>Começando na versão 16.08, os lançamentos do complemento serão mostrados
+como ano.mês.revisão.</p>
+<ul>
+<li>Agora são reconhecidas apropriadamente várias revisões do Windows 10 (ex.:
+  1607 para a compilação 14393).</li>
+<li>Compilações revisadas do Windows 10 (após instalar atualizações
+  cumulativas) são reconhecidas apropriadamente (exemplo, 14393.51).</li>
+<li>Se usando compilações Insider Preview, tal fato é reconhecido.</li>
+</ul>
+<h2>Mudanças na 4.5</h2>
+<ul>
+<li>Repositório do complemento movido para o GitHub (pode ser encontrado em
+  https://github.com/josephsl/resourcemonitor).</li>
+<li>O Windows Server 2016 é reconhecido adequadamente.</li>
+</ul>
+<h2>Mudanças na 4.0</h2>
+<ul>
+<li>Atualizada dependência psutil para 2.2.1.</li>
+<li>Aprimorado largamente o desempenho ao obter informações de carga da CPU.</li>
+<li>Adicionado suporte ao reconhecimento de Windows 10.</li>
+<li>No Windows 10, o número de compilação também será anunciado.</li>
+<li>Você pode usar o gestor de complementos para acessar a ajuda do
+  complemento.</li>
+</ul>
+<h2>Mudanças na 3.1</h2>
+<ul>
+<li>O Monitor de Recursos suporta oficialmente Windows 8.1.</li>
+<li>Atualizadas traduções.</li>
+</ul>
+<h2>Mudanças na 3.0</h2>
+<ul>
+<li>Atualizada dependência psutil para 1.2.1.</li>
+<li>Anunciar versão atual de Windows, arquitetura da CPU e service pack se
+  houver (NVDA+Shift+6).</li>
+<li>Capacidade de alterar as teclas de atalho do complemento (NVDA 2.13.3 ou
+  superior).</li>
+<li>Capacidade de copiar as informações dum recurso individual para a área de
+  transferência pressionando duas vezes o comando do recurso.</li>
+</ul>
+<h2>Mudanças na 2.4</h2>
+<ul>
+<li>Novos idiomas: Chinês (simplificado), Ucraniano.</li>
+<li>Atualizadas traduções.</li>
+</ul>
+<h2>Mudanças na 2.3</h2>
+<ul>
+<li>Adicionada tradução Búlgara.</li>
+</ul>
+<h2>Mudanças na 2.2</h2>
+<ul>
+<li>Acrescentadas as seguintes traduções: Árabe, Alemão, Aragonês, Coreano,
+  Croata, Eslovaco, Esloveno, Espanhol, Finlandês, Francês, Galego,
+  Holandês, Húngaro, Japonês, Italiano, Nepalês, Português (Brasil), Russo,
+  Tâmil e Turco.</li>
+</ul>
+<h2>Mudanças na 2.1</h2>
+<ul>
+<li>Atualizada dependência psutil para versão 0.6.1.</li>
+<li>Corrigida lentidão ao obter informações sobre unidades de disco.</li>
+<li>Enxugamento de código.</li>
+</ul>
+<h2>Mudanças na 2.0</h2>
+<ul>
+<li>adicionado suporte a traduções e comentários para tradutores.</li>
+</ul>
+<h2>Mudanças na 1.0</h2>
+<ul>
+<li>Versão Inicial</li>
+</ul>
+</body>
+</html>

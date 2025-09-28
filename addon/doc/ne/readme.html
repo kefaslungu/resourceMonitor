@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>श्रोत अनुगामी 25.10</title>
+</head>
+<body>
+<h1>श्रोत अनुगामी (resourceMonitor)</h1>
+<ul>
+<li>Authors: Alex Hall, Joseph Lee, beqa gozalishvili, Tuukka Ojala and other
+  NVDA contributors</li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=rm">stable version</a></li>
+<li>NVDA compatibility: 2017.4 to 2019.2</li>
+</ul>
+<p>This add-on gives information about CPU load, memory usage and other
+resource usage information.</p>
+<h1>द्रुतमार्ग</h1>
+<ul>
+<li>NVDA+Shift+E Presents used ram, average processor load, and battery info
+  if available.</li>
+<li>नेत्रवानी +Shift+१ ले प्रोसेसरको औसत भार र यदी बहुकोर CPU's भएमा यि
+  कोरहरुको भार समेत प्रस्तुत गर्ने छ ।</li>
+<li>NVDA+Shift+2/5 Presents the used and total space for both physical and
+  virtual ram.</li>
+<li>NVDA+Shift+3 Presents the used and total space of the static and removable
+  drives.</li>
+<li>NVDA+Shift+4 Presents battery percentage, charging status, remaining time
+  (if not charging), and a warning if the battery is low or critical.</li>
+<li>नेत्रवाणी+Shift+6 चालु विन्डोजको संस्करण, CPU बीट (३२ वा ६४-विट) र सर्भिस
+  प्याक  सङ्ख्या बताउने छ ।</li>
+<li>NVDA+Shift+7 presents the system's uptime.</li>
+</ul>
+<p>यदि चालू नेत्रवाणी २०१३.३ अथवा यस पछीको संस्करण छ भने तपाइले यी द्रुतमार्ग
+कुञ्जी बदल्न सक्नु हुन्छ ।</p>
+<h2>टिप्पणिको प्रयोग</h2>
+<p>यो उप-कर्मीले कार्य व्यबस्थापक र अरू विन्डोज सम्बन्धी सूचना कार्यक्रम
+प्रणालीलाई   विस्थापन गर्दैन । यो पनि ध्यान दिनु होला:</p>
+<ul>
+<li>CPU usage is given for logical processors, not physical cores. This is
+  noticeable for processors which uses Hyper-Threading where number of CPU's
+  is twice the number of CPU cores.</li>
+<li>If there is heavy disk activity such as copying large files, there might
+  be delays when obtaining disk usage information.</li>
+<li>Support for Windows XP from this add-on ended on December 31,</li>
+<li>Support for Windows Server 2003, Vista and Server 2008 ended on June
+  30, 2018.</li>
+</ul>
+<h2>Version 18.10</h2>
+<ul>
+<li>Code has been made more compatible with Python 3.</li>
+<li>Updated psutil dependency to 5.4.7.</li>
+<li>When obtaining disk capacity and memory usage, NVDA will no longer give
+  errors if using a computer or a service with more than a petabyte of RAM
+  or disk size.</li>
+<li>Values for memory and disk usage are shown with up to two decimal places
+  (e.g. 4.00 GB instead of 4.0 GB).</li>
+<li>Improved detection of Windows Insider Preview builds.</li>
+</ul>
+<h2>Version 18.04</h2>
+<p>Version 18.04.x is the last release to support Windows releases earlier than
+7 SP1.</p>
+<ul>
+<li>Last release to support Windows Server 2003, Vista and Server 2008.</li>
+<li>Better detection of Windows 10 releases and distinguishing between public
+  and Insider Preview builds.</li>
+</ul>
+<h2>Version 17.12</h2>
+<ul>
+<li>Added support for 64-bit ARM processors on Windows 10.</li>
+</ul>
+<h2>Version 17.09</h2>
+<p>Important: Version 17.09.x is the last version to support Windows XP.</p>
+<ul>
+<li>Last version to run on Windows XP.</li>
+<li>Windows 10 build 16278 and later is recognized as Version 1709. A minor
+  revision for this add-on will be released once Version 1709 stable build
+  is released.</li>
+</ul>
+<h2>Version 17.07.1</h2>
+<ul>
+<li>Reintroduce support for Windows XP (broken since version 17.02).</li>
+</ul>
+<h2>Version 17.05</h2>
+<ul>
+<li>Announcement of system uptime (time passed since last boot; NVDA+Shift+7).</li>
+</ul>
+<h2>Version 17.02</h2>
+<ul>
+<li>Updated psutil dependency to 5.0.1.</li>
+<li>When checking disk usage, NVDA will no longer present an error dialog on
+  some systems where a removable media is not properly recognized (such as
+  when a card isn't inserted into a card reader).)</li>
+</ul>
+<h2>Version 16.08</h2>
+<p>Starting with version 16.08, add-on releases will be shown as
+year.month.revision.</p>
+<ul>
+<li>Various revisions of Windows 10 are now properly recognized (such as 1607
+  for build 14393).</li>
+<li>Windows 10 build revisions (after installing cumulative updates) are
+  properly recognized (such as 14393.51).</li>
+<li>If using Insider Preview builds, this fact is recognized.</li>
+</ul>
+<h2>Changes for 4.5</h2>
+<ul>
+<li>Add-on repository has moved to GitHub (can be found at
+  https://github.com/josephsl/resourcemonitor).</li>
+<li>Windows Server 2016 is properly recognized.</li>
+</ul>
+<h2>Changes for 4.0</h2>
+<ul>
+<li>Updated psutil dependency to 2.2.1.</li>
+<li>Vastly improved performance when obtaining information on CPU load.</li>
+<li>Added support for recognition of Windows 10.</li>
+<li>In Windows 10, the build number of Windows will also be announced.</li>
+<li>You can use Add-ons Manager to access add-on help.</li>
+</ul>
+<h2>३.1 संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>श्रोत अनुगामीले आधिकारीक रुपमा नै विन्डोज ८.१ लाइ समर्थन गर्छ ।</li>
+<li>अनुवादलाई अद्यावधिक गरियो </li>
+</ul>
+<h2>३.० संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>psutil आधारितलाई १.२.१ मा अद्यावधिक गरियो ।.</li>
+<li>नेत्रवाणी+Shift+6 चालु विन्डोजको संस्करण, CPU बीट (३२ वा ६४-विट) र सर्भिस
+  प्याक सङ्ख्या बताउने छ ।</li>
+<li>२०१३.३ वा यस पछिका नेत्रवाणीमा लागु हुने गरी उप-कर्मीको द्रुतमार्ग बदल्ने
+  क्षमता थप गरियो ।</li>
+<li>स्रोत आदेसहरूलाई दुई पटक दबाएर क्लिपपाटीमा स्रोतहरू सम्बन्धी वैयक्तिक
+  सुचनालाई सञ्चय गर्ने सुविदा थप गरियो ।</li>
+</ul>
+<h2>२.४ मा गरिएका परिवर्तनहरू</h2>
+<ul>
+<li>नयाँ भाषाहरू: सरलीकृत चिनिया, युक्रेनी</li>
+<li>अनुवादलाई अद्यावधिक गरियो </li>
+</ul>
+<h2>२.३ मा गरिएका परिवर्तनहरू</h2>
+<ul>
+<li>बुल्गेरियाली अनुवाद थपियो ।</li>
+</ul>
+<h2>२.१ संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish,
+  French, Galician, German, Hungarian, Italian, Japanese, Korean, Nepali,
+  Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil
+  and Turkish.</li>
+</ul>
+<h2>२.१ संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>psutil आधारितलाई ०.६.१ मा अद्यावधिक गरियो ।.</li>
+<li>भकारि सम्बन्धी जानकारी लिदा लामो समय लाग्ने समस्या हल गरियो ।</li>
+<li>Code cleanup.</li>
+</ul>
+<h2>२.० संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>अनुवाद टिप्पणी र अनुवाद सहयोग थप गरियो ।.</li>
+</ul>
+<h2>१.० संस्करणमा गरिएका परिवर्तनहरू ।</h2>
+<ul>
+<li>पहिलो सार्वजनिकीकरण</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

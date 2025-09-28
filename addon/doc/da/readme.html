@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Ressourcemonitor 25.10</title>
+</head>
+<body>
+<h1>Ressourcemonitor</h1>
+<ul>
+<li>Forfattere: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
+  Ojala, Ethin Probst og andre NVDA-bidragydere</li>
+</ul>
+<p>Dette tilføjelsesprogram giver information om CPU-belastning, brug af
+hukommelse og andre oplysninger om forbrug af ressourcer.</p>
+<h1>Genveje</h1>
+<p>All commands support speech on demand mode.</p>
+<ul>
+<li>NVDA+Shift+E: Oplyser hukommelse i brug, processorbelastning og
+  batteriinformation, hvis denne er tilgængelig.</li>
+<li>NVDA+Shift+1: Oplyser den gennemsnitlige processorbelastning, og hvis
+  multicore-CPU'er er til stede, vil brug for hver kerne også blive oplyst.</li>
+<li>NVDA+Shift+2/5: Oplyser brugt og total plads i fysisk og virtuel
+  hukommelse.</li>
+<li>NVDA+Shift+3: Oplyser brugt og samlet plads på de statiske og flytbare
+  drev.</li>
+<li>NVDA+Shift+4: Oplyser batteristatus i procent, opladestatus, resterende
+  batteritid (hvis det ikke er ved at blive opladet) og en advarsel, hvis
+  batteriniveauet er lavt eller kritisk.</li>
+<li>NVDA+Shift+6: Oplyser CPU-arkitekturen, WIndows version og servicepakke.</li>
+<li>NVDA+Shift+7: Oplyser systemets oppetid.</li>
+<li>NVDA+Shift+8: Oplyser information om den trådløse forbindelse, ssid-navn
+  og signalstyrke, eller ingen ssid, hvis der ikke er nogen tilgængelig.</li>
+</ul>
+<p>Du kan ændre disse genveje via dialogen "Håndter kommandoer"</p>
+<h2>Brugsanvisninger</h2>
+<p>Denne tilføjelse erstatter ikke Jobliste og andre
+systeminformationsprogrammer til Windows. Bemærk også følgende:</p>
+<ul>
+<li>Ressourceoplysninger kan ikke kopieres til udklipsholderen, hvis
+  tilføjelsen kører på sikre skærme.</li>
+<li>CPU-brug bliver angivet for logiske processorer, ikke fysiske
+  kerner. Dette har betydning for processorer, som bruger
+  hypertrådningsteknologi. Her er antallet af CPU'er er det dobbelte af
+  CPU-kernerne. På nogle nyere CPU'er, vil denne teknologi ikke nødvendigvis
+  være aktiveret.</li>
+<li>Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store
+  filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.</li>
+<li>Når der annoncerer processorarkitekturoplysninger, henviser "x86" og
+  "AMD64" til henholdsvis 32-bit og 64-bit (x64) Intel- og AMD-processorer.</li>
+<li>This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.</li>
+<li>Installing the add-on on Windows 10/11 LTSC is not supported.</li>
+</ul>
+<h2>Version 25.07</h2>
+<ul>
+<li>Made the add-on code more robust with help from Pyright (a Python static
+  type checker).</li>
+</ul>
+<h2>Version 25.06</h2>
+<ul>
+<li>Improved connection status announcement when connecting to wireless
+  networks (@danstiv).</li>
+</ul>
+<h2>Version 25.02</h2>
+<ul>
+<li>Restored limited support for Windows 8.1.</li>
+<li>Improved accuracy of used and total memory information announcement
+  (@danstiv).</li>
+<li>NVDA will no longer appear to freeze briefly when performing memory usage
+  command (NVDA+Shift+2/5) the first time after starting NVDA.</li>
+<li>Windows Insider Preview releases are no longer reported as "Windows
+  Insider".</li>
+</ul>
+<h2>Version 24.08</h2>
+<ul>
+<li>NVDA 2024.2 or later is required. This allows psutil dependency to be
+  removed from the add-on as NVDA includes it.</li>
+<li>Updated psutil dependency to the version included with NVDA 2024.2
+  (6.0.0).</li>
+<li>Ruff replaces Flake8 as code linter.</li>
+</ul>
+<h2>Version 24.05</h2>
+<ul>
+<li>NVDA 2024.1 or later is required.</li>
+<li>NVDA will recognize wireless networks with WPA3 authentication methods
+  such as simultaneous authentication of equals (SAE).</li>
+</ul>
+<h2>Version 24.04</h2>
+<ul>
+<li>Updated psutil dependency to 5.9.8.</li>
+<li>Added support for speech on demand mode so resource information can be
+  announced in this mode.</li>
+</ul>
+<h2>Version 23.11</h2>
+<ul>
+<li>Downgraded psutil dependency to 5.9.4 due to problems with memory usage
+  announcements.</li>
+</ul>
+<h2>Version 23.10</h2>
+<ul>
+<li>Updated psutil dependency to 5.9.5.</li>
+</ul>
+<h2>Version 23.09</h2>
+<ul>
+<li>NVDA vil ikke længere logge opstartsfejlmeddelelser på Windows
+  Server-systemer, når moduler med trådløse egenskaber ikke er tilgængelige.</li>
+</ul>
+<h2>Version 23.06</h2>
+<ul>
+<li>Situationen, hvor resourceMonitor ikke fungerer korrekt på grund af
+  manglende tilgængelighed af trådløse adaptere, er blevet rettet.</li>
+</ul>
+<h2>Version 23.05.1</h2>
+<p>Tilføjelsen wlanReporter er nu en del af resourceMonitor!</p>
+<ul>
+<li>
+<p>Den gamle måde at tjekke for trådløse forbindelser på er blevet erstattet
+  af windows API fra wlanReporter: https://github.com/kvark128/WlanReporter/
+  .</p>
+<ul>
+<li>Efter SSID navn og styrke er blevet oplæst af NVDA, vil NVDA også nu
+  fortælle dig sikkerhedstypen for dit netværk.</li>
+<li>NVDA vil nu advare dig, når du opretter og afbryder forbindelse til et
+  trådløst netværk.</li>
+<li>NVDA vil nu advare dig, når trådløse forbindelser slås til eller fra.</li>
+</ul>
+</li>
+</ul>
+<h2>Version 23.05</h2>
+<ul>
+<li>
+<p>Tilføjet muligheden for at detektere og oplyse forbindelsesstatus for det
+  tilsluttede netværk.</p>
+<ul>
+<li>Oplyser navnet på det tilsluttede trådløse SSID.</li>
+<li>Oplyser signalstyrken af SSID</li>
+<li>Oplys "SSID" ikke fundet, hvis dette er tilfældet.</li>
+</ul>
+</li>
+</ul>
+<h2>Version 23.02</h2>
+<ul>
+<li>NVDA 2022.4 eller nyere er påkrævet.</li>
+<li>Windows 10 21H2 (november 2021 Update/build 19044) eller nyere er
+  påkrævet.</li>
+</ul>
+<h2>Version 23.01</h2>
+<ul>
+<li>NVDA 2022.3 eller nyere er påkrævet.</li>
+<li>Windows 10 eller nyere er påkrævet, da Windows 7, 8 og 8.1 ikke længere
+  understøttes af Microsoft fra januar 2023.</li>
+<li>Opdateret psutil-afhængighed til 5.9.4.</li>
+<li>NVDA vil annoncere den faktiske processorarkitektur (x86/AMD64/ARM64) som
+  en del af Windows-versionsoplysningerne.</li>
+<li>På enkeltkernesystemer vil NVDA ikke længere annoncere
+  CPU-kernebelastning, da den gennemsnitlige CPU-belastning er den samme som
+  kernebelastningen.</li>
+</ul>
+<h2>Version 22.03</h2>
+<p>Version 22.03 er den sidste stabile version, der understøtter Windows 7
+Service Pack 1, 8 og 8.1.</p>
+<ul>
+<li>NVDA 2021.3 eller nyere er påkrævet.</li>
+<li>En advarselsmeddelelse vil blive vist, når du forsøger at installere
+  tilføjelsen på Windows 7, 8 og 8.1.</li>
+<li>Opdateret psutil-dependency til 5.9.0.</li>
+</ul>
+<h2>Version 22.01</h2>
+<ul>
+<li>NVDA 2021.2 eller nyere er påkrævet.</li>
+</ul>
+<h2>Version 21.10</h2>
+<ul>
+<li>NVDA 2021.1 eller nyere er påkrævet på grund af ændringer til NVDA, der
+  påvirker denne tilføjelse.</li>
+</ul>
+<h2>Version 21.08</h2>
+<ul>
+<li>Minimumskravet til Windows-udgivelse er nu knyttet til NVDA-udgivelser.</li>
+<li>Windows builds 20348 og 22000 genkendes som henholdsvis Windows Server
+  2022 og Windows 11.</li>
+<li>I Insider Preview-builds vil Windows-udgivelser såsom "Windows 10" ikke
+  blive brugt. I stedet vil NvDA annoncere "Windows Insider".</li>
+<li>På 64-bit-systemer vil processorarkitektur (x64 eller ARM64) blive
+  annonceret som en del af Windows-versionsoplysningerne.</li>
+</ul>
+<h2>Version 21.04</h2>
+<ul>
+<li>NVDA 2020.4 eller nyere er påkrævet.</li>
+<li>Opdaterede psutil dependency til 5.8.0.</li>
+<li>Når tilføjelseskommandoer trykkes to gange for at kopiere
+  ressourceoplysninger til udklipsholderen, annoncerer NVDA
+  ressourceoversigt, der kopieres.</li>
+</ul>
+<h2>Version 21.01</h2>
+<ul>
+<li>Opdaterede psutil dependency til 5.7.3.</li>
+<li>Forkortede beskeden Windows-version.</li>
+<li>I Windows 8.1 vil build.revision blive annonceret som en del af
+  Windows-version beskeden, svarende til Windows 10.</li>
+</ul>
+<h2>Version 20.09</h2>
+<ul>
+<li>Systemets oppetid angives nu som dage, timer, minutter, sekunder.</li>
+<li>Windows Server Insider Preview build 20201 eller nyere genkendes korrekt
+  som en Server Insider build.</li>
+</ul>
+<h2>Version 20.07</h2>
+<ul>
+<li>Windows 10 version 20H2 genkendes korrekt, når der anmodes om
+  Windows-versionoplysninger (NVDA+Shift+6).</li>
+<li>Forenklet Windows 10-versionmeddelelse, dvs. Windows 10 ÅÅ/MM i stedet for
+  Windows 10ver/ÅÅ/MM, når du trykker på NVDA+Shift+6.</li>
+</ul>
+<h2>Version 20.06</h2>
+<ul>
+<li>Løst mange problemer med kodningstil og potentielle fejl med Flake8.</li>
+</ul>
+<h2>Version 20.04</h2>
+<ul>
+<li>Opdateret psutil dependency til 5.7.0.</li>
+</ul>
+<h2>Version 20.01</h2>
+<ul>
+<li>NVDA 2019.3 eller nyere er påkrævet på grund af omfattende brug af Python
+  3.</li>
+</ul>
+<h2>Version 19.11</h2>
+<ul>
+<li>Forbedret detektering af Windows Insider Preview builds, især til 20H1 og
+  nyere.</li>
+</ul>
+<h2>Version 19.07</h2>
+<ul>
+<li>Opdateret psutil dependency til 5.6.3.</li>
+<li>Interne ændringer til meddelelse om batteristatus.</li>
+</ul>
+<h2>Version 18.12</h2>
+<ul>
+<li>Interne ændringer for at bedre kunne understøtte fremtidige versioner af
+  NVDA.</li>
+</ul>
+<h2>Version 18.10</h2>
+<ul>
+<li>Koden er blevet gjort mere kompatibel med Python 3.</li>
+<li>Opdateret psutil dependency til 5.4.7.</li>
+<li>Når der oplyses diskkapacitet og hukommelsesforbrug, vil NVDA ikke længere
+  fejle, hvis du bruger en computer eller en tjeneste med mere end en
+  petabyte RAM eller diskplads.</li>
+<li>Værdier for hukommelse og diskbrug vises med op til to decimaler (fx 4,00
+  GB i stedet for 4,0 GB).</li>
+<li>Forbedret detektering af Windows Insider Preview builds.</li>
+</ul>
+<h2>Version 18.04</h2>
+<p>Version 18.04.x er den sidste version, der understøtter udgaver af Windows
+ældre end 7 SP1.</p>
+<ul>
+<li>Sidste version der understøtter Windows Server 2003, Vista og Server 2008.</li>
+<li>Forbedret detektion af udgaver af Windows 10 og bedre til at skelne mellem
+  offentlige builds af Windows og Insider Preview.</li>
+</ul>
+<h2>Version 17.12</h2>
+<ul>
+<li>Tilføjet support til 64-bit ARM-processorer på Windows 10.</li>
+</ul>
+<h2>Version 17.09</h2>
+<p>Vigtigt: Version 17.09.x er den sidste version, der understøtter Windows XP.</p>
+<ul>
+<li>Sidste version til at køre på Windows XP.</li>
+<li>Windows 10 build 16278 og senere er anerkendt som Version 1709. En mindre
+  revision for denne tilføjelse frigives, når version 1709 stabil build er
+  udgivet.</li>
+</ul>
+<h2>Version 17.07.1</h2>
+<ul>
+<li>Genindførte understøttelse for Windows XP (understøttelse har ikke virket
+  siden version 17.02).</li>
+</ul>
+<h2>Version 17.05</h2>
+<ul>
+<li>Annoncering af systemopetid (tid gået siden sidste opstart, NVDA + Shift
+  +7).</li>
+</ul>
+<h2>Version 17.02</h2>
+<ul>
+<li>Opdateret psutil afhængighed til 5.0.1.</li>
+<li>Når du kontrollerer diskbrug, vil NVDA ikke længere præsentere en
+  fejldialog på nogle systemer, hvor et flytbart medie ikke er korrekt
+  genkendt (f.eks. Når et kort ikke er indsat i en kortlæser).</li>
+</ul>
+<h2>Version 16.08</h2>
+<p>Begyndende med version 16.08 vises tilføjelsespakkens fremtidige udgivelser
+som år.måned.revision.</p>
+<ul>
+<li>Forskellige revisioner af Windows 10 er nu korrekt genkendt (f.eks. 1607
+  til build 14393).</li>
+<li>Windows 10 build revisions (efter installation af kumulative opdateringer)
+  er korrekt genkendt (såsom 14393.51).</li>
+<li>Hvis du bruger Insider-preview-builds, genkendes dette.</li>
+</ul>
+<h2>Ændringer i 4.5</h2>
+<ul>
+<li>Tilføjelsespakkens udviklingssted er flyttet til GitHub (kan findes på
+  https://github.com/josephsl/resourcemonitor).</li>
+<li>Windows Server 2016 er korrekt genkendt.</li>
+</ul>
+<h2>Ændringer i4.0</h2>
+<ul>
+<li>Opdateret psutil dependency til 2.2.1.</li>
+<li>Stor forbedring af performance, under opsamlingen af oplysninger om
+  CPU-belastning.</li>
+<li>Tilføjet understøttelse af genkendelse af Windows 10.</li>
+<li>I Windows 10 vil build-nummeret også blive annonceret.</li>
+<li>Du kan bruge Styring af tilføjelsesprogrammer til at få hjælp til
+  tilføjelsesprogrammet.</li>
+</ul>
+<h2>Ændringer i 3.1</h2>
+<ul>
+<li>Resource Monitor understøtter officielt Windows 8.1.</li>
+<li>Opdaterede oversættelser.</li>
+</ul>
+<h2>Ændringer i 3.0</h2>
+<ul>
+<li>Opdateret psutil dependency til 1.2.1.</li>
+<li>Annoncering af Windows-version, CPU-arkitektur og service pack hvis nogen
+  (NVDA+Shift+6).</li>
+<li>Mulighed for at ændre genvejstaster (NVDA 2013.3 eller senere).</li>
+<li>Muligt at kopiere individuelle ressourceoplysninger til udklipsholderen
+  ved at ved at trykke på genvejstasten to gange.</li>
+</ul>
+<h2>Ændringer i 2.4</h2>
+<ul>
+<li>Nye sprog: Kinesisk (simplificeret), ukrainsk.</li>
+<li>Opdaterede oversættelser.</li>
+</ul>
+<h2>Ændringer i 2.3</h2>
+<ul>
+<li>Tilføjet bulgarsk oversættelse.</li>
+</ul>
+<h2>Ændringer i 2.2</h2>
+<ul>
+<li>Tilføjet følgende oversættelser: Arabisk, aragonesisk, croatisk,
+  hollandsk, finsk, fransk, galicisk, tysk, ungarsk, italiensk, japansk,
+  koreansk, nepalesisk, polsk, portugisisk (Brasilien), russisk, slovakisk,
+  slovensk, spansk, tamilsk og tyrkisk.</li>
+</ul>
+<h2>Ændringer i 2.1</h2>
+<ul>
+<li>Opdaterede psutil dependency til version 0.6.1.</li>
+<li>Rettet lang forsinkelse, når man bad om informationer om drev.</li>
+<li>Oprydning i koden.</li>
+</ul>
+<h2>Ændringer i 2.0</h2>
+<ul>
+<li>Tilføjet understøttelse for oversættelse og oversættelseskommentarer.</li>
+</ul>
+<h2>Ændringer i 1.0</h2>
+<ul>
+<li>Første udgivelse</li>
+</ul>
+</body>
+</html>
