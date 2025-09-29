@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resourceMonitor 2.3\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-21 20:04-0600\n"
+"POT-Creation-Date: 2025-09-29 10:51+0300\n"
+"PO-Revision-Date: 2025-09-29 13:55+0300\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -17,36 +17,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:47
 msgid "No authentication (Open)"
 msgstr "Без автентифікації (Відкрито)"
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:72
+#, python-brace-format
 msgid "Connected to {}"
 msgstr "Підключено до {}"
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:82
+#, python-brace-format
 msgid "Disconnected from {}"
 msgstr "Відключено від {}"
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:87
 msgid "A wireless device has been enabled"
 msgstr "Бездротовий пристрій увімкнено"
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:93
 msgid "A wireless device has been disabled"
 msgstr "Бездротовий пристрій вимкнено"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
+#: addon\globalPlugins\resourceMonitor\__init__.py:206
 msgid "This computer does not have a battery connected."
 msgstr "До цього комп’ютера не підключено акумулятор."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:212
 #, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, акумулятор заряджається."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#: addon\globalPlugins\resourceMonitor\__init__.py:218
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr ""
@@ -54,6 +64,8 @@ msgstr ""
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#: addon\globalPlugins\resourceMonitor\__init__.py:232
+#: addon\globalPlugins\resourceMonitor\__init__.py:529
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -63,6 +75,8 @@ msgstr[2] "{hours:d} годин"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#: addon\globalPlugins\resourceMonitor\__init__.py:237
+#: addon\globalPlugins\resourceMonitor\__init__.py:533
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -72,19 +86,23 @@ msgstr[2] "{minutes:d} хвилин"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#: addon\globalPlugins\resourceMonitor\__init__.py:245
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Залишилося {percent}% заряду акумулятора, приблизно {time}."
 
 #. Translators: Message reported when battery level is low.
+#: addon\globalPlugins\resourceMonitor\__init__.py:249
 msgid " Warning: low battery."
 msgstr " Попередження: низький заряд акумулятора."
 
 #. Translators: Message reported when battery level is critical.
+#: addon\globalPlugins\resourceMonitor\__init__.py:252
 msgid " Warning: critically low battery."
 msgstr " Попередження: заряд акумулятора критично низький."
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
+#: addon\globalPlugins\resourceMonitor\__init__.py:289
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) збірка {build}"
@@ -93,10 +111,12 @@ msgstr "{winVersion} ({cpuBit}) збірка {build}"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
+#: addon\globalPlugins\resourceMonitor\__init__.py:297 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Монітор ресурсів"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
+#: addon\globalPlugins\resourceMonitor\__init__.py:328
 msgid ""
 "Presents battery percentage, charging status, remaining time (if not "
 "charging), and a warning if the battery is low or critical."
@@ -105,6 +125,7 @@ msgstr ""
 "залишився (якщо акумулятор не заряджається) і попередження про низький та "
 "критично низький заряд акумулятора."
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:344
 msgid ""
 "Presents the used and total space of the static and removable drives on this "
 "computer."
@@ -115,6 +136,7 @@ msgstr ""
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon\globalPlugins\resourceMonitor\__init__.py:363
 #, python-brace-format
 msgid ""
 "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
@@ -123,33 +145,39 @@ msgstr ""
 "{percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
+#: addon\globalPlugins\resourceMonitor\__init__.py:378
 msgid "Presents the average processor load and the load of each core."
 msgstr ""
 "Надає інформацію про середню завантаженість процесора і про завантаженість "
 "кожного ядра."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#: addon\globalPlugins\resourceMonitor\__init__.py:388
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Ядро {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#: addon\globalPlugins\resourceMonitor\__init__.py:395
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "Середня завантаженість процесора {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#: addon\globalPlugins\resourceMonitor\__init__.py:398
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Середня завантаженість процесора {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
+#: addon\globalPlugins\resourceMonitor\__init__.py:408
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr ""
 "Надає інформацію про зайнятий та повний об’єм як фізичної, так і віртуальної "
 "пам’яті."
 
 #. Translators: Shows RAM (physical memory) usage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:416
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr ""
@@ -157,6 +185,7 @@ msgstr ""
 "({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:424
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr ""
@@ -164,24 +193,37 @@ msgstr ""
 "({virtualPercent}%)."
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
+#: addon\globalPlugins\resourceMonitor\__init__.py:436
 msgid "Announces the version of Windows you are using."
 msgstr "Повідомляє про версію Windows, яку ви використовуєте."
 
+#. Translators: Input help mode message about getting current running app's name and version
+#: addon\globalPlugins\resourceMonitor\__init__.py:450
+msgid "Announces the current running app's name and version."
+msgstr "Промовляє поточне ім’я та версію запущеної програми."
+
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
+#: addon\globalPlugins\resourceMonitor\__init__.py:467
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "Повідомляє ім'я ssid бездротової мережі системи та її потужність."
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:480
+#: addon\globalPlugins\resourceMonitor\__init__.py:487
 msgid "No wireless devices"
 msgstr "Немає бездротових пристроїв"
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:491
 msgid "No wireless connections"
 msgstr "Немає бездротових з'єднань"
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:504
+#, python-brace-format
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "Підключено бездротову мережу: {}. Рівень сигналу: {}%. Тип захисту: {}"
 
 #. Translators: system uptime in days.
+#: addon\globalPlugins\resourceMonitor\__init__.py:525
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -190,6 +232,7 @@ msgstr[1] "{days:d} дні"
 msgstr[2] "{days:d} днів"
 
 #. Translators: system uptime in seconds.
+#: addon\globalPlugins\resourceMonitor\__init__.py:537
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
@@ -198,20 +241,24 @@ msgstr[1] "{seconds:d} секунди"
 msgstr[2] "{seconds:d} секунд"
 
 #. Translators: Input help mode message about obtaining the system's uptime
+#: addon\globalPlugins\resourceMonitor\__init__.py:543
 msgid "Announces the system's uptime."
 msgstr "Повідомляє час безперервної роботи системи."
 
 #. Translators: Obtaining uptime failed
+#: addon\globalPlugins\resourceMonitor\__init__.py:556
 msgid "Failed to get the system's uptime."
 msgstr "Невдалося отримати інформацію про безперервний час роботи системи."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
+#: addon\globalPlugins\resourceMonitor\__init__.py:560
 msgid ""
 "Presents used ram, average processor load, and battery info if available."
 msgstr ""
 "Надає інформацію про використання оперативної пам'яті, середню "
 "завантаженість процесора та акумулятор, якщо він є."
 
+#: addon\globalPlugins\resourceMonitor\__init__.py:568
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr ""
@@ -220,6 +267,7 @@ msgstr ""
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:24
 msgid ""
 "A handy resource monitor to report CPU load, memory usage, battery, disk "
 "usage status and more."
@@ -227,3 +275,13 @@ msgstr ""
 "Зручний монітор ресурсів повідомляє про завантаженість процесора, "
 "використання оперативної пам'яті, статус акумулятора і дискового простору, "
 "та іншу інформацію."
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid ""
+"* Added an option to speak the current running app's name and version, "
+"NVDA+shift+0."
+msgstr ""
+"* Додано опцію, щоб промовляти поточне ім’я та версію запущеної програми, "
+"NVDA+Shift+0."
