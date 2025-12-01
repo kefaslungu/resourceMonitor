@@ -1,0 +1,21 @@
+name: Fetch translations from Crowdin
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * 5'
+  workflow_dispatch:
+
+jobs:
+  fetchTranslations:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+    - name: Fetch translations from Crowdin
+      uses: nvdaaddons/crowdinRegistration/.github/actions/fetchTranslations@main
