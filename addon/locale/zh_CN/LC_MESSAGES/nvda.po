@@ -1,57 +1,66 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 18.04\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-21 19:49-0600\n"
-"Last-Translator: 完美很难 <1872265132@qq.com>\n"
-"Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
-"2010-2019>\n"
+"Project-Id-Version: nvdaaddons\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2025-09-04 10:35+0000\n"
+"PO-Revision-Date: 2025-12-01 01:10\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: resourceMonitor.pot\n"
+"X-Crowdin-File-ID: 214\n"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:47
 msgid "No authentication (Open)"
 msgstr "开放（无需验证）"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:72
 msgid "Connected to {}"
 msgstr "{} 已连接"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:82
 msgid "Disconnected from {}"
 msgstr "{} 已断开"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:87
 msgid "A wireless device has been enabled"
 msgstr "已启用无线设备"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:93
 msgid "A wireless device has been disabled"
 msgstr "已禁用无线设备"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
+#: addon/globalPlugins/resourceMonitor/__init__.py:206
 msgid "This computer does not have a battery connected."
 msgstr "未连接电池。"
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:212
 #, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "正在充电，百分之 {percent}。"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#: addon/globalPlugins/resourceMonitor/__init__.py:218
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "百分之 {percent} 电量,剩余时间未知。"
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#: addon/globalPlugins/resourceMonitor/__init__.py:232
+#: addon/globalPlugins/resourceMonitor/__init__.py:513
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -59,6 +68,8 @@ msgstr[0] "{hours:d} 小时"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#: addon/globalPlugins/resourceMonitor/__init__.py:237
+#: addon/globalPlugins/resourceMonitor/__init__.py:517
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -66,140 +77,159 @@ msgstr[0] "{minutes:d} 分钟"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#: addon/globalPlugins/resourceMonitor/__init__.py:245
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "百分之 {percent} 电量，约运行 {time}"
 
 #. Translators: Message reported when battery level is low.
+#: addon/globalPlugins/resourceMonitor/__init__.py:249
 msgid " Warning: low battery."
 msgstr " 警告：电量不足。"
 
 #. Translators: Message reported when battery level is critical.
+#: addon/globalPlugins/resourceMonitor/__init__.py:252
 msgid " Warning: critically low battery."
 msgstr " 警告，电量严重不足。"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
+#: addon/globalPlugins/resourceMonitor/__init__.py:289
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
-msgstr "{winVersion} ({cpuBit}) build {build}"
+msgstr "{winVersion} ({cpuBit}) 内部版本 {build}"
 
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
+#: addon/globalPlugins/resourceMonitor/__init__.py:297 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "资源监控器"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
+#: addon/globalPlugins/resourceMonitor/__init__.py:328
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
 msgstr "读出电量、充电状态、剩余时间（如果没有充电）且在电量不足时发出警告。"
 
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
+#: addon/globalPlugins/resourceMonitor/__init__.py:344
+msgid "Presents the used and total space of the static and removable drives on this computer."
 msgstr "读出此计算机上所有驱动器的文件系统和空间使用情况。"
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:363
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"磁盘 {driveName} (文件系统 {driveType}):总大小 {totalSpace}， 已用 "
-"{usedSpace}，使用率 百分之 {percent}。"
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr "磁盘 {driveName} (文件系统 {driveType}):总大小 {totalSpace}， 已用 {usedSpace}，使用率 百分之 {percent}。"
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:378
 msgid "Presents the average processor load and the load of each core."
 msgstr "读出每个 CPU 核心的负载和平均负载。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:388
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心{coreNumber}: 百分之 {corePercent}"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:395
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "平均 CPU 负载： 百分之 {avgLoad}"
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:398
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "平均 CPU 负载： 百分之 {avgLoad}, {cores}"
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:408
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "读出物理内存和虚拟内存的容量和使用情况。"
 
 #. Translators: Shows RAM (physical memory) usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:416
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"物理内存： 已用 {physicalUsed}， 总大小 {physicalTotal}， 使用率 百分之 "
-"{physicalPercent}。 "
+msgstr "物理内存： 已用 {physicalUsed}， 总大小 {physicalTotal}， 使用率 百分之 {physicalPercent}。 "
 
 #. Translators: Shows virtual memory usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:424
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"虚拟内存：已用 {virtualUsed}， 总大小 {virtualTotal}， 使用率 百分之 "
-"{virtualPercent}。"
+msgstr "虚拟内存：已用 {virtualUsed}， 总大小 {virtualTotal}， 使用率 百分之 {virtualPercent}。"
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:436
 msgid "Announces the version of Windows you are using."
 msgstr "读出当前 Windows 的版本信息。"
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
+#: addon/globalPlugins/resourceMonitor/__init__.py:451
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "读出已连接的无线网络名称及其信号强度。"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:464
+#: addon/globalPlugins/resourceMonitor/__init__.py:471
 msgid "No wireless devices"
 msgstr "没有无线设备"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:475
 msgid "No wireless connections"
 msgstr "未连接无线网络"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:488
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "{} 已连接，信号强度： 百分之 {}， 安全类型： {}"
 
 #. Translators: system uptime in days.
+#: addon/globalPlugins/resourceMonitor/__init__.py:509
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{days:d} 天"
 
 #. Translators: system uptime in seconds.
+#: addon/globalPlugins/resourceMonitor/__init__.py:521
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} 秒"
 
 #. Translators: Input help mode message about obtaining the system's uptime
+#: addon/globalPlugins/resourceMonitor/__init__.py:527
 msgid "Announces the system's uptime."
 msgstr "读出当前系统的运行时间。"
 
 #. Translators: Obtaining uptime failed
+#: addon/globalPlugins/resourceMonitor/__init__.py:540
 msgid "Failed to get the system's uptime."
 msgstr "无法获取系统的运行时间。"
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
+#: addon/globalPlugins/resourceMonitor/__init__.py:544
+msgid "Presents used ram, average processor load, and battery info if available."
 msgstr "读出内存的使用率、CPU 平均负载和电池信息（如果可用）。"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:552
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "内存已用 百分之 {ramPercent}，CPU 已用 百分之 {cpuPercent}。"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
-msgstr ""
-"一个易于使用的资源监控器，可以读出 CPU 负载、内存使用、电池和磁盘使用情况等"
-"等。"
+#: buildVars.py:24
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存使用、电池和磁盘使用情况等等。"
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "* NVDA 2025.2 or later is required."
+msgstr "* 需要 NVDA 2025.2 或更高版本。"
+

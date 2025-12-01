@@ -1,59 +1,66 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 3.1\n"
+"Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-06 19:22+0100\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
-"rui.fontes@tiflotecnia.com>\n"
+"POT-Creation-Date: 2025-09-04 10:35+0000\n"
+"PO-Revision-Date: 2025-12-01 01:10\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: resourceMonitor.pot\n"
+"X-Crowdin-File-ID: 214\n"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:47
 msgid "No authentication (Open)"
 msgstr "Sem autenticação (Aberto)"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:72
 msgid "Connected to {}"
 msgstr "Ligado a {}"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:82
 msgid "Disconnected from {}"
 msgstr "Desligado de {}"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:87
 msgid "A wireless device has been enabled"
 msgstr "Foi ativado um dispositivo sem fios"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:93
 msgid "A wireless device has been disabled"
 msgstr "Um dispositivo sem fios foi desativado"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
+#: addon/globalPlugins/resourceMonitor/__init__.py:206
 msgid "This computer does not have a battery connected."
 msgstr "Este computador não tem uma bateria ligada."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:212
 #, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent}%, carga da bateria."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#: addon/globalPlugins/resourceMonitor/__init__.py:218
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent}% bateria restante, Tempo de bateria desconhecido."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#: addon/globalPlugins/resourceMonitor/__init__.py:232
+#: addon/globalPlugins/resourceMonitor/__init__.py:513
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -62,6 +69,8 @@ msgstr[1] "{hours:d} hours"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#: addon/globalPlugins/resourceMonitor/__init__.py:237
+#: addon/globalPlugins/resourceMonitor/__init__.py:517
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -70,19 +79,23 @@ msgstr[1] "{minutes:d} minutes"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#: addon/globalPlugins/resourceMonitor/__init__.py:245
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent}% bateria restante, cerca de {time}."
 
 #. Translators: Message reported when battery level is low.
+#: addon/globalPlugins/resourceMonitor/__init__.py:249
 msgid " Warning: low battery."
 msgstr " Aviso: bateria fraca."
 
 #. Translators: Message reported when battery level is critical.
+#: addon/globalPlugins/resourceMonitor/__init__.py:252
 msgid " Warning: critically low battery."
 msgstr " Alerta: bateria criticamente baixa."
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
+#: addon/globalPlugins/resourceMonitor/__init__.py:289
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) construir {build}"
@@ -91,89 +104,93 @@ msgstr "{winVersion} ({cpuBit}) construir {build}"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
+#: addon/globalPlugins/resourceMonitor/__init__.py:297 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Monitor de recursos"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"Este extra Apresenta a percentagem da bateria, o estado de carga, o tempo "
-"restante (se não estiver a carregar) e um aviso, se a bateria estiver fraca "
-"ou criticamente baixa."
+#: addon/globalPlugins/resourceMonitor/__init__.py:328
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "Este extra Apresenta a percentagem da bateria, o estado de carga, o tempo restante (se não estiver a carregar) e um aviso, se a bateria estiver fraca ou criticamente baixa."
 
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Apresenta o espaço usado e o total em cada uma das unidades estáticas e "
-"removíveis deste computador."
+#: addon/globalPlugins/resourceMonitor/__init__.py:344
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr "Apresenta o espaço usado e o total em cada uma das unidades estáticas e removíveis deste computador."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:363
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"{driveName} ({driveType} drive): {usedSpace} de {totalSpace} usado {percent}"
-"%."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr "{driveName} ({driveType} drive): {usedSpace} de {totalSpace} usado {percent}%."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:378
 msgid "Presents the average processor load and the load of each core."
 msgstr "Apresenta a carga média do processador e a carga de cada núcleo."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:388
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Núcleo {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:395
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "Média da carga da CPU {avgLoad}%."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:398
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Média da carga da CPU {avgLoad}%, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:408
 msgid "Presents the used and total space for both physical and virtual ram."
 msgstr "Apresenta o espaço usado e total para memória ram física e virtual."
 
 #. Translators: Shows RAM (physical memory) usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:416
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Físico: {physicalUsed} de {physicalTotal} usado ({physicalPercent}%) q "
+msgstr "Físico: {physicalUsed} de {physicalTotal} usado ({physicalPercent}%) q "
 
 #. Translators: Shows virtual memory usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:424
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: {virtualUsed} de {virtualTotal} usado ({virtualPercent}%)."
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:436
 msgid "Announces the version of Windows you are using."
 msgstr "Indica a versão do Windows que está a usar."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
+#: addon/globalPlugins/resourceMonitor/__init__.py:451
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "Anuncia o nome do ssid da rede sem fios do sistema e o seu sinal."
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:464
+#: addon/globalPlugins/resourceMonitor/__init__.py:471
 msgid "No wireless devices"
 msgstr "Sem dispositivos sem fios"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:475
 msgid "No wireless connections"
 msgstr "Sem ligações sem fios"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:488
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
-"Rede sem fios ligada: {}. Intensidade do sinal: {}%. Tipo de segurança: {}"
+msgstr "Rede sem fios ligada: {}. Intensidade do sinal: {}%. Tipo de segurança: {}"
 
 #. Translators: system uptime in days.
+#: addon/globalPlugins/resourceMonitor/__init__.py:509
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -181,36 +198,42 @@ msgstr[0] "{days:d} dia"
 msgstr[1] "{days:d} days"
 
 #. Translators: system uptime in seconds.
+#: addon/globalPlugins/resourceMonitor/__init__.py:521
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} segundo"
-msgstr[1] "{seconds:d} seconds"
+msgstr[1] "{seconds:d} segundos"
 
 #. Translators: Input help mode message about obtaining the system's uptime
+#: addon/globalPlugins/resourceMonitor/__init__.py:527
 msgid "Announces the system's uptime."
 msgstr "Anuncia o tempo de atividade do sistema."
 
 #. Translators: Obtaining uptime failed
+#: addon/globalPlugins/resourceMonitor/__init__.py:540
 msgid "Failed to get the system's uptime."
 msgstr "Falha ao obter o tempo de actividade do sistema."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"Apresenta a memória ram utilizada, a carga média do processador e "
-"informações sobre a bateria, se disponíveis."
+#: addon/globalPlugins/resourceMonitor/__init__.py:544
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "Apresenta a memória ram utilizada, a carga média do processador e informações sobre a bateria, se disponíveis."
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:552
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM usada, CPU at {cpuPercent}%."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
-msgstr ""
-"Um monitor de recursos acessível para indicar a carga do CPU, o uso de "
-"memória, a bateria, o estado de uso do disco e muito mais."
+#: buildVars.py:24
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "Um monitor de recursos acessível para indicar a carga do CPU, o uso de memória, a bateria, o estado de uso do disco e muito mais."
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "* NVDA 2025.2 or later is required."
+msgstr "* É necessário o NVDA 2025.2 ou posterior."
+

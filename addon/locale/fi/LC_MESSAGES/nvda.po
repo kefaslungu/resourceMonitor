@@ -1,86 +1,101 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor\n"
+"Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-21 19:56-0600\n"
-"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
-"Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
-"Language: fi\n"
+"POT-Creation-Date: 2025-09-04 10:35+0000\n"
+"PO-Revision-Date: 2025-12-01 01:10\n"
+"Last-Translator: \n"
+"Language-Team: Finnish\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: fi\n"
+"X-Crowdin-File: resourceMonitor.pot\n"
+"X-Crowdin-File-ID: 214\n"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:47
 msgid "No authentication (Open)"
 msgstr "Ei tunnistautumista (avoin)"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:72
 msgid "Connected to {}"
 msgstr "Yhdistetty verkkoon {}"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:82
 msgid "Disconnected from {}"
 msgstr "Yhteys katkaistu verkosta {}"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:87
 msgid "A wireless device has been enabled"
 msgstr "Langaton verkkosovitin otettu käyttöön"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:93
 msgid "A wireless device has been disabled"
 msgstr "Langaton verkkosovitin poistettu käytöstä"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
+#: addon/globalPlugins/resourceMonitor/__init__.py:206
 msgid "This computer does not have a battery connected."
 msgstr "Tässä tietokoneessa ei ole akkua."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:212
 #, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent} %, akku latautuu."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#: addon/globalPlugins/resourceMonitor/__init__.py:218
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "{percent} % akkua jäljellä, käyttöaika tuntematon."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#: addon/globalPlugins/resourceMonitor/__init__.py:232
+#: addon/globalPlugins/resourceMonitor/__init__.py:513
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
 msgstr[0] "{hours:d} tunti"
-msgstr[1] "{hours:d} hours"
+msgstr[1] "{hours:d} tuntia"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#: addon/globalPlugins/resourceMonitor/__init__.py:237
+#: addon/globalPlugins/resourceMonitor/__init__.py:517
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
 msgstr[0] "{minutes:d} minuutti"
-msgstr[1] "{minutes:d} minutes"
+msgstr[1] "{minutes:d} minuuttia"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#: addon/globalPlugins/resourceMonitor/__init__.py:245
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "{percent} %, akun käyttöaikaa jäljellä noin {time}."
 
 #. Translators: Message reported when battery level is low.
+#: addon/globalPlugins/resourceMonitor/__init__.py:249
 msgid " Warning: low battery."
 msgstr " Varoitus: akun varaus alhainen."
 
 #. Translators: Message reported when battery level is critical.
+#: addon/globalPlugins/resourceMonitor/__init__.py:252
 msgid " Warning: critically low battery."
 msgstr " Varoitus: akun varaus kriittisen alhainen."
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
+#: addon/globalPlugins/resourceMonitor/__init__.py:289
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) koontiversio {build}"
@@ -89,133 +104,136 @@ msgstr "{winVersion} ({cpuBit}) koontiversio {build}"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
+#: addon/globalPlugins/resourceMonitor/__init__.py:297 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Resurssienvalvonta"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"Ilmoittaa akun varauksen prosentteina, latauksen tilan, jäljellä olevan ajan "
-"(jos ei latauksessa) sekä antaa varoituksen, jos varaus on alhainen tai "
-"kriittinen."
+#: addon/globalPlugins/resourceMonitor/__init__.py:328
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "Ilmoittaa akun varauksen prosentteina, latauksen tilan, jäljellä olevan ajan (jos ei latauksessa) sekä antaa varoituksen, jos varaus on alhainen tai kriittinen."
 
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Ilmoittaa kiintolevyjen ja siirrettävien asemien käytetyn ja kokonaistilan "
-"määrän."
+#: addon/globalPlugins/resourceMonitor/__init__.py:344
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr "Ilmoittaa kiintolevyjen ja siirrettävien asemien käytetyn ja kokonaistilan määrän."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:363
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"Asema {driveName} ({driveType}): käytetty {usedSpace} / {totalSpace}, "
-"{percent} %."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr "Asema {driveName} ({driveType}): käytetty {usedSpace} / {totalSpace}, {percent} %."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:378
 msgid "Presents the average processor load and the load of each core."
 msgstr "Ilmoittaa suorittimen ja ydinten keskimääräisen kuormituksen."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:388
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Ydin {coreNumber}: {corePercent} %"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:395
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "Suorittimen keskimääräinen kuormitus {avgLoad} %."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:398
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Suorittimen keskimääräinen kuormitus {avgLoad} %, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:408
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"Ilmoittaa sekä fyysisen että näennäisen RAM-muistin käytetyn ja "
-"kokonaismäärän."
+msgstr "Ilmoittaa sekä fyysisen että näennäisen RAM-muistin käytetyn ja kokonaismäärän."
 
 #. Translators: Shows RAM (physical memory) usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:416
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Fyysinen muisti: käytetty {physicalUsed} / {physicalTotal}, "
-"({physicalPercent} %). "
+msgstr "Fyysinen muisti: käytetty {physicalUsed} / {physicalTotal}, ({physicalPercent} %). "
 
 #. Translators: Shows virtual memory usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:424
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"Näennäismuisti: käytetty {virtualUsed} / {virtualTotal}, ({virtualPercent} "
-"%)."
+msgstr "Näennäismuisti: käytetty {virtualUsed} / {virtualTotal}, ({virtualPercent} %)."
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:436
 msgid "Announces the version of Windows you are using."
-msgstr "Ilmoittaa käyttämäsi Windowsin version."
+msgstr "Ilmoittaa Windowsin version."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
+#: addon/globalPlugins/resourceMonitor/__init__.py:451
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "Ilmoittaa langattoman verkon SSID-nimen ja signaalin voimakkuuden."
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:464
+#: addon/globalPlugins/resourceMonitor/__init__.py:471
 msgid "No wireless devices"
 msgstr "Ei langattomia verkkosovittimia"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:475
 msgid "No wireless connections"
 msgstr "Ei langattomia verkkoyhteyksiä"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:488
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr ""
-"Yhdistetty langaton verkko: {}. Signaalin voimakkuus: {} %. Suojauksen "
-"tyyppi: {}."
+msgstr "Yhdistetty langaton verkko: {}. Signaalin voimakkuus: {} %. Suojauksen tyyppi: {}."
 
 #. Translators: system uptime in days.
+#: addon/globalPlugins/resourceMonitor/__init__.py:509
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{days:d} päivä"
-msgstr[1] "{days:d} days"
+msgstr[1] "{days:d} päivää"
 
 #. Translators: system uptime in seconds.
+#: addon/globalPlugins/resourceMonitor/__init__.py:521
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} sekunti"
-msgstr[1] "{seconds:d} seconds"
+msgstr[1] "{seconds:d} sekuntia"
 
 #. Translators: Input help mode message about obtaining the system's uptime
+#: addon/globalPlugins/resourceMonitor/__init__.py:527
 msgid "Announces the system's uptime."
 msgstr "Ilmoittaa järjestelmän käynnissäoloajan."
 
 #. Translators: Obtaining uptime failed
+#: addon/globalPlugins/resourceMonitor/__init__.py:540
 msgid "Failed to get the system's uptime."
 msgstr "Järjestelmän käynnissäoloajan hakeminen ei onnistu."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"Ilmoittaa käytetyn RAM-muistin määrän, prosessorin keskimääräisen "
-"kuormituksen ja akun tiedot, mikäli saatavilla."
+#: addon/globalPlugins/resourceMonitor/__init__.py:544
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "Ilmoittaa käytetyn RAM-muistin määrän, prosessorin keskimääräisen kuormituksen ja akun tiedot, mikäli saatavilla."
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:552
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr ""
-"RAM-muistia käytetty {ramPercent} %, suorittimen kuormitus {cpuPercent} %."
+msgstr "RAM-muistia käytetty {ramPercent} %, suorittimen kuormitus {cpuPercent} %."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
-msgstr ""
-"Monipuolinen resurssienvalvontalisäosa suorittimen kuormituksen, muistin-, "
-"akun- ja levynkäytön tilan sekä monien muiden tietojen lukemiseen."
+#: buildVars.py:24
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "Monipuolinen resurssienvalvontalisäosa suorittimen kuormituksen, muistin-, akun- ja levynkäytön tilan sekä monien muiden tietojen ilmoittamiseen."
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "* NVDA 2025.2 or later is required."
+msgstr "* Edellyttää NVDA 2025.2:ta tai uudempaa."
+

@@ -1,7 +1,6 @@
-# 资源监控器 #
+# 资源监控器
 
-* 作者: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala,
-  Ethin Probst 和其他NVDA贡献者
+* 作者: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst 和其他NVDA贡献者
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
@@ -25,12 +24,15 @@
 此插件不替换 Windows 的任务管理器和其他系统信息程序。另请注意以下事项：
 
 * 如果在安全屏幕中使用该插件，则无法将资源信息复制到剪贴板。
-* 给出的 CPU 使用情况是针对逻辑处理器而非物理核心。这对于使用超线程的处理器来说是显而易见的，其中 CPU 数量是 CPU
-  核心数量的两倍。在一些较新的计算机上，并非所有 CPU 核心都启用了超线程。
+* 给出的 CPU 使用情况是针对逻辑处理器而非物理核心。这对于使用超线程的处理器来说是显而易见的，其中 CPU 数量是 CPU 核心数量的两倍。在一些较新的计算机上，并非所有 CPU 核心都启用了超线程。
 * 如果存在大量磁盘活动（例如复制大文件），则在获取磁盘使用信息时可能会出现延迟。
 * 所读出的处理器架构信息“x86”和“AMD64”分别指代的是 32 位和 64 位 (x64) Intel 和 AMD 处理器。
 * 此插件需要 Windows 10  22H2 (2022 Update/build 19045 或更高版本。
 * 不支持在 Windows 10/11 LTSC 上安装本插件。
+
+## 版本 25.09
+
+* 需要 NVDA 2025.2 或更高版本。
 
 ## 版本 25.07
 
@@ -83,20 +85,17 @@
 
 NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中！
 
-* 使用 wlanReporter 的 Windows API 取代检测无线连接的旧方法
-  ：https://github.com/kvark128/WlanReporter/。
-
-	* 在读出 SSID 名称和信号强度后，还会读出网络的安全类型。
-	* 在您连接或断开无线网络时，NVDA 会给出提醒。
-	* 在您打开或关闭无线网络时，NVDA 会给出提醒。
+* 使用 wlanReporter 的 Windows API 取代检测无线连接的旧方法：https://github.com/kvark128/WlanReporter/。
+  * 在读出 SSID 名称和信号强度后，还会读出网络的安全类型。
+  * 在您连接或断开无线网络时，NVDA 会给出提醒。
+  * 在您打开或关闭无线网络时，NVDA 会给出提醒。
 
 ## 版本 23.05
 
 * 添加了读出已连接无线网络状态的功能。
-
-	* 读出连接的无线 SSID 的名称。
-	* 读出 SSID 的强度
-	* 如果未检测到，则读出未找到 SSID。
+  * 读出连接的无线 SSID 的名称。
+  * 读出 SSID 的强度
+  * 如果未检测到，则读出未找到 SSID。
 
 ## 版本 23.02
 
@@ -131,8 +130,7 @@ NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中！
 
 * 最低 Windows 版本要求现在与 NVDA 版本相关联。
 * Windows 构建 20348 和 22000 分别被确认为 Windows Server 2022 和 Windows 11。
-* 在 Insider Preview 版本中，不会使用诸如“Windows 10”之类的 Windows 版本。相反，NvDA 将宣布“Windows
-  Insider”。
+* 在 Insider Preview 版本中，不会使用诸如“Windows 10”之类的 Windows 版本。相反，NvDA 将宣布“Windows Insider”。
 * 在 64 位系统上，处理器架构（x64 或 ARM64）将作为 Windows 版本信息的一部分公布。
 
 ## 版本21.04
@@ -150,8 +148,7 @@ NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中！
 ## 版本20.09
 
 * 系统正常运行时间现在以天、小时、分钟、秒来呈现。
-* Windows Server Insider Preview build 20201或更高版本现在被正确识别为Server Insider
-  build。
+* Windows Server Insider Preview build 20201或更高版本现在被正确识别为Server Insider build。
 
 ## 版本20.07
 
