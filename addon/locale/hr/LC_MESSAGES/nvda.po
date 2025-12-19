@@ -1,59 +1,66 @@
-# Hrvatska lokalizacija za NVDA.
-# Copyright (C) 2006-2019 NVDA contributors <https://www.nvda-project.org>
-# This file is distributed under the same license as the virtualRevision package.
-# Zvonimir Stanečić <zvonimirek222@yandex.com>, 2019.
-# Milo Ivir <mail@milotype.de>, 2019.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 2.2-dev\n"
+"Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-21 19:57-0600\n"
-"Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: hr <LL@li.org>\n"
-"Language: hr\n"
+"POT-Creation-Date: 2025-09-04 10:35+0000\n"
+"PO-Revision-Date: 2025-12-15 01:03\n"
+"Last-Translator: \n"
+"Language-Team: Croatian\n"
+"Language: hr_HR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: hr\n"
+"X-Crowdin-File: resourceMonitor.pot\n"
+"X-Crowdin-File-ID: 214\n"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:47
 msgid "No authentication (Open)"
 msgstr "Bez autentifikacije (otvoreno)"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:72
 msgid "Connected to {}"
 msgstr "Povezano s {}"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:82
 msgid "Disconnected from {}"
 msgstr "Odspjeno od {}"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:87
 msgid "A wireless device has been enabled"
 msgstr "Bežični uređaj je aktiviran"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:93
 msgid "A wireless device has been disabled"
 msgstr "Bežični uređaj je deaktiviran"
 
 #. Translators: Message reported when there is no battery on the system,
 #. mostly laptops with battery pack removed and running on AC power.
+#: addon/globalPlugins/resourceMonitor/__init__.py:206
 msgid "This computer does not have a battery connected."
 msgstr "Ovo računalo nema spojenu bateriju."
 
 #. Translators: message presented when AC is connected and battery is charging,
 #. also show current battery percentage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:212
 #, python-brace-format
 msgid "{percent}%, battery charging."
 msgstr "{percent} %, baterija se puni."
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining yet battery time is unknown.
+#: addon/globalPlugins/resourceMonitor/__init__.py:218
 #, python-brace-format
 msgid "{percent}% battery remaining, battery time unknown."
 msgstr "Preostalo je {percent} % baterije, vrijeme baterije nepoznato."
 
 #. Translators: battery and system uptime in hours.
 #. Translators: system uptime in hours.
+#: addon/globalPlugins/resourceMonitor/__init__.py:232
+#: addon/globalPlugins/resourceMonitor/__init__.py:513
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -63,6 +70,8 @@ msgstr[2] "{hours:d} sati"
 
 #. Translators: battery and system uptime in minutes.
 #. Translators: system uptime in minutes.
+#: addon/globalPlugins/resourceMonitor/__init__.py:237
+#: addon/globalPlugins/resourceMonitor/__init__.py:517
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -72,19 +81,23 @@ msgstr[2] "{minutes:d} minuta"
 
 #. Translators: message presented when computer is running on battery power,
 #. showing percentage remaining and estimated remaining time.
+#: addon/globalPlugins/resourceMonitor/__init__.py:245
 #, python-brace-format
 msgid "{percent}% battery remaining, about {time}."
 msgstr "Preostalo je {percent} % baterije, otprilike {time}."
 
 #. Translators: Message reported when battery level is low.
+#: addon/globalPlugins/resourceMonitor/__init__.py:249
 msgid " Warning: low battery."
 msgstr " Pažnja: baterija je slaba."
 
 #. Translators: Message reported when battery level is critical.
+#: addon/globalPlugins/resourceMonitor/__init__.py:252
 msgid " Warning: critically low battery."
 msgstr " Pažnja: baterija je skoro prazna."
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
+#: addon/globalPlugins/resourceMonitor/__init__.py:289
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) međuverzija {build}"
@@ -93,92 +106,93 @@ msgstr "{winVersion} ({cpuBit}) međuverzija {build}"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
+#: addon/globalPlugins/resourceMonitor/__init__.py:297 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Prati stanje resursa"
 
 #. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"Izjavljuje postotak baterije, stanje punjenja, preostalo vrijeme (ako se ne "
-"puni) te upozorava, ukoliko je baterija slaba ili skoro prazna."
+#: addon/globalPlugins/resourceMonitor/__init__.py:328
+msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
+msgstr "Izjavljuje postotak baterije, stanje punjenja, preostalo vrijeme (ako se ne puni) te upozorava, ukoliko je baterija slaba ili skoro prazna."
 
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Izjavljuje količinu korištene i sveukupne memorije na statičkim i uklonjivim "
-"pogonima na ovom računalu."
+#: addon/globalPlugins/resourceMonitor/__init__.py:344
+msgid "Presents the used and total space of the static and removable drives on this computer."
+msgstr "Izjavljuje količinu korištene i sveukupne memorije na statičkim i uklonjivim pogonima na ovom računalu."
 
 #. Translators: Shows drive letter, type of drive (fixed or removable),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:363
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"Pogon {driveName} ({driveType}): potrošeno {usedSpace} od {totalSpace} "
-"({percent} %)."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
+msgstr "Pogon {driveName} ({driveType}): potrošeno {usedSpace} od {totalSpace} ({percent} %)."
 
 #. Translators: Input help mode message about processor info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:378
 msgid "Presents the average processor load and the load of each core."
-msgstr ""
-"Izjavljuje prosječno opterećenje procesora te opterećenje svake jezgre."
+msgstr "Izjavljuje prosječno opterećenje procesora te opterećenje svake jezgre."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#: addon/globalPlugins/resourceMonitor/__init__.py:388
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Jezgra {coreNumber}: {corePercent} %"
 
 #. Translators: Shows average load of the processor on single-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:395
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%."
 msgstr "Prosječna opterećenosti procesora {avgLoad} %."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#: addon/globalPlugins/resourceMonitor/__init__.py:398
 #, python-brace-format
 msgid "Average CPU load {avgLoad}%, {cores}."
 msgstr "Prosječna opterećenosti procesora {avgLoad} %, {cores}."
 
 #. Translators: Input help mode message about memory info command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:408
 msgid "Presents the used and total space for both physical and virtual ram."
-msgstr ""
-"Izjavljuje količinu korištene i sveukupne fizičke i virtualne RAM memorije."
+msgstr "Izjavljuje količinu korištene i sveukupne fizičke i virtualne RAM memorije."
 
 #. Translators: Shows RAM (physical memory) usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:416
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Fizička memorija: potrošeno {physicalUsed} od {physicalTotal} "
-"({physicalPercent} %). "
+msgstr "Fizička memorija: potrošeno {physicalUsed} od {physicalTotal} ({physicalPercent} %). "
 
 #. Translators: Shows virtual memory usage.
+#: addon/globalPlugins/resourceMonitor/__init__.py:424
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"Virtualna memorija: potrošeno {virtualUsed} od {virtualTotal} "
-"({virtualPercent} %)."
+msgstr "Virtualna memorija: potrošeno {virtualUsed} od {virtualTotal} ({virtualPercent} %)."
 
 #. Translators: Input help mode message about Windows version command in Resource Monitor.
+#: addon/globalPlugins/resourceMonitor/__init__.py:436
 msgid "Announces the version of Windows you are using."
 msgstr "Najavljuje tvoju verziju Windows sustava."
 
 #. Translators: Input help mode message about obtaining the ssid of the wireless network,
 #. and the strength of the network.
+#: addon/globalPlugins/resourceMonitor/__init__.py:451
 msgid "Announces the system's wireless network ssid name, and its strength."
 msgstr "Najavljuje ssid ime bežične mreže sustava i njegovu jačinu."
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:464
+#: addon/globalPlugins/resourceMonitor/__init__.py:471
 msgid "No wireless devices"
 msgstr "Nema bežičnih uređaja"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:475
 msgid "No wireless connections"
 msgstr "Nema bežičnih veza"
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:488
 msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
 msgstr "Povezana bežična mreža: {}. Jačina signala: {}%. Vrsta sigurnosti: {}"
 
 #. Translators: system uptime in days.
+#: addon/globalPlugins/resourceMonitor/__init__.py:509
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -187,6 +201,7 @@ msgstr[1] "{days:d} dana"
 msgstr[2] "{days:d} dana"
 
 #. Translators: system uptime in seconds.
+#: addon/globalPlugins/resourceMonitor/__init__.py:521
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
@@ -195,29 +210,34 @@ msgstr[1] "{seconds:d} sekunde"
 msgstr[2] "{seconds:d} sekundi"
 
 #. Translators: Input help mode message about obtaining the system's uptime
+#: addon/globalPlugins/resourceMonitor/__init__.py:527
 msgid "Announces the system's uptime."
 msgstr "Izgovara trajanje pokretanja sustava."
 
 #. Translators: Obtaining uptime failed
+#: addon/globalPlugins/resourceMonitor/__init__.py:540
 msgid "Failed to get the system's uptime."
 msgstr "Neuspjelo dohvaćanje trajanja pokretanja sustava."
 
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"Izjavljuje iskorištenu RAM memoriju, prosječno opterećenje procesora te "
-"informaciju o bateriji, ako je ima."
+#: addon/globalPlugins/resourceMonitor/__init__.py:544
+msgid "Presents used ram, average processor load, and battery info if available."
+msgstr "Izjavljuje iskorištenu RAM memoriju, prosječno opterećenje procesora te informaciju o bateriji, ako je ima."
 
+#: addon/globalPlugins/resourceMonitor/__init__.py:552
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "Potrošeno je {ramPercent} % RAM-a, procesor je pri {cpuPercent} %."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
-msgstr ""
-"Praktično praćenje stanja resursa za izvještavanje o opterećenju procesora, "
-"uporabi memorije, baterije, stanju uporabe diska i više."
+#: buildVars.py:24
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "Praktično praćenje stanja resursa za izvještavanje o opterećenju procesora, uporabi memorije, baterije, stanju uporabe diska i više."
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "* NVDA 2025.2 or later is required."
+msgstr "* NVDA 2025.2 ili novija je potrebna."
+
