@@ -105,6 +105,8 @@ def customResize(array, newSize):
 # Styles of size calculation/string composition, do not change!
 # Traditional style, Y, K, M, G, B, ...
 traditional = [
+	(1024.0**10.0, "Q"),
+	(1024.0**9.0, "R"),
 	(1024.0**8.0, "Y"),
 	(1024.0**7.0, "Z"),
 	(1024.0**6.0, "E"),
@@ -118,6 +120,8 @@ traditional = [
 
 # Alternative style (displayed with most PCs): MB, KB, GB, YB, ZB, ...
 alternative = [
+	(1024.0**10.0, " QB"),
+	(1024.0**9.0, " RB"),
 	(1024.0**8.0, " YB"),
 	(1024.0**7.0, " ZB"),
 	(1024.0**6.0, " EB"),
@@ -131,6 +135,8 @@ alternative = [
 
 # Verbose style: Kilobytes, Megabytes, Gigabytes, ...
 verbose = [
+	(1024.0**10.0, " quettabytes"),
+	(1024.0**9.0, " ronnabytes"),
 	(1024.0**8.0, " yottabytes"),
 	(1024.0**7.0, " zettabytes"),
 	(1024.0**6.0, " exabytes"),
@@ -144,6 +150,8 @@ verbose = [
 
 # International Electrotechnical Commission (IEC) style: Ki, Mi, Gi, Ti, ...
 iec = [
+	(1024.0**10.0, "Qi"),
+	(1024.0**9.0, "Ri"),
 	(1024.0**8.0, "Yi"),
 	(1024.0**7.0, "Zi"),
 	(1024.0**6.0, "Ei"),
@@ -157,6 +165,8 @@ iec = [
 
 # International System of Units (Si) style: each unit is 1000 of another (i.e. 1000 KB is 1 MB)
 si = [
+	(1000.0**10.0, "Q"),
+	(1000.0**9.0, "R"),
 	(1000.0**8.0, "Y"),
 	(1000.0**7.0, "Z"),
 	(1000.0**6.0, "E"),
