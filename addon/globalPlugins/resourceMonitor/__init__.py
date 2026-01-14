@@ -8,7 +8,6 @@
 import functools
 import os.path
 import queueHandler
-import winreg
 import winsound
 from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
