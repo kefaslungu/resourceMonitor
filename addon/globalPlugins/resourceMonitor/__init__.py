@@ -230,11 +230,11 @@ def _batteryInfo(verbose: bool = False) -> str | None:
 						# Translators: battery and system uptime in hours.
 						ngettext("{hours:d} hour", "{hours:d} hours", hours).format(hours=hours)
 					)
-				# Translators: battery and system uptime in minutes.
-				timeLeft.append(
-					# Translators: battery and system uptime in minutes.
-					ngettext("{minutes:d} minute", "{minutes:d} minutes", minutes).format(minutes=minutes)
-				)
+				if minutes > 0:
+					timeLeft.append(
+						# Translators: battery and system uptime in minutes.
+						ngettext("{minutes:d} minute", "{minutes:d} minutes", minutes).format(minutes=minutes)
+					)
 				# Because psutil.sensors_battery function does not present battery flags by default,
 				# manually read this info at the cost of calling the C extension twice.
 				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
