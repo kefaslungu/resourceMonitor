@@ -252,16 +252,6 @@ def _batteryInfo(verbose: bool = False) -> str | None:
 	return info
 
 
-# Record Windows Server builds to release names.
-# Client versions will be checked via Registry.
-serverReleaseNames = {
-	14393: "Windows Server 2016",
-	17763: "Windows Server 2019",
-	20348: "Windows Server 2022",
-	26100: "Windows Server 2025",
-}
-
-
 @functools.lru_cache(maxsize=1)
 def getWinVer() -> str:
 	# Obtain current Windows version.
@@ -275,13 +265,7 @@ def getWinVer() -> str:
 	winverName = currentWinVer.releaseName
 	# Report "Windows Server version" on servers.
 	if currentWinVer.productType != "workstation":
-		winverName = serverReleaseNames.get(
-			# All publicly available server release names are housed inside a dedicated map.
-			currentWinVer.build,
-			# On Windows 10 and later, NVDA uses a three-part string (Windows name releaseId).
-			# Use reverse partition (str.rpartition) to obtain just the release Id (last part).
-			f"Windows Server {winverName.rpartition(' ')[-1]}",
-		)
+		winverName = f"Windows Server {winverName.rpartition(' ')[-1]}"
 	# Announce build.revision.
 	buildRevision = f"{currentWinVer.build}.{currentWinVer.revision}"
 	# Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
