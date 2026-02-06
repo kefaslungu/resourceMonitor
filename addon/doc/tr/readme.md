@@ -30,6 +30,13 @@ Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka uygulamalar�
 * Bu eklenti Windows 8.1'i (sınırlı destek) desteklese de, Windows 10 22H2 (2022 Güncellemesi/derleme 19045) veya üstü önerilir.
 * Eklentinin Windows 10/11 LTSC'ye yüklenmesi desteklenmemektedir.
 
+## Sürüm 26.01
+
+* NVDA 2025.3.2 veya üzeri gereklidir.
+* NVDA, Windows Server sürümlerini özel sunucu sürüm adı yerine standartlaştırılmış sürüm adını kullanarak duyuracaktır; Windows Server 2025 yerine Windows Server 24H2 gibi.
+* NVDA artık pil durumuna "0 dakika" eklemeyecektir (örneğin: 4 saat 0 dakika yerine 4 saat).
+* NVDA, daha büyük bellek ve depolama boyutları için ronnabyte (1000 üzeri 9) ve quettabyte (1000 üzeri 10) gibi ek önekleri tanıyacaktır.
+
 ## Sürüm 25.09
 
 * NVDA 2025.2 veya üstü gereklidir.
