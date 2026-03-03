@@ -30,8 +30,14 @@ class SymbolDictionaryAttributes(TypedDict):
 	mandatory: bool
 
 
+class SpeechDictionaryAttributes(TypedDict):
+	displayName: str
+	mandatory: bool
+
+
 BrailleTables = dict[str, BrailleTableAttributes]
 SymbolDictionaries = dict[str, SymbolDictionaryAttributes]
+SpeechDictionaries = dict[str, SpeechDictionaryAttributes]
 
 
 class Strable(Protocol):
