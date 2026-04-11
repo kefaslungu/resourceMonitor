@@ -359,12 +359,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return path
 		return None
 
-	def _getNvidiaGpuInfo(self) -> str:
+	def _getGpuInfo(self) -> str:
 		if not self._nvidiaSmiPathResolved:
 			self._nvidiaSmiPath = self._findNvidiaSmiPath()
 			self._nvidiaSmiPathResolved = True
 		if not self._nvidiaSmiPath:
-			return _("NVIDIA SMI not available.")
+			# Translators: Message reported when GPU telemetry cannot be obtained on this system.
+			return _("No GPU information available.")
 		try:
 			result = subprocess.run(
 				[
@@ -378,10 +379,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				check=True,
 			)
 		except (subprocess.CalledProcessError, OSError, subprocess.TimeoutExpired):
-			return _("Unable to get NVIDIA GPU information.")
+			# Translators: Message reported when GPU telemetry retrieval fails.
+			return _("Unable to get GPU information.")
 		lines = [line.strip() for line in result.stdout.splitlines() if line.strip()]
 		if not lines:
-			return _("No NVIDIA GPU data available.")
+			# Translators: Message reported when no GPU data entries are returned.
+			return _("No GPU data available.")
 		gpuInfoParts = []
 		for index, line in enumerate(lines, start=1):
 			gpuData = [part.strip() for part in line.split(",")]
@@ -389,6 +392,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				continue
 			utilization, temperature = gpuData[0], gpuData[1]
 			gpuInfoParts.append(
+				# Translators: Reports load and temperature for one GPU.
 				_("GPU {gpuNumber}: usage {usage}%, temp {temperature}°C.").format(
 					gpuNumber=index,
 					usage=utilization,
@@ -396,7 +400,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				)
 			)
 		if not gpuInfoParts:
-			return _("Unable to parse NVIDIA GPU information.")
+			# Translators: Message reported when GPU output format is not recognized.
+			return _("Unable to parse GPU information.")
 		return " ".join(gpuInfoParts)
 
 	@scriptHandler.script(
@@ -537,19 +542,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
-		description=_("Announces NVIDIA GPU usage and temperature."),
-		gestures=["KB:NVDA+shift+9", "KB:NVDA+shift+numpad9"],
+		# Translators: Input help mode message about GPU usage and temperature command.
+		description=_("Announces GPU usage and temperature."),
+		gestures=["KB:NVDA+shift+0", "KB:NVDA+shift+numpad0"],
 		speakOnDemand=True,
 	)
-	def script_announceNvidiaGpuInfo(self, gesture):
+	def script_announceGpuInfo(self, gesture):
 		try:
-			info = self._getNvidiaGpuInfo()
+			info = self._getGpuInfo()
 			if scriptHandler.getLastScriptRepeatCount() == 0:
 				ui.message(info)
 			else:
 				api.copyToClip(info, notify=True)
 		except Exception:
-			ui.message(_("Failed to get NVIDIA GPU information."))
+			# Translators: Message reported when the GPU command fails unexpectedly.
+			ui.message(_("Failed to get GPU information."))
 
 	def _getWlanInfo(self) -> str:
 		if not self._client_handle:
