@@ -4,7 +4,7 @@
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
-# Shortcuts
+## Shortcuts
 
 All commands support speech on demand mode.
 
@@ -93,16 +93,16 @@ This add-on does not replace task manager and other system information programs 
 wlanReporter NVDA-addon is now part of resourceMonitor!
 
 * The old way of checking for wireless connections has been replaced by the windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
-  * After speaking SSID name and strength, NVDA will also now tell you the security type of your network.
-  * NVDA will now alert you when you connect and disconnect from a wireless network.
-  * NVDA will now alert you when wireless connections is turned on or off.
+	* After speaking SSID name and strength, NVDA will also now tell you the security type of your network.
+	* NVDA will now alert you when you connect and disconnect from a wireless network.
+	* NVDA will now alert you when wireless connections is turned on or off.
 
 ## Version 23.05
 
-* added the ability to detect and present the state of the connected wireless network.
-  * Announces the name of the connected wireless SSID.
-  * Announces the strength of the ssid
-  * Announce SSID not found if None is detected.
+* Added the ability to detect and present the state of the connected wireless network.
+	* Announces the name of the connected wireless SSID.
+	* Announces the strength of the SSID
+	* Announce SSID not found if None is detected.
 
 ## Version 23.02
 
@@ -285,5 +285,3 @@ Starting with version 16.08, add-on releases will be shown as year.month.revisio
 ## Changes for 1.0
 
 * Initial Release
-
-[1]: http://addons.nvda-project.org/files/get.php?file=resourceMonitor
