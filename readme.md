@@ -27,7 +27,6 @@ This add-on does not replace task manager and other system information programs 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
-* While this add-on supports windows 8.1 (limited support), Windows 10 22H2 (2022 Update/build 19045) or later is recommended.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
 ## Version 26.01
