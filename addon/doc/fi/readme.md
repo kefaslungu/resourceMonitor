@@ -4,7 +4,7 @@
 
 Tämä lisäosa antaa tietoja suorittimen kuormituksesta sekä muistin ja muiden resurssien käytöstä.
 
-# Pikanäppäimet
+## Pikanäppäimet
 
 Kaikki komennot tukevat pyydettäessä-puhetilaa.
 
@@ -86,16 +86,16 @@ Tämä lisäosa ei korvaa Windowsin tehtävienhallintaa tai muita järjestelmät
 WlanReporter-lisäosa sisältyy nyt Resurssienvalvontaan.
 
 * Aiempi langattomien yhteyksien etsintätapa on korvattu Windowsin rajapinnalla, jota käytetään wlanReporter-lisäosassa: https://github.com/kvark128/WlanReporter/.
-  * NVDA kertoo nyt SSID-nimen ja signaalin voimakkuuden jälkeen myös verkon suojauksen tyypin.
-  * NVDA ilmoittaa nyt langattoman verkon yhteyden muodostamisesta ja katkaisusta.
-  * NVDA ilmoittaa nyt, kun langattomat yhteydet otetaan käyttöön tai poistetaan käytöstä.
+	* NVDA kertoo nyt SSID-nimen ja signaalin voimakkuuden jälkeen myös verkon suojauksen tyypin.
+	* NVDA ilmoittaa nyt langattoman verkon yhteyden muodostamisesta ja katkaisusta.
+	* NVDA ilmoittaa nyt, kun langattomat yhteydet otetaan käyttöön tai poistetaan käytöstä.
 
 ## Versio 23.05
 
 * Lisätty mahdollisuus yhdistetyn langattoman verkon tilan tunnistamiseen ja näyttämiseen.
-  * Ilmoittaa yhdistetyn langattoman verkon SSID-nimen.
-  * Ilmoittaa langattoman verkon signaalin voimakkuuden.
-  * Ilmoittaa "SSID:tä ei löydy", jos langatonta verkkoa ei löydy.
+	* Ilmoittaa yhdistetyn langattoman verkon SSID-nimen.
+	* Ilmoittaa langattoman verkon signaalin voimakkuuden.
+	* Ilmoittaa "SSID:tä ei löydy", jos langatonta verkkoa ei löydy.
 
 ## Versio 23.02
 
@@ -278,5 +278,3 @@ Lisäosan versionumerot ovat Versiosta 16.08 alkaen muotoa vuosi.kuukausi.tarken
 ## Muutokset versiossa 1.0
 
 * Ensimmäinen versio
-
-[1]: http://addons.nvda-project.org/files/get.php?file=resourceMonitor

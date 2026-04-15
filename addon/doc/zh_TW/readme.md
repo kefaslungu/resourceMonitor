@@ -4,7 +4,7 @@
 
 這個附加元件提供有關 CPU 負載，記憶體使用情況，及其他資源的使用訊息。
 
-# 快速鍵
+## 快速鍵
 
 所有指令皆支援隨選語音模式。
 
@@ -93,16 +93,16 @@
 wlanReporter NVDA 附加元件現已成為資源監視器的一部分！
 
 * 檢查無線網路連線的舊方法已被 wlanReporter 的 Windows API 取代：https://github.com/kvark128/WlanReporter/ 。
-  * 讀出 SSID 名稱與訊號強度後，NVDA 現在也會告知您網路的安全性類型。
-  * 當您連線或中斷無線網路時，NVDA 現在會提醒您。
-  * 當無線網路連線開啟或關閉時，NVDA 會提醒您。
+	* 讀出 SSID 名稱與訊號強度後，NVDA 現在也會告知您網路的安全性類型。
+	* 當您連線或中斷無線網路時，NVDA 現在會提醒您。
+	* 當無線網路連線開啟或關閉時，NVDA 會提醒您。
 
 ## 23.05 版
 
 * 新增了偵測並顯示已連線無線網路狀態的功能。
-  * 讀出已連線無線網路的 SSID 名稱。
-  * 讀出 ssid 的訊號強度
-  * 若偵測不到任何 SSID，則讀出找不到 SSID。
+	* 讀出已連線無線網路的 SSID 名稱。
+	* 讀出 ssid 的訊號強度
+	* 若偵測不到任何 SSID，則讀出找不到 SSID。
 
 ## 23.02 版
 
@@ -285,5 +285,3 @@ wlanReporter NVDA 附加元件現已成為資源監視器的一部分！
 ## 1.0 版的變更
 
 * 初始版本
-
-[1]: http://addons.nvda-project.org/files/get.php?file=resourceMonitor

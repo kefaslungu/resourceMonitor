@@ -1,99 +1,69 @@
-# Prati stanje resursa (Resource Monitor) #
+# Prati stanje resursa (Resource Monitor)
 
-* Autori: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka
-  Ojala, Ethin Probst i drugi NVDA doprinositelji
+* Autori: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst i drugi NVDA doprinositelji
 
-Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije
-i druge informacije o korištenju resursa.
+Ovaj dodatak daje informacije o opterećenosti procesora, korištenju memorije i druge informacije o korištenju resursa.
 
-# Prečaci
+## Prečaci
 
 All commands support speech on demand mode.
 
-* NVDA+šift+E: Prikazuje korištenje ram memorije, prosječno opterećenje
-  procesora i informacije o stanju baterije, ako su dostupne.
-* NVDA+šift+1: Prikazuje prosječnu opterećenost procesora i ako postoje
-  višejezgreni procesori, prikazuje opterećenje svake jezgre.
-* NVDA+šift+2/5: Prikazuje korišteni i ukupni kapacitet fizičke I virtualne
-  ram memorije.
-* NVDA+šift+3: Prikazuje korišteni i ukupni prostor na statičnim i
-  prenosivim diskovima.
-* NVDA+šift+4: Prikazuje postotak baterije, stanje punjenja, preostalo
-  vrijeme (ako se ne puni), te upozorenje, ako je baterija slaba ili skoro
-  prazna.
-* NVDA+šift+6: Prikazuje arhitekturu procesora, Windows verziju i broj
-  service paketa.
+* NVDA+šift+E: Prikazuje korištenje ram memorije, prosječno opterećenje procesora i informacije o stanju baterije, ako su dostupne.
+* NVDA+šift+1: Prikazuje prosječnu opterećenost procesora i ako postoje višejezgreni procesori, prikazuje opterećenje svake jezgre.
+* NVDA+šift+2/5: Prikazuje korišteni i ukupni kapacitet fizičke I virtualne ram memorije.
+* NVDA+šift+3: Prikazuje korišteni i ukupni prostor na statičnim i prenosivim diskovima.
+* NVDA+šift+4: Prikazuje postotak baterije, stanje punjenja, preostalo vrijeme (ako se ne puni), te upozorenje, ako je baterija slaba ili skoro prazna.
+* NVDA+šift+6: Prikazuje arhitekturu procesora, Windows verziju i broj service paketa.
 * NVDA+šift+7: Prikazuje vrijeme neprekidnog rada sustava.
-* NVDA+šift+8: prikazuje informacije o bežičnoj vezi, ime i snagu ssid-a ili
-  ne prikazuje ssid ako nije dostupan.
+* NVDA+šift+8: prikazuje informacije o bežičnoj vezi, ime i snagu ssid-a ili ne prikazuje ssid ako nije dostupan.
 
-Tipkovničke prečace je moguće mijenjati putem dijaloškog okvira za ulazne
-geste.
+Tipkovničke prečace je moguće mijenjati putem dijaloškog okvira za ulazne geste.
 
 ## Upute za primjenu
 
-Ovaj dodatak ne zamijenjuje upravljača zadataka i druge programe za
-informacije o sustavu Windows. Važno je znati i sljedeće:
+Ovaj dodatak ne zamijenjuje upravljača zadataka i druge programe za informacije o sustavu Windows. Važno je znati i sljedeće:
 
-* Podaci o resursima ne mogu se kopirati u međuspremnik ako se dodatak
-  pokreće na sigurnim ekranima.
-* Informacije o korištenju procesora dane su za logičke procesore, ne za
-  fizičke jezgre. To se može primijetiti kod procesora koji koriste
-  Hyper-Threading gdje je broj procesora dvostruko veći od broja jezgri. Na
-  nekim novijim računalima Hyper-Threading neće biti aktivirano za sve
-  jezgre CPU-a.
-* Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih
-  datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju
-  diska.
-* Kada se najavljuju informacije o arhitekturi procesora, „x86” i „AMD64”
-  odnose se na 32-bitne i 64-bitne (x64) Intel odnosno AMD procesore.
+* Podaci o resursima ne mogu se kopirati u međuspremnik ako se dodatak pokreće na sigurnim ekranima.
+* Informacije o korištenju procesora dane su za logičke procesore, ne za fizičke jezgre. To se može primijetiti kod procesora koji koriste Hyper-Threading gdje je broj procesora dvostruko veći od broja jezgri. Na nekim novijim računalima Hyper-Threading neće biti aktivirano za sve jezgre CPU-a.
+* Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju diska.
+* Kada se najavljuju informacije o arhitekturi procesora, „x86” i „AMD64” odnose se na 32-bitne i 64-bitne (x64) Intel odnosno AMD procesore.
 * This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
 ## Version 25.07
 
-* Made the add-on code more robust with help from Pyright (a Python static
-  type checker).
+* Made the add-on code more robust with help from Pyright (a Python static type checker).
 
 ## Version 25.06
 
-* Improved connection status announcement when connecting to wireless
-  networks (@danstiv).
+* Improved connection status announcement when connecting to wireless networks (@danstiv).
 
 ## Version 25.02
 
 * Restored limited support for Windows 8.1.
-* Improved accuracy of used and total memory information announcement
-  (@danstiv).
-* NVDA will no longer appear to freeze briefly when performing memory usage
-  command (NVDA+Shift+2/5) the first time after starting NVDA.
-* Windows Insider Preview releases are no longer reported as "Windows
-  Insider".
+* Improved accuracy of used and total memory information announcement (@danstiv).
+* NVDA will no longer appear to freeze briefly when performing memory usage command (NVDA+Shift+2/5) the first time after starting NVDA.
+* Windows Insider Preview releases are no longer reported as "Windows Insider".
 
 ## Version 24.08
 
-* NVDA 2024.2 or later is required. This allows psutil dependency to be
-  removed from the add-on as NVDA includes it.
-* Updated psutil dependency to the version included with NVDA 2024.2
-  (6.0.0).
+* NVDA 2024.2 or later is required. This allows psutil dependency to be removed from the add-on as NVDA includes it.
+* Updated psutil dependency to the version included with NVDA 2024.2 (6.0.0).
 * Ruff replaces Flake8 as code linter.
 
 ## Verzija 24.05
 
 * Zahtijeva NVDA 2024.1 ili noviju verziju.
-* NVDA will recognize wireless networks with WPA3 authentication methods
-  such as simultaneous authentication of equals (SAE).
+* NVDA will recognize wireless networks with WPA3 authentication methods such as simultaneous authentication of equals (SAE).
 
 ## Verzija 24.04
 
 * Aktualizirana je psutil ovisnost na 5.9.8.
-* Added support for speech on demand mode so resource information can be
-  announced in this mode.
+* Added support for speech on demand mode so resource information can be announced in this mode.
 
 ## Verzija 23.11
 
-* Downgraded psutil dependency to 5.9.4 due to problems with memory usage
-  announcements.
+* Downgraded psutil dependency to 5.9.4 due to problems with memory usage announcements.
 
 ## Verzija 23.10
 
@@ -101,31 +71,24 @@ informacije o sustavu Windows. Važno je znati i sljedeće:
 
 ## Verzija 23.09
 
-* NVDA više neće bilježiti poruke o greškama pri pokretanju na Windows
-  Server sustavima kada moduli bežičnih mogućnosti nisu dostupni.
+* NVDA više neće bilježiti poruke o greškama pri pokretanju na Windows Server sustavima kada moduli bežičnih mogućnosti nisu dostupni.
 
 ## Verzija 23.06
 
-* Situation where resourceMonitor doesn't work properly due to
-  unavailability of wireless adapters has been fixed.
+* Situation where resourceMonitor doesn't work properly due to unavailability of wireless adapters has been fixed.
 
 ## Verzija 23.05.1
 
 wlanReporter NVDA-addon is now part of resourceMonitor!
 
-* The old way of checking for wireless connections has been replaced by the
-  windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
-
-	* After speaking SSID name and strength, NVDA will also now tell you the
-	  security type of your network.
-	* NVDA will now alert you when you connect and disconnect from a wireless
-	  network.
+* The old way of checking for wireless connections has been replaced by the windows API from wlanReporter: https://github.com/kvark128/WlanReporter/ .
+	* After speaking SSID name and strength, NVDA will also now tell you the security type of your network.
+	* NVDA will now alert you when you connect and disconnect from a wireless network.
 	* NVDA will now alert you when wireless connections is turned on or off.
 
 ## Verzija 23.05
 
 * Dodana je mogućnost otkrivanja i prikaza stanja povezane bežične mreže.
-
 	* Najavljuje ime priključenog bežičnog SSID-a.
 	* Najavljuje jačinu ssid-a
 	* Najavljuje da SSID nije pronađen ako nijedan nije otkriven.
@@ -133,29 +96,22 @@ wlanReporter NVDA-addon is now part of resourceMonitor!
 ## Verzija 23.03
 
 * Zahtijeva NVDA 2022.4 ili noviju verziju.
-* Potreban je sustav Windows 10 21H2 (aktualizirana verzija iz studenog
-  2021./izgradnja 19044) ili novija verzija.
+* Potreban je sustav Windows 10 21H2 (aktualizirana verzija iz studenog 2021./izgradnja 19044) ili novija verzija.
 
 ## Verzija 23.01
 
 * Zahtijeva NVDA 2022.3 ili noviju verziju.
-* Zahtijeva Windows 10 ili noviju verziju, jer od siječnja 2023. Microsoft
-  više ne pordržava Windows 7, 8 i 8.1.
+* Zahtijeva Windows 10 ili noviju verziju, jer od siječnja 2023. Microsoft više ne pordržava Windows 7, 8 i 8.1.
 * Aktualizirana je psutil ovisnost na 5.9.4.
-* NVDA će najaviti arhitekturu procesora (x86/AMD64/ARM64) kao dio
-  informacije Windows verzije.
-* Na sustavima s jednom jezgrom, NVDA više neće najavljivati opterećenje
-  jezgre CPU-a jer je prosječno opterećenje CPU-a isto kao i opterećenje
-  jezgre.
+* NVDA će najaviti arhitekturu procesora (x86/AMD64/ARM64) kao dio informacije Windows verzije.
+* Na sustavima s jednom jezgrom, NVDA više neće najavljivati opterećenje jezgre CPU-a jer je prosječno opterećenje CPU-a isto kao i opterećenje jezgre.
 
 ## Verzija 22.03
 
-Verzija 22.03 je posljednje izdanje koje će podržavati sustav Windows 7
-Service Pack 1, 8 i 8.1.
+Verzija 22.03 je posljednje izdanje koje će podržavati sustav Windows 7 Service Pack 1, 8 i 8.1.
 
 * Potrebna je NVDA verzija 2021.3 ili novija.
-* Poruka upozorenja će se prikazati kad pokušaš instalirati dodatak na
-  sustavima Windows 7, 8 i 8.1.
+* Poruka upozorenja će se prikazati kad pokušaš instalirati dodatak na sustavima Windows 7, 8 i 8.1.
 * Aktualizirana je psutil zavisnost na 5.9.0.
 
 ## Verzija 22.01
@@ -164,51 +120,40 @@ Service Pack 1, 8 i 8.1.
 
 ## Verzija 21.10
 
-* Potrebna je NVDA verzija 2021.1 ili novija zbog promjena u NVDA čitaču
-  koje utječu na ovaj dodatak.
+* Potrebna je NVDA verzija 2021.1 ili novija zbog promjena u NVDA čitaču koje utječu na ovaj dodatak.
 
 ## Verzija 21.08
 
 * Minimum Windows release requirement is now tied to NVDA releases.
-* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and
-  Windows 11, respectively.
-* On Insider Preview builds, Windows release such as "Windows 10" will not
-  be used. Instead NvDA will announce "Windows Insider".
-* On 64-bit systems, processor architecture (x64 or ARM64) will be announced
-  as part of Windows version information.
+* Windows builds 20348 and 22000 are recognized as Windows Server 2022 and Windows 11, respectively.
+* On Insider Preview builds, Windows release such as "Windows 10" will not be used. Instead NvDA will announce "Windows Insider".
+* On 64-bit systems, processor architecture (x64 or ARM64) will be announced as part of Windows version information.
 
 ## Verzija 21.04
 
 * Potrebna je NVDA verzija 2020.4 ili novija.
 * Ažurirana je psutil zavisnost na 5.8.0.
-* When pressing add-on commands twice to copy resource information to
-  clipboard, NVDA will announce resource summary that is being copied.
+* When pressing add-on commands twice to copy resource information to clipboard, NVDA will announce resource summary that is being copied.
 
 ## Verzija 21.01
 
 * Ažurirana je psutil zavisnost na 5.7.3.
 * Skraćena je poruka Windows verzije.
-* On Windows 8.1, build.revision will be announced as part of Windows
-  version message, similar to Windows 10.
+* On Windows 8.1, build.revision will be announced as part of Windows version message, similar to Windows 10.
 
 ## Verzija 20.09
 
-* Vrijeme neprekidnog rada sustava sada se navodi kao dani, sati, minute,
-  sekunde.
-* Windows Server Insider Preview izgradnja 20201 ili novija, ispravno se
-  prepoznaje kao Server Insider izgradnja.
+* Vrijeme neprekidnog rada sustava sada se navodi kao dani, sati, minute, sekunde.
+* Windows Server Insider Preview izgradnja 20201 ili novija, ispravno se prepoznaje kao Server Insider izgradnja.
 
 ## Verzija 20.07
 
-* Windows 10 verzija 20H2 pravilno se prepoznaje prilikom dohvaćanja
-  podataka o Windows verziji (NVDA+šift+6).
-* Pojednostavljena poruka verzije sustava Windows 10, tj. Windows 10 YYMM
-  umjesto Windows 10verYYMM kad se pritisne NVDA+šift+6.
+* Windows 10 verzija 20H2 pravilno se prepoznaje prilikom dohvaćanja podataka o Windows verziji (NVDA+šift+6).
+* Pojednostavljena poruka verzije sustava Windows 10, tj. Windows 10 YYMM umjesto Windows 10verYYMM kad se pritisne NVDA+šift+6.
 
 ## Verzija 20.06
 
-* Riješeni su mnogi problemi sa stilom kodiranja i potencijalnih grešaka sa
-  Flake8.
+* Riješeni su mnogi problemi sa stilom kodiranja i potencijalnih grešaka sa Flake8.
 
 ## Verzija 20.04
 
@@ -220,8 +165,7 @@ Service Pack 1, 8 i 8.1.
 
 ## Verzija 19.11
 
-* Poboljšano otkrivanje za Windows Insider Preview gradnje, posebice za 20H1
-  i nadalje.
+* Poboljšano otkrivanje za Windows Insider Preview gradnje, posebice za 20H1 i nadalje.
 
 ## Verzija 19.07
 
@@ -236,21 +180,16 @@ Service Pack 1, 8 i 8.1.
 
 * Kod je sada kompatibilniji s Python 3.
 * Ažurirana je psutil zavisnost na 5.4.7.
-* Prilikom dobivanja kapaciteta diska i upotrebe memorije, NVDA više neće
-  pogriješiti, ako koristi računalo ili uslugu s više od petabajta RAM-a ili
-  veličine diska.
-* Vrijednosti za memoriju i upotrebu diska prikazuju se s najviše dva
-  decimalna mjesta (npr. 4,00 GB umjesto 4,0 GB).
+* Prilikom dobivanja kapaciteta diska i upotrebe memorije, NVDA više neće pogriješiti, ako koristi računalo ili uslugu s više od petabajta RAM-a ili veličine diska.
+* Vrijednosti za memoriju i upotrebu diska prikazuju se s najviše dva decimalna mjesta (npr. 4,00 GB umjesto 4,0 GB).
 * Poboljšano otkrivanje za Windows Insider Preview gradnje.
 
 ## Verzija 18.04
 
-Verzija 18.04.x je posljednje izdanje koje će podržavati verzije Windowsa
-starije od Windowsa 7 SP1.
+Verzija 18.04.x je posljednje izdanje koje će podržavati verzije Windowsa starije od Windowsa 7 SP1.
 
 * Posljednje izdanje koje podržava Windows Server 2003, Vistu i Server 2008.
-* Poboljšano otkrivanje za Windowsa 10 izdanja i bolje razlikovanje između
-  javnih i Insider Preview izdanja.
+* Poboljšano otkrivanje za Windowsa 10 izdanja i bolje razlikovanje između javnih i Insider Preview izdanja.
 
 ## Verzija 17.12
 
@@ -261,9 +200,7 @@ starije od Windowsa 7 SP1.
 Važno: Verzija 17.09 je posljednje izdanje koje podržava Windows XP.
 
 * Zadnja verzija koja radi na Windowsima XP.
-* Windows 10 verzija 16278 i novija prepoznata je kao Verzija 17.09. Manje
-  izdanje ovog dodatka bit će objavljeno nakon objave stabilne verzije
-  2017.9.
+* Windows 10 verzija 16278 i novija prepoznata je kao Verzija 17.09. Manje izdanje ovog dodatka bit će objavljeno nakon objave stabilne verzije 2017.9.
 
 ## Verzija 17.07.1
 
@@ -271,39 +208,30 @@ Važno: Verzija 17.09 je posljednje izdanje koje podržava Windows XP.
 
 ## Verzija 17.05
 
-* Najava trajanja pokretanja sustava (vrijeme proteklo od zadnjeg pokretanja
-  računala); NVDA+Shift+7).
+* Najava trajanja pokretanja sustava (vrijeme proteklo od zadnjeg pokretanja računala); NVDA+Shift+7).
 
 ## Verzija 17.02
 
 * Ažurirana je psutil zavisnost na 5.0.1.
-* Tijekom provjere upotrebljivosti diska, NVDA više neće prikazivati
-  dijaloški okvir pogreške na nekim sustavima gdje izmjenjivi medij nije
-  ispravno prepoznat (primjerice kada kartica nije umetnuta u čitač
-  kartica.)
+* Tijekom provjere upotrebljivosti diska, NVDA više neće prikazivati dijaloški okvir pogreške na nekim sustavima gdje izmjenjivi medij nije ispravno prepoznat (primjerice kada kartica nije umetnuta u čitač kartica.)
 
 ## Verzija 16.08
 
-Počevši od verzije 16.08, izdanja ovog dodatka prikazivat će se u formatu
-godina.mjesec.izdanje.
+Počevši od verzije 16.08, izdanja ovog dodatka prikazivat će se u formatu godina.mjesec.izdanje.
 
-* Različite verzije Windowsa 10 se sada ispravno prepoznaju (kao što je 1607
-  za verziju 14393).
-* Revizije Windows 10 gradnji (nakon instalacije kumulativnih ažuriranja)
-  ispravno se prepoznaju (kao što je 14.393.51).
+* Različite verzije Windowsa 10 se sada ispravno prepoznaju (kao što je 1607 za verziju 14393).
+* Revizije Windows 10 gradnji (nakon instalacije kumulativnih ažuriranja) ispravno se prepoznaju (kao što je 14.393.51).
 * Ako koristite Insider Preview gradnje, ta se činjenica prepoznaje.
 
 ## Promjene u verziji 4.5
 
-* Repozitorij dodatka premješten je na GitHub (možete ga pronaći na
-  https://github.com/josephsl/resourcemonitor).
+* Repozitorij dodatka premješten je na GitHub (možete ga pronaći na https://github.com/josephsl/resourcemonitor).
 * Windows Server 2016. se ispravno prepoznaje.
 
 ## Promjene u verziji 4.0
 
 * Ažurirana je opsutil zavisnost na 2.2.1.
-* Izrazito poboljšana učinkovitost pri dobivanju informacija o opterećenosti
-  procesora.
+* Izrazito poboljšana učinkovitost pri dobivanju informacija o opterećenosti procesora.
 * Dodana podrška za prepoznavanje Windowsa 10.
 * U Windowsima 10, broj verzije Windowsa također će biti izgovoren.
 * Moguće je koristiti Upravljač za dodatke za pristup pomoći.
@@ -316,11 +244,9 @@ godina.mjesec.izdanje.
 ## Promjene u verziji 3.0
 
 * Ažurirana psutil zavisnost na 1.2.1.
-* Izgovor trenutne verzije Windowsa, arhitekture procesora i servisnog
-  paketa ako postoji (NVDA+Shift+6).
+* Izgovor trenutne verzije Windowsa, arhitekture procesora i servisnog paketa ako postoji (NVDA+Shift+6).
 * Mogućnost promjene tipkovnih prečica (NVDA verzija 2013.3 ili novija).
-* Mogućnost kopiranja pojedinačnih informacija o resursima u međuspremnik
-  pritiskom naredbi resursa dva puta.
+* Mogućnost kopiranja pojedinačnih informacija o resursima u međuspremnik pritiskom naredbi resursa dva puta.
 
 ## Promjene u verziji 2.4
 
@@ -333,10 +259,7 @@ godina.mjesec.izdanje.
 
 ## Promjene u verziji 2.2
 
-* Dodani prijevodi na sljedeće jezike: arapski, aragonski, hrvatski,
-  nizozemski, finski, francuski, galicijski, njemački, mađarski, talijanski,
-  japanski, korejski, nepaljski, poljski, portugalski (Brazil), ruski,
-  slovački, slovenski, španjolski, tamilski i turski.
+* Dodani prijevodi na sljedeće jezike: arapski, aragonski, hrvatski, nizozemski, finski, francuski, galicijski, njemački, mađarski, talijanski, japanski, korejski, nepaljski, poljski, portugalski (Brazil), ruski, slovački, slovenski, španjolski, tamilski i turski.
 
 ## Promjene u verziji 2.1
 
@@ -351,5 +274,3 @@ godina.mjesec.izdanje.
 ## Promjene u verziji 1.0
 
 * Prvo izdanje
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor

@@ -4,7 +4,7 @@
 
 该插件可读出 CPU 负载，内存使用情况和其他资源使用信息。
 
-# 快捷键
+## 快捷键
 
 所有命令都支持手动朗读模式。
 
@@ -93,16 +93,16 @@
 NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中！
 
 * 使用 wlanReporter 的 Windows API 取代检测无线连接的旧方法：https://github.com/kvark128/WlanReporter/。
-  * 在读出 SSID 名称和信号强度后，还会读出网络的安全类型。
-  * 在您连接或断开无线网络时，NVDA 会给出提醒。
-  * 在您打开或关闭无线网络时，NVDA 会给出提醒。
+	* 在读出 SSID 名称和信号强度后，还会读出网络的安全类型。
+	* 在您连接或断开无线网络时，NVDA 会给出提醒。
+	* 在您打开或关闭无线网络时，NVDA 会给出提醒。
 
 ## 版本 23.05
 
 * 添加了读出已连接无线网络状态的功能。
-  * 读出连接的无线 SSID 的名称。
-  * 读出 SSID 的强度
-  * 如果未检测到，则读出未找到 SSID。
+	* 读出连接的无线 SSID 的名称。
+	* 读出 SSID 的强度
+	* 如果未检测到，则读出未找到 SSID。
 
 ## 版本 23.02
 
@@ -285,5 +285,3 @@ NVDA 插件 wlanReporter 的功能已经被包含在资源监视器中！
 ## 版本1.0
 
 * 发布初始版本
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=resourceMonitor
