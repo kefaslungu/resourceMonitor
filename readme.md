@@ -29,6 +29,10 @@ This add-on does not replace task manager and other system information programs 
 * When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
+## Version 26.05
+
+* NVDA 2025.3.3 or later is required.
+
 ## Version 26.01
 
 * NVDA 2025.3.2 or later is required.
