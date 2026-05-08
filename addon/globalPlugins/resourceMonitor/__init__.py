@@ -27,6 +27,7 @@ try:
 except OSError:
 	wlanapiAvailable = False
 import addonHandler
+from .gpu import BaseGpuProvider, getGpuProviders
 
 addonHandler.initTranslation()
 
@@ -291,6 +292,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		if not wlanapiAvailable:
 			self._client_handle = None
 			return
@@ -314,6 +316,35 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			)
 		except OSError:
 			pass
+
+	def _getGpuInfo(self) -> str:
+		hasProvider = False
+		hasFailure = False
+		for provider in self._gpuProviders:
+			telemetry = provider.collect()
+			if telemetry is None:
+				continue
+			hasProvider = True
+			if not telemetry:
+				hasFailure = True
+				continue
+			gpuInfoParts = []
+			for index, item in enumerate(telemetry, start=1):
+				gpuInfoParts.append(
+					_("GPU {gpuNumber}: usage {usage}%, temp {temperature}°C.").format(
+						gpuNumber=index,
+						usage=item.utilization,
+						temperature=item.temperature,
+					)
+				)
+			if gpuInfoParts:
+				return " ".join(gpuInfoParts)
+			hasFailure = True
+		if not hasProvider:
+			return _("No GPU information available.")
+		if hasFailure:
+			return _("Unable to get GPU information.")
+		return _("No GPU data available.")
 
 	@scriptHandler.script(
 		description=_(
@@ -451,6 +482,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(info)
 		else:
 			api.copyToClip(info, notify=True)
+
+	@scriptHandler.script(
+		# Translators: Input help mode message about GPU usage and temperature command.
+		description=_("Announces GPU usage and temperature."),
+		speakOnDemand=True,
+	)
+	def script_announceGpuInfo(self, gesture):
+		try:
+			info = self._getGpuInfo()
+			if scriptHandler.getLastScriptRepeatCount() == 0:
+				ui.message(info)
+			else:
+				api.copyToClip(info, notify=True)
+		except Exception:
+			# Translators: Message reported when the GPU command fails unexpectedly.
+			ui.message(_("Failed to get GPU information."))
 
 	def _getWlanInfo(self) -> str:
 		if not self._client_handle:
