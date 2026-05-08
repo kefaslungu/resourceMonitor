@@ -7,8 +7,6 @@
 
 import functools
 import os.path
-import shutil
-import subprocess
 import queueHandler
 import winsound
 from ctypes import addressof, byref, POINTER, wintypes
@@ -29,6 +27,7 @@ try:
 except OSError:
 	wlanapiAvailable = False
 import addonHandler
+from .gpu import BaseGpuProvider, getGpuProviders
 
 addonHandler.initTranslation()
 
@@ -293,8 +292,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		self._nvidiaSmiPath = None
-		self._nvidiaSmiPathResolved = False
+		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		if not wlanapiAvailable:
 			self._client_handle = None
 			return
@@ -319,90 +317,34 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except OSError:
 			pass
 
-	def _findNvidiaSmiPath(self) -> str | None:
-		candidates = []
-		for commandName in ("nvidia-smi", "nvidia-smi.exe"):
-			found = shutil.which(commandName)
-			if found:
-				candidates.append(found)
-		try:
-			whereResult = subprocess.run(
-				["where.exe", "nvidia-smi"],
-				capture_output=True,
-				text=True,
-				timeout=2,
-				check=False,
-			)
-			for line in whereResult.stdout.splitlines():
-				path = line.strip().strip('"')
-				if path:
-					candidates.append(path)
-		except (OSError, subprocess.TimeoutExpired):
-			pass
-		windowsDir = os.environ.get("WINDIR", r"C:\Windows")
-		candidates.append(os.path.join(windowsDir, "System32", "nvidia-smi.exe"))
-		candidates.append(os.path.join(windowsDir, "Sysnative", "nvidia-smi.exe"))
-		for envVar in ("ProgramW6432", "ProgramFiles", "ProgramFiles(x86)"):
-			basePath = os.environ.get(envVar)
-			if not basePath:
-				continue
-			candidates.append(
-				os.path.join(basePath, "NVIDIA Corporation", "NVSMI", "nvidia-smi.exe")
-			)
-		seen = set()
-		for path in candidates:
-			normalizedPath = os.path.normcase(os.path.abspath(path))
-			if normalizedPath in seen:
-				continue
-			seen.add(normalizedPath)
-			if os.path.isfile(path):
-				return path
-		return None
-
 	def _getGpuInfo(self) -> str:
-		if not self._nvidiaSmiPathResolved:
-			self._nvidiaSmiPath = self._findNvidiaSmiPath()
-			self._nvidiaSmiPathResolved = True
-		if not self._nvidiaSmiPath:
-			# Translators: Message reported when GPU telemetry cannot be obtained on this system.
-			return _("No GPU information available.")
-		try:
-			result = subprocess.run(
-				[
-					self._nvidiaSmiPath,
-					"--query-gpu=utilization.gpu,temperature.gpu",
-					"--format=csv,noheader,nounits",
-				],
-				capture_output=True,
-				text=True,
-				timeout=5,
-				check=True,
-			)
-		except (subprocess.CalledProcessError, OSError, subprocess.TimeoutExpired):
-			# Translators: Message reported when GPU telemetry retrieval fails.
-			return _("Unable to get GPU information.")
-		lines = [line.strip() for line in result.stdout.splitlines() if line.strip()]
-		if not lines:
-			# Translators: Message reported when no GPU data entries are returned.
-			return _("No GPU data available.")
-		gpuInfoParts = []
-		for index, line in enumerate(lines, start=1):
-			gpuData = [part.strip() for part in line.split(",")]
-			if len(gpuData) < 2:
+		hasProvider = False
+		hasFailure = False
+		for provider in self._gpuProviders:
+			telemetry = provider.collect()
+			if telemetry is None:
 				continue
-			utilization, temperature = gpuData[0], gpuData[1]
-			gpuInfoParts.append(
-				# Translators: Reports load and temperature for one GPU.
-				_("GPU {gpuNumber}: usage {usage}%, temp {temperature}°C.").format(
-					gpuNumber=index,
-					usage=utilization,
-					temperature=temperature,
+			hasProvider = True
+			if not telemetry:
+				hasFailure = True
+				continue
+			gpuInfoParts = []
+			for index, item in enumerate(telemetry, start=1):
+				gpuInfoParts.append(
+					_("GPU {gpuNumber}: usage {usage}%, temp {temperature}°C.").format(
+						gpuNumber=index,
+						usage=item.utilization,
+						temperature=item.temperature,
+					)
 				)
-			)
-		if not gpuInfoParts:
-			# Translators: Message reported when GPU output format is not recognized.
-			return _("Unable to parse GPU information.")
-		return " ".join(gpuInfoParts)
+			if gpuInfoParts:
+				return " ".join(gpuInfoParts)
+			hasFailure = True
+		if not hasProvider:
+			return _("No GPU information available.")
+		if hasFailure:
+			return _("Unable to get GPU information.")
+		return _("No GPU data available.")
 
 	@scriptHandler.script(
 		description=_(
@@ -544,7 +486,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@scriptHandler.script(
 		# Translators: Input help mode message about GPU usage and temperature command.
 		description=_("Announces GPU usage and temperature."),
-		gestures=["KB:NVDA+shift+0", "KB:NVDA+shift+numpad0"],
 		speakOnDemand=True,
 	)
 	def script_announceGpuInfo(self, gesture):
