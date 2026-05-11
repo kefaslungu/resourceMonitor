@@ -16,6 +16,7 @@ All commands support speech on demand mode.
 * NVDA+Shift+6: presents  CPU Architecture and Windows version and service pack numbers.
 * NVDA+Shift+7: presents the system's uptime.
 * NVDA+Shift+8: presents information on the wireless connection, ssid name and strength, or no ssid if there is none available.
+* Unassigned: presents information about the graphics processing unit (GPU).
 
 You can change these shortcut keys via input gestures dialog.
 
@@ -28,6 +29,10 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
 * When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
+
+## Version 26.06
+
+* Added an unassigned command to announce GPU (graphics processing unit) information (contributed by kevinderome).
 
 ## Version 26.05
 
