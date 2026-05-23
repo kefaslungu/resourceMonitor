@@ -1,6 +1,6 @@
 # Resource Monitor
 
-* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst and other NVDA contributors
+* Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst, Kevin Derome and other NVDA contributors
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
