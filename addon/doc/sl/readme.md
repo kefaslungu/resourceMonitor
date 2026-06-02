@@ -19,38 +19,3 @@ This add-on does not replace task manager and other system information programs 
 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper Threading where number of CPU's is twice the number of CPU cores.
 * There might be a short delay when getting processor usage information.
-
-## Spremembe v 3.0-dev
-
-* Updated psutil dependency to 1.2.1.
-* Added a command (NVDA+Shift+6) to report the version of Windows you are using, CPU bit and service packs if any.
-* Ability to change add-on shortcut keys (NVDA 2013.3 or later).
-* Ability to copy individual resource information to clipboard by pressing resource commands two times.
-
-## Spremembe v 2.4
-
-* New languages: Chinese (simplified), Ukrainian.
-* Updated translations.
-
-## Changes for 2.3
-
-* Added Bulgarian translation.
-
-## Changes for 2.2
-
-* Added following translations: Arabic, Aragonese, Croatian, Dutch, Finnish, French, Galatian, German, Hungarian, Italian, Japanese, Korean, Nepali, Polish, Portuguese (Brazil), Russian, Slovak, Slovenian, Spanish, Tamil and Turkish.
-
-## Spremembe v 2.1
-
-* Updated psutil dependency to version 0.6.1.
-* Fixed long delay when getting information of drives.
-* Replaced %s-es into {friendlyVariableNames}.
-* Manjše čiščenje v kodi
-
-## Spremembe v 2.0
-
-* Dodani podpora prevodom in komentarji v datoteki s prevodi
-
-## Spremembe v 1.0
-
-* Osnovna izdaja
