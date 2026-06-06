@@ -15,6 +15,7 @@ from typing import Any
 import api
 import globalPluginHandler
 import scriptHandler
+import inputCore
 import ui
 import winVersion
 import psutil
@@ -355,7 +356,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+4",
 		speakOnDemand=True,
 	)
-	def script_announceBatteryInfo(self, gesture):
+	def script_announceBatteryInfo(self, gesture: inputCore.InputGesture):
 		info = _batteryInfo(verbose=True)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
@@ -370,7 +371,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+3",
 		speakOnDemand=True,
 	)
-	def script_announceDriveInfo(self, gesture):
+	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
 		# Goes through all registered drives and gives info on each one
 		info = []
 		for drive in psutil.disk_partitions():
@@ -403,7 +404,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+1",
 		speakOnDemand=True,
 	)
-	def script_announceProcessorInfo(self, gesture):
+	def script_announceProcessorInfo(self, gesture: inputCore.InputGesture):
 		averageLoad = psutil.cpu_percent()
 		# Lists load for each core
 		perCpuLoad = psutil.cpu_percent(percpu=True)
@@ -433,7 +434,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
 		speakOnDemand=True,
 	)
-	def script_announceRamInfo(self, gesture):
+	def script_announceRamInfo(self, gesture: inputCore.InputGesture):
 		memory = psutil.virtual_memory()
 		physicalRamUsed, physicalRamTotal = memory.used, memory.total
 		# Translators: Shows RAM (physical memory) usage.
@@ -461,7 +462,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+6",
 		speakOnDemand=True,
 	)
-	def script_announceWinVer(self, gesture):
+	def script_announceWinVer(self, gesture: inputCore.InputGesture):
 		# Unlike other resource usage information, current Windows version info is static.
 		info = getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -476,7 +477,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="kb:NVDA+shift+8",
 		speakOnDemand=True,
 	)
-	def script_wlanStatusReport(self, gesture):
+	def script_wlanStatusReport(self, gesture: inputCore.InputGesture):
 		info = self._getWlanInfo()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
@@ -488,7 +489,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		description=_("Announces GPU usage and temperature."),
 		speakOnDemand=True,
 	)
-	def script_announceGpuInfo(self, gesture):
+	def script_announceGpuInfo(self, gesture: inputCore.InputGesture):
 		try:
 			info = self._getGpuInfo()
 			if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -568,7 +569,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="kb:NVDA+shift+7",
 		speakOnDemand=True,
 	)
-	def script_announceUptime(self, gesture):
+	def script_announceUptime(self, gesture: inputCore.InputGesture):
 		try:
 			uptime = self.getUptime()
 			if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -585,7 +586,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+e",
 		speakOnDemand=True,
 	)
-	def script_announceResourceSummary(self, gesture):
+	def script_announceResourceSummary(self, gesture: inputCore.InputGesture):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 		info = [
