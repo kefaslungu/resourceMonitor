@@ -528,7 +528,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			):
 				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
 					info = _(
-						"Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+						"Connected to {}, signal strength: {}%, security type: {}"
 					).format(
 						n.dot11Ssid.SSID.decode(),
 						n.wlanSignalQuality,
