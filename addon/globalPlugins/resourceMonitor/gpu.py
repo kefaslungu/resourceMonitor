@@ -1,3 +1,7 @@
+# Resource Monitor for NVDA
+# Presents GPU information
+# Copyright 2026 Kevin Derome, Joseph Lee, released under GPL
+
 import os
 import os.path
 import shutil
