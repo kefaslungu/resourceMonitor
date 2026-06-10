@@ -419,10 +419,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Only display average CPU load on single-core systems.
 		if psutil.cpu_count() == 1:
 			# Translators: Shows average load of the processor on single-core systems.
-			info = _("Average CPU load {avgLoad}%.").format(avgLoad=tryTrunk(averageLoad))
+			info = _("{avgLoad}% CPU load.").format(avgLoad=tryTrunk(averageLoad))
 		else:
 			# Translators: Shows average load of the processor and the load for each core on multi-core systems.
-			info = _("Average CPU load {avgLoad}%, {cores}.").format(
+			info = _("{avgLoad}% average CPU load, {cores}.").format(
 				avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad)
 			)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
