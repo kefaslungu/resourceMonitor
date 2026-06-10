@@ -387,7 +387,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					# Translators: Shows drive letter, type of drive (fixed or removable),
 					# used capacity and total capacity of a drive
 					# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(
+					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%).").format(
 						driveName=drive[0],
 						driveType=drive[2],
 						usedSpace=size(driveInfo[1], alternative),
