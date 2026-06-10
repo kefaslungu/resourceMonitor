@@ -87,7 +87,6 @@ reportDeprecated = true
 reportDuplicateImport = true
 reportFunctionMemberAccess = true
 reportGeneralTypeIssues = true
-reportImplicitOverride = true
 reportImportCycles = true
 reportIncompatibleMethodOverride = true
 reportIncompatibleVariableOverride = true
@@ -147,6 +146,7 @@ reportMissingTypeStubs = false
 
 # Bad rules
 # These are sorted alphabetically and should be enabled and moved to compliant rules section when resolved.
+reportImplicitOverride = false  # GPU provider class, resolved in Python 3.12 and later (NVDA 2026.x)
 reportImplicitStringConcatenation = false  # Split lengthy script description onto separate lines
 reportMissingImports = false  # NVDA Core modules
 reportMissingParameterType = false  # WLAN data
