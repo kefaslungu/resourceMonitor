@@ -18,6 +18,7 @@ class BaseGpuProvider:
 
 class NvidiaGpuProvider(BaseGpuProvider):
 	def __init__(self):
+		super().__init__()
 		self._nvidiaSmiPath = None
 		self._nvidiaSmiPathResolved = False
 
