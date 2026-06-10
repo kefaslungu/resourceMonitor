@@ -5,6 +5,7 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 ## Version 26.07
 
 * Removed add-on changelog from add-on help (readme) file.
+* Battery status anouncement command (NVDA+Shift+4) is deprecated and will be removed in a future add-on release (NVDA provides its own battery status command (NVDA+Shift+B)).
 
 ## Version 26.06
 
