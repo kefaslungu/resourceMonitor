@@ -205,6 +205,7 @@ def tryTrunk(n: float) -> int | float:
 
 
 # Moved from battery module to the main module in 2019 (code provided by Alex Hall)
+# Deprecated
 def _batteryInfo(verbose: bool = False) -> str | None:
 	# Returns current battery status provided that the computer has a detectable battery.
 	# The verbose argument will force this function to return something if there is no battery.
@@ -357,6 +358,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		speakOnDemand=True,
 	)
 	def script_announceBatteryInfo(self, gesture: inputCore.InputGesture):
+		# Deprecated
 		info = _batteryInfo(verbose=True)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
