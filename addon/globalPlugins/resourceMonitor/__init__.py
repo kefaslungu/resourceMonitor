@@ -596,6 +596,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
 			)
 		]
+		# Deprecated: battery info can be obtained directly via NVDA (NVDA+Shift+B).
 		batteryInfo = _batteryInfo()
 		if batteryInfo is not None:
 			info.append(batteryInfo)
