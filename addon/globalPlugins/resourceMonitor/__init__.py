@@ -321,6 +321,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		super().terminate()
+		self._gpuProviders.clear()
 		if not self._client_handle:
 			return
 		self._negotiated_version = None
