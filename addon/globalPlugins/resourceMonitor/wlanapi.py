@@ -9,6 +9,7 @@ from ctypes.wintypes import DWORD, PDWORD, HANDLE, BOOL
 
 wlanapi = windll.wlanapi
 
+WLAN_NOTIFICATION_SOURCE_NONE = 0
 WLAN_NOTIFICATION_SOURCE_ALL = 0x0000ffff
 WLAN_NOTIFICATION_SOURCE_ACM = 0x00000008
 wlan_notification_acm_connection_complete = 0x0000000a
