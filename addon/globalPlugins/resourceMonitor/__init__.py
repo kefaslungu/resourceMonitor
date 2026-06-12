@@ -319,6 +319,29 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except OSError:
 			pass
 
+	def terminate(self):
+		super().terminate()
+		if not self._client_handle:
+			return
+		self._negotiated_version = None
+		try:
+			wlanapi.WlanRegisterNotification(
+				self._client_handle,
+				wlanapi.WLAN_NOTIFICATION_SOURCE_NONE,
+				True,
+				notifyHandler,
+				None,
+				None,
+				None,
+			)
+			wlanapi.WlanCloseHandle(
+				byref(self._client_handle),
+				None,
+			)
+			self._client_handle = None
+		except OSError:
+			pass
+
 	def _getGpuInfo(self) -> str:
 		hasProvider = False
 		hasFailure = False
