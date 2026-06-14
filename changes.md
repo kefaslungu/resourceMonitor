@@ -7,6 +7,7 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 * Removed add-on changelog from add-on help (readme) file.
 * Changed CPU load and wireless network status announcements to show average CPU load percentage first and made network status reporting less verbose, respectively.
 * NVDA will no longer repeat wireless network status announcements when the add-on is reloaded without first restarting NVDA (Control+NVDA+F3).
+* NVDA will no longer announce GPU information in secure screens due to how the feature works internally.
 * Battery status anouncement command (NVDA+Shift+4) and announcing battery info as part of the overall resource usage information (NVDA+Shift+E) are deprecated and will be removed in a future add-on release (NVDA provides its own battery status command (NVDA+Shift+B)).
 
 ## Version 26.06
