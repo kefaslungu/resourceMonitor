@@ -18,6 +18,7 @@ import scriptHandler
 import inputCore
 import ui
 import winVersion
+from gui import blockAction
 import psutil
 
 # Windows Server systems prior to Server 2025 do not include wlanapi.dll.
@@ -515,6 +516,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		description=_("Announces GPU usage and temperature."),
 		speakOnDemand=True,
 	)
+	# Do not report GPU info in secure mode
+	# (for NVIDIA, GPU info is obtained by parsing output from another program,
+	# potentially introducing security issues such as parsing problems).
+	@blockAction.when(blockAction.Context.SECURE_MODE)
 	def script_announceGpuInfo(self, gesture: inputCore.InputGesture):
 		try:
 			info = self._getGpuInfo()
