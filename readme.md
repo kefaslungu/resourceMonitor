@@ -16,7 +16,7 @@ All commands support speech on demand mode.
 * NVDA+Shift+6: presents  CPU Architecture and Windows version and service pack numbers.
 * NVDA+Shift+7: presents the system's uptime.
 * NVDA+Shift+8: presents information on the wireless connection, ssid name and strength, or no ssid if there is none available.
-* Unassigned: presents information about the graphics processing unit (GPU).
+* Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).
 
 You can change these shortcut keys via input gestures dialog.
 
