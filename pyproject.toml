@@ -101,6 +101,7 @@ reportInvalidTypeForm = true
 reportInvalidTypeVarUse = true
 reportMatchNotExhaustive = true
 reportMissingModuleSource = true
+reportMissingParameterType = true
 reportMissingSuperCall = true
 reportMissingTypeArgument = true
 reportNoOverloadImplementation = true
@@ -149,7 +150,6 @@ reportMissingTypeStubs = false
 reportImplicitOverride = false  # GPU provider class, resolved in Python 3.12 and later (NVDA 2026.x)
 reportImplicitStringConcatenation = false  # Split lengthy script description onto separate lines
 reportMissingImports = false  # NVDA Core modules
-reportMissingParameterType = false  # WLAN data
 reportPrivateUsage = false  # _psutil_windows is part of psutil package
 reportUnboundVariable = false  # WLAN module and info, memory size reporting
 reportUndefinedVariable = false  # _ = gettext.gettext call, ngettext comes from gettext
