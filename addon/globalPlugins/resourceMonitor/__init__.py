@@ -59,7 +59,7 @@ try:
 	}
 
 	@wlanapi.WLAN_NOTIFICATION_CALLBACK
-	def notifyHandler(pData, pCtx):
+	def notifyHandler(pData: Any, pCtx: Any):
 		if pData.contents.NotificationSource != wlanapi.WLAN_NOTIFICATION_SOURCE_ACM:
 			return
 		match pData.contents.NotificationCode:
@@ -101,7 +101,7 @@ except NameError:
 	pass
 
 
-def customResize(array, newSize):
+def customResize(array: Any, newSize: Any):
 	return (array._type_ * newSize).from_address(addressof(array))
 
 
