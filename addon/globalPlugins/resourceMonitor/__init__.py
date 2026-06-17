@@ -7,13 +7,13 @@
 
 import functools
 import os.path
-import queueHandler
 import winsound
 from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
 from typing import Any
 import api
 import globalPluginHandler
+import queueHandler
 import scriptHandler
 import inputCore
 import ui
