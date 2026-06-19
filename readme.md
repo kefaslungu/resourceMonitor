@@ -12,10 +12,9 @@ All commands support speech on demand mode.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual ram.
 * NVDA+Shift+3: presents the used and total space of the static and removable drives.
-* NVDA+Shift+4: presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical (deprecated).
+* NVDA+Shift+4: presents information on the wireless connection, ssid name and strength, or no ssid if there is none available.
 * NVDA+Shift+6: presents  CPU Architecture and Windows version and service pack numbers.
 * NVDA+Shift+7: presents the system's uptime.
-* NVDA+Shift+8: presents information on the wireless connection, ssid name and strength, or no ssid if there is none available.
 * Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).
 
 You can change these shortcut keys via input gestures dialog.
