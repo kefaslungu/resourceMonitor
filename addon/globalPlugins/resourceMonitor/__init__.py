@@ -374,23 +374,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		return _("No GPU data available.")
 
 	@scriptHandler.script(
-		description=_(
-			# Translators: Input help message about battery info command in Resource Monitor.
-			"Presents battery percentage, charging status, remaining time (if not charging), "
-			"and a warning if the battery is low or critical."
-		),
-		gesture="KB:NVDA+shift+4",
-		speakOnDemand=True,
-	)
-	def script_announceBatteryInfo(self, gesture: inputCore.InputGesture):
-		# Deprecated
-		info = _batteryInfo(verbose=True)
-		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(info)
-		else:
-			api.copyToClip(info, notify=True)
-
-	@scriptHandler.script(
 		# Translators: Input help message about drive info command in Resource Monitor.
 		description=_(
 			"Presents the used and total space of the static and removable drives on this computer."
@@ -625,8 +608,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
 			)
 		]
-		# Deprecated: battery info can be obtained directly via NVDA (NVDA+Shift+B).
-		batteryInfo = _batteryInfo()
-		if batteryInfo is not None:
-			info.append(batteryInfo)
 		ui.message(" ".join(info))
