@@ -423,7 +423,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: Input help mode message about obtaining the ssid of the wireless network,
 		# and the strength of the network.
 		description=_("Announces the system's wireless network ssid name, and its strength."),
-		gesture="kb:NVDA+shift+8",
+		gesture="kb:NVDA+shift+4",
 		speakOnDemand=True,
 	)
 	def script_wlanStatusReport(self, gesture: inputCore.InputGesture):
