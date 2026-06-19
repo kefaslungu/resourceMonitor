@@ -596,7 +596,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about overall system resource info command in Resource Monitor
-		description=_("Presents used ram, average processor load, and battery info if available."),
+		description=_("Presents used ram and average processor load."),
 		gesture="KB:NVDA+shift+e",
 		speakOnDemand=True,
 	)
