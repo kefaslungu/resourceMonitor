@@ -2,6 +2,10 @@
 
 This page lists the complete changelog for Resource Monitor add-on releases.
 
+## Version 26.08
+
+* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status.
+
 ## Version 26.07
 
 * Removed add-on changelog from add-on help (readme) file.
