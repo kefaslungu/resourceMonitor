@@ -205,67 +205,6 @@ def tryTrunk(n: float) -> int | float:
 	return n
 
 
-# Moved from battery module to the main module in 2019 (code provided by Alex Hall)
-# Deprecated
-def _batteryInfo(verbose: bool = False) -> str | None:
-	# Returns current battery status provided that the computer has a detectable battery.
-	# The verbose argument will force this function to return something if there is no battery.
-	info = None
-	# Uses psutil.sensors_battery function except it also checks battery low/critical flags.
-	battery = psutil.sensors_battery()
-	if battery is None:
-		# Translators: Message reported when there is no battery on the system,
-		# mostly laptops with battery pack removed and running on AC power.
-		info = _("This computer does not have a battery connected.") if verbose else None
-	else:
-		percent, secsleft, power_plugged = battery
-		if power_plugged:
-			# Translators: message presented when AC is connected and battery is charging,
-			# also show current battery percentage.
-			info = _("{percent}%, battery charging.").format(percent=tryTrunk(percent))
-		else:
-			# Announce time unknown status.
-			if secsleft == 0xFFFFFFFF:
-				# Translators: message presented when computer is running on battery power,
-				# showing percentage remaining yet battery time is unknown.
-				info = _("{percent}% battery remaining, battery time unknown.").format(
-					percent=tryTrunk(percent)
-				)
-			else:
-				# Prepare hours:minutes.
-				# Optimization: build components list and take away seconds
-				# as it is not required (floor division with 60).
-				timeLeft = []
-				secsleft = secsleft // 60
-				hours, minutes = divmod(secsleft, 60)
-				# For hours and minutes, formatted string literals will be appended.
-				if hours > 0:
-					timeLeft.append(
-						# Translators: battery and system uptime in hours.
-						ngettext("{hours:d} hour", "{hours:d} hours", hours).format(hours=hours)
-					)
-				if minutes > 0:
-					timeLeft.append(
-						# Translators: battery and system uptime in minutes.
-						ngettext("{minutes:d} minute", "{minutes:d} minutes", minutes).format(minutes=minutes)
-					)
-				# Because psutil.sensors_battery function does not present battery flags by default,
-				# manually read this info at the cost of calling the C extension twice.
-				batteryFlags = psutil._psutil_windows.sensors_battery()[1]
-				info = _(
-					# Translators: message presented when computer is running on battery power,
-					# showing percentage remaining and estimated remaining time.
-					"{percent}% battery remaining, about {time}."
-				).format(percent=tryTrunk(percent), time=", ".join(timeLeft))
-				if batteryFlags & 2:
-					# Translators: Message reported when battery level is low.
-					info += _(" Warning: low battery.")
-				elif batteryFlags & 4:
-					# Translators: Message reported when battery level is critical.
-					info += _(" Warning: critically low battery.")
-	return info
-
-
 @functools.lru_cache(maxsize=1)
 def getWinVer() -> str:
 	# Obtain current Windows version.
