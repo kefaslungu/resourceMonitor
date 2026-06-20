@@ -15,7 +15,7 @@ env:
   GH_TOKEN: ${{ github.token }}
   CROWDIN_PROJECT_ID: ${{ vars.CROWDIN_PROJECT_ID || 780748 }}
   L10N_UTIL_CONFIG: ${{ vars.L10N_UTIL_CONFIG || 'addon' }}
-  MIN_PERCENTAGE_TRANSLATED: ${{ vars.MIN_PERCENTAGE_TRANSLATED || 50 }}
+  MIN_PERCENTAGE_TRANSLATED: ${{ vars.MIN_PERCENTAGE_TRANSLATED || 70 }}
 
 jobs:
   crowdinSync:
