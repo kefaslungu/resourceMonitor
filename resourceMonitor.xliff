@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/497ff9f21c37637c53598bc080e467fe92785618/readme.md">
+<skeleton>
+# $(ID:4566d44d-44e5-4bf8-87b8-f29d4ecaaa03)
+
+* $(ID:e250d8eb-dbf6-4524-8b56-4c181d36e9f3)
+
+$(ID:4ba3b2ea-5e7e-4236-9e69-d99ce0e70168)
+
+## $(ID:10cb3779-3d16-4d8b-a57e-36391bdd69e8)
+
+$(ID:756f97fb-9153-48a2-83ca-6bc45c455fa1)
+
+* $(ID:456227ed-fb03-46fd-abb2-e4bdc6f5a3ca)
+* $(ID:a026e904-4609-43d5-8864-ad078a2e219d)
+* $(ID:7bfe7c49-b039-4374-96c5-a8112c1ff975)
+* $(ID:881f7f79-139c-411c-ada8-78096b705ffb)
+* $(ID:6b9a5b13-4628-4edb-8d05-b8779162e42f)
+* $(ID:c7cee819-e30e-40a3-bd25-5c267b000b2c)
+* $(ID:6b242ca4-370e-473c-9c2c-e2d6db09aa5d)
+* $(ID:7556990e-9fd3-4d08-b63e-80995af1ae42)
+
+$(ID:59eb243e-d5cd-4530-8309-13acf93213a2)
+
+## $(ID:cf9d1f4c-49a9-44c6-b161-ecfd913e64f6)
+
+$(ID:6afdbb36-1fa8-4498-99e0-3af26ac88091)
+
+* $(ID:70ea07e4-d172-4dc7-aa11-970495a5c25e)
+* $(ID:3c1109cf-caa1-4f20-8801-a032bbcdecbc)
+* $(ID:76de1c68-d3d8-4811-8462-83397bb45d53)
+* $(ID:7fe4f01c-c276-4cd6-bd70-9946b79e26d6)
+* $(ID:2526a96e-9263-4d2b-acf3-adf0ebf773e0)
+
+$(ID:cede3681-25e1-4335-adad-b188883c418e)
+
+$(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
+
+</skeleton>
+<unit id="4566d44d-44e5-4bf8-87b8-f29d4ecaaa03">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Resource Monitor</source>
+</segment>
+</unit>
+<unit id="e250d8eb-dbf6-4524-8b56-4c181d36e9f3">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst, Kevin Derome and other NVDA contributors</source>
+</segment>
+</unit>
+<unit id="4ba3b2ea-5e7e-4236-9e69-d99ce0e70168">
+<notes>
+<note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>This add-on gives information about CPU load, memory usage and other resource usage information.</source>
+</segment>
+</unit>
+<unit id="10cb3779-3d16-4d8b-a57e-36391bdd69e8">
+<notes>
+<note appliesTo="source">line: 8</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Shortcuts</source>
+</segment>
+</unit>
+<unit id="756f97fb-9153-48a2-83ca-6bc45c455fa1">
+<notes>
+<note appliesTo="source">line: 10</note>
+</notes>
+<segment>
+<source>All commands support speech on demand mode.</source>
+</segment>
+</unit>
+<unit id="456227ed-fb03-46fd-abb2-e4bdc6f5a3ca">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+Shift+E: presents used ram, average processor load, and battery info if available (battery info announcement is deprecated).</source>
+</segment>
+</unit>
+<unit id="a026e904-4609-43d5-8864-ad078a2e219d">
+<notes>
+<note appliesTo="source">line: 13</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.</source>
+</segment>
+</unit>
+<unit id="7bfe7c49-b039-4374-96c5-a8112c1ff975">
+<notes>
+<note appliesTo="source">line: 14</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+Shift+2/5: presents the used and total space for both physical and virtual ram.</source>
+</segment>
+</unit>
+<unit id="881f7f79-139c-411c-ada8-78096b705ffb">
+<notes>
+<note appliesTo="source">line: 15</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+Shift+3: presents the used and total space of the static and removable drives.</source>
+</segment>
+</unit>
+<unit id="6b9a5b13-4628-4edb-8d05-b8779162e42f">
+<notes>
+<note appliesTo="source">line: 16</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+Shift+4: presents information on the wireless connection, ssid name and strength, or no ssid if there is none available.</source>
+</segment>
+</unit>
+<unit id="c7cee819-e30e-40a3-bd25-5c267b000b2c">
+<notes>
+<note appliesTo="source">line: 17</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+Shift+6: presents  CPU Architecture and Windows version and service pack numbers.</source>
+</segment>
+</unit>
+<unit id="6b242ca4-370e-473c-9c2c-e2d6db09aa5d">
+<notes>
+<note appliesTo="source">line: 18</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+Shift+7: presents the system's uptime.</source>
+</segment>
+</unit>
+<unit id="7556990e-9fd3-4d08-b63e-80995af1ae42">
+<notes>
+<note appliesTo="source">line: 19</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).</source>
+</segment>
+</unit>
+<unit id="59eb243e-d5cd-4530-8309-13acf93213a2">
+<notes>
+<note appliesTo="source">line: 21</note>
+</notes>
+<segment>
+<source>You can change these shortcut keys via input gestures dialog.</source>
+</segment>
+</unit>
+<unit id="cf9d1f4c-49a9-44c6-b161-ecfd913e64f6">
+<notes>
+<note appliesTo="source">line: 23</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Usage notes</source>
+</segment>
+</unit>
+<unit id="6afdbb36-1fa8-4498-99e0-3af26ac88091">
+<notes>
+<note appliesTo="source">line: 25</note>
+</notes>
+<segment>
+<source>This add-on does not replace task manager and other system information programs for Windows. Also note the following:</source>
+</segment>
+</unit>
+<unit id="70ea07e4-d172-4dc7-aa11-970495a5c25e">
+<notes>
+<note appliesTo="source">line: 27</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Resource information cannot be copied to the clipboard if running the add-on in secure screens.</source>
+</segment>
+</unit>
+<unit id="3c1109cf-caa1-4f20-8801-a032bbcdecbc">
+<notes>
+<note appliesTo="source">line: 28</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.</source>
+</segment>
+</unit>
+<unit id="76de1c68-d3d8-4811-8462-83397bb45d53">
+<notes>
+<note appliesTo="source">line: 29</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.</source>
+</segment>
+</unit>
+<unit id="7fe4f01c-c276-4cd6-bd70-9946b79e26d6">
+<notes>
+<note appliesTo="source">line: 30</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.</source>
+</segment>
+</unit>
+<unit id="2526a96e-9263-4d2b-acf3-adf0ebf773e0">
+<notes>
+<note appliesTo="source">line: 31</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Installing the add-on on Windows 10/11 LTSC is not supported.</source>
+</segment>
+</unit>
+<unit id="cede3681-25e1-4335-adad-b188883c418e">
+<notes>
+<note appliesTo="source">line: 33</note>
+</notes>
+<segment>
+<source>For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.</source>
+</segment>
+</unit>
+<unit id="32d59eb2-cc6d-4498-8a04-ed6e06dbe82e">
+<notes>
+<note appliesTo="source">line: 35</note>
+</notes>
+<segment>
+<source>[1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md</source>
+</segment>
+</unit>
+</file>
+</xliff>
