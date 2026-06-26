@@ -8,7 +8,7 @@ This add-on gives information about CPU load, memory usage and other resource us
 
 All commands support speech on demand mode.
 
-* NVDA+Shift+E: presents used ram, average processor load, and battery info if available (battery info announcement is deprecated).
+* NVDA+Shift+E: presents used RAM (pyysical memory) and average processor load.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual ram.
 * NVDA+Shift+3: presents the used and total space of the static and removable drives.
