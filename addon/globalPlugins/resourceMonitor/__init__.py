@@ -383,23 +383,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			api.copyToClip(" ".join(info), notify=True)
 
-	@scriptHandler.script(
-		# Translators: Input help mode message about Windows version command in Resource Monitor.
-		description=_(
-			"Announces the version of Windows you are using. "
-			"If pressed twice, copies the information to the clipboard."
-		),
-		gesture="KB:NVDA+shift+6",
-		speakOnDemand=True,
-	)
-	def script_announceWinVer(self, gesture: inputCore.InputGesture):
-		# Unlike other resource usage information, current Windows version info is static.
-		info = getWinVer()
-		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(info)
-		else:
-			api.copyToClip(info, notify=True)
-
 	def _getWlanInfo(self) -> str:
 		if not self._client_handle:
 			return _("No wireless devices")
@@ -449,6 +432,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_wlanStatusReport(self, gesture: inputCore.InputGesture):
 		info = self._getWlanInfo()
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			api.copyToClip(info, notify=True)
+
+	@scriptHandler.script(
+		# Translators: Input help mode message about Windows version command in Resource Monitor.
+		description=_(
+			"Announces the version of Windows you are using. "
+			"If pressed twice, copies the information to the clipboard."
+		),
+		gesture="KB:NVDA+shift+6",
+		speakOnDemand=True,
+	)
+	def script_announceWinVer(self, gesture: inputCore.InputGesture):
+		# Unlike other resource usage information, current Windows version info is static.
+		info = getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
