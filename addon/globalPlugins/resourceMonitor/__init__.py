@@ -429,6 +429,43 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			api.copyToClip(info, notify=True)
 
+	def _getWlanInfo(self) -> str:
+		if not self._client_handle:
+			return _("No wireless devices")
+
+		wlan_ifaces = POINTER(wlanapi.WLAN_INTERFACE_INFO_LIST)()
+		wlanapi.WlanEnumInterfaces(self._client_handle, None, byref(wlan_ifaces))
+
+		if wlan_ifaces.contents.NumberOfItems == 0:
+			wlanapi.WlanFreeMemory(wlan_ifaces)
+			return _("No wireless devices")
+
+		for i in customResize(wlan_ifaces.contents.InterfaceInfo, wlan_ifaces.contents.NumberOfItems):
+			if i.isState != wlanapi.wlan_interface_state_connected:
+				info = _("No wireless connections")
+				continue
+
+			wlan_available_network_list = POINTER(wlanapi.WLAN_AVAILABLE_NETWORK_LIST)()
+			wlanapi.WlanGetAvailableNetworkList(
+				self._client_handle, byref(i.InterfaceGuid), 0, None, byref(wlan_available_network_list)
+			)
+			for n in customResize(
+				wlan_available_network_list.contents.Network,
+				wlan_available_network_list.contents.NumberOfItems,
+			):
+				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
+					info = _(
+						"Connected to {}, signal strength: {}%, security type: {}"
+					).format(
+						n.dot11Ssid.SSID.decode(),
+						n.wlanSignalQuality,
+						SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm),
+					)
+					break
+			wlanapi.WlanFreeMemory(wlan_available_network_list)
+		wlanapi.WlanFreeMemory(wlan_ifaces)
+		return info
+
 	@scriptHandler.script(
 		# Translators: Input help mode message about obtaining the ssid of the wireless network,
 		# and the strength of the network.
@@ -468,43 +505,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except Exception:
 			# Translators: Message reported when the GPU command fails unexpectedly.
 			ui.message(_("Failed to get GPU information."))
-
-	def _getWlanInfo(self) -> str:
-		if not self._client_handle:
-			return _("No wireless devices")
-
-		wlan_ifaces = POINTER(wlanapi.WLAN_INTERFACE_INFO_LIST)()
-		wlanapi.WlanEnumInterfaces(self._client_handle, None, byref(wlan_ifaces))
-
-		if wlan_ifaces.contents.NumberOfItems == 0:
-			wlanapi.WlanFreeMemory(wlan_ifaces)
-			return _("No wireless devices")
-
-		for i in customResize(wlan_ifaces.contents.InterfaceInfo, wlan_ifaces.contents.NumberOfItems):
-			if i.isState != wlanapi.wlan_interface_state_connected:
-				info = _("No wireless connections")
-				continue
-
-			wlan_available_network_list = POINTER(wlanapi.WLAN_AVAILABLE_NETWORK_LIST)()
-			wlanapi.WlanGetAvailableNetworkList(
-				self._client_handle, byref(i.InterfaceGuid), 0, None, byref(wlan_available_network_list)
-			)
-			for n in customResize(
-				wlan_available_network_list.contents.Network,
-				wlan_available_network_list.contents.NumberOfItems,
-			):
-				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
-					info = _(
-						"Connected to {}, signal strength: {}%, security type: {}"
-					).format(
-						n.dot11Ssid.SSID.decode(),
-						n.wlanSignalQuality,
-						SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm),
-					)
-					break
-			wlanapi.WlanFreeMemory(wlan_available_network_list)
-		wlanapi.WlanFreeMemory(wlan_ifaces)
-		return info
 
 	def getUptime(self) -> str:
 		bootTimestamp = psutil.boot_time()
