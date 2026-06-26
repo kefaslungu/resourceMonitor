@@ -23,6 +23,7 @@ You can change these shortcut keys via input gestures dialog.
 
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
+* Apart from overall resource usage command (NVDA+Shift+E), pressing other commands twice will copy resource usage information to the clipboard.
 * Resource information cannot be copied to the clipboard if running the add-on in secure screens.
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
