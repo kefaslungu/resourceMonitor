@@ -284,42 +284,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	@scriptHandler.script(
-		# Translators: Input help message about drive info command in Resource Monitor.
-		description=_(
-			"Presents the used and total space of the fixed (built-in) and removable drives on this computer. "
-			"If pressed twice, copies the information to the clipboard."
-		),
-		gesture="KB:NVDA+shift+3",
-		speakOnDemand=True,
-	)
-	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
-		# Goes through all registered drives and gives info on each one
-		info = []
-		for drive in psutil.disk_partitions():
-			# Get info on each one
-			# If and only if the Windows says disk is ready in order to avoid
-			# a core stack freeze when no disk is inserted into a slot.
-			# This can be checked by looking for a file system.
-			if drive.fstype:
-				driveInfo = psutil.disk_usage(drive[0])
-				info.append(
-					# Translators: Shows drive letter, type of drive (fixed or removable),
-					# used capacity and total capacity of a drive
-					# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%).").format(
-						driveName=drive[0],
-						driveType=drive[2],
-						usedSpace=size(driveInfo[1], alternative),
-						totalSpace=size(driveInfo[0], alternative),
-						percent=tryTrunk(driveInfo[3]),
-					)
-				)
-		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(" ".join(info))
-		else:
-			api.copyToClip(" ".join(info), notify=True)
-
-	@scriptHandler.script(
 		# Translators: Input help mode message about processor info command in Resource Monitor.
 		description=_(
 			"Presents the average processor load and the load of each core. "
@@ -382,6 +346,42 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(info)
 		else:
 			api.copyToClip(info, notify=True)
+
+	@scriptHandler.script(
+		# Translators: Input help message about drive info command in Resource Monitor.
+		description=_(
+			"Presents the used and total space of the fixed (built-in) and removable drives on this computer. "
+			"If pressed twice, copies the information to the clipboard."
+		),
+		gesture="KB:NVDA+shift+3",
+		speakOnDemand=True,
+	)
+	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
+		# Goes through all registered drives and gives info on each one
+		info = []
+		for drive in psutil.disk_partitions():
+			# Get info on each one
+			# If and only if the Windows says disk is ready in order to avoid
+			# a core stack freeze when no disk is inserted into a slot.
+			# This can be checked by looking for a file system.
+			if drive.fstype:
+				driveInfo = psutil.disk_usage(drive[0])
+				info.append(
+					# Translators: Shows drive letter, type of drive (fixed or removable),
+					# used capacity and total capacity of a drive
+					# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%).").format(
+						driveName=drive[0],
+						driveType=drive[2],
+						usedSpace=size(driveInfo[1], alternative),
+						totalSpace=size(driveInfo[0], alternative),
+						percent=tryTrunk(driveInfo[3]),
+					)
+				)
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(" ".join(info))
+		else:
+			api.copyToClip(" ".join(info), notify=True)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about Windows version command in Resource Monitor.
