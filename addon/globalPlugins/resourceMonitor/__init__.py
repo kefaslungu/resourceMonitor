@@ -315,7 +315,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@scriptHandler.script(
 		# Translators: Input help message about drive info command in Resource Monitor.
 		description=_(
-			"Presents the used and total space of the static and removable drives on this computer."
+			"Presents the used and total space of the fixed (built-in) and removable drives on this computer. "
+			"If pressed twice, copies the information to the clipboard."
 		),
 		gesture="KB:NVDA+shift+3",
 		speakOnDemand=True,
@@ -349,7 +350,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about processor info command in Resource Monitor.
-		description=_("Presents the average processor load and the load of each core."),
+		description=_(
+			"Presents the average processor load and the load of each core. "
+			"If pressed twice, copies the information to the clipboard."
+		),
 		gesture="KB:NVDA+shift+1",
 		speakOnDemand=True,
 	)
@@ -379,7 +383,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about memory info command in Resource Monitor.
-		description=_("Presents the used and total space for both physical and virtual ram."),
+		description=_(
+			"Presents the used and total space for both physical and virtual ram. "
+			"If pressed twice, copies the information to the clipboard."
+		),
 		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
 		speakOnDemand=True,
 	)
@@ -407,7 +414,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about Windows version command in Resource Monitor.
-		description=_("Announces the version of Windows you are using."),
+		description=_(
+			"Announces the version of Windows you are using. "
+			"If pressed twice, copies the information to the clipboard."
+		),
 		gesture="KB:NVDA+shift+6",
 		speakOnDemand=True,
 	)
@@ -422,7 +432,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@scriptHandler.script(
 		# Translators: Input help mode message about obtaining the ssid of the wireless network,
 		# and the strength of the network.
-		description=_("Announces the system's wireless network ssid name, and its strength."),
+		description=_(
+			"Announces the system's wireless network name (SSID), connection strength, and security  protocol. "
+			"If pressed twice, copies the information to the clipboard."
+		),
 		gesture="kb:NVDA+shift+4",
 		speakOnDemand=True,
 	)
@@ -435,7 +448,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about GPU usage and temperature command.
-		description=_("Announces GPU usage and temperature."),
+		description=_(
+			"Announces GPU usage and temperature. "
+			"If pressed twice, copies the information to the clipboard."
+		),
 		speakOnDemand=True,
 	)
 	# Do not report GPU info in secure mode
@@ -518,7 +534,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about obtaining the system's uptime
-		description=_("Announces the system's uptime."),
+		description=_(
+			"Announces the system's uptime. "
+			"If pressed twice, copies the information to the clipboard."
+		),
 		gesture="kb:NVDA+shift+7",
 		speakOnDemand=True,
 	)
