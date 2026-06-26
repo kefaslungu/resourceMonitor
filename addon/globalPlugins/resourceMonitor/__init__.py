@@ -284,6 +284,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	@scriptHandler.script(
+		# Translators: Input help mode message about overall system resource info command in Resource Monitor
+		description=_("Presents used ram and average processor load."),
+		gesture="KB:NVDA+shift+e",
+		speakOnDemand=True,
+	)
+	def script_announceResourceSummary(self, gesture: inputCore.InputGesture):
+		# Faster to build info on the fly rather than keep appending to a string.
+		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+		info = [
+			_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(
+				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
+			)
+		]
+		ui.message(" ".join(info))
+
+	@scriptHandler.script(
 		# Translators: Input help mode message about processor info command in Resource Monitor.
 		description=_(
 			"Presents the average processor load and the load of each core. "
@@ -551,19 +567,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except Exception:
 			# Translators: Message reported when the GPU command fails unexpectedly.
 			ui.message(_("Failed to get GPU information."))
-
-	@scriptHandler.script(
-		# Translators: Input help mode message about overall system resource info command in Resource Monitor
-		description=_("Presents used ram and average processor load."),
-		gesture="KB:NVDA+shift+e",
-		speakOnDemand=True,
-	)
-	def script_announceResourceSummary(self, gesture: inputCore.InputGesture):
-		# Faster to build info on the fly rather than keep appending to a string.
-		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-		info = [
-			_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(
-				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
-			)
-		]
-		ui.message(" ".join(info))
