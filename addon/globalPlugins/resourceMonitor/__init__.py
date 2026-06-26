@@ -454,6 +454,52 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			api.copyToClip(info, notify=True)
 
+	def getUptime(self) -> str:
+		bootTimestamp = psutil.boot_time()
+		if bootTimestamp == 0.0:
+			raise TypeError
+		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
+		hours, remainingMinutes = divmod(uptime.seconds, 3600)
+		minutes, seconds = divmod(remainingMinutes, 60)
+		uptimeComponents = []
+		uptimeComponents.append(
+			# Translators: system uptime in days.
+			ngettext("{days:d} day", "{days:d} days", uptime.days).format(days=uptime.days)
+		)
+		uptimeComponents.append(
+			# Translators: system uptime in hours.
+			ngettext("{hours:d} hour", "{hours:d} hours", hours).format(hours=hours)
+		)
+		uptimeComponents.append(
+			# Translators: system uptime in minutes.
+			ngettext("{minutes:d} minute", "{minutes:d} minutes", minutes).format(minutes=minutes)
+		)
+		uptimeComponents.append(
+			# Translators: system uptime in seconds.
+			ngettext("{seconds:d} second", "{seconds:d} seconds", seconds).format(seconds=seconds)
+		)
+		return ", ".join(uptimeComponents)
+
+	@scriptHandler.script(
+		# Translators: Input help mode message about obtaining the system's uptime
+		description=_(
+			"Announces the system's uptime. "
+			"If pressed twice, copies the information to the clipboard."
+		),
+		gesture="kb:NVDA+shift+7",
+		speakOnDemand=True,
+	)
+	def script_announceUptime(self, gesture: inputCore.InputGesture):
+		try:
+			uptime = self.getUptime()
+			if scriptHandler.getLastScriptRepeatCount() == 0:
+				ui.message(uptime)
+			else:
+				api.copyToClip(uptime, notify=True)
+		except TypeError:
+			# Translators: Obtaining uptime failed
+			ui.message(_("Failed to get the system's uptime."))
+
 	def _getGpuInfo(self) -> str:
 		hasProvider = False
 		hasFailure = False
@@ -505,52 +551,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except Exception:
 			# Translators: Message reported when the GPU command fails unexpectedly.
 			ui.message(_("Failed to get GPU information."))
-
-	def getUptime(self) -> str:
-		bootTimestamp = psutil.boot_time()
-		if bootTimestamp == 0.0:
-			raise TypeError
-		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
-		hours, remainingMinutes = divmod(uptime.seconds, 3600)
-		minutes, seconds = divmod(remainingMinutes, 60)
-		uptimeComponents = []
-		uptimeComponents.append(
-			# Translators: system uptime in days.
-			ngettext("{days:d} day", "{days:d} days", uptime.days).format(days=uptime.days)
-		)
-		uptimeComponents.append(
-			# Translators: system uptime in hours.
-			ngettext("{hours:d} hour", "{hours:d} hours", hours).format(hours=hours)
-		)
-		uptimeComponents.append(
-			# Translators: system uptime in minutes.
-			ngettext("{minutes:d} minute", "{minutes:d} minutes", minutes).format(minutes=minutes)
-		)
-		uptimeComponents.append(
-			# Translators: system uptime in seconds.
-			ngettext("{seconds:d} second", "{seconds:d} seconds", seconds).format(seconds=seconds)
-		)
-		return ", ".join(uptimeComponents)
-
-	@scriptHandler.script(
-		# Translators: Input help mode message about obtaining the system's uptime
-		description=_(
-			"Announces the system's uptime. "
-			"If pressed twice, copies the information to the clipboard."
-		),
-		gesture="kb:NVDA+shift+7",
-		speakOnDemand=True,
-	)
-	def script_announceUptime(self, gesture: inputCore.InputGesture):
-		try:
-			uptime = self.getUptime()
-			if scriptHandler.getLastScriptRepeatCount() == 0:
-				ui.message(uptime)
-			else:
-				api.copyToClip(uptime, notify=True)
-		except TypeError:
-			# Translators: Obtaining uptime failed
-			ui.message(_("Failed to get the system's uptime."))
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about overall system resource info command in Resource Monitor
