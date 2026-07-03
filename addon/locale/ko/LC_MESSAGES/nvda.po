@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2026-01-19 03:28+0000\n"
-"PO-Revision-Date: 2026-03-30 00:45\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2026-07-03 19:38+0000\n"
+"PO-Revision-Date: 2026-07-03 19:41\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -17,83 +17,30 @@ msgstr ""
 "X-Crowdin-File: resourceMonitor.pot\n"
 "X-Crowdin-File-ID: 214\n"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:46
+#: addon\globalPlugins\resourceMonitor\__init__.py:49
 msgid "No authentication (Open)"
 msgstr "No authentication (Open)"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:71
+#: addon\globalPlugins\resourceMonitor\__init__.py:74
+#, python-brace-format
 msgid "Connected to {}"
 msgstr "{}에 연결됨"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:81
+#: addon\globalPlugins\resourceMonitor\__init__.py:84
+#, python-brace-format
 msgid "Disconnected from {}"
 msgstr "{} 연결 끊킴"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:86
+#: addon\globalPlugins\resourceMonitor\__init__.py:89
 msgid "A wireless device has been enabled"
 msgstr "무선랜 장치 연결됨"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:92
+#: addon\globalPlugins\resourceMonitor\__init__.py:95
 msgid "A wireless device has been disabled"
 msgstr "무선랜 장치 연결 끊킴"
 
-#. Translators: Message reported when there is no battery on the system,
-#. mostly laptops with battery pack removed and running on AC power.
-#: addon/globalPlugins/resourceMonitor/__init__.py:215
-msgid "This computer does not have a battery connected."
-msgstr "사용자 컴퓨터에 베터리가 없습니다."
-
-#. Translators: message presented when AC is connected and battery is charging,
-#. also show current battery percentage.
-#: addon/globalPlugins/resourceMonitor/__init__.py:221
-#, python-brace-format
-msgid "{percent}%, battery charging."
-msgstr "{percent}%, 베터리 중전중."
-
-#. Translators: message presented when computer is running on battery power,
-#. showing percentage remaining yet battery time is unknown.
-#: addon/globalPlugins/resourceMonitor/__init__.py:227
-#, python-brace-format
-msgid "{percent}% battery remaining, battery time unknown."
-msgstr "{percent}% 베터리 남음."
-
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-#: addon/globalPlugins/resourceMonitor/__init__.py:241
-#: addon/globalPlugins/resourceMonitor/__init__.py:506
-#, python-brace-format
-msgid "{hours:d} hour"
-msgid_plural "{hours:d} hours"
-msgstr[0] "{hours:d}시간"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#: addon/globalPlugins/resourceMonitor/__init__.py:246
-#: addon/globalPlugins/resourceMonitor/__init__.py:510
-#, python-brace-format
-msgid "{minutes:d} minute"
-msgid_plural "{minutes:d} minutes"
-msgstr[0] "{minutes:d}분"
-
-#. Translators: message presented when computer is running on battery power,
-#. showing percentage remaining and estimated remaining time.
-#: addon/globalPlugins/resourceMonitor/__init__.py:254
-#, python-brace-format
-msgid "{percent}% battery remaining, about {time}."
-msgstr "{percent}% 베터리 남음, {time} 사용 가능."
-
-#. Translators: Message reported when battery level is low.
-#: addon/globalPlugins/resourceMonitor/__init__.py:258
-msgid " Warning: low battery."
-msgstr "주의: 베터리 충전률 저조함."
-
-#. Translators: Message reported when battery level is critical.
-#: addon/globalPlugins/resourceMonitor/__init__.py:261
-msgid " Warning: critically low battery."
-msgstr "주의: 베토리 방전 조심 바람."
-
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
-#: addon/globalPlugins/resourceMonitor/__init__.py:282
+#: addon\globalPlugins\resourceMonitor\__init__.py:225
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion}({cpuBit}) 빌드 {build}"
@@ -102,124 +49,154 @@ msgstr "{winVersion}({cpuBit}) 빌드 {build}"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
-#: addon/globalPlugins/resourceMonitor/__init__.py:290 buildVars.py:21
+#: addon\globalPlugins\resourceMonitor\__init__.py:233 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "리소스 모니터"
 
-#. Translators: Input help message about battery info command in Resource Monitor.
-#: addon/globalPlugins/resourceMonitor/__init__.py:321
-msgid "Presents battery percentage, charging status, remaining time (if not charging), and a warning if the battery is low or critical."
-msgstr "베터리 충전률, 전원 사용 여부, 베터리 사용시간 및 베터리 방전 주의를 알려줍니다."
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+#: addon\globalPlugins\resourceMonitor\__init__.py:288
+msgid "Presents used ram and average processor load."
+msgstr "메모리 및 프로세서 사용률에 관한 정보를 제공합니다."
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:337
-msgid "Presents the used and total space of the static and removable drives on this computer."
-msgstr "내장 및 확장 드라이브의 사용 공간 및 전체 공간을 알려줍니다."
-
-#. Translators: Shows drive letter, type of drive (fixed or removable),
-#. used capacity and total capacity of a drive
-#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon/globalPlugins/resourceMonitor/__init__.py:356
+#: addon\globalPlugins\resourceMonitor\__init__.py:296
 #, python-brace-format
-msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr "{driveName} ({driveType} 드라이브): 총 {totalSpace} 중 {usedSpace} 사용중 {percent}%. "
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-#: addon/globalPlugins/resourceMonitor/__init__.py:371
-msgid "Presents the average processor load and the load of each core."
-msgstr "프로세서와 각 프로세서 코어의 사용률을 알려줍니다."
+#: addon\globalPlugins\resourceMonitor\__init__.py:305
+msgid "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
+msgstr "프로세서와 각 프로세서 코어의 사용률을 알려줍니다. 두번 눌렀을때 정보를 클립보드에 복사합니다."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#: addon/globalPlugins/resourceMonitor/__init__.py:381
+#: addon\globalPlugins\resourceMonitor\__init__.py:317
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Core {coreNumber}: {corePercent}%. "
 
 #. Translators: Shows average load of the processor on single-core systems.
-#: addon/globalPlugins/resourceMonitor/__init__.py:388
+#: addon\globalPlugins\resourceMonitor\__init__.py:324
 #, python-brace-format
-msgid "Average CPU load {avgLoad}%."
-msgstr "평균 프로세서 사용률 {avgLoad}%."
+msgid "{avgLoad}% CPU load."
+msgstr "{avgLoad}% 평균 프로세서 사용률."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#: addon/globalPlugins/resourceMonitor/__init__.py:391
+#: addon\globalPlugins\resourceMonitor\__init__.py:327
 #, python-brace-format
-msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "평균 프로세서 사용률 {avgLoad}%, {cores}"
+msgid "{avgLoad}% average CPU load, {cores}."
+msgstr "{avgLoad}% 평균 프로세서 사용률, {cores}"
 
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-#: addon/globalPlugins/resourceMonitor/__init__.py:401
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "물리 (RAM) 및 가상 메모리의 사용 공간 및 총 메모리를 알려줍니다."
+#: addon\globalPlugins\resourceMonitor\__init__.py:338
+msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
+msgstr "물리 (RAM) 및 가상 메모리의 사용 공간 및 총 메모리를 알려줍니다. 두번 눌렀을때 정보를 클립보드에 복사합니다."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon/globalPlugins/resourceMonitor/__init__.py:409
+#: addon\globalPlugins\resourceMonitor\__init__.py:348
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "RAM: 총 {physicalTotal} 중 {physicalUsed} 사용중 ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#: addon/globalPlugins/resourceMonitor/__init__.py:417
+#: addon\globalPlugins\resourceMonitor\__init__.py:356
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "가상 메모리: 총 {virtualTotal} 중 {virtualUsed} 사용중 ({virtualPercent}%)."
 
-#. Translators: Input help mode message about Windows version command in Resource Monitor.
-#: addon/globalPlugins/resourceMonitor/__init__.py:429
-msgid "Announces the version of Windows you are using."
-msgstr "사용중인 윈도우 버전을 알려줍니다."
+#: addon\globalPlugins\resourceMonitor\__init__.py:369
+msgid "Presents the used and total space of the fixed (built-in) and removable drives on this computer. If pressed twice, copies the information to the clipboard."
+msgstr "내장 및 확장 드라이브의 사용 공간 및 전체 공간을 알려줍니다. 두번 눌렀을때 정보를 클립보드에 복사합니다."
 
-#. Translators: Input help mode message about obtaining the ssid of the wireless network,
-#. and the strength of the network.
-#: addon/globalPlugins/resourceMonitor/__init__.py:444
-msgid "Announces the system's wireless network ssid name, and its strength."
-msgstr "연결된 무선랜 네트워크 이름 및 연결 상태를 알려줍니다."
+#. Translators: Shows drive letter, type of drive (fixed or removable),
+#. used capacity and total capacity of a drive
+#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon\globalPlugins\resourceMonitor\__init__.py:389
+#, python-brace-format
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
+msgstr "{driveName} ({driveType} 드라이브): 총 {totalSpace} 중 {usedSpace} 사용중({percent}%)."
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:457
-#: addon/globalPlugins/resourceMonitor/__init__.py:464
+#: addon\globalPlugins\resourceMonitor\__init__.py:404
+#: addon\globalPlugins\resourceMonitor\__init__.py:411
 msgid "No wireless devices"
 msgstr "무선랜 장치 없음"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:468
+#: addon\globalPlugins\resourceMonitor\__init__.py:415
 msgid "No wireless connections"
 msgstr "연결할 수 있는 무선랜 없음"
 
-#: addon/globalPlugins/resourceMonitor/__init__.py:481
-msgid "Connected wireless network: {}. Signal strength: {}%. Security type: {}"
-msgstr "무선랜 네트워크: {}. 신호 강도: {}%. 보안 모드: {}"
+#: addon\globalPlugins\resourceMonitor\__init__.py:428
+#, python-brace-format
+msgid "Connected to {}, signal strength: {}%, security type: {}"
+msgstr "무선랜 네트워크: {}, 신호 강도: {}%, 보안 모드: {}"
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:443
+msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
+msgstr "연결된 무선랜 네트워크 이름 및 연결 상태를 알려줍니다. 두번 눌렀을때 정보를 클립보드에 복사합니다."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:459
+msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
+msgstr "사용중인 윈도우 버전을 알려줍니다. 두번 눌렀을때 정보를 클립보드에 복사합니다."
 
 #. Translators: system uptime in days.
-#: addon/globalPlugins/resourceMonitor/__init__.py:502
+#: addon\globalPlugins\resourceMonitor\__init__.py:483
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{days:d}일"
 
+#. Translators: system uptime in hours.
+#: addon\globalPlugins\resourceMonitor\__init__.py:487
+#, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{hours:d}시간"
+
+#. Translators: system uptime in minutes.
+#: addon\globalPlugins\resourceMonitor\__init__.py:491
+#, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{minutes:d}분"
+
 #. Translators: system uptime in seconds.
-#: addon/globalPlugins/resourceMonitor/__init__.py:514
+#: addon\globalPlugins\resourceMonitor\__init__.py:495
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d}초"
 
-#. Translators: Input help mode message about obtaining the system's uptime
-#: addon/globalPlugins/resourceMonitor/__init__.py:520
-msgid "Announces the system's uptime."
-msgstr "Announces the system's uptime."
+#: addon\globalPlugins\resourceMonitor\__init__.py:502
+msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
+msgstr "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 
 #. Translators: Obtaining uptime failed
-#: addon/globalPlugins/resourceMonitor/__init__.py:533
+#: addon\globalPlugins\resourceMonitor\__init__.py:517
 msgid "Failed to get the system's uptime."
 msgstr "Failed to get the system's uptime."
 
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-#: addon/globalPlugins/resourceMonitor/__init__.py:537
-msgid "Presents used ram, average processor load, and battery info if available."
-msgstr "메모리, 프로세서 사용률 및 메터리 사용에 관한 정보를 제공합니다."
-
-#: addon/globalPlugins/resourceMonitor/__init__.py:545
+#: addon\globalPlugins\resourceMonitor\__init__.py:533
 #, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}%의 메모리, {cpuPercent}%의 프로세서 사용중."
+msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}°C."
+msgstr "GPU {gpuNumber}: usage {usage}%, temp {temperature}°C."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:543
+msgid "No GPU information available."
+msgstr "No GPU information available."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:545
+msgid "Unable to get GPU information."
+msgstr "Unable to get GPU information."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:546
+msgid "No GPU data available."
+msgstr "No GPU data available."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:551
+msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
+msgstr "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
+
+#. Translators: Message reported when the GPU command fails unexpectedly.
+#: addon\globalPlugins\resourceMonitor\__init__.py:569
+msgid "Failed to get GPU information."
+msgstr "Failed to get GPU information."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
@@ -230,12 +207,10 @@ msgstr "프로세서, 디스크, 메모리 사용률 및 베터리 상태를 알
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2025.3.2 or later is required.\n"
-"* NVDA will announce Windows Server releases using standardized release name instead of dedicated server release name e.g. Windows Server 24H2 instead of Windows Server 2025.\n"
-"* NVDA will no longer add \"0 minutes\" to battery status (example: 4 hours instead of 4 hours, 0 minutes).\n"
-"* NVDA will recognize additional prefixes for larger memory and storage sizes including ronnabyte (1000 to the power of 9) and quettabyte (1000 to the power of 10)."
-msgstr "* NVDA 2025.3.2 or later is required.\n"
-"* NVDA will announce Windows Server releases using standardized release name instead of dedicated server release name e.g. Windows Server 24H2 instead of Windows Server 2025.\n"
-"* NVDA will no longer add \"0 minutes\" to battery status (example: 4 hours instead of 4 hours, 0 minutes).\n"
-"* NVDA will recognize additional prefixes for larger memory and storage sizes including ronnabyte (1000 to the power of 9) and quettabyte (1000 to the power of 10)."
+msgid "* Removed add-on changelog from add-on help (readme) file.\n"
+"* Changed CPU load and wireless network status announcements to show average CPU load percentage first and made network status reporting less verbose, respectively.\n"
+"* NVDA will no longer repeat wireless network status announcements when the add-on is reloaded without first restarting NVDA (Control+NVDA+F3).\n"
+"* NVDA will no longer announce GPU information in secure screens due to how the feature works internally.\n"
+"* Battery status anouncement command (NVDA+Shift+4) and announcing battery info as part of the overall resource usage information (NVDA+Shift+E) are deprecated and will be removed in a future add-on release (NVDA provides its own battery status command (NVDA+Shift+B))."
+msgstr ""
 
