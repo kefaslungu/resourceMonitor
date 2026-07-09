@@ -4,6 +4,7 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 
 ## Version 26.08
 
+* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).
 * Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).
 * Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status.
 
