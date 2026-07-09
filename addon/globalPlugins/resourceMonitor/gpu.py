@@ -15,6 +15,12 @@ class GpuTelemetry:
 	temperature: str
 
 
+# Prevents a conhost.exe console window from flashing on screen when running
+# nvidia-smi/where.exe, and avoids NVDA's UIAHandler logging errors while it
+# tries (and fails) to probe a console window that closes almost immediately.
+_CREATE_NO_WINDOW = 0x08000000
+
+
 class BaseGpuProvider:
 	def collect(self) -> list[GpuTelemetry] | None:
 		raise NotImplementedError
@@ -39,6 +45,7 @@ class NvidiaGpuProvider(BaseGpuProvider):
 				text=True,
 				timeout=2,
 				check=False,
+				creationflags=_CREATE_NO_WINDOW,
 			)
 			for line in whereResult.stdout.splitlines():
 				path = line.strip().strip('"')
@@ -83,6 +90,7 @@ class NvidiaGpuProvider(BaseGpuProvider):
 				text=True,
 				timeout=5,
 				check=True,
+				creationflags=_CREATE_NO_WINDOW,
 			)
 		except (subprocess.CalledProcessError, OSError, subprocess.TimeoutExpired):
 			return []
