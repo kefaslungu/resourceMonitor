@@ -7,6 +7,10 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 * Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).
 * Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status.
 
+## Version 26.07.1
+
+* NVDA will no longer log UI Automation handler errors when a console host (conhost.exe) window is briefly shown and then closed when obtaining GPU information (contributed by hexxbyte).
+
 ## Version 26.07
 
 * Removed add-on changelog from add-on help (readme) file.
