@@ -32,7 +32,7 @@ addon_info = AddonInfo(
 * NVDA will no longer announce GPU information in secure screens due to how the feature works internally.
 * Battery status anouncement command (NVDA+Shift+4) and announcing battery info as part of the overall resource usage information (NVDA+Shift+E) are deprecated and will be removed in a future add-on release (NVDA provides its own battery status command (NVDA+Shift+B))."""),
 	# Author(s)
-	addon_author="Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com>, Kevin Derome and other NVDA contributors",
+	addon_author="Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com>, Kevin Derome, Jonathan Rodriguez <jonathantrodriguez6@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
 	addon_url="https://github.com/kefaslungu/resourceMonitor",
 	# URL for the add-on repository where the source code can be found
