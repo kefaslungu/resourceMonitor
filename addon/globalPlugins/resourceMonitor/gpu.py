@@ -13,6 +13,8 @@ from dataclasses import dataclass
 class GpuTelemetry:
 	utilization: str
 	temperature: str
+	memoryUsed: str
+	memoryTotal: str
 
 
 # Prevents a conhost.exe console window from flashing on screen when running
@@ -83,7 +85,7 @@ class NvidiaGpuProvider(BaseGpuProvider):
 			result = subprocess.run(
 				[
 					self._nvidiaSmiPath,
-					"--query-gpu=utilization.gpu,temperature.gpu",
+					"--query-gpu=utilization.gpu,temperature.gpu,memory.used,memory.total",
 					"--format=csv,noheader,nounits",
 				],
 				capture_output=True,
@@ -100,9 +102,17 @@ class NvidiaGpuProvider(BaseGpuProvider):
 		items: list[GpuTelemetry] = []
 		for line in lines:
 			gpuData = [part.strip() for part in line.split(",")]
-			if len(gpuData) < 2:
+			if len(gpuData) < 4:
 				continue
-			items.append(GpuTelemetry(utilization=gpuData[0], temperature=gpuData[1]))
+			items.append(
+				GpuTelemetry(
+					utilization=gpuData[0],
+					temperature=gpuData[1],
+					# nvidia-smi reports memory.used/memory.total in MiB when "nounits" is requested.
+					memoryUsed=gpuData[2],
+					memoryTotal=gpuData[3],
+				)
+			)
 		return items
 
 

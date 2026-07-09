@@ -233,6 +233,25 @@ def formatGpuTemperature(celsiusText: str) -> str:
 	return "{} {}".format(tryTrunk(round(value, 1)), symbol)
 
 
+def formatGpuMemory(usedMibText: str, totalMibText: str) -> str | None:
+	# GPU providers report memory used/total in MiB as text (nvidia-smi's "nounits" output).
+	try:
+		usedMib = float(usedMibText)
+		totalMib = float(totalMibText)
+	except (TypeError, ValueError):
+		return None
+	if totalMib <= 0:
+		return None
+	usedBytes = usedMib * 1024.0 * 1024.0
+	totalBytes = totalMib * 1024.0 * 1024.0
+	# Translators: Shows GPU memory usage (example: 2.00 GB of 8.00 GB used (25%)).
+	return _("{used} of {total} used ({percent}%)").format(
+		used=size(usedBytes, alternative),
+		total=size(totalBytes, alternative),
+		percent=tryTrunk(round(usedBytes / totalBytes * 100, 1)),
+	)
+
+
 class ResourceMonitorSettingsPanel(SettingsPanel):
 	# Translators: Category title for Resource Monitor settings in NVDA's settings dialog.
 	title = _("Resource Monitor")
@@ -643,3 +662,58 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except Exception:
 			# Translators: Message reported when the GPU command fails unexpectedly.
 			ui.message(_("Failed to get GPU information."))
+
+	def _getGpuMemoryInfo(self) -> str:
+		hasProvider = False
+		hasFailure = False
+		for provider in self._gpuProviders:
+			telemetry = provider.collect()
+			if telemetry is None:
+				continue
+			hasProvider = True
+			if not telemetry:
+				hasFailure = True
+				continue
+			gpuMemoryParts = []
+			for index, item in enumerate(telemetry, start=1):
+				memoryInfo = formatGpuMemory(item.memoryUsed, item.memoryTotal)
+				if not memoryInfo:
+					continue
+				gpuMemoryParts.append(
+					# Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
+					_("GPU {gpuNumber}: {memoryInfo}.").format(
+						gpuNumber=index,
+						memoryInfo=memoryInfo,
+					)
+				)
+			if gpuMemoryParts:
+				return " ".join(gpuMemoryParts)
+			hasFailure = True
+		if not hasProvider:
+			return _("No GPU information available.")
+		if hasFailure:
+			return _("Unable to get GPU memory information.")
+		return _("No GPU data available.")
+
+	@scriptHandler.script(
+		# Translators: Input help mode message about GPU memory (VRAM) command.
+		description=_(
+			"Announces GPU memory usage. "
+			"If pressed twice, copies the information to the clipboard."
+		),
+		speakOnDemand=True,
+	)
+	# Do not report GPU info in secure mode
+	# (for NVIDIA, GPU info is obtained by parsing output from another program,
+	# potentially introducing security issues such as parsing problems).
+	@blockAction.when(blockAction.Context.SECURE_MODE)
+	def script_announceGpuMemoryInfo(self, gesture: inputCore.InputGesture):
+		try:
+			info = self._getGpuMemoryInfo()
+			if scriptHandler.getLastScriptRepeatCount() == 0:
+				ui.message(info)
+			else:
+				api.copyToClip(info, notify=True)
+		except Exception:
+			# Translators: Message reported when the GPU memory command fails unexpectedly.
+			ui.message(_("Failed to get GPU memory information."))
