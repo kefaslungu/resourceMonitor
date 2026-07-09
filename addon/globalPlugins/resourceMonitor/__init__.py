@@ -12,13 +12,16 @@ from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
 from typing import Any
 import api
+import config
 import globalPluginHandler
 import queueHandler
 import scriptHandler
 import inputCore
 import ui
 import winVersion
-from gui import blockAction
+import wx
+from gui import blockAction, guiHelper
+from gui.settingsDialogs import NVDASettingsDialog, SettingsPanel
 import psutil
 
 # Windows Server systems prior to Server 2025 do not include wlanapi.dll.
@@ -35,6 +38,12 @@ addonHandler.initTranslation()
 
 
 MODULE_DIR = os.path.dirname(__file__)
+
+# Register this add-on's settings with NVDA's configuration system.
+confspec = {
+	"gpuTempUnit": "string(default=celsius)",
+}
+config.conf.spec["resourceMonitor"] = confspec
 
 
 def message(text: str, fileName: str) -> None:
@@ -205,6 +214,54 @@ def tryTrunk(n: float) -> int | float:
 	return n
 
 
+def formatGpuTemperature(celsiusText: str) -> str:
+	# GPU providers report temperature in degrees Celsius as text.
+	# Convert it to the user's preferred unit (Celsius or Fahrenheit) for display.
+	try:
+		celsius = float(celsiusText)
+	except (TypeError, ValueError):
+		return celsiusText
+	unit = config.conf["resourceMonitor"]["gpuTempUnit"]
+	if unit == "fahrenheit":
+		value = celsius * 9.0 / 5.0 + 32.0
+		# Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
+		symbol = _("degrees Fahrenheit")
+	else:
+		value = celsius
+		# Translators: Celsius temperature unit symbol appended to a GPU temperature value.
+		symbol = _("degrees Celsius")
+	return "{} {}".format(tryTrunk(round(value, 1)), symbol)
+
+
+class ResourceMonitorSettingsPanel(SettingsPanel):
+	# Translators: Category title for Resource Monitor settings in NVDA's settings dialog.
+	title = _("Resource Monitor")
+
+	def makeSettings(self, settingsSizer: wx.BoxSizer) -> None:
+		settingsSizerHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# Translators: Label for a combo box to select the unit used to report GPU temperature.
+		gpuTempUnitLabelText = _("GPU &temperature unit:")
+		# Translators: An option in the GPU temperature unit combo box.
+		self._gpuTempUnitLabels = [_("Celsius"), _("Fahrenheit")]
+		self._gpuTempUnitValues = ["celsius", "fahrenheit"]
+		self.gpuTempUnitList = settingsSizerHelper.addLabeledControl(
+			gpuTempUnitLabelText,
+			wx.Choice,
+			choices=self._gpuTempUnitLabels,
+		)
+		try:
+			currentIndex = self._gpuTempUnitValues.index(config.conf["resourceMonitor"]["gpuTempUnit"])
+		except ValueError:
+			currentIndex = 0
+		self.gpuTempUnitList.SetSelection(currentIndex)
+
+	def onSave(self) -> None:
+		selection = self.gpuTempUnitList.GetSelection()
+		if selection == wx.NOT_FOUND:
+			selection = 0
+		config.conf["resourceMonitor"]["gpuTempUnit"] = self._gpuTempUnitValues[selection]
+
+
 @functools.lru_cache(maxsize=1)
 def getWinVer() -> str:
 	# Obtain current Windows version.
@@ -235,6 +292,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
+		NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettingsPanel)
 		if not wlanapiAvailable:
 			self._client_handle = None
 			return
@@ -262,6 +320,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		super().terminate()
 		self._gpuProviders.clear()
+		if ResourceMonitorSettingsPanel in NVDASettingsDialog.categoryClasses:
+			NVDASettingsDialog.categoryClasses.remove(ResourceMonitorSettingsPanel)
 		if not self._client_handle:
 			return
 		self._negotiated_version = None
@@ -546,10 +606,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			gpuInfoParts = []
 			for index, item in enumerate(telemetry, start=1):
 				gpuInfoParts.append(
-					_("GPU {gpuNumber}: usage {usage}%, temp {temperature}°C.").format(
+					_("GPU {gpuNumber}: usage {usage}%, temp {temperature}.").format(
 						gpuNumber=index,
 						usage=item.utilization,
-						temperature=item.temperature,
+						temperature=formatGpuTemperature(item.temperature),
 					)
 				)
 			if gpuInfoParts:
