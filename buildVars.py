@@ -26,11 +26,8 @@ addon_info = AddonInfo(
 	addon_version="26.07",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* Removed add-on changelog from add-on help (readme) file.
-* Changed CPU load and wireless network status announcements to show average CPU load percentage first and made network status reporting less verbose, respectively.
-* NVDA will no longer repeat wireless network status announcements when the add-on is reloaded without first restarting NVDA (Control+NVDA+F3).
-* NVDA will no longer announce GPU information in secure screens due to how the feature works internally.
-* Battery status anouncement command (NVDA+Shift+4) and announcing battery info as part of the overall resource usage information (NVDA+Shift+E) are deprecated and will be removed in a future add-on release (NVDA provides its own battery status command (NVDA+Shift+B))."""),
+	addon_changelog=_("""* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).
+* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status."""),
 	# Author(s)
 	addon_author="Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com>, Kevin Derome, Jonathan Rodriguez <jonathantrodriguez6@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
