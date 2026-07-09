@@ -11,7 +11,7 @@ All commands support speech on demand mode.
 * NVDA+Shift+E: presents used RAM (pyysical memory) and average processor load.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual RAM (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed).
-* NVDA+Shift+3: presents the used and total space of the fixed (built-in) and removable drives.
+* NVDA+Shift+3: presents the used and total space of the fixed (built-in), removable, and network drives.
 * NVDA+Shift+4: presents information on the wireless connection, network (SSID) name and strength, or no SSID if there is none available.
 * NVDA+Shift+6: presents  Windows version, CPU architecture, and exact build number (build.revision).
 * NVDA+Shift+7: presents the system's uptime.
@@ -26,7 +26,7 @@ This add-on does not replace task manager and other system information programs 
 * Apart from overall resource usage command (NVDA+Shift+E), pressing other commands twice will copy resource usage information to the clipboard.
 * Resource information cannot be copied to the clipboard if running the add-on in secure screens.
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
-* If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.
+* If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.
 * When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
