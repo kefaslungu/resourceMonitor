@@ -366,34 +366,50 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@scriptHandler.script(
 		# Translators: Input help message about drive info command in Resource Monitor.
 		description=_(
-			"Presents the used and total space of the fixed (built-in) and removable drives on this computer. "
+			"Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. "
 			"If pressed twice, copies the information to the clipboard."
 		),
 		gesture="KB:NVDA+shift+3",
 		speakOnDemand=True,
 	)
 	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
-		# Goes through all registered drives and gives info on each one
+		# Goes through all registered drives, including mapped network drives, and gives info on each one.
+		# psutil.disk_partitions() defaults to all=False, which silently excludes mapped network
+		# drives on Windows (they're not considered "physical" devices). Passing all=True brings
+		# them back in.
 		info = []
-		for drive in psutil.disk_partitions():
-			# Get info on each one
-			# If and only if the Windows says disk is ready in order to avoid
-			# a core stack freeze when no disk is inserted into a slot.
+		for drive in psutil.disk_partitions(all=True):
+			# Get info on each one.
+			# If and only if Windows says the disk is ready do we query it, in order to avoid
+			# a core stack freeze when no disk is inserted into a slot, or a mapped network
+			# drive has never been connected.
 			# This can be checked by looking for a file system.
-			if drive.fstype:
+			if not drive.fstype:
+				continue
+			isNetworkDrive = "remote" in drive.opts.split(",")
+			try:
 				driveInfo = psutil.disk_usage(drive[0])
-				info.append(
-					# Translators: Shows drive letter, type of drive (fixed or removable),
-					# used capacity and total capacity of a drive
-					# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%).").format(
-						driveName=drive[0],
-						driveType=drive[2],
-						usedSpace=size(driveInfo[1], alternative),
-						totalSpace=size(driveInfo[0], alternative),
-						percent=tryTrunk(driveInfo[3]),
-					)
+			except OSError:
+				# The drive is registered but currently can't be reached, e.g. an offline
+				# mapped network drive whose host is unreachable.
+				if isNetworkDrive:
+					# Translators: Reported when a mapped network drive is currently unreachable.
+					info.append(_("{driveName} (network drive): not available.").format(driveName=drive[0]))
+				continue
+			# Translators: word used to describe a mapped network drive.
+			driveType = _("network") if isNetworkDrive else drive[2]
+			info.append(
+				# Translators: Shows drive letter, type of drive (fixed, removable, or network),
+				# used capacity and total capacity of a drive
+				# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+				_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%).").format(
+					driveName=drive[0],
+					driveType=driveType,
+					usedSpace=size(driveInfo[1], alternative),
+					totalSpace=size(driveInfo[0], alternative),
+					percent=tryTrunk(driveInfo[3]),
 				)
+			)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(" ".join(info))
 		else:
