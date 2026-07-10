@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/704fea1e60e05f06e079e9f6c81a3de52b65b08c/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/5c2e8559fdd78a4fd7eb10dc6111352e5bf42306/readme.md">
 <skeleton>
 # $(ID:4566d44d-44e5-4bf8-87b8-f29d4ecaaa03)
 
@@ -15,11 +15,12 @@ $(ID:756f97fb-9153-48a2-83ca-6bc45c455fa1)
 * $(ID:423b28c0-164b-4add-a208-4a2e3adb4bcc)
 * $(ID:a026e904-4609-43d5-8864-ad078a2e219d)
 * $(ID:47a09da1-230e-4a42-adc5-6d417147197e)
-* $(ID:9ba2e8c0-8a34-4db0-a2a7-3cedaaa63510)
+* $(ID:035225d4-80fb-4de4-af01-ac3aa3266603)
 * $(ID:db7950ec-fe1c-455d-8906-e2a42e87520b)
 * $(ID:506384aa-e388-4416-8b62-bb1ba9c9f41d)
 * $(ID:6b242ca4-370e-473c-9c2c-e2d6db09aa5d)
 * $(ID:7556990e-9fd3-4d08-b63e-80995af1ae42)
+* $(ID:458469dd-f1b7-4f74-9e96-c7abef0cd8af)
 
 $(ID:59eb243e-d5cd-4530-8309-13acf93213a2)
 
@@ -30,7 +31,8 @@ $(ID:6afdbb36-1fa8-4498-99e0-3af26ac88091)
 * $(ID:37591af6-d9cc-43d2-b8e5-e72ac286e8a9)
 * $(ID:70ea07e4-d172-4dc7-aa11-970495a5c25e)
 * $(ID:3c1109cf-caa1-4f20-8801-a032bbcdecbc)
-* $(ID:76de1c68-d3d8-4811-8462-83397bb45d53)
+* $(ID:e7463f56-ef68-4bc5-b6de-b4a53feff8e7)
+* $(ID:843f5230-c7a3-47e4-94f9-e20d98046a36)
 * $(ID:7fe4f01c-c276-4cd6-bd70-9946b79e26d6)
 * $(ID:2526a96e-9263-4d2b-acf3-adf0ebf773e0)
 
@@ -108,13 +110,13 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>NVDA+Shift+2/5: presents the used and total space for both physical and virtual RAM (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed).</source>
 </segment>
 </unit>
-<unit id="9ba2e8c0-8a34-4db0-a2a7-3cedaaa63510">
+<unit id="035225d4-80fb-4de4-af01-ac3aa3266603">
 <notes>
 <note appliesTo="source">line: 15</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>NVDA+Shift+3: presents the used and total space of the fixed (built-in) and removable drives.</source>
+<source>NVDA+Shift+3: presents the used and total space of the fixed (built-in), removable, and network drives.</source>
 </segment>
 </unit>
 <unit id="db7950ec-fe1c-455d-8906-e2a42e87520b">
@@ -153,9 +155,18 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).</source>
 </segment>
 </unit>
+<unit id="458469dd-f1b7-4f74-9e96-c7abef0cd8af">
+<notes>
+<note appliesTo="source">line: 20</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Unassigned: presents graphics processing unit (GPU memory usage information; unavailable in secure mode).</source>
+</segment>
+</unit>
 <unit id="59eb243e-d5cd-4530-8309-13acf93213a2">
 <notes>
-<note appliesTo="source">line: 21</note>
+<note appliesTo="source">line: 22</note>
 </notes>
 <segment>
 <source>You can change these shortcut keys via input gestures dialog.</source>
@@ -163,7 +174,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="cf9d1f4c-49a9-44c6-b161-ecfd913e64f6">
 <notes>
-<note appliesTo="source">line: 23</note>
+<note appliesTo="source">line: 24</note>
 <note appliesTo="source">prefix: ## </note>
 </notes>
 <segment>
@@ -172,7 +183,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="6afdbb36-1fa8-4498-99e0-3af26ac88091">
 <notes>
-<note appliesTo="source">line: 25</note>
+<note appliesTo="source">line: 26</note>
 </notes>
 <segment>
 <source>This add-on does not replace task manager and other system information programs for Windows. Also note the following:</source>
@@ -180,7 +191,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="37591af6-d9cc-43d2-b8e5-e72ac286e8a9">
 <notes>
-<note appliesTo="source">line: 27</note>
+<note appliesTo="source">line: 28</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -189,7 +200,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="70ea07e4-d172-4dc7-aa11-970495a5c25e">
 <notes>
-<note appliesTo="source">line: 28</note>
+<note appliesTo="source">line: 29</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -198,25 +209,34 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="3c1109cf-caa1-4f20-8801-a032bbcdecbc">
 <notes>
-<note appliesTo="source">line: 29</note>
+<note appliesTo="source">line: 30</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
 <source>CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.</source>
 </segment>
 </unit>
-<unit id="76de1c68-d3d8-4811-8462-83397bb45d53">
+<unit id="e7463f56-ef68-4bc5-b6de-b4a53feff8e7">
 <notes>
-<note appliesTo="source">line: 30</note>
+<note appliesTo="source">line: 31</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>If there is heavy disk activity such as copying large files, there might be delays when obtaining disk usage information.</source>
+<source>If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.</source>
+</segment>
+</unit>
+<unit id="843f5230-c7a3-47e4-94f9-e20d98046a36">
+<notes>
+<note appliesTo="source">line: 32</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>GPU information is given for Nvidia GPU's.</source>
 </segment>
 </unit>
 <unit id="7fe4f01c-c276-4cd6-bd70-9946b79e26d6">
 <notes>
-<note appliesTo="source">line: 31</note>
+<note appliesTo="source">line: 33</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -225,7 +245,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="2526a96e-9263-4d2b-acf3-adf0ebf773e0">
 <notes>
-<note appliesTo="source">line: 32</note>
+<note appliesTo="source">line: 34</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -234,7 +254,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="cede3681-25e1-4335-adad-b188883c418e">
 <notes>
-<note appliesTo="source">line: 34</note>
+<note appliesTo="source">line: 36</note>
 </notes>
 <segment>
 <source>For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.</source>
@@ -242,7 +262,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="32d59eb2-cc6d-4498-8a04-ed6e06dbe82e">
 <notes>
-<note appliesTo="source">line: 36</note>
+<note appliesTo="source">line: 38</note>
 </notes>
 <segment>
 <source>[1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md</source>
