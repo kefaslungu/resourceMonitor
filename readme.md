@@ -8,7 +8,7 @@ This add-on gives information about CPU load, memory usage and other resource us
 
 All commands support speech on demand mode.
 
-* NVDA+Shift+E: presents used RAM (pyysical memory) and average processor load.
+* NVDA+Shift+E: presents used RAM (physical memory) and average processor load.
 * NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual RAM (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed).
 * NVDA+Shift+3: presents the used and total space of the fixed (built-in), removable, and network drives.
@@ -26,10 +26,10 @@ This add-on does not replace task manager and other system information programs 
 
 * Apart from overall resource usage command (NVDA+Shift+E), pressing other commands twice will copy resource usage information to the clipboard.
 * Resource information cannot be copied to the clipboard if running the add-on in secure screens.
-* CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
+* CPU usage is given for logical processors, not physical cores. This is noticeable for processors with Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.
 * GPU information is given for Nvidia GPU's.
-* When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
