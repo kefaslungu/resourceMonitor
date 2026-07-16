@@ -1,23 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 2.3\n"
+"Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-11 20:20+0300\n"
-"PO-Revision-Date: 2026-07-12 10:19+0300\n"
-"Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
-"Language-Team: \n"
-"Language: uk\n"
+"POT-Creation-Date: 2026-07-10 19:44+0000\n"
+"PO-Revision-Date: 2026-07-13 00:33\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
+"Language: uk_UA\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.9\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: uk\n"
+"X-Crowdin-File: resourceMonitor.pot\n"
+"X-Crowdin-File-ID: 214\n"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:58
 msgid "No authentication (Open)"
@@ -90,24 +88,16 @@ msgstr "{winVersion} ({cpuBit}) збірка {build}"
 #. Translators: Input help mode message about overall system resource info command in Resource Monitor
 #: addon\globalPlugins\resourceMonitor\__init__.py:367
 msgid "Presents used ram and average processor load."
-msgstr ""
-"Надає інформацію про використану оперативну пам'ять та середнє навантаження "
-"на процесор."
+msgstr "Надає інформацію про використану оперативну пам'ять та середнє навантаження на процесор."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:375
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr ""
-"Використано {ramPercent}% оперативної пам’яті, процесор завантажений на "
-"{cpuPercent}%."
+msgstr "Використано {ramPercent}% оперативної пам’яті, процесор завантажений на {cpuPercent}%."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:384
-msgid ""
-"Presents the average processor load and the load of each core. If pressed "
-"twice, copies the information to the clipboard."
-msgstr ""
-"Надає інформацію про середню завантаженість процесора і про завантаженість "
-"кожного ядра. Якщо натиснути двічі, інформація копіюється в буфер обміну."
+msgid "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
+msgstr "Надає інформацію про середню завантаженість процесора і про завантаженість кожного ядра. Якщо натиснути двічі, інформація копіюється в буфер обміну."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
 #: addon\globalPlugins\resourceMonitor\__init__.py:396
@@ -128,38 +118,24 @@ msgid "{avgLoad}% average CPU load, {cores}."
 msgstr "Середнє завантаження процесора {avgLoad}%, {cores}."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:417
-msgid ""
-"Presents the used and total space for both physical and virtual ram. If "
-"pressed twice, copies the information to the clipboard."
-msgstr ""
-"Надає інформацію про зайнятий та повний об’єм як фізичної, так і віртуальної "
-"пам’яті. Якщо натиснути двічі, інформація копіюється в буфер обміну."
+msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
+msgstr "Надає інформацію про зайнятий та повний об’єм як фізичної, так і віртуальної пам’яті. Якщо натиснути двічі, інформація копіюється в буфер обміну."
 
 #. Translators: Shows RAM (physical memory) usage.
 #: addon\globalPlugins\resourceMonitor\__init__.py:427
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
-msgstr ""
-"Фізична пам'ять: {physicalUsed} із {physicalTotal} використовується "
-"({physicalPercent}%). "
+msgstr "Фізична пам'ять: {physicalUsed} із {physicalTotal} використовується ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
 #: addon\globalPlugins\resourceMonitor\__init__.py:435
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
-msgstr ""
-"Віртуальна пам’ять: {virtualUsed} із {virtualTotal} використовується "
-"({virtualPercent}%)."
+msgstr "Віртуальна пам’ять: {virtualUsed} із {virtualTotal} використовується ({virtualPercent}%)."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:448
-msgid ""
-"Presents the used and total space of the fixed (built-in), removable, and "
-"mapped network drives on this computer. If pressed twice, copies the "
-"information to the clipboard."
-msgstr ""
-"Надає інформацію про зайнятий та повний об'єм статичних, переносних та "
-"мережевих дисків, підключених до комп'ютера. Якщо натиснути двічі, "
-"інформація копіюється в буфер обміну."
+msgid "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
+msgstr "Надає інформацію про зайнятий та повний об'єм статичних, переносних та мережевих дисків, підключених до комп'ютера. Якщо натиснути двічі, інформація копіюється в буфер обміну."
 
 #. Translators: Reported when a mapped network drive is currently unreachable.
 #: addon\globalPlugins\resourceMonitor\__init__.py:476
@@ -177,12 +153,8 @@ msgstr "мережа"
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
 #: addon\globalPlugins\resourceMonitor\__init__.py:484
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}"
-"%)."
-msgstr ""
-"{driveName} (диск {driveType}): використано {usedSpace} з {totalSpace} "
-"({percent}%)."
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
+msgstr "{driveName} (диск {driveType}): використано {usedSpace} з {totalSpace} ({percent}%)."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:499
 #: addon\globalPlugins\resourceMonitor\__init__.py:506
@@ -199,22 +171,12 @@ msgid "Connected to {}, signal strength: {}%, security type: {}"
 msgstr "Підключено до {}, рівень сигналу: {}%, тип захисту: {}"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:538
-msgid ""
-"Announces the system's wireless network name (SSID), connection strength, "
-"and security  protocol. If pressed twice, copies the information to the "
-"clipboard."
-msgstr ""
-"Повідомляє назву бездротової мережі системи (SSID), рівень сигналу та "
-"протокол безпеки. Якщо натиснути двічі, інформація копіюється до буфера "
-"обміну."
+msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
+msgstr "Повідомляє назву бездротової мережі системи (SSID), рівень сигналу та протокол безпеки. Якщо натиснути двічі, інформація копіюється до буфера обміну."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:554
-msgid ""
-"Announces the version of Windows you are using. If pressed twice, copies the "
-"information to the clipboard."
-msgstr ""
-"Повідомляє про версію Windows, яку ви використовуєте. Якщо натиснути двічі, "
-"інформація копіюється в буфер обміну."
+msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
+msgstr "Повідомляє про версію Windows, яку ви використовуєте. Якщо натиснути двічі, інформація копіюється в буфер обміну."
 
 #. Translators: system uptime in days.
 #: addon\globalPlugins\resourceMonitor\__init__.py:578
@@ -224,6 +186,7 @@ msgid_plural "{days:d} days"
 msgstr[0] "{days:d} день"
 msgstr[1] "{days:d} дні"
 msgstr[2] "{days:d} днів"
+msgstr[3] "{days:d} день"
 
 #. Translators: system uptime in hours.
 #: addon\globalPlugins\resourceMonitor\__init__.py:582
@@ -233,6 +196,7 @@ msgid_plural "{hours:d} hours"
 msgstr[0] "{hours:d} година"
 msgstr[1] "{hours:d} години"
 msgstr[2] "{hours:d} годин"
+msgstr[3] "{hours:d} година"
 
 #. Translators: system uptime in minutes.
 #: addon\globalPlugins\resourceMonitor\__init__.py:586
@@ -242,6 +206,7 @@ msgid_plural "{minutes:d} minutes"
 msgstr[0] "{minutes:d} хвилина"
 msgstr[1] "{minutes:d} хвилини"
 msgstr[2] "{minutes:d} хвилин"
+msgstr[3] "{minutes:d} хвилина"
 
 #. Translators: system uptime in seconds.
 #: addon\globalPlugins\resourceMonitor\__init__.py:590
@@ -251,14 +216,11 @@ msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} секунда"
 msgstr[1] "{seconds:d} секунди"
 msgstr[2] "{seconds:d} секунд"
+msgstr[3] "{seconds:d} секунда"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:597
-msgid ""
-"Announces the system's uptime. If pressed twice, copies the information to "
-"the clipboard."
-msgstr ""
-"Повідомляє про час безперебійної роботи системи. Якщо натиснути двічі, "
-"інформація копіюється в буфер обміну."
+msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
+msgstr "Повідомляє про час безперебійної роботи системи. Якщо натиснути двічі, інформація копіюється в буфер обміну."
 
 #. Translators: Obtaining uptime failed
 #: addon\globalPlugins\resourceMonitor\__init__.py:612
@@ -285,12 +247,8 @@ msgid "No GPU data available."
 msgstr "Дані GPU недоступні."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:646
-msgid ""
-"Announces GPU usage and temperature. If pressed twice, copies the "
-"information to the clipboard."
-msgstr ""
-"Повідомляє про завантаження та температуру GPU. Якщо натиснути двічі, "
-"інформація копіюється в буфер обміну."
+msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
+msgstr "Повідомляє про завантаження та температуру GPU. Якщо натиснути двічі, інформація копіюється в буфер обміну."
 
 #. Translators: Message reported when the GPU command fails unexpectedly.
 #: addon\globalPlugins\resourceMonitor\__init__.py:664
@@ -308,12 +266,8 @@ msgid "Unable to get GPU memory information."
 msgstr "Не вдається отримати інформацію про пам'ять GPU."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:701
-msgid ""
-"Announces GPU memory usage. If pressed twice, copies the information to the "
-"clipboard."
-msgstr ""
-"Повідомляє про використання пам'яті GPU. Якщо натиснути двічі, інформація "
-"копіюється до буфера обміну."
+msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
+msgstr "Повідомляє про використання пам'яті GPU. Якщо натиснути двічі, інформація копіюється до буфера обміну."
 
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
 #: addon\globalPlugins\resourceMonitor\__init__.py:719
@@ -323,76 +277,18 @@ msgstr "Не вдалося отримати інформацію про пам'
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
-msgstr ""
-"Зручний монітор ресурсів повідомляє про завантаженість процесора, "
-"використання оперативної пам'яті, статус акумулятора і дискового простору, "
-"та іншу інформацію."
+msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
+msgstr "Зручний монітор ресурсів повідомляє про завантаженість процесора, використання оперативної пам'яті, статус акумулятора і дискового простору, та іншу інформацію."
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid ""
-"* Added Resource Monitor category to NVDA settings to configure GPU "
-"temperature reporting unit between Celcius and Fahrenheit (contributed by "
-"hexxbyte).\n"
-"* Added an unassigned command to announce GPU (graphics processing unit) "
-"memory usage information (contributed by hexxbyte).\n"
-"* Pressing NVDA+Shift+3 to report disk usage information will include mapped "
-"network drives if connected (contributed by hexxbyte).\n"
-"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now "
-"report wireless connection status."
-msgstr ""
-"* До налаштувань NVDA додано категорію «Монітор ресурсів», що дозволяє "
-"налаштувати одиницю виміру температури графічного процесора (GPU) — Цельсій "
-"або Фаренгейт (за пропозицією hexxbyte).\n"
-"* Додано непризначену команду для озвучування інформації про використання "
-"пам’яті графічного процесора (GPU) (за пропозицією hexxbyte).\n"
-"* Натискання комбінації клавіш NVDA+Shift+3 для отримання інформації про "
-"використання дискового простору тепер включатиме підключені підключені "
-"мережеві диски (за пропозицією hexxbyte).\n"
-"* Вилучено функцію повідомлення про стан акумулятора. Натискання комбінації "
-"клавіш NVDA+Shift+4 тепер повідомляє про стан бездротового з’єднання."
+msgid "* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).\n"
+"* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
+"* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
+"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status."
+msgstr "* До налаштувань NVDA додано категорію «Монітор ресурсів», що дозволяє налаштувати одиницю виміру температури графічного процесора (GPU) — Цельсій або Фаренгейт (за пропозицією hexxbyte).\n"
+"* Додано непризначену команду для озвучування інформації про використання пам’яті графічного процесора (GPU) (за пропозицією hexxbyte).\n"
+"* Натискання комбінації клавіш NVDA+Shift+3 для отримання інформації про використання дискового простору тепер включатиме підключені підключені мережеві диски (за пропозицією hexxbyte).\n"
+"* Вилучено функцію повідомлення про стан акумулятора. Натискання комбінації клавіш NVDA+Shift+4 тепер повідомляє про стан бездротового з’єднання."
 
-#~ msgid "This computer does not have a battery connected."
-#~ msgstr "До цього комп’ютера не підключено акумулятор."
-
-#, python-brace-format
-#~ msgid "{percent}%, battery charging."
-#~ msgstr "{percent}%, акумулятор заряджається."
-
-#, python-brace-format
-#~ msgid "{percent}% battery remaining, battery time unknown."
-#~ msgstr ""
-#~ "Залишилося {percent}% заряду акумулятора, час роботи акумулятора "
-#~ "невідомий."
-
-#, python-brace-format
-#~ msgid "{percent}% battery remaining, about {time}."
-#~ msgstr "Залишилося {percent}% заряду акумулятора, приблизно {time}."
-
-#~ msgid " Warning: low battery."
-#~ msgstr " Попередження: низький заряд акумулятора."
-
-#~ msgid " Warning: critically low battery."
-#~ msgstr " Попередження: заряд акумулятора критично низький."
-
-#~ msgid ""
-#~ "Presents battery percentage, charging status, remaining time (if not "
-#~ "charging), and a warning if the battery is low or critical."
-#~ msgstr ""
-#~ "Повідомляє про відсоток заряду акумулятора, статус заряджання, час, що "
-#~ "залишився (якщо акумулятор не заряджається) і попередження про низький та "
-#~ "критично низький заряд акумулятора."
-
-#, python-brace-format
-#~ msgid "Average CPU load {avgLoad}%."
-#~ msgstr "Середня завантаженість процесора {avgLoad}%."
-
-#~ msgid "Announces the system's wireless network ssid name, and its strength."
-#~ msgstr "Повідомляє ім'я ssid бездротової мережі системи та її потужність."
-
-#~ msgid "Announces the system's uptime."
-#~ msgstr "Повідомляє час безперервної роботи системи."
