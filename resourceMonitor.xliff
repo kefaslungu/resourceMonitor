@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/5c2e8559fdd78a4fd7eb10dc6111352e5bf42306/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/f07336a79c1450735f90a6cb99f749515d938498/readme.md">
 <skeleton>
 # $(ID:4566d44d-44e5-4bf8-87b8-f29d4ecaaa03)
 
@@ -12,7 +12,7 @@ $(ID:4ba3b2ea-5e7e-4236-9e69-d99ce0e70168)
 
 $(ID:756f97fb-9153-48a2-83ca-6bc45c455fa1)
 
-* $(ID:423b28c0-164b-4add-a208-4a2e3adb4bcc)
+* $(ID:2628cd5c-d5d3-4a13-8e10-203907078d43)
 * $(ID:a026e904-4609-43d5-8864-ad078a2e219d)
 * $(ID:47a09da1-230e-4a42-adc5-6d417147197e)
 * $(ID:035225d4-80fb-4de4-af01-ac3aa3266603)
@@ -30,10 +30,10 @@ $(ID:6afdbb36-1fa8-4498-99e0-3af26ac88091)
 
 * $(ID:37591af6-d9cc-43d2-b8e5-e72ac286e8a9)
 * $(ID:70ea07e4-d172-4dc7-aa11-970495a5c25e)
-* $(ID:3c1109cf-caa1-4f20-8801-a032bbcdecbc)
+* $(ID:f30cb84e-93b4-4c9e-b1e7-ea10a41b7434)
 * $(ID:e7463f56-ef68-4bc5-b6de-b4a53feff8e7)
 * $(ID:843f5230-c7a3-47e4-94f9-e20d98046a36)
-* $(ID:7fe4f01c-c276-4cd6-bd70-9946b79e26d6)
+* $(ID:230c1f64-b87e-4757-b218-c0aed339a43c)
 * $(ID:2526a96e-9263-4d2b-acf3-adf0ebf773e0)
 
 $(ID:cede3681-25e1-4335-adad-b188883c418e)
@@ -83,13 +83,13 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>All commands support speech on demand mode.</source>
 </segment>
 </unit>
-<unit id="423b28c0-164b-4add-a208-4a2e3adb4bcc">
+<unit id="2628cd5c-d5d3-4a13-8e10-203907078d43">
 <notes>
 <note appliesTo="source">line: 12</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>NVDA+Shift+E: presents used RAM (pyysical memory) and average processor load.</source>
+<source>NVDA+Shift+E: presents used RAM (physical memory) and average processor load.</source>
 </segment>
 </unit>
 <unit id="a026e904-4609-43d5-8864-ad078a2e219d">
@@ -207,13 +207,13 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>Resource information cannot be copied to the clipboard if running the add-on in secure screens.</source>
 </segment>
 </unit>
-<unit id="3c1109cf-caa1-4f20-8801-a032bbcdecbc">
+<unit id="f30cb84e-93b4-4c9e-b1e7-ea10a41b7434">
 <notes>
 <note appliesTo="source">line: 30</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>CPU usage is given for logical processors, not physical cores. This is noticeable for processors which uses Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.</source>
+<source>CPU usage is given for logical processors, not physical cores. This is noticeable for processors with Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.</source>
 </segment>
 </unit>
 <unit id="e7463f56-ef68-4bc5-b6de-b4a53feff8e7">
@@ -234,13 +234,13 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>GPU information is given for Nvidia GPU's.</source>
 </segment>
 </unit>
-<unit id="7fe4f01c-c276-4cd6-bd70-9946b79e26d6">
+<unit id="230c1f64-b87e-4757-b218-c0aed339a43c">
 <notes>
 <note appliesTo="source">line: 33</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>When announcing processor architecture information, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.</source>
+<source>When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.</source>
 </segment>
 </unit>
 <unit id="2526a96e-9263-4d2b-acf3-adf0ebf773e0">
