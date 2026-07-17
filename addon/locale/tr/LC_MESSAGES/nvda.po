@@ -115,7 +115,7 @@ msgstr "%{avgLoad} CPU yükü."
 #: addon\globalPlugins\resourceMonitor\__init__.py:406
 #, python-brace-format
 msgid "{avgLoad}% average CPU load, {cores}."
-msgstr "%{avgLoad} ortalama CPU yükü, YUO{cores}."
+msgstr "%{avgLoad} ortalama CPU yükü, {cores}."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:417
 msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
@@ -154,7 +154,7 @@ msgstr "ağ"
 #: addon\globalPlugins\resourceMonitor\__init__.py:484
 #, python-brace-format
 msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
-msgstr "{driveName} ({driveType} sürücüsü): {totalSpace} alanın {usedSpace}’si kullanıldı ({percent}%)."
+msgstr "{driveName} ({driveType} sürücüsü): {usedSpace} bölü {totalSpace} kullanılıyor (%{percent})."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:499
 #: addon\globalPlugins\resourceMonitor\__init__.py:506
@@ -168,7 +168,7 @@ msgstr "Kablosuz bağlantı yok"
 #: addon\globalPlugins\resourceMonitor\__init__.py:523
 #, python-brace-format
 msgid "Connected to {}, signal strength: {}%, security type: {}"
-msgstr "{} ile bağlı, sinyal gücü: %{}, güvenlik türü: {}"
+msgstr "{} ağına bağlı, sinyal gücü: %{}, güvenlik türü: {}"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:538
 msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
@@ -217,7 +217,7 @@ msgstr "Sistemin çalışma süresini seslendirir. İki kez basıldığında bil
 #. Translators: Obtaining uptime failed
 #: addon\globalPlugins\resourceMonitor\__init__.py:612
 msgid "Failed to get the system's uptime."
-msgstr "Sistemin açık olduğu zaman bilgisi alınamadı."
+msgstr "Sistemin çalışma süresi alınamadı."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:628
 #, python-brace-format
