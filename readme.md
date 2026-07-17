@@ -13,7 +13,7 @@ All commands support speech on demand mode.
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual RAM (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed).
 * NVDA+Shift+3: presents the used and total space of the fixed (built-in), removable, and network drives.
 * NVDA+Shift+4: presents information on the wireless connection, network (SSID) name and strength, or no SSID if there is none available.
-* NVDA+Shift+6: presents  Windows version, CPU architecture, and exact build number (build.revision).
+* NVDA+Shift+6: presents  Windows version, CPU architecture (x86 (32-bit), AMD64 (x64(, ARM64), and exact build number (build.revision).
 * NVDA+Shift+7: presents the system's uptime.
 * Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).
 * Unassigned: presents graphics processing unit (GPU memory usage information; unavailable in secure mode).
@@ -29,7 +29,7 @@ This add-on does not replace task manager and other system information programs 
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors with Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.
 * GPU information is given for Nvidia GPU's.
-* When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively. This information does not refer to the name of the actual processor in use.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
