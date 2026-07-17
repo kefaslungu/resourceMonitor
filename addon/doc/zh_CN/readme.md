@@ -13,7 +13,7 @@
 * NVDA+Shift+2/5： 读出物理内存和虚拟内存的容量和使用情况（当 NVDA+Shift+2 无法执行时，可使用 NVDA+Shift+5 代替）。
 * NVDA+Shift+3：读出此计算机上所有驱动器的文件系统和空间使用情况。
 * NVDA+Shift+4：读出有关无线连接、SSID 名称和强度的信息，如果没有可用的 SSID，则给出提示。
-* NVDA+Shift+6：读出 Windows 版本、CPU 架构以及精确的内部版本号（build.revision）。
+* NVDA+Shift+6: presents  Windows version, CPU architecture (x86 (32-bit), AMD64 (x64(, ARM64), and exact build number (build.revision).
 * NVDA+Shift+7： 读出当前系统的运行时间。
 * 未分配：读出图形处理器（GPU）的信息；该功能在安全模式下不可用。
 * 未分配：读出图形处理器（GPU）的内存使用情况；该功能在安全模式下不可用。
@@ -29,7 +29,7 @@
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors with Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * 如果存在大量磁盘活动，例如复制大文件或查找网络驱动器，则在获取磁盘使用情况信息时可能会出现延迟。
 * GPU 信息仅适用于英伟达 GPU。
-* When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively.
+* When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively. This information does not refer to the name of the actual processor in use.
 * 不支持在 Windows 10/11 LTSC 上安装本插件。
 
 有关每个插件版本之间的所做更改，请参阅[插件更新日志（英语）][1]文档。
