@@ -191,7 +191,7 @@ si = [
 ]
 
 
-def size(bytes: int, system: list[tuple[float, Any]] = traditional) -> str:
+def size(bytes: int| float, system: list[tuple[float, Any]] = traditional) -> str:
 	for factor, suffix in system:
 		if float(bytes) >= float(factor):
 			break
