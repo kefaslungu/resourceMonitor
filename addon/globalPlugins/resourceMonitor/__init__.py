@@ -29,7 +29,7 @@ try:
 	from . import wlanapi
 
 	wlanapiAvailable = True
-except OSError:
+except (OSError, AttributeError):
 	wlanapiAvailable = False
 import addonHandler
 from .gpu import BaseGpuProvider, getGpuProviders
