@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-07-17 19:20+0000\n"
-"PO-Revision-Date: 2026-07-17 19:22\n"
+"PO-Revision-Date: 2026-07-23 12:04\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -53,7 +53,7 @@ msgstr "santigrat derece"
 #: addon\globalPlugins\resourceMonitor\__init__.py:248
 #, python-brace-format
 msgid "{used} of {total} used ({percent}%)"
-msgstr "{used} tire {total} kullanıldı ({percent}%)"
+msgstr "{used} bölü {total} kullanılıyor (%{percent})"
 
 #. Translators: Category title for Resource Monitor settings in NVDA's settings dialog.
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
@@ -279,5 +279,8 @@ msgid "* Added Resource Monitor category to NVDA settings to configure GPU tempe
 "* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
 "* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
 "* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
-msgstr ""
+msgstr "* santigrat ve Fahrenheit arasında GPU sıcaklık raporlama birimini yapılandırmak için NVDA ayarlarına Kaynak İzleme kategorisi eklendi (hexxbyte'ın katkısıyla).\n"
+"* GPU (grafik işlem birimi) bellek kullanım bilgilerini seslendirmek için atanmamış bir komut eklendi (hexxbyte'ın katkısıyla).\n"
+"* Disk kullanım bilgilerini seslendirmek için NVDA+Shift+3 tuşlarına basmak, bağlıysa eşlenen ağ sürücülerini içerecektir (hexxbyte'ın katkısıyla).\n"
+"* Pil durumu seslendirme özelliği kaldırıldı. Artık NVDA+Shift+4 tuşlarına basıldığında kablosuz bağlantı durumu raporlanacak."
 
