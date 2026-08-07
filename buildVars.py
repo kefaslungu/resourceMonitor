@@ -21,7 +21,7 @@ addon_info = AddonInfo(
 	addon_summary=_("Resource Monitor"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
-	addon_description=_("A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."),
+	addon_description=_("A handy resource monitor to report CPU load, memory usage, disk usage status and more."),
 	# version
 	addon_version="26.08",
 	# Brief changelog for this version
