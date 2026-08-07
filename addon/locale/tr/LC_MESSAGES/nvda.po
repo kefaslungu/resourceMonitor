@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-24 19:37+0000\n"
-"PO-Revision-Date: 2026-07-31 19:42\n"
+"POT-Creation-Date: 2026-08-07 19:07+0000\n"
+"PO-Revision-Date: 2026-08-07 19:10\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -269,8 +269,8 @@ msgstr "GPU bellek bilgisi alınamadı."
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
-msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
-msgstr "CPU yükü, hafıza kullanımı, pil ve disk kullanım durumunu takip etmek ve daha fazlası için pratik bir araç."
+msgid "A handy resource monitor to report CPU load, memory usage, disk usage status and more."
+msgstr ""
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store

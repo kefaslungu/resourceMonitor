@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-24 19:37+0000\n"
-"PO-Revision-Date: 2026-07-31 05:32\n"
+"POT-Creation-Date: 2026-08-07 19:07+0000\n"
+"PO-Revision-Date: 2026-08-07 19:10\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -265,8 +265,8 @@ msgstr "Không lấy được thông tin bộ nhớ GPU."
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
-msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
-msgstr "Add-on này dùng để thông báo tình trạng sử dụng các thiết bị của máy, bao gồm: CPU, RAM, ổ đĩa và pin."
+msgid "A handy resource monitor to report CPU load, memory usage, disk usage status and more."
+msgstr ""
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store

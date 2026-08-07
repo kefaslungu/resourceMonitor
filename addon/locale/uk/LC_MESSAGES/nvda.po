@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-24 19:37+0000\n"
-"PO-Revision-Date: 2026-07-27 00:36\n"
+"POT-Creation-Date: 2026-08-07 19:07+0000\n"
+"PO-Revision-Date: 2026-08-07 19:10\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
@@ -277,8 +277,8 @@ msgstr "Не вдалося отримати інформацію про пам'
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
-msgid "A handy resource monitor to report CPU load, memory usage, battery, disk usage status and more."
-msgstr "Зручний монітор ресурсів повідомляє про завантаженість процесора, використання оперативної пам'яті, статус акумулятора і дискового простору, та іншу інформацію."
+msgid "A handy resource monitor to report CPU load, memory usage, disk usage status and more."
+msgstr ""
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
