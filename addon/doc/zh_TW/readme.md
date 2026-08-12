@@ -13,7 +13,7 @@
 * NVDA+Shift+2/5：讀出實體記憶體與虛擬記憶體的已使用空間及總空間（若無法按下 NVDA+Shift+2 組合鍵，可改用 NVDA+Shift+5）。
 * NVDA+Shift+3：讀出固定式（內建）、卸除式及網路磁碟機的已使用空間與總空間。
 * NVDA+Shift+4：讀出無線網路連線資訊，包括網路名稱（SSID）及訊號強度；若沒有可用的 SSID，則會讀出沒有 SSID。
-* NVDA+Shift+6：讀出 Windows 版本、CPU 架構（x86（32 位元）、AMD64（x64）、ARM64）及完整的組建編號（組建.修訂版）。
+* NVDA+Shift+6: presents  Windows version, CPU architecture (x86 (32-bit), AMD64 (x64), ARM64), and exact build number (build.revision).
 * NVDA+Shift+7：讀出系統的運作時間。
 * 未指派：讀出圖形處理器（GPU）資訊（在安全模式下無法使用）。
 * 未指派：讀出圖形處理器（GPU）記憶體使用量資訊（在安全模式下無法使用）。
