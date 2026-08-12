@@ -13,7 +13,7 @@ All commands support speech on demand mode.
 * NVDA+Shift+2/5: presents the used and total space for both physical and virtual RAM (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed).
 * NVDA+Shift+3: presents the used and total space of the fixed (built-in), removable, and network drives.
 * NVDA+Shift+4: presents information on the wireless connection, network (SSID) name and strength, or no SSID if there is none available.
-* NVDA+Shift+6: presents  Windows version, CPU architecture (x86 (32-bit), AMD64 (x64(, ARM64), and exact build number (build.revision).
+* NVDA+Shift+6: presents  Windows version, CPU architecture (x86 (32-bit), AMD64 (x64), ARM64), and exact build number (build.revision).
 * NVDA+Shift+7: presents the system's uptime.
 * Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).
 * Unassigned: presents graphics processing unit (GPU memory usage information; unavailable in secure mode).
