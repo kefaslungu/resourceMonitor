@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-08-07 19:07+0000\n"
-"PO-Revision-Date: 2026-08-07 19:08\n"
+"PO-Revision-Date: 2026-08-10 00:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -266,7 +266,7 @@ msgstr "GPU 内存信息获取失败。"
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
 msgid "A handy resource monitor to report CPU load, memory usage, disk usage status and more."
-msgstr ""
+msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存和磁盘使用情况等。"
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store

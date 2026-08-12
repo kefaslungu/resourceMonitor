@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-08-07 19:07+0000\n"
-"PO-Revision-Date: 2026-08-07 19:10\n"
+"PO-Revision-Date: 2026-08-08 15:21\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
@@ -278,7 +278,7 @@ msgstr "Не вдалося отримати інформацію про пам'
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
 msgid "A handy resource monitor to report CPU load, memory usage, disk usage status and more."
-msgstr ""
+msgstr "Зручний монітор ресурсів, який повідомляє про завантаження процесора, використання пам'яті, стан використання диска та багато іншого."
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
@@ -287,5 +287,8 @@ msgid "* Added Resource Monitor category to NVDA settings to configure GPU tempe
 "* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
 "* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
 "* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
-msgstr ""
+msgstr "* До налаштувань NVDA додано категорію «Монітор ресурсів», що дозволяє налаштувати одиницю вимірювання температури графічного процесора (GPU) — Цельсій або Фаренгейт (за пропозицією hexxbyte).\n"
+"* Додано непризначену команду для оголошення інформації про використання пам’яті графічного процесора (GPU) (за пропозицією hexxbyte).\n"
+"* Натискання комбінації клавіш NVDA+Shift+3 для отримання інформації про використання дискового простору тепер включатиме підключені мережеві диски (за пропозицією hexxbyte).\n"
+"* Вилучено функцію повідомлення про стан акумулятора. Натискання комбінації клавіш NVDA+Shift+4 тепер надаватиме інформацію про стан бездротового з’єднання. Для отримання інформації про стан акумулятора використовуйте власну команду NVDA для перевірки стану акумулятора (NVDA+Shift+B)."
 
