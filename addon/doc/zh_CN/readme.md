@@ -13,7 +13,7 @@
 * NVDA+Shift+2/5： 读出物理内存和虚拟内存的容量和使用情况（当 NVDA+Shift+2 无法执行时，可使用 NVDA+Shift+5 代替）。
 * NVDA+Shift+3：读出此计算机上所有驱动器的文件系统和空间使用情况。
 * NVDA+Shift+4：读出有关无线连接、SSID 名称和强度的信息，如果没有可用的 SSID，则给出提示。
-* NVDA+Shift+6: presents  Windows version, CPU architecture (x86 (32-bit), AMD64 (x64), ARM64), and exact build number (build.revision).
+* NVDA+Shift+6：读出 Windows 版本、CPU 架构（x86（32 位）、AMD64（x64）、ARM64）以及精确的内部版本号（build.revision）。
 * NVDA+Shift+7： 读出当前系统的运行时间。
 * 未分配：读出图形处理器（GPU）的信息；该功能在安全模式下不可用。
 * 未分配：读出图形处理器（GPU）的内存使用情况；该功能在安全模式下不可用。
