@@ -286,7 +286,7 @@ def getWinVer() -> str:
 	# Obtain current Windows version.
 	# Windows version info (major.minor.build.servicePack.productType) comes from winVersion.getWinVer.
 	currentWinVer = winVersion.getWinVer()
-	# Announce actual machine architecture (x86/32-bit, AMD64, ARM64).
+	# Announce actual machine architecture (AMD64, ARM64).
 	arch = currentWinVer.processorArchitecture
 	# All publicly released Windows releases are represented by a winVersion.WinVersion instance.
 	# NVDA uses client release names for "releaseName" attribute.
