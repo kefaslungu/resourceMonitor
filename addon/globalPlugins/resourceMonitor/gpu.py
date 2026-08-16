@@ -2,6 +2,7 @@
 # Presents GPU information
 # Copyright 2026 Kevin Derome, Joseph Lee, released under GPL
 
+from typing import override
 import os
 import os.path
 import shutil
@@ -75,6 +76,7 @@ class NvidiaGpuProvider(BaseGpuProvider):
 				return path
 		return None
 
+	@override
 	def collect(self) -> list[GpuTelemetry] | None:
 		if not self._nvidiaSmiPathResolved:
 			self._nvidiaSmiPath = self._findNvidiaSmiPath()
