@@ -12,20 +12,26 @@ All commands support speech on demand mode.
 * NVDA+Shift+1: Oplyser den gennemsnitlige processorbelastning, og hvis multicore-CPU'er er til stede, vil brug for hver kerne også blive oplyst.
 * NVDA+Shift+2/5: Oplyser brugt og total plads i fysisk og virtuel hukommelse.
 * NVDA+Shift+3: Oplyser brugt og samlet plads på de statiske og flytbare drev.
-* NVDA+Shift+4: Oplyser batteristatus i procent, opladestatus, resterende batteritid (hvis det ikke er ved at blive opladet) og en advarsel, hvis batteriniveauet er lavt eller kritisk.
+* NVDA+Shift+4: Oplyser information om den trådløse forbindelse, ssid-navn og signalstyrke, eller ingen ssid, hvis der ikke er nogen tilgængelig.
 * NVDA+Shift+6: Oplyser CPU-arkitekturen, WIndows version og servicepakke.
 * NVDA+Shift+7: Oplyser systemets oppetid.
-* NVDA+Shift+8: Oplyser information om den trådløse forbindelse, ssid-navn og signalstyrke, eller ingen ssid, hvis der ikke er nogen tilgængelig.
+* Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).
+* Unassigned: presents graphics processing unit (GPU memory usage information; unavailable in secure mode).
 
-Du kan ændre disse genveje via dialogen "Håndter kommandoer"
+Du kan ændre disse genveje via dialogen "Håndter kommandoer".
 
 ## Brugsanvisninger
 
 Denne tilføjelse erstatter ikke Jobliste og andre systeminformationsprogrammer til Windows. Bemærk også følgende:
 
+* Apart from overall resource usage command (NVDA+Shift+E), pressing other commands twice will copy resource usage information to the clipboard.
 * Ressourceoplysninger kan ikke kopieres til udklipsholderen, hvis tilføjelsen kører på sikre skærme.
 * CPU-brug bliver angivet for logiske processorer, ikke fysiske kerner. Dette har betydning for processorer, som bruger hypertrådningsteknologi. Her er antallet af CPU'er er det dobbelte af CPU-kernerne. På nogle nyere CPU'er, vil denne teknologi ikke nødvendigvis være aktiveret.
 * Hvis der er en stor mængde af diskaktivitet som f.eks. Kopiering af store filer, kan der være forsinkelser, når der hentes oplysninger om diskbrug.
+* GPU information is given for Nvidia GPU's.
 * Når der annoncerer processorarkitekturoplysninger, henviser "x86" og "AMD64" til henholdsvis 32-bit og 64-bit (x64) Intel- og AMD-processorer.
-* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
+
+For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
+
+[1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md

@@ -1,204 +1,283 @@
-# Resource Monitor to Aragonese
-# Copyright (C) 2013 THE NVDA'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the NVDA package.
-# Jorge Pérez Pérez <jorgtum@gmail.com>, 2013
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: resourceMonitor 2.1\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2021-07-09 12:20-0700\n"
-"PO-Revision-Date: 2023-01-08 05:39-0800\n"
-"Last-Translator: Jorge Pérez Pérez <jorgtum@gmail.com>\n"
-"Language-Team: SoftAragonés <softaragones@googlegroups.com>\n"
-"Language: an\n"
+"Project-Id-Version: nvdaaddons\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2026-08-07 19:07+0000\n"
+"PO-Revision-Date: 2026-08-16 04:09\n"
+"Last-Translator: \n"
+"Language-Team: Aragonese\n"
+"Language: an_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: an\n"
+"X-Crowdin-File: resourceMonitor.pot\n"
+"X-Crowdin-File-ID: 214\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on an older version of Windows.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
-msgstr ""
+#: addon\globalPlugins\resourceMonitor\__init__.py:58
+msgid "No authentication (Open)"
+msgstr "No authentication (Open)"
 
-#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr ""
-
-#. Translators: Message reported when there is no battery on the system,
-#. mostly laptops with battery pack removed and running on AC power.
-msgid "This computer does not have a battery connected."
-msgstr "Iste ordinador no tien una batería conectada."
-
-#. Translators: message presented when AC is connected and battery is charging,
-#. also show current battery percentage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:83
 #, python-brace-format
-msgid "{percent}%, battery charging."
-msgstr "{percent}%, a batería se ye cargando."
+msgid "Connected to {}"
+msgstr "Connected to {}"
 
-#. Translators: message presented when computer is running on battery power,
-#. showing percentage remaining yet battery time is unknown.
+#: addon\globalPlugins\resourceMonitor\__init__.py:93
 #, python-brace-format
-msgid "{percent}% battery remaining, battery time unknown."
-msgstr ""
+msgid "Disconnected from {}"
+msgstr "Disconnected from {}"
 
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
-msgid "1 hour"
-msgstr "1 hora"
+#: addon\globalPlugins\resourceMonitor\__init__.py:98
+msgid "A wireless device has been enabled"
+msgstr "A wireless device has been enabled"
 
-#. Translators: battery and system uptime in hours.
-#. Translators: system uptime in hours.
+#: addon\globalPlugins\resourceMonitor\__init__.py:104
+msgid "A wireless device has been disabled"
+msgstr "A wireless device has been disabled"
+
+#. Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
+#: addon\globalPlugins\resourceMonitor\__init__.py:228
+msgid "degrees Fahrenheit"
+msgstr "degrees Fahrenheit"
+
+#. Translators: Celsius temperature unit symbol appended to a GPU temperature value.
+#: addon\globalPlugins\resourceMonitor\__init__.py:232
+msgid "degrees Celsius"
+msgstr "degrees Celsius"
+
+#. Translators: Shows GPU memory usage (example: 2.00 GB of 8.00 GB used (25%)).
+#: addon\globalPlugins\resourceMonitor\__init__.py:248
 #, python-brace-format
-msgid "{0} hours"
-msgstr "{0}  horas"
+msgid "{used} of {total} used ({percent}%)"
+msgstr "{used} of {total} used ({percent}%)"
 
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-msgid "1 minute"
-msgstr "1 minuto"
-
-#. Translators: battery and system uptime in minutes.
-#. Translators: system uptime in minutes.
-#, python-brace-format
-msgid "{0} minutes"
-msgstr "{0} minutos"
-
-#. Translators: message presented when computer is running on battery power,
-#. showing percentage remaining and estimated remaining time.
-#, python-brace-format
-msgid "{percent}% battery remaining, about {time}."
-msgstr "En queda {percent}% de batería, arredol de {time}."
-
-#. Translators: Message reported when battery level is low.
-msgid " Warning: low battery."
-msgstr "Para cuenta: Bbatería baixa."
-
-#. Translators: Message reported when battery level is critical.
-msgid " Warning: critically low battery."
-msgstr "Para cuenta: A batería ye muit baixa."
-
-#. Translators: Presents Windows version
-#. (example output: "Windows 10 (32-bit)").
-#, python-brace-format
-msgid "{winVersion} ({cpuBit})"
-msgstr "{winVersion} ({cpuBit})"
-
+#. Translators: Category title for Resource Monitor settings in NVDA's settings dialog.
 #. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
+#: addon\globalPlugins\resourceMonitor\__init__.py:257
+#: addon\globalPlugins\resourceMonitor\__init__.py:309 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Monitor de recursos"
 
-#. Translators: Input help message about battery info command in Resource Monitor.
-msgid ""
-"Presents battery percentage, charging status, remaining time (if not "
-"charging), and a warning if the battery is low or critical."
-msgstr ""
-"Presienta o porcentache d'a batería, l'estau d'a carga, o tiempo que en "
-"queda (si no se ye cargando) y una alvertencia si a batería ye baixa u muit "
-"baixa."
+#. Translators: Label for a combo box to select the unit used to report GPU temperature.
+#: addon\globalPlugins\resourceMonitor\__init__.py:262
+msgid "GPU &temperature unit:"
+msgstr "GPU &temperature unit:"
 
-#. Translators: Input help message about drive info command in Resource Monitor.
-msgid ""
-"Presents the used and total space of the static and removable drives on this "
-"computer."
-msgstr ""
-"Presienta l'espacio usau y l'espacio total d'os discos duros y extraíbles "
-"d'iste ordinador."
+#. Translators: An option in the GPU temperature unit combo box.
+#: addon\globalPlugins\resourceMonitor\__init__.py:264
+msgid "Celsius"
+msgstr "Celsius"
 
-#. Translators: Shows drive letter, type of drive (fixed or removable),
-#. used capacity and total capacity of a drive
-#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon\globalPlugins\resourceMonitor\__init__.py:264
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
+#: addon\globalPlugins\resourceMonitor\__init__.py:301
 #, python-brace-format
-msgid ""
-"{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%."
-msgstr ""
-"{driveName} (dispositivo {driveType}): {usedSpace} de {totalSpace} usau "
-"{percent}%."
+msgid "{winVersion} ({cpuBit}) build {build}"
+msgstr "{winVersion} ({cpuBit}) build {build}"
 
-#. Translators: Input help mode message about processor info command in Resource Monitor.
-msgid "Presents the average processor load and the load of each core."
-msgstr "Presienta a carga meya d'o procesador y a carga de cada nuclio."
+#. Translators: Input help mode message about overall system resource info command in Resource Monitor
+#: addon\globalPlugins\resourceMonitor\__init__.py:367
+msgid "Presents used ram and average processor load."
+msgstr "Presents used ram and average processor load."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:375
+#, python-brace-format
+msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
+msgstr "{ramPercent}% RAM usada, CPU en {cpuPercent}%."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:384
+msgid "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
+msgstr "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
+#: addon\globalPlugins\resourceMonitor\__init__.py:396
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Nuclio {coreNumber}: {corePercent}%."
 
 #. Translators: Shows average load of the processor on single-core systems.
+#: addon\globalPlugins\resourceMonitor\__init__.py:403
 #, python-brace-format
-msgid "Average CPU load {avgLoad}%."
-msgstr "Carga meya de CPU {avgLoad}%."
+msgid "{avgLoad}% CPU load."
+msgstr "{avgLoad}% CPU load."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
+#: addon\globalPlugins\resourceMonitor\__init__.py:406
 #, python-brace-format
-msgid "Average CPU load {avgLoad}%, {cores}."
-msgstr "Carga meya de CPU {avgLoad}%, {cores}"
+msgid "{avgLoad}% average CPU load, {cores}."
+msgstr "{avgLoad}% average CPU load, {cores}."
 
-#. Translators: Input help mode message about memory info command in Resource Monitor.
-msgid "Presents the used and total space for both physical and virtual ram."
-msgstr "Presienta lo espacio usau y lo total de memoria RAM fisica y virtual."
+#: addon\globalPlugins\resourceMonitor\__init__.py:417
+msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
+msgstr "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
 
 #. Translators: Shows RAM (physical memory) usage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:427
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "Fisico: {physicalUsed} de {physicalTotal} usau ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:435
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: {virtualUsed} de {virtualTotal} usau ({virtualPercent}%)."
 
-#. Translators: Input help mode message about Windows version command in Resource Monitor.
-msgid "Announces the version of Windows you are using."
-msgstr "Anuncia a versión de Windows que yes fendo servir."
+#: addon\globalPlugins\resourceMonitor\__init__.py:448
+msgid "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
+msgstr "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
+
+#. Translators: Reported when a mapped network drive is currently unreachable.
+#: addon\globalPlugins\resourceMonitor\__init__.py:476
+#, python-brace-format
+msgid "{driveName} (network drive): not available."
+msgstr "{driveName} (network drive): not available."
+
+#. Translators: word used to describe a mapped network drive.
+#: addon\globalPlugins\resourceMonitor\__init__.py:479
+msgid "network"
+msgstr "network"
+
+#. Translators: Shows drive letter, type of drive (fixed, removable, or network),
+#. used capacity and total capacity of a drive
+#. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
+#: addon\globalPlugins\resourceMonitor\__init__.py:484
+#, python-brace-format
+msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
+msgstr "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:499
+#: addon\globalPlugins\resourceMonitor\__init__.py:506
+msgid "No wireless devices"
+msgstr "No wireless devices"
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:510
+msgid "No wireless connections"
+msgstr "No wireless connections"
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:523
+#, python-brace-format
+msgid "Connected to {}, signal strength: {}%, security type: {}"
+msgstr "Connected to {}, signal strength: {}%, security type: {}"
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:538
+msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
+msgstr "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:554
+msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
+msgstr "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
 
 #. Translators: system uptime in days.
-msgid "1 day"
-msgstr ""
-
-#. Translators: system uptime in days.
+#: addon\globalPlugins\resourceMonitor\__init__.py:578
 #, python-brace-format
-msgid "{0} days"
-msgstr ""
+msgid "{days:d} day"
+msgid_plural "{days:d} days"
+msgstr[0] "{days:d} day"
+msgstr[1] "{days:d} days"
+
+#. Translators: system uptime in hours.
+#: addon\globalPlugins\resourceMonitor\__init__.py:582
+#, python-brace-format
+msgid "{hours:d} hour"
+msgid_plural "{hours:d} hours"
+msgstr[0] "{hours:d} hour"
+msgstr[1] "{hours:d} hours"
+
+#. Translators: system uptime in minutes.
+#: addon\globalPlugins\resourceMonitor\__init__.py:586
+#, python-brace-format
+msgid "{minutes:d} minute"
+msgid_plural "{minutes:d} minutes"
+msgstr[0] "{minutes:d} minute"
+msgstr[1] "{minutes:d} minutes"
 
 #. Translators: system uptime in seconds.
-msgid "1 second"
-msgstr ""
-
-#. Translators: system uptime in seconds.
+#: addon\globalPlugins\resourceMonitor\__init__.py:590
 #, python-brace-format
-msgid "{0} seconds"
-msgstr ""
+msgid "{seconds:d} second"
+msgid_plural "{seconds:d} seconds"
+msgstr[0] "{seconds:d} second"
+msgstr[1] "{seconds:d} seconds"
 
-#. Translators: Input help mode message about obtaining the system's uptime
-msgid "Announces the system's uptime."
-msgstr ""
+#: addon\globalPlugins\resourceMonitor\__init__.py:597
+msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
+msgstr "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 
 #. Translators: Obtaining uptime failed
+#: addon\globalPlugins\resourceMonitor\__init__.py:612
 msgid "Failed to get the system's uptime."
-msgstr ""
+msgstr "Failed to get the system's uptime."
 
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-msgid ""
-"Presents used ram, average processor load, and battery info if available."
-msgstr ""
-"Presienta a RAM usada, a carga meya d'o procesador y información d'a batería "
-"si ye disponible."
-
+#: addon\globalPlugins\resourceMonitor\__init__.py:628
 #, python-brace-format
-msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
-msgstr "{ramPercent}% RAM usada, CPU en {cpuPercent}%."
+msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
+msgstr "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:638
+#: addon\globalPlugins\resourceMonitor\__init__.py:693
+msgid "No GPU information available."
+msgstr "No GPU information available."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:640
+msgid "Unable to get GPU information."
+msgstr "Unable to get GPU information."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:641
+#: addon\globalPlugins\resourceMonitor\__init__.py:696
+msgid "No GPU data available."
+msgstr "No GPU data available."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:646
+msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
+msgstr "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
+
+#. Translators: Message reported when the GPU command fails unexpectedly.
+#: addon\globalPlugins\resourceMonitor\__init__.py:664
+msgid "Failed to get GPU information."
+msgstr "Failed to get GPU information."
+
+#. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
+#: addon\globalPlugins\resourceMonitor\__init__.py:684
+#, python-brace-format
+msgid "GPU {gpuNumber}: {memoryInfo}."
+msgstr "GPU {gpuNumber}: {memoryInfo}."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:695
+msgid "Unable to get GPU memory information."
+msgstr "Unable to get GPU memory information."
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:701
+msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
+msgstr "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
+
+#. Translators: Message reported when the GPU memory command fails unexpectedly.
+#: addon\globalPlugins\resourceMonitor\__init__.py:719
+msgid "Failed to get GPU memory information."
+msgstr "Failed to get GPU memory information."
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid ""
-"A handy resource monitor to report CPU load, memory usage, battery, disk "
-"usage status and more."
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:24
+msgid "A handy resource monitor to report CPU load, memory usage, disk usage status and more."
 msgstr ""
-"Un monitor de recursos a man ta informar d'a carga d'a CPU, de l'uso de "
-"memoria, d'a batería, d'o estau d'uso d'o disco y de muito mas."
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).\n"
+"* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
+"* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
+"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
+msgstr ""
+
