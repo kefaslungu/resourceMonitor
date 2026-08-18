@@ -12,10 +12,11 @@ All commands support speech on demand mode.
 * NVDA+šift+1: Prikazuje prosječnu opterećenost procesora i ako postoje višejezgreni procesori, prikazuje opterećenje svake jezgre.
 * NVDA+šift+2/5: Prikazuje korišteni i ukupni kapacitet fizičke I virtualne ram memorije.
 * NVDA+šift+3: Prikazuje korišteni i ukupni prostor na statičnim i prenosivim diskovima.
-* NVDA+šift+4: Prikazuje postotak baterije, stanje punjenja, preostalo vrijeme (ako se ne puni), te upozorenje, ako je baterija slaba ili skoro prazna.
-* NVDA+šift+6: Prikazuje arhitekturu procesora, Windows verziju i broj service paketa.
+* NVDA+šift+4: prikazuje informacije o bežičnoj vezi, ime i snagu ssid-a ili ne prikazuje ssid ako nije dostupan.
+* * NVDA+šift+6: Prikazuje arhitekturu procesora, Windows verziju i broj service paketa.
 * NVDA+šift+7: Prikazuje vrijeme neprekidnog rada sustava.
-* NVDA+šift+8: prikazuje informacije o bežičnoj vezi, ime i snagu ssid-a ili ne prikazuje ssid ako nije dostupan.
+* Unassigned: presents information about the graphics processing unit (GPU; unavailable in secure mode).
+* Unassigned: presents graphics processing unit (GPU memory usage information; unavailable in secure mode).
 
 Tipkovničke prečace je moguće mijenjati putem dijaloškog okvira za ulazne geste.
 
@@ -23,9 +24,14 @@ Tipkovničke prečace je moguće mijenjati putem dijaloškog okvira za ulazne ge
 
 Ovaj dodatak ne zamijenjuje upravljača zadataka i druge programe za informacije o sustavu Windows. Važno je znati i sljedeće:
 
+* Apart from overall resource usage command (NVDA+Shift+E), pressing other commands twice will copy resource usage information to the clipboard.
 * Podaci o resursima ne mogu se kopirati u međuspremnik ako se dodatak pokreće na sigurnim ekranima.
 * Informacije o korištenju procesora dane su za logičke procesore, ne za fizičke jezgre. To se može primijetiti kod procesora koji koriste Hyper-Threading gdje je broj procesora dvostruko veći od broja jezgri. Na nekim novijim računalima Hyper-Threading neće biti aktivirano za sve jezgre CPU-a.
 * Ako je u tijeku velika aktivnost diska, kao što je kopiranje velikih datoteka, moguća su kašnjenja prilikom dobivanja informacija o korištenju diska.
+* GPU information is given for Nvidia GPU's.
 * Kada se najavljuju informacije o arhitekturi procesora, „x86” i „AMD64” odnose se na 32-bitne i 64-bitne (x64) Intel odnosno AMD procesore.
-* This add-on requires Windows 10 22H2 (2022 Update/build 19045) or later.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
+
+For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
+
+[1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md
