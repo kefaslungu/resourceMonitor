@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/56c668743fcabe4b0ac8f9c239e97868892bb1e1/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/69bc39a9e63ad9efec65659524939f83c7e38fe6/readme.md">
 <skeleton>
 # $(ID:4566d44d-44e5-4bf8-87b8-f29d4ecaaa03)
 
@@ -17,7 +17,7 @@ $(ID:756f97fb-9153-48a2-83ca-6bc45c455fa1)
 * $(ID:47a09da1-230e-4a42-adc5-6d417147197e)
 * $(ID:035225d4-80fb-4de4-af01-ac3aa3266603)
 * $(ID:db7950ec-fe1c-455d-8906-e2a42e87520b)
-* $(ID:ba306435-0434-4eaa-92b1-0aac31adc9bb)
+* $(ID:be755231-1f96-4048-8749-cd28ad242b61)
 * $(ID:6b242ca4-370e-473c-9c2c-e2d6db09aa5d)
 * $(ID:7556990e-9fd3-4d08-b63e-80995af1ae42)
 * $(ID:458469dd-f1b7-4f74-9e96-c7abef0cd8af)
@@ -33,7 +33,7 @@ $(ID:6afdbb36-1fa8-4498-99e0-3af26ac88091)
 * $(ID:f30cb84e-93b4-4c9e-b1e7-ea10a41b7434)
 * $(ID:e7463f56-ef68-4bc5-b6de-b4a53feff8e7)
 * $(ID:843f5230-c7a3-47e4-94f9-e20d98046a36)
-* $(ID:675887a8-c260-476c-a26e-441aabf599b0)
+* $(ID:cb5afef8-535b-45b2-bc60-64b07663bed7)
 * $(ID:2526a96e-9263-4d2b-acf3-adf0ebf773e0)
 
 $(ID:cede3681-25e1-4335-adad-b188883c418e)
@@ -128,13 +128,13 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>NVDA+Shift+4: presents information on the wireless connection, network (SSID) name and strength, or no SSID if there is none available.</source>
 </segment>
 </unit>
-<unit id="ba306435-0434-4eaa-92b1-0aac31adc9bb">
+<unit id="be755231-1f96-4048-8749-cd28ad242b61">
 <notes>
 <note appliesTo="source">line: 17</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>NVDA+Shift+6: presents  Windows version, CPU architecture (x86 (32-bit), AMD64 (x64), ARM64), and exact build number (build.revision).</source>
+<source>NVDA+Shift+6: presents  Windows version, CPU architecture (AMD64 (x64), ARM64), and exact build number (build.revision).</source>
 </segment>
 </unit>
 <unit id="6b242ca4-370e-473c-9c2c-e2d6db09aa5d">
@@ -234,13 +234,13 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>GPU information is given for Nvidia GPU's.</source>
 </segment>
 </unit>
-<unit id="675887a8-c260-476c-a26e-441aabf599b0">
+<unit id="cb5afef8-535b-45b2-bc60-64b07663bed7">
 <notes>
 <note appliesTo="source">line: 33</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively. This information does not refer to the name of the actual processor in use.</source>
+<source>When announcing processor architecture information as part of Windows version reporting, "AMD64" refer to 64-bit (x64) Intel and AMD processors. This information does not refer to the name of the actual processor in use.</source>
 </segment>
 </unit>
 <unit id="2526a96e-9263-4d2b-acf3-adf0ebf773e0">
