@@ -13,7 +13,7 @@ Hemû ferman moda axaftinê li ser daxwazê piştgirî dikin.
 * NVDA+Shift+2/5: cîhê bikarhatî û tevahî ji bo RAM-a fîzîkî û hem jî ya virtual nîşan dide (NVDA+Shift+5 alternatîfek ji bo NVDA+Shift+2 e dema ku kombînasyona klavyeyê ya paşîn nayê pêkanîn).
 * NVDA+Shift+3: cîhê bikarhatî û tevahî ya ajokarên sabît (çêkirî), rakirinî, û torê nîşan dide.
 * NVDA+Shift+4: agahî li ser girêdana bêtêl, nav û hêza torê (SSID) nîşan dide, an jî heke SSID tune be, agahî nîşan dide.
-* NVDA+Shift+6: guhertoya Windows, mîmariya CPU (x86 (32-bit), AMD64 (x64), ARM64), û hejmara rastîn a avakirina (build.revision) nîşan dide.
+* NVDA+Shift+6: presents  Windows version, CPU architecture (AMD64 (x64), ARM64), and exact build number (build.revision).
 * NVDA+Shift+7: dema xebitandina pergalê nîşan dide.
 * Nehatiye destnîşankirin: agahdariya li ser yekîneya pêvajoya grafîkê pêşkêş dike (GPU; di moda ewle de ne berdest e).
 * Nehatiye destnîşankirin: yekîneya pêvajoya grafîkê nîşan dide (agahiyên karanîna bîra GPU; di moda ewle de ne berdest e).
@@ -29,7 +29,7 @@ Ev pêvek şûna rêveberê peywir û bernameyên din ên agahdariya pergalê y�
 * Bikaranîna CPUyê ji bo pêvajoyên mentiqî tê dayîn, ne ji bo coreyên fîzîkî. Ev ji bo pêvajoyên bi Hyper-Threadingê tê dîtin ku tê de hejmara CPUyan du qat ji hejmara coreyên CPUyê ye. Li ser hin komputerên nûtir, ne hemî coreyên CPUyê hyper-threading çalak dikin.
 * Heke çalakiyek giran a dîskê hebe wek kopîkirina pelên mezin an jî dema dîtina ajokarên torê, dibe ku di wergirtina agahdariya karanîna dîskê de derengî hebin.
 * Agahdariya GPU ji bo GPU-yên Nvidia tê dayîn.
-* Dema ku agahiyên mîmariya pêvajoyê wekî beşek ji raporên guhertoya Windows-ê têne ragihandin, "x86" û "AMD64" bi rêzê ve ji bo pêvajoyên Intel û AMD yên 32-bit û 64-bit (x64) têne bikar anîn. Ev agahî behsa navê pêvajoya rastîn a ku tê bikar anîn nake.
+* When announcing processor architecture information as part of Windows version reporting, "AMD64" refer to 64-bit (x64) Intel and AMD processors. This information does not refer to the name of the actual processor in use.
 * Sazkirina pêveka li ser Windows 10/11 LTSC nayê piştgirîkirin.
 
 Ji bo navnîşek guhertinên ku di navbera her guhertoyên pêvekê de hatine çêkirin, li belgeya [changelogs for add-on releases][1] binêre.

@@ -13,7 +13,7 @@
 * NVDA+Shift+2/5：讀出實體記憶體與虛擬記憶體的已使用空間及總空間（若無法按下 NVDA+Shift+2 組合鍵，可改用 NVDA+Shift+5）。
 * NVDA+Shift+3：讀出固定式（內建）、卸除式及網路磁碟機的已使用空間與總空間。
 * NVDA+Shift+4：讀出無線網路連線資訊，包括網路名稱（SSID）及訊號強度；若沒有可用的 SSID，則會讀出沒有 SSID。
-* NVDA+Shift+6：讀出 Windows 版本、CPU 架構（x86（32 位元）、AMD64（x64）、ARM64）及完整的組建編號（組建.修訂版）。
+* NVDA+Shift+6: presents  Windows version, CPU architecture (AMD64 (x64), ARM64), and exact build number (build.revision).
 * NVDA+Shift+7：讀出系統的運作時間。
 * 未指派：讀出圖形處理器（GPU）資訊（在安全模式下無法使用）。
 * 未指派：讀出圖形處理器（GPU）記憶體使用量資訊（在安全模式下無法使用）。
@@ -29,7 +29,7 @@
 * CPU 使用率是以邏輯處理器為單位，而非實體核心。對於支援超執行緒（Hyper-Threading）的處理器，這一點尤其明顯，因為邏輯處理器的數量是 CPU 實體核心數量的兩倍。在某些較新的電腦上，並非所有 CPU 核心都會啟用超執行緒。
 * 若磁碟活動頻繁，例如正在複製大型檔案或搜尋網路磁碟機時，取得磁碟使用量資訊可能會有所延遲。
 * GPU 資訊僅適用於 NVIDIA GPU。
-* 在讀出 Windows 版本時所提供的處理器架構資訊中，「x86」和「AMD64」分別代表 Intel 與 AMD 處理器所使用的 32 位元及 64 位元（x64）架構。此資訊並非指目前實際使用的處理器名稱。
+* When announcing processor architecture information as part of Windows version reporting, "AMD64" refer to 64-bit (x64) Intel and AMD processors. This information does not refer to the name of the actual processor in use.
 * 不支援在 Windows 10/11 LTSC 上安裝此附加元件。
 
 如需查看各版本附加元件之間的變更內容，請參閱[附加元件版本變更紀錄][1]文件。
