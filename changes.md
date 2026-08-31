@@ -2,6 +2,10 @@
 
 This page lists the complete changelog for Resource Monitor add-on releases.
 
+## Version 26.10
+
+* NVDA 2026.1 (64-bit) or later is required.
+
 ## Version 26.08
 
 * Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).

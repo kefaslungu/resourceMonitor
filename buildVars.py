@@ -26,10 +26,7 @@ addon_info = AddonInfo(
 	addon_version="26.09",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).
-* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).
-* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).
-* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."""),
+	addon_changelog=_("""* NVDA 2026.1 (64-bit) or later is required."""),
 	# Author(s)
 	addon_author="Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com>, Kevin Derome, Jonathan Rodriguez <jonathantrodriguez6@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
