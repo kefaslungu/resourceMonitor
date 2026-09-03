@@ -657,13 +657,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Catch any exception from the GPU provider collection method.
 		try:
 			info = self._getGpuInfo()
-			if scriptHandler.getLastScriptRepeatCount() == 0:
-				ui.message(info)
-			else:
-				api.copyToClip(info, notify=True)
 		except Exception:  # noqa
 			# Translators: Message reported when the GPU command fails unexpectedly.
 			ui.message(_("Failed to get GPU information."))
+			return
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			api.copyToClip(info, notify=True)
 
 	def _getGpuMemoryInfo(self) -> str:
 		hasProvider = False
@@ -713,10 +714,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Catch any exception from the GPU provider memory reporting method.
 		try:
 			info = self._getGpuMemoryInfo()
-			if scriptHandler.getLastScriptRepeatCount() == 0:
-				ui.message(info)
-			else:
-				api.copyToClip(info, notify=True)
 		except Exception:  # noqa
 			# Translators: Message reported when the GPU memory command fails unexpectedly.
 			ui.message(_("Failed to get GPU memory information."))
+			return
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			api.copyToClip(info, notify=True)
