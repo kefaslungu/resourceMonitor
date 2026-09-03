@@ -230,7 +230,7 @@ def formatGpuTemperature(celsiusText: str) -> str:
 		value = celsius
 		# Translators: Celsius temperature unit symbol appended to a GPU temperature value.
 		symbol = _("degrees Celsius")
-	return "{} {}".format(tryTrunk(round(value, 1)), symbol)
+	return f"{tryTrunk(round(value, 1))} {symbol}"
 
 
 def formatGpuMemory(usedMibText: str, totalMibText: str) -> str | None:
