@@ -191,14 +191,14 @@ si = [
 ]
 
 
-def size(bytes: int| float, system: list[tuple[float, Any]] = traditional) -> str:
+def size(bytes: float, system: list[tuple[float, Any]] = traditional) -> str:
 	for factor, suffix in system:
-		if float(bytes) >= float(factor):
+		if bytes >= factor:
 			break
-	amount = float(bytes / factor)
+	amount = bytes / factor
 	if isinstance(suffix, tuple):
 		singular, multiple = suffix
-		if float(amount) == 1.0:
+		if amount == 1.0:
 			suffix = singular
 		else:
 			suffix = multiple
