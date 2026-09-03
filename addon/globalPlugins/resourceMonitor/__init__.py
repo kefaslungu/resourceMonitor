@@ -654,13 +654,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# potentially introducing security issues such as parsing problems).
 	@blockAction.when(blockAction.Context.SECURE_MODE)
 	def script_announceGpuInfo(self, gesture: inputCore.InputGesture):
+		# Catch any exception from the GPU provider collection method.
 		try:
 			info = self._getGpuInfo()
 			if scriptHandler.getLastScriptRepeatCount() == 0:
 				ui.message(info)
 			else:
 				api.copyToClip(info, notify=True)
-		except Exception:
+		except Exception:  # noqa
 			# Translators: Message reported when the GPU command fails unexpectedly.
 			ui.message(_("Failed to get GPU information."))
 
@@ -709,12 +710,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# potentially introducing security issues such as parsing problems).
 	@blockAction.when(blockAction.Context.SECURE_MODE)
 	def script_announceGpuMemoryInfo(self, gesture: inputCore.InputGesture):
+		# Catch any exception from the GPU provider memory reporting method.
 		try:
 			info = self._getGpuMemoryInfo()
 			if scriptHandler.getLastScriptRepeatCount() == 0:
 				ui.message(info)
 			else:
 				api.copyToClip(info, notify=True)
-		except Exception:
+		except Exception:  # noqa
 			# Translators: Message reported when the GPU memory command fails unexpectedly.
 			ui.message(_("Failed to get GPU memory information."))
