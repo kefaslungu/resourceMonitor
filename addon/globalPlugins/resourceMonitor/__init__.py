@@ -202,7 +202,7 @@ def size(bytes: float, system: list[tuple[float, Any]] = traditional) -> str:
 			suffix = singular
 		else:
 			suffix = multiple
-	return "{:.2F}{}".format(float(amount), suffix)
+	return f"{amount:.2F}{suffix}"
 
 
 def tryTrunk(n: float) -> int | float:
