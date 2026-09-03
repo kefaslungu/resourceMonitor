@@ -569,7 +569,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		bootTimestamp = psutil.boot_time()
 		if bootTimestamp == 0.0:
 			raise TypeError
-		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
+		# tz (timezone) argument is not required for fromtimestamp method (use local time).
+		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)  # noqa
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
 		uptimeComponents = []
