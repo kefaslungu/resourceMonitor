@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-08-29 01:34+0000\n"
-"PO-Revision-Date: 2026-08-29 01:37\n"
+"POT-Creation-Date: 2026-09-04 20:37+0000\n"
+"PO-Revision-Date: 2026-09-04 20:40\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -179,7 +179,7 @@ msgid "Announces the version of Windows you are using. If pressed twice, copies 
 msgstr "Kullanılmakta olan Windows sürümünü seslendirir. İki kez basıldığında bilgiler panoya kopyalanır."
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:578
+#: addon\globalPlugins\resourceMonitor\__init__.py:579
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -187,7 +187,7 @@ msgstr[0] "{days:d} gün"
 msgstr[1] "{days:d} gün"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:582
+#: addon\globalPlugins\resourceMonitor\__init__.py:583
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -195,7 +195,7 @@ msgstr[0] "{hours:d} saat"
 msgstr[1] "{hours:d} saat"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:586
+#: addon\globalPlugins\resourceMonitor\__init__.py:587
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -203,64 +203,66 @@ msgstr[0] "{minutes:d} dakika"
 msgstr[1] "{minutes:d} dakika"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:590
+#: addon\globalPlugins\resourceMonitor\__init__.py:591
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} saniye"
 msgstr[1] "{seconds:d} saniye"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:597
+#: addon\globalPlugins\resourceMonitor\__init__.py:598
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "Sistemin çalışma süresini seslendirir. İki kez basıldığında bilgiler panoya kopyalanır."
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:612
+#: addon\globalPlugins\resourceMonitor\__init__.py:613
 msgid "Failed to get the system's uptime."
 msgstr "Sistemin açık olduğu zaman bilgisi alınamadı."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:628
+#: addon\globalPlugins\resourceMonitor\__init__.py:629
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}: kullanım {usage}%, sıcaklık {temperature}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:638
-#: addon\globalPlugins\resourceMonitor\__init__.py:693
+#: addon\globalPlugins\resourceMonitor\__init__.py:639
+#: addon\globalPlugins\resourceMonitor\__init__.py:696
 msgid "No GPU information available."
 msgstr "GPU bilgisi mevcut değil."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:640
+#: addon\globalPlugins\resourceMonitor\__init__.py:641
 msgid "Unable to get GPU information."
 msgstr "GPU bilgisi alınamıyor."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:641
-#: addon\globalPlugins\resourceMonitor\__init__.py:696
+#: addon\globalPlugins\resourceMonitor\__init__.py:642
+#: addon\globalPlugins\resourceMonitor\__init__.py:699
 msgid "No GPU data available."
 msgstr "GPU verisi yok."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:646
+#: addon\globalPlugins\resourceMonitor\__init__.py:647
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "GPU kullanımını ve sıcaklığını seslendirir. İki kez basıldığında bilgiler panoya kopyalanır."
 
+#. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:664
+#: addon\globalPlugins\resourceMonitor\__init__.py:662
 msgid "Failed to get GPU information."
 msgstr "GPU bilgileri alınamadı."
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:684
+#: addon\globalPlugins\resourceMonitor\__init__.py:687
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr "GPU {gpuNumber}: {memoryInfo}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:695
+#: addon\globalPlugins\resourceMonitor\__init__.py:698
 msgid "Unable to get GPU memory information."
 msgstr "GPU bellek bilgisi alınamıyor."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:701
+#: addon\globalPlugins\resourceMonitor\__init__.py:704
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "GPU bellek kullanımını seslendirir. İki kez basıldığında bilgiler panoya kopyalanır."
 
+#. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
 #: addon\globalPlugins\resourceMonitor\__init__.py:719
 msgid "Failed to get GPU memory information."
@@ -275,12 +277,6 @@ msgstr "CPU yükünü, bellek kullanımını, disk kullanım durumunu ve daha fa
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).\n"
-"* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
-"* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
-"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
-msgstr "* santigrat ve Fahrenheit arasında GPU sıcaklık raporlama birimini yapılandırmak için NVDA ayarlarına Kaynak İzleme kategorisi eklendi (hexxbyte'ın katkısıyla).\n"
-"* GPU (grafik işlem birimi) bellek kullanım bilgilerini seslendirmek için atanmamış bir komut eklendi (hexxbyte'ın katkısıyla).\n"
-"* Disk kullanım bilgilerini seslendirmek için NVDA+Shift+3 tuşlarına basmak, bağlıysa eşlenen ağ sürücülerini içerecektir (hexxbyte'ın katkısıyla).\n"
-"* Pil durumu seslendirme özelliği kaldırıldı. Artık NVDA+Shift+4 tuşlarına basıldığında kablosuz bağlantı durumu raporlanacak."
+msgid "* NVDA 2026.1 (64-bit) or later is required."
+msgstr ""
 

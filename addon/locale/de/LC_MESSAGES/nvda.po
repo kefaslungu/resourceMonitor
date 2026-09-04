@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-08-29 01:34+0000\n"
-"PO-Revision-Date: 2026-08-29 01:36\n"
+"POT-Creation-Date: 2026-09-04 20:37+0000\n"
+"PO-Revision-Date: 2026-09-04 20:39\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -179,7 +179,7 @@ msgid "Announces the version of Windows you are using. If pressed twice, copies 
 msgstr "zeigt die aktuell verwendete Windows-Version an. Wird die Taste zweimal schnell hintereinander gedrückt, wird diese Information in die Zwischenablage kopiert."
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:578
+#: addon\globalPlugins\resourceMonitor\__init__.py:579
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -187,7 +187,7 @@ msgstr[0] "{days:d} Tag"
 msgstr[1] "{days:d} Tage"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:582
+#: addon\globalPlugins\resourceMonitor\__init__.py:583
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -195,7 +195,7 @@ msgstr[0] "{hours:d} Stunde"
 msgstr[1] "{hours:d} Stunden"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:586
+#: addon\globalPlugins\resourceMonitor\__init__.py:587
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -203,64 +203,66 @@ msgstr[0] "{minutes:d} Minute"
 msgstr[1] "{minutes:d} Minuten"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:590
+#: addon\globalPlugins\resourceMonitor\__init__.py:591
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} Sekunde4"
 msgstr[1] "{seconds:d} Sekunden"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:597
+#: addon\globalPlugins\resourceMonitor\__init__.py:598
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die Systemlaufzeit des Systems an. Bei zweimaligem Drücken wird diese Information in die Zwischenablage kopiert."
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:612
+#: addon\globalPlugins\resourceMonitor\__init__.py:613
 msgid "Failed to get the system's uptime."
 msgstr "Fehler beim Abruf der Systemlaufzeit."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:628
+#: addon\globalPlugins\resourceMonitor\__init__.py:629
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}: Auslastung {usage}%, Temperatur {temperature}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:638
-#: addon\globalPlugins\resourceMonitor\__init__.py:693
+#: addon\globalPlugins\resourceMonitor\__init__.py:639
+#: addon\globalPlugins\resourceMonitor\__init__.py:696
 msgid "No GPU information available."
 msgstr "Keine GPU-Informationen verfügbar."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:640
+#: addon\globalPlugins\resourceMonitor\__init__.py:641
 msgid "Unable to get GPU information."
 msgstr "GPU-Informationen können nicht abgerufen werden."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:641
-#: addon\globalPlugins\resourceMonitor\__init__.py:696
+#: addon\globalPlugins\resourceMonitor\__init__.py:642
+#: addon\globalPlugins\resourceMonitor\__init__.py:699
 msgid "No GPU data available."
 msgstr "Keine GPU-Daten verfügbar."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:646
+#: addon\globalPlugins\resourceMonitor\__init__.py:647
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die GPU-Auslastung und -Temperatur an. Bei zweimaligem Drücken werden diese Informationen in die Zwischenablage kopiert."
 
+#. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:664
+#: addon\globalPlugins\resourceMonitor\__init__.py:662
 msgid "Failed to get GPU information."
 msgstr "GPU-Informationen konnten nicht abgerufen werden."
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:684
+#: addon\globalPlugins\resourceMonitor\__init__.py:687
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr "GPU {gpuNumber}: {memoryInfo}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:695
+#: addon\globalPlugins\resourceMonitor\__init__.py:698
 msgid "Unable to get GPU memory information."
 msgstr "Informationen zum GPU-Speicher können nicht abgerufen werden."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:701
+#: addon\globalPlugins\resourceMonitor\__init__.py:704
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die GPU-Speichernutzung an. Bei zweimaligem Drücken wird die Information in die Zwischenablage kopiert."
 
+#. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
 #: addon\globalPlugins\resourceMonitor\__init__.py:719
 msgid "Failed to get GPU memory information."
@@ -276,12 +278,6 @@ msgstr "Ein praktischer Ressourcenmonitor, der CPU-Auslastung, Arbeitsspeicherbe
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).\n"
-"* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
-"* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
-"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
-msgstr "* In den NVDA-Einstellungen wurde die Kategorie \"Ressourcenmonitor\" hinzugefügt, um die Einheit für die Temperaturanzeige des Grafikprozessors (GPU) zwischen Celsius und Fahrenheit zu konfigurieren (beigetragen von hexxbyte).\n"
-"* Es wurde ein unzugewiesener Befehl hinzugefügt, der Informationen zur Speichernutzung des Grafikprozessors (GPU) ansagt (beigetragen von hexxbyte).\n"
-"* Wenn Sie NVDA+Umschalt+3 drücken, um Informationen zur Festplattenbelegung abzurufen, werden jetzt auch verbundene Netzlaufwerke berücksichtigt (beigetragen von hexxbyte).\n"
-"* Die Funktion zur Meldung des Akkustatus wurde entfernt. Wenn Sie NVDA+Umschalt+4 drücken, wird jetzt der Status der drahtlosen Verbindung angesagt. Für den Akkustatus verwenden Sie den NVDA-eigenen Befehl (NVDA+Umschalt+B)."
+msgid "* NVDA 2026.1 (64-bit) or later is required."
+msgstr ""
 

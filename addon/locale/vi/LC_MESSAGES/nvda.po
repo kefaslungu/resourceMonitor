@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-08-29 01:34+0000\n"
-"PO-Revision-Date: 2026-08-29 01:37\n"
+"POT-Creation-Date: 2026-09-04 20:37+0000\n"
+"PO-Revision-Date: 2026-09-04 20:40\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -179,84 +179,86 @@ msgid "Announces the version of Windows you are using. If pressed twice, copies 
 msgstr "Thông báo phiên bản Windows bạn đang sử dụng. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:578
+#: addon\globalPlugins\resourceMonitor\__init__.py:579
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{days:d} ngày"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:582
+#: addon\globalPlugins\resourceMonitor\__init__.py:583
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
 msgstr[0] "{hours:d} giờ"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:586
+#: addon\globalPlugins\resourceMonitor\__init__.py:587
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
 msgstr[0] "{minutes:d} phút"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:590
+#: addon\globalPlugins\resourceMonitor\__init__.py:591
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} giây"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:597
+#: addon\globalPlugins\resourceMonitor\__init__.py:598
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo thời gian hoạt động của hệ thống. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:612
+#: addon\globalPlugins\resourceMonitor\__init__.py:613
 msgid "Failed to get the system's uptime."
 msgstr "Không tìm thấy thời gian chạy của hệ thống"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:628
+#: addon\globalPlugins\resourceMonitor\__init__.py:629
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}: đã sử dụng {usage}%, nhiệt độ {temperature}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:638
-#: addon\globalPlugins\resourceMonitor\__init__.py:693
+#: addon\globalPlugins\resourceMonitor\__init__.py:639
+#: addon\globalPlugins\resourceMonitor\__init__.py:696
 msgid "No GPU information available."
 msgstr "Không có sẵn thông tin GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:640
+#: addon\globalPlugins\resourceMonitor\__init__.py:641
 msgid "Unable to get GPU information."
 msgstr "Không thể lấy thông tin GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:641
-#: addon\globalPlugins\resourceMonitor\__init__.py:696
+#: addon\globalPlugins\resourceMonitor\__init__.py:642
+#: addon\globalPlugins\resourceMonitor\__init__.py:699
 msgid "No GPU data available."
 msgstr "Không có dữ liệu GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:646
+#: addon\globalPlugins\resourceMonitor\__init__.py:647
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo mức sử dụng GPU và nhiệt độ. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
+#. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:664
+#: addon\globalPlugins\resourceMonitor\__init__.py:662
 msgid "Failed to get GPU information."
 msgstr "Không thể lấy thông tin GPU."
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:684
+#: addon\globalPlugins\resourceMonitor\__init__.py:687
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr "GPU {gpuNumber}: {memoryInfo}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:695
+#: addon\globalPlugins\resourceMonitor\__init__.py:698
 msgid "Unable to get GPU memory information."
 msgstr "Không thể lấy thông tin bộ nhớ GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:701
+#: addon\globalPlugins\resourceMonitor\__init__.py:704
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo mức sử dụng bộ nhớ GPU. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ tạm."
 
+#. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
 #: addon\globalPlugins\resourceMonitor\__init__.py:719
 msgid "Failed to get GPU memory information."
@@ -271,12 +273,6 @@ msgstr "Một tiện ích theo dõi tài nguyên để báo cáo tải CPU, mứ
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).\n"
-"* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
-"* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
-"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
-msgstr "* Đã thêm danh mục theo dõi tài nguyên vào cài đặt NVDA để định cấu hình đơn vị báo cáo nhiệt độ GPU giữa độ C và độ F (được đóng góp bởi hexxbyte).\n"
-"* Đã thêm lệnh chưa được gán để thông báo thông tin sử dụng bộ nhớ GPU (bộ xử lý đồ họa) (được đóng góp bởi hexxbyte).\n"
-"* Nhấn NVDA+Shift+3 để báo cáo thông tin sử dụng ổ đĩa sẽ bao gồm các ổ đĩa mạng được gắn nếu được kết nối (được đóng góp bởi hexxbyte).\n"
-"* Đã xóa tính năng báo cáo trạng thái pin. Nhấn NVDA+Shift+4 bây giờ sẽ báo trạng thái kết nối không dây. Để biết trạng thái pin, sử dụng lệnh trạng thái pin của NVDA (NVDA+Shift+B)."
+msgid "* NVDA 2026.1 (64-bit) or later is required."
+msgstr ""
 
