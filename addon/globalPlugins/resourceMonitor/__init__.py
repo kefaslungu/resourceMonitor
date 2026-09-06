@@ -17,6 +17,7 @@ import globalPluginHandler
 import queueHandler
 import scriptHandler
 import inputCore
+import tones
 import ui
 import winVersion
 import wx
@@ -307,9 +308,38 @@ def getWinVer() -> str:
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 	scriptCategory = _("Resource Monitor")
+	__gestures = {"kb:NVDA+shift+e": "layerEntry"}
+	__layerGestures = {
+		"kb:space": "announceResourceSummary",
+		"kb:c": "announceProcessorInfo",
+		"kb:m": "announceRamInfo",
+		"kb:d": "announceDriveInfo",
+		"kb:w": "wlanStatusReport",
+		"kb:v": "announceWinVer",
+		"kb:u": "announceUptime",
+		"kb:g": "announceGpuInfo",
+		"kb:r": "announceGpuMemoryInfo",
+		"kb:escape": "layerExit",
+	}
+	_layerStayScripts = frozenset(
+		{
+			"script_layerExit",
+			"script_announceResourceSummary",
+			"script_announceProcessorInfo",
+			"script_announceRamInfo",
+			"script_announceDriveInfo",
+			"script_wlanStatusReport",
+			"script_announceWinVer",
+			"script_announceUptime",
+			"script_announceGpuInfo",
+			"script_announceGpuMemoryInfo",
+		}
+	)
 
 	def __init__(self):
 		super().__init__()
+		self._isLayerActive = False
+		self._layerWrappers: dict[Any, Any] = {}
 		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettingsPanel)
 		if not wlanapiAvailable:
@@ -362,21 +392,87 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except OSError:
 			pass
 
+	def getScript(self, gesture: inputCore.InputGesture):
+		"""Resolve gestures through the resource monitor command layer."""
+		if not self._isLayerActive:
+			return super().getScript(gesture)
+		script = super().getScript(gesture)
+		if not script:
+			return self._handleLayerError
+		if getattr(script, "__name__", "") in self._layerStayScripts:
+			return script
+
+		scriptFunction = getattr(script, "__func__", script)
+		if scriptFunction not in self._layerWrappers:
+
+			@functools.wraps(script)
+			def wrappedScript(layerGesture: inputCore.InputGesture):
+				try:
+					script(layerGesture)
+				finally:
+					self._finishLayer()
+
+			self._layerWrappers[scriptFunction] = wrappedScript
+
+		return self._layerWrappers[scriptFunction]
+
+	def _finishLayer(self) -> None:
+		"""Leave the resource monitor command layer."""
+		self._isLayerActive = False
+		self.clearGestureBindings()
+		self.bindGestures(self.__gestures)
+
+	def _handleLayerError(self, gesture: inputCore.InputGesture) -> None:
+		"""Report an unbound command-layer gesture and pass it through."""
+		tones.beep(440, 100)
+		self._finishLayer()
+		try:
+			gesture.send()
+		except NotImplementedError:
+			pass
+
+	def _getResourceSummary(self) -> str:
+		"""Build the overall resource usage summary."""
+		return _("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(
+			ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
+		)
+
+	@scriptHandler.script(
+		# Translators: Input help mode message for entering the Resource Monitor command layer.
+		description=_("Enter the Resource Monitor command layer."),
+		speakOnDemand=True,
+	)
+	def script_layerEntry(self, gesture: inputCore.InputGesture):
+		"""Enter the Resource Monitor command layer."""
+		if self._isLayerActive:
+			self._handleLayerError(gesture)
+			return
+		self.bindGestures(self.__layerGestures)
+		self._isLayerActive = True
+		tones.beep(100, 10)
+		# Translators: Prompt shown after entering the Resource Monitor command layer.
+		ui.message(f"{self._getResourceSummary()} {_('Press a letter for more information.')}")
+
+	@scriptHandler.script(allowInSleepMode=True)
+	def script_layerExit(self, gesture: inputCore.InputGesture):
+		self._finishLayer()
+
 	@scriptHandler.script(
 		# Translators: Input help mode message about overall system resource info command in Resource Monitor
-		description=_("Presents used ram and average processor load."),
-		gesture="KB:NVDA+shift+e",
+		description=_(
+			"Presents used ram and average processor load. "
+			"If pressed twice, copies the information to the clipboard."
+		),
 		speakOnDemand=True,
 	)
 	def script_announceResourceSummary(self, gesture: inputCore.InputGesture):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-		info = [
-			_("{ramPercent}% RAM used, CPU at {cpuPercent}%.").format(
-				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
-			)
-		]
-		ui.message(" ".join(info))
+		info = self._getResourceSummary()
+		if scriptHandler.getLastScriptRepeatCount() == 0:
+			ui.message(info)
+		else:
+			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about processor info command in Resource Monitor.
@@ -384,7 +480,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the average processor load and the load of each core. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="KB:NVDA+shift+1",
 		speakOnDemand=True,
 	)
 	def script_announceProcessorInfo(self, gesture: inputCore.InputGesture):
@@ -417,7 +512,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the used and total space for both physical and virtual ram. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
 		speakOnDemand=True,
 	)
 	def script_announceRamInfo(self, gesture: inputCore.InputGesture):
@@ -448,7 +542,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="KB:NVDA+shift+3",
 		speakOnDemand=True,
 	)
 	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
@@ -538,7 +631,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the system's wireless network name (SSID), connection strength, and security  protocol. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="kb:NVDA+shift+4",
 		speakOnDemand=True,
 	)
 	def script_wlanStatusReport(self, gesture: inputCore.InputGesture):
@@ -554,7 +646,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the version of Windows you are using. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="KB:NVDA+shift+6",
 		speakOnDemand=True,
 	)
 	def script_announceWinVer(self, gesture: inputCore.InputGesture):
@@ -598,7 +689,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the system's uptime. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="kb:NVDA+shift+7",
 		speakOnDemand=True,
 	)
 	def script_announceUptime(self, gesture: inputCore.InputGesture):
