@@ -26,7 +26,8 @@ addon_info = AddonInfo(
 	addon_version="26.09",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* NVDA 2026.1 (64-bit) or later is required."""),
+	addon_changelog=_("""* NVDA 2026.1 (64-bit) or later is required.
+* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility."""),
 	# Author(s)
 	addon_author="Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com>, Kevin Derome, Jonathan Rodriguez <jonathantrodriguez6@gmail.com> and other NVDA contributors",
 	# URL for the add-on documentation support
