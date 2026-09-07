@@ -2,6 +2,11 @@
 
 This page lists the complete changelog for Resource Monitor add-on releases.
 
+## Version 26.09.1
+
+* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer.
+* The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility and will be removed in a future add-on release.
+
 ## Version 26.08
 
 * Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).
