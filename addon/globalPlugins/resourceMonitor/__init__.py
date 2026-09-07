@@ -308,6 +308,7 @@ def getWinVer() -> str:
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 	scriptCategory = _("Resource Monitor")
+	_layerEntryGesture = "kb:NVDA+shift+e"
 	__layerGestures = {
 		"kb:space": "announceResourceSummary",
 		"kb:c": "announceProcessorInfo",
@@ -320,10 +321,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:shift+g": "announceGpuMemoryInfo",
 		"kb:escape": "layerExit",
 	}
+	_layerGestureIdentifiers = frozenset(
+		inputCore.normalizeGestureIdentifier(identifier)
+		for identifier in (*__layerGestures, _layerEntryGesture)
+	)
 
 	def __init__(self):
 		super().__init__()
 		self._isLayerActive = False
+		inputCore.decide_executeGesture.register(self._decideExecuteGesture)
 		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettingsPanel)
 		if not wlanapiAvailable:
@@ -351,6 +357,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def terminate(self):
+		inputCore.decide_executeGesture.unregister(self._decideExecuteGesture)
 		super().terminate()
 		self._gpuProviders.clear()
 		if ResourceMonitorSettingsPanel in NVDASettingsDialog.categoryClasses:
@@ -376,11 +383,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except OSError:
 			pass
 
-	def getScript(self, gesture: inputCore.InputGesture):
-		"""Resolve gestures through the resource monitor command layer."""
-		if not self._isLayerActive:
-			return super().getScript(gesture)
-		return super().getScript(gesture) or self._handleUnboundLayerGesture
+	def _decideExecuteGesture(self, gesture: inputCore.InputGesture) -> bool:
+		"""Exit the command layer before an unrelated gesture is resolved."""
+		if (
+			self._isLayerActive
+			and not gesture.isModifier
+			and self._layerGestureIdentifiers.isdisjoint(gesture.normalizedIdentifiers)
+		):
+			self._finishLayer()
+		return True
 
 	def _finishLayer(self) -> None:
 		"""Leave the resource monitor command layer."""
@@ -388,23 +399,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for gestureIdentifier in self.__layerGestures:
 			self.removeGestureBinding(gestureIdentifier)
 
-	def _handleUnboundLayerGesture(self, gesture: inputCore.InputGesture) -> None:
-		"""Leave the command layer and pass through an unbound gesture."""
-		self._finishLayer()
-		try:
-			gesture.send()
-		except NotImplementedError:
-			pass
-
 	@scriptHandler.script(
 		# Translators: Input help mode message for entering the Resource Monitor command layer.
 		description=_("Enter the Resource Monitor command layer."),
-		gesture="kb:NVDA+shift+e",
+		gesture=_layerEntryGesture,
 	)
 	def script_layerEntry(self, gesture: inputCore.InputGesture):
 		"""Enter the Resource Monitor command layer."""
 		if self._isLayerActive:
-			self._handleUnboundLayerGesture(gesture)
 			return
 		self.bindGestures(self.__layerGestures)
 		self._isLayerActive = True
