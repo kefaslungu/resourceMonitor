@@ -9,10 +9,11 @@ This add-on gives information about CPU load, memory usage and other resource us
 All commands support speech on demand mode.
 
 * NVDA+Shift+E: enters the Resource Monitor command layer.
-* In the command layer, press Space for overall resource usage, C for CPU load, M for memory usage, D for disk usage, W for wireless status, V for Windows version, U for uptime, G for GPU usage, or R for GPU memory usage. Press Escape to exit the layer.
-* The individual resource commands are unassigned by default and can be configured in the input gestures dialog.
+* In the command layer, press Space for overall resource usage, C for CPU load, M for memory usage, D for disk usage, W for wireless status, O for Windows version, U for uptime, G for GPU usage, or Shift+G for GPU memory usage.
+* Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through.
+* For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available.
 
-You can change the command layer entry gesture and assign additional gestures to individual resource commands via the input gestures dialog.
+You can change these gestures via the input gestures dialog.
 
 ## Usage notes
 
