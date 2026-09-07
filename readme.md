@@ -13,6 +13,18 @@ All commands support speech on demand mode.
 * Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through.
 * For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available.
 
+* NVDA+Shift+E: presents overall resource usage information including used RAM (physical memory) and average processor load.
+
+The following commands report individual resource usage information:
+
+* NVDA+Shift+1: CPU (average processor load and if multicore CPU's are present the load of each core)
+* NVDA+Shift+2/5: memory (used and total space for both physical and virtual RAM (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed))
+* NVDA+Shift+3: disks (used and total space of the fixed (built-in), removable, and network drives)
+* NVDA+Shift+4: wi-fi (network name (SSID), signal strength, security mode, or no SSID if there is none available)
+* NVDA+Shift+6: operating system (Windows version, CPU architecture, and exact build number (build.revision))
+* NVDA+Shift+7: system uptime
+* Unassigned: graphics processing unit (GPU) information and memory (separately unassigned ); unavailable in secure mode
+
 You can change these gestures via the input gestures dialog.
 
 ## Usage notes
