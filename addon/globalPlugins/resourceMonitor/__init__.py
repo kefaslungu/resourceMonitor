@@ -12,6 +12,7 @@ from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
 from typing import Any
 import api
+import braille
 import config
 import globalPluginHandler
 import queueHandler
@@ -411,6 +412,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.bindGestures(self.__layerGestures)
 		self._isLayerActive = True
 		tones.beep(100, 10)
+		braille.handler.message(_("Resource Monitor"))
 
 	@scriptHandler.script(allowInSleepMode=True)
 	def script_layerExit(self, gesture: inputCore.InputGesture):
