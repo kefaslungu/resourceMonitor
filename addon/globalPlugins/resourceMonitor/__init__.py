@@ -10,7 +10,7 @@ import os.path
 import winsound
 from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
-from typing import Any
+from typing import Any, ClassVar
 import api
 import braille
 import config
@@ -310,7 +310,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
 	scriptCategory = _("Resource Monitor")
 	_layerEntryGesture = "kb:NVDA+shift+e"
-	__layerGestures = {
+	__layerGestures: ClassVar = {
 		"kb:space": "announceResourceSummary",
 		"kb:c": "announceProcessorInfo",
 		"kb:m": "announceRamInfo",
