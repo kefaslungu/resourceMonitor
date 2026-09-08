@@ -14,6 +14,10 @@ from typing import Any
 import api
 import braille
 import config
+
+# Check for config section registration availability.
+confspecRegistrationAvailable = hasattr(config, "configSections")
+
 import globalPluginHandler
 import queueHandler
 import scriptHandler
@@ -42,10 +46,13 @@ addonHandler.initTranslation()
 MODULE_DIR = os.path.dirname(__file__)
 
 # Register this add-on's settings with NVDA's configuration system.
-confspec = {
-	"gpuTempUnit": "string(default=celsius)",
-}
-config.conf.spec["resourceMonitor"] = confspec
+# The below path is taken if this is NVDA 2026.2 and earlier.
+# NVDA 2026.3 introduces dedicated register/unregister functions and can be invoked from installTasks module.
+if not confspecRegistrationAvailable:
+	confspec = {
+		"gpuTempUnit": "string(default=celsius)",
+	}
+	config.conf.spec["resourceMonitor"] = confspec
 
 
 def message(text: str, fileName: str) -> None:
