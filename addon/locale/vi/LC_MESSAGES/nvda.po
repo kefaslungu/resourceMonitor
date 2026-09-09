@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-07 18:06+0000\n"
-"PO-Revision-Date: 2026-09-07 18:08\n"
+"POT-Creation-Date: 2026-09-09 04:38+0000\n"
+"PO-Revision-Date: 2026-09-09 04:40\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -17,40 +17,40 @@ msgstr ""
 "X-Crowdin-File: resourceMonitor.pot\n"
 "X-Crowdin-File-ID: 214\n"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:60
+#: addon\globalPlugins\resourceMonitor\__init__.py:63
 msgid "No authentication (Open)"
 msgstr "Không có xác thực (Mở)"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:85
+#: addon\globalPlugins\resourceMonitor\__init__.py:88
 #, python-brace-format
 msgid "Connected to {}"
 msgstr "Đã kết nối đến {}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:95
+#: addon\globalPlugins\resourceMonitor\__init__.py:98
 #, python-brace-format
 msgid "Disconnected from {}"
 msgstr "Đã ngắt kết nối từ {}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:100
+#: addon\globalPlugins\resourceMonitor\__init__.py:103
 msgid "A wireless device has been enabled"
 msgstr "thiết bị không dây đã được bật"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:106
+#: addon\globalPlugins\resourceMonitor\__init__.py:109
 msgid "A wireless device has been disabled"
 msgstr "Thiết bị không dây đã được tắt"
 
 #. Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:230
+#: addon\globalPlugins\resourceMonitor\__init__.py:233
 msgid "degrees Fahrenheit"
 msgstr "nhiệt độ Fahrenheit"
 
 #. Translators: Celsius temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:234
+#: addon\globalPlugins\resourceMonitor\__init__.py:237
 msgid "degrees Celsius"
 msgstr "nhiệt độ Celsius"
 
 #. Translators: Shows GPU memory usage (example: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:250
+#: addon\globalPlugins\resourceMonitor\__init__.py:253
 #, python-brace-format
 msgid "{used} of {total} used ({percent}%)"
 msgstr "{used} của {total} đã sử dụng ({percent}%)"
@@ -60,213 +60,213 @@ msgstr "{used} của {total} đã sử dụng ({percent}%)"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
-#: addon\globalPlugins\resourceMonitor\__init__.py:259
-#: addon\globalPlugins\resourceMonitor\__init__.py:311
-#: addon\globalPlugins\resourceMonitor\__init__.py:415 buildVars.py:21
+#: addon\globalPlugins\resourceMonitor\__init__.py:262
+#: addon\globalPlugins\resourceMonitor\__init__.py:314
+#: addon\globalPlugins\resourceMonitor\__init__.py:418 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Theo Dõi Tài Nguyên"
 
 #. Translators: Label for a combo box to select the unit used to report GPU temperature.
-#: addon\globalPlugins\resourceMonitor\__init__.py:264
+#: addon\globalPlugins\resourceMonitor\__init__.py:267
 msgid "GPU &temperature unit:"
 msgstr "GPU & đơn vị nhiệt độ:"
 
 #. Translators: An option in the GPU temperature unit combo box.
-#: addon\globalPlugins\resourceMonitor\__init__.py:266
+#: addon\globalPlugins\resourceMonitor\__init__.py:269
 msgid "Celsius"
 msgstr "Celsius"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:266
+#: addon\globalPlugins\resourceMonitor\__init__.py:269
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
-#: addon\globalPlugins\resourceMonitor\__init__.py:303
+#: addon\globalPlugins\resourceMonitor\__init__.py:306
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) xây dựng {build}"
 
 #. Translators: Input help mode message for entering the Resource Monitor command layer.
-#: addon\globalPlugins\resourceMonitor\__init__.py:405
+#: addon\globalPlugins\resourceMonitor\__init__.py:408
 msgid "Enter the Resource Monitor command layer."
-msgstr ""
+msgstr "Truy cập vào lớp lệnh theo giõi Tài nguyên."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:426
+#: addon\globalPlugins\resourceMonitor\__init__.py:429
 msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
-msgstr ""
+msgstr "Hiển thị dung lượng RAM đã sử dụng và tải trung bình của bộ xử lý. Nếu nhấn hai lần, thông tin sẽ được sao chép vào bộ nhớ tạm."
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:433
+#: addon\globalPlugins\resourceMonitor\__init__.py:436
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM được sử dụng, {cpuPercent}% CPU được tải."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:444
+#: addon\globalPlugins\resourceMonitor\__init__.py:447
 msgid "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
 msgstr "Trình bày tải bộ xử lý trung bình và tải của từng lõi. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:456
+#: addon\globalPlugins\resourceMonitor\__init__.py:459
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Nhân {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:463
+#: addon\globalPlugins\resourceMonitor\__init__.py:466
 #, python-brace-format
 msgid "{avgLoad}% CPU load."
 msgstr "{avgLoad}% CPU tải."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:466
+#: addon\globalPlugins\resourceMonitor\__init__.py:469
 #, python-brace-format
 msgid "{avgLoad}% average CPU load, {cores}."
 msgstr "{avgLoad}% tải CPU trung bình, {cores}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:477
+#: addon\globalPlugins\resourceMonitor\__init__.py:480
 msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
 msgstr "Trình bày dung lượng đã sử dụng và tổng dung lượng cho cả ram vật lý và ảo. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:487
+#: addon\globalPlugins\resourceMonitor\__init__.py:490
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "Vật lý: {physicalUsed} của {physicalTotal} được sử dụng ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:495
+#: addon\globalPlugins\resourceMonitor\__init__.py:498
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Ảo: {virtualUsed} của {virtualTotal} được sử dụng ({virtualPercent}%)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:508
+#: addon\globalPlugins\resourceMonitor\__init__.py:511
 msgid "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
 msgstr "Trình bày tổng dung lượng đã sử dụng và tổng dung lượng của các ổ đĩa mạng cố định (tích hợp), có thể tháo rời và được gắn trên máy tính này. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ tạm."
 
 #. Translators: Reported when a mapped network drive is currently unreachable.
-#: addon\globalPlugins\resourceMonitor\__init__.py:536
+#: addon\globalPlugins\resourceMonitor\__init__.py:539
 #, python-brace-format
 msgid "{driveName} (network drive): not available."
 msgstr "{driveName} (network drive): không có sẵn."
 
 #. Translators: word used to describe a mapped network drive.
-#: addon\globalPlugins\resourceMonitor\__init__.py:539
+#: addon\globalPlugins\resourceMonitor\__init__.py:542
 msgid "network"
 msgstr "mạng"
 
 #. Translators: Shows drive letter, type of drive (fixed, removable, or network),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:544
+#: addon\globalPlugins\resourceMonitor\__init__.py:547
 #, python-brace-format
 msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
 msgstr "{driveName} ({driveType} drive): {usedSpace} của {totalSpace} đã sử dụng ({percent}%)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:559
-#: addon\globalPlugins\resourceMonitor\__init__.py:566
+#: addon\globalPlugins\resourceMonitor\__init__.py:562
+#: addon\globalPlugins\resourceMonitor\__init__.py:569
 msgid "No wireless devices"
 msgstr "Không có thiết bị không dây"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:570
+#: addon\globalPlugins\resourceMonitor\__init__.py:573
 msgid "No wireless connections"
 msgstr "Không có kết nối không dây"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:583
+#: addon\globalPlugins\resourceMonitor\__init__.py:586
 #, python-brace-format
 msgid "Connected to {}, signal strength: {}%, security type: {}"
 msgstr "Đã kết nối đến {}, signal strength: {}%, loại bảo mật:{}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:598
+#: addon\globalPlugins\resourceMonitor\__init__.py:601
 msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo tên mạng không dây (SSID), cường độ kết nối và giao thức bảo mật của hệ thống. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:614
+#: addon\globalPlugins\resourceMonitor\__init__.py:617
 msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo phiên bản Windows bạn đang sử dụng. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:639
+#: addon\globalPlugins\resourceMonitor\__init__.py:642
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{days:d} ngày"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:643
+#: addon\globalPlugins\resourceMonitor\__init__.py:646
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
 msgstr[0] "{hours:d} giờ"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:647
+#: addon\globalPlugins\resourceMonitor\__init__.py:650
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
 msgstr[0] "{minutes:d} phút"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:651
+#: addon\globalPlugins\resourceMonitor\__init__.py:654
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} giây"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:658
+#: addon\globalPlugins\resourceMonitor\__init__.py:661
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo thời gian hoạt động của hệ thống. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:673
+#: addon\globalPlugins\resourceMonitor\__init__.py:676
 msgid "Failed to get the system's uptime."
 msgstr "Không tìm thấy thời gian chạy của hệ thống"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:689
+#: addon\globalPlugins\resourceMonitor\__init__.py:692
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}: đã sử dụng {usage}%, nhiệt độ {temperature}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:699
-#: addon\globalPlugins\resourceMonitor\__init__.py:756
+#: addon\globalPlugins\resourceMonitor\__init__.py:702
+#: addon\globalPlugins\resourceMonitor\__init__.py:759
 msgid "No GPU information available."
 msgstr "Không có sẵn thông tin GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:701
+#: addon\globalPlugins\resourceMonitor\__init__.py:704
 msgid "Unable to get GPU information."
 msgstr "Không thể lấy thông tin GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:702
-#: addon\globalPlugins\resourceMonitor\__init__.py:759
+#: addon\globalPlugins\resourceMonitor\__init__.py:705
+#: addon\globalPlugins\resourceMonitor\__init__.py:762
 msgid "No GPU data available."
 msgstr "Không có dữ liệu GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:707
+#: addon\globalPlugins\resourceMonitor\__init__.py:710
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo mức sử dụng GPU và nhiệt độ. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ."
 
 #. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:722
+#: addon\globalPlugins\resourceMonitor\__init__.py:725
 msgid "Failed to get GPU information."
 msgstr "Không thể lấy thông tin GPU."
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:747
+#: addon\globalPlugins\resourceMonitor\__init__.py:750
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr "GPU {gpuNumber}: {memoryInfo}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:758
+#: addon\globalPlugins\resourceMonitor\__init__.py:761
 msgid "Unable to get GPU memory information."
 msgstr "Không thể lấy thông tin bộ nhớ GPU."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:764
+#: addon\globalPlugins\resourceMonitor\__init__.py:767
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "Thông báo mức sử dụng bộ nhớ GPU. Nếu nhấn hai lần, sẽ sao chép thông tin vào bộ nhớ tạm."
 
 #. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:779
+#: addon\globalPlugins\resourceMonitor\__init__.py:782
 msgid "Failed to get GPU memory information."
 msgstr "Không lấy được thông tin bộ nhớ GPU."
 
@@ -279,6 +279,7 @@ msgstr "Một tiện ích theo dõi tài nguyên để báo cáo tải CPU, mứ
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen)."
+msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen).\n"
+"* Added compatibility with add-on settings registration mechanics in NVDA 2026.3."
 msgstr ""
 
