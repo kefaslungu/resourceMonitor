@@ -6,6 +6,10 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 
 * NVDA 2026.1 (64-bit) or later is required.
 
+## Version 26.09.2
+
+* Added compatibility with add-on settings registration mechanics in NVDA 2026.3.
+
 ## Version 26.09.1
 
 * Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen).
