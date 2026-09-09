@@ -23,7 +23,7 @@ addon_info = AddonInfo(
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	addon_description=_("A handy resource monitor to report CPU load, memory usage, disk usage status and more."),
 	# version
-	addon_version="26.09.1",
+	addon_version="26.09.2",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen).
