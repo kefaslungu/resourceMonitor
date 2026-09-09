@@ -14,10 +14,6 @@ from typing import Any, ClassVar
 import api
 import braille
 import config
-
-# Check for config section registration availability.
-confspecRegistrationAvailable = hasattr(config, "configSections")
-
 import globalPluginHandler
 import queueHandler
 import scriptHandler
