@@ -46,9 +46,9 @@ addonHandler.initTranslation()
 MODULE_DIR = os.path.dirname(__file__)
 
 # Register this add-on's settings with NVDA's configuration system.
-# The below path is taken if this is NVDA 2026.2 and earlier.
+# The below path is taken if this is NVDA 2026.2 and earlier or the add-on confspec was not registered.
 # NVDA 2026.3 introduces dedicated register/unregister functions and can be invoked from installTasks module.
-if not confspecRegistrationAvailable:
+if not "resourceMonitor" in config.conf.spec:
 	confspec = {
 		"gpuTempUnit": "string(default=celsius)",
 	}
