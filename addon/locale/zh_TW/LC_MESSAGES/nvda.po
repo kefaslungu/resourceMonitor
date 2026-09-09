@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-08-07 19:07+0000\n"
-"PO-Revision-Date: 2026-08-17 12:54\n"
+"POT-Creation-Date: 2026-09-07 18:06+0000\n"
+"PO-Revision-Date: 2026-09-07 18:07\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
@@ -17,40 +17,40 @@ msgstr ""
 "X-Crowdin-File: resourceMonitor.pot\n"
 "X-Crowdin-File-ID: 214\n"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:58
+#: addon\globalPlugins\resourceMonitor\__init__.py:60
 msgid "No authentication (Open)"
 msgstr "開放(無須驗證)"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:83
+#: addon\globalPlugins\resourceMonitor\__init__.py:85
 #, python-brace-format
 msgid "Connected to {}"
 msgstr "已連線到 {}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:93
+#: addon\globalPlugins\resourceMonitor\__init__.py:95
 #, python-brace-format
 msgid "Disconnected from {}"
 msgstr "{} 已中斷連線"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:98
+#: addon\globalPlugins\resourceMonitor\__init__.py:100
 msgid "A wireless device has been enabled"
 msgstr "已啟用無線裝置"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:104
+#: addon\globalPlugins\resourceMonitor\__init__.py:106
 msgid "A wireless device has been disabled"
 msgstr "已停用無線裝置"
 
 #. Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:228
+#: addon\globalPlugins\resourceMonitor\__init__.py:230
 msgid "degrees Fahrenheit"
 msgstr "華氏度"
 
 #. Translators: Celsius temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:232
+#: addon\globalPlugins\resourceMonitor\__init__.py:234
 msgid "degrees Celsius"
 msgstr "攝氏度"
 
 #. Translators: Shows GPU memory usage (example: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:248
+#: addon\globalPlugins\resourceMonitor\__init__.py:250
 #, python-brace-format
 msgid "{used} of {total} used ({percent}%)"
 msgstr "已使用 {used}，共 {total}（{percent}%）"
@@ -60,205 +60,213 @@ msgstr "已使用 {used}，共 {total}（{percent}%）"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
-#: addon\globalPlugins\resourceMonitor\__init__.py:257
-#: addon\globalPlugins\resourceMonitor\__init__.py:309 buildVars.py:21
+#: addon\globalPlugins\resourceMonitor\__init__.py:259
+#: addon\globalPlugins\resourceMonitor\__init__.py:311
+#: addon\globalPlugins\resourceMonitor\__init__.py:415 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "資源監視器"
 
 #. Translators: Label for a combo box to select the unit used to report GPU temperature.
-#: addon\globalPlugins\resourceMonitor\__init__.py:262
+#: addon\globalPlugins\resourceMonitor\__init__.py:264
 msgid "GPU &temperature unit:"
 msgstr "GPU與溫度單位："
 
 #. Translators: An option in the GPU temperature unit combo box.
-#: addon\globalPlugins\resourceMonitor\__init__.py:264
+#: addon\globalPlugins\resourceMonitor\__init__.py:266
 msgid "Celsius"
 msgstr "攝氏"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:264
+#: addon\globalPlugins\resourceMonitor\__init__.py:266
 msgid "Fahrenheit"
 msgstr "華氏"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
-#: addon\globalPlugins\resourceMonitor\__init__.py:301
+#: addon\globalPlugins\resourceMonitor\__init__.py:303
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) 組建 {build}"
 
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-#: addon\globalPlugins\resourceMonitor\__init__.py:367
-msgid "Presents used ram and average processor load."
-msgstr "顯示已使用的 RAM 與處理器平均負載。"
+#. Translators: Input help mode message for entering the Resource Monitor command layer.
+#: addon\globalPlugins\resourceMonitor\__init__.py:405
+msgid "Enter the Resource Monitor command layer."
+msgstr ""
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:375
+#: addon\globalPlugins\resourceMonitor\__init__.py:426
+msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
+msgstr ""
+
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:433
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "已使用記憶體 {ramPercent}%、CPU {cpuPercent}%。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:384
+#: addon\globalPlugins\resourceMonitor\__init__.py:444
 msgid "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
 msgstr "顯示處理器平均負載及各核心的負載。按兩次則將資訊複製到剪貼簿。"
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:396
+#: addon\globalPlugins\resourceMonitor\__init__.py:456
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "核心 {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:403
+#: addon\globalPlugins\resourceMonitor\__init__.py:463
 #, python-brace-format
 msgid "{avgLoad}% CPU load."
 msgstr "CPU 負載為 {avgLoad}%。"
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:406
+#: addon\globalPlugins\resourceMonitor\__init__.py:466
 #, python-brace-format
 msgid "{avgLoad}% average CPU load, {cores}."
 msgstr "CPU 平均負載為 {avgLoad}%，{cores}。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:417
+#: addon\globalPlugins\resourceMonitor\__init__.py:477
 msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
 msgstr "顯示實體記憶體與虛擬記憶體的已使用空間及總空間。按兩次則將資訊複製到剪貼簿。"
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:427
+#: addon\globalPlugins\resourceMonitor\__init__.py:487
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "實體: 已使用 {physicalTotal} 中的 {physicalUsed} ({physicalPercent}%)。 "
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:435
+#: addon\globalPlugins\resourceMonitor\__init__.py:495
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "虛擬: 已使用 {virtualTotal} 中的 {virtualUsed} ({virtualPercent}%)。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:448
+#: addon\globalPlugins\resourceMonitor\__init__.py:508
 msgid "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
 msgstr "顯示此電腦的固定式（內建）、卸除式及對應網路磁碟機的已使用空間與總空間。按兩次則將資訊複製到剪貼簿。"
 
 #. Translators: Reported when a mapped network drive is currently unreachable.
-#: addon\globalPlugins\resourceMonitor\__init__.py:476
+#: addon\globalPlugins\resourceMonitor\__init__.py:536
 #, python-brace-format
 msgid "{driveName} (network drive): not available."
 msgstr "{driveName}（網路磁碟機）：無法使用。"
 
 #. Translators: word used to describe a mapped network drive.
-#: addon\globalPlugins\resourceMonitor\__init__.py:479
+#: addon\globalPlugins\resourceMonitor\__init__.py:539
 msgid "network"
 msgstr "網路"
 
 #. Translators: Shows drive letter, type of drive (fixed, removable, or network),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:484
+#: addon\globalPlugins\resourceMonitor\__init__.py:544
 #, python-brace-format
 msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
 msgstr "{driveName}（{driveType}磁碟機）：已使用 {usedSpace}，共 {totalSpace}（{percent}%）。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:499
-#: addon\globalPlugins\resourceMonitor\__init__.py:506
+#: addon\globalPlugins\resourceMonitor\__init__.py:559
+#: addon\globalPlugins\resourceMonitor\__init__.py:566
 msgid "No wireless devices"
 msgstr "沒有無線裝置"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:510
+#: addon\globalPlugins\resourceMonitor\__init__.py:570
 msgid "No wireless connections"
 msgstr "未連線無線網路"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:523
+#: addon\globalPlugins\resourceMonitor\__init__.py:583
 #, python-brace-format
 msgid "Connected to {}, signal strength: {}%, security type: {}"
 msgstr "已連線至 {}，訊號強度：{}%，安全性類型：{}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:538
+#: addon\globalPlugins\resourceMonitor\__init__.py:598
 msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
 msgstr "讀出系統的無線網路名稱（SSID）、連線訊號強度及安全性通訊協定。按兩次則將資訊複製到剪貼簿。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:554
+#: addon\globalPlugins\resourceMonitor\__init__.py:614
 msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
 msgstr "讀出系統的無線網路名稱（SSID）、連線訊號強度及安全性通訊協定。按兩次則將資訊複製到剪貼簿。"
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:578
+#: addon\globalPlugins\resourceMonitor\__init__.py:639
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
 msgstr[0] "{days:d} 天"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:582
+#: addon\globalPlugins\resourceMonitor\__init__.py:643
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
 msgstr[0] "{hours:d} 小時"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:586
+#: addon\globalPlugins\resourceMonitor\__init__.py:647
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
 msgstr[0] "{minutes:d} 分鐘"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:590
+#: addon\globalPlugins\resourceMonitor\__init__.py:651
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} 秒"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:597
+#: addon\globalPlugins\resourceMonitor\__init__.py:658
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "讀出系統的運作時間。按兩次則將資訊複製到剪貼簿。"
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:612
+#: addon\globalPlugins\resourceMonitor\__init__.py:673
 msgid "Failed to get the system's uptime."
 msgstr "無法取得系統執行時間。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:628
+#: addon\globalPlugins\resourceMonitor\__init__.py:689
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}：使用率 {usage}%，溫度 {temperature}。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:638
-#: addon\globalPlugins\resourceMonitor\__init__.py:693
+#: addon\globalPlugins\resourceMonitor\__init__.py:699
+#: addon\globalPlugins\resourceMonitor\__init__.py:756
 msgid "No GPU information available."
 msgstr "沒有可用的GPU資訊。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:640
+#: addon\globalPlugins\resourceMonitor\__init__.py:701
 msgid "Unable to get GPU information."
 msgstr "無法取得GPU資訊。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:641
-#: addon\globalPlugins\resourceMonitor\__init__.py:696
+#: addon\globalPlugins\resourceMonitor\__init__.py:702
+#: addon\globalPlugins\resourceMonitor\__init__.py:759
 msgid "No GPU data available."
 msgstr "沒有可用的GPU資料"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:646
+#: addon\globalPlugins\resourceMonitor\__init__.py:707
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "讀出 GPU 使用率及溫度。按兩次則將資訊複製到剪貼簿。"
 
+#. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:664
+#: addon\globalPlugins\resourceMonitor\__init__.py:722
 msgid "Failed to get GPU information."
 msgstr "無法取得 GPU 資訊。"
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:684
+#: addon\globalPlugins\resourceMonitor\__init__.py:747
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr "GPU {gpuNumber}：{memoryInfo}。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:695
+#: addon\globalPlugins\resourceMonitor\__init__.py:758
 msgid "Unable to get GPU memory information."
 msgstr "無法取得GPU記憶體資訊。"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:701
+#: addon\globalPlugins\resourceMonitor\__init__.py:764
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "讀出 GPU 記憶體使用量。按兩次則將資訊複製到剪貼簿。"
 
+#. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:719
+#: addon\globalPlugins\resourceMonitor\__init__.py:779
 msgid "Failed to get GPU memory information."
 msgstr "無法取得GPU記憶體資訊。"
 
@@ -271,12 +279,6 @@ msgstr "一款實用的資源監視器，可讀出 CPU 負載、記憶體使用�
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).\n"
-"* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
-"* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
-"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
-msgstr "新增「資源監視器」類別至 NVDA 設定，可設定 GPU 溫度的回報單位為攝氏或華氏（由 hexxbyte 貢獻）。\n"
-"新增一個尚未指派快速鍵的指令，用於讀出 GPU（圖形處理器）記憶體使用量資訊（由 hexxbyte 貢獻）。\n"
-"按 NVDA+Shift+3 讀出磁碟使用量資訊時，若已連線至對應的網路磁碟機，也會一併讀出其資訊（由 hexxbyte 貢獻）。\n"
-"移除電池狀態回報功能。現在按 NVDA+Shift+4 將讀出無線網路連線狀態。若要取得電池狀態，請使用 NVDA 本身的電池狀態指令（NVDA+Shift+B）。"
+msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen)."
+msgstr ""
 

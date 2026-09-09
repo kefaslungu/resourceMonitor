@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-08-07 19:07+0000\n"
-"PO-Revision-Date: 2026-08-28 06:29\n"
+"POT-Creation-Date: 2026-09-07 18:06+0000\n"
+"PO-Revision-Date: 2026-09-07 18:08\n"
 "Last-Translator: \n"
 "Language-Team: Kurmanji (Kurdish)\n"
 "Language: kmr_TR\n"
@@ -17,40 +17,40 @@ msgstr ""
 "X-Crowdin-File: resourceMonitor.pot\n"
 "X-Crowdin-File-ID: 214\n"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:58
+#: addon\globalPlugins\resourceMonitor\__init__.py:60
 msgid "No authentication (Open)"
 msgstr "Rastkirin tune ye (Vekirî ye)"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:83
+#: addon\globalPlugins\resourceMonitor\__init__.py:85
 #, python-brace-format
 msgid "Connected to {}"
 msgstr "Girêdayî {}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:93
+#: addon\globalPlugins\resourceMonitor\__init__.py:95
 #, python-brace-format
 msgid "Disconnected from {}"
 msgstr "Ji {} veqetiya"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:98
+#: addon\globalPlugins\resourceMonitor\__init__.py:100
 msgid "A wireless device has been enabled"
 msgstr "Amûrek bêtêl hat çalakirin"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:104
+#: addon\globalPlugins\resourceMonitor\__init__.py:106
 msgid "A wireless device has been disabled"
 msgstr "Amûrek bêtêl hatiye neçalakkirin"
 
 #. Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:228
+#: addon\globalPlugins\resourceMonitor\__init__.py:230
 msgid "degrees Fahrenheit"
 msgstr "pileya Fahrenheitê"
 
 #. Translators: Celsius temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:232
+#: addon\globalPlugins\resourceMonitor\__init__.py:234
 msgid "degrees Celsius"
 msgstr "pileya Celsiusê"
 
 #. Translators: Shows GPU memory usage (example: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:248
+#: addon\globalPlugins\resourceMonitor\__init__.py:250
 #, python-brace-format
 msgid "{used} of {total} used ({percent}%)"
 msgstr "{used} ji {total} hatine bikaranîn ({percent}%)"
@@ -60,126 +60,132 @@ msgstr "{used} ji {total} hatine bikaranîn ({percent}%)"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
-#: addon\globalPlugins\resourceMonitor\__init__.py:257
-#: addon\globalPlugins\resourceMonitor\__init__.py:309 buildVars.py:21
+#: addon\globalPlugins\resourceMonitor\__init__.py:259
+#: addon\globalPlugins\resourceMonitor\__init__.py:311
+#: addon\globalPlugins\resourceMonitor\__init__.py:415 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Çavdêrê Çavkaniyan"
 
 #. Translators: Label for a combo box to select the unit used to report GPU temperature.
-#: addon\globalPlugins\resourceMonitor\__init__.py:262
+#: addon\globalPlugins\resourceMonitor\__init__.py:264
 msgid "GPU &temperature unit:"
 msgstr "Yekîneya germahî û GPU:"
 
 #. Translators: An option in the GPU temperature unit combo box.
-#: addon\globalPlugins\resourceMonitor\__init__.py:264
+#: addon\globalPlugins\resourceMonitor\__init__.py:266
 msgid "Celsius"
 msgstr ""
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:264
+#: addon\globalPlugins\resourceMonitor\__init__.py:266
 msgid "Fahrenheit"
 msgstr ""
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
-#: addon\globalPlugins\resourceMonitor\__init__.py:301
+#: addon\globalPlugins\resourceMonitor\__init__.py:303
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) ava bike {build}"
 
-#. Translators: Input help mode message about overall system resource info command in Resource Monitor
-#: addon\globalPlugins\resourceMonitor\__init__.py:367
-msgid "Presents used ram and average processor load."
-msgstr "RAM-a bikarhatî û barkirina navînî ya processorê nîşan dide."
+#. Translators: Input help mode message for entering the Resource Monitor command layer.
+#: addon\globalPlugins\resourceMonitor\__init__.py:405
+msgid "Enter the Resource Monitor command layer."
+msgstr ""
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:375
+#: addon\globalPlugins\resourceMonitor\__init__.py:426
+msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
+msgstr ""
+
+#. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
+#: addon\globalPlugins\resourceMonitor\__init__.py:433
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent}% RAM hatiye bikaranîn, CPU li {cpuPercent}%."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:384
+#: addon\globalPlugins\resourceMonitor\__init__.py:444
 msgid "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
 msgstr "Barê navînî yê pêvajoyê û barê her core nîşan dide. Ger du caran were pêlkirin, agahdariyê li ser panoya çapkirî kopî dike."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:396
+#: addon\globalPlugins\resourceMonitor\__init__.py:456
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Navik {coreNumber}: {corePercent}%"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:403
+#: addon\globalPlugins\resourceMonitor\__init__.py:463
 #, python-brace-format
 msgid "{avgLoad}% CPU load."
 msgstr "{avgLoad}% Barê CPUyê."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:406
+#: addon\globalPlugins\resourceMonitor\__init__.py:466
 #, python-brace-format
 msgid "{avgLoad}% average CPU load, {cores}."
 msgstr "{avgLoad}% barê navînî yê CPUyê, {cores}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:417
+#: addon\globalPlugins\resourceMonitor\__init__.py:477
 msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
 msgstr "Cihê bikarhatî û tevahî yê RAM-a fîzîkî û ya virtual nîşan dide. Ger du caran were pêlkirin, agahdariyê li ser panoya vîdyoyê kopî dike."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:427
+#: addon\globalPlugins\resourceMonitor\__init__.py:487
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "Fizîkî: {physicalUsed} ji {physicalTotal} hatiye bikaranîn ({physicalPercent}%). "
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:435
+#: addon\globalPlugins\resourceMonitor\__init__.py:495
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtual: {virtualUsed} ji {virtualTotal} hatiye bikaranîn ({virtualPercent}%)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:448
+#: addon\globalPlugins\resourceMonitor\__init__.py:508
 msgid "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
 msgstr "Cihê bikarhatî û tevahî yê ajokarên torê yên sabît (çêkirî), rakirinî, û nexşekirî li ser vê komputerê nîşan dide. Ger du caran were pêlkirin, agahdariyê li ser panoya vîdyoyê kopî dike."
 
 #. Translators: Reported when a mapped network drive is currently unreachable.
-#: addon\globalPlugins\resourceMonitor\__init__.py:476
+#: addon\globalPlugins\resourceMonitor\__init__.py:536
 #, python-brace-format
 msgid "{driveName} (network drive): not available."
 msgstr "{driveName} (ajokareke torê): peyda nabe."
 
 #. Translators: word used to describe a mapped network drive.
-#: addon\globalPlugins\resourceMonitor\__init__.py:479
+#: addon\globalPlugins\resourceMonitor\__init__.py:539
 msgid "network"
 msgstr "şebek"
 
 #. Translators: Shows drive letter, type of drive (fixed, removable, or network),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:484
+#: addon\globalPlugins\resourceMonitor\__init__.py:544
 #, python-brace-format
 msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
 msgstr "{driveName} ({driveType} ajokar): {usedSpace} ji {totalSpace} hatiye bikaranîn ({percent}%)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:499
-#: addon\globalPlugins\resourceMonitor\__init__.py:506
+#: addon\globalPlugins\resourceMonitor\__init__.py:559
+#: addon\globalPlugins\resourceMonitor\__init__.py:566
 msgid "No wireless devices"
 msgstr "Amûrên bêtêl tune ne"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:510
+#: addon\globalPlugins\resourceMonitor\__init__.py:570
 msgid "No wireless connections"
 msgstr "Girêdanên bêtêl tune ne"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:523
+#: addon\globalPlugins\resourceMonitor\__init__.py:583
 #, python-brace-format
 msgid "Connected to {}, signal strength: {}%, security type: {}"
 msgstr "Girêdayî bi {}, hêza sînyalê: {}%, cureyê ewlehiyê: {}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:538
+#: addon\globalPlugins\resourceMonitor\__init__.py:598
 msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
 msgstr "Navê tora bêtêl (SSID), hêza girêdanê û protokola ewlehiyê ya sîstemê radigihîne. Ger du caran were pêlkirin, agahdariyê li ser panoya vîdyoyê kopî dike."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:554
+#: addon\globalPlugins\resourceMonitor\__init__.py:614
 msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
 msgstr "Guhertoya Windows-ê ya ku hûn bikar tînin radigihîne. Ger du caran were pêlkirin, agahdariyê li ser panoya vîdyoyê kopî dike."
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:578
+#: addon\globalPlugins\resourceMonitor\__init__.py:639
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -187,7 +193,7 @@ msgstr[0] "{roj:d} roj"
 msgstr[1] "{roj:d} roj"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:582
+#: addon\globalPlugins\resourceMonitor\__init__.py:643
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -195,7 +201,7 @@ msgstr[0] "{saet:d} saet"
 msgstr[1] "{saet:d} saet"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:586
+#: addon\globalPlugins\resourceMonitor\__init__.py:647
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -203,66 +209,68 @@ msgstr[0] "{deqe:d} deqe"
 msgstr[1] "{deqe:d} deqe"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:590
+#: addon\globalPlugins\resourceMonitor\__init__.py:651
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{çirke:d} çirke"
 msgstr[1] "{çirke:d} çirke"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:597
+#: addon\globalPlugins\resourceMonitor\__init__.py:658
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "Dema xebitandina pergalê radigihîne. Ger du caran were pêlkirin, agahdariyê li ser panoya çapkirî kopî dike."
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:612
+#: addon\globalPlugins\resourceMonitor\__init__.py:673
 msgid "Failed to get the system's uptime."
 msgstr "Nekarî dema xebitandina pergalê bi dest bixe."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:628
+#: addon\globalPlugins\resourceMonitor\__init__.py:689
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}: karanîn {usage}%, germahî {temperature}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:638
-#: addon\globalPlugins\resourceMonitor\__init__.py:693
+#: addon\globalPlugins\resourceMonitor\__init__.py:699
+#: addon\globalPlugins\resourceMonitor\__init__.py:756
 msgid "No GPU information available."
 msgstr "Agahiyên GPU-yê tune ne."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:640
+#: addon\globalPlugins\resourceMonitor\__init__.py:701
 msgid "Unable to get GPU information."
 msgstr "Nikare agahdariya GPU-yê bi dest bixe."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:641
-#: addon\globalPlugins\resourceMonitor\__init__.py:696
+#: addon\globalPlugins\resourceMonitor\__init__.py:702
+#: addon\globalPlugins\resourceMonitor\__init__.py:759
 msgid "No GPU data available."
 msgstr "Agahiyên GPU tune ne."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:646
+#: addon\globalPlugins\resourceMonitor\__init__.py:707
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "Bikaranîna GPU û germahiyê radigihîne. Ger du caran were pêlkirin, agahdariyê li ser panoya vîdyoyê kopî dike."
 
+#. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:664
+#: addon\globalPlugins\resourceMonitor\__init__.py:722
 msgid "Failed to get GPU information."
 msgstr "Agahiyên GPU nehatin wergirtin."
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:684
+#: addon\globalPlugins\resourceMonitor\__init__.py:747
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr ""
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:695
+#: addon\globalPlugins\resourceMonitor\__init__.py:758
 msgid "Unable to get GPU memory information."
 msgstr "Agahiyên bîra GPU nayên wergirtin."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:701
+#: addon\globalPlugins\resourceMonitor\__init__.py:764
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "Bikaranîna bîra GPU radigihîne. Ger du caran were pêlkirin, agahdariyê li ser panoya vîdyoyê kopî dike."
 
+#. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:719
+#: addon\globalPlugins\resourceMonitor\__init__.py:779
 msgid "Failed to get GPU memory information."
 msgstr "Agahiyên bîra GPU nehatin wergirtin."
 
@@ -275,12 +283,6 @@ msgstr "Monitorek çavkaniyên kêrhatî ji bo ragihandina barê CPU, karanîna 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Added Resource Monitor category to NVDA settings to configure GPU temperature reporting unit between Celcius and Fahrenheit (contributed by hexxbyte).\n"
-"* Added an unassigned command to announce GPU (graphics processing unit) memory usage information (contributed by hexxbyte).\n"
-"* Pressing NVDA+Shift+3 to report disk usage information will include mapped network drives if connected (contributed by hexxbyte).\n"
-"* Removed battery status reporting feature. Pressing NVDA+Shift+4 will now report wireless connection status. For battery status, use NVDA's own battery status command (NVDA+Shift+B)."
-msgstr "* Kategoriya Çavdêriya Çavkaniyê li mîhengên NVDA zêde kir da ku yekîneya ragihandina germahiya GPU di navbera Celcius û Fahrenheit de were mîheng kirin (ji hêla hexxbyte ve hatî beşdar kirin).\n"
-"* Fermanek nehatî destnîşankirin zêde kir da ku agahdariya karanîna bîra GPU (yekîneya pêvajoya grafîkê) ragihîne (ji hêla hexxbyte ve hatî beşdar kirin).\n"
-"* Bi tikandina NVDA+Shift+3 ji bo ragihandina agahdariya karanîna dîskê dê ajokarên torê yên nexşandî jî di nav xwe de bigire ger girêdayî bin (ji hêla hexxbyte ve hatî beşdar kirin).\n"
-"* Taybetmendiya ragihandina rewşa bateriyê hate rakirin. Bi tikandina NVDA+Shift+4 dê naha rewşa girêdana bêtêl were ragihandin. Ji bo rewşa bateriyê, fermana rewşa bateriyê ya NVDA bi xwe bikar bînin (NVDA+Shift+B)."
+msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen)."
+msgstr ""
 
