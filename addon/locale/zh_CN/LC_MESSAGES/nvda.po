@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-09-09 04:38+0000\n"
-"PO-Revision-Date: 2026-09-09 04:39\n"
+"PO-Revision-Date: 2026-09-10 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -89,11 +89,11 @@ msgstr "{winVersion} ({cpuBit}) 内部版本 {build}"
 #. Translators: Input help mode message for entering the Resource Monitor command layer.
 #: addon\globalPlugins\resourceMonitor\__init__.py:408
 msgid "Enter the Resource Monitor command layer."
-msgstr ""
+msgstr "进入资源监控器命令层。"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:429
 msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
-msgstr ""
+msgstr "读出内存使用率和 CPU 平均负载。连按两次将此信息复制到剪贴板。"
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 #: addon\globalPlugins\resourceMonitor\__init__.py:436
@@ -281,5 +281,6 @@ msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存�
 #: buildVars.py:29
 msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen).\n"
 "* Added compatibility with add-on settings registration mechanics in NVDA 2026.3."
-msgstr ""
+msgstr "* 引入了资源监控器层命令，以整体资源使用情况命令（NVDA+Shift+E）作为层命令入口。层命令包括 C（CPU）、D（磁盘）、G（GPU）、Shift+G（GPU 内存）、M（内存）、O（Windows 版本）、U（系统运行时间）和 W（Wi-Fi）。按 NVDA+Shift+E 后按空格键可获取整体资源使用信息，按 Esc 键可退出命令层。为有限的向后兼容性保留了各个独立的资源使用情况命令（NVDA+Shift+1 - 7）（由 cary-rowen 贡献）。\n"
+"* 兼容了 NVDA 2026.3 中新增的插件设置注册机制。"
 

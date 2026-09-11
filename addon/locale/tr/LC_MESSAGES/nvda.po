@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-09-09 04:38+0000\n"
-"PO-Revision-Date: 2026-09-09 04:40\n"
+"PO-Revision-Date: 2026-09-11 06:56\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -285,5 +285,6 @@ msgstr "CPU yükünü, bellek kullanımını, disk kullanım durumunu ve daha fa
 #: buildVars.py:29
 msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen).\n"
 "* Added compatibility with add-on settings registration mechanics in NVDA 2026.3."
-msgstr ""
+msgstr "* Kaynak İzleme katman komutları, genel kaynak kullanım komutu (NVDA+Shift+E) katman giriş komutu olarak eklenerek kullanıma sunulmuştur. Katman komutları arasında C (CPU), D (diskler), G (GPU)/Shift+G (GPU belleği), M (bellek/RAM), O (işletim sistemi/Windows sürümü), U (sistem çalışma süresi) ve W (Wi-Fi) bulunur. Genel kaynak kullanım bilgileri için NVDA+Shift+E tuşlarına ve ardından Boşluk tuşuna basın, katmandan çıkmak için ise Escape tuşuna basın. Bireysel kaynak kullanım komutları (NVDA+Shift+1'den 7'ye kadar olan satır numaraları) sınırlı geriye dönük uyumluluk için korunmuştur (cary-rowen tarafından katkıda bulunulmuştur).\n"
+"* NVDA 2026.3'te eklenti ayarları kayıt mekaniğiyle uyumluluk eklendi."
 

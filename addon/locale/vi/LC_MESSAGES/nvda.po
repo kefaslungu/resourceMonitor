@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-09-09 04:38+0000\n"
-"PO-Revision-Date: 2026-09-09 04:40\n"
+"PO-Revision-Date: 2026-09-09 17:21\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -281,5 +281,6 @@ msgstr "Một tiện ích theo dõi tài nguyên để báo cáo tải CPU, mứ
 #: buildVars.py:29
 msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen).\n"
 "* Added compatibility with add-on settings registration mechanics in NVDA 2026.3."
-msgstr ""
+msgstr "* Giới thiệu các lớp lệnh theo dõi Tài nguyên với lệnh sử dụng tài nguyên tổng thể (NVDA+Shift+E) làm lệnh nhập lớp. Các lớp lệnh bao gồm C (CPU), D (ổ đĩa), G (GPU)/Shift+G (bộ nhớ GPU), M (bộ nhớ/RAM), O (hệ điều hành/phiên bản Windows), U (thời gian hoạt động của hệ thống) và W (wi-fi). Nhấn NVDA+Shift+E rồi Space để xem thông tin sử dụng tài nguyên tổng thể, và Escape để thoát khỏi lớp. Các lệnh sử dụng tài nguyên riêng lẻ (NVDA+Shift+số hàng từ 1 đến 7) được giữ lại để đảm bảo khả năng tương thích ngược hạn chế (đóng góp bởi cary-rowen).\n"
+"* Đã thêm khả năng tương thích với cơ chế đăng ký cài đặt tiện ích bổ sung trong NVDA 2026.3."
 
