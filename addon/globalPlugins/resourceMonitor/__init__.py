@@ -380,7 +380,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				None,
 			)
 			wlanapi.WlanCloseHandle(
-				byref(self._client_handle),
+				self._client_handle,
 				None,
 			)
 			self._client_handle = None
