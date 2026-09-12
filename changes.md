@@ -5,6 +5,7 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 ## Version 26.10
 
 * NVDA 2026.1 (64-bit) or later is required.
+* NVDA will announce wireless network status reporting errors in more situations (contributed by cary-rowen).
 
 ## Version 26.09.2
 
