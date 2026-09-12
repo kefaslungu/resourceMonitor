@@ -8,7 +8,7 @@
 import functools
 import os.path
 import winsound
-from ctypes import addressof, byref, POINTER, wintypes
+from ctypes import addressof, byref, POINTER, string_at, wintypes
 from datetime import datetime
 from typing import Any, ClassVar
 import api
@@ -81,21 +81,18 @@ try:
 				notificationData = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData)
 				if notificationData.wlanReasonCode != wlanapi.ERROR_SUCCESS:
 					return
-				ssid = notificationData.dot11Ssid.SSID
 				queueHandler.queueFunction(
 					queueHandler.eventQueue,
 					message,
-					_("Connected to {}").format(ssid.decode("utf-8")),
+					_("Connected to {}").format(_decodeSSID(notificationData.dot11Ssid)),
 					"connect.wav",
 				)
 			case wlanapi.wlan_notification_acm_disconnected:
-				ssid = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(
-					pData.contents.pData
-				).dot11Ssid.SSID
+				notificationData = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData)
 				queueHandler.queueFunction(
 					queueHandler.eventQueue,
 					message,
-					_("Disconnected from {}").format(ssid.decode("utf-8")),
+					_("Disconnected from {}").format(_decodeSSID(notificationData.dot11Ssid)),
 					"disconnect.wav",
 				)
 			case wlanapi.wlan_notification_acm_interface_arrival:
@@ -117,6 +114,12 @@ except NameError:
 
 def customResize(array: Any, newSize: Any):
 	return (array._type_ * newSize).from_address(addressof(array))
+
+
+def _decodeSSID(ssid: Any) -> str:
+	ssidLength = min(ssid.SSIDLength, 32)
+	ssidBytes = string_at(addressof(ssid) + wlanapi.DOT11_SSID.SSID.offset, ssidLength)
+	return ssidBytes.decode("utf-8", errors="replace")
 
 
 # Styles of size calculation/string composition, do not change!
@@ -572,9 +575,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if wlan_ifaces.contents.NumberOfItems == 0:
 				return _("No wireless devices")
 
+			info = _("No wireless connections")
 			for i in customResize(wlan_ifaces.contents.InterfaceInfo, wlan_ifaces.contents.NumberOfItems):
 				if i.isState != wlanapi.wlan_interface_state_connected:
-					info = _("No wireless connections")
 					continue
 
 				wlan_available_network_list = POINTER(wlanapi.WLAN_AVAILABLE_NETWORK_LIST)()
@@ -596,7 +599,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					):
 						if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
 							info = _("Connected to {}, signal strength: {}%, security type: {}").format(
-								n.dot11Ssid.SSID.decode(),
+								_decodeSSID(n.dot11Ssid),
 								n.wlanSignalQuality,
 								SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm),
 							)
