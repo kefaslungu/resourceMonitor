@@ -78,7 +78,9 @@ try:
 			return
 		match pData.contents.NotificationCode:
 			case wlanapi.wlan_notification_acm_connection_complete:
-				notificationData = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData)
+				notificationData = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(
+					pData.contents.pData
+				)
 				if notificationData.wlanReasonCode != wlanapi.ERROR_SUCCESS:
 					return
 				queueHandler.queueFunction(
@@ -88,7 +90,9 @@ try:
 					"connect.wav",
 				)
 			case wlanapi.wlan_notification_acm_disconnected:
-				notificationData = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(pData.contents.pData)
+				notificationData = wlanapi.WLAN_CONNECTION_NOTIFICATION_DATA.from_address(
+					pData.contents.pData
+				)
 				queueHandler.queueFunction(
 					queueHandler.eventQueue,
 					message,
