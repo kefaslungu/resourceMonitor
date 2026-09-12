@@ -2,6 +2,10 @@
 
 This page lists the complete changelog for Resource Monitor add-on releases.
 
+## Version 26.09.future
+
+* NVDA will announce wireless network status reporting errors in more situations (contributed by cary-rowen).
+
 ## Version 26.09.2
 
 * Added compatibility with add-on settings registration mechanics in NVDA 2026.3.
