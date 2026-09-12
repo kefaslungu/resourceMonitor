@@ -560,13 +560,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _getWlanInfo(self) -> str:
 		if not self._client_handle:
 			return _("No wireless devices")
+		errorMessage = _("Unable to get wireless information")
 
 		wlan_ifaces = POINTER(wlanapi.WLAN_INTERFACE_INFO_LIST)()
 		try:
 			try:
 				wlanapi.WlanEnumInterfaces(self._client_handle, None, byref(wlan_ifaces))
 			except OSError:
-				return _("Unable to get wireless information")
+				return errorMessage
 
 			if wlan_ifaces.contents.NumberOfItems == 0:
 				return _("No wireless devices")
@@ -586,7 +587,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						byref(wlan_available_network_list),
 					)
 				except OSError:
-					return _("Unable to get wireless information")
+					return errorMessage
 
 				try:
 					for n in customResize(
