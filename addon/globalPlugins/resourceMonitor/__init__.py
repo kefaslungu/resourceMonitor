@@ -560,39 +560,54 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _getWlanInfo(self) -> str:
 		if not self._client_handle:
 			return _("No wireless devices")
+		errorMessage = _("Unable to get wireless information")
 
 		wlan_ifaces = POINTER(wlanapi.WLAN_INTERFACE_INFO_LIST)()
-		wlanapi.WlanEnumInterfaces(self._client_handle, None, byref(wlan_ifaces))
+		try:
+			try:
+				wlanapi.WlanEnumInterfaces(self._client_handle, None, byref(wlan_ifaces))
+			except OSError:
+				return errorMessage
 
-		if wlan_ifaces.contents.NumberOfItems == 0:
-			wlanapi.WlanFreeMemory(wlan_ifaces)
-			return _("No wireless devices")
+			if wlan_ifaces.contents.NumberOfItems == 0:
+				return _("No wireless devices")
 
-		for i in customResize(wlan_ifaces.contents.InterfaceInfo, wlan_ifaces.contents.NumberOfItems):
-			if i.isState != wlanapi.wlan_interface_state_connected:
-				info = _("No wireless connections")
-				continue
+			for i in customResize(wlan_ifaces.contents.InterfaceInfo, wlan_ifaces.contents.NumberOfItems):
+				if i.isState != wlanapi.wlan_interface_state_connected:
+					info = _("No wireless connections")
+					continue
 
-			wlan_available_network_list = POINTER(wlanapi.WLAN_AVAILABLE_NETWORK_LIST)()
-			wlanapi.WlanGetAvailableNetworkList(
-				self._client_handle, byref(i.InterfaceGuid), 0, None, byref(wlan_available_network_list)
-			)
-			for n in customResize(
-				wlan_available_network_list.contents.Network,
-				wlan_available_network_list.contents.NumberOfItems,
-			):
-				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
-					info = _(
-						"Connected to {}, signal strength: {}%, security type: {}"
-					).format(
-						n.dot11Ssid.SSID.decode(),
-						n.wlanSignalQuality,
-						SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm),
+				wlan_available_network_list = POINTER(wlanapi.WLAN_AVAILABLE_NETWORK_LIST)()
+				try:
+					wlanapi.WlanGetAvailableNetworkList(
+						self._client_handle,
+						byref(i.InterfaceGuid),
+						0,
+						None,
+						byref(wlan_available_network_list),
 					)
-					break
-			wlanapi.WlanFreeMemory(wlan_available_network_list)
-		wlanapi.WlanFreeMemory(wlan_ifaces)
-		return info
+				except OSError:
+					return errorMessage
+
+				try:
+					for n in customResize(
+						wlan_available_network_list.contents.Network,
+						wlan_available_network_list.contents.NumberOfItems,
+					):
+						if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
+							info = _("Connected to {}, signal strength: {}%, security type: {}").format(
+								n.dot11Ssid.SSID.decode(),
+								n.wlanSignalQuality,
+								SECURITY_TYPE.get(n.dot11DefaultAuthAlgorithm),
+							)
+							break
+				finally:
+					if wlan_available_network_list:
+						wlanapi.WlanFreeMemory(wlan_available_network_list)
+			return info
+		finally:
+			if wlan_ifaces:
+				wlanapi.WlanFreeMemory(wlan_ifaces)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about obtaining the ssid of the wireless network,
