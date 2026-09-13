@@ -2,7 +2,7 @@
 
 This page lists the complete changelog for Resource Monitor add-on releases.
 
-## Version 26.09.future
+## Version 26.09.3
 
 * NVDA will announce wireless network status reporting errors in more situations (contributed by cary-rowen).
 * NVDA will correctly report wireless connection status with multiple wireless interfaces and SSIDs containing non-ASCII characters (contributed by cary-rowen).
