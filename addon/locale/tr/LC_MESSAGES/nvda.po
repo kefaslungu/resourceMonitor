@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-13 06:16+0000\n"
-"PO-Revision-Date: 2026-09-13 06:17\n"
+"POT-Creation-Date: 2026-09-13 09:17+0000\n"
+"PO-Revision-Date: 2026-09-13 09:18\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -169,7 +169,7 @@ msgstr "Kablosuz cihaz yok"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:570
 msgid "Unable to get wireless information"
-msgstr ""
+msgstr "Kablosuz ağ bilgisine erişilemiyor"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:582
 msgid "No wireless connections"
@@ -287,8 +287,6 @@ msgstr "CPU yükünü, bellek kullanımını, disk kullanım durumunu ve daha fa
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2026.1 (64-bit) or later is required.\n"
-"* NVDA will announce wireless network status reporting errors in more situations (contributed by cary-rowen).\n"
-"* NVDA will correctly report wireless connection status with multiple wireless interfaces and SSIDs containing non-ASCII characters (contributed by cary-rowen)."
+msgid "* NVDA 2026.1 (64-bit) or later is required."
 msgstr ""
 
