@@ -43,6 +43,7 @@ This add-on does not replace task manager and other system information programs 
 * Resource information cannot be copied to the clipboard if running the add-on in secure screens.
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors with Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.
+* NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks.
 * GPU information is given for Nvidia GPU's.
 * When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively. This information does not refer to the name of the actual processor in use.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
