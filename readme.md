@@ -17,7 +17,7 @@ The following layer commands are available to obtain individual resource usage i
 * D: disks (used and total space of the fixed (built-in), removable, and network drives)
 * G (unavailable in secure mode): graphics processing unit (GPU) information
 * Shift+G(unavailable in secure mode): GPU memory usage
-* M: memory (used and total space for both physical and virtual RAM (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed))
+* M: memory (used and total space for both physical and virtual RAM)
 * O: operating system (Windows version, CPU architecture, and exact build number (build.revision))
 * U: system uptime
 * W: wi-fi (network name (SSID), signal strength, security mode, or no SSID if there is none available)
@@ -27,7 +27,7 @@ Resource commands keep the layer active so they can be repeated. Press Escape to
 For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available:
 
 * NVDA+Shift+1: CPU
-* NVDA+Shift+2/5: memory
+* NVDA+Shift+2/5: memory (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed)
 * NVDA+Shift+3: disks
 * NVDA+Shift+4: wi-fi
 * NVDA+Shift+6: operating system
