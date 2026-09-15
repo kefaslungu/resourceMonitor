@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-09-13 09:17+0000\n"
-"PO-Revision-Date: 2026-09-13 09:18\n"
+"PO-Revision-Date: 2026-09-14 02:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -169,7 +169,7 @@ msgstr "没有无线设备"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:570
 msgid "Unable to get wireless information"
-msgstr ""
+msgstr "无法获取无线网络信息"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:582
 msgid "No wireless connections"
@@ -284,5 +284,5 @@ msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存�
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.1 (64-bit) or later is required."
-msgstr ""
+msgstr "* 需要 NVDA 2026.1（64 位）或更高版本。"
 

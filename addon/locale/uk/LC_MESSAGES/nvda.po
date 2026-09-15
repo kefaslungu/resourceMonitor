@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-09-13 09:17+0000\n"
-"PO-Revision-Date: 2026-09-13 09:19\n"
+"PO-Revision-Date: 2026-09-14 00:07\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
@@ -169,7 +169,7 @@ msgstr "Немає бездротових пристроїв"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:570
 msgid "Unable to get wireless information"
-msgstr ""
+msgstr "Не вдається отримати інформацію про бездротове з'єднання"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:582
 msgid "No wireless connections"
@@ -296,5 +296,5 @@ msgstr "Зручний монітор ресурсів, який повідом�
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.1 (64-bit) or later is required."
-msgstr ""
+msgstr "* Потрібна NVDA 2026.1 (64-розрядна) або пізніша версія."
 

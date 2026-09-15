@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-09-13 09:17+0000\n"
-"PO-Revision-Date: 2026-09-13 09:18\n"
+"PO-Revision-Date: 2026-09-15 11:51\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -89,7 +89,7 @@ msgstr "{winVersion} ({cpuBit}) Yapı {build}"
 #. Translators: Input help mode message for entering the Resource Monitor command layer.
 #: addon\globalPlugins\resourceMonitor\__init__.py:415
 msgid "Enter the Resource Monitor command layer."
-msgstr "Kaynak İzleme komut katmanına girin."
+msgstr "Kaynak İzleme komut katmanına girer."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:436
 msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
@@ -288,5 +288,5 @@ msgstr "CPU yükünü, bellek kullanımını, disk kullanım durumunu ve daha fa
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.1 (64-bit) or later is required."
-msgstr ""
+msgstr "* NVDA 2026.1 (64-bit) veya daha yeni bir sürüm gereklidir."
 

@@ -6,18 +6,32 @@
 
 ## 단추키
 
-All commands support speech on demand mode.
+본 추가 기능 명령들은 음성 출력 요청 모드(speech on-demand)를 지원합니다.
 
-* NVDA+Shift+E: 메모리(RAM) 및 프로세서 사용ㄹㄹ을 알려줍니다.
-* NVDA+Shift+1: presents the average processor load and if multicore CPU's are present the load of each core.
-* NVDA+Shift+2/5: 
-물리 및 가상 메모리 사욜률을 알려줍니다(NVDA+Shift+2가 동작하지 않을 겨웅 NVDA+Shift+5를 사용하세요).
-* NVDA+Shift+3: 디스크 사용량(연결된 디스크, 외부 디스크, 네트ㅜ어크 디스크)을 알려줍니다.
-* NVDA+Shift+4: 연결된 무선랜 정보(네트ㅜ어크 이름, 보안 상태, 신호 강도)를 알려줍니다.
-* NVDA+Shift+6: 윈도우 버전(빌드 포함) 및 프로세서 버전(AMD64/x64, ARM64) 정보를 알려줍니다.
-* NVDA+Shift+7: 시스템 부팅후 사용 시간을 알려줍니다.
-* 단춧키 설정 가능: GPU(비디오 카드) 정보를 알려줍니다.
-* 단춧키 설정 가능: GPU 메모리 정보를 알려줍니다.
+* NVDA+Shift+E: 리소스 모니터 명령 모드를 실행하빈다.
+
+아래 명령들을 사용하여 리소스 사용 정보를 확인할 수 있습니다:
+
+* 스페이스(Space): 메모리(RAM) 및 프로세서 사용률을 알려줍니다.
+* C: 프로세서(CPU) 평균 프로세서 사용률 및 멀티코어 CPU일 경우 각 코어 사용률)
+* D: 디스크 사용량(연결된 디스크, 외부 디스크, 네트ㅜ어크 디스크 포함)
+* G(보안 모드(secure mode)일때 사용 불가): GPU(비디오 카드) 정보
+* Shift+G(보안 모드(secure mode)일때 사용 불가): GPU 메모리 사용량
+* M: memory (used and total space for both physical and virtual RAM)
+* O: 운영체제(operating system), 특히 윈도우 버전(빌드 포함) 및 프로세서 버전(AMD64/x64, ARM64)
+* U: 시스템 부팅후 사용 시간(uptime)을 알려줍니다.
+* W: 무선랜(wi-fi) 정보(네트ㅜ어크 이름, 보안 상태, 신호 강도)
+
+리소스 정보 명령 모드 사용시 각 정보 핫키를 여러번 누를 수 있습니다. Escape를 눌러 명령 모드를 종료하며 명령 모드에 포함되지 않은 핫키는 포커스된 앱에 입력됩니다.
+
+이전 리소스 모니터 버전 사용자들을 위해 NVDA+Shift+1부터 NVDA+Shift+7까지의 리소스 정보 명령도 사용할 수 있습니다(호환 모드로 남김):
+
+* NVDA+Shift+1: 프로세서(CPU)
+* NVDA+Shift+2/5: memory (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed)
+* NVDA+Shift+3: 디스크
+* NVDA+Shift+4: 무선랜
+* NVDA+Shift+6: 운영체제(윈도우) 버전
+* NVDA+Shift+7: 부팅후 시스템 사용 시간
 
 NVDA 단춧키 설정을 통해 위 단춧키들을 변경할 수 있습니다.
 
@@ -25,13 +39,20 @@ NVDA 단춧키 설정을 통해 위 단춧키들을 변경할 수 있습니다.
 
 본 추가 기능은 윈도우 작업 관리자 등 리소스 사용에 관한 정보를 알려주늠 앱들을 대체하지 않습니다. 또한 다응 사항을 참고하세요:
 
-* 전체 리소스 사용 알림 기능(NVDA+Shift+E) 외 다른 단춧키를 두번 눌러 해당 리소스 정보를 클립보드에 복사할 수 있습니다.
+* 리소스 정보 단춧키를 두번 눌러 해당 리소스 정보를 클립보드에 복사할 수 있습니다.
 * NVDA가 보안 모드일 때(예: 로그인 창에서) 리소스 정보를 클립보드에 복사할 수 없습니다.
-* CPU usage is given for logical processors, not physical cores. This is noticeable for processors with Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
+* CPU 사용률은 물리 코어가 아닌 논리 코어 사용률을 보여줍니다(Hyper-Threading 사용시 논리 코어 수가 물리 코어의 배가 됨; 일부 최신 프로세서는 Hyper-Threading을 탑제하지 않음).
 * 디스크 사용량 확인시 대용량 파일 복사 또는 네트워크 접근과 같이 많은 시간을 필요로 하는 작업이 진행중일 때에는 정보 출력이 늦어질 수 있습니다.
+* NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks.
 * GPU 정보는 Nvidia GPU로 한정됩니다.
-* When announcing processor architecture information as part of Windows version reporting, "AMD64" refer to 64-bit (x64) Intel and AMD processors. This information does not refer to the name of the actual processor in use.
+* 윈도우 버전 알림에 포함된 "AMD64"는 프로세서 이름이 아닌 Intel 및 AMD 64비트 프로세서 아키텍처(processor architecture)를 의미합니다.
 * 본 추가 기능은 윈도우 10/11 LTSC를 정식으로 지원하지 않습니다.
+
+## Settings
+
+You can configure the following resource usage reporting options from NVDA settings screen under Resource Monitor category:
+
+* GPU temperature unit: select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
 
 추가 기능 변경 사항은 [추가 기능 변경 내역 (영어)][1] 문서에서 확인하실 수 있습니다.
 

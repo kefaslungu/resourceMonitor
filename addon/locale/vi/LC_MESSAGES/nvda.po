@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-09-13 09:17+0000\n"
-"PO-Revision-Date: 2026-09-13 09:19\n"
+"PO-Revision-Date: 2026-09-14 00:07\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -169,7 +169,7 @@ msgstr "Không có thiết bị không dây"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:570
 msgid "Unable to get wireless information"
-msgstr ""
+msgstr "Không thể lấy thông tin không dây"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:582
 msgid "No wireless connections"
@@ -284,5 +284,5 @@ msgstr "Một tiện ích theo dõi tài nguyên để báo cáo tải CPU, mứ
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.1 (64-bit) or later is required."
-msgstr ""
+msgstr "* Yêu cầu NVDA 2026.1 (64-bit) trở lên."
 
