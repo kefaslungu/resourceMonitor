@@ -48,6 +48,12 @@ This add-on does not replace task manager and other system information programs 
 * When announcing processor architecture information as part of Windows version reporting, "x86" and "AMD64" refer to 32-bit and 64-bit (x64) Intel and AMD processors, respectively. This information does not refer to the name of the actual processor in use.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
+## Settings
+
+You can configure the following resource usage reporting options from NVDA settings screen under Resource Monitor category:
+
+* GPU temperature unit: select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
+
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
 
 [1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md
