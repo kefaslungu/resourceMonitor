@@ -290,11 +290,31 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 			currentIndex = 0
 		self.gpuTempUnitList.SetSelection(currentIndex)
 
+		# Translators: Label for a combo box to select the wi-fi status notification.
+		wifiStatusNotificationLabelText = _("&Wi-fi connect/disconnect status notification:")
+		# Translators: An option in the wi-fi status notification combo box.
+		self._wifiStatusNotificationLabels = [_("off"), _("message"), _("sound"), _("both")]
+		self._wifiStatusNotificationValues = ["off", "message", "sound", "both"]
+		self.wifiStatusNotificationList = settingsSizerHelper.addLabeledControl(
+			wifiStatusNotificationLabelText,
+			wx.Choice,
+			choices=self._wifiStatusNotificationLabels,
+		)
+		try:
+			currentIndex = self._wifiStatusNotificationValues.index(config.conf["resourceMonitor"]["wifiStatusNotification"])
+		except ValueError:
+			currentIndex = 0
+		self.wifiStatusNotificationList.SetSelection(currentIndex)
+
 	def onSave(self) -> None:
 		selection = self.gpuTempUnitList.GetSelection()
 		if selection == wx.NOT_FOUND:
 			selection = 0
 		config.conf["resourceMonitor"]["gpuTempUnit"] = self._gpuTempUnitValues[selection]
+		selection = self.wifiStatusNotificationList.GetSelection()
+		if selection == wx.NOT_FOUND:
+			selection = 0
+		config.conf["resourceMonitor"]["wifiStatusNotification"] = self._wifiStatusNotificationValues[selection]
 
 
 @functools.lru_cache(maxsize=1)
