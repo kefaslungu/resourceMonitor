@@ -13,5 +13,6 @@ def onInstall() -> None:
 		return
 	confspec = {
 		"gpuTempUnit": "string(default=celsius)",
+		"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",
 	}
 	config.configSections.registerSection("resourceMonitor", confspec, isBaseOnly=True)
