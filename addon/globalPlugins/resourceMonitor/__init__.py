@@ -47,6 +47,7 @@ MODULE_DIR = os.path.dirname(__file__)
 if not "resourceMonitor" in config.conf.spec:
 	confspec = {
 		"gpuTempUnit": "string(default=celsius)",
+		"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",
 	}
 	config.conf.spec["resourceMonitor"] = confspec
 
