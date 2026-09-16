@@ -51,12 +51,15 @@ if not "resourceMonitor" in config.conf.spec:
 	}
 	config.conf.spec["resourceMonitor"] = confspec
 
-
+# Play a message and/or a sound.
+# This is mostly used for wi-fi status.
 def message(text: str, fileName: str) -> None:
-	ui.message(text)
-	path = os.path.join(MODULE_DIR, fileName)
-	if os.path.exists(path):
-		winsound.PlaySound(path, winsound.SND_ASYNC)
+	if config.conf["resourceMonitor"]["wifiStatusNotification"] in ("message", "both"):
+		ui.message(text)
+	if config.conf["resourceMonitor"]["wifiStatusNotification"] in ("sound", "both"):
+		path = os.path.join(MODULE_DIR, fileName)
+		if os.path.exists(path):
+			winsound.PlaySound(path, winsound.SND_ASYNC)
 
 
 try:
