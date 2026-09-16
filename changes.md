@@ -5,6 +5,7 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 ## Version 26.10
 
 * NVDA 2026.1 (64-bit) or later is required.
+* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).
 * NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release.
 
 ## Version 26.09.3

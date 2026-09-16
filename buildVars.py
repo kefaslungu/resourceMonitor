@@ -27,6 +27,7 @@ addon_info = AddonInfo(
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""* NVDA 2026.1 (64-bit) or later is required.
+* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).
 * NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release."""),
 	# Author(s)
 	addon_author="Alex Hall <mehgcap@gmail.com>, Joseph Lee <joseph.lee22590@gmail.com>, Kefas Lungu <jameskefaslungu@gmail.com>, beqa gozalishvili <beqaprogger@gmail.com>, Tuukka Ojala <tuukka.ojala@gmail.com>, Ethin Probst <harlydavidsen@gmail.com>, Kevin Derome, Wencong, Jonathan Rodriguez <jonathantrodriguez6@gmail.com> and other NVDA contributors",
