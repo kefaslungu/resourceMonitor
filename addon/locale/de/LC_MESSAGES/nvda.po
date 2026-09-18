@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-13 09:17+0000\n"
-"PO-Revision-Date: 2026-09-13 09:18\n"
+"POT-Creation-Date: 2026-09-18 20:40+0000\n"
+"PO-Revision-Date: 2026-09-18 20:42\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -17,40 +17,40 @@ msgstr ""
 "X-Crowdin-File: resourceMonitor.pot\n"
 "X-Crowdin-File-ID: 214\n"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:63
+#: addon\globalPlugins\resourceMonitor\__init__.py:67
 msgid "No authentication (Open)"
 msgstr "Keine Authentifizierung (offen)"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:89
+#: addon\globalPlugins\resourceMonitor\__init__.py:93
 #, python-brace-format
 msgid "Connected to {}"
 msgstr "Mit {} verbunden"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:99
+#: addon\globalPlugins\resourceMonitor\__init__.py:103
 #, python-brace-format
 msgid "Disconnected from {}"
 msgstr "Von {} getrennt"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:104
+#: addon\globalPlugins\resourceMonitor\__init__.py:108
 msgid "A wireless device has been enabled"
 msgstr "Ein drahtloses Gerät wurde aktiviert"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:110
+#: addon\globalPlugins\resourceMonitor\__init__.py:114
 msgid "A wireless device has been disabled"
 msgstr "Ein drahtloses Gerät wurde deaktiviert"
 
 #. Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:240
+#: addon\globalPlugins\resourceMonitor\__init__.py:244
 msgid "degrees Fahrenheit"
 msgstr "Grad Fahrenheit"
 
 #. Translators: Celsius temperature unit symbol appended to a GPU temperature value.
-#: addon\globalPlugins\resourceMonitor\__init__.py:244
+#: addon\globalPlugins\resourceMonitor\__init__.py:248
 msgid "degrees Celsius"
 msgstr "Grad Celsius"
 
 #. Translators: Shows GPU memory usage (example: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:260
+#: addon\globalPlugins\resourceMonitor\__init__.py:264
 #, python-brace-format
 msgid "{used} of {total} used ({percent}%)"
 msgstr "{used} von {total} verwendet ({percent}%)"
@@ -60,136 +60,158 @@ msgstr "{used} von {total} verwendet ({percent}%)"
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
-#: addon\globalPlugins\resourceMonitor\__init__.py:269
-#: addon\globalPlugins\resourceMonitor\__init__.py:321
-#: addon\globalPlugins\resourceMonitor\__init__.py:425 buildVars.py:21
+#: addon\globalPlugins\resourceMonitor\__init__.py:273
+#: addon\globalPlugins\resourceMonitor\__init__.py:345
+#: addon\globalPlugins\resourceMonitor\__init__.py:449 buildVars.py:21
 msgid "Resource Monitor"
 msgstr "Ressourcen-Monitor"
 
 #. Translators: Label for a combo box to select the unit used to report GPU temperature.
-#: addon\globalPlugins\resourceMonitor\__init__.py:274
+#: addon\globalPlugins\resourceMonitor\__init__.py:278
 msgid "GPU &temperature unit:"
 msgstr "Temperatur der GPU-einheit:"
 
 #. Translators: An option in the GPU temperature unit combo box.
-#: addon\globalPlugins\resourceMonitor\__init__.py:276
+#: addon\globalPlugins\resourceMonitor\__init__.py:280
 msgid "Celsius"
 msgstr "Celsius"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:276
+#: addon\globalPlugins\resourceMonitor\__init__.py:280
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
+#. Translators: Label for a combo box to select the wi-fi status notification.
+#: addon\globalPlugins\resourceMonitor\__init__.py:294
+msgid "&Wi-fi connect/disconnect status notification:"
+msgstr ""
+
+#. Translators: An option in the wi-fi status notification combo box.
+#: addon\globalPlugins\resourceMonitor\__init__.py:296
+msgid "off"
+msgstr ""
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:296
+msgid "message"
+msgstr ""
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:296
+msgid "sound"
+msgstr ""
+
+#: addon\globalPlugins\resourceMonitor\__init__.py:296
+msgid "both"
+msgstr ""
+
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
-#: addon\globalPlugins\resourceMonitor\__init__.py:313
+#: addon\globalPlugins\resourceMonitor\__init__.py:337
 #, python-brace-format
 msgid "{winVersion} ({cpuBit}) build {build}"
 msgstr "{winVersion} ({cpuBit}) Build {build}"
 
 #. Translators: Input help mode message for entering the Resource Monitor command layer.
-#: addon\globalPlugins\resourceMonitor\__init__.py:415
+#: addon\globalPlugins\resourceMonitor\__init__.py:439
 msgid "Enter the Resource Monitor command layer."
 msgstr ""
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:436
+#: addon\globalPlugins\resourceMonitor\__init__.py:460
 msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
 msgstr ""
 
 #. Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:443
+#: addon\globalPlugins\resourceMonitor\__init__.py:467
 #, python-brace-format
 msgid "{ramPercent}% RAM used, CPU at {cpuPercent}%."
 msgstr "{ramPercent} Prozent Arbeitsspeicher verwendet, CPU-Auslastung bei {cpuPercent} Prozent."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:454
+#: addon\globalPlugins\resourceMonitor\__init__.py:478
 msgid "Presents the average processor load and the load of each core. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die durchschnittliche Prozessorauslastung und die Auslastung jedes einzelnen Kerns an. Bei zweimaligem Drücken werden die Informationen in die Zwischenablage kopiert."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:466
+#: addon\globalPlugins\resourceMonitor\__init__.py:490
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Kern {coreNumber}: {corePercent} Prozent"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:473
+#: addon\globalPlugins\resourceMonitor\__init__.py:497
 #, python-brace-format
 msgid "{avgLoad}% CPU load."
 msgstr "{avgLoad}% CPU-Auslastung."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:476
+#: addon\globalPlugins\resourceMonitor\__init__.py:500
 #, python-brace-format
 msgid "{avgLoad}% average CPU load, {cores}."
 msgstr "{avgLoad}% durchschnittliche CPU-Auslastung, {cores} Kerne."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:487
+#: addon\globalPlugins\resourceMonitor\__init__.py:511
 msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt den belegten und den gesamten Speicherplatz für den physischen und den virtuellen Arbeitsspeicher an. Bei zweimaligem Drücken werden die Informationen in die Zwischenablage kopiert."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:497
+#: addon\globalPlugins\resourceMonitor\__init__.py:521
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "Physikalisch: {physicalUsed} von {physicalTotal}, verwendet ({physicalPercent} Prozent). "
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:505
+#: addon\globalPlugins\resourceMonitor\__init__.py:529
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtueller Arbeitsspeicher: {virtualUsed} von {virtualTotal} verwendet ({virtualPercent} Prozent)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:518
+#: addon\globalPlugins\resourceMonitor\__init__.py:542
 msgid "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt den belegten und gesamten Speicherplatz von festen (integrierten), wechselbaren und verbundenen Netzlaufwerken auf diesem Computer an. Bei zweimaligem Drücken wird die Information in die Zwischenablage kopiert."
 
 #. Translators: Reported when a mapped network drive is currently unreachable.
-#: addon\globalPlugins\resourceMonitor\__init__.py:546
+#: addon\globalPlugins\resourceMonitor\__init__.py:570
 #, python-brace-format
 msgid "{driveName} (network drive): not available."
 msgstr "{driveName} (Netzlaufwerk) ist nicht verfügbar."
 
 #. Translators: word used to describe a mapped network drive.
-#: addon\globalPlugins\resourceMonitor\__init__.py:549
+#: addon\globalPlugins\resourceMonitor\__init__.py:573
 msgid "network"
 msgstr "Netzwerk"
 
 #. Translators: Shows drive letter, type of drive (fixed, removable, or network),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:554
+#: addon\globalPlugins\resourceMonitor\__init__.py:578
 #, python-brace-format
 msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
 msgstr "{driveName} ({driveType} Laufwerk): {usedSpace} von {totalSpace} verwendet ({percent}%)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:569
-#: addon\globalPlugins\resourceMonitor\__init__.py:580
+#: addon\globalPlugins\resourceMonitor\__init__.py:593
+#: addon\globalPlugins\resourceMonitor\__init__.py:604
 msgid "No wireless devices"
 msgstr "Keine drahtlosen Geräte"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:570
+#: addon\globalPlugins\resourceMonitor\__init__.py:594
 msgid "Unable to get wireless information"
 msgstr ""
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:582
+#: addon\globalPlugins\resourceMonitor\__init__.py:606
 msgid "No wireless connections"
 msgstr "Keine drahtlosen Verbindungen"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:605
+#: addon\globalPlugins\resourceMonitor\__init__.py:629
 #, python-brace-format
 msgid "Connected to {}, signal strength: {}%, security type: {}"
 msgstr "Verbunden mit {}, Signalstärke: {}%, Sicherheitstyp: {}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:623
+#: addon\globalPlugins\resourceMonitor\__init__.py:647
 msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
 msgstr "zeigt den WLAN-Namen (SSID), die Verbindungsstärke und das Sicherheitsprotokoll des Systems an. Bei zweimaligem Drücken werden die Informationen in die Zwischenablage kopiert."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:639
+#: addon\globalPlugins\resourceMonitor\__init__.py:663
 msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
 msgstr "zeigt die aktuell verwendete Windows-Version an. Wird die Taste zweimal schnell hintereinander gedrückt, wird diese Information in die Zwischenablage kopiert."
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:664
+#: addon\globalPlugins\resourceMonitor\__init__.py:688
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -197,7 +219,7 @@ msgstr[0] "{days:d} Tag"
 msgstr[1] "{days:d} Tage"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:668
+#: addon\globalPlugins\resourceMonitor\__init__.py:692
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -205,7 +227,7 @@ msgstr[0] "{hours:d} Stunde"
 msgstr[1] "{hours:d} Stunden"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:672
+#: addon\globalPlugins\resourceMonitor\__init__.py:696
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -213,68 +235,68 @@ msgstr[0] "{minutes:d} Minute"
 msgstr[1] "{minutes:d} Minuten"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:676
+#: addon\globalPlugins\resourceMonitor\__init__.py:700
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} Sekunde4"
 msgstr[1] "{seconds:d} Sekunden"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:683
+#: addon\globalPlugins\resourceMonitor\__init__.py:707
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die Systemlaufzeit des Systems an. Bei zweimaligem Drücken wird diese Information in die Zwischenablage kopiert."
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:698
+#: addon\globalPlugins\resourceMonitor\__init__.py:722
 msgid "Failed to get the system's uptime."
 msgstr "Fehler beim Abruf der Systemlaufzeit."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:714
+#: addon\globalPlugins\resourceMonitor\__init__.py:738
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}: Auslastung {usage}%, Temperatur {temperature}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:724
-#: addon\globalPlugins\resourceMonitor\__init__.py:781
+#: addon\globalPlugins\resourceMonitor\__init__.py:748
+#: addon\globalPlugins\resourceMonitor\__init__.py:805
 msgid "No GPU information available."
 msgstr "Keine GPU-Informationen verfügbar."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:726
+#: addon\globalPlugins\resourceMonitor\__init__.py:750
 msgid "Unable to get GPU information."
 msgstr "GPU-Informationen können nicht abgerufen werden."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:727
-#: addon\globalPlugins\resourceMonitor\__init__.py:784
+#: addon\globalPlugins\resourceMonitor\__init__.py:751
+#: addon\globalPlugins\resourceMonitor\__init__.py:808
 msgid "No GPU data available."
 msgstr "Keine GPU-Daten verfügbar."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:732
+#: addon\globalPlugins\resourceMonitor\__init__.py:756
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die GPU-Auslastung und -Temperatur an. Bei zweimaligem Drücken werden diese Informationen in die Zwischenablage kopiert."
 
 #. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:747
+#: addon\globalPlugins\resourceMonitor\__init__.py:771
 msgid "Failed to get GPU information."
 msgstr "GPU-Informationen konnten nicht abgerufen werden."
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:772
+#: addon\globalPlugins\resourceMonitor\__init__.py:796
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr "GPU {gpuNumber}: {memoryInfo}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:783
+#: addon\globalPlugins\resourceMonitor\__init__.py:807
 msgid "Unable to get GPU memory information."
 msgstr "Informationen zum GPU-Speicher können nicht abgerufen werden."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:789
+#: addon\globalPlugins\resourceMonitor\__init__.py:813
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die GPU-Speichernutzung an. Bei zweimaligem Drücken wird die Information in die Zwischenablage kopiert."
 
 #. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:804
+#: addon\globalPlugins\resourceMonitor\__init__.py:828
 msgid "Failed to get GPU memory information."
 msgstr "Informationen zum GPU-Speicher konnten nicht abgerufen werden."
 
@@ -288,6 +310,8 @@ msgstr "Ein praktischer Ressourcenmonitor, der CPU-Auslastung, Arbeitsspeicherbe
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2026.1 (64-bit) or later is required."
+msgid "* NVDA 2026.1 (64-bit) or later is required.\n"
+"* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).\n"
+"* NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release."
 msgstr ""
 

@@ -24,7 +24,7 @@
 
 Командите за ресурси поддържат слоя активен, за да могат да се повтарят. Натиснете Escape, за да излезете от слоя; неназначена команда излиза от слоя и се предава към активното приложение.
 
-С цел ограничена обратна съвместимост, предишните клавишни команди за ресурси NVDA+Shift+1 до NVDA+Shift+7 остават налични:
+For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available (these commands are planned to be removed in a future add-on version):
 
 * NVDA+Shift+1: Централен процесор
 * NVDA+Shift+2/5: memory (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed)
@@ -43,7 +43,7 @@
 * Информацията за ресурсите не може да се копира в клипборда, ако добавката се изпълнява в защитени екрани.
 * Натовареността на централния процесор се посочва за логическите процесори, а не за физическите ядра. Това е забележимо при процесори използващи Hyper-Threading, където броят на централните процесори е два пъти повече от броя на процесорните ядра. На някои по-нови компютри не всички процесорни ядра ще имат включен Hyper-Threading.
 * Ако се извършва интензивна дискова дейност (като например копиране на големи файлове или докато се търси за мрежови устройства), може да има забавяне при получаване на информация за използването на диска.
-* NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks.
+* NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks. See the next section on how to change this behavior.
 * Информация за графичния процесор (GPU) се предоставя за графични процесори на Nvidia.
 * При съобщаване на информация за архитектурата на процесора като част от докладването на версията на Windows, „AMD64“ се отнася за 64-битови (x64) процесори Intel и AMD. Тази информация не се отнася до името на действително използвания процесор.
 * Инсталирането на добавката на Windows 10/11 LTSC (канал за дългосрочно обслужване) не се поддържа.
@@ -52,7 +52,8 @@
 
 You can configure the following resource usage reporting options from NVDA settings screen under Resource Monitor category:
 
-* GPU temperature unit: select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
+* GPU temperature unit: Select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
+* Wi-fi connect/disconnect notification: Select how NVDA should report wi-fi connect/disconnect notifications (off, message, sound, both message and sound).
 
 За списък с промените, направени между отделните издания на добавката, прегледайте документа със [списъка с промените][1].
 
