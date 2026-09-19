@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-18 20:40+0000\n"
-"PO-Revision-Date: 2026-09-18 20:43\n"
+"POT-Creation-Date: 2026-09-19 06:05+0000\n"
+"PO-Revision-Date: 2026-09-19 06:07\n"
 "Last-Translator: \n"
 "Language-Team: Kurmanji (Kurdish)\n"
 "Language: kmr_TR\n"
@@ -56,7 +56,7 @@ msgid "{used} of {total} used ({percent}%)"
 msgstr "{used} ji {total} hatine bikaranîn ({percent}%)"
 
 #. Translators: Category title for Resource Monitor settings in NVDA's settings dialog.
-#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Translators: The gestures category for this add-on in input gestures dialog.
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
