@@ -23,7 +23,7 @@ addon_info = AddonInfo(
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	addon_description=_("A handy resource monitor to report CPU load, memory usage, disk usage status and more."),
 	# version
-	addon_version="26.09.3",
+	addon_version="26.09.4",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).
