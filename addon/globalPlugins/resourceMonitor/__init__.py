@@ -341,7 +341,7 @@ def getWinVer() -> str:
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	# Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+	# Translators: The gestures category for this add-on in input gestures dialog.
 	scriptCategory = _("Resource Monitor")
 	_layerEntryGesture = "kb:NVDA+shift+e"
 	__layerGestures: ClassVar = {
