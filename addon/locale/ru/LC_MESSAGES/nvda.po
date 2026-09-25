@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-19 06:05+0000\n"
-"PO-Revision-Date: 2026-09-19 06:08\n"
+"POT-Creation-Date: 2026-09-25 21:22+0000\n"
+"PO-Revision-Date: 2026-09-25 21:24\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -83,24 +83,24 @@ msgstr "Градусы Фаренгейта"
 #. Translators: Label for a combo box to select the wi-fi status notification.
 #: addon\globalPlugins\resourceMonitor\__init__.py:294
 msgid "&Wi-fi connect/disconnect status notification:"
-msgstr ""
+msgstr "Уведомление о состоянии подключения/отключения &Wi-Fi:"
 
 #. Translators: An option in the wi-fi status notification combo box.
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "off"
-msgstr ""
+msgstr "выключено"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "message"
-msgstr ""
+msgstr "сообщение"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "sound"
-msgstr ""
+msgstr "звук"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "both"
-msgstr ""
+msgstr "оба"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #: addon\globalPlugins\resourceMonitor\__init__.py:337
@@ -320,5 +320,7 @@ msgstr "Удобный монитор ресурсов, который позв�
 msgid "* NVDA 2026.1 (64-bit) or later is required.\n"
 "* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).\n"
 "* NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release."
-msgstr ""
+msgstr "* Требуется NVDA 2026.1 (64-бит) или выше.\n"
+"* Добавлена дополнительная настройка для определения способа уведомления о подключении/отключении Wi-Fi (выключено, сообщение, звук, сообщение и звук (по умолчанию)).\n"
+"* Сочетания клавиш NVDA+Shift+цифры основного ряда, используемые для оповещения об использовании отдельных ресурсов, устарели и будут удалены в будущих версиях дополнения."
 

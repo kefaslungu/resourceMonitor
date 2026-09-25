@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-19 06:05+0000\n"
-"PO-Revision-Date: 2026-09-19 06:08\n"
+"POT-Creation-Date: 2026-09-25 21:22+0000\n"
+"PO-Revision-Date: 2026-09-25 21:25\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -83,24 +83,24 @@ msgstr "Fahrenheit"
 #. Translators: Label for a combo box to select the wi-fi status notification.
 #: addon\globalPlugins\resourceMonitor\__init__.py:294
 msgid "&Wi-fi connect/disconnect status notification:"
-msgstr ""
+msgstr "&Wi-Fi bağlanma/bağlantı kesme durum bildirimi:"
 
 #. Translators: An option in the wi-fi status notification combo box.
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "off"
-msgstr ""
+msgstr "kapalı"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "message"
-msgstr ""
+msgstr "bildirim"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "sound"
-msgstr ""
+msgstr "ses"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "both"
-msgstr ""
+msgstr "her ikiside"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #: addon\globalPlugins\resourceMonitor\__init__.py:337
@@ -312,5 +312,7 @@ msgstr "CPU yükünü, bellek kullanımını, disk kullanım durumunu ve daha fa
 msgid "* NVDA 2026.1 (64-bit) or later is required.\n"
 "* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).\n"
 "* NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release."
-msgstr ""
+msgstr "* NVDA 2026.1 (64-bit) veya daha yeni bir sürüm gereklidir.\n"
+"* Wi-Fi bağlanma/bağlantı kesme bildirim yöntemini yapılandırmak için ek bir ayar eklendi (kapalı, bildirim, ses, hem bildirim hem ses (varsayılan)).\n"
+"* Tek tek kaynak kullanım bilgilerini sesli olarak bildirmek için kullanılan NVDA+Shift+sayı satırı komutları artık kullanılmamaktadır ve gelecek bir eklenti sürümünde kaldırılacaktır."
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-19 06:05+0000\n"
-"PO-Revision-Date: 2026-09-19 06:08\n"
+"POT-Creation-Date: 2026-09-25 21:22+0000\n"
+"PO-Revision-Date: 2026-09-25 21:25\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -83,24 +83,24 @@ msgstr "Fahrenheit"
 #. Translators: Label for a combo box to select the wi-fi status notification.
 #: addon\globalPlugins\resourceMonitor\__init__.py:294
 msgid "&Wi-fi connect/disconnect status notification:"
-msgstr ""
+msgstr "&Thông báo trạng thái kết nối/ngắt kết nối wi-fi:"
 
 #. Translators: An option in the wi-fi status notification combo box.
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "off"
-msgstr ""
+msgstr "tắt"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "message"
-msgstr ""
+msgstr "tin nhắn"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "sound"
-msgstr ""
+msgstr "âm thanh"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "both"
-msgstr ""
+msgstr "cả hai"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #: addon\globalPlugins\resourceMonitor\__init__.py:337
@@ -308,5 +308,7 @@ msgstr "Một tiện ích theo dõi tài nguyên để báo cáo tải CPU, mứ
 msgid "* NVDA 2026.1 (64-bit) or later is required.\n"
 "* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).\n"
 "* NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release."
-msgstr ""
+msgstr "* Yêu cầu NVDA 2026.1 (64-bit) trở lên.\n"
+"* Thêm tùy chọn cấu hình phương thức thông báo kết nối/ngắt kết nối Wi-Fi (tắt, tin nhắn, âm thanh, cả tin nhắn và âm thanh (mặc định)).\n"
+"* Các lệnh NVDA+Shift+số hàng được sử dụng để thông báo thông tin sử dụng tài nguyên riêng lẻ đã lỗi thời và sẽ bị loại bỏ trong bản phát hành tiện ích bổ sung trong tương lai."
 

@@ -24,7 +24,7 @@ Aşağıdaki katman komutları, bireysel kaynak kullanım bilgilerini elde etmek
 
 Kaynak komutları, katmanı aktif tutar; böylece bu komutlar tekrar edilebilir. Katmandan çıkmak için Escape tuşuna basın; atanmamış bir tuş, aktif uygulamadan geçirilerek çıkışı sağlar.
 
-For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available (these commands are planned to be removed in a future add-on version):
+Sınırlı geriye dönük uyumluluk için, önceki NVDA+Shift+1 ile NVDA+Shift+7 kaynak kısayolları kullanılabilir durumda bırakıldı (bu komutların gelecekteki bir eklenti sürümünde kaldırılması planlanmaktadır):
 
 * NVDA+Shift+1: CPU
 * NVDA+Shift+2/5: hafıza (NVDA+Shift+5, NVDA+Shift+2 tuş kombinasyonu kullanılamadığında alternatif bir tuş kombinasyonudur)
@@ -43,7 +43,7 @@ Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka uygulamalar�
 * Eklenti güvenli ekranlarda çalıştırılıyorsa kaynak bilgileri panoya kopyalanamaz.
 * CPU kullanımı, fiziksel çekirdekler için değil, mantıksal işlemciler için verilmektedir. Bu durum, CPU sayısının CPU çekirdek sayısının iki katı olduğu Hyper-Threading özelliğine sahip işlemcilerde fark edilir. Bazı yeni bilgisayarlarda, tüm CPU çekirdeklerinde Hyper-Threading etkinleştirilmemiş olabilir.
 * Büyük dosyaların kopyalanması veya ağ sürücülerinin bulunması gibi yoğun disk etkinliği söz konusu olduğunda, disk kullanım bilgilerinin alınmasında gecikmeler yaşanabilir.
-* NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks. See the next section on how to change this behavior.
+* NVDA, kablosuz ağlara bağlanırken veya bağlantıyı keserken bir ses çıkaracak ve bir mesaj bildirecektir. Bu davranışı nasıl değiştireceğinizi bir sonraki bölümde görebilirsiniz.
 * Nvidia GPU'larına ait GPU bilgileri verilmiştir.
 * Windows sürüm raporlamasında işlemci mimarisi bilgisi açıklanırken, "AMD64" 64-bit (x64) Intel ve AMD işlemcilerini ifade eder. Bu bilgi, kullanılan gerçek işlemcinin adını ifade etmez.
 * Eklentinin Windows 10/11 LTSC'ye yüklenmesi desteklenmemektedir.
@@ -52,8 +52,8 @@ Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka uygulamalar�
 
 NVDA Menüsü/Tercihler/Ayarlar iletişim kutusunda Kaynak İzleme kategorisi altında aşağıdaki kaynak kullanım bildirme seçeneklerini yapılandırabilirsiniz:
 
-* GPU temperature unit: Select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
-* Wi-fi connect/disconnect notification: Select how NVDA should report wi-fi connect/disconnect notifications (off, message, sound, both message and sound).
+* GPU sıcaklık birimi: GPU bilgileri kapsamında bildirilen sıcaklık birimini seçin (Santigrat veya Fahrenheit).
+* Wi-Fi bağlanma/kesilme bildirimi: NVDA'nın Wi-Fi bağlantı/kesme bildirimlerini nasıl bildirmesi gerektiğini seçin (kapalı, mesaj, ses, hem mesaj hem ses).
 
 Her eklenti sürümü arasında yapılan değişikliklerin listesi için [eklenti sürümleri için changelogs][1] belgesine bakın.
 
