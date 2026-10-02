@@ -24,7 +24,7 @@
 
 资源命令层会保持激活状态，以便重复执行。按 Esc 键退出命令层；未映射的按键将退出命令层并传递给当前活动的应用程序。
 
-For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available (these commands are planned to be removed in a future add-on version):
+为了保持有限的向后兼容性，之前的 NVDA+Shift+1 到 NVDA+Shift+7 资源快捷键仍然可用（这些命令计划在未来的插件版本中移除）：
 
 * NVDA+Shift+1：CPU
 * NVDA+Shift+2/5：内存（当 NVDA+Shift+2 这一组合键无法执行时，可使用 NVDA+Shift+5 作为替代）
@@ -43,7 +43,7 @@ For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift
 * 在安全界面运行插件时，无法将资源信息复制到剪贴板。
 * 给出的 CPU 使用情况是针对逻辑处理器而非物理核心。这对于使用超线程的处理器来说是显而易见的，其中 CPU 数量通常是 CPU 核心数量的两倍。在一些较新的计算机上，并非所有 CPU 核心都启用了超线程。
 * 如果存在大量磁盘活动，例如复制大文件或查找网络驱动器，则在获取磁盘使用情况信息时可能会出现延迟。
-* NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks. See the next section on how to change this behavior.
+* NVDA会在连接或断开无线网络时发出声音并显示消息。有关如何更改此行为，请参阅下一节。
 * GPU 信息仅适用于英伟达 GPU。
 * 读出 Windows 版本时给出的处理器架构信息中的“AMD64”是指 64 位（x64）的 Intel 和 AMD 处理器。此信息并非指当前使用的实际处理器名称。
 * 不支持在 Windows 10/11 LTSC 上安装本插件。
@@ -52,8 +52,8 @@ For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift
 
 您可在 NVDA 设置对话框的“资源监控器”类别配置朗读以下资源使用情况的选项：
 
-* GPU temperature unit: Select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
-* Wi-fi connect/disconnect notification: Select how NVDA should report wi-fi connect/disconnect notifications (off, message, sound, both message and sound).
+* GPU 温度单位：选择作为 GPU 信息一部分朗读的温度单位（摄氏度或华氏度）。
+* 连接或断开无线网络时通知：选择当无线网络连接/断开时，NVDA 如何给出提示（关闭、消息、声音、消息和声音）。
 
 有关每个插件版本之间的所做更改，请参阅[插件更新日志（英语）][1]文档。
 
