@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-19 06:05+0000\n"
-"PO-Revision-Date: 2026-09-19 06:07\n"
+"POT-Creation-Date: 2026-09-25 21:22+0000\n"
+"PO-Revision-Date: 2026-09-27 09:27\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -83,24 +83,24 @@ msgstr "华氏度"
 #. Translators: Label for a combo box to select the wi-fi status notification.
 #: addon\globalPlugins\resourceMonitor\__init__.py:294
 msgid "&Wi-fi connect/disconnect status notification:"
-msgstr ""
+msgstr "连接或断开无线网络时通知(&W)："
 
 #. Translators: An option in the wi-fi status notification combo box.
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "off"
-msgstr ""
+msgstr "关闭"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "message"
-msgstr ""
+msgstr "消息"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "sound"
-msgstr ""
+msgstr "声音"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:296
 msgid "both"
-msgstr ""
+msgstr "消息和声音"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #: addon\globalPlugins\resourceMonitor\__init__.py:337
@@ -305,6 +305,8 @@ msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存�
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Introduced Resource Monitor layer commands with overall resource usage command (NVDA+Shift+E) as layer entry command. Layer commands include C (CPU), D (disks), G (GPU)/Shift+G (GPU memory), M (memory/RAM), O (operating system/Windows version), U (system uptime), and W (wi-fi). Press NVDA+Shift+E then Space for overall resource usage information, and Escape to exit the layer. The individual resource usage commands (NVDA+Shift+number row 1 through 7) are kept for limited backward compatibility (contributed by cary-rowen)."
-msgstr ""
+msgid "* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).\n"
+"* NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release."
+msgstr "* 新增插件设置，用于配置连接/断开无线网络时的通知方式（关闭、消息、声音、消息和声音（默认））。\n"
+"* 用于读出单个资源使用情况信息的 NVDA+Shift+数字命令已弃用，将在未来的插件版本中移除。"
 
