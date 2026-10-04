@@ -44,19 +44,26 @@ MODULE_DIR = os.path.dirname(__file__)
 # Register this add-on's settings with NVDA's configuration system.
 # The below path is taken if this is NVDA 2026.2 and earlier or the add-on confspec was not registered.
 # NVDA 2026.3 introduces dedicated register/unregister functions and can be invoked from installTasks module.
-if not "resourceMonitor" in config.conf.spec:
-	confspec = {
-		"gpuTempUnit": "string(default=celsius)",
-		"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",
-	}
+confspec = {
+	"gpuTempUnit": "string(default=celsius)",
+	"memorySizeUnit": "string(default=alternative)",
+	"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",
+}
+# NVDA 2026.3 registers the confspec via installTasks.onInstall before the plugin loads.
+# For older NVDA versions, register it here. If the section already exists (upgrade scenario),
+# merge any missing keys so new settings are not silently absent.
+if "resourceMonitor" not in config.conf.spec:
 	config.conf.spec["resourceMonitor"] = confspec
+else:
+	config.conf.spec["resourceMonitor"].update(confspec)
 
 # Play a message and/or a sound.
 # This is mostly used for wi-fi status.
 def message(text: str, fileName: str) -> None:
-	if config.conf["resourceMonitor"]["wifiStatusNotification"] in ("message", "both"):
+	wifiNotification = config.conf["resourceMonitor"].get("wifiStatusNotification", "both")
+	if wifiNotification in ("message", "both"):
 		ui.message(text)
-	if config.conf["resourceMonitor"]["wifiStatusNotification"] in ("sound", "both"):
+	if wifiNotification in ("sound", "both"):
 		path = os.path.join(MODULE_DIR, fileName)
 		if os.path.exists(path):
 			winsound.PlaySound(path, winsound.SND_ASYNC)
@@ -207,7 +214,23 @@ si = [
 ]
 
 
-def size(bytes: int| float, system: list[tuple[float, Any]] = traditional) -> str:
+_SIZE_SYSTEMS: dict[str, list[tuple[float, Any]]] = {
+	"traditional": traditional,
+	"alternative": alternative,
+	"verbose": verbose,
+	"iec": iec,
+	"si": si,
+}
+
+
+def _getMemorySizeSystem() -> list[tuple[float, Any]]:
+	return _SIZE_SYSTEMS.get(
+		config.conf["resourceMonitor"].get("memorySizeUnit", "alternative"),
+		alternative,
+	)
+
+
+def size(bytes: float, system: list[tuple[float, Any]] = traditional) -> str:
 	for factor, suffix in system:
 		if float(bytes) >= float(factor):
 			break
@@ -237,7 +260,7 @@ def formatGpuTemperature(celsiusText: str) -> str:
 		celsius = float(celsiusText)
 	except (TypeError, ValueError):
 		return celsiusText
-	unit = config.conf["resourceMonitor"]["gpuTempUnit"]
+	unit = config.conf["resourceMonitor"].get("gpuTempUnit", "celsius")
 	if unit == "fahrenheit":
 		value = celsius * 9.0 / 5.0 + 32.0
 		# Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
@@ -262,8 +285,8 @@ def formatGpuMemory(usedMibText: str, totalMibText: str) -> str | None:
 	totalBytes = totalMib * 1024.0 * 1024.0
 	# Translators: Shows GPU memory usage (example: 2.00 GB of 8.00 GB used (25%)).
 	return _("{used} of {total} used ({percent}%)").format(
-		used=size(usedBytes, alternative),
-		total=size(totalBytes, alternative),
+		used=size(usedBytes, _getMemorySizeSystem()),
+		total=size(totalBytes, _getMemorySizeSystem()),
 		percent=tryTrunk(round(usedBytes / totalBytes * 100, 1)),
 	)
 
@@ -285,7 +308,9 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 			choices=self._gpuTempUnitLabels,
 		)
 		try:
-			currentIndex = self._gpuTempUnitValues.index(config.conf["resourceMonitor"]["gpuTempUnit"])
+			currentIndex = self._gpuTempUnitValues.index(
+				config.conf["resourceMonitor"].get("gpuTempUnit", "celsius")
+			)
 		except ValueError:
 			currentIndex = 0
 		self.gpuTempUnitList.SetSelection(currentIndex)
@@ -293,7 +318,7 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 		# Translators: Label for a combo box to select the wi-fi status notification.
 		wifiStatusNotificationLabelText = _("&Wi-fi connect/disconnect status notification:")
 		# Translators: An option in the wi-fi status notification combo box.
-		self._wifiStatusNotificationLabels = [_("off"), _("message"), _("sound"), _("both")]
+		self._wifiStatusNotificationLabels = [_("off"), _("message"), _("sound"), _("message and sound")]
 		self._wifiStatusNotificationValues = ["off", "message", "sound", "both"]
 		self.wifiStatusNotificationList = settingsSizerHelper.addLabeledControl(
 			wifiStatusNotificationLabelText,
@@ -301,10 +326,40 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 			choices=self._wifiStatusNotificationLabels,
 		)
 		try:
-			currentIndex = self._wifiStatusNotificationValues.index(config.conf["resourceMonitor"]["wifiStatusNotification"])
+			currentIndex = self._wifiStatusNotificationValues.index(
+				config.conf["resourceMonitor"].get("wifiStatusNotification", "both")
+			)
 		except ValueError:
-			currentIndex = 0
+			currentIndex = 3  # default is "both"
 		self.wifiStatusNotificationList.SetSelection(currentIndex)
+
+		# Translators: Label for a combo box to select the notation style used to report memory and disk sizes.
+		memorySizeUnitLabelText = _("Memory and disk size &notation:")
+		self._memorySizeUnitLabels = [
+			# Translators: Traditional binary size notation (example: 1K, 1M, 1G).
+			_("Traditional (K, M, G)"),
+			# Translators: Alternative binary size notation with unit suffix (example: 1 KB, 1 MB, 1 GB).
+			_("Alternative (KB, MB, GB)"),
+			# Translators: Verbose size notation with full unit names (example: 1 kilobyte, 1 megabyte).
+			_("Verbose (kilobytes, megabytes)"),
+			# Translators: IEC binary size notation (example: 1Ki, 1Mi, 1Gi).
+			_("IEC (Ki, Mi, Gi)"),
+			# Translators: SI decimal size notation where 1 KB = 1000 bytes (example: 1K, 1M, 1G).
+			_("SI decimal (K, M, G)"),
+		]
+		self._memorySizeUnitValues = ["traditional", "alternative", "verbose", "iec", "si"]
+		self.memorySizeUnitList = settingsSizerHelper.addLabeledControl(
+			memorySizeUnitLabelText,
+			wx.Choice,
+			choices=self._memorySizeUnitLabels,
+		)
+		try:
+			currentIndex = self._memorySizeUnitValues.index(
+				config.conf["resourceMonitor"].get("memorySizeUnit", "alternative")
+			)
+		except ValueError:
+			currentIndex = 1  # alternative is the default
+		self.memorySizeUnitList.SetSelection(currentIndex)
 
 	def onSave(self) -> None:
 		selection = self.gpuTempUnitList.GetSelection()
@@ -313,8 +368,12 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 		config.conf["resourceMonitor"]["gpuTempUnit"] = self._gpuTempUnitValues[selection]
 		selection = self.wifiStatusNotificationList.GetSelection()
 		if selection == wx.NOT_FOUND:
-			selection = 0
+			selection = 3  # default is "both"
 		config.conf["resourceMonitor"]["wifiStatusNotification"] = self._wifiStatusNotificationValues[selection]
+		selection = self.memorySizeUnitList.GetSelection()
+		if selection == wx.NOT_FOUND:
+			selection = 1  # default is "alternative"
+		config.conf["resourceMonitor"]["memorySizeUnit"] = self._memorySizeUnitValues[selection]
 
 
 @functools.lru_cache(maxsize=1)
@@ -517,18 +576,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_announceRamInfo(self, gesture: inputCore.InputGesture):
 		memory = psutil.virtual_memory()
 		physicalRamUsed, physicalRamTotal = memory.used, memory.total
+		memorySizeSystem = _getMemorySizeSystem()
 		# Translators: Shows RAM (physical memory) usage.
 		info = _("Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). ").format(
-			physicalUsed=size(physicalRamUsed, alternative),
-			physicalTotal=size(physicalRamTotal, alternative),
+			physicalUsed=size(physicalRamUsed, memorySizeSystem),
+			physicalTotal=size(physicalRamTotal, memorySizeSystem),
 			physicalPercent=tryTrunk(round(physicalRamUsed / physicalRamTotal * 100, 1)),
 		)
 		virtualMemory = psutil._psutil_windows.virtual_mem()
 		virtualRamUsed, virtualRamTotal = virtualMemory[2] - virtualMemory[3], virtualMemory[2]
 		# Translators: Shows virtual memory usage.
 		info += _("Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%).").format(
-			virtualUsed=size(virtualRamUsed, alternative),
-			virtualTotal=size(virtualRamTotal, alternative),
+			virtualUsed=size(virtualRamUsed, memorySizeSystem),
+			virtualTotal=size(virtualRamTotal, memorySizeSystem),
 			virtualPercent=tryTrunk(round(virtualRamUsed / virtualRamTotal * 100, 1)),
 		)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -550,6 +610,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# psutil.disk_partitions() defaults to all=False, which silently excludes mapped network
 		# drives on Windows (they're not considered "physical" devices). Passing all=True brings
 		# them back in.
+		memorySizeSystem = _getMemorySizeSystem()
 		info = []
 		for drive in psutil.disk_partitions(all=True):
 			# Get info on each one.
@@ -578,8 +639,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%).").format(
 					driveName=drive[0],
 					driveType=driveType,
-					usedSpace=size(driveInfo[1], alternative),
-					totalSpace=size(driveInfo[0], alternative),
+					usedSpace=size(driveInfo[1], memorySizeSystem),
+					totalSpace=size(driveInfo[0], memorySizeSystem),
 					percent=tryTrunk(driveInfo[3]),
 				)
 			)
