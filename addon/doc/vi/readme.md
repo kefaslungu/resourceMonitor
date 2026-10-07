@@ -54,6 +54,7 @@ Bạn có thể cấu hình các tùy chọn báo cáo sử dụng tài nguyên 
 
 * Đơn vị đo nhiệt độ GPU: Chọn đơn vị đo nhiệt độ được hiển thị trong thông tin GPU (độ C hoặc độ F).
 * Thông báo kết nối/ngắt kết nối Wi-Fi: Chọn cách NVDA sẽ thông báo các thông báo kết nối/ngắt kết nối Wi-Fi (tắt, tin nhắn, âm thanh, cả tin nhắn và âm thanh).
+* Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes adn terabytes are reported (defulat is the alternative method (KB/MB/...).
 
 Để biết danh sách các thay đổi được thực hiện giữa mỗi bản phát hành tiện ích bổ sung, hãy tham khảo tài liệu [thay đổi cho bản phát hành của tiện ích bổ sung][1].
 
