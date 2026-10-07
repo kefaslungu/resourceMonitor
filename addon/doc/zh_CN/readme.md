@@ -54,6 +54,7 @@
 
 * GPU 温度单位：选择作为 GPU 信息一部分朗读的温度单位（摄氏度或华氏度）。
 * 连接或断开无线网络时通知：选择当无线网络连接/断开时，NVDA 如何给出提示（关闭、消息、声音、消息和声音）。
+* Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes adn terabytes are reported (defulat is the alternative method (KB/MB/...).
 
 有关每个插件版本之间的所做更改，请参阅[插件更新日志（英语）][1]文档。
 
