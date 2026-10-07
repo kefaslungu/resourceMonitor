@@ -2,6 +2,12 @@
 
 This page lists the complete changelog for Resource Monitor add-on releases.
 
+## Version 26.10.2
+
+* Added memory and disk size notation setting to configure how NVDA announces RAM and disk usage/size unit (default is alternative (kb/mb/...).
+* Improved reliability of add-on settings upgrade process.
+* The default value for wi-fi notification setting is now "both" instead of "off".
+
 ## Version 26.10
 
 * NVDA 2026.1 (64-bit) or later is required.
