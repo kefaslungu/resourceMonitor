@@ -54,6 +54,7 @@ You can configure the following resource usage reporting options from NVDA setti
 
 * GPU temperature unit: Select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
 * Wi-fi connect/disconnect notification: Select how NVDA should report wi-fi connect/disconnect notifications (off, message, sound, both message and sound).
+* Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes adn terabytes are reported (defulat is the alternative method (KB/MB/...).
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
 
