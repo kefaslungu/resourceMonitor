@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-07 02:25+0000\n"
-"PO-Revision-Date: 2026-10-07 02:26\n"
+"POT-Creation-Date: 2026-10-08 01:59+0000\n"
+"PO-Revision-Date: 2026-10-08 02:02\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -100,37 +100,37 @@ msgstr "ses"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:321
 msgid "message and sound"
-msgstr ""
+msgstr "bildirim ve ses"
 
 #. Translators: Label for a combo box to select the notation style used to report memory and disk sizes.
 #: addon\globalPlugins\resourceMonitor\__init__.py:337
 msgid "Memory and disk size &notation:"
-msgstr ""
+msgstr "Bellek ve disk boyutu g&österimi:"
 
 #. Translators: Traditional binary size notation (example: 1K, 1M, 1G).
 #: addon\globalPlugins\resourceMonitor\__init__.py:340
 msgid "Traditional (K, M, G)"
-msgstr ""
+msgstr "Geleneksel (K, M, G)"
 
 #. Translators: Alternative binary size notation with unit suffix (example: 1 KB, 1 MB, 1 GB).
 #: addon\globalPlugins\resourceMonitor\__init__.py:342
 msgid "Alternative (KB, MB, GB)"
-msgstr ""
+msgstr "Alternatif (KB, MB, GB)"
 
 #. Translators: Verbose size notation with full unit names (example: 1 kilobyte, 1 megabyte).
 #: addon\globalPlugins\resourceMonitor\__init__.py:344
 msgid "Verbose (kilobytes, megabytes)"
-msgstr ""
+msgstr "Ayrıntılı (kilobayt, megabayt)"
 
 #. Translators: IEC binary size notation (example: 1Ki, 1Mi, 1Gi).
 #: addon\globalPlugins\resourceMonitor\__init__.py:346
 msgid "IEC (Ki, Mi, Gi)"
-msgstr ""
+msgstr "IEC (Ki, Mi, Gi)"
 
 #. Translators: SI decimal size notation where 1 KB = 1000 bytes (example: 1K, 1M, 1G).
 #: addon\globalPlugins\resourceMonitor\__init__.py:348
 msgid "SI decimal (K, M, G)"
-msgstr ""
+msgstr "SI ondalık sistemi (K, M, G)"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #: addon\globalPlugins\resourceMonitor\__init__.py:396
@@ -340,8 +340,6 @@ msgstr "CPU yükünü, bellek kullanımını, disk kullanım durumunu ve daha fa
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.1 (64-bit) or later is required.\n"
-"* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).\n"
-"* NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release.\n"
 "* Added memory and disk size notation setting to configure how NVDA announces RAM and disk usage/size unit (default is alternative (kb/mb/...).\n"
 "* Improved reliability of add-on settings upgrade process.\n"
 "* The default value for wi-fi notification setting is now 'both' instead of 'off'."
