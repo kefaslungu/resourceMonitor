@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-10-08 01:59+0000\n"
-"PO-Revision-Date: 2026-10-08 02:02\n"
+"PO-Revision-Date: 2026-10-08 16:44\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -64,7 +64,7 @@ msgstr "{used} из {total} используется ({percent}%)"
 #: addon\globalPlugins\resourceMonitor\__init__.py:404
 #: addon\globalPlugins\resourceMonitor\__init__.py:508 buildVars.py:21
 msgid "Resource Monitor"
-msgstr "Resource Monitor"
+msgstr "Монитор ресурсов"
 
 #. Translators: Label for a combo box to select the unit used to report GPU temperature.
 #: addon\globalPlugins\resourceMonitor\__init__.py:301
@@ -141,7 +141,7 @@ msgstr "{winVersion} ({cpuBit}) сборка {build}"
 #. Translators: Input help mode message for entering the Resource Monitor command layer.
 #: addon\globalPlugins\resourceMonitor\__init__.py:498
 msgid "Enter the Resource Monitor command layer."
-msgstr "Введите ступенчатую команду Монитора ресурсов."
+msgstr "Входит в уровень команд монитора ресурсов."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:519
 msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
@@ -351,5 +351,8 @@ msgid "* NVDA 2026.1 (64-bit) or later is required.\n"
 "* Added memory and disk size notation setting to configure how NVDA announces RAM and disk usage/size unit (default is alternative (kb/mb/...).\n"
 "* Improved reliability of add-on settings upgrade process.\n"
 "* The default value for wi-fi notification setting is now 'both' instead of 'off'."
-msgstr ""
+msgstr "* Требуется NVDA 2026.1 (64-бит) или выше.\n"
+"* Добавлен параметр обозначения размера памяти и диска для настройки того, как NVDA объявляет единицу измерения использования/размера ОЗУ и диска (по умолчанию используется альтернативный вариант (кБ/МБ/...).\n"
+"* Повышена надёжность процесса обновления настроек дополнения.\n"
+"* Теперь значение по умолчанию для уведомления Wi-Fi — 'сообщение и звук', а не 'выключено'."
 
