@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-07 02:25+0000\n"
-"PO-Revision-Date: 2026-10-07 02:26\n"
+"POT-Creation-Date: 2026-10-08 01:59+0000\n"
+"PO-Revision-Date: 2026-10-08 16:44\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -64,7 +64,7 @@ msgstr "{used} из {total} используется ({percent}%)"
 #: addon\globalPlugins\resourceMonitor\__init__.py:404
 #: addon\globalPlugins\resourceMonitor\__init__.py:508 buildVars.py:21
 msgid "Resource Monitor"
-msgstr "Resource Monitor"
+msgstr "Монитор ресурсов"
 
 #. Translators: Label for a combo box to select the unit used to report GPU temperature.
 #: addon\globalPlugins\resourceMonitor\__init__.py:301
@@ -100,37 +100,37 @@ msgstr "звук"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:321
 msgid "message and sound"
-msgstr ""
+msgstr "сообщение и звук"
 
 #. Translators: Label for a combo box to select the notation style used to report memory and disk sizes.
 #: addon\globalPlugins\resourceMonitor\__init__.py:337
 msgid "Memory and disk size &notation:"
-msgstr ""
+msgstr "Обо&значения размера памяти и диска:"
 
 #. Translators: Traditional binary size notation (example: 1K, 1M, 1G).
 #: addon\globalPlugins\resourceMonitor\__init__.py:340
 msgid "Traditional (K, M, G)"
-msgstr ""
+msgstr "Традиционно (К, М, Г)"
 
 #. Translators: Alternative binary size notation with unit suffix (example: 1 KB, 1 MB, 1 GB).
 #: addon\globalPlugins\resourceMonitor\__init__.py:342
 msgid "Alternative (KB, MB, GB)"
-msgstr ""
+msgstr "Альтернативно (КБ, МБ, ГБ)"
 
 #. Translators: Verbose size notation with full unit names (example: 1 kilobyte, 1 megabyte).
 #: addon\globalPlugins\resourceMonitor\__init__.py:344
 msgid "Verbose (kilobytes, megabytes)"
-msgstr ""
+msgstr "Многословно (килобайты, мегабайты)"
 
 #. Translators: IEC binary size notation (example: 1Ki, 1Mi, 1Gi).
 #: addon\globalPlugins\resourceMonitor\__init__.py:346
 msgid "IEC (Ki, Mi, Gi)"
-msgstr ""
+msgstr "МЕК  (КИ, Ми, Ги)"
 
 #. Translators: SI decimal size notation where 1 KB = 1000 bytes (example: 1K, 1M, 1G).
 #: addon\globalPlugins\resourceMonitor\__init__.py:348
 msgid "SI decimal (K, M, G)"
-msgstr ""
+msgstr "Десятичная система СИ (К, М, Г)"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #: addon\globalPlugins\resourceMonitor\__init__.py:396
@@ -141,7 +141,7 @@ msgstr "{winVersion} ({cpuBit}) сборка {build}"
 #. Translators: Input help mode message for entering the Resource Monitor command layer.
 #: addon\globalPlugins\resourceMonitor\__init__.py:498
 msgid "Enter the Resource Monitor command layer."
-msgstr "Введите ступенчатую команду Монитора ресурсов."
+msgstr "Входит в уровень команд монитора ресурсов."
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:519
 msgid "Presents used ram and average processor load. If pressed twice, copies the information to the clipboard."
@@ -347,8 +347,10 @@ msgstr "Удобный монитор ресурсов, который позв�
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Added an add-on setting to configure wi-fi connect/disconnect notification method (off, message, sound, both message and sound (default)).\n"
-"* NVDA+Shift+number row commands used to announce individual resource usage information are deprecated and will be removed in a future add-on release."
-msgstr "* Добавлена дополнительная настройка для определения способа уведомления о подключении/отключении Wi-Fi (выключено, сообщение, звук, сообщение и звук (по умолчанию)).\n"
-"* Сочетания клавиш NVDA+Shift+цифры основного ряда, используемые для оповещения об использовании отдельных ресурсов, устарели и будут удалены в будущих версиях дополнения."
+msgid "* Added memory and disk size notation setting to configure how NVDA announces RAM and disk usage/size unit (default is alternative (kb/mb/...).\n"
+"* Improved reliability of add-on settings upgrade process.\n"
+"* The default value for wi-fi notification setting is now 'both' instead of 'off'."
+msgstr "* Добавлен параметр обозначения размера памяти и диска для настройки того, как NVDA объявляет единицу измерения использования/размера ОЗУ и диска (по умолчанию используется альтернативный вариант (кБ/МБ/...).\n"
+"* Повышена надёжность процесса обновления настроек дополнения.\n"
+"* Теперь значение по умолчанию для уведомления Wi-Fi — 'сообщение и звук', а не 'выключено'."
 
