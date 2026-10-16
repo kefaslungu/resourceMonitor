@@ -42,20 +42,15 @@ addonHandler.initTranslation()
 MODULE_DIR = os.path.dirname(__file__)
 
 # Register this add-on's settings with NVDA's configuration system.
-# The below path is taken if this is NVDA 2026.2 and earlier or the add-on confspec was not registered.
-# NVDA 2026.3 introduces dedicated register/unregister functions and can be invoked from installTasks module.
+# The below path is taken if the add-on confspec was not registered properly
+# at add-on install time or missing.
 confspec = {
 	"gpuTempUnit": "string(default=celsius)",
 	"memorySizeUnit": "string(default=alternative)",
 	"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",
 }
-# NVDA 2026.3 registers the confspec via installTasks.onInstall before the plugin loads.
-# For older NVDA versions, register it here. If the section already exists (upgrade scenario),
-# merge any missing keys so new settings are not silently absent.
 if "resourceMonitor" not in config.conf.spec:
-	config.conf.spec["resourceMonitor"] = confspec
-else:
-	config.conf.spec["resourceMonitor"].update(confspec)
+	config.configSections.registerSection("resourceMonitor", confspec, isBaseOnly=True)
 
 # Play a message and/or a sound.
 # This is mostly used for wi-fi status.
