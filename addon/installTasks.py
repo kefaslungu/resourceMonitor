@@ -4,13 +4,10 @@
 # Registers add-on config spec/settings blueprint.
 
 import config
-confspecRegistrationAvailable = hasattr(config, "configSections")
 
 def onInstall() -> None:
 	# Register this add-on's settings with NVDA's configuration system.
-	# If running NVDA 2026.3, register the confspec here, otherwise do it from the main global plugin module.
-	if not confspecRegistrationAvailable:
-		return
+	# The global plugin main module version serves as a fallback in case custom sections data is gone.
 	confspec = {
 		"gpuTempUnit": "string(default=celsius)",
 		"memorySizeUnit": "string(default=alternative)",
