@@ -26,7 +26,7 @@ addon_info = AddonInfo(
 	addon_version="26.10.2",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* NVDA 2026.1 (64-bit) or later is required.
+	addon_changelog=_("""* NVDA 2026.3 or later is required.
 * Added memory and disk size notation setting to configure how NVDA announces RAM and disk usage/size unit (default is alternative (kb/mb/...).
 * Improved reliability of add-on settings upgrade process.
 * The default value for wi-fi notification setting is now 'both' instead of 'off'."""),

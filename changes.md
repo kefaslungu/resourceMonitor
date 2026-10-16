@@ -2,6 +2,10 @@
 
 This page lists the complete changelog for Resource Monitor add-on releases.
 
+## Version 26.11
+
+* NVDA 2026.3 or later is required.
+
 ## Version 26.10.2
 
 * Added memory and disk size notation setting to configure how NVDA announces RAM and disk usage/size unit (default is alternative (kb/mb/...).
