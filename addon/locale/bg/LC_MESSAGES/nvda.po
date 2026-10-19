@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-19 03:59+0000\n"
-"PO-Revision-Date: 2026-10-19 04:00\n"
+"POT-Creation-Date: 2026-10-19 11:38+0000\n"
+"PO-Revision-Date: 2026-10-19 11:40\n"
 "Last-Translator: \n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
@@ -339,9 +339,6 @@ msgstr "Удобно средство за отчитане на натовар�
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2026.3 or later is required.\n"
-"* Added memory and disk size notation setting to configure how NVDA announces RAM and disk usage/size unit (default is alternative (kb/mb/...).\n"
-"* Improved reliability of add-on settings upgrade process.\n"
-"* The default value for wi-fi notification setting is now 'both' instead of 'off'."
+msgid "* NVDA 2026.3 or later is required."
 msgstr ""
 
