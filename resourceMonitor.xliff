@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/e23c5c3c5e167b1dde690b61d099e955f998f371/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/3ff2e283936bcc4f0e108c193b97ab0972c89f24/readme.md">
 <skeleton>
 # $(ID:4566d44d-44e5-4bf8-87b8-f29d4ecaaa03)
 
@@ -58,7 +58,7 @@ $(ID:e528f8b1-3f40-46a0-affe-9488a3625d8f)
 
 * $(ID:fcb20d26-f3e4-4087-9f64-d60e46d28ed7)
 * $(ID:095a4fbe-65eb-434e-874e-eb71c32c9394)
-* $(ID:fe9c5079-e718-40a1-9019-ab76f08defba)
+* $(ID:ac429264-33c3-40e3-a5c5-413bdcad2c0c)
 
 $(ID:cede3681-25e1-4335-adad-b188883c418e)
 
@@ -408,13 +408,13 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>Wi-fi connect/disconnect notification: Select how NVDA should report wi-fi connect/disconnect notifications (off, message, sound, both message and sound).</source>
 </segment>
 </unit>
-<unit id="fe9c5079-e718-40a1-9019-ab76f08defba">
+<unit id="ac429264-33c3-40e3-a5c5-413bdcad2c0c">
 <notes>
 <note appliesTo="source">line: 58</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
-<source>Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes adn terabytes are reported (defulat is the alternative method (KB/MB/...).</source>
+<source>Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes and terabytes are reported (default is the alternative method (KB/MB/...).</source>
 </segment>
 </unit>
 <unit id="cede3681-25e1-4335-adad-b188883c418e">
