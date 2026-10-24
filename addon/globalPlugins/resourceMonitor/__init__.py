@@ -735,7 +735,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if bootTimestamp == 0.0:
 			raise TypeError
 		# tz (timezone) argument is not required for fromtimestamp method (use local time).
-		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)  # noqa
+		uptime = datetime.now() - datetime.fromtimestamp(bootTimestamp)
 		hours, remainingMinutes = divmod(uptime.seconds, 3600)
 		minutes, seconds = divmod(remainingMinutes, 60)
 		uptimeComponents = []
