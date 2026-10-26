@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-10-19 11:38+0000\n"
-"PO-Revision-Date: 2026-10-19 11:41\n"
+"PO-Revision-Date: 2026-10-24 01:07\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -336,5 +336,5 @@ msgstr "Một tiện ích theo dõi tài nguyên để báo cáo tải CPU, mứ
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.3 or later is required."
-msgstr ""
+msgstr "* Yêu cầu NVDA 2026.3 trở lên."
 

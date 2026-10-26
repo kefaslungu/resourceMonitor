@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-10-19 11:38+0000\n"
-"PO-Revision-Date: 2026-10-19 11:40\n"
+"PO-Revision-Date: 2026-10-24 22:00\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -100,7 +100,7 @@ msgstr "声音"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:316
 msgid "message and sound"
-msgstr ""
+msgstr "消息和声音"
 
 #. Translators: Label for a combo box to select the notation style used to report memory and disk sizes.
 #: addon\globalPlugins\resourceMonitor\__init__.py:332
@@ -336,5 +336,5 @@ msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存�
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.3 or later is required."
-msgstr ""
+msgstr "* 需要 NVDA 2026.3 或更高版本。"
 
