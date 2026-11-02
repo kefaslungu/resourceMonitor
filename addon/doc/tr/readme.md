@@ -54,7 +54,7 @@ NVDA Menüsü/Tercihler/Ayarlar iletişim kutusunda Kaynak İzleme kategorisi al
 
 * GPU sıcaklık birimi: GPU bilgileri kapsamında bildirilen sıcaklık birimini seçin (Santigrat veya Fahrenheit).
 * Wi-Fi bağlanma/kesilme bildirimi: NVDA'nın Wi-Fi bağlantı/kesme bildirimlerini nasıl bildirmesi gerektiğini seçin (kapalı, mesaj, ses, hem mesaj hem ses).
-* Bellek ve disk boyutu gösterimi: RAM ve disk kullanım birimleri için bellek boyutlarının nasıl bildirileceğini seçin (gigabayt ve terabayt gibi birimler varsayılan değerdir (KB/MB/...)).
+* Bellek ve disk boyutu gösterimi: RAM ve disk kullanım birimleri (gigabayt ve terabayt gibi) için bellek boyutlarının nasıl seslendirileceğini seçin (varsayılan olarak alternatif yöntem (KB/MB/...) kullanılır).
 
 Her eklenti sürümü arasında yapılan değişikliklerin listesi için [eklenti sürümleri için changelogs][1] belgesine bakın.
 
