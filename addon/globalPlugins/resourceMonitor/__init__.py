@@ -7,6 +7,7 @@
 
 import functools
 import os.path
+import threading
 import winsound
 from ctypes import addressof, byref, POINTER, string_at, wintypes
 from datetime import datetime
@@ -35,6 +36,7 @@ except (OSError, AttributeError):
 	wlanapiAvailable = False
 import addonHandler
 from .gpu import BaseGpuProvider, getGpuProviders
+from .cpuTemperature import CpuTemperatureProvider, TemperatureUnavailable
 
 addonHandler.initTranslation()
 
@@ -418,6 +420,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		self._isLayerActive = False
+		self._cpuTemperature = CpuTemperatureProvider()
+		self._cpuReportPending = False
+		self._cpuReportCopy = False
+		self._cpuReportClosed = threading.Event()
 		inputCore.decide_executeGesture.register(self._decideExecuteGesture)
 		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettingsPanel)
@@ -446,6 +452,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def terminate(self):
+		self._cpuReportClosed.set()
+		self._cpuTemperature.close()
 		inputCore.decide_executeGesture.unregister(self._decideExecuteGesture)
 		super().terminate()
 		self._gpuProviders.clear()
@@ -558,6 +566,56 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(info)
 		else:
 			api.copyToClip(info, notify=True)
+
+	@scriptHandler.script(
+		# Translators: Optional CPU load and temperature command, with no default shortcut.
+		description=_(
+			"Presents processor load and CPU temperature. "
+			"If pressed twice, copies the information to the clipboard."
+		),
+		speakOnDemand=True,
+	)
+	@blockAction.when(blockAction.Context.SECURE_MODE)
+	def script_announceProcessorTemperature(self, gesture: inputCore.InputGesture):
+		copy = scriptHandler.getLastScriptRepeatCount() > 0
+		if self._cpuReportPending:
+			self._cpuReportCopy = self._cpuReportCopy or copy
+			return
+		load = tryTrunk(psutil.cpu_percent())
+		self._cpuReportPending = True
+		self._cpuReportCopy = copy
+		threading.Thread(
+			target=self._collectCpuTemperature, args=(load,),
+			name="resourceMonitorCpuTemperature", daemon=True,
+		).start()
+
+	def _collectCpuTemperature(self, load: int | float) -> None:
+		try:
+			readings = self._cpuTemperature.collect()
+			temperatures = ", ".join(formatGpuTemperature(str(item.celsius)) for item in readings)
+			# Translators: Combined CPU load and temperature. temperature includes its unit;
+			# the percent sign and placeholders can be reordered for the target language.
+			info = _("CPU load: {load}% temperature: {temperature}.").format(
+				load=load, temperature=temperatures,
+			)
+		except TemperatureUnavailable:
+			# Translators: CPU load is still available when the temperature cannot be read.
+			info = _("CPU load: {load}%. CPU temperature unavailable.").format(load=load)
+		except Exception:
+			from logHandler import log
+			log.exception("CPU temperature collection failed")
+			info = _("CPU load: {load}%. CPU temperature unavailable.").format(load=load)
+		if not self._cpuReportClosed.is_set():
+			queueHandler.queueFunction(queueHandler.eventQueue, self._finishCpuReport, info)
+
+	def _finishCpuReport(self, info: str) -> None:
+		if self._cpuReportClosed.is_set():
+			return
+		self._cpuReportPending = False
+		if self._cpuReportCopy:
+			api.copyToClip(info, notify=True)
+		else:
+			ui.message(info)
 
 	@scriptHandler.script(
 		# Translators: Input help mode message about memory info command in Resource Monitor.

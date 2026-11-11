@@ -45,6 +45,7 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.
 * NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks. See the next section on how to change this behavior.
 * GPU information is given for Nvidia GPU's.
+* An optional, unassigned command reports CPU load and temperature. Assign it from Input Gestures. It uses the GPU temperature unit preference, requires the signed PawnIO driver, and requests administrator approval for a separate sensor reader; NVDA itself stays unelevated. Existing CPU and layer commands are unchanged.
 * When announcing processor architecture information as part of Windows version reporting, "AMD64" refer to 64-bit (x64) Intel and AMD processors. This information does not refer to the name of the actual processor in use.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
@@ -59,3 +60,7 @@ You can configure the following resource usage reporting options from NVDA setti
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
 
 [1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md
+
+### Building the CPU temperature component
+
+On Windows x64, run `powershell -File tools/cpuSensor/Build-Sensor.ps1` before the normal SCons build. The script verifies and bundles LibreHardwareMonitor 0.9.6 with its license notices and compiles the small sensor reader. See `tools/cpuSensor/README.md` for requirements. Tests run with `python -m unittest discover -s tests -v`; interactive NVDA testing is also required.
