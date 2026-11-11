@@ -6,3 +6,13 @@
 *.ini
 *.json
 suggestions.txt
+.build/
+.venv/
+.ruff_cache/
+dist/
+uv.lock
+*.egg-info/
+addon/doc/*/*.html
+addon/doc/en/
+addon/doc/style.css
+addon/globalPlugins/resourceMonitor/sensors/

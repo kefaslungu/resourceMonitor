@@ -342,3 +342,34 @@ msgstr "CPU yükünü, bellek kullanımını, disk kullanım durumunu ve daha fa
 msgid "* NVDA 2026.3 or later is required."
 msgstr "* NVDA 2026.3 veya sonrası sürümler gerekli."
 
+# CPU temperature reporting.
+
+msgid "CPU/GPU &temperature unit:"
+msgstr "CPU/GPU &sıcaklık birimi:"
+
+msgid "Presents processor load and CPU temperature. If pressed twice, copies the information to the clipboard."
+msgstr "İşlemci kullanımını ve CPU sıcaklığını bildirir. İki kez basıldığında bilgiyi panoya kopyalar."
+
+#. Translators: Temperature value and unit. Preserve both named placeholders.
+msgid "{value} {unit}"
+msgstr "{value} {unit}"
+
+#. Translators: CPU load and package temperature; percent precedes the number in Turkish.
+msgid "CPU load: {load}% temperature: {temperature}."
+msgstr "CPU yükü: %{load} sıcaklık: {temperature}."
+
+#. Translators: CPU load followed by a translated temperature error message.
+msgid "CPU load: {load}%. {status}"
+msgstr "CPU yükü: %{load}. {status}"
+
+msgid "CPU temperature unavailable: the PawnIO driver is not available."
+msgstr "CPU sıcaklığı alınamadı: PawnIO sürücüsüne erişilemiyor."
+
+msgid "CPU temperature unavailable: administrator permission was not granted."
+msgstr "CPU sıcaklığı alınamadı: yönetici izni verilmedi."
+
+msgid "CPU temperature unavailable: the sensor component is missing."
+msgstr "CPU sıcaklığı alınamadı: sensör bileşeni eksik."
+
+msgid "CPU temperature unavailable."
+msgstr "CPU sıcaklığı alınamadı."

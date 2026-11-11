@@ -104,6 +104,10 @@ pythonFiles = expandGlobs(buildVars.pythonSources)
 for file in pythonFiles:
 	env.Depends(addon, file)
 
+# The bundled CPU sensor is built separately before SCons starts.
+for sensorFile in env.Glob(addonDir / "globalPlugins/resourceMonitor/sensors/*"):
+	env.Depends(addon, sensorFile)
+
 # Convert markdown files to html
 # We need at least doc in English and should enable the Help button for the add-on in Add-ons Manager
 if (cssFile := Path("style.css")).is_file():
@@ -146,6 +150,8 @@ env.Depends(mergePot, i18nFiles)
 manifest = env.NVDAManifest(env.File(addonDir/"manifest.ini"), "manifest.ini.tpl")
 # Ensure manifest is rebuilt if buildVars is updated.
 env.Depends(manifest, "buildVars.py")
+# Command-line version/channel changes must also regenerate the embedded metadata.
+env.Depends(manifest, env.Value(dict(env["addon_info"])))
 
 env.Depends(addon, manifest)
 env.Default(addon)
