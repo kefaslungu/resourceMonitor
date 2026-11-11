@@ -11,13 +11,15 @@ import threading
 import winsound
 from ctypes import addressof, byref, POINTER, string_at, wintypes
 from datetime import datetime
-from typing import Any
+from typing import Any, ClassVar
 import api
+import braille
 import config
 import globalPluginHandler
 import queueHandler
 import scriptHandler
 import inputCore
+import tones
 import ui
 import winVersion
 import wx
@@ -248,8 +250,8 @@ def tryTrunk(n: float) -> int | float:
 	return n
 
 
-def formatTemperature(celsiusText: str) -> str:
-	# CPU and GPU providers report temperature in degrees Celsius as text.
+def formatGpuTemperature(celsiusText: str) -> str:
+	# GPU providers report temperature in degrees Celsius as text.
 	# Convert it to the user's preferred unit (Celsius or Fahrenheit) for display.
 	try:
 		celsius = float(celsiusText)
@@ -258,14 +260,13 @@ def formatTemperature(celsiusText: str) -> str:
 	unit = config.conf["resourceMonitor"].get("gpuTempUnit", "celsius")
 	if unit == "fahrenheit":
 		value = celsius * 9.0 / 5.0 + 32.0
-		# Translators: Unit used for CPU and GPU temperatures.
+		# Translators: Fahrenheit temperature unit symbol appended to a GPU temperature value.
 		symbol = _("degrees Fahrenheit")
 	else:
 		value = celsius
-		# Translators: Unit used for CPU and GPU temperatures.
+		# Translators: Celsius temperature unit symbol appended to a GPU temperature value.
 		symbol = _("degrees Celsius")
-	# Translators: A temperature value and its localized unit; placeholders can be reordered.
-	return _("{value} {unit}").format(value=tryTrunk(round(value, 1)), unit=symbol)
+	return f"{tryTrunk(round(value, 1))} {symbol}"
 
 
 def formatGpuMemory(usedMibText: str, totalMibText: str) -> str | None:
@@ -294,7 +295,7 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 	def makeSettings(self, settingsSizer: wx.BoxSizer) -> None:
 		settingsSizerHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: Label for a combo box to select the unit used to report GPU temperature.
-		gpuTempUnitLabelText = _("CPU/GPU &temperature unit:")
+		gpuTempUnitLabelText = _("GPU &temperature unit:")
 		# Translators: An option in the GPU temperature unit combo box.
 		self._gpuTempUnitLabels = [_("Celsius"), _("Fahrenheit")]
 		self._gpuTempUnitValues = ["celsius", "fahrenheit"]
@@ -398,13 +399,32 @@ def getWinVer() -> str:
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: The gestures category for this add-on in input gestures dialog.
 	scriptCategory = _("Resource Monitor")
+	_layerEntryGesture = "kb:NVDA+shift+e"
+	__layerGestures: ClassVar = {
+		"kb:space": "announceResourceSummary",
+		"kb:c": "announceProcessorInfo",
+		"kb:m": "announceRamInfo",
+		"kb:d": "announceDriveInfo",
+		"kb:w": "wlanStatusReport",
+		"kb:o": "announceWinVer",
+		"kb:u": "announceUptime",
+		"kb:g": "announceGpuInfo",
+		"kb:shift+g": "announceGpuMemoryInfo",
+		"kb:escape": "layerExit",
+	}
+	_layerGestureIdentifiers = frozenset(
+		inputCore.normalizeGestureIdentifier(identifier)
+		for identifier in (*__layerGestures, _layerEntryGesture)
+	)
 
 	def __init__(self):
 		super().__init__()
+		self._isLayerActive = False
 		self._cpuTemperature = CpuTemperatureProvider()
 		self._cpuReportPending = False
 		self._cpuReportCopy = False
 		self._cpuReportClosed = threading.Event()
+		inputCore.decide_executeGesture.register(self._decideExecuteGesture)
 		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettingsPanel)
 		if not wlanapiAvailable:
@@ -434,6 +454,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		self._cpuReportClosed.set()
 		self._cpuTemperature.close()
+		inputCore.decide_executeGesture.unregister(self._decideExecuteGesture)
 		super().terminate()
 		self._gpuProviders.clear()
 		if ResourceMonitorSettingsPanel in NVDASettingsDialog.categoryClasses:
@@ -459,6 +480,42 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except OSError:
 			pass
 
+	def _decideExecuteGesture(self, gesture: inputCore.InputGesture) -> bool:
+		"""Exit the command layer before an unrelated gesture is resolved."""
+		if (
+			self._isLayerActive
+			and not gesture.isModifier
+			and self._layerGestureIdentifiers.isdisjoint(gesture.normalizedIdentifiers)
+		):
+			self._finishLayer()
+		return True
+
+	def _finishLayer(self) -> None:
+		"""Leave the resource monitor command layer."""
+		self._isLayerActive = False
+		for gestureIdentifier in self.__layerGestures:
+			self.removeGestureBinding(gestureIdentifier)
+
+	@scriptHandler.script(
+		# Translators: Input help mode message for entering the Resource Monitor command layer.
+		description=_("Enter the Resource Monitor command layer."),
+		gesture=_layerEntryGesture,
+	)
+	def script_layerEntry(self, gesture: inputCore.InputGesture):
+		"""Enter the Resource Monitor command layer."""
+		if self._isLayerActive:
+			return
+		self.bindGestures(self.__layerGestures)
+		self._isLayerActive = True
+		tones.beep(100, 10)
+		braille.handler.message(_("Resource Monitor"))
+
+	@scriptHandler.script(allowInSleepMode=True)
+	def script_layerExit(self, gesture: inputCore.InputGesture):
+		"""Exit the Resource Monitor command layer."""
+		self._finishLayer()
+		tones.beep(120, 100)
+
 	@scriptHandler.script(
 		# Translators: Input help mode message about overall system resource info command in Resource Monitor
 		description=_(
@@ -483,6 +540,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the average processor load and the load of each core. "
 			"If pressed twice, copies the information to the clipboard."
 		),
+		gesture="KB:NVDA+shift+1",
 		speakOnDemand=True,
 	)
 	def script_announceProcessorInfo(self, gesture: inputCore.InputGesture):
@@ -510,7 +568,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			api.copyToClip(info, notify=True)
 
 	@scriptHandler.script(
-		# Translators: A separate optional CPU load and temperature command in Input Gestures.
+		# Translators: Optional CPU load and temperature command, with no default shortcut.
 		description=_(
 			"Presents processor load and CPU temperature. "
 			"If pressed twice, copies the information to the clipboard."
@@ -534,37 +592,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _collectCpuTemperature(self, load: int | float) -> None:
 		try:
 			readings = self._cpuTemperature.collect()
-			temperatures = ", ".join(formatTemperature(str(item.celsius)) for item in readings)
-			# Translators: Combined CPU load and package temperature report. Keep the percent
-			# sign in the appropriate position for your language. temperature includes its unit.
+			temperatures = ", ".join(formatGpuTemperature(str(item.celsius)) for item in readings)
+			# Translators: Combined CPU load and temperature. temperature includes its unit;
+			# the percent sign and placeholders can be reordered for the target language.
 			info = _("CPU load: {load}% temperature: {temperature}.").format(
 				load=load, temperature=temperatures,
 			)
-		except TemperatureUnavailable as error:
-			if error.reason == "driverUnavailable":
-				# Translators: PawnIO installation exists but the sensor driver cannot be opened.
-				status = _("CPU temperature unavailable: the PawnIO driver is not available.")
-			elif error.reason == "accessDenied":
-				# Translators: The user declined UAC or the sensor host could not access the driver.
-				status = _("CPU temperature unavailable: administrator permission was not granted.")
-			elif error.reason == "helperMissing":
-				# Translators: The build is missing its bundled temperature reader.
-				status = _("CPU temperature unavailable: the sensor component is missing.")
-			else:
-				# Translators: No valid CPU package temperature was returned.
-				status = _("CPU temperature unavailable.")
-			info = self._cpuTemperatureFailureMessage(load, status)
+		except TemperatureUnavailable:
+			# Translators: CPU load is still available when the temperature cannot be read.
+			info = _("CPU load: {load}%. CPU temperature unavailable.").format(load=load)
 		except Exception:
 			from logHandler import log
 			log.exception("CPU temperature collection failed")
-			status = _("CPU temperature unavailable.")
-			info = self._cpuTemperatureFailureMessage(load, status)
+			info = _("CPU load: {load}%. CPU temperature unavailable.").format(load=load)
 		if not self._cpuReportClosed.is_set():
 			queueHandler.queueFunction(queueHandler.eventQueue, self._finishCpuReport, info)
-
-	def _cpuTemperatureFailureMessage(self, load: int | float, status: str) -> str:
-		# Translators: CPU load followed by a translated explanation of the missing temperature.
-		return _("CPU load: {load}%. {status}").format(load=load, status=status)
 
 	def _finishCpuReport(self, info: str) -> None:
 		if self._cpuReportClosed.is_set():
@@ -581,6 +623,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the used and total space for both physical and virtual ram. "
 			"If pressed twice, copies the information to the clipboard."
 		),
+		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
 		speakOnDemand=True,
 	)
 	def script_announceRamInfo(self, gesture: inputCore.InputGesture):
@@ -612,6 +655,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. "
 			"If pressed twice, copies the information to the clipboard."
 		),
+		gesture="KB:NVDA+shift+3",
 		speakOnDemand=True,
 	)
 	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
@@ -717,6 +761,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the system's wireless network name (SSID), connection strength, and security  protocol. "
 			"If pressed twice, copies the information to the clipboard."
 		),
+		gesture="kb:NVDA+shift+4",
 		speakOnDemand=True,
 	)
 	def script_wlanStatusReport(self, gesture: inputCore.InputGesture):
@@ -732,6 +777,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the version of Windows you are using. "
 			"If pressed twice, copies the information to the clipboard."
 		),
+		gesture="KB:NVDA+shift+6",
 		speakOnDemand=True,
 	)
 	def script_announceWinVer(self, gesture: inputCore.InputGesture):
@@ -775,6 +821,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the system's uptime. "
 			"If pressed twice, copies the information to the clipboard."
 		),
+		gesture="kb:NVDA+shift+7",
 		speakOnDemand=True,
 	)
 	def script_announceUptime(self, gesture: inputCore.InputGesture):
@@ -805,7 +852,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					_("GPU {gpuNumber}: usage {usage}%, temp {temperature}.").format(
 						gpuNumber=index,
 						usage=item.utilization,
-						temperature=formatTemperature(item.temperature),
+						temperature=formatGpuTemperature(item.temperature),
 					)
 				)
 			if gpuInfoParts:

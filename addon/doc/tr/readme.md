@@ -4,33 +4,36 @@
 
 Bu eklenti, CPU yükü, bellek kullanımı ve diğer kaynak kullanımları hakkında bilgi verir.
 
-## Komutlar ve Girdi Hareketleri
+## Kısayollar
 
 Tüm komutlar isteğe bağlı konuşma modunu destekler.
 
-Bu sürümde varsayılan kısayol veya sabit tuşlu komut katmanı bulunmaz.
-NVDA menüsü > Tercihler > Girdi Hareketleri > Kaynak İzleme bölümünü açın,
-istediğiniz komutu seçip kendi tuşunuzu ekleyin. Kaynak komutlarına daha önce
-Girdi Hareketleri üzerinden kaydettiğiniz kullanıcı atamaları korunur.
+* NVDA+Shift+E: Kaynak İzleme komut katmanına girer.
 
-Kullanılabilir komutlar:
+Aşağıdaki katman komutları, bireysel kaynak kullanım bilgilerini elde etmek için kullanılabilir:
 
-* Genel kaynak kullanımı: RAM kullanım yüzdesi ve ortalama CPU yükü.
-* İşlemci bilgileri: ortalama CPU kullanım yüzdesi ve mantıksal işlemcilerin yükü.
-* İşlemci kullanımı ve sıcaklığı: ortalama CPU kullanım yüzdesi ve CPU paket sıcaklığı (güvenli modda kullanılamaz).
-* Bellek: fiziksel ve sanal RAM'in kullanılan ve toplam miktarı.
-* Diskler: sabit, çıkarılabilir ve ağ sürücülerinin kullanılan ve toplam alanı.
-* GPU bilgileri: kullanım yüzdesi ve sıcaklık (güvenli modda kullanılamaz).
-* GPU belleği: kullanılan ve toplam GPU belleği (güvenli modda kullanılamaz).
-* Wi-Fi: ağ adı, sinyal gücü ve güvenlik türü.
-* İşletim sistemi: Windows sürümü, mimari ve derleme numarası.
-* Sistemin açık kalma süresi.
+* Aralık: Kullanılan RAM (fiziksel bellek) ve ortalama işlemci yükü de dahil olmak üzere genel kaynak kullanım bilgileri.
+* C: CPU (ortalama işlemci yükü ve çok çekirdekli CPU'lar varsa her bir çekirdeğin yükü)
+* D: diskler (sabit (dahili), çıkarılabilir ve ağ sürücülerinin kullanılan ve toplam alanı)
+* G (güvenli modda kullanılamaz): grafik işlem birimi (GPU) bilgileri
+* Shift+G (güvenli modda kullanılamaz): GPU bellek kullanımı
+* M: Bellek (hem fiziksel hem de sanal RAM için kullanılan ve toplam alan)
+* O: işletim sistemi (Windows sürümü, CPU mimarisi ve tam derleme numarası (build.revision))
+* U: sistem çalışma süresi
+* W: Wi-Fi (ağ adı (SSID), sinyal gücü, güvenlik modu veya mevcut değilse SSID yok)
 
-Bu iki işlemci komutundan istediğiniz birine veya ikisine ayrı tuş atayabilirsiniz.
-Eski işlemci bilgileri komutu sıcaklık sorgulamaz ve sensör okuyucusunu başlatmaz.
-Yeni kullanım ve sıcaklık komutunun ilk sorgusunda paketle gelen sensör okuyucusu için Windows yönetici
-onayı istenir. NVDA normal yetkileriyle çalışır. Sıcaklık için çalışan bir PawnIO
-sürücüsü gerekir; eksik veya geçersiz değerler sıcaklık olarak bildirilmez.
+Kaynak komutları, katmanı aktif tutar; böylece bu komutlar tekrar edilebilir. Katmandan çıkmak için Escape tuşuna basın; atanmamış bir tuş, aktif uygulamadan geçirilerek çıkışı sağlar.
+
+Sınırlı geriye dönük uyumluluk için, önceki NVDA+Shift+1 ile NVDA+Shift+7 kaynak kısayolları kullanılabilir durumda bırakıldı (bu komutların gelecekteki bir eklenti sürümünde kaldırılması planlanmaktadır):
+
+* NVDA+Shift+1: CPU
+* NVDA+Shift+2/5: hafıza (NVDA+Shift+5, NVDA+Shift+2 tuş kombinasyonu kullanılamadığında alternatif bir tuş kombinasyonudur)
+* NVDA+Shift+3: diskler
+* NVDA+Shift+4: wi-fi
+* NVDA+Shift+6: işletim sistemi
+* NVDA+Shift+7: sistem çalışma süresi
+
+Bu hareketleri girdi hareketleri iletişim kutusu aracılığıyla değiştirebilirsiniz.
 
 ## Kullanım notları
 
@@ -49,7 +52,7 @@ Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka uygulamalar�
 
 NVDA Menüsü/Tercihler/Ayarlar iletişim kutusunda Kaynak İzleme kategorisi altında aşağıdaki kaynak kullanım bildirme seçeneklerini yapılandırabilirsiniz:
 
-* CPU/GPU sıcaklık birimi: CPU ve GPU sıcaklıklarının Santigrat veya Fahrenheit olarak bildirilmesini seçin.
+* GPU sıcaklık birimi: GPU bilgileri kapsamında bildirilen sıcaklık birimini seçin (Santigrat veya Fahrenheit).
 * Wi-Fi bağlanma/kesilme bildirimi: NVDA'nın Wi-Fi bağlantı/kesme bildirimlerini nasıl bildirmesi gerektiğini seçin (kapalı, mesaj, ses, hem mesaj hem ses).
 * Bellek ve disk boyutu gösterimi: RAM ve disk kullanım birimleri (gigabayt ve terabayt gibi) için bellek boyutlarının nasıl seslendirileceğini seçin (varsayılan olarak alternatif yöntem (KB/MB/...) kullanılır).
 

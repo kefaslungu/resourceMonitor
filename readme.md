@@ -1,42 +1,39 @@
 # Resource Monitor
 
-## CPU temperature
-
-Two separate processor commands are available in NVDA's Input Gestures dialog:
-processor information reports average load and logical processor loads; processor
-load and temperature reports average load and CPU package temperature. Assign a
-shortcut to either or both according to your preference. Both are unassigned by default.
-The first request asks for Windows administrator approval for the bundled sensor
-host. NVDA itself stays unelevated. The signed PawnIO driver must be available;
-its official installer is included under `globalPlugins/resourceMonitor/sensors/`.
-Driver installation is an explicit setup step, never performed silently on NVDA startup.
-The CPU/GPU temperature unit setting applies to both sensors. Invalid or missing
-readings are announced as unavailable. Secure screens do not start the sensor host.
-
 * Authors: Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst, Kevin Derome and other NVDA contributors
 
 This add-on gives information about CPU load, memory usage and other resource usage information.
 
-## Commands and Input Gestures
+## Shortcuts
 
 All commands support speech on demand mode.
 
-Commands have no default shortcuts or fixed command layer. Open NVDA menu >
-Preferences > Input Gestures > Resource Monitor, select a command, and add the
-gesture you want. Existing user-defined bindings for resource commands are kept.
+* NVDA+Shift+E: enters the Resource Monitor command layer.
 
-Available commands:
+The following layer commands are available to obtain individual resource usage information:
 
-* Overall resource usage: used RAM and average CPU load.
-* Processor information: average CPU load and logical processor loads.
-* Processor load and temperature: average CPU load and CPU package temperature (unavailable in secure mode).
-* Memory: used and total physical and virtual RAM.
-* Disks: used and total space of fixed, removable and network drives.
-* GPU information: GPU load and temperature (unavailable in secure mode).
-* GPU memory: used and total GPU memory (unavailable in secure mode).
-* Wi-fi: network name, signal strength and security type.
-* Operating system: Windows version, architecture and build number.
-* System uptime.
+* Space: overall resource usage information including used RAM (physical memory) and average processor load.
+* C: CPU (average processor load and if multicore CPU's are present the load of each core)
+* D: disks (used and total space of the fixed (built-in), removable, and network drives)
+* G (unavailable in secure mode): graphics processing unit (GPU) information
+* Shift+G(unavailable in secure mode): GPU memory usage
+* M: memory (used and total space for both physical and virtual RAM)
+* O: operating system (Windows version, CPU architecture, and exact build number (build.revision))
+* U: system uptime
+* W: wi-fi (network name (SSID), signal strength, security mode, or no SSID if there is none available)
+
+Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application.
+
+For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available (these commands are planned to be removed in a future add-on version):
+
+* NVDA+Shift+1: CPU
+* NVDA+Shift+2/5: memory (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed)
+* NVDA+Shift+3: disks
+* NVDA+Shift+4: wi-fi
+* NVDA+Shift+6: operating system
+* NVDA+Shift+7: system uptime
+
+You can change these gestures via the input gestures dialog.
 
 ## Usage notes
 
@@ -48,6 +45,7 @@ This add-on does not replace task manager and other system information programs 
 * If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.
 * NVDA will play a sound and report a message whenever connecting to or disconnecting from wireless networks. See the next section on how to change this behavior.
 * GPU information is given for Nvidia GPU's.
+* An optional, unassigned command reports CPU load and temperature. Assign it from Input Gestures. It uses the GPU temperature unit preference, requires the signed PawnIO driver, and requests administrator approval for a separate sensor reader; NVDA itself stays unelevated. Existing CPU and layer commands are unchanged.
 * When announcing processor architecture information as part of Windows version reporting, "AMD64" refer to 64-bit (x64) Intel and AMD processors. This information does not refer to the name of the actual processor in use.
 * Installing the add-on on Windows 10/11 LTSC is not supported.
 
@@ -55,7 +53,7 @@ This add-on does not replace task manager and other system information programs 
 
 You can configure the following resource usage reporting options from NVDA settings screen under Resource Monitor category:
 
-* CPU/GPU temperature unit: Select Celsius or Fahrenheit for CPU and GPU temperatures.
+* GPU temperature unit: Select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
 * Wi-fi connect/disconnect notification: Select how NVDA should report wi-fi connect/disconnect notifications (off, message, sound, both message and sound).
 * Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes and terabytes are reported (default is the alternative method (KB/MB/...).
 
@@ -63,10 +61,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 [1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md
 
-## Building and testing
+### Building the CPU temperature component
 
-On Windows x64, run `uv sync --only-group build --python 3.13`, followed by
-`powershell -File tools/Build-Addon.ps1`. The package is written to `dist/`.
-Then run `.venv/Scripts/python.exe -m unittest discover -s tests -v`.
-The reporting tests use the compiled Turkish catalog produced by the build.
-See `tools/cpuSensor/README.md` for component dependencies and hardware validation.
+On Windows x64, run `powershell -File tools/cpuSensor/Build-Sensor.ps1` before the normal SCons build. The script verifies and bundles LibreHardwareMonitor 0.9.6 with its license notices and compiles the small sensor reader. See `tools/cpuSensor/README.md` for requirements. Tests run with `python -m unittest discover -s tests -v`; interactive NVDA testing is also required.
