@@ -8,6 +8,7 @@ dynamic = ["version"]
 description = "Resource Monitor"
 maintainers = [
 	{name = "Joseph Lee", email = "joseph.lee22590@gmail.com"},
+	{name = "Kefas Lungu", email = "jameskefaslungu@gmail.com"},
 ]
 requires-python = ">=3.13,<3.14"
 classifiers = [
