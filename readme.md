@@ -22,18 +22,7 @@ The following layer commands are available to obtain individual resource usage i
 * U: system uptime
 * W: wi-fi (network name (SSID), signal strength, security mode, or no SSID if there is none available)
 
-Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application.
-
-For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available (these commands are planned to be removed in a future add-on version):
-
-* NVDA+Shift+1: CPU
-* NVDA+Shift+2/5: memory (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed)
-* NVDA+Shift+3: disks
-* NVDA+Shift+4: wi-fi
-* NVDA+Shift+6: operating system
-* NVDA+Shift+7: system uptime
-
-You can change these gestures via the input gestures dialog.
+Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Usage notes
 
