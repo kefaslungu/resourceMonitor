@@ -532,7 +532,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the average processor load and the load of each core. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="KB:NVDA+shift+1",
 		speakOnDemand=True,
 	)
 	def script_announceProcessorInfo(self, gesture: inputCore.InputGesture):
@@ -565,7 +564,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the used and total space for both physical and virtual ram. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
 		speakOnDemand=True,
 	)
 	def script_announceRamInfo(self, gesture: inputCore.InputGesture):
@@ -597,7 +595,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="KB:NVDA+shift+3",
 		speakOnDemand=True,
 	)
 	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
@@ -703,7 +700,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the system's wireless network name (SSID), connection strength, and security  protocol. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="kb:NVDA+shift+4",
 		speakOnDemand=True,
 	)
 	def script_wlanStatusReport(self, gesture: inputCore.InputGesture):
@@ -719,7 +715,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the version of Windows you are using. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="KB:NVDA+shift+6",
 		speakOnDemand=True,
 	)
 	def script_announceWinVer(self, gesture: inputCore.InputGesture):
@@ -763,7 +758,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Announces the system's uptime. "
 			"If pressed twice, copies the information to the clipboard."
 		),
-		gesture="kb:NVDA+shift+7",
 		speakOnDemand=True,
 	)
 	def script_announceUptime(self, gesture: inputCore.InputGesture):
