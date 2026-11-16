@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/1b312351f9ecfefdcfceb6de90c0e201a462b084/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/kefaslungu/resourceMonitor/ab1621af7ee83cc9391956de77acf3edc156368c/readme.md">
 <skeleton>
 # $(ID:4566d44d-44e5-4bf8-87b8-f29d4ecaaa03)
 
@@ -26,18 +26,7 @@ $(ID:6dce0d2e-0d7f-4831-94d3-e1ca82992dd0)
 * $(ID:efa513cd-d061-4b49-a66c-97ec5140a91d)
 * $(ID:956ebd51-65d0-4420-bfe0-e480e0d3b8ec)
 
-$(ID:64400d14-bf51-48c5-8d5b-24f402f10805)
-
-$(ID:8c6fb50b-7303-4a69-a5ce-3ef3fac0d1e3)
-
-* $(ID:d01e5bb5-e2c5-4984-9a5e-75a8656e5b34)
-* $(ID:ee42577b-458a-44a7-9774-fca3707e2982)
-* $(ID:c75947e5-b289-4072-9d34-638be5b92815)
-* $(ID:8d7c7925-6be9-475d-bd22-24db68fdc143)
-* $(ID:588f5c4c-5f37-4376-acfb-73f8364f9ea6)
-* $(ID:763fe702-d357-447b-8999-0da9288a1034)
-
-$(ID:17db2052-331b-4eb2-9524-28b4f94dfb3a)
+$(ID:43886553-d404-4fa1-88d3-1d9147b2463c)
 
 ## $(ID:cf9d1f4c-49a9-44c6-b161-ecfd913e64f6)
 
@@ -206,87 +195,17 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 <source>W: wi-fi (network name (SSID), signal strength, security mode, or no SSID if there is none available)</source>
 </segment>
 </unit>
-<unit id="64400d14-bf51-48c5-8d5b-24f402f10805">
+<unit id="43886553-d404-4fa1-88d3-1d9147b2463c">
 <notes>
 <note appliesTo="source">line: 26</note>
 </notes>
 <segment>
-<source>Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application.</source>
-</segment>
-</unit>
-<unit id="8c6fb50b-7303-4a69-a5ce-3ef3fac0d1e3">
-<notes>
-<note appliesTo="source">line: 28</note>
-</notes>
-<segment>
-<source>For limited backward compatibility, the previous NVDA+Shift+1 through NVDA+Shift+7 resource shortcuts remain available (these commands are planned to be removed in a future add-on version):</source>
-</segment>
-</unit>
-<unit id="d01e5bb5-e2c5-4984-9a5e-75a8656e5b34">
-<notes>
-<note appliesTo="source">line: 30</note>
-<note appliesTo="source">prefix: * </note>
-</notes>
-<segment>
-<source>NVDA+Shift+1: CPU</source>
-</segment>
-</unit>
-<unit id="ee42577b-458a-44a7-9774-fca3707e2982">
-<notes>
-<note appliesTo="source">line: 31</note>
-<note appliesTo="source">prefix: * </note>
-</notes>
-<segment>
-<source>NVDA+Shift+2/5: memory (NVDA+Shift+5 is an alternative to NVDA+Shift+2 when the latter keyboard combination cannot be performed)</source>
-</segment>
-</unit>
-<unit id="c75947e5-b289-4072-9d34-638be5b92815">
-<notes>
-<note appliesTo="source">line: 32</note>
-<note appliesTo="source">prefix: * </note>
-</notes>
-<segment>
-<source>NVDA+Shift+3: disks</source>
-</segment>
-</unit>
-<unit id="8d7c7925-6be9-475d-bd22-24db68fdc143">
-<notes>
-<note appliesTo="source">line: 33</note>
-<note appliesTo="source">prefix: * </note>
-</notes>
-<segment>
-<source>NVDA+Shift+4: wi-fi</source>
-</segment>
-</unit>
-<unit id="588f5c4c-5f37-4376-acfb-73f8364f9ea6">
-<notes>
-<note appliesTo="source">line: 34</note>
-<note appliesTo="source">prefix: * </note>
-</notes>
-<segment>
-<source>NVDA+Shift+6: operating system</source>
-</segment>
-</unit>
-<unit id="763fe702-d357-447b-8999-0da9288a1034">
-<notes>
-<note appliesTo="source">line: 35</note>
-<note appliesTo="source">prefix: * </note>
-</notes>
-<segment>
-<source>NVDA+Shift+7: system uptime</source>
-</segment>
-</unit>
-<unit id="17db2052-331b-4eb2-9524-28b4f94dfb3a">
-<notes>
-<note appliesTo="source">line: 37</note>
-</notes>
-<segment>
-<source>You can change these gestures via the input gestures dialog.</source>
+<source>Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).</source>
 </segment>
 </unit>
 <unit id="cf9d1f4c-49a9-44c6-b161-ecfd913e64f6">
 <notes>
-<note appliesTo="source">line: 39</note>
+<note appliesTo="source">line: 28</note>
 <note appliesTo="source">prefix: ## </note>
 </notes>
 <segment>
@@ -295,7 +214,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="6afdbb36-1fa8-4498-99e0-3af26ac88091">
 <notes>
-<note appliesTo="source">line: 41</note>
+<note appliesTo="source">line: 30</note>
 </notes>
 <segment>
 <source>This add-on does not replace task manager and other system information programs for Windows. Also note the following:</source>
@@ -303,7 +222,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="be5a90cc-97c4-4f1d-a612-7cdea631f49a">
 <notes>
-<note appliesTo="source">line: 43</note>
+<note appliesTo="source">line: 32</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -312,7 +231,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="70ea07e4-d172-4dc7-aa11-970495a5c25e">
 <notes>
-<note appliesTo="source">line: 44</note>
+<note appliesTo="source">line: 33</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -321,7 +240,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="f30cb84e-93b4-4c9e-b1e7-ea10a41b7434">
 <notes>
-<note appliesTo="source">line: 45</note>
+<note appliesTo="source">line: 34</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -330,7 +249,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="e7463f56-ef68-4bc5-b6de-b4a53feff8e7">
 <notes>
-<note appliesTo="source">line: 46</note>
+<note appliesTo="source">line: 35</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -339,7 +258,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="11a1d3d4-a8d8-4fa9-9abc-546aaed0be41">
 <notes>
-<note appliesTo="source">line: 47</note>
+<note appliesTo="source">line: 36</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -348,7 +267,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="843f5230-c7a3-47e4-94f9-e20d98046a36">
 <notes>
-<note appliesTo="source">line: 48</note>
+<note appliesTo="source">line: 37</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -357,7 +276,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="cb5afef8-535b-45b2-bc60-64b07663bed7">
 <notes>
-<note appliesTo="source">line: 49</note>
+<note appliesTo="source">line: 38</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -366,7 +285,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="2526a96e-9263-4d2b-acf3-adf0ebf773e0">
 <notes>
-<note appliesTo="source">line: 50</note>
+<note appliesTo="source">line: 39</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -375,7 +294,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="dcf75d56-99c1-49fd-be04-98b32d24cc3d">
 <notes>
-<note appliesTo="source">line: 52</note>
+<note appliesTo="source">line: 41</note>
 <note appliesTo="source">prefix: ## </note>
 </notes>
 <segment>
@@ -384,7 +303,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="e528f8b1-3f40-46a0-affe-9488a3625d8f">
 <notes>
-<note appliesTo="source">line: 54</note>
+<note appliesTo="source">line: 43</note>
 </notes>
 <segment>
 <source>You can configure the following resource usage reporting options from NVDA settings screen under Resource Monitor category:</source>
@@ -392,7 +311,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="fcb20d26-f3e4-4087-9f64-d60e46d28ed7">
 <notes>
-<note appliesTo="source">line: 56</note>
+<note appliesTo="source">line: 45</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -401,7 +320,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="095a4fbe-65eb-434e-874e-eb71c32c9394">
 <notes>
-<note appliesTo="source">line: 57</note>
+<note appliesTo="source">line: 46</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -410,7 +329,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="ac429264-33c3-40e3-a5c5-413bdcad2c0c">
 <notes>
-<note appliesTo="source">line: 58</note>
+<note appliesTo="source">line: 47</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -419,7 +338,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="cede3681-25e1-4335-adad-b188883c418e">
 <notes>
-<note appliesTo="source">line: 60</note>
+<note appliesTo="source">line: 49</note>
 </notes>
 <segment>
 <source>For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.</source>
@@ -427,7 +346,7 @@ $(ID:32d59eb2-cc6d-4498-8a04-ed6e06dbe82e)
 </unit>
 <unit id="32d59eb2-cc6d-4498-8a04-ed6e06dbe82e">
 <notes>
-<note appliesTo="source">line: 62</note>
+<note appliesTo="source">line: 51</note>
 </notes>
 <segment>
 <source>[1]: https://github.com/kefaslungu/resourceMonitor/blob/main/changes.md</source>
