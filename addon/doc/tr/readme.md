@@ -22,18 +22,7 @@ Aşağıdaki katman komutları, bireysel kaynak kullanım bilgilerini elde etmek
 * U: sistem çalışma süresi
 * W: Wi-Fi (ağ adı (SSID), sinyal gücü, güvenlik modu veya mevcut değilse SSID yok)
 
-Kaynak komutları, katmanı aktif tutar; böylece bu komutlar tekrar edilebilir. Katmandan çıkmak için Escape tuşuna basın; atanmamış bir tuş, aktif uygulamadan geçirilerek çıkışı sağlar.
-
-Sınırlı geriye dönük uyumluluk için, önceki NVDA+Shift+1 ile NVDA+Shift+7 kaynak kısayolları kullanılabilir durumda bırakıldı (bu komutların gelecekteki bir eklenti sürümünde kaldırılması planlanmaktadır):
-
-* NVDA+Shift+1: CPU
-* NVDA+Shift+2/5: hafıza (NVDA+Shift+5, NVDA+Shift+2 tuş kombinasyonu kullanılamadığında alternatif bir tuş kombinasyonudur)
-* NVDA+Shift+3: diskler
-* NVDA+Shift+4: wi-fi
-* NVDA+Shift+6: işletim sistemi
-* NVDA+Shift+7: sistem çalışma süresi
-
-Bu hareketleri girdi hareketleri iletişim kutusu aracılığıyla değiştirebilirsiniz.
+Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Kullanım notları
 

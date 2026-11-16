@@ -22,18 +22,7 @@
 * U: час безперебійної роботи системи
 * W: wi-fi (назва мережі (SSID), сила сигналу, режим безпеки або відсутність SSID, якщо його немає)
 
-Команди монітора ресурсів зберігають активність шару, щоб їх можна було повторювати. Натисніть клавішу Escape, щоб вийти з шару; неприв’язана клавіша викликає вихід із шару та передається до активної програми.
-
-Для обмеженої зворотної сумісності попередні комбінації клавіш NVDA+Shift+1 – NVDA+Shift+7 залишаються доступними (планується, що ці команди будуть видалені в майбутній версії додатка):
-
-* NVDA+Shift+1: Процесор
-* NVDA+Shift+2/5: пам’ять (комбінація NVDA+Shift+5 є альтернативою комбінації NVDA+Shift+2, якщо останню неможливо виконати)
-* NVDA+Shift+3: диски
-* NVDA+Shift+4: Wi-Fi
-* NVDA+Shift+6: операційна система
-* NVDA+Shift+7: час безперебійної роботи системи
-
-Ви можете змінити ці комбінації через діалог жести вводу.
+Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Примітки про користування
 

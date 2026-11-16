@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-09 05:32+0000\n"
-"PO-Revision-Date: 2026-11-09 05:34\n"
+"POT-Creation-Date: 2026-11-16 05:41+0000\n"
+"PO-Revision-Date: 2026-11-16 05:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -158,90 +158,90 @@ msgid "Presents the average processor load and the load of each core. If pressed
 msgstr "Zeigt die durchschnittliche Prozessorauslastung und die Auslastung jedes einzelnen Kerns an. Bei zweimaligem Drücken werden die Informationen in die Zwischenablage kopiert."
 
 #. Translators: Shows average load of CPU cores (example: core 1, 50%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:544
+#: addon\globalPlugins\resourceMonitor\__init__.py:543
 #, python-brace-format
 msgid "Core {coreNumber}: {corePercent}%"
 msgstr "Kern {coreNumber}: {corePercent} Prozent"
 
 #. Translators: Shows average load of the processor on single-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:551
+#: addon\globalPlugins\resourceMonitor\__init__.py:550
 #, python-brace-format
 msgid "{avgLoad}% CPU load."
 msgstr "{avgLoad}% CPU-Auslastung."
 
 #. Translators: Shows average load of the processor and the load for each core on multi-core systems.
-#: addon\globalPlugins\resourceMonitor\__init__.py:554
+#: addon\globalPlugins\resourceMonitor\__init__.py:553
 #, python-brace-format
 msgid "{avgLoad}% average CPU load, {cores}."
 msgstr "{avgLoad}% durchschnittliche CPU-Auslastung, {cores} Kerne."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:565
+#: addon\globalPlugins\resourceMonitor\__init__.py:564
 msgid "Presents the used and total space for both physical and virtual ram. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt den belegten und den gesamten Speicherplatz für den physischen und den virtuellen Arbeitsspeicher an. Bei zweimaligem Drücken werden die Informationen in die Zwischenablage kopiert."
 
 #. Translators: Shows RAM (physical memory) usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:576
+#: addon\globalPlugins\resourceMonitor\__init__.py:574
 #, python-brace-format
 msgid "Physical: {physicalUsed} of {physicalTotal} used ({physicalPercent}%). "
 msgstr "Physikalisch: {physicalUsed} von {physicalTotal}, verwendet ({physicalPercent} Prozent). "
 
 #. Translators: Shows virtual memory usage.
-#: addon\globalPlugins\resourceMonitor\__init__.py:584
+#: addon\globalPlugins\resourceMonitor\__init__.py:582
 #, python-brace-format
 msgid "Virtual: {virtualUsed} of {virtualTotal} used ({virtualPercent}%)."
 msgstr "Virtueller Arbeitsspeicher: {virtualUsed} von {virtualTotal} verwendet ({virtualPercent} Prozent)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:597
+#: addon\globalPlugins\resourceMonitor\__init__.py:595
 msgid "Presents the used and total space of the fixed (built-in), removable, and mapped network drives on this computer. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt den belegten und gesamten Speicherplatz von festen (integrierten), wechselbaren und verbundenen Netzlaufwerken auf diesem Computer an. Bei zweimaligem Drücken wird die Information in die Zwischenablage kopiert."
 
 #. Translators: Reported when a mapped network drive is currently unreachable.
-#: addon\globalPlugins\resourceMonitor\__init__.py:626
+#: addon\globalPlugins\resourceMonitor\__init__.py:623
 #, python-brace-format
 msgid "{driveName} (network drive): not available."
 msgstr "{driveName} (Netzlaufwerk) ist nicht verfügbar."
 
 #. Translators: word used to describe a mapped network drive.
-#: addon\globalPlugins\resourceMonitor\__init__.py:629
+#: addon\globalPlugins\resourceMonitor\__init__.py:626
 msgid "network"
 msgstr "Netzwerk"
 
 #. Translators: Shows drive letter, type of drive (fixed, removable, or network),
 #. used capacity and total capacity of a drive
 #. (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-#: addon\globalPlugins\resourceMonitor\__init__.py:634
+#: addon\globalPlugins\resourceMonitor\__init__.py:631
 #, python-brace-format
 msgid "{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%)."
 msgstr "{driveName} ({driveType} Laufwerk): {usedSpace} von {totalSpace} verwendet ({percent}%)."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:649
-#: addon\globalPlugins\resourceMonitor\__init__.py:660
+#: addon\globalPlugins\resourceMonitor\__init__.py:646
+#: addon\globalPlugins\resourceMonitor\__init__.py:657
 msgid "No wireless devices"
 msgstr "Keine drahtlosen Geräte"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:650
+#: addon\globalPlugins\resourceMonitor\__init__.py:647
 msgid "Unable to get wireless information"
 msgstr ""
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:662
+#: addon\globalPlugins\resourceMonitor\__init__.py:659
 msgid "No wireless connections"
 msgstr "Keine drahtlosen Verbindungen"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:685
+#: addon\globalPlugins\resourceMonitor\__init__.py:682
 #, python-brace-format
 msgid "Connected to {}, signal strength: {}%, security type: {}"
 msgstr "Verbunden mit {}, Signalstärke: {}%, Sicherheitstyp: {}"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:703
+#: addon\globalPlugins\resourceMonitor\__init__.py:700
 msgid "Announces the system's wireless network name (SSID), connection strength, and security  protocol. If pressed twice, copies the information to the clipboard."
 msgstr "zeigt den WLAN-Namen (SSID), die Verbindungsstärke und das Sicherheitsprotokoll des Systems an. Bei zweimaligem Drücken werden die Informationen in die Zwischenablage kopiert."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:719
+#: addon\globalPlugins\resourceMonitor\__init__.py:715
 msgid "Announces the version of Windows you are using. If pressed twice, copies the information to the clipboard."
 msgstr "zeigt die aktuell verwendete Windows-Version an. Wird die Taste zweimal schnell hintereinander gedrückt, wird diese Information in die Zwischenablage kopiert."
 
 #. Translators: system uptime in days.
-#: addon\globalPlugins\resourceMonitor\__init__.py:744
+#: addon\globalPlugins\resourceMonitor\__init__.py:739
 #, python-brace-format
 msgid "{days:d} day"
 msgid_plural "{days:d} days"
@@ -249,7 +249,7 @@ msgstr[0] "{days:d} Tag"
 msgstr[1] "{days:d} Tage"
 
 #. Translators: system uptime in hours.
-#: addon\globalPlugins\resourceMonitor\__init__.py:748
+#: addon\globalPlugins\resourceMonitor\__init__.py:743
 #, python-brace-format
 msgid "{hours:d} hour"
 msgid_plural "{hours:d} hours"
@@ -257,7 +257,7 @@ msgstr[0] "{hours:d} Stunde"
 msgstr[1] "{hours:d} Stunden"
 
 #. Translators: system uptime in minutes.
-#: addon\globalPlugins\resourceMonitor\__init__.py:752
+#: addon\globalPlugins\resourceMonitor\__init__.py:747
 #, python-brace-format
 msgid "{minutes:d} minute"
 msgid_plural "{minutes:d} minutes"
@@ -265,68 +265,68 @@ msgstr[0] "{minutes:d} Minute"
 msgstr[1] "{minutes:d} Minuten"
 
 #. Translators: system uptime in seconds.
-#: addon\globalPlugins\resourceMonitor\__init__.py:756
+#: addon\globalPlugins\resourceMonitor\__init__.py:751
 #, python-brace-format
 msgid "{seconds:d} second"
 msgid_plural "{seconds:d} seconds"
 msgstr[0] "{seconds:d} Sekunde4"
 msgstr[1] "{seconds:d} Sekunden"
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:763
+#: addon\globalPlugins\resourceMonitor\__init__.py:758
 msgid "Announces the system's uptime. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die Systemlaufzeit des Systems an. Bei zweimaligem Drücken wird diese Information in die Zwischenablage kopiert."
 
 #. Translators: Obtaining uptime failed
-#: addon\globalPlugins\resourceMonitor\__init__.py:778
+#: addon\globalPlugins\resourceMonitor\__init__.py:772
 msgid "Failed to get the system's uptime."
 msgstr "Fehler beim Abruf der Systemlaufzeit."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:794
+#: addon\globalPlugins\resourceMonitor\__init__.py:788
 #, python-brace-format
 msgid "GPU {gpuNumber}: usage {usage}%, temp {temperature}."
 msgstr "GPU {gpuNumber}: Auslastung {usage}%, Temperatur {temperature}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:804
-#: addon\globalPlugins\resourceMonitor\__init__.py:861
+#: addon\globalPlugins\resourceMonitor\__init__.py:798
+#: addon\globalPlugins\resourceMonitor\__init__.py:855
 msgid "No GPU information available."
 msgstr "Keine GPU-Informationen verfügbar."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:806
+#: addon\globalPlugins\resourceMonitor\__init__.py:800
 msgid "Unable to get GPU information."
 msgstr "GPU-Informationen können nicht abgerufen werden."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:807
-#: addon\globalPlugins\resourceMonitor\__init__.py:864
+#: addon\globalPlugins\resourceMonitor\__init__.py:801
+#: addon\globalPlugins\resourceMonitor\__init__.py:858
 msgid "No GPU data available."
 msgstr "Keine GPU-Daten verfügbar."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:812
+#: addon\globalPlugins\resourceMonitor\__init__.py:806
 msgid "Announces GPU usage and temperature. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die GPU-Auslastung und -Temperatur an. Bei zweimaligem Drücken werden diese Informationen in die Zwischenablage kopiert."
 
 #. noqa
 #. Translators: Message reported when the GPU command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:827
+#: addon\globalPlugins\resourceMonitor\__init__.py:821
 msgid "Failed to get GPU information."
 msgstr "GPU-Informationen konnten nicht abgerufen werden."
 
 #. Translators: Shows GPU memory usage (example: GPU 1: 2.00 GB of 8.00 GB used (25%)).
-#: addon\globalPlugins\resourceMonitor\__init__.py:852
+#: addon\globalPlugins\resourceMonitor\__init__.py:846
 #, python-brace-format
 msgid "GPU {gpuNumber}: {memoryInfo}."
 msgstr "GPU {gpuNumber}: {memoryInfo}."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:863
+#: addon\globalPlugins\resourceMonitor\__init__.py:857
 msgid "Unable to get GPU memory information."
 msgstr "Informationen zum GPU-Speicher können nicht abgerufen werden."
 
-#: addon\globalPlugins\resourceMonitor\__init__.py:869
+#: addon\globalPlugins\resourceMonitor\__init__.py:863
 msgid "Announces GPU memory usage. If pressed twice, copies the information to the clipboard."
 msgstr "Zeigt die GPU-Speichernutzung an. Bei zweimaligem Drücken wird die Information in die Zwischenablage kopiert."
 
 #. noqa
 #. Translators: Message reported when the GPU memory command fails unexpectedly.
-#: addon\globalPlugins\resourceMonitor\__init__.py:884
+#: addon\globalPlugins\resourceMonitor\__init__.py:878
 msgid "Failed to get GPU memory information."
 msgstr "Informationen zum GPU-Speicher konnten nicht abgerufen werden."
 
@@ -340,6 +340,6 @@ msgstr "Ein praktischer Ressourcenmonitor, der CPU-Auslastung, Arbeitsspeicherbe
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2026.3 or later is required."
+msgid "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individaul resource info command can be assigned from input gestures dialog)."
 msgstr ""
 

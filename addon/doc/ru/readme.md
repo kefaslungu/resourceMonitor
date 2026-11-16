@@ -22,18 +22,7 @@
 * U: время безотказной работы системы
 * W: Wi-Fi (название сети (SSID), уровень сигнала, режим безопасности или отсутствие SSID, если таковой отсутствует)
 
-Команды ресурсов поддерживают активность уровня, позволяя их повторять. Нажмите Escape, чтобы выйти из уровня; неназначенная клавиша выходит из уровня и передаётся активному приложению.
-
-Для обеспечения ограниченной обратной совместимости предыдущие сочетания клавиш от NVDA+Shift+1 до NVDA+Shift+7 остаются доступными (планируется удалить эти команды в будущей версии дополнения):
-
-* NVDA+Shift+1: ЦП
-* NVDA+Shift+2/5: память (NVDA+Shift+5 является альтернативой NVDA+Shift+2, когда выполнить последнюю комбинацию клавиш невозможно)
-* NVDA+Shift+3: диски
-* NVDA+Shift+4: wi-fi
-* NVDA+Shift+6: операционная система
-* NVDA+Shift+7: время безотказной работы системы
-
-Изменить эти жесты можно в диалоге жестов ввода.
+Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Замечания по использованию
 

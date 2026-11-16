@@ -22,18 +22,7 @@
 * U：系统运行时间
 * W：无线网络信息（网络名称（SSID）、信号强度、安全类型，如果没有可用网络则提示无 SSID）
 
-资源命令层会保持激活状态，以便重复执行。按 Esc 键退出命令层；未映射的按键将退出命令层并传递给当前活动的应用程序。
-
-为了保持有限的向后兼容性，之前的 NVDA+Shift+1 到 NVDA+Shift+7 资源快捷键仍然可用（这些命令计划在未来的插件版本中移除）：
-
-* NVDA+Shift+1：CPU
-* NVDA+Shift+2/5：内存（当 NVDA+Shift+2 这一组合键无法执行时，可使用 NVDA+Shift+5 作为替代）
-* NVDA+Shift+3：磁盘
-* NVDA+Shift+4：无线网络
-* NVDA+Shift+6：操作系统
-* NVDA+Shift+7：系统运行时间
-
-您可通过按键与手势对话框更改这些快捷键。
+Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## 使用说明
 
