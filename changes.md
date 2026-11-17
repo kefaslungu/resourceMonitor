@@ -4,7 +4,7 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 
 ## Version 27.01
 
-* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individaul resource info command can be assigned from input gestures dialog).
+* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog).
 
 ## Version 26.11
 
