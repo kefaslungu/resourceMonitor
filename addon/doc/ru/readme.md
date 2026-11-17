@@ -22,7 +22,7 @@
 * U: время безотказной работы системы
 * W: Wi-Fi (название сети (SSID), уровень сигнала, режим безопасности или отсутствие SSID, если таковой отсутствует)
 
-Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
+Команды ресурсов поддерживают активность уровня, поэтому их можно повторять. Нажмите Escape, чтобы выйти из уровня; неназначенная клавиша выходит и передаётся через активное приложение. Вы также можете назначить сочетания клавиш для оповещения информации об отдельных ресурсах без предварительного входа в уровень (перейдите в меню NVDA/Настройки/Жесты ввода, чтобы назначить пользовательские команды).
 
 ## Замечания по использованию
 

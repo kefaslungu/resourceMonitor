@@ -22,7 +22,7 @@
 * U: час безперебійної роботи системи
 * W: wi-fi (назва мережі (SSID), сила сигналу, режим безпеки або відсутність SSID, якщо його немає)
 
-Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
+Команди ресурсів зберігають активність шару, щоб їх можна було повторювати. Натисніть клавішу Escape, щоб вийти з шару; клавіша, якій не призначено функції, закриває командний шар та передається до активної програми. Ви також можете призначити комбінації клавіш для озвучування інформації про окремі ресурси без попереднього входу в шар (перейдіть до меню NVDA/Налаштування/Жести вводу, щоб призначити власні команди).
 
 ## Примітки про користування
 
@@ -43,7 +43,7 @@ Resource commands keep the layer active so they can be repeated. Press Escape to
 
 * Одиниця вимірювання температури графічного процесора: виберіть одиницю вимірювання температури, яка вказується у інформації про графічний процесор (Цельсій або Фаренгейт).
 * Сповіщення про підключення/відключення Wi-Fi: виберіть, як NVDA має повідомляти про сповіщення про підключення/відключення Wi-Fi (вимкнено, повідомлення, звук, обидва).
-* Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes and terabytes are reported (default is the alternative method (KB/MB/...).
+* Позначення обсягу пам'яті та дискового простору: виберіть спосіб показу обсягів оперативної пам'яті (RAM) та одиниць виміру дискового простору, таких як гігабайти та терабайти (початково встановлено альтернативний метод (КБ/МБ/...)).
 
 Перелік змін, внесених між окремими версіями додатка, наведено в документі [журнал змін до версій додатка][1].
 

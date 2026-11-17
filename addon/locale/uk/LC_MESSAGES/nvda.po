@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-16 05:41+0000\n"
-"PO-Revision-Date: 2026-11-16 05:43\n"
+"POT-Creation-Date: 2026-11-17 12:59+0000\n"
+"PO-Revision-Date: 2026-11-17 13:03\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
@@ -16,6 +16,20 @@ msgstr ""
 "X-Crowdin-Language: uk\n"
 "X-Crowdin-File: resourceMonitor.pot\n"
 "X-Crowdin-File-ID: 214\n"
+
+#. Translators: dialog text informing users about deprecation of NVDA+Shift+number row commands.
+#: addon\installTasks.py:21
+msgid "The NVDA+Shift+number row commands used to obtain individual resource information such as NVDA+Shift+1 for CPU load are deprecated.\n\n"
+"Please use Resource Monitor layer commands (NVDA+Shift+E followed by a shortcut key) to obtain resource information as follows:\n\n"
+"Overall resource usage: Space, CPU load: C, disk usage: D, GPU overview: G, GPU memory: Shift+G,\n\n"
+"memory usage: M, OS (Windows) version and architecture: O, system uptime: U, wi-fi status: W.\n\n"
+"After obtaining resource usage via the layer commands, press Escape to exit the layer."
+msgstr ""
+
+#. Translators: dialog title for NVDA+Shift+number row commands deprecation/warning notice.
+#: addon\installTasks.py:28
+msgid "Resource Monitor commands warning"
+msgstr ""
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:69
 msgid "No authentication (Open)"
@@ -347,6 +361,6 @@ msgstr "Зручний монітор ресурсів, який повідом�
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individaul resource info command can be assigned from input gestures dialog)."
+msgid "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
 msgstr ""
 

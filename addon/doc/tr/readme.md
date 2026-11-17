@@ -22,7 +22,7 @@ Aşağıdaki katman komutları, bireysel kaynak kullanım bilgilerini elde etmek
 * U: sistem çalışma süresi
 * W: Wi-Fi (ağ adı (SSID), sinyal gücü, güvenlik modu veya mevcut değilse SSID yok)
 
-Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
+Kaynak komutları, tekrarlanabilmeleri için katmanı aktif tutar. Katmandan çıkmak için Escape tuşuna basın; atanmamış bir tuş, aktif uygulama üzerinden geçişi sağlar. Ayrıca, önce katmana girmeden bireysel kaynak bilgilerini duyurmak için kısayollar atayabilirsiniz (özel komutlar atamak için NVDA menüsü/Tercihler/Girdi hareketleri bölümüne gidin).
 
 ## Kullanım notları
 
