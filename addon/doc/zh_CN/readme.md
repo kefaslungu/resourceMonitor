@@ -22,7 +22,7 @@
 * U：系统运行时间
 * W：无线网络信息（网络名称（SSID）、信号强度、安全类型，如果没有可用网络则提示无 SSID）
 
-Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
+资源命令会使命令层保持激活状态，以便重复执行。按 Esc 退出命令层；未分配的按键会退出命令层并被传递给当前活动的应用程序。您还可分配快捷键来直接读出单个资源信息，而无需先进入命令层（前往 NVDA 菜单 > 选项 > 按键与手势来分配自定义快捷键）。
 
 ## 使用说明
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-17 12:59+0000\n"
-"PO-Revision-Date: 2026-11-17 13:01\n"
+"POT-Creation-Date: 2026-11-18 23:13+0000\n"
+"PO-Revision-Date: 2026-11-18 23:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -24,12 +24,16 @@ msgid "The NVDA+Shift+number row commands used to obtain individual resource inf
 "Overall resource usage: Space, CPU load: C, disk usage: D, GPU overview: G, GPU memory: Shift+G,\n\n"
 "memory usage: M, OS (Windows) version and architecture: O, system uptime: U, wi-fi status: W.\n\n"
 "After obtaining resource usage via the layer commands, press Escape to exit the layer."
-msgstr ""
+msgstr "用于获取单个资源信息（例如 NVDA+Shift+1 获取 CPU 负载）的 NVDA+Shift+数字命令已弃用。\n\n"
+"请使用资源监控器层命令（NVDA+Shift+E，然后按快捷键）获取资源信息，如下所示：\n\n"
+"总体资源使用情况：空格键；CPU 负载：C；磁盘使用情况：D；GPU 概览：G；GPU 内存：Shift+G；\n\n"
+"内存使用情况：M；操作系统（Windows）版本和架构：O；系统运行时间：U；无线网络状态：W。\n\n"
+"通过层命令获取资源使用情况后，按 Esc 键退出命令层。"
 
 #. Translators: dialog title for NVDA+Shift+number row commands deprecation/warning notice.
 #: addon\installTasks.py:28
 msgid "Resource Monitor commands warning"
-msgstr ""
+msgstr "资源监控器命令警告"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:69
 msgid "No authentication (Open)"
@@ -119,12 +123,12 @@ msgstr "消息和声音"
 #. Translators: Label for a combo box to select the notation style used to report memory and disk sizes.
 #: addon\globalPlugins\resourceMonitor\__init__.py:332
 msgid "Memory and disk size &notation:"
-msgstr ""
+msgstr "内存和磁盘大小表示法："
 
 #. Translators: Traditional binary size notation (example: 1K, 1M, 1G).
 #: addon\globalPlugins\resourceMonitor\__init__.py:335
 msgid "Traditional (K, M, G)"
-msgstr ""
+msgstr "传统（K、M、G）"
 
 #. Translators: Alternative binary size notation with unit suffix (example: 1 KB, 1 MB, 1 GB).
 #: addon\globalPlugins\resourceMonitor\__init__.py:337
@@ -134,17 +138,17 @@ msgstr ""
 #. Translators: Verbose size notation with full unit names (example: 1 kilobyte, 1 megabyte).
 #: addon\globalPlugins\resourceMonitor\__init__.py:339
 msgid "Verbose (kilobytes, megabytes)"
-msgstr ""
+msgstr "详细（kilobytes、megabytes）"
 
 #. Translators: IEC binary size notation (example: 1Ki, 1Mi, 1Gi).
 #: addon\globalPlugins\resourceMonitor\__init__.py:341
 msgid "IEC (Ki, Mi, Gi)"
-msgstr ""
+msgstr "IEC（Ki、Mi、Gi）"
 
 #. Translators: SI decimal size notation where 1 KB = 1000 bytes (example: 1K, 1M, 1G).
 #: addon\globalPlugins\resourceMonitor\__init__.py:343
 msgid "SI decimal (K, M, G)"
-msgstr ""
+msgstr "SI 十进制（K、M、G）"
 
 #. Translators: Presents Windows version (example output: "Windows 10 22H2 (AMD64) build 19045.5247").
 #: addon\globalPlugins\resourceMonitor\__init__.py:391
@@ -349,6 +353,7 @@ msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存�
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
+msgid "* NVDA 2026.3 or later is required.\n"
+"* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
 msgstr ""
 

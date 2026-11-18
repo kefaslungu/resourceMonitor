@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-17 12:59+0000\n"
-"PO-Revision-Date: 2026-11-17 13:03\n"
+"POT-Creation-Date: 2026-11-18 23:13+0000\n"
+"PO-Revision-Date: 2026-11-18 23:15\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -24,12 +24,16 @@ msgid "The NVDA+Shift+number row commands used to obtain individual resource inf
 "Overall resource usage: Space, CPU load: C, disk usage: D, GPU overview: G, GPU memory: Shift+G,\n\n"
 "memory usage: M, OS (Windows) version and architecture: O, system uptime: U, wi-fi status: W.\n\n"
 "After obtaining resource usage via the layer commands, press Escape to exit the layer."
-msgstr ""
+msgstr "Các lệnh NVDA+Shift+hàng số được sử dụng để lấy thông tin tài nguyên riêng lẻ, chẳng hạn như NVDA+Shift+1 để lấy tải CPU, đã lỗi thời.\n\n"
+"Vui lòng sử dụng các lệnh của lớp theo dõi Tài nguyên (NVDA+Shift+E theo sau là phím tắt) để lấy thông tin tài nguyên như sau:\n\n"
+"Tổng mức sử dụng tài nguyên: khoảng trắng, Tải CPU: C, Sử dụng ổ đĩa: D, Tổng quan GPU: G, Bộ nhớ GPU: Shift+G,\n\n"
+"Mức sử dụng bộ nhớ: M, Phiên bản và kiến ​​trúc hệ điều hành (Windows): O, Thời gian hoạt động của hệ thống: U, Trạng thái Wi-Fi: W.\n\n"
+"Sau khi lấy được thông tin về mức sử dụng tài nguyên thông qua các lớp lệnh , hãy nhấn phím Escape để thoát khỏi lớp."
 
 #. Translators: dialog title for NVDA+Shift+number row commands deprecation/warning notice.
 #: addon\installTasks.py:28
 msgid "Resource Monitor commands warning"
-msgstr ""
+msgstr "Cảnh báo lệnh của theo dõi tài nguyên"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:69
 msgid "No authentication (Open)"
@@ -349,6 +353,7 @@ msgstr "Một tiện ích theo dõi tài nguyên để báo cáo tải CPU, mứ
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
+msgid "* NVDA 2026.3 or later is required.\n"
+"* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
 msgstr ""
 

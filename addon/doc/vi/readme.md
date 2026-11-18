@@ -22,7 +22,7 @@ Các lớp lệnh sau đây có sẵn để lấy thông tin về mức sử d�
 * U: thời gian hoạt động của hệ thống
 * W: Wi-Fi (tên mạng (SSID), cường độ tín hiệu, chế độ bảo mật, hoặc không có SSID nếu không có mạng nào)
 
-Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
+Các lệnh tài nguyên giữ cho lớp hoạt động để chúng có thể được lặp lại. Nhấn phím Escape để thoát khỏi lớp; một phím chưa được gán sẽ thoát và được truyền qua ứng dụng đang hoạt động. Bạn cũng có thể gán các phím tắt để thông báo thông tin tài nguyên riêng lẻ mà không cần phải vào lớp trước (vào menu NvDA/Tùy chọn/Quản lý thao tác để gán các lệnh tùy chỉnh).
 
 ## Các lưu ý sử dụng
 
@@ -43,7 +43,7 @@ Bạn có thể cấu hình các tùy chọn báo cáo sử dụng tài nguyên 
 
 * Đơn vị đo nhiệt độ GPU: Chọn đơn vị đo nhiệt độ được hiển thị trong thông tin GPU (độ C hoặc độ F).
 * Thông báo kết nối/ngắt kết nối Wi-Fi: Chọn cách NVDA sẽ thông báo các thông báo kết nối/ngắt kết nối Wi-Fi (tắt, tin nhắn, âm thanh, cả tin nhắn và âm thanh).
-* Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes and terabytes are reported (default is the alternative method (KB/MB/...).
+* Ký hiệu dung lượng bộ nhớ và ổ đĩa: chọn cách hiển thị dung lượng bộ nhớ RAM và dung lượng ổ đĩa theo đơn vị như gigabyte và terabyte (mặc định là phương pháp thay thế (KB/MB/...)).
 
 Để biết danh sách các thay đổi được thực hiện giữa mỗi bản phát hành tiện ích bổ sung, hãy tham khảo tài liệu [thay đổi cho bản phát hành của tiện ích bổ sung][1].
 

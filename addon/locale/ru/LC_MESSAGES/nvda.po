@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-17 12:59+0000\n"
-"PO-Revision-Date: 2026-11-17 13:02\n"
+"POT-Creation-Date: 2026-11-18 23:13+0000\n"
+"PO-Revision-Date: 2026-11-18 23:15\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -361,6 +361,7 @@ msgstr "Удобный монитор ресурсов, который позв�
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
+msgid "* NVDA 2026.3 or later is required.\n"
+"* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
 msgstr ""
 
