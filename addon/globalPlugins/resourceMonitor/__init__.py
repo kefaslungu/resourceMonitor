@@ -712,7 +712,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@scriptHandler.script(
 		# Translators: Input help mode message about Windows version command in Resource Monitor.
 		description=_(
-			"Announces the version of Windows you are using. "
+			"Announces the operating system (Windows) version in use. "
 			"If pressed twice, copies the information to the clipboard."
 		),
 		speakOnDemand=True,
