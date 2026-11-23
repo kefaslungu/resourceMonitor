@@ -404,7 +404,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:m": "announceRamInfo",
 		"kb:d": "announceDriveInfo",
 		"kb:w": "wlanStatusReport",
-		"kb:o": "announceWinVer",
+		"kb:o": "announceOSVer",
 		"kb:u": "announceUptime",
 		"kb:g": "announceGpuInfo",
 		"kb:shift+g": "announceGpuMemoryInfo",
@@ -717,8 +717,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		),
 		speakOnDemand=True,
 	)
-	def script_announceWinVer(self, gesture: inputCore.InputGesture):
-		# Unlike other resource usage information, current Windows version info is static.
+	def script_announceOSVer(self, gesture: inputCore.InputGesture):
+		# Unlike other resource usage information, current OS (Windows) version info is static.
 		info = getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
