@@ -22,7 +22,8 @@ def onInstall() -> None:
 Please use Resource Monitor layer commands (NVDA+Shift+E followed by a shortcut key) to obtain resource information as follows:\n
 Overall resource usage: Space, CPU load: C, disk usage: D, GPU overview: G, GPU memory: Shift+G,\n
 memory usage: M, OS (Windows) version and architecture: O, system uptime: U, wi-fi status: W.\n
-After obtaining resource usage via the layer commands, press Escape to exit the layer."""
+After obtaining resource usage via the layer commands, press Escape to exit the layer.\n
+Note: you can assign keyboard shortcuts for individual Resource Monitor layer commands from input gestures dialog."""
 		),
 		# Translators: dialog title for NVDA+Shift+number row commands deprecation/warning notice.
 		_("Resource Monitor commands warning"),
