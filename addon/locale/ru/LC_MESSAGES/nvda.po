@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-18 23:13+0000\n"
-"PO-Revision-Date: 2026-11-18 23:15\n"
+"POT-Creation-Date: 2026-11-23 06:22+0000\n"
+"PO-Revision-Date: 2026-11-23 06:32\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -23,13 +23,14 @@ msgid "The NVDA+Shift+number row commands used to obtain individual resource inf
 "Please use Resource Monitor layer commands (NVDA+Shift+E followed by a shortcut key) to obtain resource information as follows:\n\n"
 "Overall resource usage: Space, CPU load: C, disk usage: D, GPU overview: G, GPU memory: Shift+G,\n\n"
 "memory usage: M, OS (Windows) version and architecture: O, system uptime: U, wi-fi status: W.\n\n"
-"After obtaining resource usage via the layer commands, press Escape to exit the layer."
+"After obtaining resource usage via the layer commands, press Escape to exit the layer.\n\n"
+"Note: you can assign keyboard shortcuts for individual Resource Monitor layer commands from input gestures dialog."
 msgstr ""
 
 #. Translators: dialog title for NVDA+Shift+number row commands deprecation/warning notice.
-#: addon\installTasks.py:28
+#: addon\installTasks.py:29
 msgid "Resource Monitor commands warning"
-msgstr ""
+msgstr "Предупреждение о командах монитора ресурсов"
 
 #: addon\globalPlugins\resourceMonitor\__init__.py:69
 msgid "No authentication (Open)"
@@ -363,5 +364,6 @@ msgstr "Удобный монитор ресурсов, который позв�
 #: buildVars.py:29
 msgid "* NVDA 2026.3 or later is required.\n"
 "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
-msgstr ""
+msgstr "* Требуется NVDA 2026.3 или выше.\n"
+"* Полностью переведён на использование набора команд уровня монитора ресурсов. В результате команды NVDA+Shift+цифра основного ряда удалены (отдельную команду для получения информации о ресурсе можно назначить из диалога жестов ввода)."
 

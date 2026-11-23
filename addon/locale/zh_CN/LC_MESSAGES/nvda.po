@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-18 23:13+0000\n"
-"PO-Revision-Date: 2026-11-18 23:15\n"
+"POT-Creation-Date: 2026-11-23 06:22+0000\n"
+"PO-Revision-Date: 2026-11-23 06:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -23,15 +23,12 @@ msgid "The NVDA+Shift+number row commands used to obtain individual resource inf
 "Please use Resource Monitor layer commands (NVDA+Shift+E followed by a shortcut key) to obtain resource information as follows:\n\n"
 "Overall resource usage: Space, CPU load: C, disk usage: D, GPU overview: G, GPU memory: Shift+G,\n\n"
 "memory usage: M, OS (Windows) version and architecture: O, system uptime: U, wi-fi status: W.\n\n"
-"After obtaining resource usage via the layer commands, press Escape to exit the layer."
-msgstr "用于获取单个资源信息（例如 NVDA+Shift+1 获取 CPU 负载）的 NVDA+Shift+数字命令已弃用。\n\n"
-"请使用资源监控器层命令（NVDA+Shift+E，然后按快捷键）获取资源信息，如下所示：\n\n"
-"总体资源使用情况：空格键；CPU 负载：C；磁盘使用情况：D；GPU 概览：G；GPU 内存：Shift+G；\n\n"
-"内存使用情况：M；操作系统（Windows）版本和架构：O；系统运行时间：U；无线网络状态：W。\n\n"
-"通过层命令获取资源使用情况后，按 Esc 键退出命令层。"
+"After obtaining resource usage via the layer commands, press Escape to exit the layer.\n\n"
+"Note: you can assign keyboard shortcuts for individual Resource Monitor layer commands from input gestures dialog."
+msgstr ""
 
 #. Translators: dialog title for NVDA+Shift+number row commands deprecation/warning notice.
-#: addon\installTasks.py:28
+#: addon\installTasks.py:29
 msgid "Resource Monitor commands warning"
 msgstr "资源监控器命令警告"
 
@@ -355,5 +352,6 @@ msgstr "一个易于使用的资源监控器，可以读出 CPU 负载、内存�
 #: buildVars.py:29
 msgid "* NVDA 2026.3 or later is required.\n"
 "* Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info command can be assigned from input gestures dialog)."
-msgstr ""
+msgstr "* 需要 NVDA 2026.3 或更高版本。\n"
+"* 已完全过渡到资源监控器层命令。因此，NVDA+Shift+数字命令已被移除（单个资源信息命令可从按键与手势对话框中分配）。"
 
