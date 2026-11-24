@@ -28,7 +28,7 @@ Resource commands keep the layer active so they can be repeated. Press Escape to
 
 This add-on does not replace task manager and other system information programs for Windows. Also note the following:
 
-* Pressing resource commands twice will copy resource usage information to the clipboard.
+* Pressing resource commands twice or Control+NVDA+X will copy resource usage information to the clipboard (pressing Control+NVDA+X copies the last spoken resource information).
 * Resource information cannot be copied to the clipboard if running the add-on in secure screens.
 * CPU usage is given for logical processors, not physical cores. This is noticeable for processors with Hyper-Threading where number of CPU's is twice the number of CPU cores. On some newer computers, not all CPU cores will have hyper-threading enabled.
 * If there is heavy disk activity such as copying large files or while locating network drives, there might be delays when obtaining disk usage information.
