@@ -45,6 +45,7 @@ MODULE_DIR = os.path.dirname(__file__)
 # The below path is taken if the add-on confspec was not registered properly
 # at add-on install time or missing.
 confspec = {
+	"layerEntryONFirstPress": "bool(default=true)",
 	"gpuTempUnit": "string(default=celsius)",
 	"memorySizeUnit": "string(default=alternative)",
 	"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",
@@ -292,6 +293,24 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 
 	def makeSettings(self, settingsSizer: wx.BoxSizer) -> None:
 		settingsSizerHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+
+		# Translators: Label for a combo box to select the Resource Monitor layer entry modekey presses.
+		layerModeLabelText = _("Enter resource monitor &layer when layer command is performed:")
+		self._layerModeLabels = [
+			# Translators: Continuous mode (enter layer mode in one press, report resource info, press Escape to exit)
+			_("once"),
+			# Translators: Reporting mode (press layer command, report one resource info, exit immediatley,
+			# press multiple times to lock the layer; default mode)
+			_("repeatedly"),
+		]
+		self.layerModeList = settingsSizerHelper.addLabeledControl(
+			layerModeLabelText,
+			wx.Choice,
+			choices=self._layerModeLabels,
+		)
+		currentIndex = 0 if config.conf["resourceMonitor"].get("layerEntryONFirstPress", True) else 1
+		self.layerModeList.SetSelection(currentIndex)
+
 		# Translators: Label for a combo box to select the unit used to report GPU temperature.
 		gpuTempUnitLabelText = _("GPU &temperature unit:")
 		# Translators: An option in the GPU temperature unit combo box.
@@ -357,6 +376,10 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 		self.memorySizeUnitList.SetSelection(currentIndex)
 
 	def onSave(self) -> None:
+		selection = self.layerModeList.GetSelection()
+		if selection == wx.NOT_FOUND:
+			selection = 0  # default is "pressed once"
+		config.conf["resourceMonitor"]["layerEntryONFirstPress"] = selection == 0
 		selection = self.gpuTempUnitList.GetSelection()
 		if selection == wx.NOT_FOUND:
 			selection = 0
