@@ -414,10 +414,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		inputCore.normalizeGestureIdentifier(identifier)
 		for identifier in (*__layerGestures, _layerEntryGesture)
 	)
+	_lastExecutedLayerScript = None
+	_layerExpirationTimer = None
 
 	def __init__(self):
 		super().__init__()
 		self._isLayerActive = False
+		# Layer levels: 0 = off, 1 = report only, 2 = continuous monitoring
+		self._layerLevel = 0
 		inputCore.decide_executeGesture.register(self._decideExecuteGesture)
 		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		NVDASettingsDialog.categoryClasses.append(ResourceMonitorSettingsPanel)
@@ -474,6 +478,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def _decideExecuteGesture(self, gesture: inputCore.InputGesture) -> bool:
 		"""Exit the command layer before an unrelated gesture is resolved."""
+		if self._layerLevel == 1:
+			gestureScript = gesture.script
+			if gestureScript:
+				scriptName = scriptHandler.getScriptName(gestureScript)
+				if scriptName == "layerEntry":
+					# Continue if this is another invocation of layer entry script.
+					return True
+				# Clear layer gesture bindings after handling the gesture here if this is 'report only" (level 1) mode.
+				elif scriptName in self.__layerGestures.values():
+					if not self._lastExecutedLayerScript:
+						self._lastExecutedLayerScript = scriptName
+					if scriptName != self._lastExecutedLayerScript:
+						self._finishLayer()
+					if self._layerExpirationTimer and self._layerExpirationTimer.IsRunning():
+						wx.CallAfter(self._layerExpirationTimer.Stop)
+					self._layerExpirationTimer = wx.PyTimer(self._finishLayer)
+					wx.CallAfter(self._layerExpirationTimer.StartOnce, config.conf["keyboard"]["multiPressTimeout"])
 		if (
 			self._isLayerActive
 			and not gesture.isModifier
