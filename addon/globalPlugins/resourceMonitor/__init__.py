@@ -45,7 +45,7 @@ MODULE_DIR = os.path.dirname(__file__)
 # The below path is taken if the add-on confspec was not registered properly
 # at add-on install time or missing.
 confspec = {
-	"layerEntryONFirstPress": "bool(default=true)",
+	"layerEntryONFirstPress": "boolean(default=true)",
 	"gpuTempUnit": "string(default=celsius)",
 	"memorySizeUnit": "string(default=alternative)",
 	"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",

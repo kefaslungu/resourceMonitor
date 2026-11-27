@@ -10,7 +10,7 @@ def onInstall() -> None:
 	# Register this add-on's settings with NVDA's configuration system.
 	# The global plugin main module version serves as a fallback in case custom sections data is gone.
 	confspec = {
-		"layerEntryONFirstPress": "bool(default=true)",
+		"layerEntryONFirstPress": "boolean(default=true)",
 		"gpuTempUnit": "string(default=celsius)",
 		"memorySizeUnit": "string(default=alternative)",
 		"wifiStatusNotification": "option('off', 'message', 'sound', 'both', default='both')",
