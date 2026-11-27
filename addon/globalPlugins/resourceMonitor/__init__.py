@@ -506,8 +506,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _finishLayer(self) -> None:
 		"""Leave the resource monitor command layer."""
 		self._isLayerActive = False
+		self._layerLevel = 0
+		self._lastExecutedLayerScript = None
 		for gestureIdentifier in self.__layerGestures:
-			self.removeGestureBinding(gestureIdentifier)
+			try:
+				self.removeGestureBinding(gestureIdentifier)
+			except KeyError:
+				pass
 
 	@scriptHandler.script(
 		# Translators: Input help mode message for entering the Resource Monitor command layer.
