@@ -8,7 +8,9 @@
 
 Усі команди підтримують режим мовлення на вимогу.
 
-* NVDA+Shift+E: Відкрити командний шар Монітора ресурсів.
+* NVDA+Shift+E: enters the Resource Monitor command layer. There are two modes:
+	* Lock: pressing the layer entry command once will keep the layer mode active until the Escape key or a key not defined in the layer mode (see below) is pressed. Keys not defined in the layer mode will be passed to the application.
+	* Report: performing a resource usage info command will announce the information and exit the layer mode. Press the layer entry command repeatedly to lock the layer mode.
 
 Для отримання інформації про використання окремих ресурсів доступні такі команди шару:
 
@@ -22,13 +24,13 @@
 * U: час безперебійної роботи системи
 * W: wi-fi (назва мережі (SSID), сила сигналу, режим безпеки або відсутність SSID, якщо його немає)
 
-Команди ресурсів зберігають активність шару, щоб їх можна було повторювати. Натисніть клавішу Escape, щоб вийти з шару; клавіша, якій не призначено функції, закриває командний шар та передається до активної програми. Ви також можете призначити комбінації клавіш для озвучування інформації про окремі ресурси без попереднього входу в шар (перейдіть до меню NVDA/Налаштування/Жести вводу, щоб призначити власні команди).
+You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Примітки про користування
 
 Цей додаток не замінює диспетчера завдань Windows чи інших програм, які надають інформацію про систему.  Також запам’ятайте:
 
-* Подвійне натискання команд ресурсів скопіює інформацію про використання ресурсів у буфер обміну.
+* Pressing resource commands twice or Control+NVDA+X will copy resource usage information to the clipboard (pressing Control+NVDA+X copies the last spoken resource information).
 * Інформацію про ресурси тепер неможливо скопіювати в буфер обміну, якщо додаток запущено на захищеному екрані.
 * Використання центрального процесора подано для логічних процесорів, а не для фізичних ядер. Це важливо для процесорів, які використовують Hyper-Threading, де кількість процесорів удвічі перевищує кількість ядер процесора. На деяких нових комп'ютерах не всі ядра процесора можуть мати увімкнений hyper-threading.
 * При інтенсивних діях на диску, таких як копіювання великих файлів, можливі затримки з отриманням інформації про використання диска.
@@ -39,8 +41,9 @@
 
 ## Налаштування
 
-На екрані налаштувань NVDA в категорії «Монітор ресурсів» можна налаштувати такі параметри звітності щодо використання ресурсів:
+You can configure the following settings from NVDA settings screen under Resource Monitor category:
 
+* Enter resource monitor layer when layer command is performed: select between once (default, lock the layer mode) or repeatedly (pressing once will anounce resource info once, press repeatedly to lock the layer mode).
 * Одиниця вимірювання температури графічного процесора: виберіть одиницю вимірювання температури, яка вказується у інформації про графічний процесор (Цельсій або Фаренгейт).
 * Сповіщення про підключення/відключення Wi-Fi: виберіть, як NVDA має повідомляти про сповіщення про підключення/відключення Wi-Fi (вимкнено, повідомлення, звук, обидва).
 * Позначення обсягу пам'яті та дискового простору: виберіть спосіб показу обсягів оперативної пам'яті (RAM) та одиниць виміру дискового простору, таких як гігабайти та терабайти (початково встановлено альтернативний метод (КБ/МБ/...)).

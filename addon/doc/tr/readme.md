@@ -8,7 +8,9 @@ Bu eklenti, CPU yükü, bellek kullanımı ve diğer kaynak kullanımları hakk�
 
 Tüm komutlar isteğe bağlı konuşma modunu destekler.
 
-* NVDA+Shift+E: Kaynak İzleme komut katmanına girer.
+* NVDA+Shift+E: enters the Resource Monitor command layer. There are two modes:
+	* Lock: pressing the layer entry command once will keep the layer mode active until the Escape key or a key not defined in the layer mode (see below) is pressed. Keys not defined in the layer mode will be passed to the application.
+	* Report: performing a resource usage info command will announce the information and exit the layer mode. Press the layer entry command repeatedly to lock the layer mode.
 
 Aşağıdaki katman komutları, bireysel kaynak kullanım bilgilerini elde etmek için kullanılabilir:
 
@@ -22,13 +24,13 @@ Aşağıdaki katman komutları, bireysel kaynak kullanım bilgilerini elde etmek
 * U: sistem çalışma süresi
 * W: Wi-Fi (ağ adı (SSID), sinyal gücü, güvenlik modu veya mevcut değilse SSID yok)
 
-Kaynak komutları, tekrarlanabilmeleri için katmanı aktif tutar. Katmandan çıkmak için Escape tuşuna basın; atanmamış bir tuş, aktif uygulama üzerinden geçişi sağlar. Ayrıca, önce katmana girmeden bireysel kaynak bilgilerini duyurmak için kısayollar atayabilirsiniz (özel komutlar atamak için NVDA menüsü/Tercihler/Girdi hareketleri bölümüne gidin).
+You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Kullanım notları
 
 Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka uygulamaların yerine geçmez. Yanısıra, aşağıdakileri de not edin:
 
-* Kaynak komutlarına iki kez basmak, kaynak kullanım bilgilerini panoya kopyalayacaktır.
+* Pressing resource commands twice or Control+NVDA+X will copy resource usage information to the clipboard (pressing Control+NVDA+X copies the last spoken resource information).
 * Eklenti güvenli ekranlarda çalıştırılıyorsa kaynak bilgileri panoya kopyalanamaz.
 * CPU kullanımı, fiziksel çekirdekler için değil, mantıksal işlemciler için verilmektedir. Bu durum, CPU sayısının CPU çekirdek sayısının iki katı olduğu Hyper-Threading özelliğine sahip işlemcilerde fark edilir. Bazı yeni bilgisayarlarda, tüm CPU çekirdeklerinde Hyper-Threading etkinleştirilmemiş olabilir.
 * Büyük dosyaların kopyalanması veya ağ sürücülerinin bulunması gibi yoğun disk etkinliği söz konusu olduğunda, disk kullanım bilgilerinin alınmasında gecikmeler yaşanabilir.
@@ -39,8 +41,9 @@ Bu eklenti görev yöneticisi ya da sistem bilgisiyle ilgili başka uygulamalar�
 
 ## Ayarlar
 
-NVDA Menüsü/Tercihler/Ayarlar iletişim kutusunda Kaynak İzleme kategorisi altında aşağıdaki kaynak kullanım bildirme seçeneklerini yapılandırabilirsiniz:
+You can configure the following settings from NVDA settings screen under Resource Monitor category:
 
+* Enter resource monitor layer when layer command is performed: select between once (default, lock the layer mode) or repeatedly (pressing once will anounce resource info once, press repeatedly to lock the layer mode).
 * GPU sıcaklık birimi: GPU bilgileri kapsamında bildirilen sıcaklık birimini seçin (Santigrat veya Fahrenheit).
 * Wi-Fi bağlanma/kesilme bildirimi: NVDA'nın Wi-Fi bağlantı/kesme bildirimlerini nasıl bildirmesi gerektiğini seçin (kapalı, mesaj, ses, hem mesaj hem ses).
 * Bellek ve disk boyutu gösterimi: RAM ve disk kullanım birimleri (gigabayt ve terabayt gibi) için bellek boyutlarının nasıl seslendirileceğini seçin (varsayılan olarak alternatif yöntem (KB/MB/...) kullanılır).

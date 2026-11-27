@@ -8,7 +8,9 @@ Add-on này cung cấp các thông tin về tải CPU, sử dụng bộ nhớ v�
 
 Tất cả các lệnh đã hỗ trợ chế độ đọc theo yêu cầu.
 
-* NVDA+Shift+E: truy cập vào lớp lệnh theo dõi Tài nguyên.
+* NVDA+Shift+E: enters the Resource Monitor command layer. There are two modes:
+	* Lock: pressing the layer entry command once will keep the layer mode active until the Escape key or a key not defined in the layer mode (see below) is pressed. Keys not defined in the layer mode will be passed to the application.
+	* Report: performing a resource usage info command will announce the information and exit the layer mode. Press the layer entry command repeatedly to lock the layer mode.
 
 Các lớp lệnh sau đây có sẵn để lấy thông tin về mức sử dụng tài nguyên riêng lẻ:
 
@@ -22,13 +24,13 @@ Các lớp lệnh sau đây có sẵn để lấy thông tin về mức sử d�
 * U: thời gian hoạt động của hệ thống
 * W: Wi-Fi (tên mạng (SSID), cường độ tín hiệu, chế độ bảo mật, hoặc không có SSID nếu không có mạng nào)
 
-Các lệnh tài nguyên giữ cho lớp hoạt động để chúng có thể được lặp lại. Nhấn phím Escape để thoát khỏi lớp; một phím chưa được gán sẽ thoát và được truyền qua ứng dụng đang hoạt động. Bạn cũng có thể gán các phím tắt để thông báo thông tin tài nguyên riêng lẻ mà không cần phải vào lớp trước (vào menu NvDA/Tùy chọn/Quản lý thao tác để gán các lệnh tùy chỉnh).
+You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Các lưu ý sử dụng
 
 Add-on này không thay thế cho task manager và các trình kiểm tra thông tin hệ thống khác của Windows. Cũng lưu ý những điểm sau:
 
-* Nhấn giữ lệnh tài nguyên hai lần sẽ sao chép thông tin sử dụng tài nguyên vào bộ nhớ tạm.
+* Pressing resource commands twice or Control+NVDA+X will copy resource usage information to the clipboard (pressing Control+NVDA+X copies the last spoken resource information).
 * Không thể sao chép thông tin tài nguyên vào bộ nhớ tạm nếu chạy tiện ích bổ sung trong màn hình bảo vệ.
 * Mức sử dụng CPU được hiển thị cho các bộ xử lý logic, chứ không phải lõi vật lý. Điều này dễ nhận thấy ở các bộ xử lý có công nghệ Hyper-Threading, trong đó số lượng CPU gấp đôi số lượng lõi CPU. Trên một số máy tính đời mới hơn, không phải tất cả các lõi CPU đều được bật công nghệ Hyper-Threading.
 * Nếu có nhiều hoạt động trên ổ đĩa, chẳng hạn như sao chép các tập tin lớn hoặc khi tìm kiếm các ổ đĩa mạng, có thể sẽ xảy ra độ trễ khi thu thập thông tin về mức sử dụng ổ đĩa.
@@ -39,8 +41,9 @@ Add-on này không thay thế cho task manager và các trình kiểm tra thông
 
 ## Cài đặt
 
-Bạn có thể cấu hình các tùy chọn báo cáo sử dụng tài nguyên sau từ màn hình cài đặt NVDA trong mục theo dõi tài nguyên:
+You can configure the following settings from NVDA settings screen under Resource Monitor category:
 
+* Enter resource monitor layer when layer command is performed: select between once (default, lock the layer mode) or repeatedly (pressing once will anounce resource info once, press repeatedly to lock the layer mode).
 * Đơn vị đo nhiệt độ GPU: Chọn đơn vị đo nhiệt độ được hiển thị trong thông tin GPU (độ C hoặc độ F).
 * Thông báo kết nối/ngắt kết nối Wi-Fi: Chọn cách NVDA sẽ thông báo các thông báo kết nối/ngắt kết nối Wi-Fi (tắt, tin nhắn, âm thanh, cả tin nhắn và âm thanh).
 * Ký hiệu dung lượng bộ nhớ và ổ đĩa: chọn cách hiển thị dung lượng bộ nhớ RAM và dung lượng ổ đĩa theo đơn vị như gigabyte và terabyte (mặc định là phương pháp thay thế (KB/MB/...)).

@@ -8,7 +8,9 @@
 
 Все команды поддерживают режим речи по требованию.
 
-* NVDA+Shift+E: заходит в уровень команд монитора ресурсов.
+* NVDA+Shift+E: enters the Resource Monitor command layer. There are two modes:
+	* Lock: pressing the layer entry command once will keep the layer mode active until the Escape key or a key not defined in the layer mode (see below) is pressed. Keys not defined in the layer mode will be passed to the application.
+	* Report: performing a resource usage info command will announce the information and exit the layer mode. Press the layer entry command repeatedly to lock the layer mode.
 
 Для получения информации об использовании отдельных ресурсов доступны следующие команды уровня:
 
@@ -22,13 +24,13 @@
 * U: время безотказной работы системы
 * W: Wi-Fi (название сети (SSID), уровень сигнала, режим безопасности или отсутствие SSID, если таковой отсутствует)
 
-Команды ресурсов поддерживают активность уровня, поэтому их можно повторять. Нажмите Escape, чтобы выйти из уровня; неназначенная клавиша выходит и передаётся через активное приложение. Вы также можете назначить сочетания клавиш для оповещения информации об отдельных ресурсах без предварительного входа в уровень (перейдите в меню NVDA/Настройки/Жесты ввода, чтобы назначить пользовательские команды).
+You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Замечания по использованию
 
 Это дополнение не заменяет диспетчер задач и другие информационные программы системы Windows. Также обратите внимание на следующее:
 
-* Двойное нажатие команд для управления ресурсами скопирует информацию об использовании ресурсов в буфер обмена.
+* Pressing resource commands twice or Control+NVDA+X will copy resource usage information to the clipboard (pressing Control+NVDA+X copies the last spoken resource information).
 * Информацию о ресурсах невозможно скопировать в буфер обмена при запуске дополнения на защищённых экранах.
 * Загрузка ЦП указана для логических процессоров, а не для физических ядер. Это особенно заметно на процессорах с технологией Hyper-Threading, где количество ядер ЦП вдвое превышает их общее число. На некоторых новых компьютерах технология Hyper-Threading может быть включена не для всех ядер ЦП.
 * При интенсивной работе с диском, например, при копировании больших файлов или поиске сетевых дисков, могут возникать задержки при получении информации об использовании диска.
@@ -39,8 +41,9 @@
 
 ## Настройки
 
-На экране настроек NVDA в категории монитора ресурсов можно настроить следующие параметры отчётности об использовании ресурсов:
+You can configure the following settings from NVDA settings screen under Resource Monitor category:
 
+* Enter resource monitor layer when layer command is performed: select between once (default, lock the layer mode) or repeatedly (pressing once will anounce resource info once, press repeatedly to lock the layer mode).
 * Единица измерения температуры графического процессора: выберите единицу измерения температуры, отображаемую в информации о графическом процессоре (Цельсий или Фаренгейт).
 * Уведомления о подключении/отключении Wi-Fi: выберите способ, которым NVDA должна сообщать об уведомлениях о подключении/отключении Wi-Fi (выключено, сообщение, звук, сообщение и звук).
 * Обозначения размера памяти и диска: выбрать способ отображения размеров оперативной памяти и объема используемого дискового пространства в единицах гигабайт и терабайт (по умолчанию используется альтернативный метод (КБ/МБ/...)).
