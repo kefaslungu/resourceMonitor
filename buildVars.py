@@ -26,7 +26,7 @@ addon_info = AddonInfo(
 	addon_version="26.11.2",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* NVDA 2026.3 or later is required.
+	addon_changelog=_("""* NVDA 2026.3.2 or later is required.
 * Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info commands can be assigned from input gestures dialog).
 * Added a layer commands mode to let NVDA announce resource information and then immediately deactivate the layer. Pressing the layer entry command repeatedly will lock the layer mode as in previous add-on releases.
 * Added layer entry setting to configure behavior of layer mode locking (default behavior is to lock the layer mode when layer entry command is pressed once)."""),

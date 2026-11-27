@@ -4,7 +4,7 @@ This page lists the complete changelog for Resource Monitor add-on releases.
 
 ## Version 27.01
 
-* NVDA 2026.3.1 or later is required.
+* NVDA 2026.3.2 or later is required.
 * Fully transitioned to Resource Monitor layer commands set. As a result, NVDA+Shift+number row commands are removed (individual resource info commands can be assigned from input gestures dialog).
 * Added a layer commands mode to let NVDA announce resource information and then immediately deactivate the layer. Pressing the layer entry command repeatedly will lock the layer mode as in previous add-on releases.
 * Added layer entry setting to configure behavior of layer mode locking (default behavior is to lock the layer mode when layer entry command is pressed once).
