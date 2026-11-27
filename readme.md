@@ -8,7 +8,9 @@ This add-on gives information about CPU load, memory usage and other resource us
 
 All commands support speech on demand mode.
 
-* NVDA+Shift+E: enters the Resource Monitor command layer.
+* NVDA+Shift+E: enters the Resource Monitor command layer. There are two modes:
+	* Lock: pressing the layer entry command once will keep the layer mode active until the Escape key or a key not defined in the layer mode (see below) is pressed. Keys not defined in the layer mode will be passed to the application.
+	* Report: performing a resource usage info command will announce the information and exit the layer mode. Press the layer entry command repeatedly to lock the layer mode.
 
 The following layer commands are available to obtain individual resource usage information:
 
@@ -22,7 +24,7 @@ The following layer commands are available to obtain individual resource usage i
 * U: system uptime
 * W: wi-fi (network name (SSID), signal strength, security mode, or no SSID if there is none available)
 
-Resource commands keep the layer active so they can be repeated. Press Escape to exit the layer; an unmapped key exits and is passed through the active application. You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
+You can also assign shortcuts to announce individual resource information without entering the layer first (go to NvDA menu/Preferences/Input gestures to assign custom commands).
 
 ## Usage notes
 
@@ -39,8 +41,9 @@ This add-on does not replace task manager and other system information programs 
 
 ## Settings
 
-You can configure the following resource usage reporting options from NVDA settings screen under Resource Monitor category:
+You can configure the following settings from NVDA settings screen under Resource Monitor category:
 
+* Enter resource monitor layer when layer command is performed: select between once (default, lock the layer mode) or repeatedly (pressing once will anounce resource info once, press repeatedly to lock the layer mode).
 * GPU temperature unit: Select the temperature unit reported as part of the GPU information (Celcius or Fahrenheit).
 * Wi-fi connect/disconnect notification: Select how NVDA should report wi-fi connect/disconnect notifications (off, message, sound, both message and sound).
 * Memory and disk size notation: select how memory sizes for RAM and disk usage units such as gigabytes and terabytes are reported (default is the alternative method (KB/MB/...).
