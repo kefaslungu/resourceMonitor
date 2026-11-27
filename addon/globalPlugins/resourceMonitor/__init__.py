@@ -443,7 +443,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		self._isLayerActive = False
-		# Layer levels: 0 = off, 1 = report only, 2 = continuous monitoring
+		# Layer levels: 0 = off, 1 = report only (repeated key press to lock the layer), 2 = layer locked
 		self._layerLevel = 0
 		inputCore.decide_executeGesture.register(self._decideExecuteGesture)
 		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
@@ -508,7 +508,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if scriptName == "layerEntry":
 					# Continue if this is another invocation of layer entry script.
 					return True
-				# Clear layer gesture bindings after handling the gesture here if this is 'report only" (level 1) mode.
+				# Clear layer gesture bindings after handling the gesture here
+				# if entry command must be pressed repeatedly to lock the layer.
 				elif scriptName in self.__layerGestures.values():
 					if not self._lastExecutedLayerScript:
 						self._lastExecutedLayerScript = scriptName
