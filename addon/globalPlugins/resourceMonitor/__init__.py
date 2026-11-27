@@ -515,13 +515,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture=_layerEntryGesture,
 	)
 	def script_layerEntry(self, gesture: inputCore.InputGesture):
-		"""Enter the Resource Monitor command layer."""
-		if self._isLayerActive:
+		if self._isLayerActive and self._layerLevel == 2:
 			return
+		# Assume reporting mode (layer level 1) unless continuous monitoring mode (layer level 2) is requested
+		# if this is a second press of the layer entry command in reporting mode
+		# or configured to enter continuous monitoring mode directly.
+		switchToContinuousMonitoring = scriptHandler.getLastScriptRepeatCount() > 0 or self._layerLevel == 1
 		self.bindGestures(self.__layerGestures)
 		self._isLayerActive = True
+		self._layerLevel += 1
 		tones.beep(100, 10)
 		braille.handler.message(_("Resource Monitor"))
+		if switchToContinuousMonitoring:
+			self._layerLevel += 1
+			# Translators: presented when Resource Monitor layer enters continuous monitoring mode
+			ui.message(_("Continuous resource monitoring"))
 
 	@scriptHandler.script(allowInSleepMode=True)
 	def script_layerExit(self, gesture: inputCore.InputGesture):
