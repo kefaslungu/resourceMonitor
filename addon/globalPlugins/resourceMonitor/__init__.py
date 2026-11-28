@@ -295,7 +295,7 @@ class ResourceMonitorSettingsPanel(SettingsPanel):
 		settingsSizerHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 
 		# Translators: Label for a combo box to select the Resource Monitor layer entry modekey presses.
-		layerModeLabelText = _("Enter resource monitor &layer when layer command is performed:")
+		layerModeLabelText = _("Lock Resource Monitor &layer when the layer command is pressed:")
 		self._layerModeLabels = [
 			# Translators: Continuous mode (enter layer mode in one press, report resource info, press Escape to exit)
 			_("once"),
