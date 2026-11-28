@@ -551,7 +551,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._layerLevel += 1
 		if config.conf["resourceMonitor"]["layerEntryONFirstPress"]:
 			self._layerLevel = 2
-		tones.beep(100, 10)
+		tones.beep(100 * self._layerLevel, 10)
 		braille.handler.message(_("Resource Monitor"))
 
 	@scriptHandler.script(allowInSleepMode=True)
